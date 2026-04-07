@@ -1,0 +1,148 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "hermes-agent",
+  "elements": [
+    {
+      "type": "rectangle",
+      "id": "user",
+      "x": 100,
+      "y": 100,
+      "width": 140,
+      "height": 60,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#a5d8ff",
+      "fillStyle": "solid",
+      "boundElements": [{ "id": "t_user", "type": "text" }]
+    },
+    {
+      "type": "text",
+      "id": "t_user",
+      "x": 110,
+      "y": 115,
+      "width": 120,
+      "height": 30,
+      "text": "User",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "user",
+      "originalText": "User"
+    },
+    {
+      "type": "arrow",
+      "id": "a1",
+      "x": 240,
+      "y": 130,
+      "width": 100,
+      "height": 0,
+      "points": [[0,0], [100,0]],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "rectangle",
+      "id": "pm",
+      "x": 340,
+      "y": 100,
+      "width": 140,
+      "height": 60,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#ffd8a8",
+      "fillStyle": "solid",
+      "boundElements": [{ "id": "t_pm", "type": "text" }]
+    },
+    {
+      "type": "text",
+      "id": "t_pm",
+      "x": 350,
+      "y": 115,
+      "width": 120,
+      "height": 30,
+      "text": "PM Agent",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "pm",
+      "originalText": "PM Agent"
+    },
+    {
+      "type": "arrow",
+      "id": "a2",
+      "x": 480,
+      "y": 130,
+      "width": 100,
+      "height": 0,
+      "points": [[0,0], [100,0]],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "rectangle",
+      "id": "acp",
+      "x": 580,
+      "y": 80,
+      "width": 200,
+      "height": 100,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#d0bfff",
+      "fillStyle": "solid",
+      "boundElements": [{ "id": "t_acp", "type": "text" }]
+    },
+    {
+      "type": "text",
+      "id": "t_acp",
+      "x": 590,
+      "y": 95,
+      "width": 180,
+      "height": 70,
+      "text": "ACP Orchestration\n(Coder + QA)",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "acp",
+      "originalText": "ACP Orchestration\n(Coder + QA)"
+    },
+    {
+      "type": "arrow",
+      "id": "a3",
+      "x": 680,
+      "y": 180,
+      "width": 0,
+      "height": 60,
+      "points": [[0,0], [0,60]],
+      "endArrowhead": "arrow"
+    },
+    {
+      "type": "rectangle",
+      "id": "out",
+      "x": 580,
+      "y": 240,
+      "width": 200,
+      "height": 60,
+      "roundness": { "type": 3 },
+      "backgroundColor": "#b2f2bb",
+      "fillStyle": "solid",
+      "boundElements": [{ "id": "t_out", "type": "text" }]
+    },
+    {
+      "type": "text",
+      "id": "t_out",
+      "x": 590,
+      "y": 255,
+      "width": 180,
+      "height": 30,
+      "text": "Success Artifacts",
+      "fontSize": 18,
+      "fontFamily": 1,
+      "textAlign": "center",
+      "verticalAlign": "middle",
+      "containerId": "out",
+      "originalText": "Success Artifacts"
+    }
+  ],
+  "appState": {
+    "viewBackgroundColor": "#ffffff"
+  }
+}
