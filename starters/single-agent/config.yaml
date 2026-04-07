@@ -1,0 +1,18 @@
+api_keys:
+  deepseek: "${DEEPSEEK_API_KEY:-your-api-key-here}"
+
+providers:
+  custom:
+    - name: "deepseek"
+      base_url: "https://api.deepseek.com/v1"
+      api_key_env: "deepseek"
+      models:
+        - "deepseek-chat"
+        - "deepseek-coder"
+
+display:
+  skin: "default"
+
+commands:
+  - "/model custom/deepseek-chat"
+  - "/system_prompt ./system_prompt.txt"
