@@ -16,7 +16,9 @@
 | **B-202** | 实战 Starter 模板 | **Coder (Long)** | SSD | `/starters/` (Single/Team/Advanced) | 包含完整 config 与人设 | 100% | Content |
 | **C-301** | 快速开始教程 | **Content (Ikki)** | B-201 | `docs/quick-start.md` | 30秒内从 0 到 1 | 100% | PM (Audit) |
 | **C-302** | 首页架构重构 | **PM (Seiya)** | User Feedback | `docs/index.md` (V5.0) | GitHub 预览无宽表 | 100% | Designer |
-| **D-401** | 架构图设计 | **Designer (Shun)** | C-302 | `public/architecture.excalidraw` | 包含 PM-Coder-QA 流 | 80% | Content |
+| **B-203** | 飞书/钉钉 Webhook 集成 | **Coder (Long)** | SSD, API Docs | `/examples/skills/webhook-notifier/` | 代码可用且支持环境变量 | 100% | Content |
+| **C-303** | 自定义工具开发教程 | **Content (Ikki)** | B-203 | `docs/custom-tools.md` | 保姆级指引 | 0% | PM (Audit) |
+| **D-401** | 架构图设计 | **Designer (Shun)** | C-302 | `public/architecture.excalidraw` | 包含 PM-Coder-QA 流 | 85% | Content |
 | **D-402** | 品牌视觉 (Logo/Banner) | **Designer (Shun)** | README_DRAFT | `logo.png`, `banner.png` | 符合 .ai 专业调性 | **10%** | Ops |
 | **E-501** | 自动化构建与域名 | **Ops (Hyoga)** | Git Repo | CI/CD Workflow + Domain | 自动触发同步 | 0% | PM (Final) |
 
