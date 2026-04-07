@@ -13,7 +13,8 @@ export default {
         text: '核心指南',
         items: [
           { text: '快速开始 (30秒上手)', link: '/quick-start' },
-          { text: '国内主流模型接入', link: '/models' }
+          { text: '国内主流模型接入', link: '/models' },
+          { text: '常见问题与排障', link: '/known-issues' }
         ]
       }
     ],
