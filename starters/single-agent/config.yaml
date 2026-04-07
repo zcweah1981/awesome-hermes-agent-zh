@@ -1,5 +1,5 @@
 api_keys:
-  deepseek: "${DEEPSEEK_API_KEY:-your-api-key-here}"
+  deepseek: "YOUR_DEEPSEEK_API_KEY"
 
 providers:
   custom:
@@ -8,11 +8,8 @@ providers:
       api_key_env: "deepseek"
       models:
         - "deepseek-chat"
-        - "deepseek-coder"
 
-display:
-  skin: "default"
-
-commands:
-  - "/model custom/deepseek-chat"
-  - "/system_prompt ./system_prompt.txt"
+# 默认设置
+model: "custom/deepseek-chat"
+system_prompt_file: "system_prompt.txt"
+quiet_mode: false
