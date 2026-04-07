@@ -1,24 +1,18 @@
-
-import { defineConfig } from 'vitepress'
-
-export default defineConfig({
-  title: "Hermes Agent 中文生态",
-  description: "让中文用户最快跑通 Hermes 的实战入口",
+export default {
+  title: 'Hermes Agent ZH',
+  description: '最快、最稳的 Hermes Agent 中文落地实践指南',
   themeConfig: {
+    logo: '/logo.png',
     nav: [
-      { text: '快速开始', link: '/guide/quickstart' },
-      { text: '国内模型', link: '/providers/index' },
-      { text: '多 Agent', link: '/multi-agent/index' },
-      { text: 'Starter 模板', link: '/starters/index' },
-      { text: 'Known Issues', link: '/known-issues/index' },
-      { text: 'OpenClaw 迁移', link: '/openclaw/index' },
+      { text: '首页', link: '/' },
+      { text: '快速开始', link: '/quick-start' },
+      { text: '模板', link: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters' }
     ],
     sidebar: [
       {
-        text: '入门指南',
+        text: '核心指南',
         items: [
-          { text: '什么是 Hermes', link: '/guide/what-is-hermes' },
-          { text: '快速开始', link: '/guide/quickstart' },
+          { text: '快速开始 (30秒上手)', link: '/quick-start' }
         ]
       }
     ],
@@ -26,4 +20,4 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/zcweah1981/awesome-hermes-agent-zh' }
     ]
   }
-})
+}
