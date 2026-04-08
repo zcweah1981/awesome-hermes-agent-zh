@@ -2,7 +2,7 @@ export default {
   title: 'Hermes Agent 中文指南',
   description: '面向中文用户的 Hermes Agent 上手、选型与实战资源',
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.svg',
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/quick-start' },

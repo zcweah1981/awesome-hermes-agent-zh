@@ -1,5 +1,7 @@
 # Hermes Agent 中文指南
 
+![Hermes Agent 中文指南 Banner](./docs/public/hero-banner.svg)
+
 面向中文用户的 Hermes Agent 上手、选型与实战资源库。
 
 这个仓库聚焦三件事：
