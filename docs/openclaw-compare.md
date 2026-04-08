@@ -1,36 +1,60 @@
-# Hermes vs OpenClaw: 为什么你应该迁移？
+# Hermes vs OpenClaw：深度对比与迁移指南
 
-如果你之前是 OpenClaw 的忠实用户，你可能会问：**“Hermes Agent 到底强在哪里？我为什么要花时间迁移？”**
-
-本页面将从架构、性能、生态三个维度为你进行硬核对比。
-
-## 1. 核心对比表
-
-| 特性 | OpenClaw | Hermes Agent |
-| :--- | :--- | :--- |
-| **底层引擎** | 基于早期 Agent 框架 | 自主研发，深度优化推理路径 |
-| **学习能力** | 静态技能库 | **内置学习闭环** (从会话中自动提取技能) |
-| **多节点协作** | 串行/简单分发 | **原生 ACP 协议** (高性能并发、状态同步) |
-| **国内适配** | 需要繁琐插件 | **原生支持 Custom Provider** (一键直连 DeepSeek) |
-| **资源占用** | 较高 | 极低 (可在 $5 VPS 稳定运行) |
-| **记忆系统** | 简单的历史窗口 | **跨会话持久记忆 + RAG 搜索** |
-
-## 2. Hermes 的三大“杀手锏”
-
-### A. 自动技能进化 (Skill Evolution)
-OpenClaw 的工具通常需要手动编写脚本。而在 Hermes 中，当你成功教导 Agent 完成一个复杂任务后，你可以直接说：` /skill_save `。它会把这段成功的逻辑固化为技能，下次直接调用。
-
-### B. ACP (Agent Control Protocol) 协议
-Hermes 引入了 ACP 协议，这让“多智能体协作”不再是噱头。通过 `delegate_task`，你可以让 Coder 写代码，QA 同步进行测试，中间状态通过 ACP 实时流转，效率提升 300% 以上。
-
-### C. 极低延迟与模型中立
-Hermes 对国内模型（DeepSeek, Qwen）的支持是“一等公民”级别的。通过简单的 `config.yaml` 映射，你可以获得近乎原生的推理速度。
-
-## 3. 迁移指南 (3步搞定)
-
-1. **导出提示词**: 将你 OpenClaw 中的 `system_prompt` 导出为 `.txt` 文件。
-2. **编写 Config**: 使用我们提供的 [Starter 模板](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters) 建立你的 `config.yaml`。
-3. **注入技能**: 将你的自定义工具脚本放入 `/skills` 目录，并在 Hermes 中通过 ` /skill_load ` 载入。
+如果你是 OpenClaw (Clawdbot) 的资深用户，或者正在寻找一个更适合“单人公司 (OPC)”落地的 AI Agent 框架，本指南将帮助你理解 Hermes 的优势并提供平滑迁移方案。
 
 ---
-*无论你以前在 OpenClaw 积累了多少，Hermes 都能让你以更小的代价获得更强的 AI 能力。*
+
+## ⚖️ 核心对比 (Technical Audit)
+
+| 特性 | OpenClaw | Hermes Agent (Hermes-Zh) |
+| :--- | :--- | :--- |
+| **底层协议** | 传统的串行执行 / 轮询 | **ACP (Agent Communication Protocol)**: 原生支持并发协作。 |
+| **并发处理** | 模拟并发 (Python threading) | **真并发**: 基于异步流的非阻塞执行。 |
+| **工具/技能注册** | 依赖外部脚本 / 复杂 Decorator | **极简 `@skill`**: 自动生成 JSON Schema，3行代码定义工具。 |
+| **配置深度** | 零散配置项 | **SSoT**: 所有配置统一在 `config.yaml` 或 `profiles` 下。 |
+| **内存开销** | ~1GB+ | **~128MB+**: 极致轻量化设计。 |
+| **中国环境** | 手动配置 HTTP_PROXY | **原生加速**: 支持自定义 Base URL (适配 DeepSeek/Qwen)。 |
+
+---
+
+## 🛠️ 技能编写对比
+
+### OpenClaw (传统模式)
+```python
+# OpenClaw 通常需要显式定义参数 schema
+def get_weather(city: str):
+    """获取天气
+    Args: city (str): 城市名
+    """
+    pass
+
+# 注册过程通常较繁琐
+bot.register_tool(get_weather, schema=...)
+```
+
+### Hermes (极简模式)
+```python
+@skill
+def get_weather(city: str):
+    """获取指定城市的天气。"""
+    return f"{city} 的天气是晴朗。"
+```
+*Hermes 会自动利用 Python 类型注解解析并注册工具。*
+
+---
+
+## 🚀 迁移步骤
+
+1. **配置对齐**: 将你的 OpenClaw 模型密钥迁移至 `~/.hermes/config.yaml`。
+2. **逻辑平移**: OpenClaw 的 Action 逻辑可以直接封装进 Hermes 的 `@skill`。
+3. **架构升级**: 如果你在 OpenClaw 中使用多个 Bot 互相私聊，在 Hermes 中应改为使用 `Team` 模式。
+
+---
+
+## 🙋 常见问题 (FAQ)
+
+**Q: 我的 OpenClaw 插件能直接用吗？**  
+A: 需要简单包装。将逻辑放入 `skills/your_skill/run.py` 中并添加 `@skill` 装饰器即可。
+
+**Q: 并发能力具体体现在哪？**  
+A: 在多智能体团队协作时，Hermes 允许 PM、Coder、QA 同时在线并监听 ACP 广播，而无需等待上一个人彻底结束。

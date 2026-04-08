@@ -1,117 +1,185 @@
-# README (草案)
+# 🚀 Hermes Agent 中文实战入口 (Awesome Hermes Agent ZH)
 
-# Hermes Agent 中文生态 (hermes-agent-zh)
+<p align="center">
+  <strong>仓库负责真实内容，站点负责展示与引导。</strong>
+</p>
 
-让中文用户最快跑通 Hermes 的实战入口。
-
-## 这是什么
-这是一个围绕 **Hermes 上手、国内模型接入、多 Agent 组织方式、Starter 模板、Known Issues、OpenClaw 迁移** 建立的中文入口。
-
-它不是官方文档镜像，也不是泛 AI 资讯站。  
-它的目标很直接：
-
-- 帮你更快理解 Hermes
-- 帮你更快跑通 Hermes
-- 帮你复制自己的 Starter 和团队结构
-- 帮你承接从 OpenClaw 迁移过来的需求
+<p align="center">
+  <a href="./docs/quick-start.md"><strong>快速开始</strong></a> ·
+  <a href="./docs/models.md"><strong>模型与 Provider</strong></a> ·
+  <a href="./docs/known-issues.md"><strong>常见问题</strong></a> ·
+  <a href="./docs/openclaw-compare.md"><strong>Hermes vs OpenClaw</strong></a> ·
+  <a href="./starters"><strong>Starters</strong></a>
+</p>
 
 ---
 
-## 适合谁
-这个项目主要面向以下用户：
+## 目标
 
-- 想快速试用 Hermes 的中文开发者
-- 想接国内模型 / 自定义接口的人
-- 想搭多 Agent 团队的人
-- 正在比较 Hermes 和 OpenClaw 的用户
-- 想从 OpenClaw 迁移到 Hermes 的用户
+这个仓库不是做一份“中文二次创作文档站”，而是做 Hermes Agent 的中文实战入口：
 
----
-
-## 你能在这里获得什么
-- **快速开始路径**：从 0 到第一次成功运行
-- **国内模型方案**：更贴近中文用户的接入方式
-- **多 Agent 基础结构**：角色稳定、项目可切换的团队方式
-- **Starter 模板**：不仅能看懂，还能直接复制
-- **Known Issues**：遇到问题知道去哪里看
-- **OpenClaw 对比与迁移指南**：帮助你判断是否要迁移
+- 基于官方文档持续校准
+- 优先提供可执行、可复制、可验证的内容
+- 仓库作为正文单一真理源（SSoT）
+- 独立站只负责展示、导航、分发，不维护另一套正文
 
 ---
 
-## 快速入口
-- [开始这里](./docs/start-here.md)
-- [快速开始](./docs/quickstart.md)
-- [国内模型](./docs/china-models/index.md)
-- [多 Agent](./docs/multi-agent/index.md)
-- [Starter 模板](./docs/starters/index.md)
-- [Known Issues](./docs/known-issues/index.md)
-- [Hermes vs OpenClaw](./docs/openclaw/hermes-vs-openclaw.md)
-- [从 OpenClaw 迁移到 Hermes](./docs/openclaw/migrate-from-openclaw.md)
+## 当前策略
+
+我们已经明确纠偏：
+
+### 1. 先跟官方文档对齐
+
+官方文档已经覆盖：
+- Installation
+- Quickstart
+- AI Providers
+- Configuration
+
+并且官方已经支持很多一等 provider，包括：
+- DeepSeek
+- Qwen / DashScope / Alibaba
+- GLM / z.ai
+- Kimi / Moonshot
+- MiniMax
+- OpenRouter
+- Anthropic
+- Hugging Face
+
+所以本仓库不再默认把“自定义 provider / custom endpoint”写成主路径。
+
+### 2. 仓库只补官方文档没有解决好的中文落地问题
+
+我们重点补：
+- 中文用户如何理解官方 provider 体系
+- 中文环境下安装与代理注意事项
+- 国内模型选型建议
+- 仓库里的 starter、example、技能样例
+- 真实可复用的项目组织方式
+
+### 3. 独立站从仓库内容生成
+
+正文在仓库里维护：
+- `README.md`
+- `docs/*.md`
+- `examples/`
+- `starters/`
+
+站点负责：
+- 首页展示
+- 导航与分发
+- 搜索与入口
 
 ---
 
-## 当前 1.0 范围
-第一阶段我们只专注于做一个强入口，而不是大而全。
+## 最短成功路径
 
-### 包含
-- GitHub 主仓库
-- 独立文档站
-- 首页与快速开始
-- 国内模型与自定义接口
-- 多 Agent 基础
-- Starter 模板
-- Known Issues
-- OpenClaw 对比与迁移
+### 1. 按官方方式安装
 
-### 不包含
-- 全量官方文档翻译
-- 大型社区系统
-- 很多 starter 变体
-- 深度生态研究栏目
-- 复杂品牌系统
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+source ~/.bashrc   # 或 source ~/.zshrc
+```
 
----
+### 2. 用官方方式配置 provider
 
-## 推荐起点
-如果你是第一次来，建议按下面顺序看：
+```bash
+hermes setup
+# 或
+hermes model
+```
 
-### 路线 A：第一次接触 Hermes
-开始这里 → 快速开始 → Starter
+### 3. 启动
 
-### 路线 B：你主要关心模型接入
-国内模型 → 自定义接口配置 → 快速开始
+```bash
+hermes
+```
 
-### 路线 C：你想做多 Agent 团队
-多 Agent → Starter 模板 → team-basic
+如果你希望显式指定：
 
-### 路线 D：你来自 OpenClaw
-Hermes vs OpenClaw → 迁移指南 → Known Issues
+```bash
+hermes chat --provider deepseek --model deepseek-chat
+```
+
+结论：
+- 优先走官方 provider
+- 优先走 `hermes setup` / `hermes model`
+- 最后才考虑 custom endpoint
 
 ---
 
-## Starter 模板
-首批会提供两个 starter：
+## 仓库内容结构
 
-### `single-agent`
-适合：新手、本地快速测试、最短成功路径。
+### docs/
+真实正文来源。
 
-### `team-basic`
-适合：想尝试团队化协作的人、想复制多角色工作流的人。
+当前重点页面：
+- `docs/quick-start.md`
+- `docs/models.md`
+- `docs/known-issues.md`
+- `docs/openclaw-compare.md`
 
----
+### examples/
+放配置样例、技能样例、可复制案例。
 
-## 内容参考原则
-本仓库的正式内容优先参考：
-- **P0：官方英文资料** (Hermes Docs, GitHub README, OpenClaw Docs)
-- **P1：官方 issue / 已知问题补充**
-- **P2：第三方内容** (仅用于选题灵感)
+### starters/
+放可直接复制的 starter 模板。
 
----
-
-## 参与贡献
-参考 `CONTRIBUTING.md`。
+### scripts/
+放同步脚本与自动化辅助脚本。
 
 ---
 
-## 项目目标
-建立一个强入口：能看懂、能跑通、能复制、能迁移。
+## 你应该先看哪几页
+
+### 我是第一次安装
+看：`docs/quick-start.md`
+
+### 我想知道 DeepSeek / Qwen / GLM / Kimi 应该怎么选
+看：`docs/models.md`
+
+### 我在国内环境遇到证书、代理、超时问题
+看：`docs/known-issues.md`
+
+### 我原来在看 OpenClaw，想比较路线
+看：`docs/openclaw-compare.md`
+
+---
+
+## 当前内容边界
+
+这个仓库当前优先做：
+- 安装
+- provider 选择
+- 中文环境落地
+- starters
+- examples
+- 对比与迁移
+
+暂不优先做：
+- 大量视觉包装
+- 脱离仓库正文的独立站花活
+- 和官方文档重复但没有增量价值的搬运
+
+---
+
+## 官方参考
+
+- Installation: https://hermes-agent.nousresearch.com/docs/getting-started/installation
+- Quickstart: https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/
+- AI Providers: https://hermes-agent.nousresearch.com/docs/integrations/providers/
+- Configuration: https://hermes-agent.nousresearch.com/docs/user-guide/configuration/
+
+---
+
+## 下一步优先级
+
+1. 基于官方 provider 文档继续修正旧内容
+2. 把 `examples/` 和 `starters/` 补成真实可运行资产
+3. 再让独立站消费仓库正文做展示
+
+如果你认同这个方向，下一轮我会继续清理：
+- `known-issues.md` 里过时的 `custom/...` 表述
+- `openclaw-compare.md` 里不准确或过重承诺的技术描述
+- `examples/` 和 `starters/` 的真实度与可运行性
