@@ -1,26 +1,47 @@
 export default {
-  title: 'Hermes Agent ZH',
-  description: '最快、最稳的 Hermes Agent 中文落地实践指南',
+  title: 'Hermes Agent 中文指南',
+  description: '面向中文用户的 Hermes Agent 上手、选型与实战资源',
   themeConfig: {
     logo: '/logo.png',
     nav: [
       { text: '首页', link: '/' },
       { text: '快速开始', link: '/quick-start' },
-      { text: '模板', link: 'https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters' }
+      { text: '模型与 Provider', link: '/models' },
+      { text: '常见问题', link: '/known-issues' },
+      { text: 'Starter 模板', link: '/starters/index' },
+      { text: '示例项目', link: '/examples/index' }
     ],
     sidebar: [
       {
-        text: '核心指南',
+        text: '开始使用',
         items: [
-          { text: '快速开始 (30秒上手)', link: '/quick-start' },
-          { text: '国内主流模型接入', link: '/models' },
-          { text: '常见问题与排障', link: '/known-issues' },
-          { text: 'Hermes vs OpenClaw 对比', link: '/openclaw-compare' }
+          { text: '首页', link: '/' },
+          { text: '快速开始', link: '/quick-start' },
+          { text: '模型与 Provider', link: '/models' },
+          { text: '常见问题', link: '/known-issues' }
+        ]
+      },
+      {
+        text: '进阶了解',
+        items: [
+          { text: 'Hermes vs OpenClaw', link: '/openclaw-compare' },
+          { text: '多 Agent 协作', link: '/team-flow' }
+        ]
+      },
+      {
+        text: '资源库',
+        items: [
+          { text: 'Starter 模板', link: '/starters/index' },
+          { text: '示例项目', link: '/examples/index' }
         ]
       }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zcweah1981/awesome-hermes-agent-zh' }
-    ]
+    ],
+    footer: {
+      message: '面向中文用户的 Hermes Agent 使用指南。',
+      copyright: 'Copyright © 2026 Hermes Agent 中文指南'
+    }
   }
 }

@@ -1,53 +1,61 @@
----
-# 采用 layout: doc 模式以确保 GitHub 预览极度清爽，不再产生横向长表格
-layout: doc
----
+# Hermes Agent 中文指南
 
-# Hermes Agent 中文生态 (hermes-agent-zh)
+欢迎来到 Awesome Hermes Agent ZH。
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/zcweah1981/awesome-hermes-agent-zh/main/docs/public/banner.png" alt="Hermes Agent Banner" style="max-width: 100%; border-radius: 8px;">
-</p>
-
-<p align="center">
-  <strong>最快、最稳的 Hermes Agent 中文落地实践指南。</strong><br>
-  30秒接入 DeepSeek/Qwen，提供开箱即用的多 Agent 协作模板。
-</p>
-
-<p align="center">
-  <a href="./quick-start">🚀 快速开始</a> &nbsp; | &nbsp; <a href="https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters">📦 浏览模板</a>
-</p>
+这里不是开发过程说明，也不是内部策略文档，而是给用户直接使用的中文入口：
+- 快速安装
+- 模型选择
+- 常见问题排查
+- 模板与案例参考
 
 ---
 
-## 🚀 核心价值
+## 先看哪里
 
-### ⚡ 极速接入
-针对国内网络环境深度优化。预置 **DeepSeek**、**通义千问 (Qwen)** 等主流模型配置示例，实现真正的“零门槛”起步。
+### 第一次使用
+- [快速开始](./quick-start.md)
+- [模型与 Provider](./models.md)
+- [常见问题](./known-issues.md)
 
-### 🧩 实战模板 (Starters)
-提供从单体助手到多子体协作 (OPC) 的现成模板。涵盖代码编写、文档审计、多节点联动等真实生产场景。
+### 想做选型对比
+- [Hermes vs OpenClaw](./openclaw-compare.md)
+- [多 Agent 协作](./team-flow.md)
 
-### 🛡️ 中文排障
-汇总中国开发者特有的网络超时、SSL 证书、终端乱码、环境依赖等“三大坑”解决方案。
-
-### 🔌 生态拓展
-正在积极接入 **飞书**、**钉钉**、**微信** 等国内主流办公平台的集成指引。
-
----
-
-## 🛠️ 快速导航
-
-- [**快速开始 (30秒上手)**](./quick-start) - 获取你的第一个 DeepSeek 配置文件。
-- [**国内模型接入指南**](./models) - 涵盖 DeepSeek, Qwen, GLM, Kimi 等。
-- [**实战模板库 (Starters)**](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters) - 直接下载即可运行。
-- [**常见问题与排障**](./known-issues) - 遇到报错先看这里。
+### 想直接拿模板
+- [Starter 模板](./starters/index.md)
+- [示例项目](./examples/index.md)
 
 ---
 
-## 为什么选择 Hermes？
+## 适合谁
 
-相比于其他 Agent 框架，Hermes 拥有：
-- **原生 ACP 协议**: 极低延迟的多智能体并发协作。
-- **内置学习闭环**: 自动从会话中提取并持久化技能。
-- **极简部署**: 哪怕是在 $5 的 VPS 上也能流畅运行。
+- 想在本地或服务器上运行 AI Agent 的开发者
+- 想用中文资料快速完成 Hermes 上手的团队
+- 想接入 DeepSeek、Qwen、GLM、Kimi、OpenRouter 等模型的用户
+- 想从单 Agent 走向多 Agent 协作的人
+
+---
+
+## 你能在这里找到什么
+
+### 快速开始
+从安装到跑通第一轮对话，尽量减少无效折腾。
+
+### 模型与 Provider
+帮助你判断该选哪个模型、如何配置密钥、什么时候该走官方 Provider。
+
+### 常见问题
+集中处理国内网络、证书、权限、编码等高频问题。
+
+### 模板与案例
+不是概念介绍，而是更适合复制、改造、直接落地的资源。
+
+---
+
+## 推荐阅读顺序
+
+1. [快速开始](./quick-start.md)
+2. [模型与 Provider](./models.md)
+3. [常见问题](./known-issues.md)
+4. [Starter 模板](./starters/index.md)
+5. [示例项目](./examples/index.md)

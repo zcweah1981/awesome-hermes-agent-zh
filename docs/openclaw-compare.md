@@ -1,60 +1,96 @@
-# Hermes vs OpenClaw：深度对比与迁移指南
+# Hermes vs OpenClaw：怎么选，怎么迁移
 
-如果你是 OpenClaw (Clawdbot) 的资深用户，或者正在寻找一个更适合“单人公司 (OPC)”落地的 AI Agent 框架，本指南将帮助你理解 Hermes 的优势并提供平滑迁移方案。
+如果你已经了解 OpenClaw，或者正在比较不同 Agent 框架，这一页只回答三个问题：
+- Hermes 更适合什么场景
+- 和 OpenClaw 的使用体验差异在哪里
+- 如果你想迁移，应该先迁什么
 
 ---
 
-## ⚖️ 核心对比 (Technical Audit)
+## 一句话理解
 
-| 特性 | OpenClaw | Hermes Agent (Hermes-Zh) |
+### 适合选 Hermes 的情况
+- 你希望一个 Agent 能直接操作终端、文件、网页和浏览器
+- 你希望把模型能力延伸到“执行任务”而不是只做对话
+- 你希望后续可以接消息平台、定时任务、多 Agent 协作
+
+### 适合继续用 OpenClaw 的情况
+- 你当前工作流已经高度绑定 OpenClaw
+- 你的现有插件和流程短期内没有迁移动机
+- 你只需要一个相对固定的单一 Bot 交互模式
+
+---
+
+## 使用体验差异
+
+| 维度 | OpenClaw | Hermes Agent |
 | :--- | :--- | :--- |
-| **底层协议** | 传统的串行执行 / 轮询 | **ACP (Agent Communication Protocol)**: 原生支持并发协作。 |
-| **并发处理** | 模拟并发 (Python threading) | **真并发**: 基于异步流的非阻塞执行。 |
-| **工具/技能注册** | 依赖外部脚本 / 复杂 Decorator | **极简 `@skill`**: 自动生成 JSON Schema，3行代码定义工具。 |
-| **配置深度** | 零散配置项 | **SSoT**: 所有配置统一在 `config.yaml` 或 `profiles` 下。 |
-| **内存开销** | ~1GB+ | **~128MB+**: 极致轻量化设计。 |
-| **中国环境** | 手动配置 HTTP_PROXY | **原生加速**: 支持自定义 Base URL (适配 DeepSeek/Qwen)。 |
+| 上手方式 | 更偏向已有使用者生态 | 文档清晰，适合从安装到实战逐步上手 |
+| 执行能力 | 以既有 Bot / 插件流为主 | 原生集成终端、文件、Web、浏览器等能力 |
+| 扩展方式 | 依赖现有插件体系 | 支持 tools、skills、子 Agent 扩展 |
+| 多 Agent 协作 | 需要额外设计 | 内置委派与任务拆分能力 |
+| 平台接入 | 视现有实现而定 | 可接 Telegram、Discord、Slack 等 |
+| 中文落地 | 资料相对分散 | 本仓库补充中文安装、模型与排障说明 |
 
 ---
 
-## 🛠️ 技能编写对比
+## 如果你是从 OpenClaw 迁移过来
 
-### OpenClaw (传统模式)
-```python
-# OpenClaw 通常需要显式定义参数 schema
-def get_weather(city: str):
-    """获取天气
-    Args: city (str): 城市名
-    """
-    pass
+推荐按下面顺序迁移，不要一次性重做全部：
 
-# 注册过程通常较繁琐
-bot.register_tool(get_weather, schema=...)
-```
+### 第一步：先迁模型与运行环境
+先在 Hermes 里跑通：
+- 安装
+- 模型配置
+- 第一轮对话
 
-### Hermes (极简模式)
-```python
-@skill
-def get_weather(city: str):
-    """获取指定城市的天气。"""
-    return f"{city} 的天气是晴朗。"
-```
-*Hermes 会自动利用 Python 类型注解解析并注册工具。*
+对应文档：
+- [快速开始](./quick-start.md)
+- [模型与 Provider](./models.md)
 
----
+### 第二步：再迁你最常用的执行能力
+优先迁这些最能出结果的能力：
+- 文件处理
+- 终端命令
+- Web 搜索
+- 浏览器操作
 
-## 🚀 迁移步骤
-
-1. **配置对齐**: 将你的 OpenClaw 模型密钥迁移至 `~/.hermes/config.yaml`。
-2. **逻辑平移**: OpenClaw 的 Action 逻辑可以直接封装进 Hermes 的 `@skill`。
-3. **架构升级**: 如果你在 OpenClaw 中使用多个 Bot 互相私聊，在 Hermes 中应改为使用 `Team` 模式。
+### 第三步：最后迁团队协作或多 Agent 流程
+等单 Agent 跑稳定后，再考虑：
+- 任务委派
+- 多 Agent 协作
+- 平台接入
+- 自动化任务
 
 ---
 
-## 🙋 常见问题 (FAQ)
+## 迁移建议
 
-**Q: 我的 OpenClaw 插件能直接用吗？**  
-A: 需要简单包装。将逻辑放入 `skills/your_skill/run.py` 中并添加 `@skill` 装饰器即可。
+### 不要先比概念，先比结果
+最好的比较方式不是看术语，而是直接做一件事：
+- 安装
+- 选一个模型
+- 让 Agent 完成一个真实任务
 
-**Q: 并发能力具体体现在哪？**  
-A: 在多智能体团队协作时，Hermes 允许 PM、Coder、QA 同时在线并监听 ACP 广播，而无需等待上一个人彻底结束。
+### 不要一上来就做全量迁移
+建议先找一个最小场景试点，例如：
+- 代码库巡检
+- 网页信息抓取
+- 日报生成
+- 消息群通知
+
+### 不要把历史插件一次性搬空
+先搬“最常用、最有产出、最容易验证”的那部分。
+
+---
+
+## 常见问题
+
+### 我原来的插件逻辑能直接复用吗？
+通常需要按 Hermes 的 tools 或 skills 方式重新整理，但很多核心业务逻辑本身是可以迁移的。
+
+### Hermes 更适合个人还是团队？
+两者都可以。个人用户可以先从单 Agent 开始，团队可以逐步扩展到多 Agent 协作。
+
+### 我应该先看哪页？
+如果你还没安装，先看：[快速开始](./quick-start.md)
