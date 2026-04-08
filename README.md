@@ -85,9 +85,13 @@ hermes chat --provider deepseek --model deepseek-chat
 2. `docs/openclaw-compare.md`
 3. `docs/team-flow.md`
 
-### 我想直接套模板
+### 我想搭项目骨架
 1. `docs/starters/index.md`
-2. `docs/examples/index.md`
+2. 选择 `single-agent` 或 `team-basic`
+
+### 我想看具体案例
+1. `docs/examples/index.md`
+2. 进入对应配置示例或集成示例
 
 ---
 

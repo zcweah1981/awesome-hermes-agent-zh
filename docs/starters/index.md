@@ -1,59 +1,99 @@
 # Starter 模板
 
-这里收录适合直接复制、改造和落地的 Hermes Agent 起步模板。
+Starter 是“拿来就能改”的起步模板。
 
-如果你不想从空白目录开始，这一页就是入口。
+它们适合你从 0 到 1 快速搭起一个 Hermes 项目，所以这里放的是：
+- 基础目录结构
+- 初始配置
+- system prompt
+- 可直接复制的最小模板
 
----
-
-## 适合谁
-
-- 想快速搭一个可运行项目
-- 想参考目录结构和基础配置
-- 想先有一个起点，再逐步扩展功能
+如果你想看更贴近具体业务场景的案例，请去 [示例项目](../examples/index.md)。
 
 ---
 
-## 你可以怎么使用这些模板
+## 当前 Starter 列表
 
-### 方式 1：直接复制
-把对应 starter 目录复制到你的项目里，再替换模型、环境变量和业务提示词。
+### 1. single-agent
+路径：`/starters/single-agent`
 
-### 方式 2：作为结构参考
-如果你已经有项目，可以只参考里面的目录组织、配置写法和 README。
-
----
-
-## 推荐起步顺序
-
-### 1. 单 Agent 模板
 适合：
 - 个人开发者
-- 小任务自动化
-- 第一轮 PoC
+- 单 Agent 助手
+- 第一个可运行版本
 
-### 2. 多 Agent 模板
-适合：
-- 需要任务拆解
-- 需要多角色协作
-- 需要更清晰的执行分层
+你会得到：
+- 基础 `config.yaml`
+- 单 Agent `system_prompt.txt`
+- 最小可运行结构
 
 ---
 
-## 使用前建议
+### 2. team-basic
+路径：`/starters/team-basic`
 
-开始之前，建议先完成：
-- [快速开始](../quick-start.md)
-- [模型与 Provider](../models.md)
+适合：
+- 想从单 Agent 升级到基础协作
+- 需要最简单的 PM / Coder / QA 分工雏形
 
-这样你在拿模板时，能更快判断：
-- 用哪个模型
-- 密钥怎么放
-- 哪些问题是环境问题，哪些是模板问题
+你会得到：
+- 主控配置
+- 多角色 system prompt
+- 基础团队协作模板
+
+---
+
+### 3. advanced-coding-team
+路径：`/starters/advanced-coding-team`
+
+适合：
+- 想做代码开发工作流
+- 想引入 reviewer / code review 角色
+
+你会得到：
+- 更完整的团队编排模板
+- 面向开发场景的角色配置
+
+---
+
+## 怎么判断该看 Starter 还是 Example
+
+看 Starter，如果你需要：
+- 一个起点
+- 一个基础骨架
+- 一套最小可运行配置
+
+不要把 Starter 当成行业案例库。
+
+看 Example，如果你需要：
+- 某个具体场景怎么做
+- 某种集成怎么接
+- 某个业务流程怎么拼起来
+
+---
+
+## 使用建议
+
+1. 先完成 [快速开始](../quick-start.md)
+2. 再确认模型接入方式：[模型与 Provider](../models.md)
+3. 然后从最接近你的 starter 开始复制
+
+建议顺序：
+- 新手先从 `single-agent` 开始
+- 需要协作再看 `team-basic`
+- 做开发流再看 `advanced-coding-team`
+
+---
+
+## 直接进入仓库目录
+
+- [single-agent](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent)
+- [team-basic](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
+- [advanced-coding-team](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/advanced-coding-team)
 
 ---
 
 ## 下一步
 
-如果你还需要更贴近真实业务的参考，请继续看：
+如果你已经有基础模板，想看更具体的接入案例，请继续看：
 - [示例项目](../examples/index.md)

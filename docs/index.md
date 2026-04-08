@@ -21,8 +21,10 @@
 - [Hermes vs OpenClaw](./openclaw-compare.md)
 - [多 Agent 协作](./team-flow.md)
 
-### 想直接拿模板
+### 想搭项目骨架
 - [Starter 模板](./starters/index.md)
+
+### 想看具体案例
 - [示例项目](./examples/index.md)
 
 ---

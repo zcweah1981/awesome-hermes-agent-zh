@@ -31,8 +31,8 @@ export default {
       {
         text: '资源库',
         items: [
-          { text: 'Starter 模板', link: '/starters/index' },
-          { text: '示例项目', link: '/examples/index' }
+          { text: 'Starter 模板（项目骨架）', link: '/starters/index' },
+          { text: '示例项目（具体案例）', link: '/examples/index' }
         ]
       }
     ],
