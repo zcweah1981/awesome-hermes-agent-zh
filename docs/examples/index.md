@@ -14,12 +14,12 @@ Example 是“具体场景怎么做”的参考案例。
 
 ## 当前 Example 列表
 
-### 1. 配置示例
-路径：`/examples/configs`
+### 1. [配置示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/configs)
+路径：[ `/examples/configs` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/configs)
 
 当前包含：
-- `deepseek.yaml`
-- `qwen.yaml`
+- [deepseek.yaml](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/configs/deepseek.yaml)
+- [qwen.yaml](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/configs/qwen.yaml)
 
 适合：
 - 想快速理解某个模型怎么配
@@ -27,15 +27,15 @@ Example 是“具体场景怎么做”的参考案例。
 
 ---
 
-### 2. 技能与集成示例
-路径：`/examples/skills/webhook-notifier`
+### 2. [技能与集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
+路径：[ `/examples/skills/webhook-notifier` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
 
 适合：
 - 想把 Hermes 输出接到飞书、钉钉或其他 Webhook
 - 想参考自定义工具/技能的落地方式
 
 当前示例：
-- `webhook-notifier`
+- [webhook-notifier](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
 
 ---
 

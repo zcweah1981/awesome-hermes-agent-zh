@@ -8,13 +8,13 @@
 - 提供可直接复用的模板、案例与排障说明
 
 快速入口：
-- 快速开始：./docs/quick-start.md
-- 模型与 Provider：./docs/models.md
-- 常见问题：./docs/known-issues.md
-- Hermes vs OpenClaw：./docs/openclaw-compare.md
-- 多 Agent 协作：./docs/team-flow.md
-- Starter 模板：./docs/starters/index.md
-- 示例项目：./docs/examples/index.md
+- [快速开始](./docs/quick-start.md)
+- [模型与 Provider](./docs/models.md)
+- [常见问题](./docs/known-issues.md)
+- [Hermes vs OpenClaw](./docs/openclaw-compare.md)
+- [多 Agent 协作](./docs/team-flow.md)
+- [Starter 模板](./docs/starters/index.md)
+- [示例项目](./docs/examples/index.md)
 
 ---
 
@@ -76,43 +76,43 @@ hermes chat --provider deepseek --model deepseek-chat
 ## 推荐阅读路径
 
 ### 我只想先跑起来
-1. `docs/quick-start.md`
-2. `docs/models.md`
-3. `docs/known-issues.md`
+1. [快速开始](./docs/quick-start.md)
+2. [模型与 Provider](./docs/models.md)
+3. [常见问题](./docs/known-issues.md)
 
 ### 我想给团队做选型
-1. `docs/models.md`
-2. `docs/openclaw-compare.md`
-3. `docs/team-flow.md`
+1. [模型与 Provider](./docs/models.md)
+2. [Hermes vs OpenClaw](./docs/openclaw-compare.md)
+3. [多 Agent 协作](./docs/team-flow.md)
 
 ### 我想搭项目骨架
-1. `docs/starters/index.md`
-2. 选择 `single-agent` 或 `team-basic`
+1. [Starter 模板](./docs/starters/index.md)
+2. [single-agent](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent) 或 [team-basic](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
 
 ### 我想看具体案例
-1. `docs/examples/index.md`
-2. 进入对应配置示例或集成示例
+1. [示例项目](./docs/examples/index.md)
+2. 进入 [配置示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/configs) 或 [Webhook 集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
 
 ---
 
 ## 当前收录内容
 
-### 快速开始
+### [快速开始](./docs/quick-start.md)
 包含安装、初始化、首轮对话与国内环境建议。
 
-### 模型与 Provider
+### [模型与 Provider](./docs/models.md)
 覆盖 DeepSeek、Qwen、GLM、Kimi、OpenRouter 等常见接入路径。
 
-### 常见问题
+### [常见问题](./docs/known-issues.md)
 覆盖 SSL、代理、编码、权限、依赖缺失等高频问题。
 
-### 对比与迁移
+### [Hermes vs OpenClaw](./docs/openclaw-compare.md)
 帮助已有其他 Agent 框架经验的用户快速理解 Hermes 的使用方式。
 
-### Starter 模板
+### [Starter 模板](./docs/starters/index.md)
 提供适合直接复制的基础项目模板。
 
-### 示例项目
+### [示例项目](./docs/examples/index.md)
 提供更接近真实业务的参考结构与配置样例。
 
 ---
@@ -133,10 +133,10 @@ hermes chat --provider deepseek --model deepseek-chat
 
 ## 官方参考
 
-- 官方文档：https://hermes-agent.nousresearch.com/
-- Quickstart：https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/
-- AI Providers：https://hermes-agent.nousresearch.com/docs/integrations/providers/
-- Configuration：https://hermes-agent.nousresearch.com/docs/user-guide/configuration/
+- [官方文档](https://hermes-agent.nousresearch.com/)
+- [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart/)
+- [AI Providers](https://hermes-agent.nousresearch.com/docs/integrations/providers/)
+- [Configuration](https://hermes-agent.nousresearch.com/docs/user-guide/configuration/)
 
 ---
 
@@ -148,4 +148,4 @@ hermes chat --provider deepseek --model deepseek-chat
 - 行业场景案例
 - 国内模型接入经验
 
-如果你发现文档过时，欢迎直接提 Issue 或 PR。
+如果你发现文档过时，欢迎直接提 [Issue](https://github.com/zcweah1981/awesome-hermes-agent-zh/issues) 或 [PR](https://github.com/zcweah1981/awesome-hermes-agent-zh/pulls)。

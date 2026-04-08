@@ -14,8 +14,8 @@ Starter 是“拿来就能改”的起步模板。
 
 ## 当前 Starter 列表
 
-### 1. single-agent
-路径：`/starters/single-agent`
+### 1. [single-agent](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent)
+路径：[ `/starters/single-agent` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent)
 
 适合：
 - 个人开发者
@@ -29,8 +29,8 @@ Starter 是“拿来就能改”的起步模板。
 
 ---
 
-### 2. team-basic
-路径：`/starters/team-basic`
+### 2. [team-basic](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
+路径：[ `/starters/team-basic` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
 
 适合：
 - 想从单 Agent 升级到基础协作
@@ -43,8 +43,8 @@ Starter 是“拿来就能改”的起步模板。
 
 ---
 
-### 3. advanced-coding-team
-路径：`/starters/advanced-coding-team`
+### 3. [advanced-coding-team](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/advanced-coding-team)
+路径：[ `/starters/advanced-coding-team` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/advanced-coding-team)
 
 适合：
 - 想做代码开发工作流
@@ -79,9 +79,9 @@ Starter 是“拿来就能改”的起步模板。
 3. 然后从最接近你的 starter 开始复制
 
 建议顺序：
-- 新手先从 `single-agent` 开始
-- 需要协作再看 `team-basic`
-- 做开发流再看 `advanced-coding-team`
+- 新手先从 [single-agent](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent) 开始
+- 需要协作再看 [team-basic](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
+- 做开发流再看 [advanced-coding-team](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/advanced-coding-team)
 
 ---
 
