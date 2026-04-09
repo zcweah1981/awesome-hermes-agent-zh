@@ -1,5 +1,14 @@
 node_modules
 .vitepress/dist
 .vitepress/cache
+docs/.vitepress/dist
+docs/.vitepress/cache
+dist
+.deploy
+.vercel
+.hermes.md
+V1_TODO.md
+CONTENT_PLAN.md
+INTERNAL_ROADMAP.md
 .DS_Store
 *.log

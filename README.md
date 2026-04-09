@@ -2,7 +2,7 @@
 
 ![Hermes Agent 中文指南 Banner](./docs/public/hero-banner.svg)
 
-面向中文用户的 Hermes Agent 上手、选型与实战资源库。
+面向中文开发者的 Hermes Agent 上手、选型与实战资源库。
 
 这个仓库聚焦三件事：
 - 帮你快速完成安装与首跑
@@ -10,13 +10,13 @@
 - 提供可直接复用的模板、案例与排障说明
 
 快速入口：
-- [快速开始](./docs/quick-start.md)
+- [30 秒快速开始](./docs/quick-start.md)
 - [模型与 Provider](./docs/models.md)
+- [Starter 模板](./docs/starters/index.md)
+- [示例项目](./docs/examples/index.md)
 - [常见问题](./docs/known-issues.md)
 - [Hermes vs OpenClaw](./docs/openclaw-compare.md)
 - [多 Agent 协作](./docs/team-flow.md)
-- [Starter 模板](./docs/starters/index.md)
-- [示例项目](./docs/examples/index.md)
 
 ---
 
@@ -83,53 +83,54 @@ hermes chat --provider deepseek --model deepseek-chat
 3. [常见问题](./docs/known-issues.md)
 
 ### 我想给团队做选型
-1. [模型与 Provider](./docs/models.md)
+1. [Hermes 到底适合谁，不适合谁](./docs/fit-guide.md)
 2. [Hermes vs OpenClaw](./docs/openclaw-compare.md)
 3. [多 Agent 协作](./docs/team-flow.md)
 
 ### 我想搭项目骨架
 1. [Starter 模板](./docs/starters/index.md)
-2. [single-agent](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/single-agent) 或 [team-basic](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/starters/team-basic)
+2. [single-agent starter 模板说明](./docs/single-agent-starter-guide.md)
+3. [team-basic starter 模板说明](./docs/team-basic-starter-guide.md)
 
 ### 我想看具体案例
 1. [示例项目](./docs/examples/index.md)
-2. 进入 [配置示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/configs) 或 [Webhook 集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
+2. [Telegram 汇报示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/telegram-report)
+3. [仓库巡检示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/repo-review)
 
 ---
 
 ## 当前收录内容
 
-### [快速开始](./docs/quick-start.md)
-包含安装、初始化、首轮对话与国内环境建议。
+### 入门与配置
+- [快速开始](./docs/quick-start.md)
+- [安装前准备](./docs/install-prep.md)
+- [模型与 Provider](./docs/models.md)
+- [自定义 OpenAI-Compatible 接口配置指南](./docs/custom-openai-compatible.md)
+- [常见配置错误排查](./docs/config-errors.md)
+- [第一次跑不起来时的标准排查顺序](./docs/first-run-checklist.md)
+- [常见问题](./docs/known-issues.md)
 
-### [模型与 Provider](./docs/models.md)
-覆盖 DeepSeek、Qwen、GLM、Kimi、OpenRouter 等常见接入路径。
+### 选型与协作
+- [Hermes 到底适合谁，不适合谁](./docs/fit-guide.md)
+- [Hermes vs OpenClaw](./docs/openclaw-compare.md)
+- [从 OpenClaw 迁移到 Hermes](./docs/openclaw-migration.md)
+- [迁移后校验清单](./docs/migration-checklist.md)
+- [多 Agent 协作](./docs/team-flow.md)
+- [SOUL 管角色，MD 管项目](./docs/soul-md-workflow.md)
 
-### [常见问题](./docs/known-issues.md)
-覆盖 SSL、代理、编码、权限、依赖缺失等高频问题。
+### 模板与项目结构
+- [Starter 模板](./docs/starters/index.md)
+- [single-agent starter 模板说明](./docs/single-agent-starter-guide.md)
+- [team-basic starter 模板说明](./docs/team-basic-starter-guide.md)
+- [Hermes 项目目录组织规范](./docs/project-structure.md)
+- [Hermes 项目文件编写指南](./docs/project-files-guide.md)
+- [Hermes 中文用户最常见的 3 条使用路径](./docs/user-paths.md)
 
-### [Hermes vs OpenClaw](./docs/openclaw-compare.md)
-帮助已有其他 Agent 框架经验的用户快速理解 Hermes 的使用方式。
-
-### [Starter 模板](./docs/starters/index.md)
-提供适合直接复制的基础项目模板。
-
-### [示例项目](./docs/examples/index.md)
-提供更接近真实业务的参考结构与配置样例。
-
----
-
-## 推荐模型组合
-
-### 个人开发者
-- 主模型：DeepSeek 或 Qwen
-- 备选：OpenRouter
-
-### 中文内容与长文本场景
-- Kimi / Qwen / GLM
-
-### 多模型切换与海外模型需求
-- OpenRouter + 一个国内 Provider
+### 实战案例
+- [示例项目索引](./docs/examples/index.md)
+- [Webhook 集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
+- [Telegram 汇报示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/telegram-report)
+- [仓库巡检示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/repo-review)
 
 ---
 

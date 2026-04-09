@@ -1,24 +1,76 @@
-# Team Basic Starter (基础多智能体协作模板)
+# Team Basic Starter
 
-展示了如何使用 Hermes 的 `--acp` 功能和并发任务 (`delegate_task`) 建立一个最基础的“主程序 + 子程序”团队。
-这里以一个“开发(Coder) + 测试(QA)”的经典搭配为例。
+这是从单 Agent 过渡到基础多角色协作的 starter。
 
-## 目录结构
-- `config.yaml`: 主控节点 (PM/主管) 的配置，定义了如何连接子代理。
-- `system_prompt.txt`: 主控节点的人设。
-- `coder_system.txt`: 开发智能体的人设。
-- `qa_system.txt`: 测试智能体的人设。
+如果你已经不满足于“一个 Agent 做完所有事情”，但也不想一上来搭很重的团队系统，这个模板就是最稳的下一步。
 
-## 如何使用
+---
 
-1. **配置环境变量**:
-   确保你的国内大模型 API Key 已设置，例如 `export DEEPSEEK_API_KEY="your-key"`。
+## 适合谁
 
-2. **启动主控节点**:
-   ```bash
-   hermes --config config.yaml
-   ```
+- 已经跑通过单 Agent 的用户
+- 想尝试基础多 Agent 协作的团队
+- 需要最简单的任务拆解、执行、校验闭环的人
 
-3. **下达任务**:
-   向主控节点输入指令，例如：“帮我写一个 Python 的贪吃蛇游戏，写完后让 QA 跑一下测试。”
-   主控节点会自动通过 `delegate_task` 工具将任务分发给底层的 Coder 和 QA 进行处理。
+---
+
+## 模板包含什么
+
+当前目录包含：
+- [`config.yaml`](./config.yaml)：主控配置
+- [`system_prompt.txt`](./system_prompt.txt)：主控角色 prompt
+- [`coder_system.txt`](./coder_system.txt)：执行角色 prompt
+- [`qa_system.txt`](./qa_system.txt)：校验角色 prompt
+
+说明：
+- 这是一个轻量多角色模板
+- 目标不是做完整企业级编排
+- 而是先让你体验“拆任务 → 执行 → 校验”的基本闭环
+
+---
+
+## 如何启动
+
+### 1. 先确保你已完成基础安装
+建议先看：
+- [快速开始](../../docs/quick-start.md)
+- [模型与 Provider](../../docs/models.md)
+
+### 2. 配置模型密钥
+建议把密钥放在本机 `~/.hermes/.env` 中，例如：
+```bash
+DEEPSEEK_API_KEY=***
+```
+
+### 3. 在当前目录启动
+```bash
+hermes --config config.yaml
+```
+
+### 4. 下达一个基础协作任务
+例如：
+- 帮我写一个 Python 小工具，然后让 QA 检查输出结果
+- 帮我整理一个脚本方案，并校验潜在风险
+
+---
+
+## 适用场景
+
+适合：
+- 轻量研发协作
+- 代码生成 + 基础校验
+- 小团队的最小分工验证
+- 从单 Agent 向多 Agent 升级
+
+不适合：
+- 复杂 reviewer 流程
+- 严格代码审计流程
+- 大型团队编排
+
+---
+
+## 推荐下一步
+
+- 想看更完整的开发流：看 [advanced-coding-team](../advanced-coding-team/README.md)
+- 想看 starter 总览：看 [Starter 模板索引](../../docs/starters/index.md)
+- 想理解多 Agent 场景：看 [多 Agent 协作](../../docs/team-flow.md)

@@ -27,7 +27,7 @@ Example 是“具体场景怎么做”的参考案例。
 
 ---
 
-### 2. [技能与集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
+### 2. [Webhook 集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
 路径：[ `/examples/skills/webhook-notifier` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
 
 适合：
@@ -39,12 +39,43 @@ Example 是“具体场景怎么做”的参考案例。
 
 ---
 
+### 3. [Telegram 汇报示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/telegram-report)
+路径：[ `/examples/telegram-report` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/telegram-report)
+
+适合：
+- 想把项目进展或执行结果直接发送到 Telegram
+- 想做日报、周报、阶段同步的自动化输出
+
+当前示例：
+- [README.md](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/telegram-report/README.md)
+- [config.yaml](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/telegram-report/config.yaml)
+- [system_prompt.txt](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/telegram-report/system_prompt.txt)
+- [report_template.md](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/telegram-report/report_template.md)
+
+---
+
+### 4. [仓库巡检示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/repo-review)
+路径：[ `/examples/repo-review` ](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/repo-review)
+
+适合：
+- 想在上线前快速做仓库 review
+- 想检查 README、docs、examples、目录观感是否一致
+
+当前示例：
+- [README.md](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/repo-review/README.md)
+- [config.yaml](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/repo-review/config.yaml)
+- [system_prompt.txt](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/repo-review/system_prompt.txt)
+- [review_checklist.md](https://github.com/zcweah1981/awesome-hermes-agent-zh/blob/main/examples/repo-review/review_checklist.md)
+
+---
+
 ## 怎么判断该看 Example 还是 Starter
 
 看 Example，如果你需要：
 - 一个具体问题的解决方式
 - 某类模型配置的参考
 - 某种集成方式的样板
+- 一个更接近真实工作的落地案例
 
 不要把 Example 当成项目初始骨架。
 
@@ -67,6 +98,8 @@ Example 是“具体场景怎么做”的参考案例。
 
 - [配置示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/configs)
 - [Webhook 集成示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/skills/webhook-notifier)
+- [Telegram 汇报示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/telegram-report)
+- [仓库巡检示例](https://github.com/zcweah1981/awesome-hermes-agent-zh/tree/main/examples/repo-review)
 
 ---
 
