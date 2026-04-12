@@ -14,8 +14,8 @@
 1. `docs/starters/index.md`
 2. `docs/examples/index.md`
 3. `docs/team-flow.md`
-4. `docs/openclaw-compare.md`
-5. `docs/openclaw-migration.md`
+4. `docs/migrate/compare.md`
+5. `docs/migrate/migration.md`
 
 ## 需要准备什么
 - 基础环境已经稳定

@@ -1,5 +1,8 @@
 # Hermes vs OpenClaw：怎么选，怎么迁移
 
+说明：本页已降级为过渡兼容页；RM6 正式入口已切换到 `docs/migrate/index.md`，正式比较正文见 `docs/migrate/compare.md`。
+
+
 如果你已经了解 OpenClaw，或者正在比较不同 Agent 框架，这一页只回答三个问题：
 - Hermes 更适合什么场景
 - 和 OpenClaw 的使用体验差异在哪里

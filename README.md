@@ -34,7 +34,7 @@ Hermes Agent 中文站不是资料堆，也不是一份内部开发记录，而�
 
   - 当前首批专题页：[`install`](./docs/issues/install.md) / [`models`](./docs/issues/models.md) / [`deploy`](./docs/issues/deploy.md)
   - 旧版聚合页 [`docs/known-issues.md`](./docs/known-issues.md) 保留为过渡参考，不再作为唯一主入口
-- [从 OpenClaw 过来](./docs/openclaw-migration.md) — 判断是否值得迁移，以及该按什么顺序迁
+- [从 OpenClaw 过来](./docs/migrate/index.md) — 统一进入迁移判断、迁移顺序与共存替换路径
 
 ## GitHub 与独立站的关系
 
@@ -47,7 +47,7 @@ Hermes Agent 中文站不是资料堆，也不是一份内部开发记录，而�
 
 - 主入口：[从这开始](./docs/start/index.md)
 - 次入口：[现成方案](./docs/solutions/index.md)
-- 迁移用户入口：[从 OpenClaw 过来](./docs/openclaw-migration.md)
+- 迁移用户入口：[从 OpenClaw 过来](./docs/migrate/index.md)
 
 ## 治理与冻结文件
 

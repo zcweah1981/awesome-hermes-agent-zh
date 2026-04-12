@@ -50,4 +50,4 @@
 - 模型与 Provider：`/models`
 - 常见问题：`/known-issues`
 - 现成方案：`/examples/index`
-- 从 OpenClaw 过来：`/openclaw-migration`
+- 从 OpenClaw 过来：`/migrate/`

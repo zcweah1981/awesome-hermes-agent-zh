@@ -39,5 +39,5 @@
 
 ## 下一步
 
-- 想看迁移策略：看 [从 OpenClaw 迁移到 Hermes](./openclaw-migration.md)
+- 想看迁移策略：看 [从 OpenClaw 过来](./migrate/index.md)
 - 想补充基础环境：看 [快速开始](./quick-start.md)

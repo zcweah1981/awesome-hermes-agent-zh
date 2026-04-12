@@ -226,4 +226,4 @@ export https_proxy="http://127.0.0.1:端口"
 
 - 模型与 provider 选择：`./models.md`
 - 常见问题排查：`./known-issues.md`
-- 与 OpenClaw 的差异：`./openclaw-compare.md`
+- 与 OpenClaw 的差异：`./migrate/compare.md`

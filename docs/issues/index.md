@@ -62,5 +62,5 @@ RM5 的目标不是继续维护一篇不断膨胀的旧版 FAQ，而是把高频
 
 - [从这开始](../start/index.md)
 - [国内落地](../china/index.md)
-- [从 OpenClaw 过来](../openclaw-migration.md)
+- [从 OpenClaw 过来](../migrate/index.md)
 - [正式页面来源映射](../governance/page-source-map.md)

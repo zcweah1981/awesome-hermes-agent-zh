@@ -43,8 +43,8 @@
 - 想评估 Hermes 的业务价值
 
 推荐阅读顺序：
-1. [Hermes vs OpenClaw](./openclaw-compare.md)
-2. [从 OpenClaw 迁移到 Hermes](./openclaw-migration.md)
+1. [怎么选，怎么迁](./migrate/compare.md)
+2. [从 OpenClaw 过来](./migrate/index.md)
 3. [多 Agent 协作](./team-flow.md)
 
 ---

@@ -17,7 +17,7 @@ hero:
       link: /solutions/
     - theme: alt
       text: 从 OpenClaw 过来
-      link: /openclaw-migration
+      link: /migrate/
 
 features:
   - title: 为什么选 Hermes
@@ -76,7 +76,7 @@ Hermes Agent 适合那些已经不满足于“只会聊天”的 Agent 工具的
 - 旧版聚合页 [/known-issues](/known-issues) 保留为过渡参考，不再作为唯一主入口
 
 ### 正在做迁移判断
-- [从 OpenClaw 过来](/openclaw-migration) —— 先判断值不值得迁，再决定怎么迁
+- [从 OpenClaw 过来](/migrate/) —— 统一进入比较、迁移顺序与共存替换三条路径
 
 ## 六模块入口
 
@@ -85,4 +85,4 @@ Hermes Agent 适合那些已经不满足于“只会聊天”的 Agent 工具的
 - [现成方案](/solutions/) —— 看四类现成落地方式
 - [国内落地](/china/) —— 先判断国内模型、成本、provider 与自托管路径，再决定是否需要 custom OpenAI-Compatible 接入
 - [遇到问题](/issues/) —— 先从问题总览页进入，再按 install / models / deploy 分类排障
-- [从 OpenClaw 过来](/openclaw-migration) —— 迁移判断与路径
+- [从 OpenClaw 过来](/migrate/) —— 迁移判断、迁移顺序与共存替换路径

@@ -10,7 +10,7 @@
 | 现成方案 | `docs/solutions/index.md` | 四类现成方案总入口（content / office / management / dev） |
 | 国内落地 | `docs/china/index.md` | 国内落地主入口，先做模型、成本、provider、自托管决策，再按需进入 custom OpenAI-Compatible 参考页 |
 | 遇到问题 | `docs/issues/index.md` | 问题与排障总入口；`docs/known-issues.md` 降级为过渡参考页 |
-| 从 OpenClaw 过来 | `docs/openclaw-migration.md` | 迁移与兼容入口 |
+| 从 OpenClaw 过来 | `docs/migrate/index.md` | 迁移与兼容主入口；compare / migration / coexist 三页作为正式正文来源 |
 
 ## 当前使用规则
 1. 每个模块必须能映射到唯一主来源文件。
