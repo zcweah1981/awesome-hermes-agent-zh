@@ -1,6 +1,8 @@
 # 从这开始
 
-![Hermes 学习路径总览](./assets/rm2-learning-path-gemini-cn-test.png)
+帮你找到最适合自己的 Hermes 起点，而不是把所有资料从头翻一遍。
+
+![Hermes 学习路径总览](./assets/rm2-learning-path-gemini-hero-v2.png)
 
 无论你现在是第一次接触 Hermes，已经跑通过一次，还是准备把它接进自己的工作流，这里都不是让你从头把资料翻一遍。
 这一页的作用很简单：帮你先看清楚自己现在更适合哪一段，再进入对应阶段继续往下走。
