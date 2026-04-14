@@ -2,7 +2,7 @@
 
 帮你找到最适合自己的 Hermes 起点，而不是把所有资料从头翻一遍。
 
-![Hermes 学习路径总览](./assets/rm2-learning-path-hero-v5.svg)
+![Hermes 学习路径总览](./assets/rm2-learning-path-hero-v7.svg)
 
 > 先判断你现在最该解决的问题，再进入对应阶段继续往下走。  
 > 这页不是功能总表，而是一条更清楚、更省时间的 Hermes 学习入口。
@@ -47,18 +47,7 @@
 
 ---
 
-## ✅ 如果你不想自己判断，就按这个最简单的分流走
-
-- 还没跑通过一次 → 直接进入 [先跑起来](./get-running/index.md)
-- 已经跑通过，但不够稳定 → 直接进入 [开始上手](./get-started/index.md)
-- 已经会用，想更顺手 → 直接进入 [玩出花样](./advanced-usage/index.md)
-- 想接系统、做自动化、多助手协作 → 直接进入 [自己造东西](./build-your-own/index.md)
-
-如果你还是拿不准，默认从 [先跑起来](./get-running/index.md) 开始。
-
----
-
-## 📖 推荐阅读顺序
+## 📖 默认顺序
 
 第一次系统看 Hermes，建议按这个顺序往下走：
 
@@ -67,25 +56,4 @@
 3. [玩出花样](./advanced-usage/index.md)
 4. [自己造东西](./build-your-own/index.md)
 
-你不需要一次把四段都看完。
-先把当前这一段走通，再往下推进，理解会更稳。
-
----
-
-## 🚪 现在就选一个入口继续
-
-### 我想先把 Hermes 真正跑通
-从环境选择、进入终端、安装 Hermes，到接上模型完成第一次互动。  
-→ [进入「先跑起来」](./get-running/index.md)
-
-### 我已经装过了，但还不会稳定使用
-想把 Hermes 从“偶尔能用一次”变成“日常能稳定上手的助手”。  
-→ [进入「开始上手」](./get-started/index.md)
-
-### 我想让 Hermes 更像我、更顺手
-开始做人格、记忆、模型和工具层的个性化配置。  
-→ [进入「玩出花样」](./advanced-usage/index.md)
-
-### 我想把 Hermes 接进自己的系统
-开始走向 Profiles、外部记忆、MCP、API、自动化和 IDE 集成。  
-→ [进入「自己造东西」](./build-your-own/index.md)
+如果你现在还拿不准，就默认从 [先跑起来](./get-running/index.md) 开始。
