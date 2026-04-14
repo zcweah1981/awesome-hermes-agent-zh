@@ -2,10 +2,10 @@
 
 帮你找到最适合自己的 Hermes 起点，而不是把所有资料从头翻一遍。
 
-![Hermes 学习路径总览](./assets/rm2-learning-path-gemini-hero-v2.png)
+![Hermes 学习路径总览](./assets/rm2-learning-path-hero-v4.svg)
 
-> 这不是一个把功能、命令、配置项全部摊开的资料目录。  
-> 这里更像一条学习路径：先帮你找到现在最该先解决的问题，再带你进入对应阶段继续往下走。
+> 先判断你现在最该解决的问题，再进入对应阶段继续往下走。  
+> 这页不是功能总表，而是一条更清楚、更省时间的 Hermes 学习入口。
 
 ## ✨ 你在这里能很快知道什么
 
@@ -36,21 +36,23 @@
 
 ## 🧭 四个阶段怎么选
 
+先看左侧阶段名，再看自己现在最像哪一种状态。
+
 | 阶段（点击直达） | 适合谁 | 这一阶段你会解决什么 | 学完你能达到什么 |
 |---|---|---|---|
-| <img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> <br /> **[先跑起来](./get-running/index.md)** | - 还没跑通过 Hermes 的人<br />- 还没完成第一次正常互动的人<br />- 想先验证 Hermes 能不能真的工作的人 | - 确定运行环境怎么选<br />- 知道终端怎么进入<br />- 完成 Hermes 安装<br />- 接上一个可用模型<br />- 拿到第一次正常回复 | - 你能真正把 Hermes 跑通<br />- 你会拥有一条清楚、可重复的起步路径 |
-| <img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> <br /> **[开始上手](./get-started/index.md)** | - 已经装过一次，但还不会稳定使用的人<br />- 想把 Hermes 变成日常助手的人 | - 搞清楚平时到底怎么用 Hermes<br />- 学会会话管理和常用命令<br />- 知道第一批 Skills 先看什么<br />- 从“跑通一次”进入“稳定可用” | - 你能把 Hermes 稳定地用起来<br />- 你知道日常使用时最该先掌握哪些东西 |
-| <img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> <br /> **[玩出花样](./advanced-usage/index.md)** | - 已经会用 Hermes，想让它更像你的人<br />- 想做更长期个性化配置的人 | - 让人格更贴近你的表达方式<br />- 让记忆真正对你有用<br />- 让模型和工具开关更适合自己<br />- 让终端体验变得更顺手 | - 你能把一个助手调成更符合自己习惯的工作方式<br />- 它不只是“能用”，而是开始变得“顺手” |
-| <img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> <br /> **[自己造东西](./build-your-own/index.md)** | - 想把 Hermes 接进工作流的人<br />- 想做自动化、多助手、外部接入的人 | - 开始用 Profiles 做角色拆分<br />- 接入外部记忆系统<br />- 进入 MCP、API、自动化、IDE 这些系统能力<br />- 从单助手使用走向系统化使用 | - 你能从“用一个助手”进入“搭一套系统”<br />- 你会开始拥有自己的 Hermes 工作流 |
+| <img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> <br /> **① [先跑起来](./get-running/index.md)** | - 还没跑通过 Hermes 的人<br />- 还没完成第一次正常互动的人<br />- 想先验证 Hermes 能不能真的工作的人 | - 确定运行环境怎么选<br />- 知道终端怎么进入<br />- 完成 Hermes 安装<br />- 接上一个可用模型<br />- 拿到第一次正常回复 | - 你能真正把 Hermes 跑通<br />- 你会拥有一条清楚、可重复的起步路径 |
+| <img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> <br /> **② [开始上手](./get-started/index.md)** | - 已经装过一次，但还不会稳定使用的人<br />- 想把 Hermes 变成日常助手的人 | - 搞清楚平时到底怎么用 Hermes<br />- 学会会话管理和常用命令<br />- 知道第一批 Skills 先看什么<br />- 从“跑通一次”进入“稳定可用” | - 你能把 Hermes 稳定地用起来<br />- 你知道日常使用时最该先掌握哪些东西 |
+| <img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> <br /> **③ [玩出花样](./advanced-usage/index.md)** | - 已经会用 Hermes，想让它更像你的人<br />- 想做更长期个性化配置的人 | - 让人格更贴近你的表达方式<br />- 让记忆真正对你有用<br />- 让模型和工具开关更适合自己<br />- 让终端体验变得更顺手 | - 你能把一个助手调成更符合自己习惯的工作方式<br />- 它不只是“能用”，而是开始变得“顺手” |
+| <img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> <br /> **④ [自己造东西](./build-your-own/index.md)** | - 想把 Hermes 接进工作流的人<br />- 想做自动化、多助手、外部接入的人 | - 开始用 Profiles 做角色拆分<br />- 接入外部记忆系统<br />- 进入 MCP、API、自动化、IDE 这些系统能力<br />- 从单助手使用走向系统化使用 | - 你能从“用一个助手”进入“搭一套系统”<br />- 你会开始拥有自己的 Hermes 工作流 |
 
 ---
 
 ## ✅ 如果你不想自己判断，就按这个最简单的分流走
 
-- 还没跑通过一次 → 去 [先跑起来](./get-running/index.md)
-- 已经跑通过，但不够稳定 → 去 [开始上手](./get-started/index.md)
-- 已经会用，想更顺手 → 去 [玩出花样](./advanced-usage/index.md)
-- 想接系统、做自动化、多助手协作 → 去 [自己造东西](./build-your-own/index.md)
+- 还没跑通过一次 → 直接进入 [先跑起来](./get-running/index.md)
+- 已经跑通过，但不够稳定 → 直接进入 [开始上手](./get-started/index.md)
+- 已经会用，想更顺手 → 直接进入 [玩出花样](./advanced-usage/index.md)
+- 想接系统、做自动化、多助手协作 → 直接进入 [自己造东西](./build-your-own/index.md)
 
 如果你还是拿不准，默认从 [先跑起来](./get-running/index.md) 开始。
 
@@ -70,9 +72,20 @@
 
 ---
 
-> ## 默认 CTA
-> 如果你现在只想先走最稳的一条路：
->
-> **[从“先跑起来”开始](./get-running/index.md)**
+## 🚪 现在就选一个入口继续
 
-如果你已经知道自己现在处在哪个阶段，也可以直接进入对应入口页。
+### 我想先把 Hermes 真正跑通
+从环境选择、进入终端、安装 Hermes，到接上模型完成第一次互动。  
+→ [进入「先跑起来」](./get-running/index.md)
+
+### 我已经装过了，但还不会稳定使用
+想把 Hermes 从“偶尔能用一次”变成“日常能稳定上手的助手”。  
+→ [进入「开始上手」](./get-started/index.md)
+
+### 我想让 Hermes 更像我、更顺手
+开始做人格、记忆、模型和工具层的个性化配置。  
+→ [进入「玩出花样」](./advanced-usage/index.md)
+
+### 我想把 Hermes 接进自己的系统
+开始走向 Profiles、外部记忆、MCP、API、自动化和 IDE 集成。  
+→ [进入「自己造东西」](./build-your-own/index.md)

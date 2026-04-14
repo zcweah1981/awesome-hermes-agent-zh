@@ -1,0 +1,83 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1500" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="0.6" stop-color="#101A2D"/>
+      <stop offset="1" stop-color="#16253D"/>
+    </linearGradient>
+    <linearGradient id="card1" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#223B63"/><stop offset="1" stop-color="#182846"/></linearGradient>
+    <linearGradient id="card2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#234A79"/><stop offset="1" stop-color="#173556"/></linearGradient>
+    <linearGradient id="card3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#5B3E2B"/><stop offset="1" stop-color="#382518"/></linearGradient>
+    <linearGradient id="card4" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#2C445C"/><stop offset="1" stop-color="#1C2D40"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="32" fill="url(#bg)"/>
+  <circle cx="1290" cy="180" r="220" fill="#2563EB" fill-opacity="0.10"/>
+  <circle cx="1390" cy="180" r="140" fill="#06B6D4" fill-opacity="0.08"/>
+  <circle cx="260" cy="780" r="180" fill="#F59E0B" fill-opacity="0.06"/>
+
+  <rect x="112" y="86" width="172" height="46" rx="23" fill="#101A2D" stroke="#2A3A57"/>
+  <text x="198" y="116" text-anchor="middle" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#C7D2FE" letter-spacing="1.2">START HERE</text>
+
+  <text x="112" y="225" font-size="84" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">从这开始</text>
+  <text x="112" y="292" font-size="32" font-weight="500" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E3F4">先判断你现在处在哪个阶段，再进入最短路径。</text>
+  <text x="112" y="342" font-size="24" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#8EA6C9">这是一张模块总览图，不是无关的通用 AI 流程海报。</text>
+
+  <rect x="112" y="395" width="208" height="60" rx="16" fill="#2563EB"/>
+  <text x="216" y="433" text-anchor="middle" font-size="27" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFFFFF">先跑起来</text>
+  <rect x="340" y="395" width="250" height="60" rx="16" fill="#0F1C30" stroke="#304663"/>
+  <text x="465" y="433" text-anchor="middle" font-size="27" font-weight="600" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">看四阶段分流</text>
+
+  <rect x="1066" y="104" width="420" height="198" rx="24" fill="#0F1A2E" stroke="#283A58"/>
+  <text x="1094" y="146" font-size="28" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F1F5F9">模块说明</text>
+  <text x="1094" y="186" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D4E0F2">• 先跑起来：环境、安装、第一次互动</text>
+  <text x="1094" y="218" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D4E0F2">• 开始上手：基本使用、会话、命令、Skills</text>
+  <text x="1094" y="250" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D4E0F2">• 玩出花样：人格、记忆、模型、工具工作流</text>
+  <text x="1094" y="282" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D4E0F2">• 自己造东西：Profiles、MCP、API、自动化、IDE</text>
+
+  <path d="M240 650H390L455 615H610L680 650H840L910 615H1085L1150 650H1368" stroke="#334155" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240 650H390L455 615H610L680 650H840L910 615H1085L1150 650H1368" stroke="#5EEAD4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.95"/>
+  <path d="M455 615H610" stroke="#60A5FA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M910 615H1085" stroke="#F59E0B" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="240" cy="650" r="12" fill="#5EEAD4"/>
+  <circle cx="610" cy="615" r="12" fill="#60A5FA"/>
+  <circle cx="1085" cy="615" r="12" fill="#F59E0B"/>
+  <circle cx="1368" cy="650" r="12" fill="#7DD3FC"/>
+
+  <g filter="url(#shadow)">
+    <rect x="190" y="505" width="290" height="238" rx="28" fill="url(#card1)" stroke="#5784D7" stroke-width="2.5"/>
+    <rect x="505" y="468" width="312" height="275" rx="28" fill="url(#card2)" stroke="#60A5FA" stroke-width="2.5"/>
+    <rect x="842" y="505" width="292" height="238" rx="28" fill="url(#card3)" stroke="#F59E0B" stroke-width="2.5"/>
+    <rect x="1158" y="468" width="298" height="275" rx="28" fill="url(#card4)" stroke="#7DD3FC" stroke-width="2.5"/>
+  </g>
+
+  <text x="220" y="548" font-size="24" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">① 阶段一</text>
+  <text x="220" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">先跑起来</text>
+  <text x="220" y="632" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">适合还没跑通过 Hermes 的人</text>
+  <text x="220" y="670" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">解决环境、终端、安装、第一次互动</text>
+  <text x="220" y="710" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#7EE7DA">结果：把 Hermes 真正跑通</text>
+
+  <text x="536" y="511" font-size="24" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">② 阶段二</text>
+  <text x="536" y="557" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">开始上手</text>
+  <text x="536" y="595" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">适合已经装过，但还不会稳定使用的人</text>
+  <text x="536" y="633" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">解决基本使用、会话管理、常用命令与 Skills</text>
+  <text x="536" y="673" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">结果：从跑通一次进入稳定可用</text>
+
+  <text x="872" y="548" font-size="24" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FDBA74">③ 阶段三</text>
+  <text x="872" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">玩出花样</text>
+  <text x="872" y="632" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F0DFD0">适合想让 Hermes 更像你的人</text>
+  <text x="872" y="670" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F0DFD0">解决人格、记忆、模型与工具工作流定制</text>
+  <text x="872" y="710" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FBBF24">结果：开始让 Hermes 更顺手</text>
+
+  <text x="1188" y="511" font-size="24" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#BAE6FD">④ 阶段四</text>
+  <text x="1188" y="557" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">自己造东西</text>
+  <text x="1188" y="595" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">适合想把 Hermes 接进工作流与系统的人</text>
+  <text x="1188" y="633" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">解决 Profiles、外部记忆、MCP、API、自动化、IDE</text>
+  <text x="1188" y="673" font-size="20" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#7DD3FC">结果：从单助手进入系统化使用</text>
+
+  <rect x="112" y="790" width="1378" height="66" rx="18" fill="#0F1A2E" stroke="#283A58"/>
+  <text x="145" y="833" font-size="24" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#E7EEF8">重点是让用户一眼知道“我现在该从哪一段开始”，而不是展示一张和模块无关的概念图。</text>
+</svg>
