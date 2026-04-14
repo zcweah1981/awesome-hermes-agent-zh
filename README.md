@@ -1,14 +1,22 @@
 # Hermes Agent 中文站
 
-本仓库已收敛为最小外部骨架，只保留以下内容：
-- `README.md`
-- `docs/`
-- `governance/`
+本仓库当前已经启动 RM2《从这开始》的第一波次真实落仓。
+仓库仍保持 GitHub-first 的最小外部骨架，但 `docs/start-here/` 已开始作为当前唯一活跃模块写入。
+
+当前可直接进入的内容：
+- [从这开始](./docs/start-here/index.md)
+- [先跑起来](./docs/start-here/get-running/index.md)
+- [先准备运行环境](./docs/start-here/get-running/prepare-environment.md)
+- [进入终端并连接服务器](./docs/start-here/get-running/connect-terminal.md)
+- [把 Hermes 装上去](./docs/start-here/get-running/install-hermes.md)
+- [配好 AI 大模型并完成第一次互动](./docs/start-here/get-running/first-hello.md)
 
 当前策略：
-- 不保留模块子目录
-- 不保留占位内容或开发草稿
-- 不保留历史执行产物、站点构建配置与示例资源
-- 仅保留后续扩展所需的最小说明与治理基础
+- 只维护已经真实落仓的入口，不预建未开写模块页面
+- RM2 统一使用 `docs/start-here/**`，不回退到旧 `docs/start/**`
+- governance 只记录当前已落仓范围与近端待补项
 
-如需恢复内容，请在后续阶段按明确范围重新引入。
+近端待补：
+- `docs/start-here/get-started/**`
+- RM2 图片资源与截图落图
+- RM2 当前波次涉及的跨模块回链补齐
