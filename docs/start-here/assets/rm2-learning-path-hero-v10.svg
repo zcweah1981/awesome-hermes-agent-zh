@@ -6,58 +6,58 @@
   <text x="800" y="194" text-anchor="middle" fill="#C3E8DA" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">按四个阶段找到你的入口，而不是从头翻完整个文档库。</text>
 
   <g stroke="#EEFFF8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M310 372H454"/>
-    <path d="M434 356L454 372L434 388"/>
-    <path d="M678 372H822"/>
-    <path d="M802 356L822 372L802 388"/>
-    <path d="M1046 372H1190"/>
-    <path d="M1170 356L1190 372L1170 388"/>
+    <path d="M310 420H454"/>
+    <path d="M434 404L454 420L434 436"/>
+    <path d="M678 420H822"/>
+    <path d="M802 404L822 420L802 436"/>
+    <path d="M1046 420H1190"/>
+    <path d="M1170 404L1190 420L1170 436"/>
   </g>
 
   <g>
-    <rect x="150" y="288" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M150 320H234" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M166 306H184" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
-    <path d="M194 306H212" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
-    <path d="M176 364L164 394" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M208 364L220 394" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M154 396H230" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M198 332L212 318" stroke="#F08A24" stroke-width="6"/>
-    <path d="M212 318L220 326" stroke="#F08A24" stroke-width="6"/>
+    <rect x="150" y="336" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M150 368H234" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M166 354H184" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M194 354H212" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M176 412L164 442" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M208 412L220 442" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M154 444H230" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M198 380L212 366" stroke="#F08A24" stroke-width="6"/>
+    <path d="M212 366L220 374" stroke="#F08A24" stroke-width="6"/>
   </g>
 
   <g>
-    <circle cx="566" cy="332" r="64" stroke="#EEFFF8" stroke-width="5" fill="#FFFDF8"/>
-    <path d="M534 312C542 300 558 292 576 292C598 292 616 304 624 322" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M520 352C534 366 552 374 572 374C594 374 612 364 626 348" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M546 322H586" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M546 342H598" stroke="#EEFFF8" stroke-width="5"/>
-    <circle cx="614" cy="288" r="16" fill="#F08A24" stroke="#EEFFF8" stroke-width="4"/>
-    <path d="M614 270V254" stroke="#EEFFF8" stroke-width="4"/>
-    <path d="M604 254H624" stroke="#EEFFF8" stroke-width="4"/>
+    <circle cx="566" cy="380" r="64" stroke="#EEFFF8" stroke-width="5" fill="#FFFDF8"/>
+    <path d="M534 360C542 348 558 340 576 340C598 340 616 352 624 370" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M520 400C534 414 552 422 572 422C594 422 612 412 626 396" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M546 370H586" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M546 390H598" stroke="#EEFFF8" stroke-width="5"/>
+    <circle cx="614" cy="336" r="16" fill="#F08A24" stroke="#EEFFF8" stroke-width="4"/>
+    <path d="M614 318V302" stroke="#EEFFF8" stroke-width="4"/>
+    <path d="M604 302H624" stroke="#EEFFF8" stroke-width="4"/>
   </g>
 
   <g>
-    <path d="M892 278C936 278 972 314 972 358C972 402 936 438 892 438C848 438 812 402 812 358C812 314 848 278 892 278Z" stroke="#EEFFF8" stroke-width="5" fill="#FFFDF8"/>
-    <path d="M892 302C914 302 932 320 932 342C932 364 914 382 892 382C870 382 852 364 852 342C852 320 870 302 892 302Z" stroke="#EEFFF8" stroke-width="4"/>
-    <path d="M828 394C850 376 868 372 892 372C916 372 934 376 956 394" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M958 298L1000 276" stroke="#F08A24" stroke-width="6"/>
-    <path d="M1000 276L995 294" stroke="#F08A24" stroke-width="6"/>
-    <path d="M1000 276L982 270" stroke="#F08A24" stroke-width="6"/>
-    <circle cx="1008" cy="270" r="10" fill="#57C5A0" stroke="#EEFFF8" stroke-width="3"/>
+    <path d="M892 326C936 326 972 362 972 406C972 450 936 486 892 486C848 486 812 450 812 406C812 362 848 326 892 326Z" stroke="#EEFFF8" stroke-width="5" fill="#FFFDF8"/>
+    <path d="M892 350C914 350 932 368 932 390C932 412 914 430 892 430C870 430 852 412 852 390C852 368 870 350 892 350Z" stroke="#EEFFF8" stroke-width="4"/>
+    <path d="M828 442C850 424 868 420 892 420C916 420 934 424 956 442" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M958 346L1000 324" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1000 324L995 342" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1000 324L982 318" stroke="#F08A24" stroke-width="6"/>
+    <circle cx="1008" cy="318" r="10" fill="#57C5A0" stroke="#EEFFF8" stroke-width="3"/>
   </g>
 
   <g>
-    <rect x="1214" y="290" width="90" height="118" rx="16" fill="#FFFDF8" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M1238 326H1280" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
-    <path d="M1238 356H1280" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
-    <path d="M1238 386H1268" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
-    <path d="M1286 290L1330 246" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M1330 246L1346 262" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M1346 262L1302 306" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M1342 234L1356 248" stroke="#F08A24" stroke-width="6"/>
-    <path d="M1356 248L1388 216" stroke="#F08A24" stroke-width="6"/>
-    <path d="M1374 216H1388V230" stroke="#F08A24" stroke-width="6"/>
+    <rect x="1214" y="338" width="90" height="118" rx="16" fill="#FFFDF8" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M1238 374H1280" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 404H1280" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 434H1268" stroke="#EEFFF8" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1286 338L1330 294" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M1330 294L1346 310" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M1346 310L1302 354" stroke="#EEFFF8" stroke-width="5"/>
+    <path d="M1342 282L1356 296" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1356 296L1388 264" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1374 264H1388V278" stroke="#F08A24" stroke-width="6"/>
   </g>
 
   <g>
