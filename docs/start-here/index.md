@@ -35,10 +35,10 @@
 
 | 阶段（点击直达） | 适合谁 | 这一阶段你会解决什么 | 学完你能达到什么 |
 |---|---|---|---|
-| <img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> <br /> **① [先跑起来](./get-running/index.md)** | - 还没跑通过 Hermes 的人<br />- 还没完成第一次正常互动的人<br />- 想先验证 Hermes 能不能真的工作的人 | - 确定运行环境怎么选<br />- 知道终端怎么进入<br />- 完成 Hermes 安装<br />- 接上一个可用模型<br />- 拿到第一次正常回复 | - 你能真正把 Hermes 跑通<br />- 你会拥有一条清楚、可重复的起步路径 |
-| <img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> <br /> **② [开始上手](./get-started/index.md)** | - 已经装过一次，但还不会稳定使用的人<br />- 想把 Hermes 变成日常助手的人 | - 搞清楚平时到底怎么用 Hermes<br />- 学会会话管理和常用命令<br />- 知道第一批 Skills 先看什么<br />- 从“跑通一次”进入“稳定可用” | - 你能把 Hermes 稳定地用起来<br />- 你知道日常使用时最该先掌握哪些东西 |
-| <img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> <br /> **③ [玩出花样](./advanced-usage/index.md)** | - 已经会用 Hermes，想让它更像你的人<br />- 想做更长期个性化配置的人 | - 让人格更贴近你的表达方式<br />- 让记忆真正对你有用<br />- 让模型和工具开关更适合自己<br />- 让终端体验变得更顺手 | - 你能把一个助手调成更符合自己习惯的工作方式<br />- 它不只是“能用”，而是开始变得“顺手” |
-| <img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> <br /> **④ [自己造东西](./build-your-own/index.md)** | - 想把 Hermes 接进工作流的人<br />- 想做自动化、多助手、外部接入的人 | - 开始用 Profiles 做角色拆分<br />- 接入外部记忆系统<br />- 进入 MCP、API、自动化、IDE 这些系统能力<br />- 从单助手使用走向系统化使用 | - 你能从“用一个助手”进入“搭一套系统”<br />- 你会开始拥有自己的 Hermes 工作流 |
+| <img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> <br /> **[先跑起来](./get-running/index.md)** | - 还没跑通过 Hermes 的人<br />- 还没完成第一次正常互动的人<br />- 想先验证 Hermes 能不能真的工作的人 | - 确定运行环境怎么选<br />- 知道终端怎么进入<br />- 完成 Hermes 安装<br />- 接上一个可用模型<br />- 拿到第一次正常回复 | - 你能真正把 Hermes 跑通<br />- 你会拥有一条清楚、可重复的起步路径 |
+| <img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> <br /> **[开始上手](./get-started/index.md)** | - 已经装过一次，但还不会稳定使用的人<br />- 想把 Hermes 变成日常助手的人 | - 搞清楚平时到底怎么用 Hermes<br />- 学会会话管理和常用命令<br />- 知道第一批 Skills 先看什么<br />- 从“跑通一次”进入“稳定可用” | - 你能把 Hermes 稳定地用起来<br />- 你知道日常使用时最该先掌握哪些东西 |
+| <img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> <br /> **[玩出花样](./advanced-usage/index.md)** | - 已经会用 Hermes，想让它更像你的人<br />- 想做更长期个性化配置的人 | - 让人格更贴近你的表达方式<br />- 让记忆真正对你有用<br />- 让模型和工具开关更适合自己<br />- 让终端体验变得更顺手 | - 你能把一个助手调成更符合自己习惯的工作方式<br />- 它不只是“能用”，而是开始变得“顺手” |
+| <img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> <br /> **[自己造东西](./build-your-own/index.md)** | - 想把 Hermes 接进工作流的人<br />- 想做自动化、多助手、外部接入的人 | - 开始用 Profiles 做角色拆分<br />- 接入外部记忆系统<br />- 进入 MCP、API、自动化、IDE 这些系统能力<br />- 从单助手使用走向系统化使用 | - 你能从“用一个助手”进入“搭一套系统”<br />- 你会开始拥有自己的 Hermes 工作流 |
 
 ---
 
