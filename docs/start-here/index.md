@@ -2,7 +2,7 @@
 
 帮你找到最适合自己的 Hermes 起点，而不是把所有资料从头翻一遍。
 
-![Hermes 学习路径总览](./assets/rm2-learning-path-hero-v7.svg)
+![Hermes 学习路径总览](./assets/rm2-learning-path-hero-v10.svg)
 
 > 先判断你现在最该解决的问题，再进入对应阶段继续往下走。  
 > 这页不是功能总表，而是一条更清楚、更省时间的 Hermes 学习入口。

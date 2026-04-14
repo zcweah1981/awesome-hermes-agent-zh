@@ -1,0 +1,92 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F6F2EA"/>
+  <rect x="60" y="58" width="1480" height="784" rx="28" fill="#FBF8F2" stroke="#D9D1C3" stroke-width="2"/>
+
+  <text x="800" y="146" text-anchor="middle" fill="#102A43" font-size="56" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">Hermes Agent：从快速起步到自主构建</text>
+  <text x="800" y="194" text-anchor="middle" fill="#486581" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">按四个阶段找到你的入口，而不是从头翻完整个文档库。</text>
+
+  <g stroke="#102A43" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M310 332H454"/>
+    <path d="M434 316L454 332L434 348"/>
+    <path d="M678 332H822"/>
+    <path d="M802 316L822 332L802 348"/>
+    <path d="M1046 332H1190"/>
+    <path d="M1170 316L1190 332L1170 348"/>
+  </g>
+
+  <g>
+    <rect x="150" y="248" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#102A43" stroke-width="5"/>
+    <path d="M150 280H234" stroke="#102A43" stroke-width="5"/>
+    <path d="M166 266H184" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M194 266H212" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M176 324L164 354" stroke="#102A43" stroke-width="5"/>
+    <path d="M208 324L220 354" stroke="#102A43" stroke-width="5"/>
+    <path d="M154 356H230" stroke="#102A43" stroke-width="5"/>
+    <path d="M198 292L212 278" stroke="#F08A24" stroke-width="6"/>
+    <path d="M212 278L220 286" stroke="#F08A24" stroke-width="6"/>
+  </g>
+
+  <g>
+    <circle cx="566" cy="292" r="64" stroke="#102A43" stroke-width="5" fill="#FFFDF8"/>
+    <path d="M534 272C542 260 558 252 576 252C598 252 616 264 624 282" stroke="#102A43" stroke-width="5"/>
+    <path d="M520 312C534 326 552 334 572 334C594 334 612 324 626 308" stroke="#102A43" stroke-width="5"/>
+    <path d="M546 282H586" stroke="#102A43" stroke-width="5"/>
+    <path d="M546 302H598" stroke="#102A43" stroke-width="5"/>
+    <circle cx="614" cy="248" r="16" fill="#F08A24" stroke="#102A43" stroke-width="4"/>
+    <path d="M614 230V214" stroke="#102A43" stroke-width="4"/>
+    <path d="M604 214H624" stroke="#102A43" stroke-width="4"/>
+  </g>
+
+  <g>
+    <path d="M892 238C936 238 972 274 972 318C972 362 936 398 892 398C848 398 812 362 812 318C812 274 848 238 892 238Z" stroke="#102A43" stroke-width="5" fill="#FFFDF8"/>
+    <path d="M892 262C914 262 932 280 932 302C932 324 914 342 892 342C870 342 852 324 852 302C852 280 870 262 892 262Z" stroke="#102A43" stroke-width="4"/>
+    <path d="M828 354C850 336 868 332 892 332C916 332 934 336 956 354" stroke="#102A43" stroke-width="5"/>
+    <path d="M958 258L1000 236" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1000 236L995 254" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1000 236L982 230" stroke="#F08A24" stroke-width="6"/>
+    <circle cx="1008" cy="230" r="10" fill="#57C5A0" stroke="#102A43" stroke-width="3"/>
+  </g>
+
+  <g>
+    <rect x="1214" y="250" width="90" height="118" rx="16" fill="#FFFDF8" stroke="#102A43" stroke-width="5"/>
+    <path d="M1238 286H1280" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 316H1280" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 346H1268" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1286 250L1330 206" stroke="#102A43" stroke-width="5"/>
+    <path d="M1330 206L1346 222" stroke="#102A43" stroke-width="5"/>
+    <path d="M1346 222L1302 266" stroke="#102A43" stroke-width="5"/>
+    <path d="M1342 194L1356 208" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1356 208L1388 176" stroke="#F08A24" stroke-width="6"/>
+    <path d="M1374 176H1388V190" stroke="#F08A24" stroke-width="6"/>
+  </g>
+
+  <g>
+    <text x="192" y="474" text-anchor="middle" fill="#102A43" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">先跑起来</text>
+    <path d="M88 502H296" stroke="#C9C1B4" stroke-width="2"/>
+    <text x="192" y="546" text-anchor="middle" fill="#243B53" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">环境、终端、安装</text>
+    <text x="192" y="584" text-anchor="middle" fill="#486581" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">完成第一次互动</text>
+  </g>
+
+  <g>
+    <text x="566" y="474" text-anchor="middle" fill="#102A43" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">开始上手</text>
+    <path d="M462 502H670" stroke="#C9C1B4" stroke-width="2"/>
+    <text x="566" y="546" text-anchor="middle" fill="#243B53" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">基本使用、会话管理</text>
+    <text x="566" y="584" text-anchor="middle" fill="#486581" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">命令与 Skills</text>
+  </g>
+
+  <g>
+    <text x="892" y="474" text-anchor="middle" fill="#102A43" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">玩出花样</text>
+    <path d="M788 502H996" stroke="#C9C1B4" stroke-width="2"/>
+    <text x="892" y="546" text-anchor="middle" fill="#243B53" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">人格、记忆、模型</text>
+    <text x="892" y="584" text-anchor="middle" fill="#486581" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">定制你的工作流</text>
+  </g>
+
+  <g>
+    <text x="1259" y="474" text-anchor="middle" fill="#102A43" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">自己造东西</text>
+    <path d="M1155 502H1363" stroke="#C9C1B4" stroke-width="2"/>
+    <text x="1259" y="546" text-anchor="middle" fill="#243B53" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Profiles、MCP、API</text>
+    <text x="1259" y="584" text-anchor="middle" fill="#486581" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">自动化与 IDE</text>
+  </g>
+
+  <text x="800" y="722" text-anchor="middle" fill="#486581" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">四个阶段，分别解决：跑通、上手、定制、构建。</text>
+</svg>
