@@ -38,20 +38,20 @@
   <!-- stage 2 -->
   <g>
     <circle cx="530" cy="340" r="58" fill="#FFFDF8" stroke="#B8D7E7" stroke-width="4"/>
-    <path d="M500 320C508 308 522 300 540 300C560 300 578 310 586 326" stroke="#173B63" stroke-width="5"/>
-    <path d="M490 360C504 374 520 382 540 382C560 382 576 372 590 356" stroke="#173B63" stroke-width="5"/>
-    <path d="M512 332H548" stroke="#173B63" stroke-width="5"/>
-    <path d="M512 352H560" stroke="#173B63" stroke-width="5"/>
+    <path d="M506 318C513 308 526 302 540 302C556 302 569 309 576 320" stroke="#173B63" stroke-width="5" stroke-linecap="round"/>
+    <path d="M506 360C515 369 526 374 540 374C555 374 567 369 576 360" stroke="#173B63" stroke-width="5" stroke-linecap="round"/>
+    <path d="M514 332H548" stroke="#173B63" stroke-width="5" stroke-linecap="round"/>
+    <path d="M514 350H554" stroke="#173B63" stroke-width="5" stroke-linecap="round"/>
     <circle cx="578" cy="296" r="16" fill="#F08A24" stroke="#173B63" stroke-width="4"/>
-    <path d="M578 278V262" stroke="#F4FFF9" stroke-width="4"/>
-    <path d="M568 262H588" stroke="#F4FFF9" stroke-width="4"/>
+    <path d="M578 280V266" stroke="#F4FFF9" stroke-width="4" stroke-linecap="round"/>
+    <path d="M571 266H585" stroke="#F4FFF9" stroke-width="4" stroke-linecap="round"/>
   </g>
 
   <!-- stage 3 -->
   <g>
     <circle cx="860" cy="340" r="58" fill="#FFFDF8" stroke="#B8D7E7" stroke-width="4"/>
     <circle cx="860" cy="320" r="18" stroke="#173B63" stroke-width="4.5"/>
-    <path d="M804 382C826 362 842 356 860 356C878 356 894 362 916 382" stroke="#173B63" stroke-width="5"/>
+    <path d="M820 378C832 365 846 358 860 358C874 358 888 365 900 378" stroke="#173B63" stroke-width="5" stroke-linecap="round"/>
     <path d="M918 304L960 282" stroke="#F08A24" stroke-width="7"/>
     <path d="M960 282L954 300" stroke="#F08A24" stroke-width="7"/>
     <path d="M960 282L942 276" stroke="#F08A24" stroke-width="7"/>
