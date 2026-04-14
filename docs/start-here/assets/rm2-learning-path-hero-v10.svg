@@ -1,21 +1,20 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="60" y1="58" x2="1540" y2="842" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#061217"/>
-      <stop offset="1" stop-color="#0B191F"/>
-    </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#11242D"/>
-      <stop offset="1" stop-color="#0B171F"/>
+      <stop stop-color="#061317"/>
+      <stop offset="1" stop-color="#0B1B20"/>
     </linearGradient>
   </defs>
 
+  <!-- background -->
   <rect width="1600" height="900" fill="#041015"/>
-  <rect x="60" y="58" width="1480" height="784" rx="28" fill="url(#bg)" stroke="#173540" stroke-width="2"/>
+  <rect x="60" y="58" width="1480" height="784" rx="28" fill="url(#bg)" stroke="#173942" stroke-width="2"/>
 
+  <!-- title -->
   <text x="800" y="146" text-anchor="middle" fill="#F7FFF9" font-size="56" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">Hermes Agent：从快速起步到自主构建</text>
   <text x="800" y="194" text-anchor="middle" fill="#C7E6DB" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">按四个阶段找到你的入口，而不是从头翻完整个文档库。</text>
 
+  <!-- progression arrows: light on dark background -->
   <g stroke="#F2FFF9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
     <path d="M310 410H454"/>
     <path d="M434 394L454 410L434 426"/>
@@ -25,9 +24,10 @@
     <path d="M1170 394L1190 410L1170 426"/>
   </g>
 
+  <!-- stage 1: outer structure uses light/mid contrast, inner detail uses dark lines on white -->
   <g>
-    <rect x="150" y="326" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#F2FFF9" stroke-width="5"/>
-    <path d="M150 358H234" stroke="#102A43" stroke-width="5"/>
+    <rect x="150" y="326" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#9DB8C8" stroke-width="5"/>
+    <path d="M150 358H234" stroke="#16324A" stroke-width="5"/>
     <path d="M166 344H184" stroke="#1CCF92" stroke-width="6" stroke-linecap="round"/>
     <path d="M194 344H212" stroke="#1CCF92" stroke-width="6" stroke-linecap="round"/>
     <path d="M176 402L164 432" stroke="#F2FFF9" stroke-width="5"/>
@@ -37,32 +37,35 @@
     <path d="M212 356L220 364" stroke="#F08A24" stroke-width="7"/>
   </g>
 
+  <!-- stage 2 -->
   <g>
-    <circle cx="566" cy="370" r="64" stroke="#F2FFF9" stroke-width="5" fill="#FFFDF8"/>
-    <path d="M534 350C542 338 558 330 576 330C598 330 616 342 624 360" stroke="#102A43" stroke-width="5"/>
-    <path d="M520 390C534 404 552 412 572 412C594 412 612 402 626 386" stroke="#102A43" stroke-width="5"/>
-    <path d="M546 360H586" stroke="#102A43" stroke-width="5"/>
-    <path d="M546 380H598" stroke="#102A43" stroke-width="5"/>
-    <circle cx="614" cy="326" r="16" fill="#F08A24" stroke="#102A43" stroke-width="4"/>
-    <path d="M614 308V292" stroke="#102A43" stroke-width="4"/>
-    <path d="M604 292H624" stroke="#102A43" stroke-width="4"/>
+    <circle cx="566" cy="370" r="64" fill="#FFFDF8" stroke="#9DB8C8" stroke-width="5"/>
+    <path d="M534 350C542 338 558 330 576 330C598 330 616 342 624 360" stroke="#16324A" stroke-width="5"/>
+    <path d="M520 390C534 404 552 412 572 412C594 412 612 402 626 386" stroke="#16324A" stroke-width="5"/>
+    <path d="M546 360H586" stroke="#16324A" stroke-width="5"/>
+    <path d="M546 380H598" stroke="#16324A" stroke-width="5"/>
+    <circle cx="614" cy="326" r="16" fill="#F08A24" stroke="#16324A" stroke-width="4"/>
+    <path d="M614 308V292" stroke="#F2FFF9" stroke-width="4"/>
+    <path d="M604 292H624" stroke="#F2FFF9" stroke-width="4"/>
   </g>
 
+  <!-- stage 3 -->
   <g>
-    <path d="M892 316C936 316 972 352 972 396C972 440 936 476 892 476C848 476 812 440 812 396C812 352 848 316 892 316Z" stroke="#F2FFF9" stroke-width="5" fill="#FFFDF8"/>
-    <path d="M892 340C914 340 932 358 932 380C932 402 914 420 892 420C870 420 852 402 852 380C852 358 870 340 892 340Z" stroke="#102A43" stroke-width="4"/>
-    <path d="M828 432C850 414 868 410 892 410C916 410 934 414 956 432" stroke="#102A43" stroke-width="5"/>
+    <path d="M892 316C936 316 972 352 972 396C972 440 936 476 892 476C848 476 812 440 812 396C812 352 848 316 892 316Z" fill="#FFFDF8" stroke="#9DB8C8" stroke-width="5"/>
+    <path d="M892 340C914 340 932 358 932 380C932 402 914 420 892 420C870 420 852 402 852 380C852 358 870 340 892 340Z" stroke="#16324A" stroke-width="4"/>
+    <path d="M828 432C850 414 868 410 892 410C916 410 934 414 956 432" stroke="#16324A" stroke-width="5"/>
     <path d="M958 336L1000 314" stroke="#F08A24" stroke-width="7"/>
     <path d="M1000 314L995 332" stroke="#F08A24" stroke-width="7"/>
     <path d="M1000 314L982 308" stroke="#F08A24" stroke-width="7"/>
-    <circle cx="1008" cy="308" r="11" fill="#1CCF92" stroke="#102A43" stroke-width="4"/>
+    <circle cx="1008" cy="308" r="11" fill="#1CCF92" stroke="#16324A" stroke-width="4"/>
   </g>
 
+  <!-- stage 4 -->
   <g>
-    <rect x="1214" y="328" width="90" height="118" rx="16" fill="#FFFDF8" stroke="#F2FFF9" stroke-width="5"/>
-    <path d="M1238 364H1280" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
-    <path d="M1238 394H1280" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
-    <path d="M1238 424H1268" stroke="#102A43" stroke-width="5" stroke-linecap="round"/>
+    <rect x="1214" y="328" width="90" height="118" rx="16" fill="#FFFDF8" stroke="#9DB8C8" stroke-width="5"/>
+    <path d="M1238 364H1280" stroke="#16324A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 394H1280" stroke="#16324A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M1238 424H1268" stroke="#16324A" stroke-width="5" stroke-linecap="round"/>
     <path d="M1286 328L1330 284" stroke="#F2FFF9" stroke-width="5"/>
     <path d="M1330 284L1346 300" stroke="#F2FFF9" stroke-width="5"/>
     <path d="M1346 300L1302 344" stroke="#F2FFF9" stroke-width="5"/>
@@ -71,6 +74,7 @@
     <path d="M1374 254H1388V268" stroke="#F08A24" stroke-width="7"/>
   </g>
 
+  <!-- labels -->
   <g>
     <text x="192" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">先跑起来</text>
     <path d="M88 556H296" stroke="#31525C" stroke-width="2.5"/>
