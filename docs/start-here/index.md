@@ -33,12 +33,43 @@
 
 先看左侧阶段名，再看自己现在最像哪一种状态。
 
-| 阶段（点击直达） | 适合谁 | 这一阶段你会解决什么 | 学完你能达到什么 |
-|---|---|---|---|
-| <img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> **[先跑起来](./get-running/index.md)** | 还没跑通 Hermes；还没完成第一次正常互动；想先验证 Hermes 能不能真的工作 | 环境选择；进入终端；完成安装；接上可用模型；拿到第一次正常回复 | 真正把 Hermes 跑通；拥有一条清楚、可重复的起步路径 |
-| <img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> **[开始上手](./get-started/index.md)** | 已经装过一次，但还不会稳定使用；想把 Hermes 变成日常助手 | 基本使用；会话管理；常用命令；第一批 Skills；从“跑通一次”进入“稳定可用” | 把 Hermes 稳定地用起来；知道日常最该先掌握什么 |
-| <img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> **[玩出花样](./advanced-usage/index.md)** | 已经会用 Hermes；想让它更像你；想做长期个性化配置 | 人格；记忆；模型；工具工作流；让终端体验更顺手 | 把一个助手调成更符合自己习惯的工作方式；从“能用”变成“顺手” |
-| <img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> **[自己造东西](./build-your-own/index.md)** | 想把 Hermes 接进工作流；想做自动化、多助手、外部接入 | Profiles；外部记忆；MCP；API；自动化；IDE；从单助手使用走向系统化使用 | 从“用一个助手”进入“搭一套系统”；开始拥有自己的 Hermes 工作流 |
+<table>
+  <thead>
+    <tr>
+      <th>阶段（点击直达）</th>
+      <th>适合谁</th>
+      <th>这一阶段你会解决什么</th>
+      <th>学完你能达到什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><nobr><img src="./assets/icon-run.svg" width="20" alt="先跑起来图标" /> <a href="./get-running/index.md"><strong>先跑起来</strong></a></nobr></td>
+      <td>还没跑通 Hermes；还没完成第一次正常互动；想先验证 Hermes 能不能真的工作</td>
+      <td>环境选择；进入终端；完成安装；接上可用模型；拿到第一次正常回复</td>
+      <td>真正把 Hermes 跑通；拥有一条清楚、可重复的起步路径</td>
+    </tr>
+    <tr>
+      <td><nobr><img src="./assets/icon-hands-on.svg" width="20" alt="开始上手图标" /> <a href="./get-started/index.md"><strong>开始上手</strong></a></nobr></td>
+      <td>已经装过一次，但还不会稳定使用；想把 Hermes 变成日常助手</td>
+      <td>基本使用；会话管理；常用命令；第一批 Skills；从“跑通一次”进入“稳定可用”</td>
+      <td>把 Hermes 稳定地用起来；知道日常最该先掌握什么</td>
+    </tr>
+    <tr>
+      <td><nobr><img src="./assets/icon-advanced.svg" width="20" alt="玩出花样图标" /> <a href="./advanced-usage/index.md"><strong>玩出花样</strong></a></nobr></td>
+      <td>已经会用 Hermes；想让它更像你；想做长期个性化配置</td>
+      <td>人格；记忆；模型；工具工作流；让终端体验更顺手</td>
+      <td>把一个助手调成更符合自己习惯的工作方式；从“能用”变成“顺手”</td>
+    </tr>
+    <tr>
+      <td><nobr><img src="./assets/icon-build.svg" width="20" alt="自己造东西图标" /> <a href="./build-your-own/index.md"><strong>自己造东西</strong></a></nobr></td>
+      <td>想把 Hermes 接进工作流；想做自动化、多助手、外部接入</td>
+      <td>Profiles；外部记忆；MCP；API；自动化；IDE；从单助手使用走向系统化使用</td>
+      <td>从“用一个助手”进入“搭一套系统”；开始拥有自己的 Hermes 工作流</td>
+    </tr>
+  </tbody>
+</table>
+
 ---
 
 ## 📖 默认顺序
