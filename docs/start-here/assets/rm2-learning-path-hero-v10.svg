@@ -17,8 +17,8 @@
   <g>
     <rect x="150" y="336" width="84" height="58" rx="10" fill="#FFFDF8" stroke="#EEFFF8" stroke-width="5"/>
     <path d="M150 368H234" stroke="#EEFFF8" stroke-width="5"/>
-    <path d="M166 354H184" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
-    <path d="M194 354H212" stroke="#57C5A0" stroke-width="5" stroke-linecap="round"/>
+    <path d="M166 354H184" stroke="#1CCF92" stroke-width="5" stroke-linecap="round"/>
+    <path d="M194 354H212" stroke="#1CCF92" stroke-width="5" stroke-linecap="round"/>
     <path d="M176 412L164 442" stroke="#EEFFF8" stroke-width="5"/>
     <path d="M208 412L220 442" stroke="#EEFFF8" stroke-width="5"/>
     <path d="M154 444H230" stroke="#EEFFF8" stroke-width="5"/>
@@ -44,7 +44,7 @@
     <path d="M958 346L1000 324" stroke="#F08A24" stroke-width="6"/>
     <path d="M1000 324L995 342" stroke="#F08A24" stroke-width="6"/>
     <path d="M1000 324L982 318" stroke="#F08A24" stroke-width="6"/>
-    <circle cx="1008" cy="318" r="10" fill="#57C5A0" stroke="#EEFFF8" stroke-width="3"/>
+    <circle cx="1008" cy="318" r="10" fill="#1CCF92" stroke="#EEFFF8" stroke-width="3"/>
   </g>
 
   <g>
