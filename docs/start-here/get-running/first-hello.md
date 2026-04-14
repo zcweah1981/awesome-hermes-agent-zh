@@ -61,29 +61,3 @@
 - [占位：国内落地 / 模型怎么选](TODO_LINK_CHINA_MODEL_SELECTION)
 
 ### 5.3 把模型接进去
-
-```bash
-hermes model
-```
-
-### 5.4 启动 Hermes
-
-```bash
-hermes
-```
-
-### 5.5 对 Hermes 说第一句话
-
-- 你好，Hermes
-- 请介绍一下你自己
-- 请确认你现在已经可以正常工作
-
-### 5.6 成功界面是什么样子
-
-> 建议这里放一张“命令行里第一次成功互动”的截图。
-
-![Hermes 第一次成功互动截图](../assets/screenshots/hermes-first-chat-success.png)
-
-### 5.7 模块完成后去哪里
-
-- [开始上手](../get-started/index.md)
