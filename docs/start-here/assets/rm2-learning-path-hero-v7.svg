@@ -1,0 +1,78 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09111F"/>
+      <stop offset="0.58" stop-color="#10192D"/>
+      <stop offset="1" stop-color="#172741"/>
+    </linearGradient>
+    <radialGradient id="glowBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1220 170) rotate(90) scale(260 360)">
+      <stop stop-color="#2563EB" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#2563EB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowGreen" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(310 690) rotate(90) scale(220 320)">
+      <stop stop-color="#2DB86E" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#2DB86E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pathA" x1="210" y1="638" x2="1390" y2="638" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DB86E"/>
+      <stop offset="0.38" stop-color="#60A5FA"/>
+      <stop offset="0.72" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#2DB86E"/>
+    </linearGradient>
+    <linearGradient id="panel1" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#16324A"/><stop offset="1" stop-color="#0F1F2E"/></linearGradient>
+    <linearGradient id="panel2" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#183A5E"/><stop offset="1" stop-color="#102236"/></linearGradient>
+    <linearGradient id="panel3" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#4A3123"/><stop offset="1" stop-color="#271A14"/></linearGradient>
+    <linearGradient id="panel4" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#173247"/><stop offset="1" stop-color="#102231"/></linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#020617" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="32" fill="url(#bg)"/>
+  <rect width="1600" height="900" rx="32" fill="url(#glowBlue)"/>
+  <rect width="1600" height="900" rx="32" fill="url(#glowGreen)"/>
+
+  <g opacity="0.18" stroke="#2A3B56">
+    <path d="M70 130H520"/>
+    <path d="M1240 120H1490"/>
+    <path d="M95 785H430"/>
+    <path d="M1180 785H1500"/>
+  </g>
+
+  <rect x="110" y="92" width="164" height="44" rx="22" fill="#0F1A2E" stroke="#2A3A57"/>
+  <text x="192" y="119" text-anchor="middle" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#C7D2FE" letter-spacing="1.2">START HERE</text>
+
+  <text x="110" y="226" font-size="88" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">从这开始</text>
+  <text x="110" y="294" font-size="34" font-weight="500" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D6E2F5">找到你的最短路径。</text>
+  <text x="110" y="352" font-size="24" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#A9BAD4">四个阶段，从跑通到系统化使用。</text>
+
+  <g filter="url(#shadow)">
+    <rect x="180" y="506" width="250" height="196" rx="26" fill="url(#panel1)" stroke="#2DB86E" stroke-width="2.5"/>
+    <rect x="470" y="462" width="270" height="240" rx="26" fill="url(#panel2)" stroke="#60A5FA" stroke-width="2.5"/>
+    <rect x="790" y="506" width="250" height="196" rx="26" fill="url(#panel3)" stroke="#F59E0B" stroke-width="2.5"/>
+    <rect x="1080" y="462" width="270" height="240" rx="26" fill="url(#panel4)" stroke="#2DB86E" stroke-width="2.5"/>
+  </g>
+
+  <path d="M210 638H390L470 604H690L790 638H980L1080 604H1270L1390 638" stroke="#334155" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M210 638H390L470 604H690L790 638H980L1080 604H1270L1390 638" stroke="url(#pathA)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="210" cy="638" r="11" fill="#2DB86E"/>
+  <circle cx="690" cy="604" r="11" fill="#60A5FA"/>
+  <circle cx="1080" cy="604" r="11" fill="#F59E0B"/>
+  <circle cx="1390" cy="638" r="11" fill="#2DB86E"/>
+
+  <text x="210" y="548" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#72D8A0">01</text>
+  <text x="210" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">先跑起来</text>
+  <text x="210" y="642" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">第一次互动</text>
+
+  <text x="500" y="520" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#8AB6FF">02</text>
+  <text x="500" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">开始上手</text>
+  <text x="500" y="614" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">稳定可用</text>
+
+  <text x="820" y="548" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FDBA74">03</text>
+  <text x="820" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">玩出花样</text>
+  <text x="820" y="642" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F0DFD0">定制工作流</text>
+
+  <text x="1110" y="520" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#72D8A0">04</text>
+  <text x="1110" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">自己造东西</text>
+  <text x="1110" y="614" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">系统化集成</text>
+</svg>
