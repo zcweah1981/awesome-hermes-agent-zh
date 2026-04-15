@@ -1,6 +1,6 @@
 # Page Source Map
 
-更新时间：RM2 第一波次
+更新时间：RM2 第二波次继续推进
 
 本文件只记录 RM2 当前已落仓页面的来源边界、路径基准与待补链接，不提前铺满整站。
 
@@ -10,6 +10,7 @@
 - `RM2_START_HERE_PAGE_CARDS.md`
 - `RM2_1_COPY_DRAFT.md`
 - `RM2_2_COPY_DRAFT.md`
+- `RM2_FULL_IMAGE_PRODUCTION_BOARD.md`
 - `RM2_IMAGE_SHOTLIST.md`
 
 ## 已落仓页面
@@ -22,6 +23,7 @@
 | `docs/start-here/get-running/connect-terminal.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 终端与 SSH 入门 |
 | `docs/start-here/get-running/install-hermes.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 官方一键安装路径 |
 | `docs/start-here/get-running/first-hello.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
+| `docs/start-here/get-started/index.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
@@ -33,3 +35,4 @@
 ## 当前待补资源
 - RM2-1：四阶段学习路径图、入口分流图
 - RM2-2：流程图、环境选择图、终端/安装/首次互动真实截图
+- RM2-3：基础使用、会话管理、Skills、消息平台接入页面正文与配图
