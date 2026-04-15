@@ -19,6 +19,8 @@
 3. [把 Hermes 装上去](./install-hermes.md)
 4. [配好 AI 大模型并完成第一次互动](./first-hello.md)
 
+![从准备环境到第一次回复的四步流程图](../assets/rm2-2-get-running-index-01-four-step-flow.png)
+
 ---
 
 ## 3. 默认顺序

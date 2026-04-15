@@ -48,4 +48,8 @@
 
 建议优先使用 Hermes 官方的一键安装方式。
 
+![Hermes 安装命令正在执行的终端示例](../assets/rm2-2-install-hermes-01-install-command-running.png)
+
 ### 5.2 直接开始安装
+
+![Hermes 版本与 doctor 检查成功示意图](../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)

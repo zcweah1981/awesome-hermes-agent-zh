@@ -51,6 +51,8 @@
 
 ### 5.1 先判断你属于哪种情况
 
+![本地终端与 SSH 连接路径示意图](../assets/rm2-2-connect-terminal-01-local-vs-ssh-route.png)
+
 | 你的情况 | 你这一步要做什么 |
 |---|---|
 | 本地 macOS | 打开终端 |
@@ -83,8 +85,12 @@ macOS 自带 Terminal，也可以使用 iTerm2。
 远程连接（SSH）就是从你的电脑连接到 Linux 服务器的标准方式。
 通常你需要准备：
 
+![SSH 登录成功后的终端示例](../assets/rm2-2-connect-terminal-02-ssh-login-success.png)
+
 - 服务器公网 IP
 - 登录用户名
 - 密码，或者密钥文件
 
 ### 5.5 最基础的连接命令
+
+![SSH 登录后确认 Git 可用的终端示例](../assets/rm2-2-connect-terminal-03-ssh-git-success.png)

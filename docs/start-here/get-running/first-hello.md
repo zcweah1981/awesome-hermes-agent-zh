@@ -61,3 +61,7 @@
 - [占位：国内落地 / 模型怎么选](TODO_LINK_CHINA_MODEL_SELECTION)
 
 ### 5.3 把模型接进去
+
+![模型配置完成后的成功界面示意图](../assets/rm2-2-first-hello-01-model-setup-success.png)
+
+![第一次获得 Hermes 正常回复的终端示例](../assets/rm2-2-first-hello-02-first-reply-success.png)

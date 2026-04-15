@@ -49,6 +49,8 @@
 
 ### 5.1 你可以在哪些环境运行 Hermes
 
+![Hermes 可运行环境选择示意图](../assets/rm2-2-prepare-environment-01-environment-choice-map.png)
+
 | 运行环境 | 适合谁 | 建议 |
 |---|---|---|
 | 本地 macOS | 使用苹果电脑、想先快速尝试的人 | 可用 |
@@ -59,6 +61,8 @@
 ### 5.2 如果你没有运行环境怎么办
 
 如果你还没有准备好服务器或运行环境，可以先去“国内落地”模块查看：
+
+![云主机实例概览示意图](../assets/rm2-2-prepare-environment-02-cloud-instance-overview.png)
 
 - [占位：国内落地 / 阿里云购买与部署](TODO_LINK_CHINA_ALIYUN)
 - [占位：国内落地 / 腾讯云购买与部署](TODO_LINK_CHINA_TENCENT)
