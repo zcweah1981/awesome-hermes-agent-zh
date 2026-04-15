@@ -7,7 +7,7 @@
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="阶段目标图标" /> 这一阶段的目标
+## 🎯 这一阶段的目标
 
 走完这一阶段，你应该已经完成四件事：
 
@@ -26,7 +26,7 @@
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="主题路径图标" /> 这 4 个页面就是完整路径
+## 🧭 这 4 个页面就是完整路径
 
 <table>
   <colgroup>
@@ -67,7 +67,7 @@
 
 ---
 
-## <img src="../assets/icon-terminal-entry.svg" width="18" alt="适合谁图标" /> 什么人现在应该进入这一阶段
+## 👀 什么人现在应该进入这一阶段
 
 如果你符合下面任意一种情况，就应该从这里继续：
 
@@ -90,7 +90,7 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="顺序图标" /> 建议阅读顺序
+## ✅ 建议阅读顺序
 
 默认就按下面这个顺序往下走：
 
@@ -103,7 +103,7 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="成功图标" /> 成功标志
+## 🌱 成功标志
 
 当下面这些事已经成立，这一阶段就算通过：
 
