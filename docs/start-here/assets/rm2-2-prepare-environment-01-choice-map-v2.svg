@@ -1,0 +1,77 @@
+<svg width="1440" height="980" viewBox="0 0 1440 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="980" rx="32" fill="#0B1220"/>
+  <rect x="40" y="40" width="1360" height="900" rx="28" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+
+  <text x="88" y="112" fill="#22C55E" font-size="28" font-family="Arial, sans-serif" font-weight="700">PREPARE ENVIRONMENT</text>
+  <text x="88" y="170" fill="#F8FAFC" font-size="54" font-family="Arial, sans-serif" font-weight="800">先决定 Hermes 跑在哪里</text>
+  <text x="88" y="214" fill="#94A3B8" font-size="24" font-family="Arial, sans-serif">先选路线，再确认继续前条件；满足条件再进入终端。</text>
+
+  <rect x="1076" y="82" width="252" height="118" rx="20" fill="#052E16" stroke="#22C55E" stroke-width="2"/>
+  <text x="1106" y="126" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">当前目标</text>
+  <text x="1106" y="170" fill="#F0FDF4" font-size="30" font-family="Arial, sans-serif" font-weight="800">选定运行路线</text>
+
+  <line x1="128" y1="500" x2="1306" y2="500" stroke="#22C55E" stroke-width="8" stroke-linecap="round" opacity="0.3"/>
+  <polygon points="1306,500 1276,482 1276,518" fill="#22C55E" opacity="0.78"/>
+
+  <g>
+    <rect x="88" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="126" cy="328" r="22" fill="#22C55E"/>
+    <text x="119" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">1</text>
+    <text x="88" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">本地 macOS</text>
+    <text x="88" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
+    <text x="88" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 手边就是 Mac</text>
+    <text x="88" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 想最快试一次</text>
+    <text x="88" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
+    <text x="88" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能打开终端</text>
+    <text x="88" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能继续输入命令</text>
+  </g>
+
+  <g>
+    <rect x="400" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="438" cy="328" r="22" fill="#22C55E"/>
+    <text x="431" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">2</text>
+    <text x="400" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">本地 Linux</text>
+    <text x="400" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
+    <text x="400" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已习惯 Linux</text>
+    <text x="400" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 本来就在终端里工作</text>
+    <text x="400" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
+    <text x="400" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能打开终端</text>
+    <text x="400" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能继续输入命令</text>
+  </g>
+
+  <g>
+    <rect x="712" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
+    <circle cx="750" cy="328" r="22" fill="#22C55E"/>
+    <text x="743" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">3</text>
+    <text x="712" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">Windows WSL2</text>
+    <text x="712" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
+    <text x="712" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 用 Windows</text>
+    <text x="712" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 愿意按 Linux 方式继续</text>
+    <text x="712" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
+    <text x="712" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已安装 WSL2</text>
+    <text x="712" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已进入 Linux 终端</text>
+  </g>
+
+  <g>
+    <rect x="1024" y="258" width="304" height="368" rx="24" fill="#052E16" stroke="#22C55E" stroke-width="3"/>
+    <rect x="1050" y="290" width="148" height="34" rx="999" fill="#22C55E"/>
+    <text x="1074" y="313" fill="#052E16" font-size="18" font-family="Arial, sans-serif" font-weight="800">优先推荐</text>
+    <circle cx="1068" cy="356" r="22" fill="#22C55E"/>
+    <text x="1061" y="364" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">4</text>
+    <text x="1024" y="412" fill="#F0FDF4" font-size="36" font-family="Arial, sans-serif" font-weight="800">云主机</text>
+    <text x="1024" y="458" fill="#DCFCE7" font-size="22" font-family="Arial, sans-serif">适合谁</text>
+    <text x="1024" y="494" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 想长期稳定运行</text>
+    <text x="1024" y="528" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 以后还要远程访问</text>
+    <text x="1024" y="576" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
+    <text x="1024" y="612" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已有实例</text>
+    <text x="1024" y="646" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已拿到公网 IP</text>
+    <text x="1024" y="680" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已知道用户名</text>
+    <text x="1024" y="714" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已准备好密码或密钥</text>
+  </g>
+
+  <rect x="88" y="690" width="1240" height="176" rx="24" fill="#111827" stroke="#1E293B" stroke-width="2"/>
+  <text x="126" y="744" fill="#86EFAC" font-size="24" font-family="Arial, sans-serif" font-weight="700">最短判断</text>
+  <text x="126" y="786" fill="#F8FAFC" font-size="24" font-family="Arial, sans-serif">想最快跑通一次 → 选你现在立刻能用的环境</text>
+  <text x="126" y="822" fill="#F8FAFC" font-size="24" font-family="Arial, sans-serif">想稳定长期运行 → 优先选云主机</text>
+  <text x="126" y="854" fill="#94A3B8" font-size="20" font-family="Arial, sans-serif">这一页的重点不是安装，而是确认你下一页能不能直接进入终端。</text>
+</svg>
