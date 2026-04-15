@@ -1,0 +1,22 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
+<rect x="100" y="90" width="1400" height="740" rx="30" fill="#0F2233" stroke="#183B5B" stroke-width="4"/>
+<rect x="100" y="90" width="1400" height="78" rx="30" fill="#183B5B"/>
+<circle cx="144" cy="129" r="10" fill="#37B26C"/>
+<circle cx="176" cy="129" r="10" fill="#F5A623"/>
+<circle cx="208" cy="129" r="10" fill="#D9534F"/>
+<text x="252" y="138" fill="#FFFFFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">内置人格命令示意图</text>
+<text x="146" y="238" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality teacher</text>
+<text x="146" y="292" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 teacher 人格</text>
+<text x="146" y="346" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality concise</text>
+<text x="146" y="400" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 concise 人格</text>
+<text x="146" y="454" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality technical</text>
+<text x="146" y="508" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 technical 人格</text>
+
+<rect x="900" y="220" width="540" height="440" rx="24" fill="#132B3E" stroke="#2B5E86" stroke-width="2"/>
+<text x="940" y="292" fill="#9EE5B9" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">什么时候值得顺手试一下</text>
+<text x="940" y="372" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 你想让解释更像老师</text>
+<text x="940" y="430" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 你想让回答更短更直接</text>
+<text x="940" y="488" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 你想让技术描述更专业</text>
+<text x="940" y="576" fill="#D7E9F7" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">它是轻量试用入口，不等于后面要讲的持久人格配置。</text>
+</svg>

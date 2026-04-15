@@ -1,0 +1,38 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="900" rx="36" fill="#F7FAFC"/>
+<text x="120" y="122" fill="#183B5B" font-size="48" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">Hermes 的日常使用主入口</text>
+<rect x="120" y="156" width="220" height="6" rx="3" fill="#37B26C"/>
+<text x="120" y="212" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">先学会 4 件事：启动、提问、追问、退出 / 清屏</text>
+
+<rect x="120" y="280" width="520" height="480" rx="28" fill="#0F2233" stroke="#183B5B" stroke-width="4"/>
+<rect x="120" y="280" width="520" height="72" rx="28" fill="#183B5B"/>
+<circle cx="164" cy="316" r="10" fill="#37B26C"/>
+<circle cx="196" cy="316" r="10" fill="#F5A623"/>
+<circle cx="228" cy="316" r="10" fill="#D9534F"/>
+<text x="272" y="325" fill="#FFFFFF" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">Hermes CLI</text>
+<text x="164" y="418" fill="#8DC2E8" font-size="34" font-family="DejaVu Sans Mono, monospace">$ hermes</text>
+<text x="164" y="490" fill="#FFFFFF" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">进入交互模式后，</text>
+<text x="164" y="540" fill="#FFFFFF" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">就一直在这个主界面里工作</text>
+<rect x="164" y="590" width="432" height="112" rx="22" fill="#16354D" stroke="#2B5E86" stroke-width="2"/>
+<text x="196" y="644" fill="#DCEEFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">直接输入问题</text>
+<text x="196" y="686" fill="#DCEEFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">Hermes 会继续回复</text>
+
+<rect x="720" y="280" width="760" height="120" rx="26" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
+<text x="760" y="352" fill="#183B5B" font-size="44" font-family="DejaVu Sans Mono, monospace" font-weight="700">hermes</text>
+
+<rect x="720" y="442" width="360" height="140" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="752" y="500" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">① 启动 Hermes</text>
+<text x="752" y="548" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">在终端里输入 hermes</text>
+
+<rect x="1120" y="442" width="360" height="140" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="1152" y="500" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">② 发第一条请求</text>
+<text x="1152" y="548" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">直接输入你的问题</text>
+
+<rect x="720" y="620" width="360" height="140" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="752" y="678" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">③ 继续追问</text>
+<text x="752" y="726" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">继续补充你的问题</text>
+
+<rect x="1120" y="620" width="360" height="140" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="1152" y="678" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">④ 退出 / 清屏</text>
+<text x="1152" y="726" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">Ctrl+C / clear</text>
+</svg>

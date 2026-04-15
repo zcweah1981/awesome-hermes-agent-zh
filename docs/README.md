@@ -10,6 +10,8 @@
 - [`start-here/get-running/install-hermes.md`](./start-here/get-running/install-hermes.md)
 - [`start-here/get-running/first-hello.md`](./start-here/get-running/first-hello.md)
 - [`start-here/get-started/index.md`](./start-here/get-started/index.md)
+- [`start-here/get-started/basic-usage.md`](./start-here/get-started/basic-usage.md)
+- [`start-here/get-started/slash-commands-and-sessions.md`](./start-here/get-started/slash-commands-and-sessions.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面

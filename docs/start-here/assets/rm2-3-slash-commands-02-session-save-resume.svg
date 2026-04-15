@@ -1,0 +1,24 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
+<rect x="100" y="90" width="1400" height="740" rx="30" fill="#0F2233" stroke="#183B5B" stroke-width="4"/>
+<rect x="100" y="90" width="1400" height="78" rx="30" fill="#183B5B"/>
+<circle cx="144" cy="129" r="10" fill="#37B26C"/>
+<circle cx="176" cy="129" r="10" fill="#F5A623"/>
+<circle cx="208" cy="129" r="10" fill="#D9534F"/>
+<text x="252" y="138" fill="#FFFFFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">会话保存 / 恢复成功示意图</text>
+<text x="146" y="238" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/save</text>
+<text x="146" y="292" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">当前会话已保存</text>
+<text x="146" y="346" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/title 需求拆解演示</text>
+<text x="146" y="400" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">会话标题已更新为：需求拆解演示</text>
+<text x="146" y="454" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">hermes --continue</text>
+<text x="146" y="508" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已继续最近一次会话</text>
+<text x="146" y="562" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">hermes --resume 20260415_demo</text>
+<text x="146" y="616" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已恢复指定会话 ID</text>
+
+<rect x="920" y="230" width="500" height="420" rx="24" fill="#132B3E" stroke="#2B5E86" stroke-width="2"/>
+<text x="960" y="302" fill="#9EE5B9" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">会话管理最实用的两件事</text>
+<text x="960" y="376" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">1. 保存并命名当前会话</text>
+<text x="960" y="434" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">2. 退出后继续回来</text>
+<text x="960" y="520" fill="#D7E9F7" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">这样你就不需要每次都从头重新聊。</text>
+<text x="960" y="574" fill="#D7E9F7" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">对于长期任务，这是最先该掌握的能力。</text>
+</svg>
