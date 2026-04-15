@@ -12,6 +12,8 @@
 - [`start-here/get-started/index.md`](./start-here/get-started/index.md)
 - [`start-here/get-started/basic-usage.md`](./start-here/get-started/basic-usage.md)
 - [`start-here/get-started/slash-commands-and-sessions.md`](./start-here/get-started/slash-commands-and-sessions.md)
+- [`start-here/get-started/skills-curated.md`](./start-here/get-started/skills-curated.md)
+- [`start-here/get-started/connect-message-platform.md`](./start-here/get-started/connect-message-platform.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面

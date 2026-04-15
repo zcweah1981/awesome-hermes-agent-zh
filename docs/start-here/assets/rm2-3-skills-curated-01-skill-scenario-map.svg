@@ -1,0 +1,29 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="980" rx="36" fill="#F7FAFC"/>
+<text x="120" y="120" fill="#183B5B" font-size="48" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">第一次开始上手，先认识这 4 类常用 Skills</text>
+<rect x="120" y="154" width="320" height="6" rx="3" fill="#37B26C"/>
+<text x="120" y="212" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">目标不是学完全部 Skills，而是先知道哪些最常见、最值得先用。</text>
+
+<rect x="120" y="280" width="640" height="240" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="160" y="348" fill="#183B5B" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">文档与知识库</text>
+<text x="160" y="402" fill="#40617F" font-size="28" font-family="DejaVu Sans Mono, monospace">obsidian / ocr-and-documents / nano-pdf / qmd</text>
+<text x="160" y="462" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">适合：整理笔记、读文档、抽文字、看 PDF</text>
+
+<rect x="840" y="280" width="640" height="240" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="880" y="348" fill="#183B5B" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">办公协作</text>
+<text x="880" y="402" fill="#40617F" font-size="28" font-family="DejaVu Sans Mono, monospace">powerpoint / plan / apple-notes</text>
+<text x="880" y="462" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">适合：做提纲、做汇报、整理任务、写会议材料</text>
+
+<rect x="120" y="580" width="640" height="240" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="160" y="648" fill="#183B5B" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">研究检索</text>
+<text x="160" y="702" fill="#40617F" font-size="28" font-family="DejaVu Sans Mono, monospace">arxiv / duckduckgo-search / blogwatcher / llm-wiki</text>
+<text x="160" y="762" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">适合：查论文、查网页、跟踪更新、做主题研究</text>
+
+<rect x="840" y="580" width="640" height="240" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="880" y="648" fill="#183B5B" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">开发协作</text>
+<text x="880" y="702" fill="#40617F" font-size="28" font-family="DejaVu Sans Mono, monospace">github-auth / codebase-inspection / github-code-review / systematic-debugging</text>
+<text x="880" y="762" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">适合：看仓库、做代码检查、做调试、做 PR 相关工作</text>
+
+<rect x="120" y="872" width="1360" height="64" rx="20" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
+<text x="156" y="914" fill="#183B5B" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">先看顺序：文档与知识库 → 研究检索 → 办公协作 / 开发协作；消息平台接入和更垂直的小众 Skills 先放后面。</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
+<rect x="100" y="90" width="1400" height="740" rx="30" fill="#0F2233" stroke="#183B5B" stroke-width="4"/>
+<rect x="100" y="90" width="1400" height="78" rx="30" fill="#183B5B"/>
+<circle cx="144" cy="129" r="10" fill="#37B26C"/>
+<circle cx="176" cy="129" r="10" fill="#F5A623"/>
+<circle cx="208" cy="129" r="10" fill="#D9534F"/>
+<text x="252" y="138" fill="#FFFFFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">一次 Skill 使用成功示意图</text>
+<text x="146" y="228" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/skills</text>
+<text x="146" y="282" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">你可以先浏览当前可用的 Skills</text>
+<text x="146" y="350" fill="#8DC2E8" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">示例：请用 arxiv 帮我找 3 篇关于 AI Agents 的论文，并总结重点。</text>
+<rect x="146" y="404" width="1308" height="180" rx="24" fill="#132B3E" stroke="#2B5E86" stroke-width="2"/>
+<text x="184" y="462" fill="#9EE5B9" font-size="28" font-family="DejaVu Sans Mono, monospace">┊ skill: arxiv</text>
+<text x="184" y="526" fill="#FFFFFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">已找到相关论文，并返回摘要与可继续阅读的方向。</text>
+<rect x="146" y="650" width="620" height="118" rx="22" fill="#F8FBFD"/>
+<text x="182" y="700" fill="#183B5B" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">这说明什么</text>
+<text x="182" y="744" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">你不需要先学会全部技能，只要先知道“问题属于哪类场景”。</text>
+<rect x="834" y="650" width="620" height="118" rx="22" fill="#F8FBFD"/>
+<text x="870" y="700" fill="#183B5B" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">第一次最值得先会的动作</text>
+<text x="870" y="744" fill="#40617F" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">先浏览 Skills，再用一个典型场景试一次成功调用。</text>
+</svg>

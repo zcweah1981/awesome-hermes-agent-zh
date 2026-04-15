@@ -1,0 +1,24 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
+<rect x="120" y="100" width="1360" height="720" rx="30" fill="#FFFFFF" stroke="#183B5B" stroke-width="4"/>
+<rect x="120" y="100" width="1360" height="78" rx="30" fill="#183B5B"/>
+<text x="168" y="148" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">飞书应用配置界面示意图</text>
+<rect x="180" y="240" width="380" height="520" rx="24" fill="#F8FBFD" stroke="#D4E2EC" stroke-width="2"/>
+<text x="220" y="308" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">你会先看到的配置块</text>
+<text x="220" y="372" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- App ID</text>
+<text x="220" y="424" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- App Secret</text>
+<text x="220" y="476" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 机器人权限</text>
+<text x="220" y="528" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 连接模式</text>
+<text x="220" y="580" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 事件订阅</text>
+<text x="220" y="660" fill="#183B5B" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">这页不展开细配</text>
+<text x="220" y="706" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">只先让你知道后面真正要配的是什么。</text>
+
+<rect x="640" y="240" width="760" height="520" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
+<text x="690" y="320" fill="#183B5B" font-size="38" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">为什么这一阶段先推荐飞书</text>
+<text x="690" y="398" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">1. 国内团队更容易直接上手</text>
+<text x="690" y="458" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">2. 官方支持完整，文档路径清楚</text>
+<text x="690" y="518" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">3. WebSocket 路线不需要先配公网地址</text>
+<text x="690" y="578" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">4. 更容易把 Hermes 带进真实办公流</text>
+<rect x="690" y="640" width="640" height="76" rx="18" fill="#FFFFFF"/>
+<text x="724" y="688" fill="#183B5B" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">真正详细配置：下一步去“国内落地 → 飞书接入”。</text>
+</svg>

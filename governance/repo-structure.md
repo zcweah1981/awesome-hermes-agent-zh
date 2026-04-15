@@ -20,7 +20,9 @@
 │     └─ get-started/
 │        ├─ index.md
 │        ├─ basic-usage.md
-│        └─ slash-commands-and-sessions.md
+│        ├─ slash-commands-and-sessions.md
+│        ├─ skills-curated.md
+│        └─ connect-message-platform.md
 └─ governance/
    ├─ README.md
    ├─ repo-policy.md
@@ -29,7 +31,7 @@
 ```
 
 说明：
-- 当前只记录已真实落仓的 RM2-1、RM2-2 与 RM2-3 已启动页面范围。
-- `get-started/` 已开始真实写作，当前已落仓入口页、`basic-usage.md` 与 `slash-commands-and-sessions.md`。
+- 当前只记录已真实落仓的 RM2-1、RM2-2 与完整 RM2-3 范围。
+- `get-started/` 已完成当前子模块全页面落仓。
 - `advanced-usage/`、`build-your-own/` 尚未开始真实写作，因此未创建。
 - 严禁回退到旧 `docs/start/**` 路径。

@@ -26,6 +26,8 @@
 | `docs/start-here/get-started/index.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
 | `docs/start-here/get-started/basic-usage.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | CLI 日常使用入口 |
 | `docs/start-here/get-started/slash-commands-and-sessions.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 常用命令与会话管理入口 |
+| `docs/start-here/get-started/skills-curated.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | Skills 精选页 |
+| `docs/start-here/get-started/connect-message-platform.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 飞书优先的消息平台接入过渡页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
@@ -37,4 +39,4 @@
 ## 当前待补资源
 - RM2-1：四阶段学习路径图、入口分流图
 - RM2-2：流程图、环境选择图、终端/安装/首次互动真实截图
-- RM2-3：Skills、消息平台接入页面正文与配图
+- RM2-4：advanced-usage 子模块正文与配图
