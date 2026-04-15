@@ -1,0 +1,39 @@
+<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
+<text x="120" y="110" fill="#183B5B" font-size="48" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Get started: 4 pages</text>
+<rect x="120" y="144" width="220" height="6" rx="3" fill="#37B26C"/>
+<text x="120" y="196" fill="#40617F" font-size="28" font-family="DejaVu Sans, Arial, sans-serif">Use one Hermes assistant in daily work, step by step.</text>
+
+<rect x="100" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="136" y="366" fill="#183B5B" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">1. Basic usage</text>
+<text x="136" y="420" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Enter Hermes</text>
+<text x="136" y="456" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Ask and follow up</text>
+
+<path d="M400 410H490" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
+<path d="M464 384L498 410L464 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+<rect x="490" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="526" y="366" fill="#183B5B" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">2. Sessions</text>
+<text x="526" y="420" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Slash basics</text>
+<text x="526" y="456" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Save and resume</text>
+
+<path d="M790 410H880" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
+<path d="M854 384L888 410L854 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+<rect x="880" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
+<text x="916" y="366" fill="#183B5B" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">3. Skills</text>
+<text x="916" y="420" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Learn first useful</text>
+<text x="916" y="456" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">skill categories</text>
+
+<path d="M1180 410H1270" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
+<path d="M1244 384L1278 410L1244 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+
+<rect x="1270" y="300" width="220" height="220" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
+<text x="1302" y="366" fill="#183B5B" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">4. Feishu</text>
+<text x="1302" y="420" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">Move from CLI</text>
+<text x="1302" y="456" fill="#40617F" font-size="24" font-family="DejaVu Sans, Arial, sans-serif">to chat platform</text>
+
+<rect x="120" y="640" width="1370" height="150" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
+<text x="160" y="704" fill="#183B5B" font-size="34" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700">Stage goal</text>
+<text x="160" y="754" fill="#40617F" font-size="28" font-family="DejaVu Sans, Arial, sans-serif">From first successful run to stable daily usage, still with one assistant.</text>
+</svg>
