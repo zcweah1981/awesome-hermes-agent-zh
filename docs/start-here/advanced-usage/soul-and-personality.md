@@ -125,9 +125,9 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 - after 明显开始按你写的长期风格回答
 - 不是只变一次，而是同类提问都开始往这个方向走
 
-下面这张图就是实际运行证据：同一条 query，唯一变量是右侧多了一份 `SOUL.md`。
+下面这张图就是实际运行的并排终端双窗截图：同一条 query，唯一变量是右侧多了一份 `SOUL.md`。
 
-![真实终端证据截图：左侧没有自定义 SOUL.md 时回答更通用、更客气；右侧写入 SOUL.md 后，Hermes 默认开始使用“先说结论、短句、列表”这一组长期风格](../assets/rm2-4-soul-02-soul-behavior-diff.png)
+![并排真实终端截图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧只多一份 SOUL.md 后，Hermes 默认开始使用“先给结论、短句、列表”这一组长期风格](../assets/rm2-4-soul-02-soul-behavior-diff.png)
 
 ---
 
