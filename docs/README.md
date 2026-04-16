@@ -19,6 +19,7 @@
 - [`china/models.md`](./china/models.md)
 - [`china/providers.md`](./china/providers.md)
 - [`china/deploy.md`](./china/deploy.md)
+- [`china/cost.md`](./china/cost.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面
