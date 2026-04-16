@@ -3,7 +3,7 @@
 这一页只讲一件事：
 context files 是 Hermes 的长期规则层。它负责让项目约定长期生效，不用你每轮重讲。
 
-![长期规则层结构图：SOUL.md 位于全局身份层，不参与项目 context files 竞争；项目长期规则由 .hermes.md、AGENTS.md、CLAUDE.md、.cursorrules 这类 project context files 组成；当 Hermes 继续读取 frontend、backend 等子目录文件时，会逐步发现并注入对应子目录规则](../../assets/rm2-5-context-files-01-long-term-rules-map.png)
+![分层示意图：SOUL.md 在全局身份层；进入项目后，长期规则放在 project context files 这一层](../../assets/rm2-5-context-files-01-long-term-rules-map.png)
 
 ---
 
