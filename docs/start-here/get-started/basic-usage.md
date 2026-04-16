@@ -5,9 +5,9 @@
 
 ---
 
-## <img src="../assets/icon-terminal-entry.svg" width="18" alt="主入口图标" /> 平时怎么启动 Hermes
+## 🚪 平时怎么启动 Hermes
 
-![Hermes 日常使用主界面示意图：先学会启动、提问、追问、退出与清屏](../assets/rm2-3-basic-usage-01-cli-main-surface.png)
+![真实终端主入口截图：在 Linux 终端执行 `hermes` 后，已经进入 Hermes 交互主入口并停在可继续输入的提示符位置](../assets/rm2-3-basic-usage-01-cli-main-surface.png)
 
 最常见的日常入口只有一个：
 
@@ -33,7 +33,7 @@ hermes
 
 ---
 
-## <img src="../assets/icon-run.svg" width="18" alt="快速请求图标" /> 如果只想发一条快速请求
+## ⚡ 如果只想发一条快速请求
 
 如果你现在不想先进完整交互界面，只是想快速验证一条请求，也可以直接执行：
 
@@ -41,7 +41,7 @@ hermes
 hermes chat -q "请用一句中文确认你已经可以正常工作"
 ```
 
-![Hermes 一次基础对话成功图：已经执行快速请求，并收到正常中文回复](../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
+![真实快速请求成功截图：在终端执行 `hermes chat -q` 后，已经返回正常中文回复，并给出会话恢复信息](../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
 
 现在做什么：
 - 在终端执行上面的 `hermes chat -q` 命令。
@@ -60,7 +60,7 @@ hermes chat -q "请用一句中文确认你已经可以正常工作"
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="界面说明图标" /> 进入之后你会看到什么
+## 👀 进入之后你会看到什么
 
 进入 Hermes 后，你站到的就是日常使用主界面。
 
@@ -85,7 +85,7 @@ hermes chat -q "请用一句中文确认你已经可以正常工作"
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="基础动作图标" /> 最基础的日常使用方式
+## 🧪 最基础的日常使用方式
 
 先只学会下面 4 个动作，不要一上来就把命令范围拉太大：
 
@@ -111,7 +111,7 @@ hermes chat -q "请用一句中文确认你已经可以正常工作"
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="成功界面图标" /> 什么时候算你已经通过这一页
+## ✅ 什么时候算你已经通过这一页
 
 当下面这些事已经成立，这一页就通过：
 
