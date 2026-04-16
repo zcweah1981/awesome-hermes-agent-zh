@@ -35,8 +35,13 @@
 | `docs/china/deploy.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 部署路径选择页 |
 | `docs/china/cost.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 最低成本路径页 |
 | `docs/china/entry.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | 入口方式选择页 |
+| `docs/migrate/index.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
 
 ## 当前待补占位链接
+- `docs/migrate/compare.md`
+- `docs/migrate/decision.md`
+- `docs/migrate/combine.md`
+- `docs/migrate/checklist.md`
 - `TODO_LINK_CHINA_ALIYUN`
 - `TODO_LINK_CHINA_TENCENT`
 - `TODO_LINK_CHINA_BUDGET`

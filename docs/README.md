@@ -21,9 +21,11 @@
 - [`china/deploy.md`](./china/deploy.md)
 - [`china/cost.md`](./china/cost.md)
 - [`china/entry.md`](./china/entry.md)
+- [`migrate/index.md`](./migrate/index.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面
 - 未开写模块不预建 docs 占位文件
 - RM2 路径固定为 `docs/start-here/**`
-- RM4 当前只放行 `docs/china/index.md`，后续 `models/providers/deploy/cost/entry` 按单页通过后逐步建立
+- RM4 已完成 `docs/china/**` 当前页树落仓
+- RM5 当前只放行 `docs/migrate/index.md`，后续 `compare/decision/combine/checklist` 按单页通过后逐步建立

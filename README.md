@@ -11,13 +11,14 @@
 - [把 Hermes 装上去](./docs/start-here/get-running/install-hermes.md)
 - [配好 AI 大模型并完成第一次互动](./docs/start-here/get-running/first-hello.md)
 
-当前可直接进入的内容（新增 RM4 当前页）：
+当前可直接进入的内容（新增 RM4 / RM5 当前页）：
 - [国内落地](./docs/china/index.md)
 - [国内可用模型怎么选](./docs/china/models.md)
 - [Provider / 代理 / OpenAI-Compatible 怎么选](./docs/china/providers.md)
 - [云部署 / 托管 / 自建怎么选](./docs/china/deploy.md)
 - [最低成本起步路径](./docs/china/cost.md)
 - [从哪里进入 Hermes](./docs/china/entry.md)
+- [从 OpenClaw 过来](./docs/migrate/index.md)
 
 当前策略：
 - 只维护已经真实落仓的入口，不预建未开写模块页面
@@ -27,10 +28,9 @@
 
 近端待补：
 - `docs/start-here/get-started/**`
-- `docs/china/models.md`
-- `docs/china/providers.md`
-- `docs/china/deploy.md`
-- `docs/china/cost.md`
-- `docs/china/entry.md`
+- `docs/migrate/compare.md`
+- `docs/migrate/decision.md`
+- `docs/migrate/combine.md`
+- `docs/migrate/checklist.md`
 - RM2 图片资源与截图落图
 - RM2 当前波次涉及的跨模块回链补齐
