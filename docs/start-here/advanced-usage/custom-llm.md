@@ -226,12 +226,12 @@ Hermes → 统一网关 → 各家真实模型 / 多个 key / 多个后端
 4. 再跑一条最小 query，看模型能不能正常回话
 
 下面两张图就是这一页对应的真实终端证据。
-第一张证明：provider / model 已保存到临时环境。
-第二张证明：配置后的模型已经成功返回正常回复。
+第一张证明：provider / model 已保存到临时环境，而且 `auth.json` 中确实存在可用的 OAuth provider 来源。
+第二张证明：在同一个临时环境里，模型已经对一条非固定回声 query 返回正常回复。
 
-![真实终端截图：在临时 HERMES_HOME 中用 hermes config set 写入 provider 与 model，再直接读取 config.yaml 确认保存后的 model 配置](../assets/rm2-4-custom-llm-02-provider-config-success.png)
+![真实终端截图：在临时 HERMES_HOME 中用 hermes config set 写入 provider 与 model，再读取 config.yaml，并确认 auth.json 中存在 openai-codex 的 OAuth 认证来源](../assets/rm2-4-custom-llm-02-provider-config-success.png)
 
-![真实终端截图：在同一个临时 HERMES_HOME 中执行 hermes chat -Q -q，模型成功返回“自定义模型配置验证成功”，并给出 session_id](../assets/rm2-4-custom-llm-03-custom-model-success.png)
+![真实终端截图：在同一个临时 HERMES_HOME 中执行非固定回声 query，模型返回一条欢迎语和两项可做事项，并给出 session_id](../assets/rm2-4-custom-llm-03-custom-model-success.png)
 
 你验证时，重点只看这 3 件事：
 
