@@ -1,39 +1,113 @@
 <svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="1600" height="980" rx="36" fill="#F7FAFC"/>
-<text x="120" y="118" fill="#183B5B" font-size="50" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">开始上手：4 步路径</text>
-<rect x="120" y="154" width="240" height="6" rx="3" fill="#37B26C"/>
-<text x="120" y="210" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">从“已经跑通一次”进入“稳定日常使用”。</text>
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1480" y2="940" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#101A2E"/>
+    </linearGradient>
+    <linearGradient id="route" x1="170" y1="560" x2="1390" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1FD37A"/>
+      <stop offset="1" stop-color="#7CFFB2"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.12 0 0 0 0 0.83 0 0 0 0 0.48 0 0 0 0.42 0" result="glowColor"/>
+      <feBlend in="SourceGraphic" in2="glowColor" mode="screen"/>
+    </filter>
+  </defs>
 
-<rect x="100" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
-<text x="136" y="368" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">① 基础使用</text>
-<text x="136" y="422" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">进入 Hermes</text>
-<text x="136" y="458" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">提问与追问</text>
+  <rect width="1600" height="980" rx="34" fill="#09111F"/>
+  <rect x="36" y="36" width="1528" height="908" rx="30" fill="url(#bg)" stroke="#1E2A40" stroke-width="2"/>
 
-<path d="M400 410H490" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
-<path d="M464 384L498 410L464 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1380" cy="170" r="240" fill="#16334E" opacity="0.18"/>
+  <circle cx="220" cy="830" r="210" fill="#0E2A42" opacity="0.16"/>
+  <circle cx="820" cy="700" r="300" fill="#103655" opacity="0.10"/>
 
-<rect x="490" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
-<text x="526" y="368" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">② 会话管理</text>
-<text x="526" y="422" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">Slash 基础</text>
-<text x="526" y="458" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">保存与继续</text>
+  <text x="92" y="106" fill="#2DE08A" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">GET STARTED</text>
+  <text x="92" y="170" fill="#F8FBFF" font-size="54" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">把 Hermes 从“跑通一次”变成“每天会用”</text>
+  <text x="92" y="214" fill="#A8BAD0" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">这一阶段只走一条日常使用主线：先会进入、会接住会话、会挑第一批 Skills，再决定何时接入消息平台。</text>
 
-<path d="M790 410H880" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
-<path d="M854 384L888 410L854 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1180" y="86" width="292" height="116" rx="22" fill="#092A1A" stroke="#2DE08A" stroke-width="2"/>
+  <text x="1212" y="128" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">当前目标</text>
+  <text x="1212" y="172" fill="#F1FFF7" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">稳定日常使用</text>
 
-<rect x="880" y="300" width="300" height="220" rx="24" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
-<text x="916" y="368" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">③ Skills 精选</text>
-<text x="916" y="422" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">先认常用类</text>
-<text x="916" y="458" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">不看完整目录</text>
+  <rect x="92" y="252" width="390" height="68" rx="18" fill="#0E2036" stroke="#1D3D5C" stroke-width="2"/>
+  <text x="120" y="295" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">前提</text>
+  <text x="190" y="295" fill="#F8FBFF" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">你已经拿到第一次正常回复</text>
 
-<path d="M1180 410H1270" stroke="#37B26C" stroke-width="8" stroke-linecap="round"/>
-<path d="M1244 384L1278 410L1244 436" stroke="#37B26C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g filter="url(#glow)">
+    <path d="M170 590H1390" stroke="url(#route)" stroke-width="10" stroke-linecap="round" opacity="0.22"/>
+    <path d="M170 590H1390" stroke="url(#route)" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <polygon points="1390,590 1356,572 1356,608" fill="#7CFFB2"/>
 
-<rect x="1270" y="300" width="220" height="220" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
-<text x="1302" y="368" fill="#183B5B" font-size="32" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">④ 消息平台</text>
-<text x="1302" y="422" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">从 CLI</text>
-<text x="1302" y="458" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">到飞书</text>
+  <g>
+    <line x1="280" y1="590" x2="280" y2="520" stroke="#2DE08A" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="280" cy="590" r="28" fill="#2DE08A"/>
+    <circle cx="280" cy="590" r="40" stroke="#2DE08A" stroke-opacity="0.24" stroke-width="8"/>
+    <text x="270" y="600" fill="#072012" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">1</text>
 
-<rect x="120" y="640" width="1370" height="168" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
-<text x="160" y="704" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">这一阶段不包含</text>
-<text x="160" y="756" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">持久人格、持久记忆、自定义模型、MCP、API Server、Cron。</text>
+    <rect x="112" y="330" width="336" height="190" rx="24" fill="#111D31" stroke="#1D3D5C" stroke-width="2"/>
+    <text x="144" y="378" fill="#F8FBFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">先会进来用</text>
+    <text x="144" y="420" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">学会</text>
+    <text x="212" y="420" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">hermes / hermes chat -q</text>
+    <text x="144" y="456" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">进入交互、提问、追问、退出、清屏</text>
+    <rect x="144" y="474" width="272" height="2" fill="#1D3D5C"/>
+    <text x="144" y="506" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">成功信号</text>
+    <text x="144" y="536" fill="#F8FBFF" font-size="20" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">你已知道怎么进入、提问、追问，</text>
+    <text x="144" y="562" fill="#F8FBFF" font-size="20" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">也不会把“装好一次”误当成“已经会用”。</text>
+  </g>
+
+  <g>
+    <line x1="590" y1="590" x2="590" y2="686" stroke="#2DE08A" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="590" cy="590" r="28" fill="#2DE08A"/>
+    <circle cx="590" cy="590" r="40" stroke="#2DE08A" stroke-opacity="0.24" stroke-width="8"/>
+    <text x="580" y="600" fill="#072012" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">2</text>
+
+    <rect x="422" y="686" width="336" height="210" rx="24" fill="#111D31" stroke="#1D3D5C" stroke-width="2"/>
+    <text x="454" y="736" fill="#F8FBFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">会话接得住</text>
+    <text x="454" y="780" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">先记</text>
+    <text x="514" y="780" fill="#D7E2F0" font-size="22" font-family="DejaVu Sans Mono, monospace">/save /title /history</text>
+    <text x="454" y="818" fill="#D7E2F0" font-size="22" font-family="DejaVu Sans Mono, monospace">--continue / --resume 会话ID</text>
+    <rect x="454" y="842" width="272" height="2" fill="#1D3D5C"/>
+    <text x="454" y="880" fill="#F8FBFF" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">关键变化：你能回到原任务继续做</text>
+  </g>
+
+  <g>
+    <line x1="900" y1="590" x2="900" y2="520" stroke="#2DE08A" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="900" cy="590" r="28" fill="#2DE08A"/>
+    <circle cx="900" cy="590" r="40" stroke="#2DE08A" stroke-opacity="0.24" stroke-width="8"/>
+    <text x="890" y="600" fill="#072012" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">3</text>
+
+    <rect x="732" y="330" width="336" height="190" rx="24" fill="#111D31" stroke="#1D3D5C" stroke-width="2"/>
+    <text x="764" y="378" fill="#F8FBFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">Skills 先挑一批</text>
+    <text x="764" y="420" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">做法</text>
+    <text x="824" y="420" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">按场景先试 1 类，不背完整目录</text>
+    <text x="764" y="456" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">先看文档、研究、办公、开发这 4 类常用入口</text>
+    <rect x="764" y="474" width="272" height="2" fill="#1D3D5C"/>
+    <text x="764" y="506" fill="#F8FBFF" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">关键变化：遇到问题时知道该想到哪类能力</text>
+  </g>
+
+  <g>
+    <line x1="1210" y1="590" x2="1210" y2="686" stroke="#2DE08A" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="1210" cy="590" r="28" fill="#2DE08A"/>
+    <circle cx="1210" cy="590" r="40" stroke="#2DE08A" stroke-opacity="0.24" stroke-width="8"/>
+    <text x="1200" y="600" fill="#072012" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">4</text>
+
+    <rect x="1040" y="668" width="374" height="228" rx="24" fill="#0B2C1D" stroke="#2DE08A" stroke-width="3"/>
+    <rect x="1070" y="700" width="130" height="34" rx="999" fill="#2DE08A"/>
+    <text x="1094" y="723" fill="#072012" font-size="18" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">阶段收束点</text>
+    <text x="1072" y="778" fill="#F1FFF7" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">再决定何时接飞书</text>
+    <text x="1072" y="820" fill="#D7F7E5" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">不是一上来就接平台，而是先把 CLI 用顺</text>
+    <rect x="1072" y="844" width="300" height="2" fill="#1FAE66"/>
+    <text x="1072" y="882" fill="#F1FFF7" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">完成后：你能把 Hermes 带进团队消息流</text>
+  </g>
+
+  <rect x="92" y="610" width="154" height="58" rx="16" fill="#0E2036" stroke="#1D3D5C" stroke-width="2"/>
+  <text x="116" y="648" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">起点：首跑已通</text>
+
+  <rect x="1246" y="500" width="262" height="60" rx="18" fill="#092A1A" stroke="#2DE08A" stroke-width="2"/>
+  <text x="1274" y="538" fill="#F1FFF7" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">结果：形成稳定日用路径</text>
+
+  <rect x="92" y="912" width="1416" height="36" rx="18" fill="#0E2036"/>
+  <text x="118" y="936" fill="#A8BAD0" font-size="20" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">本阶段先不做：持久人格 / 持久记忆 / 自定义模型 / MCP / API Server / Cron / ACP</text>
 </svg>
