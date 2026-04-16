@@ -25,7 +25,7 @@
 这一模块后续会继续展开为 5 张决策页：
 
 - [国内可用模型怎么选](./models.md)
-- Provider / 代理 / OpenAI-Compatible 怎么选
+- [Provider / 代理 / OpenAI-Compatible 怎么选](./providers.md)
 - 云部署 / 托管 / 自建怎么选
 - 最低成本起步路径
 - 从哪里进入 Hermes
@@ -61,6 +61,6 @@
 - 最关心预算：下一页优先做《最低成本起步路径》
 - 最关心模型：下一页优先看 [《国内可用模型怎么选》](./models.md)
 - 最关心运行环境：后续进入《云部署 / 托管 / 自建怎么选》
-- 已经有现成兼容接口或上游：后续进入《Provider / 代理 / OpenAI-Compatible 怎么选》
+- 已经有现成兼容接口或上游：后续进入 [《Provider / 代理 / OpenAI-Compatible 怎么选》](./providers.md)
 
 在 RM4 全模块全部落仓之前，这一页会先作为国内用户的总入口页持续存在。

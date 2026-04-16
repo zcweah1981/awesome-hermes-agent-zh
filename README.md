@@ -14,6 +14,7 @@
 当前可直接进入的内容（新增 RM4 当前页）：
 - [国内落地](./docs/china/index.md)
 - [国内可用模型怎么选](./docs/china/models.md)
+- [Provider / 代理 / OpenAI-Compatible 怎么选](./docs/china/providers.md)
 
 当前策略：
 - 只维护已经真实落仓的入口，不预建未开写模块页面
