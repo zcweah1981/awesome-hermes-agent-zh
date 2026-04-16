@@ -5,7 +5,7 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="收范围图标" /> 先告诉你：第一次不用全学
+## 🧭 先告诉你：第一次不用全学
 
 这一页只负责一件事：
 帮你把“Skills 很多”这件事，压缩成一小组最值得先认识的常用能力。
@@ -24,7 +24,7 @@
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="技能地图图标" /> 先按 4 个日常场景来认识
+## 🗂️ 先按 4 个日常场景来认识
 
 ![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../assets/rm2-3-skills-curated-01-skill-scenario-map.png)
 
@@ -76,9 +76,9 @@
 
 ---
 
-## <img src="../assets/icon-run.svg" width="18" alt="技能调用图标" /> 一次成功调用长什么样
+## ⚡ 一次成功调用长什么样
 
-![一次 Skills 使用成功图：先浏览可用 Skills，再按一个典型场景完成一次成功调用](../assets/rm2-3-skills-curated-02-skill-call-success.png)
+![真实 Skills 调用截图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../assets/rm2-3-skills-curated-02-skill-call-success.png)
 
 你第一次开始用 Skills，最稳的做法是：
 
@@ -86,7 +86,7 @@
 2. 再选一个最贴近日常工作的场景试一次  
 
 例如：
-- 研究检索场景 → 用 `arxiv` 查论文
+- 研究检索场景 → 直接用 `arxiv` 查一篇论文并先读摘要
 - 文档场景 → 用 `ocr-and-documents` 处理资料
 - 开发场景 → 用 GitHub 相关技能检查仓库
 
@@ -106,7 +106,7 @@
 
 ---
 
-## <img src="../assets/icon-terminal-entry.svg" width="18" alt="查看工具图标" /> Tools 先只会查看就够了
+## 🛠️ Tools 先只会查看就够了
 
 第一次开始使用时，Tools 这层先别展开太深。
 
@@ -132,7 +132,7 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="取舍图标" /> 哪些先看，哪些先跳过
+## ✅ 哪些先看，哪些先跳过
 
 第一次开始使用，建议：
 
