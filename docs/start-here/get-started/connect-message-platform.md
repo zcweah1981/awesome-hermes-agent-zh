@@ -5,7 +5,7 @@
 
 ---
 
-## <img src="../assets/icon-run.svg" width="18" alt="接入路径图标" /> 为什么接入消息平台有价值
+## 🚦 为什么接入消息平台有价值
 
 ![消息平台接入路径图：从命令行已跑通，到先推荐飞书，再到团队在消息平台里实际使用](../assets/rm2-3-connect-platform-01-platform-connection-map.png)
 
@@ -28,9 +28,9 @@
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="飞书图标" /> 为什么第一推荐是飞书
+## 🟢 为什么第一推荐是飞书
 
-![飞书配置界面示意图：这一阶段先理解要配置哪些块，以及为什么先推荐飞书](../assets/rm2-3-connect-platform-02-platform-config-ui.png)
+![官方 Feishu / Lark Setup 页面截图：能直接看到 websocket / webhook 模式说明，以及 `FEISHU_APP_ID`、`FEISHU_APP_SECRET`、`FEISHU_CONNECTION_MODE` 等配置块](../assets/rm2-3-connect-platform-02-platform-config-ui.png)
 
 这一阶段先推荐飞书，不是因为它是唯一选择，而是因为：
 
@@ -54,7 +54,7 @@
 
 ---
 
-## <img src="../assets/icon-terminal-entry.svg" width="18" alt="适合谁图标" /> 飞书适合哪些人
+## 👥 飞书适合哪些人
 
 飞书更适合下面这几类人：
 
@@ -76,7 +76,7 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="准备项图标" /> 接入前你大概要准备什么
+## 🧩 接入前你大概要准备什么
 
 接入飞书前，至少先准备这 4 件事：
 
@@ -100,9 +100,9 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="成功图标" /> 平台内第一次成功长什么样
+## ✅ 平台内第一次成功长什么样
 
-![消息平台内首次成功回复示意图：用户先发第一条消息，Hermes 在平台里返回正常回复](../assets/rm2-3-connect-platform-03-first-message-success.png)
+![真实 Telegram 平台消息记录：用户发出一条消息后，Hermes 在消息平台里返回正常可读回复；真正成功时，飞书里看到的最小信号也应是这种“发出去一条，回回来一条”](../assets/rm2-3-connect-platform-03-first-message-success.png)
 
 你第一次真正要看到的成功信号，不是“配置页看起来很多字段都填了”，而是：
 
@@ -123,27 +123,29 @@
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="去哪里配置图标" /> 详细配置去哪里
+## 📍 详细配置去哪里
 
 这一页不展开详细配置步骤。
 
-真正的详细配置，下一步应该进入：
-- 国内落地 → 飞书接入
+真正的详细配置，下一步建议先看官方文档：
+- [官方 Feishu / Lark Setup](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/feishu)
+- [官方 Messaging Gateway 总览](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/)
 
-如果你后面想看别的平台，也应该到国内落地模块再继续：
-- 国内落地 → 钉钉接入
-- 国内落地 → 企业微信接入
-- 国内落地 → Open WebUI 接入
+如果后面要走国内团队的具体落地路径，再回到我们后续补齐的“国内落地”模块继续：
+- 飞书接入
+- 钉钉接入
+- 企业微信接入
+- Open WebUI 接入
 
 ---
 
 ## 👉 下一步
 
 下一步：
-- 进入国内落地模块，继续做飞书接入的详细配置
+- 先看 [官方 Feishu / Lark Setup](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/feishu)，把详细配置路径读顺
 
 模块完成后：
-- 继续进入“玩出花样”阶段
+- 等“玩出花样”阶段入口页落仓后，再继续进入下一阶段
 
 如果你想回到这一阶段入口重新看全路径：
 - [开始上手](./index.md)
