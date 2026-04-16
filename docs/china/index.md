@@ -28,7 +28,7 @@
 - [Provider / 代理 / OpenAI-Compatible 怎么选](./providers.md)
 - [云部署 / 托管 / 自建怎么选](./deploy.md)
 - [最低成本起步路径](./cost.md)
-- 从哪里进入 Hermes
+- [从哪里进入 Hermes](./entry.md)
 
 当前 RM4 仍按单页逐张落仓推进，所以这些后续页面会在完成后逐步接入真实链接；在它们落仓之前，这一页先承担总入口和分流说明的角色。
 

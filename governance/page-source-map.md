@@ -34,9 +34,9 @@
 | `docs/china/providers.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | Provider / 兼容路径选择页 |
 | `docs/china/deploy.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 部署路径选择页 |
 | `docs/china/cost.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 最低成本路径页 |
+| `docs/china/entry.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | 入口方式选择页 |
 
 ## 当前待补占位链接
-- `docs/china/entry.md`
 - `TODO_LINK_CHINA_ALIYUN`
 - `TODO_LINK_CHINA_TENCENT`
 - `TODO_LINK_CHINA_BUDGET`

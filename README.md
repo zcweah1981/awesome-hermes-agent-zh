@@ -17,6 +17,7 @@
 - [Provider / 代理 / OpenAI-Compatible 怎么选](./docs/china/providers.md)
 - [云部署 / 托管 / 自建怎么选](./docs/china/deploy.md)
 - [最低成本起步路径](./docs/china/cost.md)
+- [从哪里进入 Hermes](./docs/china/entry.md)
 
 当前策略：
 - 只维护已经真实落仓的入口，不预建未开写模块页面
