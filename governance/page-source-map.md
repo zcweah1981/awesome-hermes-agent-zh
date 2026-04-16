@@ -30,9 +30,9 @@
 | `docs/start-here/get-started/skills-curated.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | Skills 精选页 |
 | `docs/start-here/get-started/connect-message-platform.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 飞书优先的消息平台接入过渡页 |
 | `docs/china/index.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
+| `docs/china/models.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内模型选择页 |
 
 ## 当前待补占位链接
-- `docs/china/models.md`
 - `docs/china/providers.md`
 - `docs/china/deploy.md`
 - `docs/china/cost.md`

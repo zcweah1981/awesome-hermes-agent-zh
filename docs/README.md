@@ -16,6 +16,7 @@
 - [`start-here/get-started/connect-message-platform.md`](./start-here/get-started/connect-message-platform.md)
 
 - [`china/index.md`](./china/index.md)
+- [`china/models.md`](./china/models.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面
