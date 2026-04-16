@@ -22,6 +22,7 @@
 - [`china/cost.md`](./china/cost.md)
 - [`china/entry.md`](./china/entry.md)
 - [`migrate/index.md`](./migrate/index.md)
+- [`migrate/compare.md`](./migrate/compare.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面
