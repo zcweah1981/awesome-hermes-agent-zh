@@ -11,12 +11,21 @@
 - [把 Hermes 装上去](./docs/start-here/get-running/install-hermes.md)
 - [配好 AI 大模型并完成第一次互动](./docs/start-here/get-running/first-hello.md)
 
+当前可直接进入的内容（新增 RM4 当前页）：
+- [国内落地](./docs/china/index.md)
+
 当前策略：
 - 只维护已经真实落仓的入口，不预建未开写模块页面
 - RM2 统一使用 `docs/start-here/**`，不回退到旧 `docs/start/**`
+- RM4 当前只放行 `docs/china/index.md`，后续子页按单页通过后再逐步加入
 - governance 只记录当前已落仓范围与近端待补项
 
 近端待补：
 - `docs/start-here/get-started/**`
+- `docs/china/models.md`
+- `docs/china/providers.md`
+- `docs/china/deploy.md`
+- `docs/china/cost.md`
+- `docs/china/entry.md`
 - RM2 图片资源与截图落图
 - RM2 当前波次涉及的跨模块回链补齐
