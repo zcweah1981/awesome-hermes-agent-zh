@@ -5,7 +5,7 @@ Hermes 里的斜杠命令很多，这很正常。
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="先收范围图标" /> 先告诉你：不需要全部学会
+## 🧭 先告诉你：不需要全部学会
 
 这一页只解决两件事：
 - 先抓住第一批最常用的命令
@@ -25,7 +25,7 @@ Hermes 里的斜杠命令很多，这很正常。
 
 ---
 
-## <img src="../assets/icon-run.svg" width="18" alt="命令图标" /> 第一批最常用的 6 个命令
+## ⚙️ 第一批最常用的 6 个命令
 
 ![常用 slash 命令分组图：第一次开始使用时先记住 /help、/tools、/model、/save、/title、/history](../assets/rm2-3-slash-commands-01-command-groups.png)
 
@@ -53,7 +53,7 @@ Hermes 里的斜杠命令很多，这很正常。
 
 ---
 
-## <img src="../assets/icon-terminal-entry.svg" width="18" alt="会话图标" /> 会话管理怎么理解
+## 💬 会话管理怎么理解
 
 Hermes 会自动保存会话，但你最好主动把重要会话管起来。
 
@@ -77,16 +77,16 @@ Hermes 会自动保存会话，但你最好主动把重要会话管起来。
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="恢复图标" /> 两个最实用的会话恢复方式
+## ♻️ 两个最实用的会话恢复方式
 
-最实用的恢复方式就两个：
+最实用的恢复方式就两个；如果你先忘了会话 ID，先用 `hermes sessions list` 找回来：
 
 ```bash
 hermes --continue
 hermes --resume 会话ID
 ```
 
-![会话保存与恢复成功图：保存会话、命名会话，并通过 continue 或 resume 重新进入](../assets/rm2-3-slash-commands-02-session-save-resume.png)
+![真实会话恢复命令链截图：先用 `hermes sessions list` 找到会话 ID，再通过 `hermes --continue` 或 `hermes --resume 会话ID` 把旧会话接回来](../assets/rm2-3-slash-commands-02-session-save-resume.png)
 
 现在做什么：
 - 先记住 `--continue` 和 `--resume 会话ID` 这两个恢复入口。
@@ -102,7 +102,7 @@ hermes --resume 会话ID
 
 ---
 
-## <img src="../assets/icon-hands-on.svg" width="18" alt="人格图标" /> 顺手试试内置人格
+## 🧪 顺手试试内置人格入口
 
 如果你只是想快速试试不同说话风格，可以先用轻量方式：
 
@@ -112,7 +112,7 @@ hermes --resume 会话ID
 /personality technical
 ```
 
-![内置人格 slash 调用示意图：teacher、concise、technical 三种轻量试用方式](../assets/rm2-3-slash-commands-03-persona-command-success.png)
+![真实 personality 回显截图：先看到 `/personality` 可用人格列表，再把 `teacher` 设置成功，并在后续回答里看到更偏解释型的输出](../assets/rm2-3-slash-commands-03-persona-command-success.png)
 
 现在做什么：
 - 挑一个最容易理解的内置人格，实际试一次。
@@ -129,7 +129,7 @@ hermes --resume 会话ID
 
 ---
 
-## <img src="../assets/icon-check-success.svg" width="18" alt="收口图标" /> 这一页什么时候算通过
+## ✅ 这一页什么时候算通过
 
 当下面这些事已经成立，这一页就通过：
 
@@ -143,7 +143,7 @@ hermes --resume 会话ID
 ## 👉 下一步
 
 下一步：
-- 继续进入“常用 Skills（按日常使用场景精选）”这一页
+- 继续进入 [常用 Skills（按日常使用场景精选）](./skills-curated.md) 这一页
 
 如果你想回到这一阶段入口重新看顺序：
 - [开始上手](./index.md)
