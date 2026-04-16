@@ -32,9 +32,9 @@
 | `docs/china/index.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
 | `docs/china/models.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内模型选择页 |
 | `docs/china/providers.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | Provider / 兼容路径选择页 |
+| `docs/china/deploy.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 部署路径选择页 |
 
 ## 当前待补占位链接
-- `docs/china/deploy.md`
 - `docs/china/cost.md`
 - `docs/china/entry.md`
 - `TODO_LINK_CHINA_ALIYUN`
