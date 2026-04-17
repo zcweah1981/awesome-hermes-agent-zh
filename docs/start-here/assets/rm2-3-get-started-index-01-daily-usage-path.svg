@@ -22,9 +22,9 @@
   <circle cx="220" cy="830" r="210" fill="#0E2A42" opacity="0.16"/>
   <circle cx="820" cy="700" r="300" fill="#103655" opacity="0.10"/>
 
-  <text x="92" y="106" fill="#2DE08A" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">GET STARTED</text>
+  <text x="92" y="106" fill="#2DE08A" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">开始上手</text>
   <text x="92" y="170" fill="#F8FBFF" font-size="54" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">把 Hermes 从“跑通一次”变成“每天会用”</text>
-  <text x="92" y="214" fill="#A8BAD0" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">这一阶段只走一条日常使用主线：先会进入、会接住会话、会挑第一批 Skills，再决定何时接入消息平台。</text>
+  <text x="92" y="214" fill="#A8BAD0" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">这一阶段只走一条日常使用主线：先会进入、会接住会话、会挑第一批 技能，再决定何时接入消息平台。</text>
 
   <rect x="1180" y="86" width="292" height="116" rx="22" fill="#092A1A" stroke="#2DE08A" stroke-width="2"/>
   <text x="1212" y="128" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">当前目标</text>
@@ -79,7 +79,7 @@
     <text x="890" y="600" fill="#072012" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">3</text>
 
     <rect x="732" y="330" width="336" height="190" rx="24" fill="#111D31" stroke="#1D3D5C" stroke-width="2"/>
-    <text x="764" y="378" fill="#F8FBFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">Skills 先挑一批</text>
+    <text x="764" y="378" fill="#F8FBFF" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">技能 先挑一批</text>
     <text x="764" y="420" fill="#8EF0B9" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">做法</text>
     <text x="824" y="420" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">按场景先试 1 类，不背完整目录</text>
     <text x="764" y="456" fill="#D7E2F0" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">先看文档、研究、办公、开发这 4 类常用入口</text>
@@ -97,7 +97,7 @@
     <rect x="1070" y="700" width="130" height="34" rx="999" fill="#2DE08A"/>
     <text x="1094" y="723" fill="#072012" font-size="18" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">阶段收束点</text>
     <text x="1072" y="778" fill="#F1FFF7" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">再决定何时接飞书</text>
-    <text x="1072" y="820" fill="#D7F7E5" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">不是一上来就接平台，而是先把 CLI 用顺</text>
+    <text x="1072" y="820" fill="#D7F7E5" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">不是一上来就接平台，而是先把命令行用顺</text>
     <rect x="1072" y="844" width="300" height="2" fill="#1FAE66"/>
     <text x="1072" y="882" fill="#F1FFF7" font-size="22" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">完成后：你能把 Hermes 带进团队消息流</text>
   </g>
