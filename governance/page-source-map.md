@@ -37,9 +37,9 @@
 | `docs/china/entry.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | 入口方式选择页 |
 | `docs/migrate/index.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
 | `docs/migrate/compare.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
+| `docs/migrate/decision.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
 
 ## 当前待补占位链接
-- `docs/migrate/decision.md`
 - `docs/migrate/combine.md`
 - `docs/migrate/checklist.md`
 - `TODO_LINK_CHINA_ALIYUN`
