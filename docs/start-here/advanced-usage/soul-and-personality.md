@@ -191,7 +191,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 ## 👉 下一步去哪
 
-下一步会进入“让 Hermes 记住你”，也就是持久记忆的边界。
+下一步会进入 [让 Hermes 记住你](./persistent-memory.md)，也就是持久记忆的边界。
 这一页暂时不展开，等当前页通过再继续。
 
 如果你想先回到这一阶段入口重新确认位置：
