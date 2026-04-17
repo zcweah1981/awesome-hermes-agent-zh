@@ -1,77 +1,97 @@
-<svg width="1440" height="980" viewBox="0 0 1440 980" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1440" height="980" rx="32" fill="#0B1220"/>
-  <rect x="40" y="40" width="1360" height="900" rx="28" fill="#0F172A" stroke="#1E293B" stroke-width="2"/>
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1600" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08131B"/>
+      <stop offset="1" stop-color="#0F1C27"/>
+    </linearGradient>
+    <style>
+      .eyebrow{font:700 18px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#88EFC5;letter-spacing:2px}
+      .title{font:700 34px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#F4FBFF}
+      .sub{font:400 18px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#B9CDD6}
+      .node{font:700 18px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#F4FBFF}
+      .small{font:400 14px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#CAD9E0}
+      .yes{font:700 14px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#8BEFC8}
+      .num{font:700 18px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#08131B}
+      .choice{font:700 18px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#F4FBFF}
+      .mini{font:600 13px 'WenQuanYi Zen Hei', Arial, sans-serif;fill:#8CEFC8}
+    </style>
+  </defs>
 
-  <text x="88" y="112" fill="#22C55E" font-size="28" font-family="Arial, sans-serif" font-weight="700">PREPARE ENVIRONMENT</text>
-  <text x="88" y="170" fill="#F8FAFC" font-size="54" font-family="Arial, sans-serif" font-weight="800">先决定 Hermes 跑在哪里</text>
-  <text x="88" y="214" fill="#94A3B8" font-size="24" font-family="Arial, sans-serif">先选路线，再确认继续前条件；满足条件再进入终端。</text>
-
-  <rect x="1076" y="82" width="252" height="118" rx="20" fill="#052E16" stroke="#22C55E" stroke-width="2"/>
-  <text x="1106" y="126" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">当前目标</text>
-  <text x="1106" y="170" fill="#F0FDF4" font-size="30" font-family="Arial, sans-serif" font-weight="800">选定运行路线</text>
-
-  <line x1="128" y1="500" x2="1306" y2="500" stroke="#22C55E" stroke-width="8" stroke-linecap="round" opacity="0.3"/>
-  <polygon points="1306,500 1276,482 1276,518" fill="#22C55E" opacity="0.78"/>
+  <rect width="1600" height="980" rx="24" fill="url(#bg6)"/>
+  <text x="92" y="84" class="eyebrow">RM2-2 / 运行环境选择</text>
+  <text x="92" y="132" class="title">Hermes 应该跑在哪？</text>
+  <text x="92" y="164" class="sub">先选云端或本地，再开始安装。</text>
 
   <g>
-    <rect x="88" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
-    <circle cx="126" cy="328" r="22" fill="#22C55E"/>
-    <text x="119" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">1</text>
-    <text x="88" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">本地 macOS</text>
-    <text x="88" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
-    <text x="88" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 手边就是 Mac</text>
-    <text x="88" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 想最快试一次</text>
-    <text x="88" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
-    <text x="88" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能打开终端</text>
-    <text x="88" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能继续输入命令</text>
+    <rect x="650" y="90" width="300" height="92" rx="20" fill="#12382E" stroke="#34E7A5" stroke-width="2.5"/>
+    <text x="800" y="128" text-anchor="middle" class="node">开始</text>
+    <text x="800" y="158" text-anchor="middle" class="small">安装前先选一个运行环境。</text>
+  </g>
+
+  <line x1="800" y1="182" x2="800" y2="258" stroke="#35E6A6" stroke-width="6" stroke-linecap="round"/>
+  <path d="M786 244L800 270L814 244" stroke="#35E6A6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="560" y="270" width="480" height="108" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <text x="800" y="314" text-anchor="middle" class="node">需要长期运行或远程访问吗？</text>
+    <text x="800" y="346" text-anchor="middle" class="small">如果需要，选云端；如果不需要，走本地路径。</text>
+  </g>
+
+  <line x1="800" y1="378" x2="800" y2="450" stroke="#35E6A6" stroke-width="6" stroke-linecap="round"/>
+
+  <line x1="800" y1="450" x2="1130" y2="450" stroke="#35E6A6" stroke-width="5" stroke-linecap="round"/>
+  <line x1="800" y1="450" x2="470" y2="450" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+
+  <text x="1080" y="430" class="yes">是</text>
+  <text x="505" y="430" class="yes">否</text>
+
+  <line x1="1130" y1="450" x2="1130" y2="516" stroke="#35E6A6" stroke-width="5" stroke-linecap="round"/>
+  <line x1="470" y1="450" x2="470" y2="516" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+
+  <g>
+    <rect x="980" y="516" width="300" height="190" rx="24" fill="#12382E" stroke="#35E6A6" stroke-width="3"/>
+    <rect x="1065" y="536" width="130" height="30" rx="15" fill="#35E6A6"/>
+    <text x="1130" y="556" text-anchor="middle" class="num">推荐</text>
+    <text x="1130" y="606" text-anchor="middle" class="choice">云主机</text>
+    <text x="1130" y="638" text-anchor="middle" class="mini">稳定 / 远程 / 长期运行</text>
+    <text x="1130" y="672" text-anchor="middle" class="small">适合需要稳定访问，</text>
+    <text x="1130" y="698" text-anchor="middle" class="small">或暂时没有本地环境的人。</text>
   </g>
 
   <g>
-    <rect x="400" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
-    <circle cx="438" cy="328" r="22" fill="#22C55E"/>
-    <text x="431" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">2</text>
-    <text x="400" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">本地 Linux</text>
-    <text x="400" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
-    <text x="400" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已习惯 Linux</text>
-    <text x="400" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 本来就在终端里工作</text>
-    <text x="400" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
-    <text x="400" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能打开终端</text>
-    <text x="400" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 能继续输入命令</text>
+    <rect x="290" y="516" width="360" height="108" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <text x="470" y="560" text-anchor="middle" class="node">你已经有哪种本地系统？</text>
+    <text x="470" y="592" text-anchor="middle" class="small">选与你机器匹配的本地方案。</text>
+  </g>
+
+  <line x1="470" y1="624" x2="470" y2="694" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="198" y2="694" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="742" y2="694" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="198" y1="694" x2="198" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="470" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="742" y1="694" x2="742" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+
+  <g>
+    <rect x="92" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="140" cy="774" r="22" fill="#35E6A6"/><text x="134" y="781" class="num">1</text>
+    <text x="174" y="780" class="choice">macOS</text>
+    <text x="198" y="816" text-anchor="middle" class="mini">快速本地尝试</text>
+    <text x="198" y="850" text-anchor="middle" class="small">适合苹果笔记本用户。</text>
   </g>
 
   <g>
-    <rect x="712" y="288" width="286" height="338" rx="24" fill="#111827" stroke="#22C55E" stroke-width="2"/>
-    <circle cx="750" cy="328" r="22" fill="#22C55E"/>
-    <text x="743" y="336" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">3</text>
-    <text x="712" y="384" fill="#F8FAFC" font-size="34" font-family="Arial, sans-serif" font-weight="800">Windows WSL2</text>
-    <text x="712" y="430" fill="#CBD5E1" font-size="22" font-family="Arial, sans-serif">适合谁</text>
-    <text x="712" y="466" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 用 Windows</text>
-    <text x="712" y="500" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 愿意按 Linux 方式继续</text>
-    <text x="712" y="548" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
-    <text x="712" y="584" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已安装 WSL2</text>
-    <text x="712" y="618" fill="#F8FAFC" font-size="22" font-family="Arial, sans-serif">• 已进入 Linux 终端</text>
+    <rect x="364" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="412" cy="774" r="22" fill="#35E6A6"/><text x="406" y="781" class="num">2</text>
+    <text x="454" y="780" class="choice">Linux</text>
+    <text x="470" y="816" text-anchor="middle" class="mini">本地可控路径</text>
+    <text x="470" y="850" text-anchor="middle" class="small">适合你本来就常用 Linux。</text>
   </g>
 
   <g>
-    <rect x="1024" y="258" width="304" height="368" rx="24" fill="#052E16" stroke="#22C55E" stroke-width="3"/>
-    <rect x="1050" y="290" width="148" height="34" rx="999" fill="#22C55E"/>
-    <text x="1074" y="313" fill="#052E16" font-size="18" font-family="Arial, sans-serif" font-weight="800">优先推荐</text>
-    <circle cx="1068" cy="356" r="22" fill="#22C55E"/>
-    <text x="1061" y="364" fill="#052E16" font-size="22" font-family="Arial, sans-serif" font-weight="800">4</text>
-    <text x="1024" y="412" fill="#F0FDF4" font-size="36" font-family="Arial, sans-serif" font-weight="800">云主机</text>
-    <text x="1024" y="458" fill="#DCFCE7" font-size="22" font-family="Arial, sans-serif">适合谁</text>
-    <text x="1024" y="494" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 想长期稳定运行</text>
-    <text x="1024" y="528" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 以后还要远程访问</text>
-    <text x="1024" y="576" fill="#86EFAC" font-size="22" font-family="Arial, sans-serif" font-weight="700">继续前确认</text>
-    <text x="1024" y="612" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已有实例</text>
-    <text x="1024" y="646" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已拿到公网 IP</text>
-    <text x="1024" y="680" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已知道用户名</text>
-    <text x="1024" y="714" fill="#F0FDF4" font-size="22" font-family="Arial, sans-serif">• 已准备好密码或密钥</text>
+    <rect x="636" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="684" cy="774" r="22" fill="#35E6A6"/><text x="678" y="781" class="num">3</text>
+    <text x="735" y="780" text-anchor="middle" class="choice">WSL2</text>
+    <text x="742" y="816" text-anchor="middle" class="mini">Windows 本地路径</text>
+    <text x="742" y="850" text-anchor="middle" class="small">适合 Windows 用户继续走本地。</text>
   </g>
-
-  <rect x="88" y="690" width="1240" height="176" rx="24" fill="#111827" stroke="#1E293B" stroke-width="2"/>
-  <text x="126" y="744" fill="#86EFAC" font-size="24" font-family="Arial, sans-serif" font-weight="700">最短判断</text>
-  <text x="126" y="786" fill="#F8FAFC" font-size="24" font-family="Arial, sans-serif">想最快跑通一次 → 选你现在立刻能用的环境</text>
-  <text x="126" y="822" fill="#F8FAFC" font-size="24" font-family="Arial, sans-serif">想稳定长期运行 → 优先选云主机</text>
-  <text x="126" y="854" fill="#94A3B8" font-size="20" font-family="Arial, sans-serif">这一页的重点不是安装，而是确认你下一页能不能直接进入终端。</text>
 </svg>
