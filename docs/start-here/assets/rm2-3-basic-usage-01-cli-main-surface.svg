@@ -9,7 +9,7 @@
 <circle cx="164" cy="316" r="10" fill="#37B26C"/>
 <circle cx="196" cy="316" r="10" fill="#F5A623"/>
 <circle cx="228" cy="316" r="10" fill="#D9534F"/>
-<text x="272" y="325" fill="#FFFFFF" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">Hermes CLI</text>
+<text x="272" y="325" fill="#FFFFFF" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">Hermes 命令行</text>
 <text x="164" y="418" fill="#8DC2E8" font-size="34" font-family="DejaVu Sans Mono, monospace">$ hermes</text>
 <text x="164" y="490" fill="#FFFFFF" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">进入交互模式后，</text>
 <text x="164" y="540" fill="#FFFFFF" font-size="36" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">就一直在这个主界面里工作</text>
