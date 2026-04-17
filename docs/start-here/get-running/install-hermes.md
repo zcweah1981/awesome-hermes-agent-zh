@@ -1,8 +1,8 @@
-# 把 Hermes 装上去
+# 📦 把 Hermes 装上去
 
 现在你已经进入了正确终端，并且确认 Git 已经可以正常使用，下一步就是把 Hermes 装上去。
 
-## 官方推荐安装方式
+## ⚙️ 官方推荐安装方式
 
 这一页只走官方推荐的一键安装路径，不在这里展开手动安装、模型配置或第一次互动。
 
@@ -24,7 +24,7 @@
 - 你是不是又回头去研究模型配置或其他高级项了。
 - 你是不是还没确认 Git 已经可用。
 
-## 直接开始安装
+## 📥 直接开始安装
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
@@ -53,7 +53,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 - 当前网络是否正常。
 - 你是不是还在正确的 Linux / macOS / WSL2 终端里执行。
 
-## 安装完成后重新加载当前 shell
+## 🔄 安装完成后重新加载当前 shell
 
 先执行下面这条命令，确认你当前用的是哪种 shell：
 
@@ -96,7 +96,7 @@ source ~/.zshrc
 - 对应的配置文件是否存在。
 - 你是不是执行了和当前 shell 不对应的 `source` 命令。
 
-## 检查有没有安装成功
+## ✅ 检查有没有安装成功
 
 先执行：
 
@@ -133,7 +133,7 @@ hermes doctor
 - 如果 `hermes version` 提示 `command not found`：说明 shell 还没正确重新加载，或者 PATH 还没生效。
 - 如果 `hermes doctor` 报错：先按它给出的提示修当前环境，再重新执行一次。
 
-## 安装失败时先看什么
+## 🧯 安装失败时先看什么
 
 先只查下面这 5 件事：
 
@@ -160,7 +160,7 @@ hermes doctor
 - 你是不是还没有把报错落到具体一项。
 - 你是不是在安装没闭环之前就想往后跳。
 
-## 下一步
+## ➡️ 下一步
 
 当下面两件事同时成立，这一页就算通过：
 
