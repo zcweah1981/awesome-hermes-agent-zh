@@ -1,0 +1,100 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08131B"/>
+      <stop offset="1" stop-color="#0F1C27"/>
+    </linearGradient>
+    <linearGradient id="green4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#36E6A6"/>
+      <stop offset="1" stop-color="#18C57F"/>
+    </linearGradient>
+    <style>
+      .eyebrow { font: 700 18px Arial, sans-serif; fill:#88EFC5; letter-spacing:2px; }
+      .title { font: 700 34px Arial, sans-serif; fill:#F4FBFF; }
+      .sub { font: 400 18px Arial, sans-serif; fill:#B9CDD6; }
+      .state { font: 700 18px Arial, sans-serif; fill:#F4FBFF; }
+      .stateMini { font: 400 14px Arial, sans-serif; fill:#C8D8DF; }
+      .num { font: 700 18px Arial, sans-serif; fill:#08131B; }
+      .step { font: 700 18px Arial, sans-serif; fill:#F4FBFF; }
+      .mini { font: 600 13px Arial, sans-serif; fill:#8AEECA; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" rx="24" fill="url(#bg4)"/>
+  <text x="92" y="84" class="eyebrow">RM2-2 / GET RUNNING</text>
+  <text x="92" y="132" class="title">First Reply Path</text>
+  <text x="92" y="164" class="sub">One route only: prepare → terminal → install → first reply</text>
+
+  <line x1="210" y1="500" x2="1390" y2="500" stroke="url(#green4)" stroke-width="8" stroke-linecap="round"/>
+
+  <g>
+    <rect x="80" y="430" width="160" height="140" rx="22" fill="#12212B" stroke="#2E5364" stroke-width="2"/>
+    <text x="122" y="480" class="state">INPUT</text>
+    <text x="106" y="515" class="stateMini">host ready</text>
+    <text x="106" y="542" class="stateMini">terminal needed</text>
+  </g>
+
+  <path d="M240 500L270 500" stroke="#4FA3C1" stroke-width="6" stroke-linecap="round"/>
+  <path d="M258 486L286 500L258 514" stroke="#4FA3C1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="292" y="396" width="176" height="208" rx="24" fill="#12212B" stroke="#294A59" stroke-width="2"/>
+    <circle cx="380" cy="438" r="22" fill="#32E7A2"/><text x="374" y="445" class="num">1</text>
+    <text x="359" y="482" class="step">ENV</text>
+    <text x="342" y="514" class="mini">local / wsl2 / cloud</text>
+    <rect x="340" y="546" width="80" height="42" rx="10" fill="#173140" stroke="#2F6170"/>
+    <rect x="352" y="556" width="56" height="18" rx="4" fill="#0C1A22" stroke="#32E7A2"/>
+    <line x1="360" y1="580" x2="400" y2="580" stroke="#32E7A2" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <path d="M468 500L500 500" stroke="#32E7A2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M488 486L516 500L488 514" stroke="#32E7A2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="516" y="396" width="176" height="208" rx="24" fill="#12212B" stroke="#294A59" stroke-width="2"/>
+    <circle cx="604" cy="438" r="22" fill="#32E7A2"/><text x="598" y="445" class="num">2</text>
+    <text x="555" y="482" class="step">TERMINAL</text>
+    <text x="565" y="514" class="mini">ssh / git ready</text>
+    <rect x="552" y="548" width="104" height="48" rx="10" fill="#0F1C26" stroke="#2D5D73"/>
+    <path d="M570 573L582 583L570 593" stroke="#32E7A2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="590" y1="592" x2="626" y2="592" stroke="#7EDDB8" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <path d="M692 500L724 500" stroke="#32E7A2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M712 486L740 500L712 514" stroke="#32E7A2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="740" y="396" width="176" height="208" rx="24" fill="#12212B" stroke="#294A59" stroke-width="2"/>
+    <circle cx="828" cy="438" r="22" fill="#32E7A2"/><text x="822" y="445" class="num">3</text>
+    <text x="793" y="482" class="step">INSTALL</text>
+    <text x="798" y="514" class="mini">command / version</text>
+    <rect x="790" y="548" width="76" height="50" rx="10" fill="#0F1C26" stroke="#2D5D73"/>
+    <path d="M828 560V580" stroke="#32E7A2" stroke-width="6" stroke-linecap="round"/>
+    <path d="M816 576L828 588L840 576" stroke="#32E7A2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M916 500L948 500" stroke="#32E7A2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M936 486L964 500L936 514" stroke="#32E7A2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="964" y="378" width="192" height="244" rx="26" fill="#12382E" stroke="#32E7A2" stroke-width="3"/>
+    <circle cx="1060" cy="424" r="24" fill="#32E7A2"/><text x="1054" y="431" class="num">4</text>
+    <text x="1028" y="472" class="step">FIRST REPLY</text>
+    <text x="1016" y="504" class="mini">model connected</text>
+    <rect x="1018" y="538" width="84" height="66" rx="14" fill="#0F1D27" stroke="#2E6A59"/>
+    <path d="M1034 558H1082C1090 558 1096 564 1096 572V582C1096 590 1090 596 1082 596H1068L1058 604V596H1034C1026 596 1020 590 1020 582V572C1020 564 1026 558 1034 558Z" fill="#173140" stroke="#32E7A2" stroke-width="3"/>
+    <circle cx="1044" cy="577" r="3" fill="#32E7A2"/>
+    <circle cx="1058" cy="577" r="3" fill="#7EDDB8"/>
+    <circle cx="1072" cy="577" r="3" fill="#5BA9C7"/>
+  </g>
+
+  <path d="M1156 500L1188 500" stroke="#32E7A2" stroke-width="6" stroke-linecap="round"/>
+  <path d="M1176 486L1204 500L1176 514" stroke="#32E7A2" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="1210" y="430" width="220" height="140" rx="22" fill="#12382E" stroke="#32E7A2" stroke-width="2.5"/>
+    <text x="1276" y="480" class="state">SUCCESS</text>
+    <text x="1242" y="515" class="stateMini">Hermes installed</text>
+    <text x="1242" y="542" class="stateMini">first reply confirmed</text>
+  </g>
+</svg>
