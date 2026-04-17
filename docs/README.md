@@ -24,6 +24,8 @@
 - [`migrate/index.md`](./migrate/index.md)
 - [`migrate/compare.md`](./migrate/compare.md)
 - [`migrate/decision.md`](./migrate/decision.md)
+- [`migrate/combine.md`](./migrate/combine.md)
+- [`migrate/checklist.md`](./migrate/checklist.md)
 
 约束：
 - 仅为当前真实写作批次建立目录与页面

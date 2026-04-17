@@ -1,6 +1,6 @@
 # Page Source Map
 
-更新时间：RM2 持续推进 + RM4 整模块完成
+更新时间：RM2 持续推进 + RM4 / RM5 整模块完成
 
 本文件只记录当前已经真实落仓的页面来源边界、路径基准与近端待补链接，不提前铺满整站。
 
@@ -13,6 +13,7 @@
 - `RM2_FULL_IMAGE_PRODUCTION_BOARD.md`
 - `RM2_IMAGE_SHOTLIST.md`
 - `RM4_CHINA_PAGE_CARDS.md`
+- `RM5_MIGRATE_PAGE_CARDS.md`
 
 ## 已落仓页面
 
