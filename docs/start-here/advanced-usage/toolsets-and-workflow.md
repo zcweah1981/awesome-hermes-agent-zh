@@ -318,8 +318,7 @@ hermes tools
 如果你想先回到这一阶段入口重新确认位置：
 - [玩出花样](./index.md)
 
-再往后会进入“skins / themes 那一页”。
-但如果那一页现在还没做出来，就先别跳；当前页通过后再继续。
+再往后会进入 [让终端更顺眼：Skins 和 Themes 只管外观，不管人格](./skins-and-themes.md)。
 
 ---
 
