@@ -1,4 +1,4 @@
-# 开始上手
+# 🚀 开始上手
 
 ![开始上手阶段路径图：把 Hermes 从“跑通一次”变成“每天会用”，依次经过基础使用、会话管理、Skills 精选、消息平台接入](../assets/rm2-3-get-started-index-01-daily-usage-path.png)
 
