@@ -5,7 +5,7 @@
 如果你已经会正常使用 Hermes，这一阶段只做一件事：
 把“已经能用的一个助手”继续调成“更像你、更懂你、更顺手”的长期助手。
 
-这里仍然只围绕一个助手。
+这一页仍然只围绕一个助手。
 先不进入多助手、MCP、API Server、Profiles 这些更重的系统层玩法。
 
 ---
@@ -61,37 +61,36 @@
       <td><strong>第 1 步</strong></td>
       <td><strong>让 Hermes 更像你</strong></td>
       <td>先把长期人格放对位置，分清什么该写进 SOUL.md，什么不该塞进去。</td>
-      <td><code>./soul-and-personality.md</code></td>
+      <td><a href="./soul-and-personality.md">./soul-and-personality.md</a></td>
     </tr>
     <tr>
       <td><strong>第 2 步</strong></td>
       <td><strong>让 Hermes 记住你</strong></td>
       <td>学会持久记忆的边界，只留下真的该跨会话保留的信息。</td>
-      <td><code>./persistent-memory.md</code></td>
+      <td><a href="./persistent-memory.md">./persistent-memory.md</a></td>
     </tr>
     <tr>
       <td><strong>第 3 步</strong></td>
       <td><strong>自定义 AI 大模型</strong></td>
       <td>把默认模型选择，推进到适合你成本、速度、来源和可控性的配置。</td>
-      <td><code>./custom-llm.md</code></td>
+      <td><a href="./custom-llm.md">./custom-llm.md</a></td>
     </tr>
     <tr>
       <td><strong>第 4 步</strong></td>
       <td><strong>让工具更顺手</strong></td>
       <td>开始按场景整理 toolsets、工具开关和常用 workflow，而不是全开全背。</td>
-      <td><code>./toolsets-and-workflow.md</code></td>
+      <td><a href="./toolsets-and-workflow.md">./toolsets-and-workflow.md</a></td>
     </tr>
     <tr>
       <td><strong>第 5 步</strong></td>
       <td><strong>让终端更顺眼</strong></td>
       <td>最后再调 skins 和 themes，把视觉层收尾，不和人格层混在一起。</td>
-      <td><code>./skins-and-themes.md</code></td>
+      <td><a href="./skins-and-themes.md">./skins-and-themes.md</a></td>
     </tr>
   </tbody>
 </table>
 
-说明：
-为了严格遵守“当前页未通过，不进入下一页”，这一页先只展示固定路径，不提前创建后续子页文件，所以这里不放子页跳转链接，避免坏链。
+现在 5 页都已经落仓，所以这里直接给真实跳转，不再保留占位文本。
 
 ---
 
@@ -146,7 +145,7 @@ Hermes 不再只是“官方默认助手”，而是开始变成“你的那个 
 ## 👉 现在就开始
 
 这一阶段的下一页是：
-- 让 Hermes 更像你（`./soul-and-personality.md`）
+- [让 Hermes 更像你](./soul-and-personality.md)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [开始上手](../get-started/index.md)
