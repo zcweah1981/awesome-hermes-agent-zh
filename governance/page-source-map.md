@@ -39,9 +39,9 @@
 | `docs/migrate/compare.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
 | `docs/migrate/decision.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
 | `docs/migrate/combine.md` | RM5-4 | RM5_MIGRATE_PAGE_CARDS | 结合使用页 |
+| `docs/migrate/checklist.md` | RM5-5 | RM5_MIGRATE_PAGE_CARDS | 迁移检查清单页 |
 
 ## 当前待补占位链接
-- `docs/migrate/checklist.md`
 - `TODO_LINK_CHINA_ALIYUN`
 - `TODO_LINK_CHINA_TENCENT`
 - `TODO_LINK_CHINA_BUDGET`

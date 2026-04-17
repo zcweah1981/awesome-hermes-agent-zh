@@ -22,6 +22,7 @@
 - [差异对比](./docs/migrate/compare.md)
 - [迁移判断](./docs/migrate/decision.md)
 - [如何结合使用](./docs/migrate/combine.md)
+- [迁移检查清单](./docs/migrate/checklist.md)
 
 当前策略：
 - 只维护已经真实落仓的入口，不预建未开写模块页面
