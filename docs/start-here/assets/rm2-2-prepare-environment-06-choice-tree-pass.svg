@@ -1,0 +1,100 @@
+<svg width="1600" height="980" viewBox="0 0 1600 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1600" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#08131B"/>
+      <stop offset="1" stop-color="#0F1C27"/>
+    </linearGradient>
+    <style>
+      .eyebrow{font:700 18px Arial,sans-serif;fill:#88EFC5;letter-spacing:2px}
+      .title{font:700 34px Arial,sans-serif;fill:#F4FBFF}
+      .sub{font:400 18px Arial,sans-serif;fill:#B9CDD6}
+      .node{font:700 18px Arial,sans-serif;fill:#F4FBFF}
+      .small{font:400 14px Arial,sans-serif;fill:#CAD9E0}
+      .yes{font:700 14px Arial,sans-serif;fill:#8BEFC8}
+      .num{font:700 18px Arial,sans-serif;fill:#08131B}
+      .choice{font:700 18px Arial,sans-serif;fill:#F4FBFF}
+      .mini{font:600 13px Arial,sans-serif;fill:#8CEFC8}
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" rx="24" fill="url(#bg6)"/>
+  <text x="92" y="84" class="eyebrow">RM2-2 / ENVIRONMENT DECISION TREE</text>
+  <text x="92" y="132" class="title">Where should Hermes run?</text>
+  <text x="92" y="164" class="sub">Choose cloud for long-run use, or pick a local system path.</text>
+
+  <g>
+    <rect x="650" y="90" width="300" height="92" rx="20" fill="#12382E" stroke="#34E7A5" stroke-width="2.5"/>
+    <text x="780" y="128" text-anchor="middle" class="node">START</text>
+    <text x="800" y="158" text-anchor="middle" class="small">Pick one environment before install.</text>
+  </g>
+
+  <line x1="800" y1="182" x2="800" y2="258" stroke="#35E6A6" stroke-width="6" stroke-linecap="round"/>
+  <path d="M786 244L800 270L814 244" stroke="#35E6A6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="560" y="270" width="480" height="108" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <text x="800" y="314" text-anchor="middle" class="node">Need long-run or remote access?</text>
+    <text x="800" y="346" text-anchor="middle" class="small">If yes, choose cloud. If no, stay on a local path.</text>
+  </g>
+
+  <line x1="800" y1="378" x2="800" y2="450" stroke="#35E6A6" stroke-width="6" stroke-linecap="round"/>
+
+  <line x1="800" y1="450" x2="1130" y2="450" stroke="#35E6A6" stroke-width="5" stroke-linecap="round"/>
+  <line x1="800" y1="450" x2="470" y2="450" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+
+  <text x="1080" y="430" class="yes">YES</text>
+  <text x="505" y="430" class="yes">NO</text>
+
+  <line x1="1130" y1="450" x2="1130" y2="516" stroke="#35E6A6" stroke-width="5" stroke-linecap="round"/>
+  <line x1="470" y1="450" x2="470" y2="516" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+
+  <g>
+    <rect x="980" y="516" width="300" height="190" rx="24" fill="#12382E" stroke="#35E6A6" stroke-width="3"/>
+    <rect x="1065" y="536" width="130" height="30" rx="15" fill="#35E6A6"/>
+    <text x="1130" y="556" text-anchor="middle" class="num">PREFERRED</text>
+    <text x="1130" y="606" text-anchor="middle" class="choice">Cloud Host</text>
+    <text x="1130" y="638" text-anchor="middle" class="mini">stable / remote / long run</text>
+    <text x="1130" y="672" text-anchor="middle" class="small">Use if you want stable access</text>
+    <text x="1130" y="698" text-anchor="middle" class="small">or you have no local setup.</text>
+  </g>
+
+  <g>
+    <rect x="290" y="516" width="360" height="108" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <text x="470" y="560" text-anchor="middle" class="node">Which local system do you already have?</text>
+    <text x="470" y="592" text-anchor="middle" class="small">Pick the local path that matches your machine.</text>
+  </g>
+
+  <line x1="470" y1="624" x2="470" y2="694" stroke="#4FA3C1" stroke-width="5" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="198" y2="694" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="742" y2="694" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="198" y1="694" x2="198" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="470" y1="694" x2="470" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+  <line x1="742" y1="694" x2="742" y2="730" stroke="#4FA3C1" stroke-width="4" stroke-linecap="round"/>
+
+  <g>
+    <rect x="92" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="140" cy="774" r="22" fill="#35E6A6"/><text x="134" y="781" class="num">1</text>
+    <text x="174" y="780" class="choice">macOS</text>
+    <text x="198" y="816" text-anchor="middle" class="mini">quick local try</text>
+    <text x="198" y="850" text-anchor="middle" class="small">Use if you are on</text>
+    <text x="198" y="874" text-anchor="middle" class="small">an Apple laptop.</text>
+  </g>
+
+  <g>
+    <rect x="364" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="412" cy="774" r="22" fill="#35E6A6"/><text x="406" y="781" class="num">2</text>
+    <text x="454" y="780" class="choice">Linux</text>
+    <text x="470" y="816" text-anchor="middle" class="mini">local control path</text>
+    <text x="470" y="850" text-anchor="middle" class="small">Use if Linux is already</text>
+    <text x="470" y="874" text-anchor="middle" class="small">your normal setup.</text>
+  </g>
+
+  <g>
+    <rect x="636" y="730" width="212" height="150" rx="22" fill="#12212B" stroke="#2C5060" stroke-width="2"/>
+    <circle cx="684" cy="774" r="22" fill="#35E6A6"/><text x="678" y="781" class="num">3</text>
+    <text x="735" y="780" text-anchor="middle" class="choice">WSL2</text>
+    <text x="742" y="816" text-anchor="middle" class="mini">windows local path</text>
+    <text x="742" y="850" text-anchor="middle" class="small">Use if you are on Windows</text>
+    <text x="742" y="874" text-anchor="middle" class="small">and still need local.</text>
+  </g>
+</svg>
