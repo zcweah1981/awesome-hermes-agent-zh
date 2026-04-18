@@ -1,4 +1,4 @@
-# 接入外部记忆系统：先看清它是在哪里加一层
+# 外部记忆总览：先看清它加在哪一层
 
 这一页只解决一件事：
 把外部 memory provider 放回正确位置，再决定你下一步该走 `holographic.md`、`honcho.md`，还是先去 `compare.md`。
@@ -71,13 +71,11 @@
 
 ---
 
-## 这三条路径分别解决什么
+## 这三条路径排成一条线
 
-这页后面只有 3 条真实下游路径：
+这页后面只有 3 条真实下游路径，按顺序看就是：
 
-1. `holographic.md`
-2. `honcho.md`
-3. `compare.md`
+[Holographic](./holographic.md) → [Honcho](./honcho.md) → [compare](./compare.md)
 
 这一页不抢写它们的安装和配置细节，只先告诉你它们各自更像什么方向。
 
@@ -91,7 +89,7 @@
 
 那你通常会先去看：
 
-- `docs/start-here/build-your-own/memory-providers/holographic.md`
+- [Holographic](./holographic.md)
 
 这一条更像：
 从“内建记忆够用”过渡到“外部记忆开始参与”的第一条落地路线。
@@ -106,7 +104,7 @@
 
 那你更该看：
 
-- `docs/start-here/build-your-own/memory-providers/honcho.md`
+- [Honcho](./honcho.md)
 
 这一条更像：
 把记忆放进一个更适合多助手系统的方向里。
@@ -121,7 +119,7 @@
 
 那先去：
 
-- `docs/start-here/build-your-own/memory-providers/compare.md`
+- [compare](./compare.md)
 
 这条路适合“先比较，再实施”，而不是“先装一个再说”。
 
@@ -131,9 +129,9 @@
 
 默认建议这样走：
 
-- 你只是第一次接外部 provider：先看 `holographic.md`
-- 你已经明确是多 profile / 多助手系统：先看 `honcho.md`
-- 你当前拿不准方向：先看 `compare.md`
+- 你只是第一次接外部 provider：先看 [Holographic](./holographic.md)
+- 你已经明确是多 profile / 多助手系统：先看 [Honcho](./honcho.md)
+- 你当前拿不准方向：先看 [compare](./compare.md)
 
 你可以把它理解成一个很简单的分流规则：
 
@@ -179,9 +177,9 @@
 
 如果你想继续往下走，下一步只有这 3 个真实目标：
 
-- `docs/start-here/build-your-own/memory-providers/holographic.md`
-- `docs/start-here/build-your-own/memory-providers/honcho.md`
-- `docs/start-here/build-your-own/memory-providers/compare.md`
+- [Holographic](./holographic.md)
+- [Honcho](./honcho.md)
+- [compare](./compare.md)
 
 如果你想先退回上一层确认位置：
 

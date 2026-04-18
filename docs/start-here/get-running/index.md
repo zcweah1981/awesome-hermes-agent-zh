@@ -1,6 +1,6 @@
 # 🚀 先跑起来
 
-![先跑起来的四步路径图：准备环境、进入终端、安装 Hermes、第一次互动](../assets/rm2-2-get-running-index-06-stage-map-closed.svg)
+![先跑起来的四步路径图：准备环境、进入终端、安装 Hermes、第一次互动](../assets/rm2-2-get-running-index-06-stage-map-closed.png)
 
 这一阶段只解决一件事：让你第一次把 Hermes 真正跑通。  
 不要在这里提前研究高级配置，也不要试图一次搞懂所有功能。

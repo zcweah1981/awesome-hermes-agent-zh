@@ -201,9 +201,9 @@ Hermes 看到这些工具后，会像平常一样在推理过程中决定是否�
 - [从这开始](../index.md)
 
 当前页通过后，下一步路径是：
-`docs/start-here/build-your-own/api-server.md`
+[API Server](./api-server.md)
 
-这个路径当前仓库里还没落地，这里只写路径，不造假链接。
+这条路径已经在仓库里落地，直接点下一页即可.
 
 ---
 

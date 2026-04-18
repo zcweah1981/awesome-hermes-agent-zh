@@ -4,7 +4,7 @@
 这台电脑可以是你的本地电脑，比如苹果电脑（macOS）、Windows WSL2 或 Linux；也可以是云主机，比如阿里云、腾讯云，或者其他国内外云主机。  
 **对于大多数用户，我们更推荐优先使用云主机来安装和运行 Hermes。**
 
-![运行环境选择图：本地 macOS、本地 Linux、Windows WSL2、云主机四条路径](../assets/rm2-2-prepare-environment-06-choice-tree-pass.svg)
+![运行环境选择图：本地 macOS、本地 Linux、Windows WSL2、云主机四条路径](../assets/rm2-2-prepare-environment-06-choice-tree-pass.png)
 
 ## 🌍 你可以在哪些环境运行 Hermes
 

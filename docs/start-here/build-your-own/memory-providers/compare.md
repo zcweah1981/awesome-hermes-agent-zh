@@ -1,4 +1,4 @@
-# Holographic vs Honcho：先选型，再决定要不要接外部记忆
+# 先选 Holographic 还是 Honcho：外部记忆选型页
 
 这一页只解决一件事：
 不讲安装，不讲配置，只帮你判断现在该先走 [Holographic](./holographic.md)、先走 [Honcho](./honcho.md)，还是先不要装外部 provider。

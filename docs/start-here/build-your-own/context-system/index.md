@@ -134,11 +134,11 @@ context references 管的是“临时引用材料”。
 
 所以后面必须拆开：
 
-- `docs/start-here/build-your-own/context-system/context-files.md`
-- `docs/start-here/build-your-own/context-system/context-references.md`
+如果你要继续往下走，下一步就是：
+- [Context Files](./context-files.md)
+- [Context References](./context-references.md)
 
-当前仓库里这两页还没落地。
-这一页先把分工讲清，不造假链接，保证坏链为零。
+当前仓库里这两页已经落地。
 
 ---
 
@@ -162,8 +162,8 @@ Hermes 的上下文系统 = 长期规则层（context files）+ 临时引用材�
 - [从这开始](../../index.md)
 
 后续下游页路径是：
-- `docs/start-here/build-your-own/context-system/context-files.md`
-- `docs/start-here/build-your-own/context-system/context-references.md`
+- [Context Files](./context-files.md)
+- [Context References](./context-references.md)
 
 ---
 

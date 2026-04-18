@@ -246,9 +246,9 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 - [从这开始](../index.md)
 
 当前页通过后，下一步路径是：
-`docs/start-here/build-your-own/cron-and-automation.md`
+[Cron / Automation](./cron-and-automation.md)
 
-这个路径当前仓库里还没落地，这里只写真实路径文本，不造假链接。
+这条路径已经在仓库里落地，直接点下一页即可。
 
 ---
 

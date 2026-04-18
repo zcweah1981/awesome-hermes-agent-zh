@@ -142,6 +142,10 @@ hermes memory status
 
 如果状态里显示当前外部 provider 是 `holographic`，这是第一层成功信号。
 
+这张是真实状态截图，验收时看它：
+
+![Holographic 真实状态截图：memory provider 已切到 holographic，hermes config set 写入成功，hermes memory status 显示 Provider=Holographic 且 holographic 为 active](../../assets/rm2-5-memory-providers-02-holographic-status-proof.png)
+
 ### 成功信号 2：配置层面已经写对位置
 
 你能在 `config.yaml` 里看到：
@@ -207,7 +211,7 @@ Holographic 适合“先跑通第一条外部记忆路线”，不适合拿来�
 - 回到 [外部记忆系统总览](./index.md)，确认它在整体路线里的位置
 - 回到 [持久记忆](../../advanced-usage/persistent-memory.md)，重新区分哪些信息该留在 `USER.md` / `MEMORY.md`，哪些才值得交给外部 provider
 
-如果你发现自己真正要解决的是多助手拆分，而不是先跑通本地外部记忆，则应该回到 `docs/start-here/build-your-own/memory-providers/` 这一层，重新判断后续路径。
+如果你发现自己真正要解决的是多助手拆分，而不是先跑通本地外部记忆，则应该回到 [Memory Providers](./index.md) 这一层，重新判断后续路径。
 
 ---
 

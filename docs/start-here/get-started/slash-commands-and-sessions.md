@@ -27,7 +27,7 @@ Hermes 里的斜杠命令很多，这很正常。
 
 ## ⚙️ 第一批最常用的 6 个命令
 
-![常用 slash 命令分组图：第一次开始使用时先记住 /help、/tools、/model、/save、/title、/history](../assets/rm2-3-slash-commands-01-command-groups.png)
+![常用斜杠命令分组图：第一次开始使用时先记住 /help、/tools、/model、/save、/title、/history](../assets/rm2-3-slash-commands-01-command-groups.png)
 
 先记住这 6 个就够：
 
@@ -112,7 +112,7 @@ hermes --resume 会话ID
 /personality technical
 ```
 
-![真实 personality 回显截图：先看到 `/personality` 可用人格列表，再把 `teacher` 设置成功，并在后续回答里看到更偏解释型的输出](../assets/rm2-3-slash-commands-03-persona-command-success.png)
+![内置人格命令回显截图：先看到可用人格列表，再把 `teacher` 设置成功，并在后续回答里看到更偏解释型的输出](../assets/rm2-3-slash-commands-03-persona-command-success.png)
 
 现在做什么：
 - 挑一个最容易理解的内置人格，实际试一次。

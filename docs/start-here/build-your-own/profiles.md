@@ -1,4 +1,4 @@
-# 从一个助手走到多个助手：先理解 Profiles
+# 多助手：先理解 Profiles
 
 这一页只解决一件事：
 把“我一直在用同一个 Hermes”推进成“我开始按职责拆成多个完全隔离的 Hermes 助手”。
@@ -119,7 +119,7 @@ hermes profile create mybot
 - 你不想带入当前助手的人格和配置
 - 你就是想明确切开职责
 
-它会创建一个新的 profile，并带上 Hermes 自带的 bundled skills。
+它会创建一个新的 profile，并带上 Hermes 自带的技能。
 之后通常接着做：
 
 ```bash
@@ -138,11 +138,11 @@ hermes profile create writer --clone
 - `.env`
 - `SOUL.md`
 
-但新 profile 会拿到新的 memory 和 session 历史。
+但新 profile 会拿到新的记忆和会话历史。
 
 这很适合：
 
-- 你想沿用模型和 API key
+- 你想沿用模型和 API 密钥
 - 你想保留一部分人格基础
 - 但你又明确希望新助手有独立历史和独立长期记忆
 
@@ -312,7 +312,7 @@ hermes profile use default
 下面这张图就是一份真实终端证据：
 先创建 `profiledoc`，再直接用别名执行 `profiledoc doctor`，最后把默认 profile 切到它，并在列表里看到当前激活标记。
 
-![真实终端截图：profile 创建成功，生成别名 profiledoc，随后使用 profiledoc doctor，并通过 hermes profile use profiledoc 切换默认 profile，列表中出现当前激活标记](../assets/rm2-5-profiles-02-profile-switch-success.png)
+![真实终端截图：创建 profile 成功，生成别名 profiledoc，随后执行 profiledoc doctor，并通过 hermes profile use profiledoc 切换默认 profile，列表里出现当前激活标记](../assets/rm2-5-profiles-02-profile-switch-success.png)
 
 如果你自己手动验证，最短路径可以直接照着做：
 
@@ -347,10 +347,10 @@ hermes profile list
 - [自己造东西](./index.md)
 
 这一页之后，下一条路径是：
-- `./memory-providers/index.md`
+- [外部记忆系统总览](./memory-providers/index.md)
 
 说明：
-当前仓库里这个页面还没有落地，所以这里只写真实路径文本，不造假链接。
+这一页已经落地，可直接点击进入。
 
 ---
 

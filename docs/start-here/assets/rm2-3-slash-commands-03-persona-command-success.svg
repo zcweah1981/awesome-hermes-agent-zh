@@ -7,11 +7,11 @@
 <circle cx="208" cy="129" r="10" fill="#D9534F"/>
 <text x="252" y="138" fill="#FFFFFF" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">内置人格命令示意图</text>
 <text x="146" y="238" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality teacher</text>
-<text x="146" y="292" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 teacher 人格</text>
+<text x="146" y="292" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到老师型人格</text>
 <text x="146" y="346" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality concise</text>
-<text x="146" y="400" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 concise 人格</text>
+<text x="146" y="400" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到简洁型人格</text>
 <text x="146" y="454" fill="#8DC2E8" font-size="30" font-family="DejaVu Sans Mono, monospace">/personality technical</text>
-<text x="146" y="508" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到 technical 人格</text>
+<text x="146" y="508" fill="#D7E9F7" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">已切换到技术型人格</text>
 
 <rect x="900" y="220" width="540" height="440" rx="24" fill="#132B3E" stroke="#2B5E86" stroke-width="2"/>
 <text x="940" y="292" fill="#9EE5B9" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">什么时候值得顺手试一下</text>

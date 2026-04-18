@@ -242,9 +242,9 @@ my-project/
 - [从这开始](../../index.md)
 
 当前页通过后，下一页路径是：
-`docs/start-here/build-your-own/context-system/context-references.md`
+- [Context References](./context-references.md)
 
-这一页先不展开它，也不造假链接。
+这一页就是下一页，不再保留路径占位。
 
 ---
 

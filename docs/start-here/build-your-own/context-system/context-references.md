@@ -247,9 +247,9 @@ CLI 里用 `@` 最顺手，也最符合官方原始设计。
 - [context files](./context-files.md)
 
 当前页通过后，后续路径是：
-`docs/start-here/build-your-own/mcp-and-plugins/`
+- [MCP / Plugins](../mcp-and-plugins.md)
 
-这个路径当前仓库里还没落地，这里只写路径，不造假链接。
+这条路径已经在仓库里落地，直接点下一页即可。
 
 ---
 

@@ -1,232 +1,223 @@
-# 接入 Honcho：当你开始搭多助手共享记忆结构
+# 接入 Honcho：把外部记忆跑成可验证的本地闭环
 
 这一页只解决一件事：
-当你已经明确自己不是只想“先接一个外部 provider”，而是想把多 profile / 多助手围绕同一个用户与 workspace 长期协作起来时，怎样用最短路径把 Honcho 接上。
+把 Honcho 按“能启动、能接入、能验证”的顺序跑起来，先把外部记忆真正接通，再谈多 profile 协作。
 
-![Honcho 接入结构图：内建 USER.md 和 MEMORY.md 始终作为底座保留；Honcho 建立在其上，在同一个 workspace 里为每个 Hermes profile 分配自己的 AI peer，因此更适合多 profile 与多助手协作](../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.png)
-
----
-
-## 什么时候更适合先走 Honcho
-
-如果你现在更像下面这种情况，通常就该先走 Honcho：
-
-- 你已经不止一个助手，或者马上要认真使用多个 [Profiles](../profiles.md)
-- 你要解决的是跨会话上下文，不只是单助手本地记忆够不够用
-- 你希望多个助手围绕同一个用户持续对齐，而不是各记各的
-- 你需要语义搜索、持久结论、peer card 这类更系统的用户建模能力
-- 你在搭的是多助手系统，不只是给一个助手补一层外部存储
-
-一句话判断：
-如果你的重点是“多助手长期协作的共享记忆结构”，Honcho 比“先跑通一个外部 provider”更像正确起点。
+![Honcho 结构示意图：内建 USER.md / MEMORY.md 始终保留，Honcho 作为外部记忆层叠加在上方，适合多 profile 与共享 workspace](../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.png)
 
 ---
 
-## 它和内建记忆是什么关系
+## 你要先知道 Honcho 是什么
 
-这里先只记住 3 个边界：
+Honcho 不是“再加一个数据库”。
+它是 Hermes 的 AI-native 外部记忆后端，负责把对话后的结论、用户画像、语义检索和多代理分层记忆接起来。
 
-- 内建 `USER.md` / `MEMORY.md` 一直都在
-- 外部 provider 是 additive 叠加层，不是替代层
-- 同一时刻只能激活 1 个外部 provider
+和内建记忆的关系只有一句话：
 
-所以接上 Honcho 之后，真实结构是：
+- `USER.md` / `MEMORY.md` 继续保留
+- Honcho 作为外部 provider 叠加在上面
+- 同一时刻只启用 1 个外部 provider
 
-- `USER.md` 继续承接你的协作偏好、语言偏好、长期习惯
-- `MEMORY.md` 继续承接环境、项目和稳定经验事实
-- Honcho 再往上提供跨会话用户建模、语义搜索、持久结论与 peer card
+Honcho 适合的重点是：
 
-不要把它理解成“我以后不用 `USER.md` / `MEMORY.md` 了”。
-正确理解是：
-“我保留内建记忆，再在上面接一个更适合多助手系统的外部层。”
+- 多 profile / 多助手长期协作
+- 跨会话上下文
+- user-agent alignment
+- peer card、semantic search、conclusion 这类更系统的记忆能力
 
-如果你对内建记忆还不够熟，先回看：[让 Hermes 记住你：持久记忆只看 USER.md 和 MEMORY.md](../../advanced-usage/persistent-memory.md)
-
----
-
-## 它为什么更适合多助手 / 多 profile / workspace
-
-Honcho 最关键的点，不是“又多一个 provider 名字”，而是它的结构天然更适合多助手系统：
-
-- 每个 Hermes profile 都会拿到自己的 Honcho AI peer
-- 这些 profile 可以共享同一个 workspace
-- 同一个用户表示会持续沉淀，不必每个助手各自重建
-- 不同助手又能保留各自的身份和观察结果
-
-你可以把它理解成：
-
-- workspace 是共享场域
-- user representation 是共享用户侧长期认知
-- AI peer 是每个 profile 各自的助手身份
-
-这也是它比 Holographic 更适合多助手系统的重要原因之一：
-你要的不是“某个助手自己多一层外部记忆”，而是“多个助手围绕同一个用户与工作区长期协作”。
-
-从能力名称上看，Honcho 这一层主要体现为：
-
-- semantic search
-- persistent conclusions
-- peer card
-- AI-native cross-session user modeling
-
-如果你还没开始拆分助手，先回看：[多个助手一起工作：先理解 Profiles](../profiles.md)
+如果你现在还没把内建记忆用顺，先回看：[持久记忆](../../advanced-usage/persistent-memory.md)。
 
 ---
 
-## 最小接入路径
+## 先判断：你是不是应该走 Honcho
 
-如果你的目标只是先接通，不要一上来研究完整参数。先按这 4 步走就够了。
+如果你符合下面任意一条，才值得继续往下走：
 
-### 1）先确认你要解决的是“多助手共享记忆结构”
+- 你已经在认真使用多个 [Profiles](../profiles.md)
+- 你要解决的不是“单助手记不记得住”，而是“多个助手怎么共享同一个用户认知”
+- 你希望每个 profile 有自己的 AI peer，但又能共享同一个 workspace
+- 你需要 Honcho 的四个工具：`honcho_profile`、`honcho_search`、`honcho_context`、`honcho_conclude`
+- 你已经明确自己要的是外部记忆闭环，而不是只看一眼选型页
 
-在动手前，先确认两件事：
+如果你只是想先跑通第一条最短外部记忆路线，去看 [Holographic](./holographic.md)。
+如果你还在比较路线，先看 [compare](./compare.md)。
 
-- 你已经知道外部 provider 不会替代内建记忆
-- 你现在更关心多 profile / 多助手 / workspace，而不是单助手先跑通
+---
 
-如果这两件事都成立，就适合继续。
+## 最短接入顺序
 
-### 2）用最短入口接上 Honcho
+不要一上来研究所有参数。按下面 4 步走就够了。
 
-最短入口有 3 条：
+### 第 1 步：先把 Honcho 服务端跑起来
 
-```bash
-hermes honcho setup
+Honcho 官方支持本地自托管；最顺手的方式是 Docker。
+
+官方本地搭建的核心要求是：
+
+- PostgreSQL
+- pgvector
+- Honcho 服务端
+- 一个可用的 LLM provider
+
+本地启动时，先准备这几个关键值：
+
+```env
+DB_CONNECTION_URI=postgresql+psycopg://postgres:postgres@database:5432/postgres
 ```
 
-或：
+本地调试时先关闭认证，别把第一步卡在登录上。
+
+如果你走 Docker，本页先按最短路径记住这件事：
+
+- 先把 Honcho 服务和数据库拉起来
+- 再让 Hermes 指向这个 Honcho 实例
+
+官方本地文档明确提到，Docker 方案会启动 API、deriver、database、redis 这几类服务；你只要先把服务端跑起来，后面 Hermes 才有连接对象可用。
+
+### 第 2 步：把 Hermes 的 memory provider 切到 Honcho
+
+执行：
 
 ```bash
 hermes memory setup
 ```
 
-然后在交互选择里选：
+在 provider 列表里选：
 
 ```text
 honcho
 ```
 
-或者直接设成当前外部 provider：
+如果你要手动切换，也可以直接设：
 
 ```bash
 hermes config set memory.provider honcho
 ```
 
-### 3）知道 Honcho 配置会从哪里读
-
-这一步不用背参数百科，只要知道 Honcho 的配置解析顺序：
+如果你用的是本地 Honcho 实例，Hermes 这边的 base URL 通常指向：
 
 ```text
-$HERMES_HOME/honcho.json
-~/.hermes/honcho.json
-~/.honcho/config.json
+http://localhost:8000
 ```
 
-也就是说，你最常见要看的就是这 3 个位置。
+### 第 3 步：把 1536 维度写死
 
-### 4）接完后先看“结构有没有真的建立起来”
+这一步是关键。
+如果你这条链路走的是 OpenAI-compatible / OneAPI 风格的 embedding 路由，先把向量维度固定成 1536，不要做动态猜测。
 
-先不要急着调高级参数，先确认下面这些最基本的结果：
+原因很直接：
 
-- 当前激活的外部 provider 已经是 `honcho`
-- Honcho 配置已经落到上述 3 个路径之一
-- 你知道当前 profile 对应的是自己的 AI peer，而不是和别的 profile 混成一个助手身份
-- 多个 profile 仍然可以围绕同一个 workspace 工作
+- Honcho 的向量库默认就是按 1536 这个维度链路来配的
+- OpenAI text-embedding-3-small 也是 1536 维
+- OneAPI 只是路由层，底层 embedding 维度必须和存储维度一致
 
-只要这几件事成立，就说明 Honcho 这条接入路线已经站住了。
+你要记住的不是“抽象的兼容性”，而是这条硬规则：
+
+```env
+VECTOR_STORE_DIMENSIONS=1536
+```
+
+如果你在 Honcho 的环境变量模板里写的是 embedding 维度字段，就把它固定成 1536；别让它漂。
+
+### 第 4 步：确认配置落点正确
+
+Honcho 的配置通常会落在这些位置之一：
+
+- `$HERMES_HOME/honcho.json`
+- `~/.honcho/config.json`
+- 以及 Hermes 的 `~/.hermes/config.yaml` 里的 `memory.provider: honcho`
+
+最稳妥的检查顺序是：
+
+1. 先看 Hermes 当前 memory provider
+2. 再看 Honcho 配置文件是否存在
+3. 最后确认本地服务是否能连上
 
 ---
 
-## 接完之后看什么算成功
+## 接完后怎么验证
 
-这页只看“是否接上”，不展开“怎样把 Honcho 调到最优”。
+这一页的通过标准，不是“我觉得应该好了”，而是“状态真的显示好了”。
 
-最稳的成功信号，通常是下面这些：
-
-### 成功信号 1：状态层面已经显示 Honcho 在生效
-
-优先看：
+先跑：
 
 ```bash
 hermes memory status
 ```
 
-如果你想直接看 Honcho 自己的解析结果，也可以看：
+再跑：
 
 ```bash
 hermes honcho status
 ```
 
-只要你能确认当前外部 provider 是 `honcho`，这是第一层成功信号。
+你要看到的是：
 
-### 成功信号 2：配置层面已经写到了正确位置
+- 当前 provider 已经是 `honcho`
+- 没有 `not installed` / `connection failed` / `No Honcho config found` 这类错误
+- 配置里能看到当前的 base URL、peer / workspace / config 路径
+- Honcho 命令不再是空壳，而是能返回当前连接状态
 
-你能在配置里确认：
+如果你是多 profile 场景，再补一条：
 
-- `memory.provider` 已经指向 `honcho`
-- Honcho 相关配置已经出现在 `$HERMES_HOME/honcho.json`、`~/.hermes/honcho.json` 或 `~/.honcho/config.json` 之一
+```bash
+hermes honcho peer
+```
 
-这说明 Hermes 已经知道该把外部记忆交给 Honcho。
+它用来检查或更新 peer 名称，确认每个 profile 不是混成同一个身份。
 
-### 成功信号 3：你已经能说清多 profile 的结构
+这张是真实状态截图，验收时就看它：
 
-也就是你已经知道：
-
-- 每个 profile 都有自己的 Honcho AI peer
-- 它们可以共享同一个 workspace
-- 内建 `USER.md` / `MEMORY.md` 仍然同时存在
-
-这一步很重要。
-因为 Honcho 的价值不只是“能开起来”，而是“你知道它为什么更适合多助手系统”。
+![Honcho 真实状态截图：memory provider 已切到 honcho，hermes memory status 显示 installed 和 available，hermes honcho status 显示 Connection... OK，并能看到 workspace、peer 和 config path](../../assets/rm2-5-memory-providers-03-honcho-status-proof.png)
 
 ---
 
-## 哪些情况不该先走它
+## 如果你要的是多 profile 结构，这样看才对
 
-下面这些情况，通常不建议把 Honcho 当第一步：
+Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
-- 你连内建 [持久记忆](../../advanced-usage/persistent-memory.md) 还没用顺
-- 你现在其实只有一个助手，只是想先接一个最短外部 provider
-- 你还没开始用 [Profiles](../profiles.md)，也没有明确的多助手结构
-- 你目前的问题是助手基础层没跑顺，不是跨会话共享建模不够
-- 你只是想把所有 provider 都装上再比较
+你应该把它理解成：
 
-简单说：
-Honcho 适合“已经明确要做多助手共享记忆结构”的人，不适合在需求还没成形时拿来当默认第一步。
+- workspace 是共享场域
+- user representation 是共享用户认知
+- AI peer 是每个 profile 自己的身份
 
-如果你后面发现自己真正需要的是先做选型，再回到 `docs/start-here/build-your-own/memory-providers/` 这一层看 compare 路径；如果只是想先跑通第一条外部记忆路线，则回到 `holographic.md`。
+所以多 profile 下，正确姿势是：
+
+- 共享同一套 user 侧长期认知
+- 每个 profile 保留自己的 peer
+- 不同角色之间不要互相污染观察结果
+
+如果你后面要把已经创建好的 profile 补进 Honcho，继续看 `hermes honcho sync` 这一类同步动作。
 
 ---
 
-## 什么时候算通过
+## 什么时候算过关
 
-当你已经能明确回答下面 5 个问题，这一页就算通过：
+当你能明确回答下面 5 个问题，这一页才算过关：
 
-- 我知道 Honcho 建立在内建 `USER.md` / `MEMORY.md` 之上，而不是替代它们
-- 我知道 Honcho 更适合多助手 / 多 profile / 共享 workspace
-- 我知道每个 profile 都有自己的 AI peer，但可以共享同一个 workspace
-- 我知道最短接入方式是 `hermes honcho setup`、`hermes memory setup` 选 `honcho`，或直接 `hermes config set memory.provider honcho`
-- 我知道接完后该检查 `hermes memory status`、`hermes honcho status` 和 Honcho 配置路径
+- 我知道 Honcho 是外部记忆后端，不是简单数据库
+- 我知道内建 `USER.md` / `MEMORY.md` 仍然保留
+- 我知道同一时刻只能启用 1 个外部 provider
+- 我知道 OneAPI / OpenAI-compatible 这条链路要把向量维度固定成 1536
+- 我知道该用 `hermes memory status` 和 `hermes honcho status` 去验收，而不是靠感觉
 
 ---
 
 ## 下一步去哪
 
-如果你已经接通 Honcho，下一步通常只需要回看两层：
+如果你已经接通 Honcho，下一步通常有两种：
 
-- [外部记忆系统总览](./index.md)，确认它在整体路线里的位置
-- [Profiles](../profiles.md)，继续把多助手拆分方式理顺
+- 回到 [外部记忆总览](./index.md)，确认自己当前路线的位置
+- 继续看 [Profiles](../profiles.md)，把多助手拆分结构理顺
 
-如果你想重新确认内建记忆应该放什么：
-
-- [持久记忆](../../advanced-usage/persistent-memory.md)
-
-如果你后面要做 provider 选型，回到 `docs/start-here/build-your-own/memory-providers/` 目录，再看 compare 路径；这页不展开。
+如果你还在比较 Honcho 和 Holographic，回去看 [compare](./compare.md)。
 
 ---
 
 ## 官方依据
 
+- [Honcho Memory（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/honcho)
 - [Memory Providers（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers)
-- [Profiles（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
-- [Honcho Memory Provider README](https://github.com/NousResearch/hermes-agent/blob/main/plugins/memory/honcho/README.md)
+- [Honcho 本地/自托管文档](https://docs.honcho.dev/v3/contributing/self-hosting)
+- [Hermes Agent + Honcho（集成文档）](https://docs.honcho.dev/v3/guides/integrations/hermes)

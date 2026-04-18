@@ -7,7 +7,9 @@
 
 ## 🚪 平时怎么启动 Hermes
 
-![真实终端主入口截图：在 Linux 终端执行 `hermes` 后，已经进入 Hermes 交互主入口并停在可继续输入的提示符位置](../assets/rm2-3-basic-usage-01-cli-main-surface.png)
+![真实终端主入口截图：在 Linux 终端执行 `hermes` 后，已经进入 Hermes 交互主入口并停在可继续输入的提示符位置。](../assets/rm2-3-basic-usage-01-cli-main-surface.png)
+
+这页先记住一件事：启动后不要退出，直接在这个主界面继续问。
 
 最常见的日常入口只有一个：
 
@@ -41,7 +43,9 @@ hermes
 hermes chat -q "请用一句中文确认你已经可以正常工作"
 ```
 
-![真实快速请求成功截图：在终端执行 `hermes chat -q` 后，已经返回正常中文回复，并给出会话恢复信息](../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
+![真实快速请求成功截图：在终端执行 `hermes chat -q` 后，已经返回正常中文回复，并给出会话恢复信息。](../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
+
+这一步只看结果：能回中文，就说明主链路通了。
 
 现在做什么：
 - 在终端执行上面的 `hermes chat -q` 命令。
