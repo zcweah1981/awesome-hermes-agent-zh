@@ -7,7 +7,7 @@
 
 ---
 
-## SOUL.md 到底是什么
+## ❓ SOUL.md 到底是什么
 
 官方定义很直接：`SOUL.md` 是 Hermes 的主身份文件，也是长期默认人格入口。
 
@@ -25,7 +25,7 @@
 
 ---
 
-## SOUL.md 在哪里
+## 🔹 SOUL.md 在哪里
 
 默认位置：
 
@@ -47,7 +47,7 @@ $HERMES_HOME/SOUL.md
 
 ---
 
-## 该写什么
+## ❓ 该写什么
 
 `SOUL.md` 适合写长期稳定、跨会话都想保留的风格约束。
 
@@ -62,7 +62,7 @@ $HERMES_HOME/SOUL.md
 
 ---
 
-## 不该写什么
+## ❓ 不该写什么
 
 下面这些，别往 `SOUL.md` 里塞：
 
@@ -79,7 +79,7 @@ $HERMES_HOME/SOUL.md
 
 ---
 
-## 一个最小示例
+## 🔹 一个最小示例
 
 先别写大而全。
 先从 6～10 行能长期用的默认风格开始。
@@ -89,7 +89,7 @@ $HERMES_HOME/SOUL.md
 你是一个长期协作型中文助手。
 默认风格：短句、直接、少客套、先结论后展开。
 
-## 回答习惯
+## 🔹 回答习惯
 - 优先先给判断或结论
 - 能列表就列表
 - 不确定时直接说不确定
@@ -101,7 +101,7 @@ $HERMES_HOME/SOUL.md
 
 ---
 
-## 改完怎么验证
+## 🔹 改完怎么验证
 
 最稳的做法：
 用临时 `HERMES_HOME` 做 before / after 对照，不污染你现在的真实环境。
@@ -131,7 +131,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 ---
 
-## SOUL.md、/personality、AGENTS.md 的区别
+## 🔹 SOUL.md、/personality、AGENTS.md 的区别
 
 <table>
   <colgroup>
@@ -177,7 +177,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 ---
 
-## 什么时候算通过
+## ✅ 什么时候算通过
 
 当下面这些事已经成立，这一页就通过：
 
@@ -199,7 +199,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 ---
 
-## 官方依据
+## 🔹 官方依据
 
 这一页对应官方文档里的这三块：
 - Personality & SOUL.md：`https://hermes-agent.nousresearch.com/docs/user-guide/features/personality`

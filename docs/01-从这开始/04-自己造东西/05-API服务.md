@@ -7,7 +7,7 @@
 
 ---
 
-## 什么情况下值得先走 API Server
+## ❓ 什么情况下值得先走 API Server
 
 当你遇到下面这些需求时，通常就值得先走 API Server：
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 它和单纯 CLI / 单个聊天窗口有什么不同
+## ❓ 它和单纯 CLI / 单个聊天窗口有什么不同
 
 CLI 或单个聊天窗口，重点是“你本人直接在某个入口里使用 Hermes”。
 
@@ -64,7 +64,7 @@ Hermes 可以站在后面，前面换成你想要的界面。
 
 ---
 
-## 它到底是什么：OpenAI-compatible HTTP API
+## ❓ 它到底是什么：OpenAI-compatible HTTP API
 
 官方给出的核心定位很明确：
 Hermes 可以运行一个 OpenAI-compatible HTTP API server。
@@ -83,12 +83,12 @@ API Server 不是把 Hermes 变成“只会返回文本的裸模型接口”。
 
 ---
 
-## 最短接法
+## 📌 最短接法
 
 这一页不展开部署架构，也不展开端点百科。
 先记住最短的 5 步就够了。
 
-### 第 1 步：在 `~/.hermes/.env` 里打开 API Server
+### ➡️ 第 1 步：在 `~/.hermes/.env` 里打开 API Server
 
 把下面这项写进去：
 
@@ -98,7 +98,7 @@ API_SERVER_ENABLED=true
 
 这表示当前 Hermes profile 允许 gateway 同时暴露 API server。
 
-### 第 2 步：设置 `API_SERVER_KEY`
+### ➡️ 第 2 步：设置 `API_SERVER_KEY`
 
 继续在 `~/.hermes/.env` 里设置一个 key：
 
@@ -109,7 +109,7 @@ API_SERVER_KEY=change-me-local-dev
 你可以先把它理解成：
 这是前端或客户端调用 Hermes API 时要带的 Bearer key。
 
-### 第 3 步：如果浏览器要直连，再按需加 `API_SERVER_CORS_ORIGINS`
+### ➡️ 第 3 步：如果浏览器要直连，再按需加 `API_SERVER_CORS_ORIGINS`
 
 如果只是本机工具、桌面客户端或服务端去接，通常先不用管这项。
 
@@ -121,7 +121,7 @@ API_SERVER_CORS_ORIGINS=http://localhost:3000
 
 所以这一步是可选项，不是所有人都要先配。
 
-### 第 4 步：启动 gateway
+### ➡️ 第 4 步：启动 gateway
 
 ```bash
 hermes gateway
@@ -129,7 +129,7 @@ hermes gateway
 
 官方快速路径里，API Server 是跟着 gateway 一起启动的。
 
-### 第 5 步：让前端把 base URL 指到 `http://localhost:8642/v1`
+### ➡️ 第 5 步：让前端把 base URL 指到 `http://localhost:8642/v1`
 
 大多数 OpenAI-compatible 前端，核心就是填这几类信息：
 
@@ -142,13 +142,13 @@ hermes gateway
 
 ---
 
-## 成功信号看什么
+## ✅ 成功信号看什么
 
 这一页最重要的是会判断“到底有没有接上”。
 
 你可以看 3 个成功信号。
 
-### 1）gateway 输出 API server listening
+### 🔹 1）gateway 输出 API server listening
 
 官方快速起步里，成功启动后会出现类似输出：
 
@@ -158,14 +158,14 @@ hermes gateway
 
 这说明 API Server 已经跟着 gateway 起起来了。
 
-### 2）`/health` 可以访问
+### 🔹 2）`/health` 可以访问
 
 如果健康检查可用，说明最基本的 HTTP 服务已经在响应。
 
 当前页你只要记住：
 `GET /health` 是最轻量的探活信号。
 
-### 3）对 `/v1/chat/completions` 发请求能正常返回
+### 🔹 3）对 `/v1/chat/completions` 发请求能正常返回
 
 例如用 `curl` 去打：
 
@@ -188,7 +188,7 @@ curl http://localhost:8642/v1/chat/completions \
 
 ---
 
-## 当前页只知道这些端点就够了
+## 🔹 当前页只知道这些端点就够了
 
 这一页不是 OpenAI API 规范全文。
 你现在只要知道 Hermes API Server 至少覆盖这类入口：
@@ -204,7 +204,7 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 ---
 
-## 哪些情况先不在这一页展开
+## 🔹 哪些情况先不在这一页展开
 
 为了保证当前页边界清楚，这几个方向先不展开：
 
@@ -221,7 +221,7 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 ---
 
-## 什么时候算通过
+## ✅ 什么时候算通过
 
 当前页学完，至少要满足下面这些判断，才算通过：
 
@@ -252,7 +252,7 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 ---
 
-## 官方依据
+## 🔹 官方依据
 
 - 官方 API Server 文档：<https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server>
 - 官方 Integrations 文档：<https://hermes-agent.nousresearch.com/docs/integrations/>

@@ -7,7 +7,7 @@
 
 ---
 
-## 你要先知道 Honcho 是什么
+## ❓ 你要先知道 Honcho 是什么
 
 Honcho 不是“再加一个数据库”。
 它是 Hermes 的 AI-native 外部记忆后端，负责把对话后的结论、用户画像、语义检索和多代理分层记忆接起来。
@@ -29,7 +29,7 @@ Honcho 适合的重点是：
 
 ---
 
-## 先判断：你是不是应该走 Honcho
+## 🧭 先判断：你是不是应该走 Honcho
 
 如果你符合下面任意一条，才值得继续往下走：
 
@@ -44,11 +44,11 @@ Honcho 适合的重点是：
 
 ---
 
-## 最短接入顺序
+## 📌 最短接入顺序
 
 不要一上来研究所有参数。按下面 4 步走就够了。
 
-### 第 1 步：先把 Honcho 服务端跑起来
+### ➡️ 第 1 步：先把 Honcho 服务端跑起来
 
 Honcho 官方支持本地自托管；最顺手的方式是 Docker。
 
@@ -74,7 +74,7 @@ DB_CONNECTION_URI=postgresql+psycopg://postgres:postgres@database:5432/postgres
 
 官方本地文档明确提到，Docker 方案会启动 API、deriver、database、redis 这几类服务；你只要先把服务端跑起来，后面 Hermes 才有连接对象可用。
 
-### 第 2 步：把 Hermes 的 memory provider 切到 Honcho
+### ➡️ 第 2 步：把 Hermes 的 memory provider 切到 Honcho
 
 执行：
 
@@ -100,7 +100,7 @@ hermes config set memory.provider honcho
 http://localhost:8000
 ```
 
-### 第 3 步：把 1536 维度写死
+### ➡️ 第 3 步：把 1536 维度写死
 
 这一步是关键。
 如果你这条链路走的是 OpenAI-compatible / OneAPI 风格的 embedding 路由，先把向量维度固定成 1536，不要做动态猜测。
@@ -119,7 +119,7 @@ VECTOR_STORE_DIMENSIONS=1536
 
 如果你在 Honcho 的环境变量模板里写的是 embedding 维度字段，就把它固定成 1536；别让它漂。
 
-### 第 4 步：确认配置落点正确
+### ➡️ 第 4 步：确认配置落点正确
 
 Honcho 的配置通常会落在这些位置之一：
 
@@ -135,7 +135,7 @@ Honcho 的配置通常会落在这些位置之一：
 
 ---
 
-## 接完后怎么验证
+## 🔹 接完后怎么验证
 
 这一页的通过标准，不是“我觉得应该好了”，而是“状态真的显示好了”。
 
@@ -172,7 +172,7 @@ hermes honcho peer
 
 ---
 
-## 如果你要的是多 profile 结构，这样看才对
+## 🔎 如果你要的是多 profile 结构，这样看才对
 
 Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
@@ -192,7 +192,7 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
 ---
 
-## 什么时候算过关
+## ✅ 什么时候算过关
 
 当你能明确回答下面 5 个问题，这一页才算过关：
 
@@ -204,7 +204,7 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
 ---
 
-## 下一步去哪
+## ➡️ 下一步去哪
 
 如果你已经接通 Honcho，下一步通常有两种：
 
@@ -215,7 +215,7 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
 ---
 
-## 官方依据
+## 🔹 官方依据
 
 - [Honcho Memory（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/honcho)
 - [Memory Providers（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers)
