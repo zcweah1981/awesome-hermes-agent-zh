@@ -22,11 +22,11 @@
   <rect x="112" y="90" width="166" height="44" rx="22" fill="#101A2D" stroke="#2A3A57"/>
   <text x="195" y="118" text-anchor="middle" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#C7D2FE" letter-spacing="1.1">START HERE</text>
 
-  <text x="112" y="228" font-size="86" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">从这开始</text>
+  <text x="112" y="228" font-size="86" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">01-从这开始</text>
   <text x="112" y="296" font-size="32" font-weight="500" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E3F4">先判断你在哪个阶段，再进入对应入口。</text>
 
   <rect x="112" y="360" width="214" height="60" rx="16" fill="#2563EB"/>
-  <text x="219" y="398" text-anchor="middle" font-size="27" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFFFFF">先跑起来</text>
+  <text x="219" y="398" text-anchor="middle" font-size="27" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFFFFF">01-先跑起来</text>
   <rect x="346" y="360" width="244" height="60" rx="16" fill="#0F1C30" stroke="#304663"/>
   <text x="468" y="398" text-anchor="middle" font-size="27" font-weight="600" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">四阶段总览</text>
 
@@ -43,22 +43,22 @@
   </g>
 
   <text x="190" y="548" font-size="23" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">① 阶段一</text>
-  <text x="190" y="592" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">先跑起来</text>
+  <text x="190" y="592" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">01-先跑起来</text>
   <text x="190" y="635" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">环境 · 安装 · 第一次互动</text>
   <text x="190" y="678" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#7EE7DA">把 Hermes 真正跑通</text>
 
   <text x="517" y="514" font-size="23" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">② 阶段二</text>
-  <text x="517" y="558" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">开始上手</text>
+  <text x="517" y="558" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">02-开始上手</text>
   <text x="517" y="601" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">基本使用 · 会话 · 命令 · Skills</text>
   <text x="517" y="644" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#93C5FD">从跑通一次到稳定可用</text>
 
   <text x="872" y="548" font-size="23" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FDBA74">③ 阶段三</text>
-  <text x="872" y="592" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">玩出花样</text>
+  <text x="872" y="592" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">03-玩出花样</text>
   <text x="872" y="635" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F0DFD0">人格 · 记忆 · 模型 · 工作流</text>
   <text x="872" y="678" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FBBF24">开始让 Hermes 更顺手</text>
 
   <text x="1198" y="514" font-size="23" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#BAE6FD">④ 阶段四</text>
-  <text x="1198" y="558" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">自己造东西</text>
+  <text x="1198" y="558" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">04-自己造东西</text>
   <text x="1198" y="601" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D9E6F7">Profiles · MCP · API · 自动化</text>
   <text x="1198" y="644" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#7DD3FC">进入系统化使用</text>
 </svg>

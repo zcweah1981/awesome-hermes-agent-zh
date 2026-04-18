@@ -76,28 +76,28 @@
 
   <!-- labels -->
   <g>
-    <text x="192" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">先跑起来</text>
+    <text x="192" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">01-先跑起来</text>
     <path d="M88 556H296" stroke="#31525C" stroke-width="2.5"/>
     <text x="192" y="600" text-anchor="middle" fill="#D0DFE1" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">环境、终端、安装</text>
     <text x="192" y="638" text-anchor="middle" fill="#A3C7BA" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">完成第一次互动</text>
   </g>
 
   <g>
-    <text x="566" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">开始上手</text>
+    <text x="566" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">02-开始上手</text>
     <path d="M462 556H670" stroke="#31525C" stroke-width="2.5"/>
     <text x="566" y="600" text-anchor="middle" fill="#D0DFE1" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">基本使用、会话管理</text>
     <text x="566" y="638" text-anchor="middle" fill="#A3C7BA" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">命令与 Skills</text>
   </g>
 
   <g>
-    <text x="892" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">玩出花样</text>
+    <text x="892" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">03-玩出花样</text>
     <path d="M788 556H996" stroke="#31525C" stroke-width="2.5"/>
     <text x="892" y="600" text-anchor="middle" fill="#D0DFE1" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">人格、记忆、模型</text>
     <text x="892" y="638" text-anchor="middle" fill="#A3C7BA" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">定制你的工作流</text>
   </g>
 
   <g>
-    <text x="1259" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">自己造东西</text>
+    <text x="1259" y="528" text-anchor="middle" fill="#F7FFF9" font-size="36" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">04-自己造东西</text>
     <path d="M1155 556H1363" stroke="#31525C" stroke-width="2.5"/>
     <text x="1259" y="600" text-anchor="middle" fill="#D0DFE1" font-size="24" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Profiles、MCP、API</text>
     <text x="1259" y="638" text-anchor="middle" fill="#A3C7BA" font-size="22" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">自动化与 IDE</text>

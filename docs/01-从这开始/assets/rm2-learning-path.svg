@@ -52,7 +52,7 @@
     <rect x="130" y="290" width="300" height="230" rx="30" fill="url(#panel)" stroke="#294858"/>
     <rect x="154" y="312" width="108" height="34" rx="17" fill="#0F2B25" stroke="#2CE0A4"/>
     <text x="176" y="336" fill="#73F4C5" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第一阶段</text>
-    <text x="154" y="394" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">先跑起来</text>
+    <text x="154" y="394" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">01-先跑起来</text>
     <text x="154" y="444" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">准备环境、进入终端</text>
     <text x="154" y="478" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">安装 Hermes、第一次互动</text>
   </g>
@@ -61,7 +61,7 @@
     <rect x="470" y="250" width="300" height="250" rx="30" fill="url(#panel)" stroke="#294858"/>
     <rect x="494" y="272" width="108" height="34" rx="17" fill="#0F2B25" stroke="#2CE0A4"/>
     <text x="516" y="296" fill="#73F4C5" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第二阶段</text>
-    <text x="494" y="356" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">开始上手</text>
+    <text x="494" y="356" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">02-开始上手</text>
     <text x="494" y="406" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">日常使用、会话管理</text>
     <text x="494" y="440" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">常用命令、精选 Skills</text>
   </g>
@@ -70,7 +70,7 @@
     <rect x="810" y="290" width="300" height="230" rx="30" fill="url(#panel)" stroke="#294858"/>
     <rect x="834" y="312" width="108" height="34" rx="17" fill="#0F2B25" stroke="#2CE0A4"/>
     <text x="856" y="336" fill="#73F4C5" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第三阶段</text>
-    <text x="834" y="394" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">玩出花样</text>
+    <text x="834" y="394" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">03-玩出花样</text>
     <text x="834" y="444" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">人格、记忆、模型</text>
     <text x="834" y="478" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">工具开关、终端主题</text>
   </g>
@@ -79,7 +79,7 @@
     <rect x="1150" y="250" width="300" height="250" rx="30" fill="url(#panel)" stroke="#294858"/>
     <rect x="1174" y="272" width="108" height="34" rx="17" fill="#0F2B25" stroke="#2CE0A4"/>
     <text x="1196" y="296" fill="#73F4C5" font-size="18" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">第四阶段</text>
-    <text x="1174" y="356" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">自己造东西</text>
+    <text x="1174" y="356" fill="#F4FFFB" font-size="40" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-weight="700">04-自己造东西</text>
     <text x="1174" y="406" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">Profiles、外部记忆</text>
     <text x="1174" y="440" fill="#B9D6CD" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">MCP、API、自动化、IDE</text>
   </g>
@@ -98,5 +98,5 @@
     <text x="1192" y="690">系统化</text>
   </g>
 
-  <text x="130" y="788" fill="#8AB7AA" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">建议阅读顺序：先跑起来 → 开始上手 → 玩出花样 → 自己造东西</text>
+  <text x="130" y="788" fill="#8AB7AA" font-size="23" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif">建议阅读顺序：01-先跑起来 → 02-开始上手 → 03-玩出花样 → 04-自己造东西</text>
 </svg>

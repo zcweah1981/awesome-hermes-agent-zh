@@ -153,7 +153,7 @@ hermes gateway
 官方快速起步里，成功启动后会出现类似输出：
 
 ```text
-[API Server] API server listening on http://127.0.0.1:8642
+[04-自己造东西/API服务] API server listening on http://127.0.0.1:8642
 ```
 
 这说明 API Server 已经跟着 gateway 起起来了。
@@ -241,12 +241,12 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 如果你想回到这一层入口重新确认位置：
 
-- [自己造东西](./01-总览.md)
-- [MCP / Plugins](./MCP与插件.md)
-- [从这开始](../01-总览.md)
+- [04-自己造东西](../总览.md)
+- [MCP / Plugins](./04-MCP与插件.md)
+- [01-从这开始](../总览.md)
 
 当前页通过后，下一步路径是：
-[Cron / Automation](./自动化.md)
+[04-自己造东西/自动化](./06-自动化.md)
 
 这条路径已经在仓库里落地，直接点下一页即可。
 

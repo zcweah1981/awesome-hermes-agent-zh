@@ -22,7 +22,7 @@
   <circle cx="220" cy="830" r="210" fill="#0E2A42" opacity="0.16"/>
   <circle cx="820" cy="700" r="300" fill="#103655" opacity="0.10"/>
 
-  <text x="92" y="106" fill="#2DE08A" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">开始上手</text>
+  <text x="92" y="106" fill="#2DE08A" font-size="26" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">02-开始上手</text>
   <text x="92" y="170" fill="#F8FBFF" font-size="54" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="800">把 Hermes 从“跑通一次”变成“每天会用”</text>
   <text x="92" y="214" fill="#A8BAD0" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">这一阶段只走一条日常使用主线：先会进入、会接住会话、会挑第一批 技能，再决定何时接入消息平台。</text>
 

@@ -2,7 +2,7 @@
 <rect width="1600" height="980" rx="36" fill="#F7FAFC"/>
 <text x="120" y="120" fill="#183B5B" font-size="48" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">把 Hermes 从命令行带到消息平台</text>
 <rect x="120" y="154" width="260" height="6" rx="3" fill="#37B26C"/>
-<text x="120" y="212" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">开始上手阶段先推荐飞书：国内常见、团队协作自然、WebSocket 路线更省事。</text>
+<text x="120" y="212" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">02-开始上手阶段先推荐飞书：国内常见、团队协作自然、WebSocket 路线更省事。</text>
 
 <rect x="120" y="310" width="340" height="180" rx="26" fill="#FFFFFF" stroke="#183B5B" stroke-width="3"/>
 <text x="154" y="384" fill="#183B5B" font-size="38" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">命令行已跑通</text>

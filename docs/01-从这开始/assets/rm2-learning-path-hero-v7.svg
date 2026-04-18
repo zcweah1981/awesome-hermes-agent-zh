@@ -42,7 +42,7 @@
   <rect x="110" y="92" width="164" height="44" rx="22" fill="#0F1A2E" stroke="#2A3A57"/>
   <text x="192" y="119" text-anchor="middle" font-size="21" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#C7D2FE" letter-spacing="1.2">START HERE</text>
 
-  <text x="110" y="226" font-size="88" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">从这开始</text>
+  <text x="110" y="226" font-size="88" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">01-从这开始</text>
   <text x="110" y="294" font-size="34" font-weight="500" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D6E2F5">找到你的最短路径。</text>
   <text x="110" y="352" font-size="24" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#A9BAD4">四个阶段，从跑通到系统化使用。</text>
 
@@ -61,18 +61,18 @@
   <circle cx="1390" cy="638" r="11" fill="#2DB86E"/>
 
   <text x="210" y="548" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#72D8A0">01</text>
-  <text x="210" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">先跑起来</text>
+  <text x="210" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">01-先跑起来</text>
   <text x="210" y="642" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">第一次互动</text>
 
   <text x="500" y="520" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#8AB6FF">02</text>
-  <text x="500" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">开始上手</text>
+  <text x="500" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">02-开始上手</text>
   <text x="500" y="614" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">稳定可用</text>
 
   <text x="820" y="548" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FDBA74">03</text>
-  <text x="820" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">玩出花样</text>
+  <text x="820" y="594" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#FFF7ED">03-玩出花样</text>
   <text x="820" y="642" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F0DFD0">定制工作流</text>
 
   <text x="1110" y="520" font-size="22" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#72D8A0">04</text>
-  <text x="1110" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">自己造东西</text>
+  <text x="1110" y="566" font-size="36" font-weight="700" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#F8FAFC">04-自己造东西</text>
   <text x="1110" y="614" font-size="22" font-family="Inter, PingFang SC, Microsoft YaHei, sans-serif" fill="#D8E4F6">系统化集成</text>
 </svg>

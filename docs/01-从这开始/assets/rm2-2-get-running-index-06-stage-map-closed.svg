@@ -21,7 +21,7 @@
   </defs>
 
   <rect width="1600" height="900" rx="24" fill="url(#bg4)"/>
-  <text x="92" y="84" class="eyebrow">RM2-2 / 先跑起来</text>
+  <text x="92" y="84" class="eyebrow">RM2-2 / 01-先跑起来</text>
   <text x="92" y="132" class="title">首次回复路径</text>
   <text x="92" y="164" class="sub">一条路径：准备 → 终端 → 安装 → 首次回复</text>
 

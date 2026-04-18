@@ -80,4 +80,4 @@ hermes doctor
 
 ## 下一步
 
-- `hermes version` 和 `hermes doctor` 都正常返回 → [配好 AI 大模型并完成第一次互动](./第一次回复.md)
+- `hermes version` 和 `hermes doctor` 都正常返回 → [配好 AI 大模型并完成第一次互动](./05-第一次回复.md)

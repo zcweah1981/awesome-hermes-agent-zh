@@ -39,8 +39,8 @@ Honcho 适合的重点是：
 - 你需要 Honcho 的四个工具：`honcho_profile`、`honcho_search`、`honcho_context`、`honcho_conclude`
 - 你已经明确自己要的是外部记忆闭环，而不是只看一眼选型页
 
-如果你只是想先跑通第一条最短外部记忆路线，去看 [Holographic](./全息记忆.md)。
-如果你还在比较路线，先看 [compare](./对比.md)。
+如果你只是想先跑通第一条最短外部记忆路线，去看 [Holographic](./02-全息记忆.md)。
+如果你还在比较路线，先看 [compare](./04-对比.md)。
 
 ---
 
@@ -211,7 +211,7 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 - 回到 [外部记忆总览](./01-总览.md)，确认自己当前路线的位置
 - 继续看 [Profiles](../02-多助手.md)，把多助手拆分结构理顺
 
-如果你还在比较 Honcho 和 Holographic，回去看 [compare](./对比.md)。
+如果你还在比较 Honcho 和 Holographic，回去看 [compare](./04-对比.md)。
 
 ---
 
