@@ -1,4 +1,4 @@
-# 让 Hermes 更像你：SOUL.md 和 /personality 先分清
+# 02-让Hermes更像你
 
 这一页只解决一件事：
 把一个已经会用的 Hermes，调成更符合你长期习惯的样子。先从 `SOUL.md` 开始。
