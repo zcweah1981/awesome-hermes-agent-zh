@@ -1,24 +1,106 @@
-<svg width="1600" height="920" viewBox="0 0 1600 920" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="1600" height="920" rx="36" fill="#F7FAFC"/>
-<rect x="120" y="100" width="1360" height="720" rx="30" fill="#FFFFFF" stroke="#183B5B" stroke-width="4"/>
-<rect x="120" y="100" width="1360" height="78" rx="30" fill="#183B5B"/>
-<text x="168" y="148" fill="#FFFFFF" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">飞书应用配置界面示意图</text>
-<rect x="180" y="240" width="380" height="520" rx="24" fill="#F8FBFD" stroke="#D4E2EC" stroke-width="2"/>
-<text x="220" y="308" fill="#183B5B" font-size="34" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">你会先看到的配置块</text>
-<text x="220" y="372" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- App ID</text>
-<text x="220" y="424" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- App Secret</text>
-<text x="220" y="476" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 机器人权限</text>
-<text x="220" y="528" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 连接模式</text>
-<text x="220" y="580" fill="#40617F" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">- 事件订阅</text>
-<text x="220" y="660" fill="#183B5B" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">这页不展开细配</text>
-<text x="220" y="706" fill="#40617F" font-size="24" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">只先让你知道后面真正要配的是什么。</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#111c38"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#142247"/>
+      <stop offset="100%" stop-color="#101a34"/>
+    </linearGradient>
+    <style>
+      .title{font:700 44px "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", sans-serif; fill:#ffffff;}
+      .sub{font:400 22px "WenQuanYi Zen Hei", sans-serif; fill:#b9c7ff;}
+      .label{font:700 26px "WenQuanYi Zen Hei", sans-serif; fill:#ffffff;}
+      .text{font:400 20px "WenQuanYi Zen Hei", sans-serif; fill:#d7e0ff;}
+      .small{font:400 16px "WenQuanYi Zen Hei", sans-serif; fill:#9db0ea;}
+      .step{font:700 28px "WenQuanYi Zen Hei", sans-serif; fill:#0b1020;}
+      .pill{font:700 18px "WenQuanYi Zen Hei", sans-serif; fill:#0b1020;}
+    </style>
+  </defs>
 
-<rect x="640" y="240" width="760" height="520" rx="24" fill="#ECF8F0" stroke="#37B26C" stroke-width="3"/>
-<text x="690" y="320" fill="#183B5B" font-size="38" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif" font-weight="700">为什么这一阶段先推荐飞书</text>
-<text x="690" y="398" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">1. 国内团队更容易直接上手</text>
-<text x="690" y="458" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">2. 官方支持完整，文档路径清楚</text>
-<text x="690" y="518" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">3. WebSocket 路线不需要先配公网地址</text>
-<text x="690" y="578" fill="#40617F" font-size="30" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">4. 更容易把 Hermes 带进真实办公流</text>
-<rect x="690" y="640" width="640" height="76" rx="18" fill="#FFFFFF"/>
-<text x="724" y="688" fill="#183B5B" font-size="28" font-family="WenQuanYi Zen Hei, DejaVu Sans, sans-serif">真正详细配置：下一步去“国内落地 → 飞书接入”。</text>
+  <rect width="1600" height="1000" rx="32" fill="url(#bg)"/>
+  <rect x="34" y="34" width="1532" height="932" rx="28" fill="none" stroke="#3251a8" stroke-width="2"/>
+
+  <text x="90" y="108" class="sub">FEISHU / LARK SETUP · 中文操作路径</text>
+  <text x="90" y="172" class="title">飞书接入先看这 5 步</text>
+  <text x="90" y="220" class="sub">目标：先跑通第一次回复，再回头优化权限、群聊策略和卡片回调</text>
+
+  <rect x="1120" y="84" width="300" height="56" rx="28" fill="#ffd36a"/>
+  <text x="1270" y="120" text-anchor="middle" class="pill">优先：中文步骤 + 真实成功信号</text>
+
+  <!-- flow line -->
+    <line x1="140" y1="390" x2="1380" y2="390" stroke="#37529f" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Step cards -->
+  <g transform="translate(90,280)">
+    <rect width="270" height="220" rx="24" fill="url(#card)" stroke="#4b6dd6" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#9bf07a"/>
+    <text x="48" y="58" text-anchor="middle" class="step">1</text>
+    <text x="32" y="104" class="label">先跑 setup</text>
+    <text x="32" y="142" class="small">执行：hermes gateway setup</text>
+    <text x="32" y="176" class="small">让 Hermes 先自动做能自动做的事</text>
+  </g>
+
+  <g transform="translate(360,280)">
+    <rect width="270" height="220" rx="24" fill="url(#card)" stroke="#4b6dd6" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#9bf07a"/>
+    <text x="48" y="58" text-anchor="middle" class="step">2</text>
+    <text x="32" y="104" class="label">选 websocket</text>
+    <text x="32" y="142" class="text">平台：Feishu / Lark</text>
+    <text x="32" y="176" class="small">本机 / 内网场景优先走长连接</text>
+  </g>
+
+  <g transform="translate(630,280)">
+    <rect width="270" height="220" rx="24" fill="url(#card)" stroke="#4b6dd6" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#9bf07a"/>
+    <text x="48" y="58" text-anchor="middle" class="step">3</text>
+    <text x="32" y="104" class="label">补齐凭证</text>
+    <text x="32" y="142" class="text">App ID / Secret / .env</text>
+    <text x="32" y="176" class="small">必要时加白名单和 Home Chat</text>
+  </g>
+
+  <g transform="translate(900,280)">
+    <rect width="270" height="220" rx="24" fill="url(#card)" stroke="#4b6dd6" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#9bf07a"/>
+    <text x="48" y="58" text-anchor="middle" class="step">4</text>
+    <text x="32" y="104" class="label">启动 gateway</text>
+    <text x="32" y="142" class="text">执行：hermes gateway</text>
+    <text x="32" y="176" class="small">先确认进程一直在线</text>
+  </g>
+
+  <g transform="translate(1170,280)">
+    <rect width="270" height="220" rx="24" fill="url(#card)" stroke="#4b6dd6" stroke-width="2"/>
+    <circle cx="48" cy="48" r="24" fill="#9bf07a"/>
+    <text x="48" y="58" text-anchor="middle" class="step">5</text>
+    <text x="32" y="104" class="label">发消息验收</text>
+    <text x="32" y="142" class="text">私聊回一条，群里 @ 才回</text>
+    <text x="32" y="176" class="small">这才算真正接通，不是截图好看</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#9bf07a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 338 390 L 358 390"/>
+    <path d="M 608 390 L 628 390"/>
+    <path d="M 878 390 L 898 390"/>
+    <path d="M 1148 390 L 1168 390"/>
+    <path d="M 351 390 l -16 -10 M 351 390 l -16 10"/>
+    <path d="M 621 390 l -16 -10 M 621 390 l -16 10"/>
+    <path d="M 891 390 l -16 -10 M 891 390 l -16 10"/>
+    <path d="M 1161 390 l -16 -10 M 1161 390 l -16 10"/>
+  </g>
+
+  <rect x="90" y="620" width="1420" height="240" rx="26" fill="#0e1730" stroke="#314b97" stroke-width="2"/>
+  <text x="130" y="672" class="label">关键成功信号</text>
+  <text x="130" y="720" class="text">- setup 结束后没有明显报错</text>
+  <text x="130" y="760" class="text">- gateway 启动后持续在线</text>
+  <text x="130" y="800" class="text">- 你在飞书里发一条消息，Hermes 能回一条消息</text>
+  <text x="130" y="840" class="text">- 群聊里必须 @ 机器人，它才会回复</text>
+
+  <rect x="980" y="670" width="470" height="150" rx="22" fill="#152a56" stroke="#9bf07a" stroke-width="2"/>
+  <text x="1010" y="715" class="label">常见坑先别碰</text>
+  <text x="1010" y="756" class="small">先别同时追飞书、钉钉、企业微信、Open WebUI 全部细节</text>
+  <text x="1010" y="790" class="small">先把一个平台跑通，再扩展下一类接入</text>
+
+  <text x="90" y="930" class="sub">这个图替代英文官方文档截图：只保留中文操作顺序，不再让用户先读英文页</text>
 </svg>
