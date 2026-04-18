@@ -19,28 +19,28 @@
 
 | 页面路径 | 批次 | 主要来源 | 备注 |
 |---|---|---|---|
-| `docs/从这开始/index.md` | RM2-1 | PRD、目录映射表、页面卡、RM2_1_COPY_DRAFT | 模块总入口页 |
-| `docs/从这开始/先跑起来/总览.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 先跑起来阶段入口 |
-| `docs/从这开始/先跑起来/准备环境.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 运行环境选择与分流 |
-| `docs/从这开始/先跑起来/连接终端.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 终端与 SSH 入门 |
-| `docs/从这开始/先跑起来/安装Hermes.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 官方一键安装路径 |
-| `docs/从这开始/先跑起来/第一次回复.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
-| `docs/从这开始/开始上手/总览.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
-| `docs/从这开始/开始上手/基础使用.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | CLI 日常使用入口 |
-| `docs/从这开始/开始上手/斜杠命令与会话.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 常用命令与会话管理入口 |
-| `docs/从这开始/开始上手/精选Skills.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | Skills 精选页 |
-| `docs/从这开始/开始上手/接入消息平台.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 飞书优先的消息平台接入过渡页 |
-| `docs/国内落地/总览.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
-| `docs/国内落地/国内可用模型.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内模型选择页 |
-| `docs/国内落地/提供方与代理.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | Provider / 兼容路径选择页 |
-| `docs/国内落地/部署方式.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 部署路径选择页 |
-| `docs/国内落地/最低成本起步.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 最低成本路径页 |
-| `docs/国内落地/入口方式.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | 入口方式选择页 |
-| `docs/从OpenClaw过来/总览.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
-| `docs/从OpenClaw过来/对比.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
-| `docs/从OpenClaw过来/迁移判断.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
-| `docs/从OpenClaw过来/结合使用.md` | RM5-4 | RM5_MIGRATE_PAGE_CARDS | 结合使用页 |
-| `docs/从OpenClaw过来/迁移清单.md` | RM5-5 | RM5_MIGRATE_PAGE_CARDS | 迁移检查清单页 |
+| `docs/01-从这开始/index.md` | RM2-1 | PRD、目录映射表、页面卡、RM2_1_COPY_DRAFT | 模块总入口页 |
+| `docs/01-从这开始/先跑起来/总览.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 先跑起来阶段入口 |
+| `docs/01-从这开始/先跑起来/准备环境.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 运行环境选择与分流 |
+| `docs/01-从这开始/先跑起来/连接终端.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 终端与 SSH 入门 |
+| `docs/01-从这开始/先跑起来/安装Hermes.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 官方一键安装路径 |
+| `docs/01-从这开始/先跑起来/第一次回复.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
+| `docs/01-从这开始/开始上手/总览.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
+| `docs/01-从这开始/开始上手/基础使用.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | CLI 日常使用入口 |
+| `docs/01-从这开始/开始上手/斜杠命令与会话.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 常用命令与会话管理入口 |
+| `docs/01-从这开始/开始上手/精选Skills.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | Skills 精选页 |
+| `docs/01-从这开始/开始上手/接入消息平台.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 飞书优先的消息平台接入过渡页 |
+| `docs/03-国内落地/总览.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
+| `docs/03-国内落地/国内可用模型.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内模型选择页 |
+| `docs/03-国内落地/提供方与代理.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | Provider / 兼容路径选择页 |
+| `docs/03-国内落地/部署方式.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 部署路径选择页 |
+| `docs/03-国内落地/最低成本起步.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 最低成本路径页 |
+| `docs/03-国内落地/入口方式.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | 入口方式选择页 |
+| `docs/04-从OpenClaw过来/总览.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
+| `docs/04-从OpenClaw过来/对比.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
+| `docs/04-从OpenClaw过来/迁移判断.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
+| `docs/04-从OpenClaw过来/结合使用.md` | RM5-4 | RM5_MIGRATE_PAGE_CARDS | 结合使用页 |
+| `docs/04-从OpenClaw过来/迁移清单.md` | RM5-5 | RM5_MIGRATE_PAGE_CARDS | 迁移检查清单页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
