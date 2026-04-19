@@ -239,28 +239,11 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 ## ➡️ 下一步
 
-如果你想回到这一层入口重新确认位置：
-
+完成后进入：
 - [04-自己造东西](../总览.md)
 - [MCP / Plugins](./04-MCP与插件.md)
 - [01-从这开始](../总览.md)
+- [04-自己造东西/自动化](./06-自动化.md)
 
-当前页通过后，下一步路径是：
-[04-自己造东西/自动化](./06-自动化.md)
-
-这条路径已经在仓库里落地，直接点下一页即可。
-
----
-
-## 🔹 官方依据
-
-- 官方 API Server 文档：<https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server>
-- 官方 Integrations 文档：<https://hermes-agent.nousresearch.com/docs/integrations/>
-
-这一页只使用了当前页必须用到的用户边界：
-
-- Hermes API Server 暴露为 OpenAI-compatible HTTP API
-- 多数 OpenAI-compatible 前端都能接它
-- 最短接法包含 `API_SERVER_ENABLED`、`API_SERVER_KEY`、可选 `API_SERVER_CORS_ORIGINS`、启动 gateway、使用 `http://localhost:8642/v1`
-- 成功信号包含 listening 日志、`/health`、以及 `/v1/chat/completions` 的正常返回
-- 当前页只点到 `chat/completions`、`responses`、`models`、`health` 这些入口，不扩成端点大全
+如果你想先回到上一阶段入口重新确认位置：
+- [上一阶段入口](./01-总览.md)

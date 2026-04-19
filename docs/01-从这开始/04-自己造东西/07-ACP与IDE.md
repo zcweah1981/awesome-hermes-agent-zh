@@ -239,29 +239,10 @@ hermes acp
 
 ## ➡️ 下一步
 
-如果你想回到这一层入口重新确认位置：
-
+完成后进入：
 - [04-自己造东西](../总览.md)
 - [04-自己造东西/自动化](./06-自动化.md)
 - [01-从这开始](../总览.md)
 
-当前页通过后，可以继续看的方向只有纯文字提示，不造假链接：
-
-- 现成方案团队协作版
-- Reference
-
----
-
-## 🔹 官方依据
-
-- 官方 ACP Editor Integration：<https://hermes-agent.nousresearch.com/docs/user-guide/features/acp>
-- 官方 Integrations 总页：<https://hermes-agent.nousresearch.com/docs/integrations/>
-
-这一页只使用了当前页必须用到的用户边界：
-
-- Hermes 可以作为 ACP server 运行，让 ACP-compatible 编辑器通过 stdio 与 Hermes 通信
-- ACP 更适合编辑器里的原生编码助手体验，而不是 standalone CLI / messaging bot
-- 最短路径包括安装 ACP extra、启动 `hermes acp` 或 `python -m acp_adapter`、在编辑器里注册 Hermes
-- ACP 模式复用原有 Hermes 配置与 provider 凭据，不需要重新造身份系统
-- ACP 会把编辑器 cwd 绑定到 Hermes 任务上下文，使文件和终端工具围绕当前工作区工作
-- 用户层最常见的排错入口包括安装、启动、注册和凭据检查
+如果你想先回到上一阶段入口重新确认位置：
+- [上一阶段入口](./01-总览.md)

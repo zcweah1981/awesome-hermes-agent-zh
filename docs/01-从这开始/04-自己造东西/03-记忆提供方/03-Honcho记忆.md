@@ -206,18 +206,14 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 
 ## ➡️ 下一步
 
-如果你已经接通 Honcho，下一步通常有两种：
-
-- 回到 [外部记忆总览](./01-总览.md)，确认自己当前路线的位置
-- 继续看 [Profiles](../02-多助手.md)，把多助手拆分结构理顺
-
-如果你还在比较 Honcho 和 Holographic，回去看 [compare](./04-对比.md)。
-
----
-
-## 🔹 官方依据
-
+完成后进入：
+- [外部记忆总览](./01-总览.md)
+- [Profiles](../02-多助手.md)
+- [compare](./04-对比.md)
 - [Honcho Memory（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/honcho)
 - [Memory Providers（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/memory-providers)
 - [Honcho 本地/自托管文档](https://docs.honcho.dev/v3/contributing/self-hosting)
 - [Hermes Agent + Honcho（集成文档）](https://docs.honcho.dev/v3/guides/integrations/hermes)
+
+如果你想先回到上一阶段入口重新确认位置：
+- [上一阶段入口](./01-总览.md)
