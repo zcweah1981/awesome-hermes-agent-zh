@@ -237,21 +237,15 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 ---
 
-## 👉 下一步去哪
+## ➡️ 下一步
 
-如果你想回到这一层入口重新确认位置：
+完成后进入:
+
+- [自动化](./06-自动化.md)
+
+如果你想先回到上一阶段入口重新确认位置:
 
 - [04-自己造东西](../总览.md)
-- [MCP / Plugins](./04-MCP与插件.md)
-- [01-从这开始](../总览.md)
-
-当前页通过后，下一步路径是：
-[04-自己造东西/自动化](./06-自动化.md)
-
-这条路径已经在仓库里落地，直接点下一页即可。
-
----
-
 ## 🔹 官方依据
 
 - 官方 API Server 文档：<https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server>
