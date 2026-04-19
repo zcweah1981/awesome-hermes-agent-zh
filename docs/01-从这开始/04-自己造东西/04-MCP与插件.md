@@ -195,13 +195,7 @@ Hermes 看到这些工具后，会像平常一样在推理过程中决定是否�
 ## ➡️ 下一步
 
 完成后进入：
-- [04-自己造东西](../总览.md)
-- [上下文系统](./04-上下文系统/01-总览.md)
-- [01-从这开始](../总览.md)
-- [04-自己造东西/API服务](./05-API服务.md)
-- [MCP（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)
-- [Integrations（官方）](https://hermes-agent.nousresearch.com/docs/integrations/)
-- [Features Overview（官方）](https://hermes-agent.nousresearch.com/docs/user-guide/features/overview)
+- [04-上下文系统](04-上下文系统/01-总览.md)
 
 如果你想先回到上一阶段入口重新确认位置：
-- [上一阶段入口](./01-总览.md)
+- [04-自己造东西](01-总览.md)
