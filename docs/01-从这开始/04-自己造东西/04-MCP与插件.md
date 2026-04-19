@@ -1,4 +1,4 @@
-# 🔌 04-MCP与插件
+# 🔌 把 Hermes 接进外部系统（MCP / Plugins）
 
 这一页只讲一个判断：
 如果你现在的目标是“让 Hermes 用上一个已经存在的外部工具或系统”，MCP 通常是当前阶段更自然的第一选择；Plugins 先知道它在更大的 Integrations / Plugins 框架里存在就够了。
