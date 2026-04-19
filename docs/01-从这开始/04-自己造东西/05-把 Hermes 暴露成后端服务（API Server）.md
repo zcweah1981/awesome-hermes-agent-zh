@@ -240,7 +240,7 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 ## ➡️ 下一步
 
 完成后进入：
-- [06-自动化](06-自动化.md)
+- [让 Hermes 自己自动跑（Cron / Automation）](06-让 Hermes 自己自动跑（Cron与Automation）.md)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-自己造东西](01-总览.md)
