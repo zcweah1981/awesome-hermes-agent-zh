@@ -60,7 +60,7 @@
 - 做代码 review
 - 做调试定位
 
-## ✅ 一次成功调用长什么样
+## ✅ 成功标准
 
 ![Skills 调用成功示意图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../assets/rm2-3-skills-curated-02-skill-call-success.png)
 

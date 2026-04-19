@@ -101,7 +101,7 @@ $HERMES_HOME/SOUL.md
 
 ---
 
-## 🔹 改完怎么验证
+## ✅ 成功标准
 
 最稳的做法：
 用临时 `HERMES_HOME` 做 before / after 对照，不污染你现在的真实环境。
