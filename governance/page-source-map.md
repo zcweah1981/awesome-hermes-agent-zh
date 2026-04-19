@@ -24,7 +24,7 @@
 | `docs/01-从这开始/先跑起来/准备环境.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 运行环境选择与分流 |
 | `docs/01-从这开始/先跑起来/连接终端.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 终端与 SSH 入门 |
 | `docs/01-从这开始/先跑起来/安装Hermes.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 官方一键安装路径 |
-| `docs/01-从这开始/先跑起来/第一次回复.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
+| `docs/01-从这开始/先跑起来/配好AI大模型并完成第一次互动.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
 | `docs/01-从这开始/开始上手/总览.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
 | `docs/01-从这开始/开始上手/基础使用.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | CLI 日常使用入口 |
 | `docs/01-从这开始/开始上手/斜杠命令与会话.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 常用命令与会话管理入口 |
