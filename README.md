@@ -10,7 +10,7 @@
 
 </div>
 
-![Hermes Agent 中文站 Hero](./docs/01-从这开始/assets/hermes-home-hero.png)
+![Hermes Agent 中文站 Hero](./docs/01-从这开始/assets/hermes-home-hero-landscape.png)
 
 ## 这是什么
 
