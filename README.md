@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 # 🌌 Hermes Agent 中文站
+=======
+<p align="center">
+  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent" width="100%">
+</p>
+>>>>>>> 6137837c (feat: refresh README hero and image routing)
 
 <div align="center">
 
@@ -10,7 +16,7 @@
 
 </div>
 
-![Hermes Agent 中文站 Hero](./docs/01-从这开始/assets/hermes-home-hero-docs.svg)
+![Hermes Agent 中文站 Hero：主标题与副标题版](assets/readme-hero-v1.jpg)
 
 ## 这是什么
 
