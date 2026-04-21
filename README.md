@@ -1,9 +1,5 @@
 # 🌌 Hermes Agent 中文站
 
-<p align="center">
-  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent 中文站" width="100%">
-</p>
-
 <div align="center">
 
 **一套面向中文用户的 AI Agent 全流程实战指南**
@@ -13,6 +9,10 @@
 [🚀 从这开始](./docs/01-从这开始/总览.md) · [🇨🇳 国内落地](./docs/03-国内落地/01-总览.md) · [🔄 从 OpenClaw 过来](./docs/04-从OpenClaw过来/01-总览.md) · [📚 文档总览](./docs/00-文档总览.md) · [🧭 治理说明](./governance/README.md)
 
 </div>
+
+<p align="center">
+  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent 中文站" width="100%">
+</p>
 
 ![Hermes Agent 中文站 Hero](./docs/assets/hermes-home-hero-docs.svg)
 ## 这是什么
