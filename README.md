@@ -14,6 +14,7 @@
 
 </div>
 
+![Hermes Agent 中文站 Hero](./docs/assets/hermes-home-hero-docs.svg)
 ## 这是什么
 
 Hermes Agent 中文站，是一套面向中文用户的 AI Agent 全流程实战指南。

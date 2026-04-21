@@ -4,7 +4,7 @@
 
 ## 🧭 先按 4 个日常场景来认识
 
-![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../assets/rm2-3-skills-curated-01-skill-scenario-map.png)
+![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../../assets/rm2-3-skills-curated-01-skill-scenario-map.png)
 
 ### 🔹 文档与知识库
 
@@ -62,7 +62,7 @@
 
 ## ✅ 成功标准
 
-![Skills 调用成功示意图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../assets/rm2-3-skills-curated-02-skill-call-success.png)
+![Skills 调用成功示意图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../../assets/rm2-3-skills-curated-02-skill-call-success.png)
 
 第一次开始用 Skills，最稳的做法是：
 

@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你已经理解内建记忆的边界、又想先接通第一条最容易落地的外部记忆路线时，怎样用最短路径把 Holographic 跑起来。
 
-![Holographic 接入结构图：内建 USER.md 与 MEMORY.md 作为底座始终保留；Holographic 建立在其上，作为第一条外部记忆路线先接通](../../assets/rm2-5-memory-providers-02-holographic-first-route.png)
+![Holographic 接入结构图：内建 USER.md 与 MEMORY.md 作为底座始终保留；Holographic 建立在其上，作为第一条外部记忆路线先接通](../../../assets/rm2-5-memory-providers-02-holographic-first-route.png)
 
 ---
 
@@ -144,7 +144,7 @@ hermes memory status
 
 这张是真实状态截图，验收时看它：
 
-![Holographic 真实状态截图：memory provider 已切到 holographic，hermes config set 写入成功，hermes memory status 显示 Provider=Holographic 且 holographic 为 active](../../assets/rm2-5-memory-providers-02-holographic-status-proof.png)
+![Holographic 真实状态截图：memory provider 已切到 holographic，hermes config set 写入成功，hermes memory status 显示 Provider=Holographic 且 holographic 为 active](../../../assets/rm2-5-memory-providers-02-holographic-status-proof.png)
 
 ### ✅ 成功信号 2：配置层面已经写对位置
 

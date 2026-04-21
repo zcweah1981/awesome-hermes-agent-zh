@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把一个已经会用的 Hermes，调成更符合你长期习惯的样子。先从 `SOUL.md` 开始。
 
-![SOUL.md、/personality、AGENTS.md 分层结构图：SOUL.md 管长期默认人格，/personality 是会话内临时覆盖，AGENTS.md 管项目与仓库规则](../assets/rm2-4-soul-01-soul-structure-map.png)
+![SOUL.md、/personality、AGENTS.md 分层结构图：SOUL.md 管长期默认人格，/personality 是会话内临时覆盖，AGENTS.md 管项目与仓库规则](../../assets/rm2-4-soul-01-soul-structure-map.png)
 
 ---
 
@@ -127,7 +127,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 下面这张图就是实际运行的并排终端双窗截图：同一条 query，唯一变量是右侧多了一份 `SOUL.md`。
 
-![并排真实终端截图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧只多一份 SOUL.md 后，Hermes 默认开始使用“先给结论、短句、列表”这一组长期风格](../assets/rm2-4-soul-02-soul-behavior-diff.png)
+![并排真实终端截图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧只多一份 SOUL.md 后，Hermes 默认开始使用“先给结论、短句、列表”这一组长期风格](../../assets/rm2-4-soul-02-soul-behavior-diff.png)
 
 ---
 

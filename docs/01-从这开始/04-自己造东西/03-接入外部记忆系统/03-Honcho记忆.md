@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把 Honcho 按“能启动、能接入、能验证”的顺序跑起来，先把外部记忆真正接通，再谈多 profile 协作。
 
-![Honcho 结构示意图：内建 USER.md / MEMORY.md 始终保留，Honcho 作为外部记忆层叠加在上方，适合多 profile 与共享 workspace](../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.png)
+![Honcho 结构示意图：内建 USER.md / MEMORY.md 始终保留，Honcho 作为外部记忆层叠加在上方，适合多 profile 与共享 workspace](../../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.png)
 
 ---
 
@@ -168,7 +168,7 @@ hermes honcho peer
 
 这张是真实状态截图，验收时就看它：
 
-![Honcho 真实状态截图：memory provider 已切到 honcho，hermes memory status 显示 installed 和 available，hermes honcho status 显示 Connection... OK，并能看到 workspace、peer 和 config path](../../assets/rm2-5-memory-providers-03-honcho-status-proof.png)
+![Honcho 真实状态截图：memory provider 已切到 honcho，hermes memory status 显示 installed 和 available，hermes honcho status 显示 Connection... OK，并能看到 workspace、peer 和 config path](../../../assets/rm2-5-memory-providers-03-honcho-status-proof.png)
 
 ---
 

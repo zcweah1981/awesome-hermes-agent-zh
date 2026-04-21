@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把“跨会话长期有用的信息”放进对的位置，让 Hermes 在下一次新会话里更像是真的记住了你。
 
-![持久记忆双层结构图：USER.md 记录用户画像与协作偏好，MEMORY.md 记录环境、项目与经验事实；session_search 是另一条独立机制](../assets/rm2-4-memory-01-memory-layer-map.png)
+![持久记忆双层结构图：USER.md 记录用户画像与协作偏好，MEMORY.md 记录环境、项目与经验事实；session_search 是另一条独立机制](../../assets/rm2-4-memory-01-memory-layer-map.png)
 
 ---
 
@@ -288,7 +288,7 @@ HERMES_HOME="$HERMES_HOME" hermes chat -Q -q "请只用两行回答：1）你记
 
 下面这张图就是按这个思路实际跑出来的真实终端证据：临时创建两份记忆文件，再开一个新会话查询；输出里能直接看到偏好、环境事实和 `session_id`。
 
-![真实终端截图：在临时 HERMES_HOME 中创建 memories/USER.md 与 memories/MEMORY.md，再启动一个新会话 query；输出成功读到用户偏好与环境事实，并显示 session_id](../assets/rm2-4-memory-02-memory-read-write-success.png)
+![真实终端截图：在临时 HERMES_HOME 中创建 memories/USER.md 与 memories/MEMORY.md，再启动一个新会话 query；输出成功读到用户偏好与环境事实，并显示 session_id](../../assets/rm2-4-memory-02-memory-read-write-success.png)
 
 ---
 

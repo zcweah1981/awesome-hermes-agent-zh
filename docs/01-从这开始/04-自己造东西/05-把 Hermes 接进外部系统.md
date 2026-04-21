@@ -3,7 +3,7 @@
 这一页只讲一个判断：
 如果你现在的目标是“让 Hermes 用上一个已经存在的外部工具或系统”，MCP 通常是当前阶段更自然的第一选择；Plugins 先知道它在更大的 Integrations / Plugins 框架里存在就够了。
 
-![结构图：当前阶段更自然的外部系统接入主线是 Hermes → MCP server → 外部工具系统；Plugins 在后位补充，不是这一页的主线](../assets/rm2-5-mcp-and-plugins-01-main-route.png)
+![结构图：当前阶段更自然的外部系统接入主线是 Hermes → MCP server → 外部工具系统；Plugins 在后位补充，不是这一页的主线](../../assets/rm2-5-mcp-and-plugins-01-main-route.png)
 
 ---
 

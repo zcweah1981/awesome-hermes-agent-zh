@@ -12,7 +12,7 @@
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
-![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../assets/rm2-2-install-hermes-01-install-command-running.png)
+![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../../assets/rm2-2-install-hermes-01-install-command-running.png)
 
 执行后，你应该能看到安装器启动、依赖检查、语言运行时准备或下载相关信息。
 
@@ -56,7 +56,7 @@ hermes version
 hermes doctor
 ```
 
-![Hermes 安装成功截图：已经可以执行 hermes version 和 hermes doctor，并看到正常输出](../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)
+![Hermes 安装成功截图：已经可以执行 hermes version 和 hermes doctor，并看到正常输出](../../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)
 
 如果两条命令都能正常返回结果，就说明安装已经真正完成，而且当前环境可以继续下一页。
 

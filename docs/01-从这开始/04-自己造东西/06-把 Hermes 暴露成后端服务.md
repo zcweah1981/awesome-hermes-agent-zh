@@ -3,7 +3,7 @@
 这一页只解决一个问题：
 当你不想再只把 Hermes 用在 CLI 或单个聊天窗口里，而是想让它被前端、客户端或你自己的应用通过 HTTP 调用时，API Server 就是这一层入口。
 
-![结构图：Open WebUI、LobeChat、LibreChat 等前端，把 OpenAI-compatible /v1 请求打到 Hermes API Server；Hermes 再用自己的工具、文件、网页、记忆、skills 等能力完成任务](../assets/rm2-5-api-server-01-openai-compatible-backend-map.png)
+![结构图：Open WebUI、LobeChat、LibreChat 等前端，把 OpenAI-compatible /v1 请求打到 Hermes API Server；Hermes 再用自己的工具、文件、网页、记忆、skills 等能力完成任务](../../assets/rm2-5-api-server-01-openai-compatible-backend-map.png)
 
 ---
 
