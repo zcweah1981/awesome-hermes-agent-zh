@@ -10,7 +10,7 @@
 
 </div>
 
-![Hermes Agent 中文站学习路径图](./docs/01-从这开始/assets/rm2-readme-hero-green.svg)
+![Hermes Agent 中文站 Hero](./docs/01-从这开始/assets/hermes-home-hero.png)
 
 ## 这是什么
 
