@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 # 🌌 Hermes Agent 中文站
-=======
+
 <p align="center">
-  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent" width="100%">
+  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent 中文站" width="100%">
 </p>
->>>>>>> 6137837c (feat: refresh README hero and image routing)
 
 <div align="center">
 
@@ -15,8 +13,6 @@
 [🚀 从这开始](./docs/01-从这开始/总览.md) · [🇨🇳 国内落地](./docs/03-国内落地/01-总览.md) · [🔄 从 OpenClaw 过来](./docs/04-从OpenClaw过来/01-总览.md) · [📚 文档总览](./docs/00-文档总览.md) · [🧭 治理说明](./governance/README.md)
 
 </div>
-
-![Hermes Agent 中文站 Hero：主标题与副标题版](assets/readme-hero-v1.jpg)
 
 ## 这是什么
 
