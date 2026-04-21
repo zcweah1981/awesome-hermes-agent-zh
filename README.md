@@ -10,7 +10,10 @@
 
 </div>
 
-![Hermes Agent 中文站 Hero](./docs/assets/hermes-home-hero-docs.svg)
+<p align="center">
+  <img src="assets/readme-hero-v1.jpg" alt="Hermes Agent 中文站" width="100%">
+</p>
+
 ## 这是什么
 
 Hermes Agent 中文站，是一套面向中文用户的 AI Agent 全流程实战指南。
