@@ -4,7 +4,7 @@
 
 ## 🚀 最短接入图
 
-![Token Plan 到 Hermes 的最短接入路径示意图](./assets/aliyun-bailian-tokenplan-flow.png)
+![Token Plan 到 Hermes 的最短接入路径示意图（cliproxy 生成）](./assets/aliyun-bailian-tokenplan-cliproxy-v3-16x9.png)
 
 先看图，再看下面的细节，你会更快抓住这页的主线。
 
