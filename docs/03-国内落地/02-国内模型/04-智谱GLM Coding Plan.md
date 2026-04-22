@@ -52,10 +52,10 @@
 
 ## 🤝 Hermes 怎么接
 
-官方文档虽然是以 Claude Code 为例，但对 Hermes 来说，接法其实很直接：把 Hermes 的 Claude Code 兼容层指到智谱的 Coding API。
+官方文档给的是通用兼容示例，但对 Hermes 来说，接法可以直接按这套思路落地：把 Hermes 的兼容层指到智谱的 Coding API。
 
 - 入口先认准专属 Coding API：`https://open.bigmodel.cn/api/coding/paas/v4`
-- 如果是 Claude Code / Hermes 兼容路径，核心是这组环境变量：
+- Hermes 兼容路径里，核心就是这组环境变量：
   - `ANTHROPIC_AUTH_TOKEN`：填你的 API Key
   - `ANTHROPIC_BASE_URL`：`https://open.bigmodel.cn/api/anthropic`
   - `ANTHROPIC_DEFAULT_OPUS_MODEL`：`glm-5.1`
@@ -85,31 +85,35 @@
 - 创建新的 API Key
 - 复制后妥善保存到本地配置或环境变量
 
-### 3）选择编码工具
+### 3）选择接入工具
 
-- 先从官方支持的工具里选一个
-- 推荐先用 Claude Code 这类最常见的入口验证
+- 这页的主线不是 Claude Code，而是看工具本身是否支持 OpenAI 协议
+- 官方页面的示例是 Cursor，但同样适用于其他支持 OpenAI 协议的工具
+- 如果 Hermes 侧提供 OpenAI-compatible Provider / Base URL 配置，也可以照着同一套思路接
 
-### 4）配置 Claude Code
+### 4）配置 OpenAI 协议
 
-官方文档给出的关键配置是：
+官方文档的关键动作很清楚：
+
+- 选择 OpenAI 协议
+- API Key 填智谱开放平台的 Key
+- 将 OpenAI Base URL 覆盖为：`https://open.bigmodel.cn/api/coding/paas/v4`
+- 输入 GLM 模型，例如：`GLM-5.1`、`GLM-4.7`、`GLM-4.5-air`
+- 注意模型名要用大写写法，不要写小写
+
+如果你要把这套配置抽成一眼能看懂的写法，可以理解成：
 
 ```json
 {
-  "env": {
-    "ANTHROPIC_AUTH_TOKEN": "your_zhipu_api_key",
-    "ANTHROPIC_BASE_URL": "https://open.bigmodel.cn/api/anthropic",
-    "API_TIMEOUT_MS": "3000000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": 1,
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-5.1",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.5-air"
-  }
+  "provider": "OpenAI-compatible",
+  "api_key": "your_zhipu_api_key",
+  "base_url": "https://open.bigmodel.cn/api/coding/paas/v4",
+  "model": "GLM-5.1"
 }
 ```
 
-- `your_zhipu_api_key` 换成你自己的 Key
-- 这套配置写进 `~/.claude/settings.json` 或对应工具配置文件
+- 这不是 Claude Code 专属写法，而是工具侧 OpenAI 协议接法的通用表达
+- 对 Hermes 来说，关键是它有没有对应的 OpenAI-compatible 配置入口
 
 ### 5）验证是否接通
 
