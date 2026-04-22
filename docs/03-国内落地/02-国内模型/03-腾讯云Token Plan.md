@@ -86,9 +86,9 @@
 
 ## 🔑 API Key 怎么拿
 
-如果你要先把最关键的接入步骤跑通，先看这张官方说明截图：
+如果你要先把最关键的接入步骤跑通，先看这张深色技术风示意图：
 
-![腾讯云 Token Plan 获取 API Key 的官方说明截图](./assets/tencent-tokenplan-api-key-section-v4.png)
+![腾讯云 Token Plan 获取 API Key 的深色技术风示意图](./assets/tencent-tokenplan-api-key-section-v5.png)
 
 这张图里重点看两件事：
 
