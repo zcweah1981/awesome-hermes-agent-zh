@@ -91,18 +91,18 @@
 - 这页的主线不是 Claude Code，而是看工具本身是否支持 OpenAI 协议
 - 官方页面的示例是 Cursor，但同样适用于其他支持 OpenAI 协议的工具
 - 如果 Hermes 侧提供 OpenAI-compatible Provider / Base URL 配置，也可以照着同一套思路接
+- 下面这段给的是官方工具页的详细接入方法和截图，适合直接照着操作
 
-### 4）配置 OpenAI 协议
+### 4）详细配置方法
 
-官方文档的关键动作很清楚：
+官方文档里的关键动作可以拆成 4 步：
 
-- 选择 OpenAI 协议
-- API Key 填智谱开放平台的 Key
-- 将 OpenAI Base URL 覆盖为：`https://open.bigmodel.cn/api/coding/paas/v4`
-- 输入 GLM 模型，例如：`GLM-5.1`、`GLM-4.7`、`GLM-4.5-air`
-- 注意模型名要用大写写法，不要写小写
+1. 选择 OpenAI 协议
+2. 填智谱开放平台的 API Key
+3. 把 OpenAI Base URL 改成 `https://open.bigmodel.cn/api/coding/paas/v4`
+4. 输入 GLM 模型名，推荐从 `GLM-4.7` 或 `GLM-5.1` 开始
 
-如果你要把这套配置抽成一眼能看懂的写法，可以理解成：
+可以把它理解成下面这种最小配置：
 
 ```json
 {
@@ -114,13 +114,26 @@
 ```
 
 - 这不是 Claude Code 专属写法，而是工具侧 OpenAI 协议接法的通用表达
-- 对 Hermes 来说，关键是它有没有对应的 OpenAI-compatible 配置入口
+- 如果你用的工具支持自定义 Provider/Model，就按这个思路填
+- 模型名记得用大写，不要写成小写
 
-### 5）验证是否接通
+### 5）官方截图：配置方法长什么样
+
+下面这张图就是智谱官方“接入工具”页面的截图。它展示了完整的工具接入路径：
+
+- 上方是官方接入页的上下文
+- 中间是“二、配置方法”
+- 下面能看到 Cursor 的配置步骤
+- 右侧/页面内说明里能确认这是官方工具接入页，而不是 Claude Code 配置页
+
+![智谱官方接入工具页截图：配置方法与 Cursor 示例](./assets/glm-coding-official-tool-guide.png)
+
+### 6）验证是否接通
 
 - 能正常进入工具会话
 - 能顺利调用 GLM 模型
-- 日常任务可以从 GLM-4.7 开始，复杂任务再切到更高阶模型
+- 日常任务可以先从 GLM-4.7 开始
+- 复杂任务再切到 GLM-5.1 或 GLM-5-Turbo
 
 ## ⚠️ 什么时候先别选它
 
