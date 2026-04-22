@@ -50,6 +50,20 @@
 - 接通后能不能稳定切换模型
 - 你的日常工作流会不会被打散
 
+## 🤝 Hermes 怎么接
+
+官方文档虽然是以 Claude Code 为例，但对 Hermes 来说，接法其实很直接：把 Hermes 的 Claude Code 兼容层指到智谱的 Coding API。
+
+- 入口先认准专属 Coding API：`https://open.bigmodel.cn/api/coding/paas/v4`
+- 如果是 Claude Code / Hermes 兼容路径，核心是这组环境变量：
+  - `ANTHROPIC_AUTH_TOKEN`：填你的 API Key
+  - `ANTHROPIC_BASE_URL`：`https://open.bigmodel.cn/api/anthropic`
+  - `ANTHROPIC_DEFAULT_OPUS_MODEL`：`glm-5.1`
+  - `ANTHROPIC_DEFAULT_SONNET_MODEL`：`glm-4.7`
+  - `ANTHROPIC_DEFAULT_HAIKU_MODEL`：`glm-4.5-air`
+
+- 先跑通最小闭环，再细化模型和工具
+
 ## 🔑 接入时最需要记住的点
 
 - 这是单厂商 Coding Plan，不是聚合订阅
