@@ -35,7 +35,7 @@
 | `docs/03-国内落地/01-国内部署.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内部署分流页 |
 | `docs/03-国内落地/阿里云轻量服务器部署教程.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | 阿里云部署教程 |
 | `docs/03-国内落地/腾讯云轻量服务器部署教程.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 腾讯云部署教程 |
-| `docs/03-国内落地/中国模型总览.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 国内模型总览页 |
+| `docs/03-国内落地/02-国内模型/01-总览.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 国内模型总览页 |
 | `docs/03-国内落地/07-千问与 DashScope 接口（第二批）.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | DashScope 原生接口页 |
 | `docs/03-国内落地/八、自定义兼容接口（第二批）.md` | RM4-7 | RM4_CHINA_PAGE_CARDS | 自定义兼容接口页 |
 | `docs/04-从OpenClaw过来/总览.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
