@@ -36,8 +36,13 @@
 | `docs/03-国内落地/阿里云轻量服务器部署教程.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | 阿里云部署教程 |
 | `docs/03-国内落地/腾讯云轻量服务器部署教程.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 腾讯云部署教程 |
 | `docs/03-国内落地/02-国内模型/01-总览.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 国内模型总览页 |
-| `docs/03-国内落地/07-千问与 DashScope 接口（第二批）.md` | RM4-6 | RM4_CHINA_PAGE_CARDS | DashScope 原生接口页 |
-| `docs/03-国内落地/八、自定义兼容接口（第二批）.md` | RM4-7 | RM4_CHINA_PAGE_CARDS | 自定义兼容接口页 |
+|| `docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 阿里云百炼 Token Plan |
+|| `docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 腾讯云 Token Plan |
+|| `docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 智谱 GLM Coding Plan |
+|| `docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | MiniMax Token Plan |
+|| `docs/03-国内落地/02-国内模型/06-Kimi登月计划.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | Kimi 登月计划 |
+|| `docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | DeepSeek 按量计费接口 |
+|| `docs/03-国内落地/02-国内模型/08-自定义兼容接口.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 自定义兼容接口 |
 | `docs/04-从OpenClaw过来/总览.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
 | `docs/04-从OpenClaw过来/对比.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
 | `docs/04-从OpenClaw过来/迁移判断.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
