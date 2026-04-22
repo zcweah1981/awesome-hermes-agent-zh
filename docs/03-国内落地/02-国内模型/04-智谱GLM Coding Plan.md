@@ -86,11 +86,7 @@
 - 创建新的 API Key
 - 复制后妥善保存到本地配置或环境变量
 
-### 3）先判断你接的是 Hermes，还是别的工具
-
-这里要先分两类，不要混着配：
-
-#### A. 你接的是 Hermes
+### 3）Hermes 里的正确接法
 
 Hermes 官方文档已经把 GLM 作为内建 provider 支持了，直连方式是：
 
@@ -99,19 +95,19 @@ Hermes 官方文档已经把 GLM 作为内建 provider 支持了，直连方式�
 3. 在 provider 列表里选择 `Z.AI / GLM`
 4. 再选择你要用的模型
 
-这条路是 Hermes 官方主线：
+这条路就是这页要介绍的主线：
 
-- 不需要你手动填 OpenAI Base URL
-- 不需要把 GLM 伪装成 generic OpenAI-compatible provider
+- 不需要手动填写 OpenAI Base URL
+- 不需要把 GLM 当成 custom provider 来手填
 - provider 名按 Hermes 官方文档写法是 `zai`
 
 最小理解可以写成：
 
 ```bash
-GLM_API_KEY=your_z..._key
+GLM_API_KEY=***
 ```
 
-然后在 Hermes 里：
+然后在 Hermes 里执行：
 
 ```bash
 hermes model
@@ -119,69 +115,31 @@ hermes model
 # 再选择目标模型
 ```
 
-这里不需要把智谱当成 custom provider 来手填。
-
 你真正要看的，是实际运行 `hermes model` 时的设置界面。看到 `Z.AI / GLM` 高亮后，直接确认即可：
 
 ![Hermes model 设置截图：在 Select provider 中直接选择 Z.AI / GLM](./assets/glm-hermes-model-menu-docs.png)
 
-#### B. 你接的是 Cursor / 其他支持 OpenAI-compatible 的工具
-
-这时才按智谱官方工具接入文档走 OpenAI 协议配置：
-
-1. 选择 OpenAI 协议
-2. 填智谱开放平台的 API Key
-3. 把 OpenAI Base URL 改成 `https://open.bigmodel.cn/api/coding/paas/v4`
-4. 输入 GLM 模型名，推荐从 `GLM-4.7` 或 `GLM-5.1` 开始
-
 ### 4）详细配置方法
 
-如果你用的是 Hermes，推荐直接按官方 provider 路线接：
+先在 `~/.hermes/.env` 中加入你的智谱 API Key：
 
 ```bash
-# ~/.hermes/.env
-GLM_API_KEY=your_zhipu_api_key
+GLM_API_KEY=your_z..._key
 ```
+
+然后运行：
 
 ```bash
 hermes model
 ```
 
-进入菜单后：
+进入菜单后按这三个动作完成：
 
 1. 选择 `Z.AI / GLM`
 2. 选择模型
 3. 保存为默认 provider / model
 
-如果你用的不是 Hermes，而是 Cursor、TRAE、CodeBuddy 这类支持 OpenAI-compatible 的工具，再按智谱官方工具文档填写：
-
-```json
-{
-  "provider": "OpenAI-compatible",
-  "api_key": "your_z..._key",
-  "base_url": "https://open.bigmodel.cn/api/coding/paas/v4",
-  "model": "GLM-5.1"
-}
-```
-
-你可以把这段理解成一条简单规则：
-
-- Hermes：优先走官方内建 GLM provider
-- 其他支持 OpenAI-compatible 的工具：再填 `base_url`
-- 不要把 Cursor 那套配置，直接照搬成 Hermes 默认接法
-
-### 5）官方截图：配置方法长什么样
-
-下面这张图就是智谱官方“接入工具”页面的截图。它展示了完整的工具接入路径：
-
-- 上方是官方接入页的上下文
-- 中间是“二、配置方法”
-- 下面能看到 Cursor 的配置步骤
-- 右侧/页面内说明里能确认这是官方工具接入页，而不是 Claude Code 配置页
-
-![智谱官方接入工具页截图：配置方法与 Cursor 示例](./assets/glm-coding-official-tool-guide.png)
-
-### 6）验证是否接通
+### 5）验证是否接通
 
 - 能正常进入工具会话
 - 能顺利调用 GLM 模型
