@@ -52,17 +52,18 @@
 
 ## 🤝 Hermes 怎么接
 
-官方文档给的是通用兼容示例，但对 Hermes 来说，接法可以直接按这套思路落地：把 Hermes 的兼容层指到智谱的 Coding API。
+这里要分清两条路：
 
-- 入口先认准专属 Coding API：`https://open.bigmodel.cn/api/coding/paas/v4`
-- Hermes 兼容路径里，核心就是这组环境变量：
-  - `ANTHROPIC_AUTH_TOKEN`：填你的 API Key
-  - `ANTHROPIC_BASE_URL`：`https://open.bigmodel.cn/api/anthropic`
-  - `ANTHROPIC_DEFAULT_OPUS_MODEL`：`glm-5.1`
-  - `ANTHROPIC_DEFAULT_SONNET_MODEL`：`glm-4.7`
-  - `ANTHROPIC_DEFAULT_HAIKU_MODEL`：`glm-4.5-air`
+1. Hermes 官方直连 GLM provider
+   - 先用 `hermes model` 选择 Hermes 已内建支持的 provider / model
+   - 如果是 GLM / Kimi / MiniMax / DashScope 这类已支持 provider，就把对应 API key 放进 `~/.hermes/.env`
+   - 这条路不需要你手动配 `base_url`
 
-- 先跑通最小闭环，再细化模型和工具
+2. 只有在你要接 OpenAI-compatible 自建网关时，才走 `custom endpoint` / `base_url`
+   - 那时才需要指向真正的 OpenAI-compatible 接口
+   - 这不是 Hermes 直连 GLM 的默认路径
+
+所以，如果你的目标只是“让 Hermes 直接用 GLM”，优先看 Hermes 官方 provider 路线；不要先套 Claude Code 那组配置。
 
 ## 🔑 接入时最需要记住的点
 
