@@ -4,7 +4,7 @@
 
 ## 🚀 接入主线图
 
-![腾讯云 Token Plan 深色接入主线图](./assets/tencent-tokenplan-hero-gemini-31-v2.png)
+![腾讯云 Token Plan 深色接入主线图](./assets/tencent-tokenplan-hero-gemini-31-v4.png)
 
 先看图，先抓住套餐、密钥、工具这三个锚点，再看下面的细节。
 
