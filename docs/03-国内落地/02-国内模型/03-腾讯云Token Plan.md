@@ -78,11 +78,11 @@
 
 ## 🔑 API Key 怎么拿
 
-如果你要先把最关键的接入步骤跑通，先看这张 API Key 说明图：
+如果你要先把最关键的接入步骤跑通，先看这张官方页面真实截图：
 
-![腾讯云 Token Plan 获取 API Key 的深色技术风示意图](./assets/tencent-tokenplan-api-key-section-v5.png)
+![腾讯云 Token Plan 获取 API Key 的官方页面真实截图](./assets/tencent-tokenplan-api-key-real-screenshot.png)
 
-这张图里重点看两件事：
+这张截图里重点看两件事：
 
 - 在 TokenHub > Token Plan 页面点击“生成密钥”
 - 密钥生成成功后点击“复制”，拿到套餐专属 API Key（格式类似 `sk-tp-xxx`）
