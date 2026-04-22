@@ -86,36 +86,89 @@
 - 创建新的 API Key
 - 复制后妥善保存到本地配置或环境变量
 
-### 3）选择接入工具
+### 3）先判断你接的是 Hermes，还是别的工具
 
-- 这页的主线不是 Claude Code，而是看工具本身是否支持 OpenAI 协议
-- 官方页面的示例是 Cursor，但同样适用于其他支持 OpenAI 协议的工具
-- 如果 Hermes 侧提供 OpenAI-compatible Provider / Base URL 配置，也可以照着同一套思路接
-- 下面这段给的是官方工具页的详细接入方法和截图，适合直接照着操作
+这里要先分两类，不要混着配：
 
-### 4）详细配置方法
+#### A. 你接的是 Hermes
 
-官方文档里的关键动作可以拆成 4 步：
+Hermes 官方文档已经把 GLM 作为内建 provider 支持了，直连方式是：
+
+1. 在 `~/.hermes/.env` 里放入 `GLM_API_KEY`
+2. 运行 `hermes model`
+3. 在 provider 列表里选择 `Z.AI / GLM`
+4. 再选择你要用的模型
+
+这条路是 Hermes 官方主线：
+
+- 不需要你手动填 OpenAI Base URL
+- 不需要把 GLM 伪装成 generic OpenAI-compatible provider
+- provider 名按 Hermes 官方文档写法是 `zai`
+
+最小理解可以写成：
+
+```bash
+GLM_API_KEY=your_z..._key
+```
+
+然后在 Hermes 里：
+
+```bash
+hermes model
+# 选择 Z.AI / GLM
+# 再选择目标模型
+```
+
+这里不需要把智谱当成 custom provider 来手填。
+
+你真正要看的，是实际运行 `hermes model` 时的设置界面。看到 `Z.AI / GLM` 高亮后，直接确认即可：
+
+![Hermes model 设置截图：在 Select provider 中直接选择 Z.AI / GLM](./assets/glm-hermes-model-menu-docs.png)
+
+#### B. 你接的是 Cursor / 其他支持 OpenAI-compatible 的工具
+
+这时才按智谱官方工具接入文档走 OpenAI 协议配置：
 
 1. 选择 OpenAI 协议
 2. 填智谱开放平台的 API Key
 3. 把 OpenAI Base URL 改成 `https://open.bigmodel.cn/api/coding/paas/v4`
 4. 输入 GLM 模型名，推荐从 `GLM-4.7` 或 `GLM-5.1` 开始
 
-可以把它理解成下面这种最小配置：
+### 4）详细配置方法
+
+如果你用的是 Hermes，推荐直接按官方 provider 路线接：
+
+```bash
+# ~/.hermes/.env
+GLM_API_KEY=your_zhipu_api_key
+```
+
+```bash
+hermes model
+```
+
+进入菜单后：
+
+1. 选择 `Z.AI / GLM`
+2. 选择模型
+3. 保存为默认 provider / model
+
+如果你用的不是 Hermes，而是 Cursor、TRAE、CodeBuddy 这类支持 OpenAI-compatible 的工具，再按智谱官方工具文档填写：
 
 ```json
 {
   "provider": "OpenAI-compatible",
-  "api_key": "your_zhipu_api_key",
+  "api_key": "your_z..._key",
   "base_url": "https://open.bigmodel.cn/api/coding/paas/v4",
   "model": "GLM-5.1"
 }
 ```
 
-- 这不是 Claude Code 专属写法，而是工具侧 OpenAI 协议接法的通用表达
-- 如果你用的工具支持自定义 Provider/Model，就按这个思路填
-- 模型名记得用大写，不要写成小写
+你可以把这段理解成一条简单规则：
+
+- Hermes：优先走官方内建 GLM provider
+- 其他支持 OpenAI-compatible 的工具：再填 `base_url`
+- 不要把 Cursor 那套配置，直接照搬成 Hermes 默认接法
 
 ### 5）官方截图：配置方法长什么样
 
@@ -155,6 +208,8 @@
 
 ## 📎 官方依据
 
+- https://hermes-agent.nousresearch.com/docs/integrations/providers
+- https://hermes-agent.nousresearch.com/docs/reference/cli-commands
 - https://docs.bigmodel.cn/cn/coding-plan/overview
 - https://docs.bigmodel.cn/cn/coding-plan/quick-start
 - https://docs.bigmodel.cn/cn/coding-plan/faq
