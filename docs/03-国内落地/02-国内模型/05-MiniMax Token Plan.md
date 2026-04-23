@@ -4,6 +4,10 @@
 
 这一页保留 MiniMax 官方 Hermes Agent 接入主线，但结构上参考了前面几页更好读的写法：先讲适合谁、价格怎么选、它到底强在哪，再讲 Hermes 怎么接。
 
+## 🚀 主线图
+
+![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-mainline-cliproxy-v5.png)
+
 ## ✨ 这条路适合谁
 
 - 你想先买一份订阅，把 MiniMax 的多模态能力一起拿下
