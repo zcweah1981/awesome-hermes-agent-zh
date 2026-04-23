@@ -6,7 +6,7 @@
 
 ## 🚀 接入主线图
 
-![Kimi 登月计划与双层路线结构图](./assets/kimi-moonshot-hero-v1.png)
+![Kimi登月计划核心与四模块结构图](./assets/kimi-moonshot-modules-cliproxy-v2.png)
 
 先看图，Kimi 这条线最关键的不是先背命令，而是先认清两层边界：
 
