@@ -6,7 +6,7 @@
 
 ## 🚀 接入主线图
 
-![DeepSeek API 路线结构图](./assets/deepseek-api-hero-v1.png)
+![DeepSeek按量计费接口核心与四模块结构图](./assets/deepseek-modules-cliproxy-v2.png)
 
 先看图，按量接口路线的优势不在于“权益最复杂”，而在于“路径最干净”：
 
