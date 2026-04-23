@@ -6,7 +6,7 @@
 
 ## 🚀 主线图
 
-![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-mainline-cliproxy-v5.png)
+![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.png)
 
 ## ✨ 这条路适合谁
 
