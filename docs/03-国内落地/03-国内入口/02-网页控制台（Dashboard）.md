@@ -76,7 +76,7 @@ Dashboard 不负责：
 - 它不是 API Server
 - 它不是替代 CLI 的万能入口
 
-如果你真正想要的是“网页聊天界面”，下一页该看的是 [03-API 服务与 Open WebUI](./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md)，而不是把 Dashboard 当聊天壳子。
+如果你真正想要的是“网页聊天界面”，下一页该看的是 [03-API 服务与 Open WebUI](./03-API 服务与 Open WebUI.md)，而不是把 Dashboard 当聊天壳子。
 
 ## 🧭 最短决策
 
@@ -290,8 +290,8 @@ Hermes 官方文档明确提醒：
 
 ## ➡️ 下一步
 
-- 前进到 [03-API 服务与 Open WebUI](./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md)
-- 回 [01-总览](./01-%E6%80%BB%E8%A7%88.md)
+- 前进到 [03-API 服务与 Open WebUI](./03-API 服务与 Open WebUI.md)
+- 回 [01-总览](./01-总览.md)
 
 
 ## 📎 官方依据
