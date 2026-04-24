@@ -6,7 +6,7 @@
 
 ## 🧭 先判断你属于哪类问题
 
-![OpenClaw 用户常见问题分类图：先把问题分到认知、迁移判断、模型与入口、技能、记忆、成本、输出质量或回退路径，再决定回哪一页处理。](./assets/openclaw-faq-problem-categories-v3.png)
+![OpenClaw 用户常见问题分类图：先把问题分到认知、迁移判断、模型与入口、技能、记忆、成本、输出质量或回退路径，再决定回哪一页处理。](./assets/openclaw-faq-problem-categories-v4-candidate-1.png)
 
 最稳的顺序不是“看到不对就一起改”，而是先分类：
 
