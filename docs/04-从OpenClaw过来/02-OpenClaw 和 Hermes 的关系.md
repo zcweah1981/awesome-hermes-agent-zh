@@ -104,7 +104,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 1. 先读完这一页，把关系想清楚
 2. 再看 [继续用、共存，还是迁移](./03-%E7%BB%A7%E7%BB%AD%E7%94%A8%E3%80%81%E5%85%B1%E5%AD%98%EF%BC%8C%E8%BF%98%E6%98%AF%E8%BF%81%E7%A7%BB.md)
-3. 如果你不急着全迁，继续看 [OpenClaw + Hermes 共存指南](./04-结合使用.md)
+3. 如果你不急着全迁，继续看 [OpenClaw + Hermes 共存指南](./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md)
 
 为什么默认先推这条线：
 
