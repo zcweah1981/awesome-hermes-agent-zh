@@ -159,5 +159,5 @@ OpenClaw 负责探索与交互，Hermes 负责沉淀与执行。共存不是折�
 
 ## ➡️ 下一步
 
-- 前进到 [从 OpenClaw 到 Hermes：迁移路径](./05-迁移清单.md)
-- 回 [继续用、共存，还是迁移](./03-%E7%BB%A7%E7%BB%AD%E7%94%A8%E3%80%81%E5%85%B1%E5%AD%98%EF%BC%8C%E8%BF%98%E6%98%AF%E8%BF%81%E7%A7%BB.md)
+- 前进到 [从 OpenClaw 到 Hermes：迁移路径](./05-从 OpenClaw 到 Hermes：迁移路径.md)
+- 回 [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md)
