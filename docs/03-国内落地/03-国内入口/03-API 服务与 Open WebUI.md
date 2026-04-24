@@ -4,6 +4,23 @@
 
 这一页只讲一件事：把 **后端服务** 和 **网页前端** 这两层关系讲清楚，并给你一条最短接入路径。
 
+## 🚀 API 服务与 Open WebUI 主线图
+
+![API 服务与 Open WebUI 主线图](./assets/api-openwebui-entry-structure-v1.png)
+
+先看图，再记住这页真正的主线：
+
+- 先在 `.env` 里开启 API Server
+- 再启动 Hermes 后端
+- 先用 `curl` 验证接口
+- 最后再让 Open WebUI 连接 Hermes
+
+这张图最重要的提醒是：
+
+- API Server 是后端
+- Open WebUI 是前端
+- Dashboard 不在这条接入链路里
+
 ## 🚀 先记住这页最重要的判断
 
 这一页最核心的判断只有 3 个：

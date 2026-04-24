@@ -4,6 +4,23 @@
 
 这一页只解决一件事：把 Dashboard 的定位彻底讲清楚，避免你把“管理面板”“网页聊天前端”“API 后端服务”混成一件事。
 
+## 🚀 Dashboard 主线图
+
+![Dashboard 主线图](./assets/dashboard-entry-structure-v1.png)
+
+先看图，再记住这页真正的主线：
+
+- 先启动 `hermes dashboard`
+- 再看 Status 页确认实例状态
+- 再去 Config / API Keys 管配置和密钥
+- 最后用 Logs / Cron / Skills 做日常治理
+
+这张图要表达的不是“怎么聊天”，而是：
+
+- Dashboard 是管理台
+- 它更适合管理、查看、配置和巡检
+- 它不是网页聊天前端
+
 ## 🚀 先记住这页的核心判断
 
 Dashboard 的作用是：
