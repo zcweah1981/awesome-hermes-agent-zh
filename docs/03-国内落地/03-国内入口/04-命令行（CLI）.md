@@ -428,6 +428,34 @@ hermes chat --resume <id>
 ### 4. 日常高频使用
 如果你本来就习惯终端工作流，CLI 往往不只是“第一入口”，而是长期主入口。
 
+## 🆚 CLI、Dashboard、API Server 怎么分
+
+| 入口 | 它负责什么 | 它不负责什么 |
+|---|---|---|
+| CLI | 最完整的原生使用、排错、切模型、配置 | 不负责浏览器聊天前端 |
+| Dashboard | 管理、查看、配置、日志、会话 | 不负责主要聊天交互 |
+| API Server | 对外提供 OpenAI-compatible 后端 | 不负责配置管理界面 |
+| Open WebUI | 浏览器聊天前端 | 不负责 Hermes 系统管理 |
+
+如果你要一句最短结论：
+
+- **CLI = 主入口**
+- **Dashboard = 管理台**
+- **API Server = 后端**
+- **Open WebUI = 前端**
+
+### 默认建议
+
+如果你完全不想自己判断，直接按这个顺序走：
+
+1. 先把 `hermes --help` 跑通
+2. 再把 `hermes` 交互会话跑通
+3. 再发第一条测试消息
+4. 再确认 `hermes model`、`hermes config`、`/help` 这些基本动作都可用
+5. 然后再决定要不要接 Dashboard、Open WebUI 或消息平台
+
+这条顺序最稳，因为它让你先拿到一个**最可验证的成功闭环**。
+
 ## ❓FAQ
 
 ### 1. 为什么这页总说 CLI 是第一主入口？
@@ -462,7 +490,6 @@ hermes chat --resume <id>
 
 ## ⚠️ 风险点与默认建议
 
-
 ### 1. 一上来就去接前端或消息平台
 这会让你失去最短排错路径。
 
@@ -477,42 +504,13 @@ CLI 不只是“安装完成后打个 hello”的入口，它也是：
 - 恢复会话入口
 - 切模型入口
 
-## 🆚 CLI、Dashboard、API Server 怎么分
-
-| 入口 | 它负责什么 | 它不负责什么 |
-|---|---|---|
-| CLI | 最完整的原生使用、排错、切模型、配置 | 不负责浏览器聊天前端 |
-| Dashboard | 管理、查看、配置、日志、会话 | 不负责主要聊天交互 |
-| API Server | 对外提供 OpenAI-compatible 后端 | 不负责配置管理界面 |
-| Open WebUI | 浏览器聊天前端 | 不负责 Hermes 系统管理 |
-
-如果你要一句最短结论：
-
-- **CLI = 主入口**
-- **Dashboard = 管理台**
-- **API Server = 后端**
-- **Open WebUI = 前端**
-
-### 默认建议
-
-如果你完全不想自己判断，直接按这个顺序走：
-
-1. 先把 `hermes --help` 跑通
-2. 再把 `hermes` 交互会话跑通
-3. 再发第一条测试消息
-4. 再确认 `hermes model`、`hermes config`、`/help` 这些基本动作都可用
-5. 然后再决定要不要接 Dashboard、Open WebUI 或消息平台
-
-这条顺序最稳，因为它让你先拿到一个**最可验证的成功闭环**。
-
-## ➡️ 下一步
-
-- 前进到 [05-飞书](./05-飞书.md)
-- 回 [01-总览](./01-总览.md)
-
-
 ## 📎 官方依据
 
 - https://hermes-agent.nousresearch.com/docs/user-guide/cli
 - https://hermes-agent.nousresearch.com/docs/reference/cli-commands
 - https://hermes-agent.nousresearch.com/docs/reference/slash-commands
+
+## ➡️ 下一步
+
+- 前进到 [05-飞书](./05-飞书.md)
+- 回 [01-总览](./01-总览.md)

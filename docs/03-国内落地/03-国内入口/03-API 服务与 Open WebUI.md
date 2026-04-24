@@ -278,6 +278,34 @@ Open WebUI 能正确连接 Hermes，对应表现通常是：
 - 若触发工具，前端能看到工具进度或最后结果
 - 你确认它不是只打开了一个空壳子页面
 
+## 🆚 Dashboard、API Server、Open WebUI 怎么分
+
+| 组件 | 它负责什么 | 它不负责什么 |
+|---|---|---|
+| Dashboard | 配置、状态、日志、会话、管理 | 不负责聊天前端 |
+| API Server | 暴露 OpenAI-compatible 后端接口 | 不负责图形化管理 |
+| Open WebUI | 提供浏览器聊天界面 | 不负责 Hermes 系统管理 |
+| CLI | 最完整的原生入口、排错入口 | 不负责网页聊天体验 |
+
+这页要你最后记住的，其实就是这张表。
+
+### 默认建议
+
+如果你问我：这条路最稳的使用顺序是什么？
+
+我会建议你按这个顺序：
+
+1. 先确认 CLI 已经跑顺
+2. 再启用 API Server
+3. 先用 `curl` 验证后端
+4. 最后再接 Open WebUI
+
+这样做的好处是：
+
+- 出问题时你知道是后端问题还是前端问题
+- 不会把 Dashboard、API Server、Open WebUI 混成一团
+- 你能更快把“网页前端”这条路稳定接起来
+
 ## ❓FAQ
 
 ### 1. Open WebUI 连接的是谁？
@@ -311,7 +339,6 @@ Open WebUI 能正确连接 Hermes，对应表现通常是：
 所以后来你改 Docker 环境变量，不代表前端连接一定同步刷新。
 
 ## ⚠️ 风险点与默认建议
-
 
 ### 1. 把 Dashboard 的地址当成 Open WebUI 要连的后端
 这就是最常见的错法。
@@ -358,42 +385,13 @@ Open WebUI 官方文档明确提醒：
 2. API Server 再开启
 3. Open WebUI 再接入
 
-## 🆚 Dashboard、API Server、Open WebUI 怎么分
-
-| 组件 | 它负责什么 | 它不负责什么 |
-|---|---|---|
-| Dashboard | 配置、状态、日志、会话、管理 | 不负责聊天前端 |
-| API Server | 暴露 OpenAI-compatible 后端接口 | 不负责图形化管理 |
-| Open WebUI | 提供浏览器聊天界面 | 不负责 Hermes 系统管理 |
-| CLI | 最完整的原生入口、排错入口 | 不负责网页聊天体验 |
-
-这页要你最后记住的，其实就是这张表。
-
-### 默认建议
-
-如果你问我：这条路最稳的使用顺序是什么？
-
-我会建议你按这个顺序：
-
-1. 先确认 CLI 已经跑顺
-2. 再启用 API Server
-3. 先用 `curl` 验证后端
-4. 最后再接 Open WebUI
-
-这样做的好处是：
-
-- 出问题时你知道是后端问题还是前端问题
-- 不会把 Dashboard、API Server、Open WebUI 混成一团
-- 你能更快把“网页前端”这条路稳定接起来
-
-## ➡️ 下一步
-
-- 前进到 [04-命令行（CLI）](./04-命令行（CLI）.md)
-- 回 [01-总览](./01-总览.md)
-
-
 ## 📎 官方依据
 
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server
 - https://hermes-agent.nousresearch.com/docs/user-guide/messaging/open-webui
 - https://docs.openwebui.com/getting-started/quick-start/connect-an-agent/hermes-agent/
+
+## ➡️ 下一步
+
+- 前进到 [04-命令行（CLI）](./04-命令行（CLI）.md)
+- 回 [01-总览](./01-总览.md)

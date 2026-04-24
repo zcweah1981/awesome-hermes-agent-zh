@@ -225,6 +225,38 @@ pip install hermes-agent[all]
 
 那 web 依赖通常已经包含在内。
 
+## 🆚 Dashboard、CLI、API Server 到底怎么分
+
+| 入口 | 它负责什么 | 它不负责什么 |
+|---|---|---|
+| Dashboard | 管理、查看、配置、日志、会话、key | 不负责网页聊天前端 |
+| CLI | 最完整的原生入口，适合排错、模型切换、配置与验证 | 不负责图形化管理体验 |
+| API Server | 把 Hermes 暴露成 OpenAI-Compatible 后端 | 不负责配置面板 |
+| Open WebUI | 作为聊天前端连接 API Server | 不负责 Hermes 的系统管理 |
+
+如果你脑子里只有一句话，就记这个：
+
+- **Dashboard = 管理台**
+- **CLI = 主入口**
+- **API Server = 后端**
+- **Open WebUI = 前端**
+
+### 默认建议
+
+如果你问我：Dashboard 这页最稳的使用顺序是什么？
+
+我会给你这个顺序：
+
+1. 先把 CLI 跑顺
+2. 再用 Dashboard 管理配置、会话和密钥
+3. 如果你要网页聊天前端，再进入 API 服务与 Open WebUI
+
+也就是说：
+
+- Dashboard 很有用
+- 但它不是入口顺序里的第一个锚点
+- 它是“已经跑起来之后的管理增强层”
+
 ## ❓FAQ
 
 ### 1. Dashboard 和 Open WebUI 是不是同一个东西？
@@ -254,7 +286,7 @@ Dashboard 很适合：
 而这些改动通常要在：
 
 - 下一个 agent session
-- 或 gateway restart
+- 或 Gateway 重启
 
 之后才会真正体现出来。
 
@@ -301,46 +333,13 @@ Hermes 官方文档明确提醒：
 - 只给自己用
 - 不把它当公网管理台去裸露
 
-## 🆚 Dashboard、CLI、API Server 到底怎么分
-
-| 入口 | 它负责什么 | 它不负责什么 |
-|---|---|---|
-| Dashboard | 管理、查看、配置、日志、会话、key | 不负责网页聊天前端 |
-| CLI | 最完整的原生入口，适合排错、模型切换、配置与验证 | 不负责图形化管理体验 |
-| API Server | 把 Hermes 暴露成 OpenAI-Compatible 后端 | 不负责配置面板 |
-| Open WebUI | 作为聊天前端连接 API Server | 不负责 Hermes 的系统管理 |
-
-如果你脑子里只有一句话，就记这个：
-
-- **Dashboard = 管理台**
-- **CLI = 主入口**
-- **API Server = 后端**
-- **Open WebUI = 前端**
-
-### 默认建议
-
-如果你问我：Dashboard 这页最稳的使用顺序是什么？
-
-我会给你这个顺序：
-
-1. 先把 CLI 跑顺
-2. 再用 Dashboard 管理配置、会话和密钥
-3. 如果你要网页聊天前端，再进入 API 服务与 Open WebUI
-
-也就是说：
-
-- Dashboard 很有用
-- 但它不是入口顺序里的第一个锚点
-- 它是“已经跑起来之后的管理增强层”
-
-## ➡️ 下一步
-
-- 前进到 [03-API 服务与 Open WebUI](./03-API 服务与 Open WebUI.md)
-- 回 [01-总览](./01-总览.md)
-
-
 ## 📎 官方依据
 
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard
 - https://hermes-agent.nousresearch.com/docs/user-guide/features/api-server
 - https://hermes-agent.nousresearch.com/docs/user-guide/messaging/open-webui
+
+## ➡️ 下一步
+
+- 前进到 [03-API 服务与 Open WebUI](./03-API 服务与 Open WebUI.md)
+- 回 [01-总览](./01-总览.md)
