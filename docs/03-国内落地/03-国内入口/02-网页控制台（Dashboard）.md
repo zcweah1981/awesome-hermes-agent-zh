@@ -225,7 +225,52 @@ pip install hermes-agent[all]
 
 那 web 依赖通常已经包含在内。
 
-## 🔒 这页最重要的安全提醒
+## ❓FAQ
+
+### 1. Dashboard 和 Open WebUI 是不是同一个东西？
+不是。
+
+- Dashboard = 管理台
+- Open WebUI = 浏览器聊天前端
+
+### 2. Dashboard 能不能替代 CLI？
+不能。
+
+Dashboard 很适合：
+
+- 看状态
+- 管配置
+- 管 API Key
+- 查会话和日志
+
+但第一主入口和最稳的排错入口仍然是 CLI。
+
+### 3. 为什么很多配置改完没有立刻生效？
+因为 Dashboard 管的是：
+
+- `config.yaml`
+- `.env`
+
+而这些改动通常要在：
+
+- 下一个 agent session
+- 或 gateway restart
+
+之后才会真正体现出来。
+
+### 4. Dashboard 适不适合直接暴露到公网？
+默认不适合。
+
+因为这一页会直接碰到：
+
+- 配置文件
+- API keys
+- 平台凭据
+
+而且 Dashboard 本身没有内建认证层。
+
+## ⚠️ 风险点与默认建议
+
 
 这一页一定要单独把安全提醒讲出来，因为 Dashboard 会直接读写：
 
@@ -272,9 +317,9 @@ Hermes 官方文档明确提醒：
 - **API Server = 后端**
 - **Open WebUI = 前端**
 
-## ✅ 默认建议
+### 默认建议
 
-如果你问我：Dashboard 这页到底应该怎么用？
+如果你问我：Dashboard 这页最稳的使用顺序是什么？
 
 我会给你这个顺序：
 
