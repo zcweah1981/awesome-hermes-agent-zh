@@ -6,7 +6,7 @@
 
 ## 🧭 先判断你属于哪类问题
 
-![OpenClaw 用户常见问题分类图：先把问题分到认知、迁移判断、模型与入口、技能、记忆、成本、输出质量或回退路径，再决定回哪一页处理。](./assets/openclaw-faq-problem-categories-v4-candidate-1.png)
+![OpenClaw 用户常见问题分类图：先把问题分到认知、迁移判断、模型与入口、技能、记忆、成本、输出质量或回退路径，再决定回哪一页处理。](./assets/openclaw-faq-problem-categories-v5.png)
 
 最稳的顺序不是“看到不对就一起改”，而是先分类：
 
@@ -39,7 +39,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 
 ## ✅ 先做完成度检查：你卡在迁移前、共存中，还是 Hermes 化阶段？
 
-![OpenClaw 到 Hermes 的迁移阶段检查图：按迁移前检查、共存中检查、Hermes 化检查三列确认自己当前所处阶段，不要跳步。](./assets/openclaw-checklist-overview-v3.png)
+![OpenClaw 到 Hermes 的迁移阶段检查图：按迁移前检查、共存中检查、Hermes 化检查三列确认自己当前所处阶段，不要跳步。](./assets/openclaw-checklist-overview-v4.png)
 
 这张图不是让你一次全勾完，而是帮你确认：
 - 你现在是不是还没到迁移阶段
@@ -152,7 +152,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 
 ## 🔁 排障 / 回退路径：如果迁移后越改越乱，怎么收回来
 
-![迁移卡住后的排障与回退路径图：先看症状，再判断属于角色、模板、技能还是模型入口层，最后决定修结构还是退回共存模式。](./assets/openclaw-troubleshooting-path-v3.png)
+![迁移卡住后的排障与回退路径图：先看症状，再判断属于角色、模板、技能还是模型入口层，最后决定修结构还是退回共存模式。](./assets/openclaw-troubleshooting-path-v4.png)
 
 这张图要表达的是一个硬规则：
 

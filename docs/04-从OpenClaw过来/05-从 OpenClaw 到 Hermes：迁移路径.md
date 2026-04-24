@@ -21,7 +21,7 @@
 
 ## 🧭 迁移步骤图：先盘点，再 Hermes 化，再最小验证
 
-![从 OpenClaw 到 Hermes 的迁移步骤图：先盘点资产、提炼角色、拆出技能、接模型与入口，再用一个最小稳定案例完成验证。](./assets/openclaw-hermes-migration-flow-v2.png)
+![从 OpenClaw 到 Hermes 的迁移步骤图：先盘点资产、提炼角色、拆出技能、接模型与入口，再用一个最小稳定案例完成验证。](./assets/openclaw-hermes-migration-flow-v4.png)
 
 这页真正要做的，不是“大迁移”，而是按顺序完成这 5 步：
 
@@ -48,7 +48,7 @@
 
 ## 🧩 OpenClaw 资产如何 Hermes 化
 
-![OpenClaw 资产如何 Hermes 化：把临时 prompt、agent 人设、成功输出、失败复盘和重复步骤，重构成 Hermes 的角色、skills、模板、案例与长期记忆。](./assets/openclaw-hermes-asset-map-v2.png)
+![OpenClaw 资产如何 Hermes 化：把临时 prompt、agent 人设、成功输出、失败复盘和重复步骤，重构成 Hermes 的角色、skills、模板、案例与长期记忆。](./assets/openclaw-hermes-asset-map-v4.png)
 
 | OpenClaw 里已有的东西 | 更适合沉淀到 Hermes 的方式 |
 |---|---|
@@ -172,7 +172,7 @@
 
 ## 🗂️ 迁移后建议目录结构
 
-![迁移后的建议目录结构：全局人格放在 HERMES_HOME，稳定能力进入 skills，按职责拆开的助手进入 profiles。](./assets/openclaw-hermes-migration-directory-v3.png)
+![迁移后的建议目录结构：全局人格放在 HERMES_HOME，稳定能力进入 skills，按职责拆开的助手进入 profiles。](./assets/openclaw-hermes-migration-directory-v4.png)
 
 这页只给最小可用结构，不做大而全方案包：
 
