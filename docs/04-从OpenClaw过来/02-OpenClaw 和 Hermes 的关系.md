@@ -14,7 +14,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 ## 🧭 结构图：两者不是替代关系，而是不同层级
 
-![OpenClaw 和 Hermes 的关系图：OpenClaw 作为探索层与前台交互，Hermes 作为沉淀层与长期运行层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-relationship-structure-v1.png)
+![OpenClaw 和 Hermes 的关系图：OpenClaw 作为探索层与前台交互，Hermes 作为沉淀层与长期运行层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-relationship-structure-v2.png)
 
 这张图最重要的不是“谁更强”，而是先把位置摆对：
 
@@ -24,7 +24,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 ## 📊 对比图：真正会影响判断的差异是什么
 
-![OpenClaw vs Hermes 核心对比图：对比上手方式、适合阶段、Prompt 使用、协作方式、自动化和默认建议，强调两者处在不同使用层级。](./assets/openclaw-hermes-comparison-v1.png)
+![OpenClaw vs Hermes 核心对比图：对比上手方式、适合阶段、Prompt 使用、协作方式、自动化和默认建议，强调两者处在不同使用层级。](./assets/openclaw-hermes-comparison-v3.png)
 
 这页不是功能 PK 页，也不是拉踩页。真正值得你先看的，不是“谁功能更多”，而是下面这些会改变工作方式的差异：
 
@@ -65,7 +65,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 ## 🛠️ 操作图：正确判断顺序应该怎么走
 
-![从 OpenClaw 过来到 Hermes 的判断操作图：先看两者关系，再判断当前阶段，优先走共存，最后只迁稳定流程。](./assets/openclaw-hermes-decision-flow-v1.png)
+![从 OpenClaw 过来到 Hermes 的判断操作图：先看两者关系，再判断当前阶段，优先走共存，最后只迁稳定流程。](./assets/openclaw-hermes-decision-flow-v2.png)
 
 对大多数用户来说，正确顺序不是：
 

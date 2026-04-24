@@ -12,7 +12,7 @@ OpenClaw 负责探索与交互，Hermes 负责沉淀与执行。共存不是折�
 
 ## 🧭 结构图：OpenClaw 做前台，Hermes 做后台
 
-![OpenClaw + Hermes 共存结构图：OpenClaw 作为前台交互与探索层，Hermes 作为后台执行与沉淀层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-coexistence-structure-v1.png)
+![OpenClaw + Hermes 共存结构图：OpenClaw 作为前台交互与探索层，Hermes 作为后台执行与沉淀层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-coexistence-structure-v2.png)
 
 这张图要表达的重点不是“谁更强”，而是：
 
@@ -22,7 +22,7 @@ OpenClaw 负责探索与交互，Hermes 负责沉淀与执行。共存不是折�
 
 ## 🧩 三种共存模式图：不是只有一种共存方式
 
-![OpenClaw + Hermes 三种共存模式图：前台/后台、实验场/沉淀层、主系统/临时工具三种模式。](./assets/openclaw-hermes-coexistence-modes-v1.png)
+![OpenClaw + Hermes 三种共存模式图：前台/后台、实验场/沉淀层、主系统/临时工具三种模式。](./assets/openclaw-hermes-coexistence-modes-v2.png)
 
 ### 模式 A：OpenClaw 做前台，Hermes 做后台
 适合：
@@ -73,7 +73,7 @@ OpenClaw 负责探索与交互，Hermes 负责沉淀与执行。共存不是折�
 
 ## 🛠️ 操作图：共存应该怎么一步步推进
 
-![OpenClaw + Hermes 共存操作图：从 OpenClaw 为主，到 OpenClaw + Hermes 并行，再到 Hermes 为主的三阶段推进。](./assets/openclaw-hermes-coexistence-operation-v1.png)
+![OpenClaw + Hermes 共存操作图：从 OpenClaw 为主，到 OpenClaw + Hermes 并行，再到 Hermes 为主的三阶段推进。](./assets/openclaw-hermes-coexistence-operation-v2.png)
 
 一个更稳的推进顺序通常是：
 
