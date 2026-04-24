@@ -76,7 +76,7 @@ Dashboard 不负责：
 - 它不是 API Server
 - 它不是替代 CLI 的万能入口
 
-如果你真正想要的是“网页聊天界面”，下一页该看的是 **API 服务与 Open WebUI**，而不是把 Dashboard 当聊天壳子。
+如果你真正想要的是“网页聊天界面”，下一页该看的是 [03-API 服务与 Open WebUI](./03-API 服务与 Open WebUI.md)，而不是把 Dashboard 当聊天壳子。
 
 ## 🧭 最短决策
 
