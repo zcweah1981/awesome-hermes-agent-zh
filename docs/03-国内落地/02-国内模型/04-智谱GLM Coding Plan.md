@@ -163,7 +163,7 @@ hermes model
 
 完成后进入：
 
-- 如果你想继续看下一条路线，继续看 [05-MiniMax Token Plan](./05-MiniMax%20Token%20Plan.md)
+- 如果你想继续看下一条路线，继续看 [05-MiniMax Token Plan](<./05-MiniMax Token Plan.md>)
 - 如果你还在横向比较，回 [国内模型总览](./01-总览.md)
 
 ## 📎 官方依据

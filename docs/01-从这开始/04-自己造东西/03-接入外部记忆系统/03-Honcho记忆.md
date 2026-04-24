@@ -25,7 +25,7 @@ Honcho 适合的重点是：
 - user-agent alignment
 - peer card、semantic search、conclusion 这类更系统的记忆能力
 
-如果你现在还没把内建记忆用顺，先回看：[持久记忆](../../03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md)。
+如果你现在还没把内建记忆用顺，先回看：[持久记忆](<../../03-玩出花样/03-让 Hermes 记住你.md>)。
 
 ---
 

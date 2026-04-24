@@ -192,7 +192,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 ## ➡️ 下一步
 
 完成后进入：
-- [03-让 Hermes 记住你](03-让%20Hermes%20记住你.md)
+- [03-让 Hermes 记住你](<03-让 Hermes 记住你.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [03-玩出花样](01-总览.md)
