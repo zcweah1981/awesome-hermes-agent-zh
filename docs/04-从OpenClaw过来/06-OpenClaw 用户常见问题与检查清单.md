@@ -196,4 +196,4 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 
 如果你想先回到上一阶段入口重新确认位置：
 
-- [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- [从 OpenClaw 过来，不一定要马上迁移](./01-总览.md)

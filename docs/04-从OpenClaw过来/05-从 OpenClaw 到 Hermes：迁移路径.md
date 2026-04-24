@@ -242,4 +242,4 @@
 
 如果你想先回到上一阶段入口重新确认位置：
 
-- [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- [从 OpenClaw 过来，不一定要马上迁移](./01-总览.md)
