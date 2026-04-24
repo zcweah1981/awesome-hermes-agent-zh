@@ -21,13 +21,13 @@
 
 不是。
 
-只有当你的流程已经稳定、重复、值得复用，才需要考虑迁移。否则继续用 OpenClaw，或者先走 [OpenClaw + Hermes 共存指南](./04-OpenClaw + Hermes 共存指南.md)，通常更合理。
+只有当你的流程已经稳定、重复、值得复用，才需要考虑迁移。否则继续用 OpenClaw，或者先走 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)，通常更合理。
 
 ### Q：OpenClaw 和 Hermes 能不能一起用？
 
 可以，而且对多数用户来说，先共存再迁移，本来就是更稳的路径。
 
-如果你还没把边界想清楚，先回到 [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md) 和 [OpenClaw + Hermes 共存指南](./04-OpenClaw + Hermes 共存指南.md)。
+如果你还没把边界想清楚，先回到 [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md) 和 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)。
 
 ### Q：Hermes 是不是另一个聊天工具？
 
@@ -57,7 +57,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 - 有成功案例和失败案例可以复盘
 - 知道这个流程更适合什么模型和入口
 
-如果你现在勾不满，先回到 [从 OpenClaw 到 Hermes：迁移路径](./05-从 OpenClaw 到 Hermes：迁移路径.md)，把“盘点资产”和“最小验证”做完整。
+如果你现在勾不满，先回到 [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)，把“盘点资产”和“最小验证”做完整。
 
 ### 共存中检查
 
@@ -70,7 +70,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 - 已经挑出稳定 prompt、模板或可拆分 skill
 - 已经知道当前保留哪个入口继续试错
 
-如果这些还不稳，先回到 [OpenClaw + Hermes 共存指南](./04-OpenClaw + Hermes 共存指南.md)，不要急着扩大迁移范围。
+如果这些还不稳，先回到 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)，不要急着扩大迁移范围。
 
 ### Hermes 化检查
 
@@ -119,7 +119,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 - skill 依赖是否缺失
 - 你写出来的是 skill，还是只是另一段更长的 prompt
 
-需要回补基础理解时，回看 [常用 Skills（按日常使用场景精选）](../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md)。
+需要回补基础理解时，回看 [常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)。
 
 ### Memory 检查
 
@@ -130,7 +130,7 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 - 你有没有把项目临时要求误写成长期记忆
 - 当前问题到底该修 memory，还是该修 SOUL / template / examples
 
-如果你对记忆层理解还不稳，回看 [让 Hermes 记住你](../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md)。
+如果你对记忆层理解还不稳，回看 [让 Hermes 记住你](<../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md>)。
 
 ## ⚠️ 输出质量问题：为什么效果不像原来的 OpenClaw
 
@@ -164,20 +164,20 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 - skill 不生效 → 先看 skill 结构、路径、依赖、输入输出定义
 - 入口或模型经常报错 → 再去看模型、入口、配置链路
 - 同时改了太多变量 → 立刻缩回一个最小验证案例
-- 还是不稳定 → 退回 [OpenClaw + Hermes 共存指南](./04-OpenClaw + Hermes 共存指南.md)，保留一个最小稳定场景继续试
+- 还是不稳定 → 退回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)，保留一个最小稳定场景继续试
 
 ## 📍 出错后该回哪一页
 
 如果你已经知道问题属于哪类，直接回对应页面：
 
 - 还没判断清楚该不该迁移 → [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md)
-- 共存边界不清楚 → [OpenClaw + Hermes 共存指南](./04-OpenClaw + Hermes 共存指南.md)
-- 迁移步骤没做稳 → [从 OpenClaw 到 Hermes：迁移路径](./05-从 OpenClaw 到 Hermes：迁移路径.md)
+- 共存边界不清楚 → [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- 迁移步骤没做稳 → [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
 - 模型选择有问题 → [国内模型总览](../03-国内落地/02-国内模型/01-总览.md)
 - 入口选择有问题 → [国内入口总览](../03-国内落地/03-国内入口/01-总览.md)
 - CLI 不熟 / 会话管理乱 → [常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
-- skills 基础不牢 → [常用 Skills（按日常使用场景精选）](../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md)
-- memory 理解混乱 → [让 Hermes 记住你](../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md)
+- skills 基础不牢 → [常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
+- memory 理解混乱 → [让 Hermes 记住你](<../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md>)
 
 ## ✅ 看完这页你应该能立刻做到什么
 
@@ -190,6 +190,10 @@ Hermes 的重点不是临时聊天，而是把角色、skills、memory、workflo
 
 ## ➡️ 下一步
 
-- 前进到 [国内落地总览](../03-国内落地/01-总览.md)
-- 回 [从 OpenClaw 到 Hermes：迁移路径](./05-从 OpenClaw 到 Hermes：迁移路径.md)
-- 回 [从 OpenClaw 过来](./01-总览.md)
+完成后进入：
+
+- [国内落地总览](../03-国内落地/01-总览.md)
+
+如果你想先回到上一阶段入口重新确认位置：
+
+- [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
