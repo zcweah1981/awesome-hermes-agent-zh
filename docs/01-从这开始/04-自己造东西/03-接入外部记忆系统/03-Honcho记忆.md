@@ -7,6 +7,22 @@
 
 ---
 
+## 🧭 先记住：这一页讲的不是“再接一个数据库”，而是“进入多助手记忆结构”
+
+Honcho 最容易被低估的地方，是很多人第一次会把它理解成：
+
+“哦，就是另一种外部记忆存储。”
+
+但这页要先把这个理解拉正：
+
+Honcho 更适合解决的，不只是“记住更多”，而是“多个助手怎样围绕同一个用户和工作区长期协作”。
+
+所以它和 Holographic 的区别，不是简单的“谁更强”，而是：
+
+你现在到底是在给一个助手加一层外部记忆，还是已经在搭多助手长期系统。
+
+---
+
 ## ❓ 你要先知道 Honcho 是什么
 
 Honcho 不是“再加一个数据库”。
@@ -25,8 +41,6 @@ Honcho 适合的重点是：
 - user-agent alignment
 - peer card、semantic search、conclusion 这类更系统的记忆能力
 
-如果你现在还没把内建记忆用顺，先回看：[持久记忆](<../../03-玩出花样/03-让 Hermes 记住你.md>)。
-
 ---
 
 ## 🧭 先判断：你是不是应该走 Honcho
@@ -44,11 +58,26 @@ Honcho 适合的重点是：
 
 ---
 
+## 🎯 走 Honcho 这条路，你真正会得到什么
+
+这一页最值得你现在记住的，不是服务名，而是收益：
+
+1. 多个 profile 可以围绕同一个 workspace 逐步形成共享认知
+2. 不同助手可以保留各自身份，而不是被硬塞进一个人格里
+3. 你开始拥有比本地 markdown 记忆更系统的 user / peer / workspace 分层
+4. 后面的多助手协作和长期系统化使用，会更容易稳定下来
+
+一句话说透：
+
+Honcho 的价值，不是“记得更多”，而是“让多个助手开始按系统结构记得更合理”。
+
+---
+
 ## 📌 最短接入顺序
 
 不要一上来研究所有参数。按下面 4 步走就够了。
 
-### ➡️ 第 1 步：先把 Honcho 服务端跑起来
+### 第 1 步：先把 Honcho 服务端跑起来
 
 Honcho 官方支持本地自托管；最顺手的方式是 Docker。
 
@@ -59,22 +88,12 @@ Honcho 官方支持本地自托管；最顺手的方式是 Docker。
 - Honcho 服务端
 - 一个可用的 LLM provider
 
-本地启动时，先准备这几个关键值：
-
-```env
-DB_CONNECTION_URI=postgresql+psycopg://postgres:postgres@database:5432/postgres
-```
-
-本地调试时先关闭认证，别把第一步卡在登录上。
-
 如果你走 Docker，本页先按最短路径记住这件事：
 
 - 先把 Honcho 服务和数据库拉起来
 - 再让 Hermes 指向这个 Honcho 实例
 
-官方本地文档明确提到，Docker 方案会启动 API、deriver、database、redis 这几类服务；你只要先把服务端跑起来，后面 Hermes 才有连接对象可用。
-
-### ➡️ 第 2 步：把 Hermes 的 memory provider 切到 Honcho
+### 第 2 步：把 Hermes 的 memory provider 切到 Honcho
 
 执行：
 
@@ -100,32 +119,18 @@ hermes config set memory.provider honcho
 http://localhost:8000
 ```
 
-### ➡️ 第 3 步：把 1536 维度写死
+### 第 3 步：把 1536 维度写死
 
 这一步是关键。
 如果你这条链路走的是 OpenAI-compatible / OneAPI 风格的 embedding 路由，先把向量维度固定成 1536，不要做动态猜测。
 
-原因很直接：
-
-- Honcho 的向量库默认就是按 1536 这个维度链路来配的
-- OpenAI text-embedding-3-small 也是 1536 维
-- OneAPI 只是路由层，底层 embedding 维度必须和存储维度一致
-
-你要记住的不是“抽象的兼容性”，而是这条硬规则：
+你要记住的不是抽象兼容性，而是这条硬规则：
 
 ```env
 VECTOR_STORE_DIMENSIONS=1536
 ```
 
-如果你在 Honcho 的环境变量模板里写的是 embedding 维度字段，就把它固定成 1536；别让它漂。
-
-### ➡️ 第 4 步：确认配置落点正确
-
-Honcho 的配置通常会落在这些位置之一：
-
-- `$HERMES_HOME/honcho.json`
-- `~/.honcho/config.json`
-- 以及 Hermes 的 `~/.hermes/config.yaml` 里的 `memory.provider: honcho`
+### 第 4 步：确认配置落点正确
 
 最稳妥的检查顺序是：
 
@@ -166,10 +171,6 @@ hermes honcho peer
 
 它用来检查或更新 peer 名称，确认每个 profile 不是混成同一个身份。
 
-这张是真实状态截图，验收时就看它：
-
-![Honcho 真实状态截图：memory provider 已切到 honcho，hermes memory status 显示 installed 和 available，hermes honcho status 显示 Connection... OK，并能看到 workspace、peer 和 config path](../../../assets/rm2-5-memory-providers-03-honcho-status-proof.png)
-
 ---
 
 ## 🔎 如果你要的是多 profile 结构，这样看才对
@@ -188,18 +189,32 @@ Honcho 的真正价值不是“记住更多”，而是“记得更分层”。
 - 每个 profile 保留自己的 peer
 - 不同角色之间不要互相污染观察结果
 
-如果你后面要把已经创建好的 profile 补进 Honcho，继续看 `hermes honcho sync` 这一类同步动作。
+---
+
+## 🚫 哪些情况不该先走它
+
+下面这些情况，通常不建议把 Honcho 当第一步：
+
+- 你连内建 [持久记忆](<../../03-玩出花样/03-让 Hermes 记住你.md>) 都还没用顺
+- 你当前其实还是单助手使用，只是想先把外部记忆接通
+- 你真正缺的是第一条最容易跑通的外部路线，而不是多助手结构
+- 你还没有明确 workspace / peer / 多 profile 这些结构需求
+- 你只是因为 Honcho 看起来更系统，就想直接跳过去
+
+这种时候，更合理的入口通常是 Holographic 或外部记忆对比。
 
 ---
 
 ## ✅ 什么时候算过关
 
-当你能明确回答下面 5 个问题，这一页才算过关：
+当你能明确回答下面这些问题，这一页才算过关：
 
 - 我知道 Honcho 是外部记忆后端，不是简单数据库
+- 我知道它和 Holographic 的核心差别，在于它更适合多助手 / 多 profile / workspace 结构
 - 我知道内建 `USER.md` / `MEMORY.md` 仍然保留
 - 我知道同一时刻只能启用 1 个外部 provider
 - 我知道 OneAPI / OpenAI-compatible 这条链路要把向量维度固定成 1536
+- 我知道走 Honcho 这条路以后，我真正会得到什么
 - 我知道该用 `hermes memory status` 和 `hermes honcho status` 去验收，而不是靠感觉
 
 ---

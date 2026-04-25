@@ -7,6 +7,24 @@
 
 ---
 
+## 🧭 先记住：这一页讲的是“服务化暴露”，不是“再开一个聊天入口”
+
+很多人第一次看到 API Server，会下意识理解成：
+
+“哦，就是把聊天界面换个地方开。”
+
+但这不是这一页真正要解决的事情。
+
+这页真正要讲的是：
+
+当你希望“别的前端、客户端、应用程序”也能把 Hermes 当成后端能力来用时，你该怎么把 Hermes 暴露成一个可接入的 HTTP 服务。
+
+一句话说透：
+
+CLI 是你自己直接用 Hermes；API Server 是让别的界面和程序也能用 Hermes。
+
+---
+
 ## ❓ 什么情况下值得先走 API Server
 
 当你遇到下面这些需求时，通常就值得先走 API Server：
@@ -64,6 +82,22 @@ Hermes 可以站在后面，前面换成你想要的界面。
 
 ---
 
+## 🎯 把它暴露成后端服务以后，你真正会得到什么
+
+这页最该让你现在看见的，不是端点名称，而是收益：
+
+1. Hermes 不再局限在一个 CLI 窗口里
+2. 你可以把更熟悉的前端界面接到 Hermes 后面
+3. 团队使用门槛会下降，因为不是每个人都要先学 CLI
+4. 你自己的系统或工具，也开始可以把 Hermes 当成“一个后端能力”来调用
+5. 后面的自动化、工作流编排、产品化接入，会更容易继续往前走
+
+一句话说透：
+
+API Server 这一步，代表 Hermes 开始从“一个人自己用的助手”变成“可被别的系统调用的能力”。
+
+---
+
 ## ❓ 它到底是什么：OpenAI-compatible HTTP API
 
 官方给出的核心定位很明确：
@@ -88,7 +122,7 @@ API Server 不是把 Hermes 变成“只会返回文本的裸模型接口”。
 这一页不展开部署架构，也不展开端点百科。
 先记住最短的 5 步就够了。
 
-### ➡️ 第 1 步：在 `~/.hermes/.env` 里打开 API Server
+### 第 1 步：在 `~/.hermes/.env` 里打开 API Server
 
 把下面这项写进去：
 
@@ -96,9 +130,7 @@ API Server 不是把 Hermes 变成“只会返回文本的裸模型接口”。
 API_SERVER_ENABLED=true
 ```
 
-这表示当前 Hermes profile 允许 gateway 同时暴露 API server。
-
-### ➡️ 第 2 步：设置 `API_SERVER_KEY`
+### 第 2 步：设置 `API_SERVER_KEY`
 
 继续在 `~/.hermes/.env` 里设置一个 key：
 
@@ -106,22 +138,15 @@ API_SERVER_ENABLED=true
 API_SERVER_KEY=change-me-local-dev
 ```
 
-你可以先把它理解成：
-这是前端或客户端调用 Hermes API 时要带的 Bearer key。
-
-### ➡️ 第 3 步：如果浏览器要直连，再按需加 `API_SERVER_CORS_ORIGINS`
-
-如果只是本机工具、桌面客户端或服务端去接，通常先不用管这项。
-
-只有在“浏览器页面要直接请求 Hermes API”时，才按需加：
+### 第 3 步：如果浏览器要直连，再按需加 `API_SERVER_CORS_ORIGINS`
 
 ```env
 API_SERVER_CORS_ORIGINS=http://localhost:3000
 ```
 
-所以这一步是可选项，不是所有人都要先配。
+这一步通常只在浏览器页面直接请求 Hermes API 时才需要。
 
-### ➡️ 第 4 步：启动 gateway
+### 第 4 步：启动 gateway
 
 ```bash
 hermes gateway
@@ -129,7 +154,7 @@ hermes gateway
 
 官方快速路径里，API Server 是跟着 gateway 一起启动的。
 
-### ➡️ 第 5 步：让前端把 base URL 指到 `http://localhost:8642/v1`
+### 第 5 步：让前端把 base URL 指到 `http://localhost:8642/v1`
 
 大多数 OpenAI-compatible 前端，核心就是填这几类信息：
 
@@ -148,7 +173,7 @@ hermes gateway
 
 你可以看 3 个成功信号。
 
-### 🔹 1）gateway 输出 API server listening
+### 1）gateway 输出 API server listening
 
 官方快速起步里，成功启动后会出现类似输出：
 
@@ -156,22 +181,17 @@ hermes gateway
 [04-自己造东西/API服务] API server listening on http://127.0.0.1:8642
 ```
 
-这说明 API Server 已经跟着 gateway 起起来了。
+### 2）`/health` 可以访问
 
-### 🔹 2）`/health` 可以访问
+这说明最基本的 HTTP 服务已经在响应。
 
-如果健康检查可用，说明最基本的 HTTP 服务已经在响应。
-
-当前页你只要记住：
-`GET /health` 是最轻量的探活信号。
-
-### 🔹 3）对 `/v1/chat/completions` 发请求能正常返回
+### 3）对 `/v1/chat/completions` 发请求能正常返回
 
 例如用 `curl` 去打：
 
 ```bash
 curl http://localhost:8642/v1/chat/completions \
-  -H "Authorization: Bearer your-api-server-key" \
+  -H "Authorization: Bearer your-api-key" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "hermes-agent",
@@ -188,23 +208,7 @@ curl http://localhost:8642/v1/chat/completions \
 
 ---
 
-## 🔹 当前页只知道这些端点就够了
-
-这一页不是 OpenAI API 规范全文。
-你现在只要知道 Hermes API Server 至少覆盖这类入口：
-
-- `POST /v1/chat/completions`
-- `POST /v1/responses`
-- `GET /v1/models`
-- `GET /health`
-
-当前页的重点不是背端点大全。
-重点是你已经知道：
-Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以直接拿来接。
-
----
-
-## 🔹 哪些情况先不在这一页展开
+## 🚫 当前页先不展开什么
 
 为了保证当前页边界清楚，这几个方向先不展开：
 
@@ -227,9 +231,10 @@ Hermes 对外暴露的是一套 OpenAI-compatible HTTP API，而且前端可以�
 
 - 你已经知道什么情况下该把 Hermes 暴露成后端服务
 - 你已经能说清 API Server 和 CLI / 单个聊天窗口的区别
+- 你已经知道把它服务化以后，你真正会得到什么
 - 你已经知道 Hermes 暴露的是 OpenAI-compatible HTTP API
 - 你已经知道多数 OpenAI-compatible 前端都能接它，典型例子包括 Open WebUI、LobeChat、LibreChat、NextChat、ChatBox
-- 你已经知道最短接法是：在 `~/.hermes/.env` 里打开 `API_SERVER_ENABLED`、设置 `API_SERVER_KEY`、按需加 `API_SERVER_CORS_ORIGINS`、启动 gateway、把 base URL 指向 `http://localhost:8642/v1`
+- 你已经知道最短接法是：打开 `API_SERVER_ENABLED`、设置 `API_SERVER_KEY`、按需加 `API_SERVER_CORS_ORIGINS`、启动 gateway、把 base URL 指向 `http://localhost:8642/v1`
 - 你已经知道成功信号应该看启动日志、`/health` 和一次真实的 `/v1/chat/completions` 返回
 
 如果一句话判断：
