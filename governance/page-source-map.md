@@ -52,6 +52,10 @@
 | `docs/05-遇到问题/02-安装更新与环境问题.md` | RM6-2 | Hermes 官方 Installation / Quickstart / FAQ、WSL2 官方说明、官方 Issue #6147 | 安装 / 更新 / 环境问题页 |
 | `docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md` | RM6-3 | Hermes 官方 AI Providers / FAQ / Quickstart、国内模型总览、自定义兼容接口页 | 模型 / Provider / 自定义 endpoint 问题页 |
 | `docs/05-遇到问题/04-CLI TUI 与会话问题.md` | RM6-4 | Hermes 官方 Quickstart / CLI Commands Reference / FAQ、开始上手相关页 | CLI / TUI / 会话问题页 |
+| `docs/05-遇到问题/05-Gateway Messaging 与推送问题.md` | RM6-5 | Hermes 官方 Messaging Gateway / CLI Commands Reference / FAQ、国内入口总览 | Gateway / Messaging / 推送问题页 |
+| `docs/05-遇到问题/06-Tools Skills MCP 问题.md` | RM6-6 | Hermes 官方 Skills Hub / CLI Commands Reference / FAQ、自己造东西总览、MCP 页 | Tools / Skills / MCP 问题页 |
+| `docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md` | RM6-7 | Hermes 官方 Configuration / FAQ / CLI Commands Reference、Profiles 页 | 配置 / Profiles / 环境隔离问题页 |
+| `docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md` | RM6-8 | Hermes 官方 Configuration / Installation / FAQ、部署与配置相关页 | Docker / Nix / SSH / 远程后端问题页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`

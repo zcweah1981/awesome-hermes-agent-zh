@@ -416,7 +416,7 @@ CLI Commands Reference 已经说明：
 
 完成后进入：
 
-- [05-Gateway / Messaging 问题](../03-国内落地/03-国内入口/01-总览.md)
+- [05-Gateway / Messaging / 推送问题](./05-Gateway Messaging 与推送问题.md)
 
 如果你想先回到上一阶段入口重新确认位置：
 
