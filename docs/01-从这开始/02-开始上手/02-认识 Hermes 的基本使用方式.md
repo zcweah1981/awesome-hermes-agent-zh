@@ -7,7 +7,7 @@
 
 ## 🧭 先记住主入口
 
-![真实终端主入口截图：在 Linux 终端执行 `hermes` 后，已经进入 Hermes 交互主入口并停在可继续输入的提示符位置。](../../assets/rm2-3-basic-usage-01-cli-main-surface.png)
+![终端主入口界面截图：在 Linux 终端执行 `hermes` 后，界面显示已进入 Hermes Agent 交互主入口，并停在可继续输入的提示符位置。](../../assets/rm2-3-basic-usage-01-cli-main-surface.png)
 
 日常最常用的入口只有一个：
 
@@ -56,7 +56,7 @@ Hermes 不是一次性命令，而是一个持续对话的工作入口。
 hermes chat -q "请用一句中文确认你已经可以正常工作"
 ```
 
-![真实快速请求成功截图：在终端执行 `hermes chat -q` 后，已经返回正常中文回复，并给出会话恢复信息。](../../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
+![终端快速请求返回截图：在终端执行 `hermes chat -q` 后，界面返回一条正常中文回复，并给出会话恢复信息。](../../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
 
 这个入口适合：
 

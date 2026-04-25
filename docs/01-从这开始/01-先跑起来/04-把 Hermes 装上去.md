@@ -56,7 +56,7 @@ hermes version
 hermes doctor
 ```
 
-![Hermes 安装成功截图：已经可以执行 hermes version 和 hermes doctor，并看到正常输出](../../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)
+![Hermes 安装后检查截图：图中展示 `hermes version` 的版本输出，以及一轮 `hermes doctor` 检查结果](../../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)
 
 如果两条命令都能正常返回结果，就说明安装已经真正完成，而且当前环境可以继续下一页。
 
