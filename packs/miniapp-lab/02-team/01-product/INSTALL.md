@@ -1,4 +1,4 @@
-# 02-team-product 安装说明
+# 01-product 安装说明
 
 在当前目录执行：
 

@@ -1,4 +1,4 @@
-# 03-team-builder 安装说明
+# 03-api 安装说明
 
 在当前目录执行：
 
@@ -6,4 +6,4 @@
 ./install_to_profile.sh <profile-name-or-path>
 ```
 
-默认 skill：`wechat-mini-program-builder-agent`
+默认 skill：`wechat-mini-program-api-agent`
