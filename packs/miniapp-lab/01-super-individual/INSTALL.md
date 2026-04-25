@@ -24,7 +24,7 @@ bash ./install_to_profile.sh <profile-name-or-path>
 
 ### 2）直接试跑
 ```bash
-<your-profile> chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/wechat-mini-program-solo-assistant/examples/sample-input.md)"
+<your-profile> chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
 ```
 
 ---
