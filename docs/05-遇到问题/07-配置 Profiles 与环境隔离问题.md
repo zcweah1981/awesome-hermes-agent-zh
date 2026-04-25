@@ -82,7 +82,7 @@
 
 🚦 什么时候该跳转：
 
-- 如果你已经确认根因在 provider / model，回模型页
+- 如果你已经确认根因在 provider / model，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 - 如果问题还是“到底哪份配置在生效”，留在本页
 
 ---
@@ -113,7 +113,7 @@
 🚦 什么时候该跳转：
 
 - 如果你已经确认是旧会话 / 旧服务没刷新，先留在本页
-- 如果你发现本质是 gateway 运行层问题，再回 gateway 页
+- 如果你发现本质是 gateway 运行层问题，再回 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
 
 ---
 
@@ -249,8 +249,8 @@
 
 🚦 什么时候该跳转：
 
-- 如果你主要卡在 gateway 行为，回 gateway 页
-- 如果你主要卡在 skills / MCP，回 tools / skills 页
+- 如果你主要卡在 gateway 行为，回 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
+- 如果你主要卡在 skills / MCP，回 [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
 - 如果根因是环境隔离，继续留在本页
 
 ---
@@ -284,7 +284,7 @@
 🚦 什么时候该跳转：
 
 - 如果你确认是不同行为来自不同入口，先留在本页整理边界
-- 如果差异主要在消息平台行为，回 gateway 页
+- 如果差异主要在消息平台行为，回 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
 
 ---
 
@@ -312,8 +312,8 @@
 
 🚦 什么时候该跳转：
 
-- 如果你发现更像 provider / model，回模型页
-- 如果更像 skills / MCP，回 tools / skills 页
+- 如果你发现更像 provider / model，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果更像 skills / MCP，回 [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
 - 如果更像当前环境搞错了，留在本页
 
 ---

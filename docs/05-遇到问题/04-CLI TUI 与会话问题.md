@@ -149,7 +149,7 @@ hermes --tui
 🚦 什么时候该跳转：
 
 - 如果 classic CLI 正常、只有 TUI 体验怪，先把问题当成交互层问题留在本页
-- 如果两个入口都异常，而且连基础聊天都跑不顺，回模型 / Provider 页交叉判断
+- 如果两个入口都异常，而且连基础聊天都跑不顺，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>) 交叉判断
 
 ---
 
@@ -363,7 +363,7 @@ CLI Commands Reference 已经说明：
 🚦 什么时候该跳转：
 
 - 如果慢的是所有请求，更可能是模型 / provider 问题，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
-- 如果只是 Gateway 消息链路慢，不要停在本页，回入口 / Gateway 相关页
+- 如果只是 Gateway 消息链路慢，不要停在本页，回 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
 
 ---
 
