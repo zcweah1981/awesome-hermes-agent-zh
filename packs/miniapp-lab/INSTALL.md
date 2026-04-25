@@ -1,57 +1,53 @@
 # miniapp-lab 下载与安装说明
 
-## 这个目录现在怎么用
-`packs/miniapp-lab/` 对外推荐直接下载两个压缩包：
+> 这里别想复杂：你只需要先判断一件事——你现在是想先一个人快速跑通，还是已经准备多人协作。
 
-- `01-super-individual.zip`：超级个体版（单 Agent）
-- `02-team.zip`：团队协作版（多 Agent，内含 validator）
+---
 
-目标是让用户不用再分别找很多子目录，而是下载一个 zip，解压后立刻得到可安装的目录结构。
+## 👀 先看你该下哪个包
 
-## 你应该选哪一个
-### 只想先让一个 Agent 把小程序 MVP 跑通
+### 只想先跑通一次
 下载：`01-super-individual.zip`
 
 适合：
-- 个人开发者
-- 先要 MVP 结构包
-- 先验证需求、页面、接口、测试是否成套成立
+- 你先想验证这套方案到底能不能用
+- 你先想拿到页面、目录、文件骨架
+- 你不想一上来就分很多角色
 
-### 想按产品 / 实现 / 接口 / 测试分工
+### 已经准备多人协作
 下载：`02-team.zip`
 
-解压后会得到：
-- `02-team/01-product/`
-- `02-team/02-builder/`
-- `02-team/03-api/`
-- `02-team/04-qa/`
-- `02-team/99-solution-validator/`
-- `02-team/install_all.sh`
+适合：
+- 你希望产品、实现、接口、验收拆开做
+- 你不想一个 Agent 什么都包
+- 你要的是更清楚的接力流程
 
-## 用户怎么拿到
-### 方式 1：直接下载 zip
-在 GitHub 仓库里直接下载：
-- `packs/miniapp-lab/01-super-individual.zip`
-- `packs/miniapp-lab/02-team.zip`
+---
 
-### 方式 2：clone 仓库后本地取用
-```bash
-git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
-cd awesome-hermes-agent-zh/packs/miniapp-lab
-```
+## 📦 解压后会看到什么
 
-## 建议安装到哪里
-建议安装到独立 profile，而不是默认环境。
+### 超级个体版
+- 一个可以直接安装的目录
+- 一个单 Agent skill
+- sample-input / sample-output
+- 最短试跑路径
 
-Hermes profile 默认目录通常是：
-```text
-~/.hermes/profiles/<profile-name>
-```
+### 团队协作版
+- `01-product/`
+- `02-builder/`
+- `03-api/`
+- `04-qa/`
+- `99-solution-validator/`
+- `install_all.sh`
 
-## 最小使用方式
+---
+
+## ⚡ 最短用法
+
 ### 超级个体版
 ```bash
-cd /path/to/01-super-individual
+git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
+cd awesome-hermes-agent-zh/packs/miniapp-lab/01-super-individual
 hermes profile create miniapp-solo --clone
 bash ./install_to_profile.sh miniapp-solo
 miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/wechat-mini-program-solo-assistant/examples/sample-input.md)"
@@ -59,6 +55,7 @@ miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/s
 
 ### 团队协作版
 ```bash
+# 先解压 02-team.zip，再进入解压后的目录
 cd /path/to/02-team
 hermes profile create miniapp-product --clone
 hermes profile create miniapp-builder --clone
@@ -68,20 +65,26 @@ hermes profile create miniapp-validator --clone
 bash ./install_all.sh
 ```
 
-如果你想手动安装，也可以分别进入：
-- `01-product/`
-- `02-builder/`
-- `03-api/`
-- `04-qa/`
-- `99-solution-validator/`
+---
 
-各自执行：
-```bash
-bash ./install_to_profile.sh <profile-name-or-path>
-```
+## ✅ 跑完以后你重点看什么
 
-## 手工测试怎么做
-1. 先下载并解压其中一个 zip
-2. 超级个体版：确认输出包含页面、功能、数据、接口、顺序、测试六类结果
-3. 团队协作版：确认 `install_all.sh` 能把 5 个角色包装进对应 profile
-4. 团队协作版串跑后，再用 `99-solution-validator` 判断是否 pass / pass with fixes / fail
+### 超级个体版
+你至少要看到：
+- 页面拆出来了
+- 目录骨架有了
+- 第一批文件建议有了
+- 下一句怎么继续补文件也有了
+
+### 团队协作版
+你至少要看到：
+- product 先产出页面和边界
+- builder 接着产出前端骨架
+- validator 最后能给出结论
+
+---
+
+## 🧪 这两个包的区别，一句话记住
+
+- 超级个体版：先快跑起来
+- 团队协作版：按角色接力推进
