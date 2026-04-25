@@ -50,6 +50,7 @@
 | `docs/04-从OpenClaw过来/迁移清单.md` | RM5-5 | RM5_MIGRATE_PAGE_CARDS | 迁移检查清单页 |
 | `docs/05-遇到问题/01-总览.md` | RM6-1 | Hermes 官方 Quickstart / Installation / FAQ、官方 Labels | 问题定位总入口页 |
 | `docs/05-遇到问题/02-安装更新与环境问题.md` | RM6-2 | Hermes 官方 Installation / Quickstart / FAQ、WSL2 官方说明、官方 Issue #6147 | 安装 / 更新 / 环境问题页 |
+| `docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md` | RM6-3 | Hermes 官方 AI Providers / FAQ / Quickstart、国内模型总览、自定义兼容接口页 | 模型 / Provider / 自定义 endpoint 问题页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
