@@ -224,7 +224,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请给我一句开场白，再
 
 下面这张图就是实际运行的并排终端双窗截图：同一条 query，唯一变量是右侧多了一份 `SOUL.md`。
 
-![并排真实终端截图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧只多一份 SOUL.md 后，Hermes 默认开始使用“先给结论、短句、列表”这一组长期风格](../../assets/rm2-4-soul-02-soul-behavior-diff.png)
+![终端前后对照图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧多出一份 SOUL.md 后，输出更贴近“先给结论、短句、列表”的长期风格](../../assets/rm2-4-soul-02-soul-behavior-diff.png)
 
 ---
 
