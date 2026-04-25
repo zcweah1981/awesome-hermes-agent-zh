@@ -362,7 +362,7 @@ CLI Commands Reference 已经说明：
 
 🚦 什么时候该跳转：
 
-- 如果慢的是所有请求，更可能是模型 / provider 问题，回 [03-模型 / Provider / 自定义 endpoint 问题](./03-模型 Provider 与自定义 endpoint 问题.md)
+- 如果慢的是所有请求，更可能是模型 / provider 问题，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 - 如果只是 Gateway 消息链路慢，不要停在本页，回入口 / Gateway 相关页
 
 ---
@@ -392,7 +392,7 @@ CLI Commands Reference 已经说明：
 
 🚦 什么时候该跳转：
 
-- 如果是 provider / model / endpoint 层，回 [03-模型 / Provider / 自定义 endpoint 问题](./03-模型 Provider 与自定义 endpoint 问题.md)
+- 如果是 provider / model / endpoint 层，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 - 如果你现在已经确认只是 CLI / TUI / 会话层，继续留在本页即可
 
 ## 🔹 官方依据
@@ -400,7 +400,7 @@ CLI Commands Reference 已经说明：
 - [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
 - [CLI Commands Reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
-- [02-认识 Hermes 的基本使用方式](../01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md)
+- [02-认识 Hermes 的基本使用方式](<../01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md>)
 - [03-常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
 
 ## ✅ 看完这页你应该能立刻回答什么
@@ -416,7 +416,7 @@ CLI Commands Reference 已经说明：
 
 完成后进入：
 
-- [05-Gateway / Messaging / 推送问题](./05-Gateway Messaging 与推送问题.md)
+- [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

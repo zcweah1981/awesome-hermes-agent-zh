@@ -327,7 +327,7 @@
 🚦 什么时候该跳转：
 
 - 回 [02-安装 / 更新 / 环境问题](./02-安装更新与环境问题.md)
-- 回 [07-配置 / Profiles / 环境隔离问题](./07-配置 Profiles 与环境隔离问题.md)
+- 回 [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
 - 回 [03-国内落地 / 01-总览](../03-国内落地/01-总览.md)
 
 ## 🔹 官方依据
@@ -336,7 +336,7 @@
 - [Installation](https://hermes-agent.nousresearch.com/docs/getting-started/installation)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
 - [03-国内落地 / 01-总览](../03-国内落地/01-总览.md)
-- [07-配置 / Profiles / 环境隔离问题](./07-配置 Profiles 与环境隔离问题.md)
+- [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
 
 ## ✅ 看完这页你应该能立刻回答什么
 

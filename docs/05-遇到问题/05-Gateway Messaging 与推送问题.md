@@ -201,7 +201,7 @@ Messaging Gateway 文档已经明确：
 
 🚦 什么时候该跳转：
 
-- 如果最终看起来更像 provider / model 层，回 [03-模型 / Provider / 自定义 endpoint 问题](./03-模型 Provider 与自定义 endpoint 问题.md)
+- 如果最终看起来更像 provider / model 层，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 - 如果只是某个平台具体配置错，回对应入口页
 
 ---
@@ -274,7 +274,7 @@ Messaging Gateway 文档列出了 in-chat commands，例如：
 
 🚦 什么时候该跳转：
 
-- 如果你真正想学的是本地交互，回 [04-CLI / TUI / 会话问题](./04-CLI TUI 与会话问题.md)
+- 如果你真正想学的是本地交互，回 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
 - 如果你要的是平台里的命令边界，留在本页
 
 ---
@@ -394,7 +394,7 @@ Messaging Gateway FAQ / 文档已经说明：
 
 完成后进入：
 
-- [06-Tools / Skills / MCP 问题](./06-Tools Skills MCP 问题.md)
+- [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

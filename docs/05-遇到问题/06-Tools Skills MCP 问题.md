@@ -99,7 +99,7 @@ hermes tools
 🚦 什么时候该跳转：
 
 - 如果你只是没分清 toolsets，留在本页
-- 如果你已经发现问题其实是 provider / model 报错，回 [03-模型 / Provider / 自定义 endpoint 问题](./03-模型 Provider 与自定义 endpoint 问题.md)
+- 如果你已经发现问题其实是 provider / model 报错，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 
 ---
 
@@ -210,7 +210,7 @@ CLI Commands Reference 已明确：
 🚦 什么时候该跳转：
 
 - 如果只是命令语义没分清，留在本页
-- 如果是交互式 slash 行为怪，回 [04-CLI / TUI / 会话问题](./04-CLI TUI 与会话问题.md)
+- 如果是交互式 slash 行为怪，回 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
 
 ---
 
@@ -241,7 +241,7 @@ CLI Commands Reference 已明确：
 🚦 什么时候该跳转：
 
 - 如果你已经确定是 MCP 配置边界问题，留在本页
-- 如果你想重新理解 MCP 主线，回 [05-把 Hermes 接进外部系统](../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md)
+- 如果你想重新理解 MCP 主线，回 [05-把 Hermes 接进外部系统](<../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md>)
 
 ---
 
@@ -303,7 +303,7 @@ MCP 页已经明确：
 
 🚦 什么时候该跳转：
 
-- 如果你发现根因更像 provider / model，回 [03-模型 / Provider / 自定义 endpoint 问题](./03-模型 Provider 与自定义 endpoint 问题.md)
+- 如果你发现根因更像 provider / model，回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
 - 如果是能力边界问题，留在本页
 
 ---
@@ -376,7 +376,7 @@ MCP 页已经明确：
 - [CLI Commands Reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
 - [04-自己造东西](../01-从这开始/04-自己造东西/01-总览.md)
-- [05-把 Hermes 接进外部系统](../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md)
+- [05-把 Hermes 接进外部系统](<../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md>)
 
 ## ✅ 看完这页你应该能立刻回答什么
 
@@ -391,7 +391,7 @@ MCP 页已经明确：
 
 完成后进入：
 
-- [07-配置 / Profiles / 环境隔离问题](./07-配置 Profiles 与环境隔离问题.md)
+- [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

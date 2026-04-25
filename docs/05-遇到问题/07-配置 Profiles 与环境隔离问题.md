@@ -367,7 +367,7 @@
 
 完成后进入：
 
-- [08-Docker / Nix / SSH / 远程后端问题](./08-Docker Nix SSH 与远程后端问题.md)
+- [08-Docker / Nix / SSH / 远程后端问题](<./08-Docker Nix SSH 与远程后端问题.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 
