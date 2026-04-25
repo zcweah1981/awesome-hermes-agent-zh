@@ -1,12 +1,12 @@
 # miniapp-lab 安装说明
 
-## 用途
-这个 pack 用来支持《现成方案 / 微信小程序助手》页面的默认实现路径。
+## 这个目录是什么
+`packs/miniapp-lab/` 不是一个单 pack，而是“微信小程序助手”方案家族目录。
 
-## 安装内容
-- SOUL.md
-- wechat-mini-program-assistant skill
-- templates / examples / runbook
+当前包含 3 类内容：
+- `01-super-individual/`：超级个体版（单 Agent）
+- `02-team-product/`、`03-team-builder/`、`04-team-api/`、`05-team-qa/`：团队协作版（多 Agent）
+- `99-solution-validator/`：方案验证包
 
 ## 用户怎么拿到
 ### 方式 1：直接 clone 当前仓库
@@ -15,62 +15,56 @@ git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
 cd awesome-hermes-agent-zh/packs/miniapp-lab
 ```
 
-### 方式 2：只拷贝这个 pack 目录
-把整个 `packs/miniapp-lab/` 目录拷到你本地任意位置，然后进入这个目录执行安装脚本。
+### 方式 2：只拷贝这个目录
+把整个 `packs/miniapp-lab/` 目录拷到你本地任意位置，再进入对应子目录安装。
+
+## 你应该选哪一个
+### 只想一个 Agent 先帮你把方案跑通
+选：`01-super-individual/`
+
+### 想按产品 / 实现 / 接口 / 测试分工
+选团队版：
+- `02-team-product/`
+- `03-team-builder/`
+- `04-team-api/`
+- `05-team-qa/`
+
+### 想验证这个方案到底是否成立
+选：`99-solution-validator/`
 
 ## 建议安装到哪里
-建议安装到一个单独 profile，而不是直接覆盖默认环境。
+建议安装到独立 profile，而不是默认环境。
 
 Hermes profile 默认目录通常是：
 ```text
 ~/.hermes/profiles/<profile-name>
 ```
 
-推荐先创建一个测试 profile：
+## 最小使用方式
+### 超级个体版
 ```bash
-hermes profile create miniapp-lab --clone
+cd 01-super-individual
+hermes profile create miniapp-solo --clone
+./install_to_profile.sh miniapp-solo
+miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/wechat-mini-program-solo-assistant/examples/sample-input.md)"
 ```
 
-## 怎么安装
-在 `packs/miniapp-lab/` 目录里执行：
+### 团队协作版
+分别安装：
+- `miniapp-product`
+- `miniapp-builder`
+- `miniapp-api`
+- `miniapp-qa`
 
-### 直接传 profile 名称
+### 方案验证
 ```bash
-./install_to_profile.sh miniapp-lab
+cd 99-solution-validator
+hermes profile create miniapp-validator --clone
+./install_to_profile.sh miniapp-validator
 ```
 
-### 或传完整路径
-```bash
-./install_to_profile.sh ~/.hermes/profiles/miniapp-lab
-```
-
-安装后会把下面两部分复制进去：
-- `SOUL.md` -> 目标 profile 根目录
-- `skills/solutions/wechat-mini-program-assistant/` -> 目标 profile 的 skills 目录
-
-## 怎么开始用
-### 1. 进入这个 profile
-```bash
-miniapp-lab chat --skills wechat-mini-program-assistant
-```
-
-### 2. 或者直接单次触发
-```bash
-miniapp-lab chat --skills wechat-mini-program-assistant -q "$(cat skills/solutions/wechat-mini-program-assistant/examples/sample-input.md)"
-```
-
-## 最小手工验证
-1. 安装 pack 到独立 profile
-2. 用 `sample-input.md` 触发一次
-3. 检查输出是否至少包含：
-   - 页面清单
-   - 功能清单
-   - 数据结构建议
-   - 接口建议
-   - 开发顺序
-   - 测试检查单
-4. 再看超级个体版 / 团队协作版边界是否清楚
-
-更完整的验证方式见：
-- `skills/solutions/wechat-mini-program-assistant/references/manual-test-runbook.md`
-- `skills/solutions/wechat-mini-program-assistant/templates/review-checklist.md`
+## 手工测试怎么做
+1. 先跑超级个体版一次
+2. 检查输出是否包含：页面、功能、数据、接口、顺序、测试 六类结果
+3. 再用验证包的 runbook/checklist 判断是否 pass
+4. 如果团队协作版要上线，再按 4 个角色包逐个验证交接物是否成立

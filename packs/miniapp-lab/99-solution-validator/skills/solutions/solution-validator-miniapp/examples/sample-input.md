@@ -1,0 +1,1 @@
+请验证“微信小程序助手”方案是否成立。检查页面、pack、sample-input、sample-output、manual-test-runbook、review-checklist，并输出 pass / pass with fixes / fail。
