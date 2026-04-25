@@ -57,6 +57,7 @@
 | `docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md` | RM6-7 | Hermes 官方 Configuration / FAQ / CLI Commands Reference、Profiles 页 | 配置 / Profiles / 环境隔离问题页 |
 | `docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md` | RM6-8 | Hermes 官方 Configuration / Installation / FAQ、部署与配置相关页 | Docker / Nix / SSH / 远程后端问题页 |
 | `docs/06-reference/01-总览.md` | RM7-1 | 用户提供的 Reference 模块详细文档、Hermes 官方各 Reference 原文入口 | Reference 模块总入口页 |
+| `docs/06-reference/02-CLI 命令参考.md` | RM7-2 | 用户提供的 Reference 模块详细文档、Hermes 官方 CLI Commands Reference | CLI 命令参考页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
