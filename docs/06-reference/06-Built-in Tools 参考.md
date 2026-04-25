@@ -295,7 +295,7 @@ Hermes tool registry 中已经注册好的工具集合。
 
 ## 10. 相关中文站页面
 
-- [06-reference / 01-总览](./01-总览.md)
+- [01-总览｜Reference 参考手册](./01-总览.md)
 - [07-Toolsets 参考](<./07-Toolsets 参考.md>)
 - [08-MCP 配置参考](<./08-MCP 配置参考.md>)
 - [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)

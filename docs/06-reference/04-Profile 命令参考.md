@@ -394,7 +394,7 @@ profile 管的是 Hermes home，不是 shell 当前目录。
 
 ## 10. 相关中文站页面
 
-- [06-reference / 01-总览](./01-总览.md)
+- [01-总览｜Reference 参考手册](./01-总览.md)
 - [02-CLI 命令参考](<./02-CLI 命令参考.md>)
 - [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>)
 - [04-从OpenClaw过来 / 05-从 OpenClaw 到 Hermes：迁移路径](<../04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md>)

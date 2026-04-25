@@ -332,7 +332,7 @@ tools:
 
 ## 10. 相关中文站页面
 
-- [06-reference / 01-总览](./01-总览.md)
+- [01-总览｜Reference 参考手册](./01-总览.md)
 - [06-Built-in Tools 参考](<./06-Built-in Tools 参考.md>)
 - [07-Toolsets 参考](<./07-Toolsets 参考.md>)
 - [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)

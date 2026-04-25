@@ -288,7 +288,7 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 
 ## 10. 相关中文站页面
 
-- [06-reference / 01-总览](./01-总览.md)
+- [01-总览｜Reference 参考手册](./01-总览.md)
 - [06-Built-in Tools 参考](<./06-Built-in Tools 参考.md>)
 - [08-MCP 配置参考](<./08-MCP 配置参考.md>)
 - [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)
