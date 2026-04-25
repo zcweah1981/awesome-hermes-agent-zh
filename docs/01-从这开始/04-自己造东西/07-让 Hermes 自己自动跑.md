@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你已经有一个明确、重复、按时间发生的任务，不想每次都手动再问一遍时，就可以把它交给 Hermes 的 Cron / Automation。
 
-![结构图：时间触发的 Cron job 会在 fresh session 里运行自包含 prompt，再把结果自动交付到目标位置](../../assets/rm2-5-cron-and-automation-01-scheduled-flow-map.png)
+![时间触发任务流示意图：Cron 触发器经自动化引擎在新会话中运行自包含 Prompt，结果交付到目标系统或下游应用，并接入日志与监控](../../assets/rm2-5-cron-and-automation-01-scheduled-flow-map.png)
 
 ---
 
