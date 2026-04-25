@@ -1,6 +1,6 @@
 # 02-CLI 命令参考
 
-> 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看官方 [Slash Commands Reference](https://hermes-agent.nousresearch.com/docs/reference/slash-commands)；等中文页开放后，再从本模块进入。
+> 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash Commands 参考.md>)。
 
 ## 1. 页面用途
 
@@ -457,7 +457,7 @@ hermes gateway <subcommand>
 
 完成后进入：
 
-- [03-Slash Commands 参考（待中文页开放前先看官方原文）](https://hermes-agent.nousresearch.com/docs/reference/slash-commands)
+- [03-Slash Commands 参考](<./03-Slash Commands 参考.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

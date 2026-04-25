@@ -58,6 +58,14 @@
 | `docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md` | RM6-8 | Hermes 官方 Configuration / Installation / FAQ、部署与配置相关页 | Docker / Nix / SSH / 远程后端问题页 |
 | `docs/06-reference/01-总览.md` | RM7-1 | 用户提供的 Reference 模块详细文档、Hermes 官方各 Reference 原文入口 | Reference 模块总入口页 |
 | `docs/06-reference/02-CLI 命令参考.md` | RM7-2 | 用户提供的 Reference 模块详细文档、Hermes 官方 CLI Commands Reference | CLI 命令参考页 |
+| `docs/06-reference/03-Slash Commands 参考.md` | RM7-3 | 用户提供的 Reference 模块详细文档、Hermes 官方 Slash Commands Reference | Slash Commands 参考页 |
+| `docs/06-reference/04-Profile 命令参考.md` | RM7-4 | 用户提供的 Reference 模块详细文档、Hermes 官方 Profile Commands Reference | Profile 命令参考页 |
+| `docs/06-reference/05-环境变量参考.md` | RM7-5 | 用户提供的 Reference 模块详细文档、Hermes 官方 Environment Variables Reference | 环境变量参考页 |
+| `docs/06-reference/06-Built-in Tools 参考.md` | RM7-6 | 用户提供的 Reference 模块详细文档、Hermes 官方 Built-in Tools Reference | Built-in Tools 参考页 |
+| `docs/06-reference/07-Toolsets 参考.md` | RM7-7 | 用户提供的 Reference 模块详细文档、Hermes 官方 Toolsets Reference | Toolsets 参考页 |
+| `docs/06-reference/08-MCP 配置参考.md` | RM7-8 | 用户提供的 Reference 模块详细文档、Hermes 官方 MCP Config Reference | MCP 配置参考页 |
+| `docs/06-reference/09-内置 Skills 目录.md` | RM7-9 | 用户提供的 Reference 模块详细文档、Hermes 官方 Bundled Skills Catalog | 内置 Skills 目录页 |
+| `docs/06-reference/10-可选 Skills 目录.md` | RM7-10 | 用户提供的 Reference 模块详细文档、Hermes 官方 Optional Skills Catalog | 可选 Skills 目录页 |
 
 ## 当前待补占位链接
 - `TODO_LINK_CHINA_ALIYUN`
