@@ -50,7 +50,7 @@ git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
 cd awesome-hermes-agent-zh/packs/miniapp-lab/01-super-individual
 hermes profile create miniapp-solo --clone
 bash ./install_to_profile.sh miniapp-solo
-miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/wechat-mini-program-solo-assistant/examples/sample-input.md)"
+miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
 ```
 
 ### 团队协作版

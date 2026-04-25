@@ -16,5 +16,7 @@ fi
 mkdir -p "$TARGET"
 mkdir -p "$TARGET/skills/solutions"
 cp SOUL.md "$TARGET/SOUL.md"
-cp -R skills/solutions/* "$TARGET/skills/solutions/"
+while IFS= read -r -d "" skill_dir; do
+  cp -R "$skill_dir" "$TARGET/skills/solutions/"
+done < <(find skills/solutions -mindepth 1 -maxdepth 2 -type d -exec test -f "{}/SKILL.md" \; -print0)
 echo "installed to $TARGET"
