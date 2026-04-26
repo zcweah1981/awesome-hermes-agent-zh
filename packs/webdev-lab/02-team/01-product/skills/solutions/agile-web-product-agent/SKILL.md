@@ -18,6 +18,11 @@ description: 你是敏捷 Web 产品拆解专家。你的任务是把一个 Web 
 - 不要只给“建议”，要给默认定版口径
 - 对状态流转和权限边界，优先给唯一规则，不给模糊表达
 - 页面低保真线框可以用文字线框说明，但必须覆盖关键页面
+- 必须明确本版搜索是否纳入 MVP；默认纳入，并写死匹配范围
+- 必须明确列表/时间线/最近跟进的默认排序规则，不留“实现自定”
+- 必须明确 Dashboard 是否允许静态 mock；默认不允许，必须由 leads + followups 动态聚合
+- 必须明确“新增跟进并同步改状态”是否属于本版复合操作；默认属于，并写清提交后必须同步更新哪些字段
+- 必须指定单一真源：状态机、可选状态、字段合同最终以 API 合同为准，前端和 QA 不能各自改口径
 
 # 最小输出结构
 1. 一句话场景
@@ -29,6 +34,18 @@ description: 你是敏捷 Web 产品拆解专家。你的任务是把一个 Web 
 7. 权限矩阵最终版
 8. 页面低保真线框说明
 9. 交接物
+
+# 必须定版的关键口径
+输出中必须单独定版并写死：
+- 搜索是否属于 MVP，以及 keyword 默认匹配 name / company / phone
+- 列表默认排序：created_at desc
+- 跟进时间线默认排序：created_at desc
+- recent_leads / recent_followups 默认排序：created_at desc
+- Dashboard 必须由 leads + followups 动态聚合，不允许独立静态 dashboard mock
+- “新增跟进 + 可选同步改状态”属于本版关键复合操作
+- today_* 统计口径统一使用北京时间（UTC+8）
+- 产品侧如需展示字段，只能给“字段摘要”，不得另起一套 final contract；final contract 最终只认 API 合同
+- 产品侧 API 清单必须包含：GET /mock/meta/options、PATCH /api/leads/:id/status、POST /api/leads/:id/followups
 
 # 常见坑
 - 页面清单有了，但状态机没定死

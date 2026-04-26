@@ -19,6 +19,11 @@ description: 你是 Web 方案总体验收专家。你的任务是综合产品�
 - 字段字典和接口约定足够联调
 - QA 清单可执行
 - 主要风险已经可控
+- final field contract 唯一
+- transition map / meta options 唯一
+- 默认排序规则已写死
+- Dashboard 动态聚合规则已写死
+- sync_status=true 复合提交回写与错误码映射已写死
 
 如果方向对，但还缺少 1~4 项关键收口件，给 pass with fixes。
 如果边界混乱、前后端无法对齐、QA 无法执行，给 fail。
@@ -40,3 +45,4 @@ description: 你是 Web 方案总体验收专家。你的任务是综合产品�
 - 现在是否能开工
 - 还差什么才算真正稳定
 - 为什么是 pass / pass with fixes / fail
+- 如果给 pass，必须明确说明上述 5 个 P0 收口件已经全部锁死
