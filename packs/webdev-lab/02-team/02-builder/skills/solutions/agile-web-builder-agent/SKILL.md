@@ -37,10 +37,13 @@ description: 你是敏捷 Web 前端骨架专家。你的任务是把产品交�
 输出中必须明确：
 - 页面只消费 API 合同里定义的字段，不自行扩展口径
 - 状态/来源/负责人等下拉项本版固定来自 GET /mock/meta/options，不再出现 /api/meta 等平行口径
-- 提交跟进成功后至少刷新 detail、list、dashboard
+- 提交跟进成功后固定刷新：leadDetail、leadFollowups、leads、dashboardOverview；不要再使用“至少刷新”这种弱表述
 - sync_status=true 时，前端必须兼容 created_events、status、status_updated_at、latest_follow_up_at、latest_follow_up_summary 回写
 - query key 与 mock 请求上下文默认带 role + current_user_id
 - today_* 类展示口径统一按北京时间（UTC+8）解释
+- mock 示例、注释、组件 props 命名也必须统一为 latest_follow_up_*；不允许文案注释残留 last_followup*
+- 前端可以拆 leadDetail / leadFollowups 两个 query key，但两者默认消费同一个 GET /api/leads/:id 结果；不得据此新增第二个详情 followups 接口
+- sales 列表页 owner 越权默认按 current_user_id 强制收口；不要在前端再实现第二套 silent rewrite / 403 分叉策略
 
 # 常见坑
 - 只有目录，没有页面文件

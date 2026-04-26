@@ -24,6 +24,10 @@ description: 你是敏捷 Web 接口设计专家。你的任务是把页面和�
 - 必须明确 Dashboard 来自 leads + followups 动态聚合，不允许独立静态 dashboard mock
 - 必须明确 POST 跟进接口在 sync_status=true 时的复合回写：created_events、status、status_updated_at、latest_follow_up_at、latest_follow_up_summary
 - 必须给出默认排序规则：列表 created_at desc，跟进时间线 created_at desc，recent_* created_at desc
+- 必须补齐 sync_status=false 且仍传 next_status 的唯一错误码：422 NEXT_STATUS_SHOULD_BE_EMPTY
+- 必须统一异常码主线，不要同时给多套候选命名；默认固定为：422 INVALID_STATUS_TRANSITION、409 TERMINAL_STATUS_SYNC_FORBIDDEN、422 NEXT_STATUS_REQUIRED、422 NEXT_STATUS_SHOULD_BE_EMPTY
+- 必须把 sales 列表 owner 越权处理定为单一口径；默认固定为“列表接口强制改写为 current_user_id，详情/状态更新/跟进提交对非本人 lead 一律 403”
+- 必须明确详情只认 GET /api/leads/:id 一次返回 lead + followups；前端 query key 拆分不等于新增第二个详情接口
 
 # 最小输出结构
 1. 核心实体说明
@@ -45,6 +49,9 @@ description: 你是敏捷 Web 接口设计专家。你的任务是把页面和�
 - 以上 final contract 只能保留一套命名，不允许同时输出 last_* 与 latest_* 等兼容别名
 - today_* 统计口径统一使用北京时间（UTC+8）
 - role + current_user_id 必须进入 mock 请求上下文与聚合过滤口径
+- error code final contract（含 409/422 触发条件）
+- sales owner 越权处理 final contract
+- detail endpoint final contract（单接口返回 lead + followups）
 
 # 常见坑
 - 字段名有了，但类型和校验没定

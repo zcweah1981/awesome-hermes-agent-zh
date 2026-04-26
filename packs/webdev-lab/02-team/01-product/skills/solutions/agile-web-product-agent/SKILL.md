@@ -46,6 +46,11 @@ description: 你是敏捷 Web 产品拆解专家。你的任务是把一个 Web 
 - today_* 统计口径统一使用北京时间（UTC+8）
 - 产品侧如需展示字段，只能给“字段摘要”，不得另起一套 final contract；final contract 最终只认 API 合同
 - 产品侧 API 清单必须包含：GET /mock/meta/options、PATCH /api/leads/:id/status、POST /api/leads/:id/followups
+- 对 POST /api/leads/:id/followups，产品侧必须明确 payload 至少包含 content、sync_status、next_status
+- 当 sync_status=true 时，产品侧必须明确为“同一接口内原子化完成跟进记录创建 + Lead 状态回写”；不要写成前端再发第二次状态更新请求
+- 产品侧描述最近跟进字段时，只允许 latest_follow_up_at / latest_follow_up_summary；禁止残留 last_followup_* 历史命名
+- 产品侧必须明确 sales 权限口径：列表页 owner 越权按 current_user_id 强制收口；详情/状态更新/跟进提交对非本人 lead 一律 403
+- 产品侧必须明确详情接口主线：本版只认 GET /api/leads/:id 一次返回 lead + followups，不再衍生第二个详情 followups 接口
 
 # 常见坑
 - 页面清单有了，但状态机没定死
