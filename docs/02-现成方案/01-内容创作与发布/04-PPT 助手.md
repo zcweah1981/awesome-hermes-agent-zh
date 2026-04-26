@@ -139,6 +139,30 @@
 
 ---
 
+## 🤝 团队协作版：适合谁，和单人版差在哪
+
+### 适合谁
+适合你已经不是一个人单独做 PPT，而是开始出现：
+- 有人定主线和页序
+- 有人负责逐页写内容
+- 有人负责润稿、口播和汇报前审校
+
+### 团队协作版怎么分工
+| 角色 | 它主要产出什么 | 下一个角色拿它干嘛 |
+|---|---|---|
+| 01-structure-planner | 主线、页序、每页职责 | 给 slide-writer 一个清楚的结构骨架 |
+| 02-slide-writer | 每页标题、要点、图表建议 | 给 polisher 一版逐页稿 |
+| 03-slide-polisher | 口播备注、删减建议、页间过渡 | 给 review 做汇报前把关 |
+| 04-review | 结构风险点、必须修改项、可讲判断 | 给 validator 做总体验收 |
+| 99-solution-validator | 最终结论：pass / pass with fixes / fail | 帮你判断这份 PPT 是否能进入正式汇报 |
+
+### 它和单人版最大的区别
+- 单人版：一个 Agent 先帮你压出整套逐页稿，重点是快
+- 团队协作版：多角色接力，重点是结构、逐页内容和汇报把关更稳
+
+
+---
+
 ## 📦 你最后会拿到什么
 
 别把它想得太抽象。
@@ -246,6 +270,8 @@ hermes -p ppt-solo chat --skills ppt-assistant -q "$(cat skills/solutions/ppt-as
 
 ## 📁 你现在直接能用的东西
 
+- 团队协作版 zip：[02-team.zip](../../../packs/ppt-lab/02-team.zip)
+- 团队协作版安装说明：[ppt-lab/02-team/README.md](../../../packs/ppt-lab/02-team/README.md)
 - 超级个体版 zip：[01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)
 - 输入示例：[sample-input.md](../../../packs/ppt-lab/01-super-individual/skills/solutions/ppt-assistant/examples/sample-input.md)
 - 输出示例：[sample-output.md](../../../packs/ppt-lab/01-super-individual/skills/solutions/ppt-assistant/examples/sample-output.md)
