@@ -270,6 +270,7 @@ webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/
 - 团队协作版 zip：[02-team.zip](../../../packs/webdev-lab/02-team.zip)
 - 超级个体版输入示例：[sample-input.md](../../../packs/webdev-lab/01-super-individual/skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)
 - 超级个体版输出示例：[sample-output.md](../../../packs/webdev-lab/01-super-individual/skills/solutions/agile-web-development-solo-assistant/examples/sample-output.md)
+- 团队版说明入口：[02-team README](../../../packs/webdev-lab/02-team/README.md)
 - 安装说明：[webdev-lab/INSTALL.md](../../../packs/webdev-lab/INSTALL.md)
 
 ---
