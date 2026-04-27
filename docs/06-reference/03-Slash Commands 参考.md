@@ -1,4 +1,4 @@
-# 03-Slash Commands 参考
+# 🧭 03-Slash Commands 参考
 
 > 这页查的是你已经进入 Hermes 对话之后，在会话里输入的 `/xxx` 命令。 如果你要查终端 shell 里的 `hermes ...`，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
 

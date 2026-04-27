@@ -1,4 +1,4 @@
-# 06-Built-in Tools 参考
+# 🧰 06-Built-in Tools 参考
 
 > 这页查的是 Hermes 内置工具（built-in tools），以及它们和 toolsets、平台、凭据之间的关系。 如果你要查 MCP server 暴露出来的工具，请看 [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)。
 

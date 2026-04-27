@@ -1,4 +1,4 @@
-# 02-CLI 命令参考
+# ⌨️ 02-CLI 命令参考
 
 > 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
 
