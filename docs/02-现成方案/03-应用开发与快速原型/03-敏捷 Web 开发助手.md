@@ -312,6 +312,12 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 | `hermes -p webdev-product chat --skills agile-web-product-agent -q "$(cat 01-product/skills/solutions/agile-web-product-agent/examples/sample-input.md)"` | `hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-builder/skills/solutions/agile-web-builder-agent/examples/sample-input.md)"` | `hermes -p webdev-validator chat --skills solution-validator-webdev -q "$(cat 99-solution-validator/skills/solutions/solution-validator-webdev/examples/sample-input.md)"` |
 | 先拿页面清单、操作流、功能边界 | 先拿前端目录骨架、页面文件建议、组件结构 | 最后拿到 `pass / pass with fixes / fail` |
 
+### 🚦 什么时候不要往下一棒走
+- 不要交第二棒：如果 `webdev-product` 还没把页面清单、操作流和功能边界压清楚。
+- 不要交第三棒：如果 `webdev-builder` 还没搭出前端目录骨架、页面文件建议和组件结构。
+- 不要交第四棒：如果 `webdev-api` 还没把数据结构、接口约定和请求返回字段补齐。
+- 不要交 Validator：如果 `webdev-qa` 还没把缺页、缺链路、风险点和可开工判断压清楚。
+
 ### 🛠️ 交付验收：怎么交给 Validator？
 当 `webdev-qa` 已经把缺页、缺链路、风险点和可开工判断压清楚以后，再把这一版交给 `webdev-validator`。
 

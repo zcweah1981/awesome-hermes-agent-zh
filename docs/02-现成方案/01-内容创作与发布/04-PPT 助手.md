@@ -324,6 +324,12 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 | `hermes -p ppt-structure chat --skills ppt-structure-planner -q "$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)"` | `hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writer/skills/solutions/ppt-slide-writer/examples/sample-input.md)"` | `hermes -p ppt-validator chat --skills solution-validator-ppt -q "$(cat 99-solution-validator/skills/solutions/solution-validator-ppt/examples/sample-input.md)"` |
 | 先拿主线、页序、每页职责 | 先拿每页标题、要点、图表建议 | 最后拿到 `pass / pass with fixes / fail` |
 
+### 🚦 什么时候不要往下一棒走
+- 不要交第二棒：如果 `ppt-structure` 还没把主线、页序和每页职责定清楚，整套讲法还是散的。
+- 不要交第三棒：如果 `ppt-slidewriter` 还没把每页标题、要点和图表建议写出来，只停在页序层。
+- 不要交第四棒：如果 `ppt-polish` 还没补齐口播备注、页间过渡和删减建议。
+- 不要交 Validator：如果 `ppt-review` 还没把结构风险、必须修改项和可讲判断压清楚。
+
 ### 🛠️ 交付验收：怎么交给 Validator？
 当 `ppt-review` 已经把结构风险、必须修改项和可讲判断压清楚以后，再把这一版交给 `ppt-validator`。
 
