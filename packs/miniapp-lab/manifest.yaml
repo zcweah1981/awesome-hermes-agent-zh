@@ -1,0 +1,16 @@
+title: 微信小程序助手
+category: 应用开发与快速原型
+summary: 帮你把一个微信小程序想法快速压成可开工骨架。
+modes:
+- solo
+- team
+doc: docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md
+install: packs/miniapp-lab/INSTALL.md
+download: packs/miniapp-lab/01-super-individual.zip
+status: published
+featured: true
+order: 1
+tags:
+- miniapp
+- wechat
+- prototype

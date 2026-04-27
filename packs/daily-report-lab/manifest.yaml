@@ -1,0 +1,15 @@
+title: 项目日报助手
+category: 办公效率与知识整理
+summary: 把项目进度整理成日报、汇总与跟进输出。
+modes:
+- solo
+doc: docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md
+install: packs/daily-report-lab/INSTALL.md
+download: packs/daily-report-lab/01-super-individual.zip
+status: published
+featured: false
+order: 4
+tags:
+- daily-report
+- project
+- office

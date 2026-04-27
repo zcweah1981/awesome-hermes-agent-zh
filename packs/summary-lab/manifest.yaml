@@ -1,0 +1,15 @@
+title: 资料总结助手
+category: 办公效率与知识整理
+summary: 把散资料压缩成结构化总结和发送版输出。
+modes:
+- solo
+doc: docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md
+install: packs/summary-lab/INSTALL.md
+download: packs/summary-lab/01-super-individual.zip
+status: published
+featured: false
+order: 5
+tags:
+- summary
+- knowledge
+- office

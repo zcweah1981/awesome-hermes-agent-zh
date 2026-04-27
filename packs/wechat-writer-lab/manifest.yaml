@@ -1,0 +1,16 @@
+title: 公众号写作助手
+category: 内容创作与发布
+summary: 帮你完成公众号文章选题、初稿、编辑与审校。
+modes:
+- solo
+- team
+doc: docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
+install: packs/wechat-writer-lab/INSTALL.md
+download: packs/wechat-writer-lab/01-super-individual.zip
+status: published
+featured: true
+order: 7
+tags:
+- wechat
+- article
+- content

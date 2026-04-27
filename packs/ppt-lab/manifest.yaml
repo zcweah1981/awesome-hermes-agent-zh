@@ -1,0 +1,16 @@
+title: PPT 助手
+category: 内容创作与发布
+summary: 帮你生成 PPT 结构、逐页要点与讲稿评审流程。
+modes:
+- solo
+- team
+doc: docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
+install: packs/ppt-lab/INSTALL.md
+download: packs/ppt-lab/01-super-individual.zip
+status: published
+featured: true
+order: 8
+tags:
+- ppt
+- slides
+- presentation

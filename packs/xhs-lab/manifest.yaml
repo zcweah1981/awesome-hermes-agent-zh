@@ -1,0 +1,16 @@
+title: 小红书内容助手
+category: 内容创作与发布
+summary: 帮你完成小红书选题、标题、正文和发布检查。
+modes:
+- solo
+- team
+doc: docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md
+install: packs/xhs-lab/INSTALL.md
+download: packs/xhs-lab/01-super-individual.zip
+status: published
+featured: true
+order: 6
+tags:
+- xhs
+- content
+- creator

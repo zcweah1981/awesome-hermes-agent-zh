@@ -1,0 +1,16 @@
+title: 敏捷 Web 开发助手
+category: 应用开发与快速原型
+summary: 帮你把 Web 应用想法拆成页面、接口和第一版开发骨架。
+modes:
+- solo
+- team
+doc: docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md
+install: packs/webdev-lab/INSTALL.md
+download: packs/webdev-lab/01-super-individual.zip
+status: published
+featured: true
+order: 2
+tags:
+- web
+- frontend
+- backend

@@ -1,0 +1,15 @@
+title: 会议纪要助手
+category: 办公效率与知识整理
+summary: 把会议输入快速整理成结构化纪要与跟进项。
+modes:
+- solo
+doc: docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
+install: packs/meeting-lab/INSTALL.md
+download: packs/meeting-lab/01-super-individual.zip
+status: published
+featured: false
+order: 3
+tags:
+- meeting
+- notes
+- office
