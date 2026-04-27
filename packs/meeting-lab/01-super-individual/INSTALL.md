@@ -18,22 +18,32 @@
 
 ## ⚡ 最短用法
 
-### 1）安装
+### 1）创建默认 profile
 ```bash
-bash ./install_to_profile.sh <profile-name-or-path>
+hermes profile create meeting-solo --clone
 ```
 
-### 2）直接试跑
+### 2）安装
 ```bash
-hermes -p <your-profile> chat --skills meeting-minutes-assistant -q "$(cat skills/solutions/meeting-minutes-assistant/examples/sample-input.md)"
+bash ./install_to_profile.sh meeting-solo
 ```
+
+### 3）直接试跑
+```bash
+hermes -p meeting-solo chat --skills meeting-minutes-assistant -q "$(cat skills/solutions/meeting-minutes-assistant/examples/sample-input.md)"
+```
+
+说明：
+- 页面默认示例 profile 名就是 `meeting-solo`
+- 如果你想换 profile 名，也可以把上面三条命令里的 `meeting-solo` 换成你自己的名字
 
 ---
 
 ## ✅ 跑完后你重点看什么
 
-不要只看它有没有出总结，重点看这 4 件事：
+不要只看它有没有出总结，重点看这 5 件事：
 - 有没有把背景、结论、待办、未决分开
-- 有没有补 owner 和截止时间
+- 有没有明确 owner 和截止时间
+- 有没有把讨论和定案区分开
 - 有没有给可发送版纪要正文
-- 有没有把会后动作补上
+- 有没有给下一轮继续补执行动作的方向

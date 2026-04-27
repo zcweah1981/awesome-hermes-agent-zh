@@ -18,22 +18,32 @@
 
 ## ⚡ 最短用法
 
-### 1）安装
+### 1）创建默认 profile
 ```bash
-bash ./install_to_profile.sh <profile-name-or-path>
+hermes profile create summary-solo --clone
 ```
 
-### 2）直接试跑
+### 2）安装
 ```bash
-hermes -p <your-profile> chat --skills material-summary-assistant -q "$(cat skills/solutions/material-summary-assistant/examples/sample-input.md)"
+bash ./install_to_profile.sh summary-solo
 ```
+
+### 3）直接试跑
+```bash
+hermes -p summary-solo chat --skills material-summary-assistant -q "$(cat skills/solutions/material-summary-assistant/examples/sample-input.md)"
+```
+
+说明：
+- 页面默认示例 profile 名就是 `summary-solo`
+- 如果你想换 profile 名，也可以把上面三条命令里的 `summary-solo` 换成你自己的名字
 
 ---
 
 ## ✅ 跑完后你重点看什么
 
-不要只看它有没有出摘要，重点看这 4 件事：
-- 有没有把背景、结论、待确认、建议动作分开
-- 有没有把真正重点讲清楚
+不要只看它有没有出摘要，重点看这 5 件事：
+- 有没有把背景、结论、保留项、待确认项分开
+- 有没有明确哪些才是真正重点
+- 有没有把建议动作讲清楚
 - 有没有给可发送版总结正文
-- 有没有把后续补材料动作补上
+- 有没有给下一轮继续补决策版总结的方向
