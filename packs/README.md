@@ -6,6 +6,7 @@
 - 可直接下载的方案包
 - 可解压后安装进 Hermes profile 的工作流包
 - 面向具体任务的 solo / team 运行包
+- 文档页对应的可执行落地层
 
 如果你已经在 `docs/02-现成方案/` 里找到某个方案，下一步通常就会进入这里。
 
@@ -47,12 +48,32 @@
 
 ## 📚 当前已开放的方案包
 
-| 方案包 | 适合什么任务 | 当前可用模式 | 默认入口 |
-|---|---|---|---|
-| [miniapp-lab](./miniapp-lab/INSTALL.md) | 微信小程序需求梳理、产品到开发接力 | Solo + Team | [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md) |
-| [meeting-lab](./meeting-lab/INSTALL.md) | 会议纪要整理与结构化输出 | Solo | [meeting-lab/INSTALL.md](./meeting-lab/INSTALL.md) |
-| [daily-report-lab](./daily-report-lab/INSTALL.md) | 项目日报整理、汇总、跟进输出 | Solo | [daily-report-lab/INSTALL.md](./daily-report-lab/INSTALL.md) |
-| [ppt-lab](./ppt-lab/INSTALL.md) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+| 方案包 | 对应文档页 | 适合什么任务 | 当前可用模式 | 默认入口 |
+|---|---|---|---|---|
+| [miniapp-lab](./miniapp-lab/INSTALL.md) | [微信小程序助手](../docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md) | 微信小程序需求梳理、产品到开发接力 | Solo + Team | [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md) |
+| [webdev-lab](./webdev-lab/INSTALL.md) | [敏捷 Web 开发助手](../docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md) | Web 应用骨架、页面、接口和开发接力 | Solo + Team | [webdev-lab/INSTALL.md](./webdev-lab/INSTALL.md) |
+| [meeting-lab](./meeting-lab/INSTALL.md) | [会议纪要助手](../docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md) | 会议纪要整理与结构化输出 | Solo | [meeting-lab/INSTALL.md](./meeting-lab/INSTALL.md) |
+| [daily-report-lab](./daily-report-lab/INSTALL.md) | [项目日报助手](../docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md) | 项目日报整理、汇总、跟进输出 | Solo | [daily-report-lab/INSTALL.md](./daily-report-lab/INSTALL.md) |
+| [summary-lab](./summary-lab/INSTALL.md) | [资料总结助手](../docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md) | 散资料压缩、结构化总结、发送版总结输出 | Solo | [summary-lab/INSTALL.md](./summary-lab/INSTALL.md) |
+| [xhs-lab](./xhs-lab/INSTALL.md) | [小红书内容助手](../docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md) | 小红书选题、标题、正文、配图提示、发布检查 | Solo + Team | [xhs-lab/INSTALL.md](./xhs-lab/INSTALL.md) |
+| [wechat-writer-lab](./wechat-writer-lab/INSTALL.md) | [公众号写作助手](../docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md) | 公众号文章选题、初稿、编辑、审校 | Solo + Team | [wechat-writer-lab/INSTALL.md](./wechat-writer-lab/INSTALL.md) |
+| [ppt-lab](./ppt-lab/INSTALL.md) | [PPT 助手](../docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+
+## 🗂️ 按方案类型快速分组
+
+### 内容创作与发布
+- [xhs-lab](./xhs-lab/INSTALL.md) → 小红书内容助手
+- [wechat-writer-lab](./wechat-writer-lab/INSTALL.md) → 公众号写作助手
+- [ppt-lab](./ppt-lab/INSTALL.md) → PPT 助手
+
+### 办公效率与知识整理
+- [meeting-lab](./meeting-lab/INSTALL.md) → 会议纪要助手
+- [daily-report-lab](./daily-report-lab/INSTALL.md) → 项目日报助手
+- [summary-lab](./summary-lab/INSTALL.md) → 资料总结助手
+
+### 应用开发与快速原型
+- [miniapp-lab](./miniapp-lab/INSTALL.md) → 微信小程序助手
+- [webdev-lab](./webdev-lab/INSTALL.md) → 敏捷 Web 开发助手
 
 ## 🔍 每个包里通常会有什么
 
@@ -87,6 +108,7 @@
 ### 如果你要做应用 / 原型 / 小程序类任务
 直接进：
 - [miniapp-lab](./miniapp-lab/INSTALL.md)
+- [webdev-lab](./webdev-lab/INSTALL.md)
 
 ### 如果你要做会议整理
 直接进：
@@ -96,8 +118,14 @@
 直接进：
 - [daily-report-lab](./daily-report-lab/INSTALL.md)
 
-### 如果你要做 PPT 相关任务
+### 如果你要做资料整理 / 总结类输出
 直接进：
+- [summary-lab](./summary-lab/INSTALL.md)
+
+### 如果你要做内容发布
+直接进：
+- [xhs-lab](./xhs-lab/INSTALL.md)
+- [wechat-writer-lab](./wechat-writer-lab/INSTALL.md)
 - [ppt-lab](./ppt-lab/INSTALL.md)
 
 ## 🧠 Solo 和 Team 怎么选
@@ -109,8 +137,28 @@
 
 ### 选 Team，如果你现在已经明确要：
 - 多角色接力
-- 把任务拆给 product / writer / api / qa / validator
+- 把任务拆给 product / writer / builder / api / qa / validator
 - 跑完整流程，而不是只试一个单点输出
+
+### 当前只提供 Solo 的包
+- `meeting-lab`
+- `daily-report-lab`
+- `summary-lab`
+
+### 当前同时提供 Solo + Team 的包
+- `miniapp-lab`
+- `webdev-lab`
+- `xhs-lab`
+- `wechat-writer-lab`
+- `ppt-lab`
+
+## 🔗 如果你想先回文档再决定
+
+先回这些 docs 页会更稳：
+- [02-现成方案总览](../docs/02-现成方案/01-总览.md)
+- [内容创作与发布](../docs/02-现成方案/01-内容创作与发布/01-总览.md)
+- [办公效率与知识整理](../docs/02-现成方案/02-办公效率与知识整理/01-总览.md)
+- [应用开发与快速原型](../docs/02-现成方案/03-应用开发与快速原型/01-总览.md)
 
 ## 🚫 这一层不负责什么
 
@@ -132,8 +180,12 @@
 2. 确认你要试的方案页
 3. 再回到对应 pack：
    - [miniapp-lab](./miniapp-lab/INSTALL.md)
+   - [webdev-lab](./webdev-lab/INSTALL.md)
    - [meeting-lab](./meeting-lab/INSTALL.md)
    - [daily-report-lab](./daily-report-lab/INSTALL.md)
+   - [summary-lab](./summary-lab/INSTALL.md)
+   - [xhs-lab](./xhs-lab/INSTALL.md)
+   - [wechat-writer-lab](./wechat-writer-lab/INSTALL.md)
    - [ppt-lab](./ppt-lab/INSTALL.md)
 
 如果你已经明确要先试一个，默认最适合快速起跑的是：
@@ -143,7 +195,7 @@
 
 看完这一页，你应该已经能立刻判断：
 - `packs/` 是方案包目录，不是 docs 正文目录
-- 当前有哪些可直接下载和安装的方案包
+- 当前一共开放了哪些可直接下载和安装的方案包
 - 我该先进哪个 pack
 - 我应该先选 solo 还是 team
 - 我下一步应该先看哪个 `INSTALL.md`
