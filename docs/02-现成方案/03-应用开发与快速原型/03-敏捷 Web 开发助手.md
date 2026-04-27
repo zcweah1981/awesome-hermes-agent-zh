@@ -306,6 +306,24 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 - `webdev-qa` 负责开工前把关
 - `webdev-validator` 最后只回答一件事：这套 Web 方案现在能不能继续推进
 
+### 🛠️ 交付验收：怎么交给 Validator？
+当 `webdev-qa` 已经把缺页、缺链路、风险点和可开工判断压清楚以后，再把这一版交给 `webdev-validator`。
+
+交过去前，最少要准备这 3 类东西：
+- 当前方案稿：页面清单、前端目录骨架、页面文件建议
+- 技术占位：数据结构、接口约定、请求返回字段
+- QA 结论：风险点、必须补的项、当前是否建议继续推进
+
+`webdev-validator` 主要只看这几件事：
+- 这套 Web 方案现在是不是已经能继续推进
+- 页面、接口、操作流和交接物是不是已经闭合
+- 有没有明显缺页、缺链路、缺字段或实现顺序错位的问题
+
+如果返回的是 `pass with fixes`，默认这样回：
+- 页面骨架、目录、前端落地物还没收干净：回 `webdev-builder`
+- 接口字段、数据结构、请求返回约定还没压清：回 `webdev-api`
+- 风险点、缺链路、开工判断还没压清：回 `webdev-qa`
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说
