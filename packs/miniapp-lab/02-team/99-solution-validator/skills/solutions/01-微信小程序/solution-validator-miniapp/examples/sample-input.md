@@ -1,1 +1,22 @@
-请验证“微信小程序助手”方案是否成立。检查页面、pack、sample-input、sample-output、manual-test-runbook、review-checklist，并输出 pass / pass with fixes / fail。
+# sample-input
+
+请验证“微信小程序助手”团队协作版是否已经达到 pass / pass with fixes / fail。
+
+请基于以下最小交付物判断：
+
+## product 交付摘要
+- 页面：活动列表、活动详情、报名表单、报名成功页、我的报名、报名详情
+- MVP 不做支付、优惠券、分销、推送、后台
+
+## builder 交付摘要
+- 已给出页面目录骨架、组件建议、页面实现顺序、主状态说明
+
+## api 交付摘要
+- 已给出 activity / signup 字段
+- 已给出活动列表、活动详情、报名提交、我的报名列表、报名详情接口
+- 已定义 404 / 409 / 422 主错误码
+
+## qa 交付摘要
+- 已覆盖主链路、状态、错误场景与阻断项
+
+请输出：最终结论、判断理由、主要缺口、修正建议、是否继续推进。
