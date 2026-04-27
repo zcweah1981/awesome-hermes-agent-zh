@@ -1,6 +1,6 @@
 # 02-CLI 命令参考
 
-> 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash Commands 参考.md>)。
+> 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
 
 ## 1. 页面用途
 
@@ -45,7 +45,7 @@
 
 如果你只是刚入门，还没建立 Hermes 使用心智，建议先看：
 
-- [01-从这开始 / 02-开始上手 / 02-认识 Hermes 的基本使用方式](<../01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md>)
+- [01-从这开始 / 02-开始上手 / 02-认识 Hermes 的基本使用方式](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>)
 - [01-从这开始 / 02-开始上手 / 03-常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
 
 ## 4. 核心概念中文解释
@@ -431,11 +431,11 @@ hermes gateway <subcommand>
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
 | 安装、更新、环境异常 | [05-遇到问题 / 02-安装更新与环境问题](../05-遇到问题/02-安装更新与环境问题.md) |
-| `hermes model`、provider、endpoint 报错 | [05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题](<../05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md>) |
-| slash command、CLI、会话异常 | [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-遇到问题/04-CLI TUI 与会话问题.md>) |
-| gateway / messaging 不通 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-遇到问题/05-Gateway Messaging 与推送问题.md>) |
-| tools / skills / MCP 不生效 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| profile / config / 环境隔离混乱 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>) |
+| `hermes model`、provider、endpoint 报错 | [05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>) |
+| slash command、CLI、会话异常 | [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>) |
+| gateway / messaging 不通 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>) |
+| tools / skills / MCP 不生效 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| profile / config / 环境隔离混乱 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -448,16 +448,16 @@ hermes gateway <subcommand>
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [01-从这开始 / 02-开始上手 / 02-认识 Hermes 的基本使用方式](<../01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md>)
+- [01-从这开始 / 02-开始上手 / 02-认识 Hermes 的基本使用方式](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>)
 - [01-从这开始 / 02-开始上手 / 03-常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
-- [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-遇到问题/04-CLI TUI 与会话问题.md>)
-- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>)
+- [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
+- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 
 ## ➡️ 下一步
 
 完成后进入：
 
-- [03-Slash Commands 参考](<./03-Slash Commands 参考.md>)
+- [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

@@ -57,7 +57,7 @@ hermes --continue
 怎么理解结果：
 - 连 `hermes` 都进不去：先回 [02-安装 / 更新 / 环境问题](./02-安装更新与环境问题.md)
 - 能进，但 slash / 显示 / 恢复行为怪：继续留在本页
-- 能进、交互也正常，但结果慢、报鉴权、报 endpoint：更像 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 能进、交互也正常，但结果慢、报鉴权、报 endpoint：更像 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 
 ## ✅ 先做什么：4 步排查清单
 
@@ -126,7 +126,7 @@ hermes --tui
 - 只有一个怪 → 更像特定入口体验或交互差异
 
 什么时候该跳转：
-- 两个入口都异常，而且基础聊天也跑不顺：交叉回看 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 两个入口都异常，而且基础聊天也跑不顺：交叉回看 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - classic CLI 正常、只有 TUI 体验怪：继续留在本页
 
 ---
@@ -253,7 +253,7 @@ hermes
 - 当前会话上下文 ≠ memory / skills / profile
 
 什么时候该跳转：
-- 你怀疑是 profile、memory、config 层：后续更该去 [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
+- 你怀疑是 profile、memory、config 层：后续更该去 [07-配置 / Profiles / 环境隔离问题](<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 - 只是会话恢复预期不对：继续留在本页
 
 ---
@@ -278,8 +278,8 @@ hermes
 - 终端显示让你误以为没反馈
 
 什么时候该跳转：
-- 所有请求都慢，更像模型 / provider 问题：回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
-- 只是 Gateway 消息链路慢：回 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
+- 所有请求都慢，更像模型 / provider 问题：回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
+- 只是 Gateway 消息链路慢：回 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
 
 ---
 
@@ -300,7 +300,7 @@ hermes
 - 能正常发请求，但结果慢、报鉴权、报 endpoint、报模型 → 更像 provider / model 层
 
 什么时候该跳转：
-- 是 provider / model / endpoint 层：回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 是 provider / model / endpoint 层：回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 已确认只是 CLI / TUI / 会话层：继续留在本页
 
 ## 🔹 官方依据
@@ -308,7 +308,7 @@ hermes
 - [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
 - [CLI Commands Reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
-- [02-认识 Hermes 的基本使用方式](<../01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md>)
+- [02-认识 Hermes 的基本使用方式](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/02-%E8%AE%A4%E8%AF%86%20Hermes%20%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F.md>)
 - [03-常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
 
 ## ✅ 看完这页，你应该立刻能判断
@@ -320,6 +320,6 @@ hermes
 
 ## ➡️ 下一步
 完成后进入：
-- [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
+- [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
 如果你想先回到上一阶段入口重新确认位置：
 - [01-总览](./01-总览.md)

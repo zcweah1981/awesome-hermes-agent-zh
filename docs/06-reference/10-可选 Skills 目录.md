@@ -1,6 +1,6 @@
 # 10-可选 Skills 目录
 
-> 这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)。
+> 这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
 
 ## 1. 页面用途
 
@@ -315,9 +315,9 @@ Reference 页只帮你判断“有什么、适合谁、什么时候用”。
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
-| optional skill 安装失败 / 不生效 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| MCP 类 skill 不工作 | [08-MCP 配置参考](<./08-MCP 配置参考.md>) |
-| 不知道该不该装某个 optional skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>) |
+| optional skill 安装失败 / 不生效 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| MCP 类 skill 不工作 | [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>) |
+| 不知道该不该装某个 optional skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -327,10 +327,10 @@ Reference 页只帮你判断“有什么、适合谁、什么时候用”。
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)
-- [08-MCP 配置参考](<./08-MCP 配置参考.md>)
-- [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
-- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)
+- [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)
+- [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)
+- [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>)
+- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 
 ## ➡️ 下一步
 

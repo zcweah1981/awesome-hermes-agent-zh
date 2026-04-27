@@ -1,6 +1,6 @@
 # 04-Profile 命令参考
 
-> 这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI 命令参考.md>)。
+> 这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
 
 ## 1. 页面用途
 
@@ -42,8 +42,8 @@
 
 如果你只是刚建立多环境意识，建议结合这几页一起看：
 
-- [02-CLI 命令参考](<./02-CLI 命令参考.md>)
-- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>)
+- [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)
+- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 
 ## 4. 核心概念中文解释
 
@@ -380,9 +380,9 @@ profile 管的是 Hermes home，不是 shell 当前目录。
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
-| profile / config / 环境隔离混乱 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>) |
-| profile 下模型 / endpoint 不对 | [05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题](<../05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md>) |
-| tools / skills 在不同 profile 下表现不一致 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
+| profile / config / 环境隔离混乱 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
+| profile 下模型 / endpoint 不对 | [05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>) |
+| tools / skills 在不同 profile 下表现不一致 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -395,10 +395,10 @@ profile 管的是 Hermes home，不是 shell 当前目录。
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [02-CLI 命令参考](<./02-CLI 命令参考.md>)
-- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>)
-- [04-从OpenClaw过来 / 05-从 OpenClaw 到 Hermes：迁移路径](<../04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md>)
-- [04-从OpenClaw过来 / 06-OpenClaw 用户常见问题与检查清单](<../04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md>)
+- [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)
+- [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
+- [04-从OpenClaw过来 / 05-从 OpenClaw 到 Hermes：迁移路径](<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
+- [04-从OpenClaw过来 / 06-OpenClaw 用户常见问题与检查清单](<../04-%E4%BB%8EOpenClaw%E8%BF%87%E6%9D%A5/06-OpenClaw%20%E7%94%A8%E6%88%B7%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95.md>)
 
 ## ➡️ 下一步
 

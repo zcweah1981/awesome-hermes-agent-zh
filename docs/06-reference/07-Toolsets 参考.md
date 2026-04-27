@@ -1,6 +1,6 @@
 # 07-Toolsets 参考
 
-> 这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 [06-Built-in Tools 参考](<./06-Built-in Tools 参考.md>)。
+> 这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)。
 
 ## 1. 页面用途
 
@@ -276,9 +276,9 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
-| toolset 开了但工具没出现 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| messaging 平台工具和 CLI 不一致 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-遇到问题/05-Gateway Messaging 与推送问题.md>) |
-| 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>) |
+| toolset 开了但工具没出现 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| messaging 平台工具和 CLI 不一致 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>) |
+| 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -289,16 +289,16 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [06-Built-in Tools 参考](<./06-Built-in Tools 参考.md>)
-- [08-MCP 配置参考](<./08-MCP 配置参考.md>)
-- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)
-- [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-遇到问题/05-Gateway Messaging 与推送问题.md>)
+- [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)
+- [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)
+- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
+- [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
 
 ## ➡️ 下一步
 
 完成后进入：
 
-- [08-MCP 配置参考](<./08-MCP 配置参考.md>)
+- [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

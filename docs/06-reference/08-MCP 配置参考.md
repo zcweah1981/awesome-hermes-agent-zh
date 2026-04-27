@@ -1,6 +1,6 @@
 # 08-MCP 配置参考
 
-> 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)。
+> 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
 
 ## 1. 页面用途
 
@@ -320,10 +320,10 @@ tools:
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
-| MCP server 连不上 / 调不通 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| 工具不出现 / 过滤后结果异常 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| gateway / 平台里行为不一致 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-遇到问题/05-Gateway Messaging 与推送问题.md>) |
-| 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-遇到问题/07-配置 Profiles 与环境隔离问题.md>) |
+| MCP server 连不上 / 调不通 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| 工具不出现 / 过滤后结果异常 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| gateway / 平台里行为不一致 | [05-遇到问题 / 05-Gateway Messaging 与推送问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>) |
+| 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -333,16 +333,16 @@ tools:
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [06-Built-in Tools 参考](<./06-Built-in Tools 参考.md>)
-- [07-Toolsets 参考](<./07-Toolsets 参考.md>)
-- [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)
-- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)
+- [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)
+- [07-Toolsets 参考](<./07-Toolsets%20%E5%8F%82%E8%80%83.md>)
+- [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)
+- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 
 ## ➡️ 下一步
 
 完成后进入：
 
-- [09-内置 Skills 目录](<./09-内置 Skills 目录.md>)
+- [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

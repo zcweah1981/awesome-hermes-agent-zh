@@ -165,7 +165,7 @@
 ## ➡️ 下一步
 
 完成后进入：
-- [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-从OpenClaw过来 | 总览](./01-总览.md)

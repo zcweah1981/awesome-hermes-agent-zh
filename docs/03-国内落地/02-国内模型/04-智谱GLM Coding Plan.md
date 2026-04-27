@@ -35,7 +35,7 @@
 |---|---|
 | 我只想先最低门槛把 Hermes 跑起来 | 先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md) |
 | 我已经认准 GLM / z.ai | 留在这页继续 |
-| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](./02-阿里云百炼Token plan.md) 或 [03-腾讯云 Token Plan](./03-腾讯云Token Plan.md) |
+| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>) 或 [03-腾讯云 Token Plan](<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>) |
 | 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
 如果你只记一句话：
@@ -138,11 +138,11 @@ Hermes 官方 provider 文档已经明确列出：
 - 写入：
 
 ```bash
-GLM_API_KEY=你的真实密钥
+GLM_API_KEY=***
 ```
 
 看到什么算成功：
-- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=你的真实密钥`
+- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=***
 
 失败先查什么：
 - 是否写错变量名
@@ -238,7 +238,7 @@ hermes model
 ## ➡️ 下一步
 
 完成后进入：
-- [05-MiniMax Token Plan](./05-MiniMax Token Plan.md)
+- [05-MiniMax Token Plan](<./05-MiniMax%20Token%20Plan.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [02-国内模型总览](./01-总览.md)

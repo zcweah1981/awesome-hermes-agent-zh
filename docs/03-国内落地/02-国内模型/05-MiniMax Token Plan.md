@@ -35,7 +35,7 @@
 |---|---|
 | 我只想先最低门槛把 Hermes 跑起来 | 先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md) |
 | 我已经认准 MiniMax | 留在这页继续 |
-| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](./02-阿里云百炼Token plan.md) 或 [03-腾讯云 Token Plan](./03-腾讯云Token Plan.md) |
+| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>) 或 [03-腾讯云 Token Plan](<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>) |
 | 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
 如果你只记一句话：

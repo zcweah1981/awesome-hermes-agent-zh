@@ -1,6 +1,6 @@
 # 09-内置 Skills 目录
 
-> 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-可选 Skills 目录.md>)。
+> 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
 
 ## 1. 页面用途
 
@@ -258,9 +258,9 @@ Reference 页帮你查“有哪些”，但具体是否启用、在哪个平台�
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
-| skill 不显示 / skill command 不出现 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>) |
-| slash command 看起来不对 | [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-遇到问题/04-CLI TUI 与会话问题.md>) |
-| 不知道该用哪个 skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>) |
+| skill 不显示 / skill command 不出现 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
+| slash command 看起来不对 | [05-遇到问题 / 04-CLI TUI 与会话问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>) |
+| 不知道该用哪个 skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
 ## 9. 官方原文链接
@@ -270,15 +270,15 @@ Reference 页帮你查“有哪些”，但具体是否启用、在哪个平台�
 ## 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
-- [10-可选 Skills 目录](<./10-可选 Skills 目录.md>)
-- [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
-- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-遇到问题/06-Tools Skills MCP 问题.md>)
+- [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)
+- [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>)
+- [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 
 ## ➡️ 下一步
 
 完成后进入：
 
-- [10-可选 Skills 目录](<./10-可选 Skills 目录.md>)
+- [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 

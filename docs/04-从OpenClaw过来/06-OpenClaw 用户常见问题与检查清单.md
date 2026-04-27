@@ -21,13 +21,13 @@
 - 共存边界越来越乱
 - 一边保留 OpenClaw，一边引入 Hermes，但职责越改越糊
 - 迁移时一次动了太多变量
-- 👉 先回：[OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- 👉 先回：[OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
 
 ### 🛠️ Hermes 化结构层
 - 长 prompt 搬过去以后效果更差
 - skill 不生效 / 不稳定
 - examples、template、SOUL 没补齐
-- 👉 先回：[从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- 👉 先回：[从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
 
 ### 🔐 模型 / 入口层
 - 模型报错、额度问题、endpoint 不对
@@ -40,9 +40,9 @@
 - 我不确定是 memory 问题，还是 SOUL / template / examples 问题
 - 我不确定是工具开关问题，还是模型问题
 - 👉 先看：
-  - [常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
-  - [让 Hermes 记住你](<../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md>)
-  - [让 Hermes 更像你](<../01-从这开始/03-玩出花样/02-让 Hermes 更像你.md>)
+  - [常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>)
+  - [让 Hermes 记住你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>)
+  - [让 Hermes 更像你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>)
 
 ---
 
@@ -66,7 +66,7 @@
 
 如果你现在勾不满，先不要继续往后硬走。
 先回：
-- [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
 
 ### 共存中检查
 如果你还在共存阶段，先看这些条件是否成立：
@@ -78,7 +78,7 @@
 - 已经知道当前保留哪个入口继续试错
 
 如果这些还不稳，先回：
-- [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- [OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
 
 ### Hermes 化检查
 如果你已经开始迁移，继续检查：
@@ -105,7 +105,7 @@
 
 ### 什么时候该回哪页
 - 还在探索 → 回 [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md)
-- 已经开始稳定，但还不想搬家 → 回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- 已经开始稳定，但还不想搬家 → 回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
 
 ---
 
@@ -122,8 +122,8 @@
 4. 有没有把长期默认人格写进 SOUL / Profile
 
 ### 什么时候该回哪页
-- 你还在“复制 prompt”阶段 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
-- 你怀疑是人格边界问题 → 回 [让 Hermes 更像你](<../01-从这开始/03-玩出花样/02-让 Hermes 更像你.md>)
+- 你还在“复制 prompt”阶段 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
+- 你怀疑是人格边界问题 → 回 [让 Hermes 更像你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>)
 
 ---
 
@@ -140,8 +140,8 @@
 4. 你拆出来的是“重复动作”，还是只是“更长的说明”
 
 ### 什么时候该回哪页
-- 需要补 skill 基础理解 → 回 [常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
-- 需要回看迁移步骤 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- 需要补 skill 基础理解 → 回 [常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>)
+- 需要回看迁移步骤 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
 
 ---
 
@@ -164,8 +164,8 @@
 5. 最后才考虑换模型
 
 ### 什么时候该回哪页
-- 补 examples / template / 结构 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
-- 补人格边界 → 回 [让 Hermes 更像你](<../01-从这开始/03-玩出花样/02-让 Hermes 更像你.md>)
+- 补 examples / template / 结构 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
+- 补人格边界 → 回 [让 Hermes 更像你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/02-%E8%AE%A9%20Hermes%20%E6%9B%B4%E5%83%8F%E4%BD%A0.md>)
 - 补模型选择 → 回 [03-国内落地 / 02-国内模型 / 01-总览](../03-国内落地/02-国内模型/01-总览.md)
 
 ---
@@ -184,8 +184,8 @@
 5. 还是不稳定 → 退回共存模式，保留一个最小稳定场景继续试
 
 ### 什么时候该回哪页
-- 结构没补齐 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
-- 共存边界已经乱了 → 回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+- 结构没补齐 → 回 [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
+- 共存边界已经乱了 → 回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
 - 模型 / 入口经常报错 → 回 [03-国内落地总览](../03-国内落地/01-总览.md)
 
 ---
@@ -227,7 +227,7 @@
 - 当前问题到底该修 memory，还是该修 SOUL / template / examples
 
 如果你对记忆层理解还不稳，回看：
-- [让 Hermes 记住你](<../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md>)
+- [让 Hermes 记住你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>)
 
 ---
 
@@ -240,7 +240,7 @@
 2. 只保留一个最小验证案例
 3. 只保留一个当前最稳的模型与入口
 4. 先补 examples / template / SOUL
-5. 还不稳，就退回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
+5. 还不稳，就退回 [OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
 
 这里的硬规则是：
 - 可以退回共存，不等于失败
@@ -252,13 +252,13 @@
 
 如果你已经知道问题属于哪类，直接回对应页面：
 - 还没判断清楚该不该迁移 → [继续用、共存，还是迁移](./03-继续用、共存，还是迁移.md)
-- 共存边界不清楚 → [OpenClaw + Hermes 共存指南](<./04-OpenClaw + Hermes 共存指南.md>)
-- 迁移步骤没做稳 → [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
+- 共存边界不清楚 → [OpenClaw + Hermes 共存指南](<./04-OpenClaw%20%2B%20Hermes%20%E5%85%B1%E5%AD%98%E6%8C%87%E5%8D%97.md>)
+- 迁移步骤没做稳 → [从 OpenClaw 到 Hermes：迁移路径](<./05-%E4%BB%8E%20OpenClaw%20%E5%88%B0%20Hermes%EF%BC%9A%E8%BF%81%E7%A7%BB%E8%B7%AF%E5%BE%84.md>)
 - 模型选择有问题 → [国内模型总览](../03-国内落地/02-国内模型/01-总览.md)
 - 入口选择有问题 → [国内入口总览](../03-国内落地/03-国内入口/01-总览.md)
 - CLI 不熟 / 会话管理乱 → [常用斜杠命令与会话管理](../01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md)
-- skills 基础不牢 → [常用 Skills（按日常使用场景精选）](<../01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md>)
-- memory 理解混乱 → [让 Hermes 记住你](<../01-从这开始/03-玩出花样/03-让 Hermes 记住你.md>)
+- skills 基础不牢 → [常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>)
+- memory 理解混乱 → [让 Hermes 记住你](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/03-%E7%8E%A9%E5%87%BA%E8%8A%B1%E6%A0%B7/03-%E8%AE%A9%20Hermes%20%E8%AE%B0%E4%BD%8F%E4%BD%A0.md>)
 
 ---
 
