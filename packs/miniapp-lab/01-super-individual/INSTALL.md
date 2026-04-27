@@ -17,24 +17,34 @@
 
 ## ⚡ 最短用法
 
-### 1）安装
+### 1）创建默认 profile
 ```bash
-bash ./install_to_profile.sh <profile-name-or-path>
+hermes profile create miniapp-solo --clone
 ```
 
-### 2）直接试跑
+### 2）安装
 ```bash
-<your-profile> chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
+bash ./install_to_profile.sh miniapp-solo
 ```
+
+### 3）直接试跑
+```bash
+hermes -p miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
+```
+
+说明：
+- 页面默认示例 profile 名就是 `miniapp-solo`
+- 如果你想换 profile 名，也可以把上面三条命令里的 `miniapp-solo` 换成你自己的名字
 
 ---
 
 ## ✅ 跑完后你重点看什么
 
-不要只看它有没有分析，重点看这 4 件事：
+不要只看它有没有分析，重点看这 5 件事：
 - 有没有把页面拆出来
 - 有没有给目录骨架
 - 有没有说明先写哪些文件
+- 有没有把 mock 数据和接口草案占住
 - 有没有告诉你下一步怎么继续补代码
 
 如果这几件事都有，这个包就算真的开始帮你干活了。

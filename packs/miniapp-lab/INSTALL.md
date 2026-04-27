@@ -50,7 +50,7 @@ git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
 cd awesome-hermes-agent-zh/packs/miniapp-lab/01-super-individual
 hermes profile create miniapp-solo --clone
 bash ./install_to_profile.sh miniapp-solo
-miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
+hermes -p miniapp-solo chat --skills wechat-mini-program-solo-assistant -q "$(cat skills/solutions/01-微信小程序/wechat-mini-program-solo-assistant/examples/sample-input.md)"
 ```
 
 ### 团队协作版
@@ -64,6 +64,29 @@ hermes profile create miniapp-qa --clone
 hermes profile create miniapp-validator --clone
 bash ./install_all.sh
 ```
+
+说明：
+- 不传参数时，`install_all.sh` 默认使用 `miniapp` 作为前缀
+- 所以默认会装进：
+  - `miniapp-product`
+  - `miniapp-builder`
+  - `miniapp-api`
+  - `miniapp-qa`
+  - `miniapp-validator`
+- 如果你想换前缀，也可以这样装：
+
+```bash
+bash ./install_all.sh miniapp
+```
+
+---
+
+## 🤝 如果你要直接走团队协作版
+
+最短入口：
+- 阅读团队包说明：`02-team/README.md`
+- 或直接进入：`02-team/`
+- 或直接下载：`02-team.zip`
 
 ---
 
@@ -80,6 +103,7 @@ bash ./install_all.sh
 你至少要看到：
 - product 先产出页面和边界
 - builder 接着产出前端骨架
+- api 把数据结构和接口约定补清楚
 - validator 最后能给出结论
 
 ---

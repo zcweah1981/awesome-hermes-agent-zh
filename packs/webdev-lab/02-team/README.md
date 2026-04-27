@@ -26,7 +26,7 @@
 - `99-solution-validator/`：最后做总体验收
 
 你可以把它理解成一条接力链：
-需求 -> 实现 -> 接口 -> 验收
+需求 -> 实现 -> 接口 -> 验收 -> 最终判断
 
 ---
 
@@ -46,13 +46,53 @@ hermes profile create webdev-validator --clone
 bash ./install_all.sh
 ```
 
----
+说明：
+- 不传参数时，`install_all.sh` 默认使用 `webdev` 作为前缀
+- 所以默认会装进：
+  - `webdev-product`
+  - `webdev-builder`
+  - `webdev-api`
+  - `webdev-qa`
+  - `webdev-validator`
+- 如果你想换前缀，也可以这样装：
 
-## ✅ 跑完后你应该看到什么
+```bash
+bash ./install_all.sh webdev
+```
 
-至少应该看到这几件事：
-- 产品 Agent 产出页面、功能、边界
-- Builder Agent 产出前端骨架建议
-- API Agent 产出接口与数据结构
-- QA Agent 产出检查项
-- Validator 最后能判断 pass / pass with fixes / fail
+### 3）先跑第一棒
+```bash
+hermes -p webdev-product chat --skills agile-web-product-agent -q "$(cat 01-product/skills/solutions/agile-web-product-agent/examples/sample-input.md)"
+```
+
+跑完第一棒后，先确认：
+- 页面清单已经压出来
+- 状态说明和操作流已经成型
+- 已经知道下一棒该交给谁
+
+### 4）再接第二棒
+```bash
+hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-builder/skills/solutions/agile-web-builder-agent/examples/sample-input.md)"
+```
+
+### 5）最后交给 Validator
+```bash
+hermes -p webdev-validator chat --skills solution-validator-webdev -q "$(cat 99-solution-validator/skills/solutions/solution-validator-webdev/examples/sample-input.md)"
+```
+
+## 🤝 全链路接力图谱
+
+| 这一棒是谁 | 这一棒主要做什么 | 交给下一棒时，手里应该有什么 |
+|---|---|---|
+| `webdev-product` | 定页面清单、状态说明、操作流、交接物 | 一版明确的实现起点 |
+| `webdev-builder` | 产出前端目录骨架、页面文件建议、组件建议、状态流转 | 一版可落地前端骨架 |
+| `webdev-api` | 补数据结构、接口约定、请求返回字段 | 一版可对接接口草案 |
+| `webdev-qa` | 查检查项、风险点、是否能开工 | 一版开工前审校结论 |
+| `webdev-validator` | 判断 `pass / pass with fixes / fail` | 最终“这套方案现在能不能继续推进”的结论 |
+
+## 🚦 什么时候不要往下一棒走
+
+- 不要交第二棒：第一棒还没把页面清单、状态说明和操作流压清楚
+- 不要交第三棒：第二棒还没把目录骨架、页面文件建议和状态流转写出来
+- 不要交第四棒：第三棒还没把数据结构和接口约定压清楚
+- 不要交 Validator：第四棒还没把风险点、必须补的项和可开工判断压清楚

@@ -227,7 +227,7 @@ bash ./install_to_profile.sh webdev-solo
 
 ### 第五步：直接跑现成示例
 ```bash
-webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)"
+hermes -p webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)"
 ```
 
 跑完以后，先看这 5 件事：

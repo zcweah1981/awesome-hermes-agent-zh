@@ -50,7 +50,7 @@ git clone git@github.com:zcweah1981/awesome-hermes-agent-zh.git
 cd awesome-hermes-agent-zh/packs/webdev-lab/01-super-individual
 hermes profile create webdev-solo --clone
 bash ./install_to_profile.sh webdev-solo
-webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)"
+hermes -p webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)"
 ```
 
 ### 团队协作版
@@ -63,6 +63,29 @@ hermes profile create webdev-qa --clone
 hermes profile create webdev-validator --clone
 bash ./install_all.sh
 ```
+
+说明：
+- 不传参数时，`install_all.sh` 默认使用 `webdev` 作为前缀
+- 所以默认会装进：
+  - `webdev-product`
+  - `webdev-builder`
+  - `webdev-api`
+  - `webdev-qa`
+  - `webdev-validator`
+- 如果你想换前缀，也可以这样装：
+
+```bash
+bash ./install_all.sh webdev
+```
+
+---
+
+## 🤝 如果你要直接走团队协作版
+
+最短入口：
+- 阅读团队包说明：`02-team/README.md`
+- 或直接进入：`02-team/`
+- 或直接下载：`02-team.zip`
 
 ---
 
