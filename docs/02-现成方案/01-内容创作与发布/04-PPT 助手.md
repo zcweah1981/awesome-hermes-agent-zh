@@ -302,6 +302,22 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 - 再让 slide-writer 开始写每页标题、要点和图表建议
 - 如果第一页还没定清楚，就先不要往后面润稿和审校接
 
+### 🤝 全链路接力图谱
+| 这一棒是谁 | 这一棒主要做什么 | 交给下一棒时，手里应该有什么 |
+|---|---|---|
+| 第一棒：`ppt-structure` | 定主线、页序、每页职责 | 一版清楚的结构骨架 |
+| 第二棒：`ppt-slidewriter` | 写每页标题、要点、图表建议 | 一版可继续润的逐页稿 |
+| 第三棒：`ppt-polish` | 补口播备注、删减建议、页间过渡 | 一版更适合正式汇报的润稿 |
+| 第四棒：`ppt-review` | 查结构风险、查汇报断点、列必须修改项 | 一版汇报前审校结论 |
+| 终点站：`ppt-validator` | 判断 pass / pass with fixes / fail | 最终“这份 PPT 现在能不能进正式汇报”的结论 |
+
+你可以把这条链理解成：
+- `ppt-structure` 先把讲法和页序定清楚
+- `ppt-slidewriter` 再把每页真正写出来
+- `ppt-polish` 负责把口播、过渡和删减建议补齐
+- `ppt-review` 负责汇报前把关
+- `ppt-validator` 最后只回答一件事：这份 PPT 现在能不能进入正式汇报
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说

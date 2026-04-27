@@ -290,6 +290,22 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 - 再让 builder 产出前端骨架与目录建议
 - 如果 product 这一棒还没把需求讲清楚，就先不要急着往 builder 接
 
+### 🤝 全链路接力图谱
+| 这一棒是谁 | 这一棒主要做什么 | 交给下一棒时，手里应该有什么 |
+|---|---|---|
+| 第一棒：`webdev-product` | 定页面清单、操作流、功能边界 | 一版明确的产品交接物 |
+| 第二棒：`webdev-builder` | 搭前端目录骨架、页面文件建议、组件结构 | 一版可继续落实现状 |
+| 第三棒：`webdev-api` | 定数据结构、接口约定、请求返回字段 | 一版可接前后端的接口方案 |
+| 第四棒：`webdev-qa` | 查风险点、查缺页缺链路、列必须补的项 | 一版开工前 QA 结论 |
+| 终点站：`webdev-validator` | 判断 pass / pass with fixes / fail | 最终“这套 Web 方案现在能不能继续推进”的结论 |
+
+你可以把这条链理解成：
+- `webdev-product` 先回答做什么
+- `webdev-builder` 再回答前端骨架怎么起
+- `webdev-api` 负责把接口和数据占位补齐
+- `webdev-qa` 负责开工前把关
+- `webdev-validator` 最后只回答一件事：这套 Web 方案现在能不能继续推进
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说
