@@ -25,6 +25,7 @@
 
 ## 🗺 如果你现在只想看最短路线
 - 想先看这套东西值不值得用：直接看「⚡ 5 分钟跑一轮」
+- 想直接跑团队协作版：直接看「🤝 团队协作版怎么安装和开跑」
 - 想看最后会拿到什么：直接看「📦 你最后会拿到什么」
 - 想看第一轮跑完以后怎么继续：直接看「🪜 跑完第一轮后，下一句怎么说」
 - 想直接下载包：直接看「📁 你现在直接能用的东西」
@@ -249,6 +250,45 @@ hermes -p ppt-solo chat --skills ppt-assistant -q "$(cat skills/solutions/ppt-as
 - 有没有告诉你下一轮该怎么继续
 
 如果这 5 件事都没有，那说明输出不合格。
+
+### 🤝 团队协作版怎么安装和开跑
+如果你已经不是一个人单独做 PPT，而是想按角色接力推进，就直接走团队协作版。
+
+#### 第一步：下载团队包
+先拿这个包：
+- [02-team.zip](../../../packs/ppt-lab/02-team.zip)
+
+#### 第二步：解压后进入目录
+```bash
+cd /path/to/02-team
+```
+
+#### 第三步：先创建 5 个 profile
+```bash
+hermes profile create ppt-structure --clone
+hermes profile create ppt-slidewriter --clone
+hermes profile create ppt-polish --clone
+hermes profile create ppt-review --clone
+hermes profile create ppt-validator --clone
+```
+
+#### 第四步：一键安装
+```bash
+bash ./install_all.sh
+```
+
+#### 第五步：先跑第一棒
+```bash
+hermes -p ppt-structure chat --skills ppt-structure-planner -q "$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)"
+```
+
+跑完以后，先看这 4 件事：
+- 有没有先把主线讲法压清楚
+- 有没有把页序和每页职责定下来
+- 有没有产出可交给 slide-writer 的结构骨架
+- 有没有知道第二棒该怎么继续写
+
+如果第一棒还没把结构压清楚，就不要急着进入逐页写稿。
 
 ---
 

@@ -24,6 +24,7 @@
 
 ## 🗺 如果你现在只想看最短路线
 - 想先看这套东西值不值得用：直接看「⚡ 5 分钟跑一轮」
+- 想直接跑团队协作版：直接看「🤝 团队协作版怎么安装和开跑」
 - 想看它最后会产出什么：直接看「📦 你最后会拿到什么」
 - 想看第一轮跑完以后怎么继续补代码：直接看「🪜 跑完第一轮后，下一句怎么说」
 - 想直接下载安装包：直接看「📁 你现在直接能用的东西」
@@ -237,6 +238,45 @@ webdev-solo chat --skills agile-web-development-solo-assistant -q "$(cat skills/
 - 有没有告诉你下一轮该怎么继续
 
 如果这 5 件事都没有，那说明输出不合格。
+
+### 🤝 团队协作版怎么安装和开跑
+如果你已经不想让一个 Agent 什么都包，而是准备按 product / builder / api / qa / validator 接力推进，就直接走团队协作版。
+
+#### 第一步：下载团队包
+先拿这个包：
+- [02-team.zip](../../../packs/webdev-lab/02-team.zip)
+
+#### 第二步：解压后进入目录
+```bash
+cd /path/to/02-team
+```
+
+#### 第三步：先创建 5 个 profile
+```bash
+hermes profile create webdev-product --clone
+hermes profile create webdev-builder --clone
+hermes profile create webdev-api --clone
+hermes profile create webdev-qa --clone
+hermes profile create webdev-validator --clone
+```
+
+#### 第四步：一键安装
+```bash
+bash ./install_all.sh
+```
+
+#### 第五步：先跑 product 这一棒
+```bash
+hermes -p webdev-product chat --skills agile-web-product-agent -q "$(cat 01-product/skills/solutions/agile-web-product-agent/examples/sample-input.md)"
+```
+
+跑完以后，先看这 4 件事：
+- 有没有先把页面、功能和边界拆清楚
+- 有没有产出 builder 能继续接的前置交接物
+- 有没有知道第二棒该交给 builder 而不是继续让 product 包完
+- 有没有把团队版真正跑成接力链，而不是停在概念层
+
+如果第一棒还没把需求和边界压清楚，就不要急着让 builder / api 往后接。
 
 ---
 
