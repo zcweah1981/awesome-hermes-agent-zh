@@ -347,6 +347,9 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 - 页间过渡、口播、删减建议还没收干净：回 `ppt-polish`
 - 结构风险、汇报断点、可讲标准还没压清：回 `ppt-review`
 
+### ✅ 团队协作版最小通过标准
+- 最终输出的 PPT 结构大纲与每页视觉建议完整且符合逻辑，且经由 `ppt-validator` 判定为 `pass`，才算这一页的团队版真的跑通。
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说

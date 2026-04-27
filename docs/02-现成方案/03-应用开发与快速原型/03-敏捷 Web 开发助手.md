@@ -336,6 +336,9 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 - 接口字段、数据结构、请求返回约定还没压清：回 `webdev-api`
 - 风险点、缺链路、开工判断还没压清：回 `webdev-qa`
 
+### ✅ 团队协作版最小通过标准
+- 产出的页面结构、前端骨架及接口约定已经能支撑继续进入真实实现，且经由 `webdev-validator` 判定为 `pass`，才算这一页的团队版真的跑通。
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说
