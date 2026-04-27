@@ -1,296 +1,279 @@
 # 05-MiniMax Token Plan
 
-> 🎯 一句话结论：如果你想买的不是“单一文本模型额度”，而是一份能把 M2.7、图像、语音、音乐、视频和 AI 编程工具一起打通的订阅，MiniMax Token Plan 就是这页要重点看的路线。
+> 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
 
-这一页会先帮你判断 MiniMax Token Plan 值不值得买、该选标准版还是极速版，再告诉你怎么把这条路线真正接进 Hermes。
+这一页只解决一件事：帮你判断 MiniMax Token Plan 值不值得买，以及怎么按 Hermes 原生 `MiniMax China` provider 路线把它接起来。
 
-## 🚀 主线图
+这一页先不解决：
+- 最低门槛按量起步应该选哪条路
+- 统一聚合套餐该选阿里云还是腾讯云
+- 你已经有 OneAPI / NewAPI / LM Studio / Ollama 时该怎么复用兼容层
+
+## 🚀 先看主线
 
 ![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.png)
 
-## ✨ 这条路适合谁
+这张图只想帮你先抓住 4 个点：
+- 这是一条“全模态订阅 + 官方原生 provider”路线
+- 标准版和极速版要分开看
+- 真正要跑通的是「选套餐 → 拿 Token Plan API Key → `hermes model` 选 MiniMax China → 做最小验证」
+- 这页适合已经明确要重点看 MiniMax 的人，不适合第一次试跑的人
 
-- 你想先买一份订阅，把 MiniMax 的多模态能力一起拿下
-- 你不想只盯着“文本 token 单价”，而是更看重整体可用性
-- 你希望一个 API Key 就能接编程工具、MCP、图像和语音能力
-- 你已经决定重点看 MiniMax，不想先横跳太多家厂商
-- 你要把 Hermes Agent 接起来，而且希望走官方内建 provider 路线
+如果你现在更想先少花钱、少做选择、先验证 Hermes 能不能通，优先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md)。
 
-## 🧭 先看最短决策
+## ✨ 这条路最适合谁
 
-| 你的情况 | 建议 |
+- 你想买一份订阅，把文本、图像、语音、音乐、视频和编程工具一起纳入同一个体系
+- 你已经决定重点看 MiniMax，不想再在多家厂商之间来回横跳
+- 你想走 Hermes 原生 provider 路线，而不是自己维护一层 custom endpoint
+- 你更关心“整体可用性 + 固定订阅费”，而不是只比较文本 token 单价
+- 你会长期在 AI 编程工具和多模态场景里一起使用这套能力
+
+## 🧭 先按你的当前状态分流
+
+| 你的当前情况 | 直接建议 |
 |---|---|
-| 先低门槛试用，先把 Hermes 跑通 | Starter |
-| 已经进入日常开发使用 | Plus |
-| 高频用 AI 编程 / 任务更重 | Max |
-| 你最看重速度，愿意直接上高性能档 | Plus-极速版 / Max-极速版 |
-| 你是重度团队或超高频使用者 | Ultra-极速版 |
+| 我只想先最低门槛把 Hermes 跑起来 | 先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md) |
+| 我已经认准 MiniMax | 留在这页继续 |
+| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](./02-阿里云百炼Token plan.md) 或 [03-腾讯云 Token Plan](./03-腾讯云Token Plan.md) |
+| 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
-如果你只想记住一句话：
+如果你只记一句话：
+- 认准 MiniMax，并且要多模态订阅 + 原生 provider → 看这页
+- 只是想先试跑 Hermes → 不要先在这页做复杂套餐决策
 
-- 先看价格和 5 小时调用额度够不够
-- 再看你要不要 `M2.7-highspeed`
-- 最后再去 Hermes 里把 provider、API Key、模型选好
+## 💰 先看价格和套餐，再决定值不值得买
 
-## 💰 价格和套餐怎么选
-
-MiniMax 官方订阅页当前把 Token Plan 放成两组套餐：
-
+MiniMax 官方当前把 Token Plan 分成两组：
 - 标准版：`Starter / Plus / Max`
 - 极速版：`Plus-极速版 / Max-极速版 / Ultra-极速版`
 
-官方订阅页当前默认展示的是“连续包年，立省 2 月”的价格，因此这一页先按官方当前展示价来写；如果你打开官网时切到了包月展示，请以官网实时页面为准。
+官方页面当前默认展示的是连续包年价格；如果你看到的界面切到了别的展示方式，请以官网实时页面为准。
 
 ### 标准版
 
 | 套餐 | 官方当前展示价 | 核心额度 | 适合谁 | 我怎么理解 |
 |---|---:|---|---|---|
-| Starter | ¥290 / 年 | 600 次模型调用 / 5 小时 | 入门级开发场景 | 先把路跑通，门槛最低 |
-| Plus | ¥490 / 年 | 1,500 次模型调用 / 5 小时 | 专业开发场景 | 适合作为个人主力档 |
-| Max | ¥1,190 / 年 | 4,500 次模型调用 / 5 小时 | 高级开发 / 高频使用 | 更适合重度日常使用 |
+| Starter | ¥290 / 年 | 600 次模型调用 / 5 小时 | 入门级开发 | 门槛最低 |
+| Plus | ¥490 / 年 | 1,500 次模型调用 / 5 小时 | 专业开发场景 | 最适合作为个人主力 |
+| Max | ¥1,190 / 年 | 4,500 次模型调用 / 5 小时 | 高频使用 | 更适合作为高频主力 |
 
 ### 极速版
 
 | 套餐 | 官方当前展示价 | 核心额度 | 适合谁 | 我怎么理解 |
 |---|---:|---|---|---|
-| Plus-极速版 | ¥980 / 年 | 1,500 次 `M2.7-highspeed` 调用 / 5 小时 | 更看重速度的个人开发者 | 速度更强，适合正式高频使用 |
-| Max-极速版 | ¥1,990 / 年 | 4,500 次 `M2.7-highspeed` 调用 / 5 小时 | 高频 AI 编程用户 | 兼顾量和速度 |
-| Ultra-极速版 | ¥8,990 / 年 | 30,000 次 `M2.7-highspeed` 调用 / 5 小时 | 超高频 / 多 Agent / 团队场景 | 面向最重度生产力使用 |
+| Plus-极速版 | ¥980 / 年 | 1,500 次 `M2.7-highspeed` 调用 / 5 小时 | 更看重速度的个人开发者 | 强调更快响应 |
+| Max-极速版 | ¥1,990 / 年 | 4,500 次 `M2.7-highspeed` 调用 / 5 小时 | 高频 AI 编程用户 | 量和速度更平衡 |
+| Ultra-极速版 | ¥8,990 / 年 | 30,000 次 `M2.7-highspeed` 调用 / 5 小时 | 超高频 / 团队场景 | 面向最重度使用 |
 
-## 🏆 它的核心优势到底是什么
+### 这页该怎么判断套餐
 
-这一页的核心不是“能不能接通”这么简单，而是：MiniMax Token Plan 到底值不值得单独介绍。官方材料里，它的优势主要集中在下面几件事。
+最直接的判断方式不是先比较绝对低价，而是先问三件事：
+- 你是不是要把 MiniMax 当长期主力厂商
+- 你是不是会同时用到文本之外的多模态能力
+- 你是不是需要 `M2.7-highspeed` 这种“明确更快”的路线
 
-### 1）不是只卖文本，而是卖“全模态一站式”
+如果答案都是“是”，这页值得继续；如果还没到这个阶段，先回按量页通常更轻。
 
-MiniMax 官方文档把 Token Plan 直接定义为：
+## 🤖 它为什么值得单独看
 
-- 一个订阅，满足你的所有 AI 需求
-- 一个 Key，打通视频、语音、音乐、图像与文本能力
+### 1）它卖的不是单一文本模型，而是“全模态统一订阅”
 
-这和前面几页最大的区别在于：
+官方材料把这条路线直接定义为：
+- 一个订阅满足多种 AI 需求
+- 一个 Key 打通视频、语音、音乐、图像与文本能力
 
-- 阿里云百炼更像“多模型聚合入口”
-- 腾讯云 Token Plan 更像“云生态统一订阅”
-- GLM Coding Plan 更偏“单厂商编码计划”
-- MiniMax Token Plan 的核心卖点更明显落在“全模态 + AI 编程工具 + 单 Key 统一使用”
+这和其他页最大的区别是：
+- 阿里云 / 腾讯云更偏统一入口
+- GLM / Kimi 更偏单厂商编码路线
+- MiniMax 的主卖点更明确落在“全模态 + 工具接入 + 单 Key 统一使用”
 
-### 2）M2.7 / M2.7-highspeed 是这页的主角
+### 2）`M2.7` 和 `M2.7-highspeed` 才是这页真正要分清的两条线
 
-官方页面明确把 MiniMax-M2.7 作为主模型，把 `M2.7-highspeed` 作为更高性能路线来推。
+你可以先把它理解成：
+- 标准版：优先围绕 `MiniMax-M2.7`
+- 极速版：优先围绕 `MiniMax-M2.7-highspeed`
 
-你可以直接把它理解成两条主线：
+如果你最关心“速度是不是足够快”，这页就必须把极速版讲清楚。
 
-- 标准版：优先用 `MiniMax-M2.7`
-- 极速版：优先用 `MiniMax-M2.7-highspeed`
+### 3）Hermes 已原生支持 `MiniMax China`
 
-官方页面给出的优势描述包括：
+Hermes 官方 provider 文档已经明确列出：
+- 环境变量：`MINIMAX_CN_API_KEY`
+- provider：`minimax-cn`
 
-- `M2.7-highspeed` 约 100 TPS 极速推理
-- 同类产品 3 倍生成速度（官方订阅页原文）
-- 所有方案都搭载最新 MiniMax M2.7 模型
+这意味着：
+- 不需要先把 MiniMax 包成 custom endpoint
+- 直接按原生 provider 路线理解即可
+- 整个接入过程会比兼容层更短、更容易排错
 
-如果你最关心的是“速度是不是够快”，那 MiniMax 这一页比前面几条路线更应该把极速版讲清楚。
+## 🧰 怎么把 MiniMax Token Plan 接进 Hermes
 
-### 3）固定订阅费，主打“成本可控”
+这里继续按 MiniMax 官方 Hermes 文章主线来走：
+- 先订阅 Token Plan
+- 再拿 Token Plan API Key
+- 再在 Hermes 里选 `MiniMax China`
+- 再做最小验证
 
-官方文档把这条路线的价值直接写成：
+### Step 1. 先确认你要走的是 MiniMax 原生 provider 路线
 
-- 极具性价比
-- 固定订阅费即可获得大量用量额度
-- 覆盖多种支持的模型，减少账单焦虑
+现在做什么：
+- 先确认你接的是 MiniMax 官方 Token Plan，而不是第三方兼容层
 
-订阅页首页还直接写了：
+为什么做：
+- 因为这页讲的是 `MiniMax China` 原生 provider，不是自定义 endpoint
 
-- `1小时1美金，成本不再是问题`
+怎么做：
+- 如果你手上是 Token Plan 官方 Key，就留在这页继续
+- 如果你手上是第三方网关地址或聚合层，优先看 [08-自定义兼容接口](./08-自定义兼容接口.md)
 
-所以这页必须把“价格 + 优势”前置，而不是只写接入命令。
+看到什么算成功：
+- 你已经明确这页主线是原生 provider，而不是兼容层
 
-### 4）对 AI 编程工具很友好
+失败先查什么：
+- 如果你一直在想 base_url 怎么填，说明你更像兼容层场景
 
-官方订阅页明确写了：
+### Step 2. 拿到 Token Plan API Key
 
-- `10+ 工具已适配，一站式开发`
-- 支持主流的编程工具，并持续扩展中
-- 支持图像理解、联网搜索 MCP
+现在做什么：
+- 从 Token Plan 页面获取这条订阅对应的 API Key
 
-当前官方页能直接看到的工具包括：
+为什么做：
+- 因为 Hermes 后面读取的就是这把 Token Plan Key，不是按量付费 API Key
 
-- Claude Code
-- OpenCode
-- Cursor
-- TRAE
-- Kilo Code
-- Cline
-- Codex CLI
-- Grok CLI
-- Droid
-- Roo Code
-- Hermes Agent
+怎么做：
+- 完成订阅
+- 进入官方页面复制 Token Plan API Key
+- 保存好这把 Key
 
-对 Hermes 用户来说，这一点很重要：
+看到什么算成功：
+- 你已经拿到 Token Plan API Key
 
-- 这不是一条只适合官网 Demo 的订阅
-- 它本身就把“编程工具使用场景”当成重点能力在卖
+失败先查什么：
+- 是否把 Token Plan API Key 和按量付费 API Key 搞混
+- 是否还没真正开通订阅
 
-## 🔍 用量结构有什么特别之处
+### Step 3. 用 `hermes model` 选择 `MiniMax China`
 
-MiniMax 官方文档里，对 Token Plan 的额度说明不是传统“统一 token 池”说法，而是按模型类型分别计算：
+现在做什么：
+- 在 Hermes 里切到 MiniMax 中国大陆 provider
 
-- `M2.7 / M2.7-highspeed`：按请求次数计算，且每 5 小时滚动重置
-- 其他模型（语音、视频、音乐、图像）：按每日配额计算，每日重置
+为什么做：
+- 只有 provider 真正切过去，后面的会话才会走 MiniMax Token Plan
 
-这意味着你在评估 MiniMax 时，不能只问“总 token 多少”，而应该问：
-
-- 我的主场景是不是 M2.7 编程与文本任务
-- 我会不会同时用到图像、语音、音乐、视频
-- 我要不要为了 `highspeed` 速度去买极速版
-
-## 🧰 Hermes 怎么接 MiniMax Token Plan
-
-这里继续按 MiniMax 官方 Hermes Agent 文章主线来走。
-
-### 1）前提条件
-
-开始前先确认两件事：
-
-- 你已经订阅了 MiniMax Token Plan
-- 你有一台可访问终端的电脑（macOS、Linux 或 Windows WSL2）
-
-### 2）安装 Hermes Agent
-
-如果你还没装 Hermes，先执行：
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
-```
-
-安装后先验证：
-
-```bash
-hermes doctor
-```
-
-### 3）运行模型选择器
-
-然后执行：
+怎么做：
+- 执行：
 
 ```bash
 hermes model
 ```
 
-进入 provider 列表后，选择：
+- 在 provider 列表里选择：
+  - `MiniMax China (mainland China endpoint)`
 
-- `MiniMax China (mainland China endpoint)`
-
-下面这张图，就是 MiniMax 官方 Hermes Agent 文档里的 provider 选择界面：
+官方文档截图里的 provider 选择界面如下：
 
 ![Hermes model 设置截图：选择 MiniMax China (mainland China endpoint)](./assets/minimax-hermes-provider-cn.png)
 
-### 4）输入 Token Plan API Key
+看到什么算成功：
+- Hermes 已经切到 `MiniMax China`
 
-接下来输入你从 Token Plan 页面拿到的：
+失败先查什么：
+- 是否还停留在别的 provider 上
+- 是否误选成非中国大陆线路
 
-- `Token Plan API Key`
+### Step 4. 输入 Token Plan API Key
 
-注意这里最容易搞错的一点：
+现在做什么：
+- 把 Token Plan API Key 填进 MiniMax China provider
 
-- Token Plan API Key
-- 不等于按量付费 API Key
+为什么做：
+- 因为没有这把正确的 Key，provider 虽然选对了，也无法真正连通
 
-MiniMax 官方 Hermes 文档里，对应字段如下：
+怎么做：
+- 在 provider 设置流程里输入你的 Token Plan API Key
+
+官方依据截图里的关键字段如下：
 
 ![MiniMax 官方依据截图：Hermes Agent 配置中的 MiniMax CN API Key 字段](./assets/minimax-hermes-apikey-cn.png)
 
-### 5）选择 MiniMax-M2.7
+看到什么算成功：
+- Hermes 已正确保存当前 Key
 
-输入 Key 后，继续选择模型：
+失败先查什么：
+- 是否填成了按量付费 Key
+- 是否复制时混入了空格或残缺值
 
-- `MiniMax-M2.7`
+### Step 5. 先选择 `MiniMax-M2.7` 做最小验证
 
-官方页面给出的模型选择界面如下：
+现在做什么：
+- 先选一个最稳的默认文本模型做第一轮验证
+
+为什么做：
+- 因为先证明基本文本链路可用，比一开始就追速度档更重要
+
+怎么做：
+- 模型列表里先选：
+  - `MiniMax-M2.7`
+
+官方模型选择界面如下：
 
 ![Hermes model 设置截图：选择 MiniMax-M2.7](./assets/minimax-hermes-model-select.png)
 
-如果你只是先把路线跑通，建议先从 `MiniMax-M2.7` 开始；等你已经明确更看重速度时，再考虑切到 `MiniMax-M2.7-highspeed` 对应的极速版节奏。
+- 选完后启动 Hermes，先发一条最简单的问题
 
-### 6）开始使用
+看到什么算成功：
+- Hermes 能正常进入会话
+- 不再提示 provider / API Key 错误
+- `MiniMax-M2.7` 能稳定返回第一条回复
 
-配置完成后直接运行：
+失败先查什么：
+- provider 是否真切到 `MiniMax China`
+- Token Plan API Key 是否正确
+- 模型是否选到当前套餐不可用或不对应的线路
 
-```bash
-hermes
-```
+## ❓FAQ
 
-如果你能正常进入会话，而且没有继续提示 provider / API Key 错误，基本就说明这条路已经接通。
+### 1. 这页为什么不是默认起步页？
 
-## ✅ 这页对 MiniMax 的默认建议
+因为这页默认你已经认准 MiniMax，并接受“订阅 + 多模态 + 具体套餐层级”这组决策。
 
-如果你问我：MiniMax Token Plan 这一页最该强调什么？
+如果你只是想先跑通 Hermes，按量页通常更轻。
 
-我的结论是：
+### 2. 这页最容易搞错的地方是什么？
 
-- 不是先强调“命令怎么敲”
-- 而是先强调“为什么它值得单独买”
+最常见的错误就是把：
+- Token Plan API Key
+- 按量付费 API Key
 
-对比前面几页后，MiniMax 这页最应该突出的差异化卖点就是：
+混成一回事。
 
-- 价格和套餐层次清楚
-- 全模态能力不是附加项，而是主卖点
-- `M2.7 / M2.7-highspeed` 的标准版 / 极速版分层非常明确
-- 一个 Key 就能覆盖编程工具与多模态能力
+### 3. 为什么建议先从 `MiniMax-M2.7` 开始，而不是一上来就极速版？
 
-如果你是下面这类人，MiniMax Token Plan 值得优先看：
+因为这页的第一目标是先把链路跑通；速度升级应该发生在链路稳定之后。
 
-- 想把 AI 编程和多模态能力一起买下
-- 不想拆多套订阅
-- 对速度和体验有明确要求
-- 准备把 Hermes 当成长期工作流入口
+## ⚠️ 风险点与默认建议
 
-## ⚠️ 常见问题
+### 风险点
+- 其实只想先跑通 Hermes，却过早进入多模态订阅决策
+- 把 Token Plan API Key 和按量付费 API Key 搞混
+- 一上来就想测试极速版，而不是先做最小验证
 
-### 1. 这一页为什么要把价格写这么前？
-
-因为 MiniMax 官方首页本身就在卖“套餐 + 额度 + 优势”，而不是只卖一个 API 接入步骤。
-
-如果不把价格和优势前置，这页就会失去 Token Plan 页面最核心的价值表达。
-
-### 2. 我应该先选标准版还是极速版？
-
-- 先跑通：标准版更稳
-- 更看重速度：直接看极速版
-- 高频任务明显增多：优先看 `Max` 或 `Max-极速版`
-
-### 3. 为什么这一页要单独强调全模态？
-
-因为这是 MiniMax Token Plan 跟前面几条路线最明显的差异之一。官方文档明确写的是：在一个订阅下覆盖文本、语音、图像、音乐、视频，而不是只做单模态调用。
-
-### 4. Hermes 接入时最容易错什么？
-
-最容易错的是把：
-
-- `Token Plan API Key`
-
-和：
-
-- 按量计费 API Key
-
-混在一起。
-
-如果 Key 拿错，后面即使 provider 选对了，也可能配不通。
+### 默认建议
+- 如果你已经认准 MiniMax，再看这页最值
+- 默认先走 `MiniMax China` 原生 provider
+- 默认先用 `MiniMax-M2.7` 做第一轮验证，跑通后再考虑极速版
 
 ## ➡️ 下一步
 
 完成后进入：
+- [06-Kimi登月计划](./06-Kimi登月计划.md)
 
-- 如果你想继续看下一条路线，继续看 [06-Kimi登月计划](./06-Kimi登月计划.md)
-- 如果你还在横向比较，回 [国内模型总览](./01-总览.md)
+如果你想先回到上一阶段入口重新确认位置：
+- [02-国内模型总览](./01-总览.md)
 
 ## 📎 官方依据
 
-- https://platform.minimaxi.com/subscribe/token-plan
-- https://platform.minimaxi.com/docs/token-plan/intro
-- https://platform.minimaxi.com/docs/token-plan/hermes-agent
-- https://platform.minimaxi.com/docs/token-plan/faq
 - https://hermes-agent.nousresearch.com/docs/integrations/providers
-- https://hermes-agent.nousresearch.com/docs/reference/cli-commands
+- https://www.minimax.io/
+- https://www.minimax.io/platform/

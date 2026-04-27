@@ -1,175 +1,250 @@
-# 04-智谱GLM Coding Plan
+# 04-智谱 GLM Coding Plan
 
-> 🎯 一句话结论：如果你已经认准智谱，或者你想先走一条单厂商、路径直接、配置明确的 Coding Plan，GLM Coding Plan 值得先看。
+> 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
 
-## 🚀 接入主线图
+这一页只解决一件事：帮你判断 GLM Coding Plan 值不值得买，以及怎么按 Hermes 原生 `z.ai / GLM` provider 路线把它接起来。
 
-![智谱 GLM Coding Plan 深色接入主线图](./assets/glm-coding-hero-v1.png)
+这一页先不解决：
+- 最低门槛按量起步应该选哪条路
+- 统一套餐聚合入口该选阿里云还是腾讯云
+- 你已经有 OneAPI / NewAPI / LM Studio / Ollama 时该怎么复用兼容层
 
-先看图，先抓住模型、API Key、工具三个锚点，再看下面的细节。
+## 🚀 先看主线
 
-## ✨ 这条路适合谁
+![智谱 GLM Coding Plan 主线图](./assets/glm-coding-hero-v1.png)
 
-- 你已经认准智谱，想少做横向比较
-- 你更喜欢单厂商路径，判断更直接
-- 你主要做中文编程、调试、代码库问答
-- 你想先把编码工具跑通，再细化模型和工作流
-- 你希望一条路里把模型、Key、工具关系看得更清楚
+这张图只想帮你先抓住 4 个点：
+- 这是一条“单厂商深用”路线，不是统一聚合套餐页
+- Hermes 已原生支持 `z.ai / GLM` provider
+- 这页更适合已经决定重点看 GLM 的人
+- 真正要跑通的是「订阅 / 获取 Key → 写入 `GLM_API_KEY` → `hermes model` 选 GLM → 做最小验证」
 
-## 🧭 先看最短决策
+如果你现在更想先少花钱、少做选择、先验证 Hermes 能不能通，优先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md)。
 
-| 场景 | 建议 |
+## ✨ 这条路最适合谁
+
+- 你已经认准 GLM / z.ai 这条产品线，想深用一家而不是继续横向比较
+- 你想走 Hermes 原生 provider 路线，而不是先折腾 custom endpoint
+- 你更看重单厂商的编码体验、模型能力和生态一致性
+- 你愿意先做一次厂商选择，再把后面的工作流稳定下来
+- 你准备长期把 GLM 放进自己的开发流程里
+
+## 🧭 先按你的当前状态分流
+
+| 你的当前情况 | 直接建议 |
 |---|---|
-| 已经决定走智谱这条线 | GLM Coding Plan |
-| 重点是中文编码与工具兼容 | GLM Coding Plan |
-| 还在多家路线间摇摆 | 先回 [国内模型总览](./01-总览.md) |
+| 我只想先最低门槛把 Hermes 跑起来 | 先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md) |
+| 我已经认准 GLM / z.ai | 留在这页继续 |
+| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](./02-阿里云百炼Token plan.md) 或 [03-腾讯云 Token Plan](./03-腾讯云Token Plan.md) |
+| 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
-## 🤖 它支持哪些模型
+如果你只记一句话：
+- 认准 GLM 并想走 Hermes 原生 provider → 看这页
+- 只是想先跑通 Hermes → 不要先在这页做单厂商深度决策
 
-官方说明里，GLM Coding Plan 支持这些代表项：
+## 💰 先看它卖的是什么，再决定值不值得买
 
-- GLM-5.1
-- GLM-5-Turbo
-- GLM-4.7
-- GLM-4.5-Air
+GLM Coding Plan 的判断逻辑，不是先问“有没有最低单次价格”，而是先问三件事：
+- 你是不是已经愿意优先押 GLM 这家
+- 你是不是想用一条原生 provider 路线接 Hermes
+- 你是不是更关心单厂商编码体验，而不是多厂商统一入口
 
-## 🧰 它兼容哪些工具
+如果答案都是“是”，这页值得继续；如果还没到这一步，先回按量页或聚合套餐页通常更省决策成本。
 
-官方文档明确支持的主流编码工具包括：
+## 🤖 它为什么值得单独看
 
-- Claude Code
-- OpenCode
-- TRAE
-- CodeBuddy
-- Kilo Code
-- OpenClaw
+### 1）它是单厂商深用路线，不是统一聚合页
 
-对我来说，重点不是工具名越多越好，而是：
+这页的核心价值不在“同时买很多家模型”，而在：
+- 先押一条 GLM 路线
+- 把 Hermes、模型、工作流理解都收敛到同一家
+- 减少中间兼容层和生态切换的复杂度
 
-- 你能不能先接通
-- 接通后能不能稳定切换模型
-- 你的日常工作流会不会被打散
+### 2）Hermes 已经原生支持 GLM provider
 
-## 🤝 Hermes 怎么接
+Hermes 官方 provider 文档已经明确列出：
+- 环境变量：`GLM_API_KEY`
+- provider：`zai`
 
-这里要分清两条路：
+这件事非常关键，因为它意味着：
+- 不需要先把 GLM 包装成 custom endpoint
+- 不需要先研究 OpenAI-compatible 中间层
+- 你可以直接按 Hermes 原生 provider 路线来理解和配置
 
-1. Hermes 官方直连 GLM provider
-   - 先用 `hermes model` 选择 Hermes 已内建支持的 provider / model
-   - 如果是 GLM / Kimi / MiniMax / DashScope 这类已支持 provider，就把对应 API key 放进 `~/.hermes/.env`
-   - 这条路不需要你手动配 `base_url`
+### 3）它更适合“已经决定认准一家”的阶段
 
-2. 只有在你要接 OpenAI-compatible 自建网关时，才走 `custom endpoint` / `base_url`
-   - 那时才需要指向真正的 OpenAI-compatible 接口
-   - 这不是 Hermes 直连 GLM 的默认路径
+这页和统一套餐页最大的不同在于：
+- 统一套餐页是在帮你买一个入口
+- GLM Coding Plan 更像是在帮你做“单厂商长期路线”决策
 
-所以，如果你的目标只是“让 Hermes 直接用 GLM”，优先看 Hermes 官方 provider 路线；不要先套 Claude Code 那组配置。
+所以它不是第一站，而是“你已经想清楚要重点看 GLM”之后的页。
 
-## 🔑 接入时最需要记住的点
+## 🧰 怎么把 GLM 接进 Hermes
 
-- 这是单厂商 Coding Plan，不是聚合订阅
-- 只在官方支持的工具与产品环境中使用
-- 专属 Coding API 端点是 `https://open.bigmodel.cn/api/coding/paas/v4`
-- 不要把通用 API 端点当成主线入口
-- API Key 先保存到环境变量或配置文件，不要硬编码
+这页的主线按 Hermes 原生 provider 路线来走：
+- 拿到 GLM API Key
+- 写入 `~/.hermes/.env`
+- 在 `hermes model` 里选 `z.ai / GLM`
+- 做最小验证
 
-## 🧭 先把最短路径跑通
+### Step 1. 先确认你要走的是原生 provider 路线
 
-### 1）注册并订阅
+现在做什么：
+- 先确认你不是要接自定义兼容层，而是要直接接 GLM 原生 provider
 
-- 访问智谱开放平台，完成注册/登录
-- 进入 GLM Coding Plan 套餐页，选择适合你的订阅
+为什么做：
+- 因为 Hermes 已经原生支持 GLM，这页没必要先把事情做复杂
 
-### 2）获取 API Key
+怎么做：
+- 如果你有的是 GLM 官方 API Key，就留在这页继续
+- 如果你手里是第三方聚合层地址或企业网关，优先看 [08-自定义兼容接口](./08-自定义兼容接口.md)
 
-- 在个人中心里进入 API Keys
-- 创建新的 API Key
-- 复制后妥善保存到本地配置或环境变量
+看到什么算成功：
+- 你已经明确这页讲的是 GLM 原生 provider，不是 custom endpoint
 
-### 3）Hermes 里的正确接法
+失败先查什么：
+- 如果你脑子里一直在想 base_url 怎么填，说明你更像是兼容层场景
 
-Hermes 官方文档已经把 GLM 作为内建 provider 支持了，直连方式是：
+### Step 2. 获取 GLM API Key
 
-1. 在 `~/.hermes/.env` 里放入 `GLM_API_KEY`
-2. 运行 `hermes model`
-3. 在 provider 列表里选择 `Z.AI / GLM`
-4. 再选择你要用的模型
+现在做什么：
+- 去 GLM / z.ai 官方入口拿到 API Key
 
-这条路就是这页要介绍的主线：
+为什么做：
+- 因为后面的 Hermes provider 就是按 `GLM_API_KEY` 读取凭据
 
-- 不需要手动填写 OpenAI Base URL
-- 不需要把 GLM 当成 custom provider 来手填
-- provider 名按 Hermes 官方文档写法是 `zai`
+怎么做：
+- 完成你选择的订阅 / 开通流程
+- 在官方开发者或控制台入口里生成 API Key
+- 保存好这把 Key
 
-最小理解可以写成：
+看到什么算成功：
+- 你已经拿到可用的 `GLM_API_KEY`
+
+失败先查什么：
+- 是否还没真正完成开通或订阅
+- 是否复制了错误字段而不是 API Key 本身
+
+### Step 3. 把 `GLM_API_KEY` 写进 `~/.hermes/.env`
+
+现在做什么：
+- 在 Hermes 环境变量文件里写入 GLM Key
+
+为什么做：
+- 因为 Hermes 官方 provider 文档就是按这个变量读取 GLM 凭据
+
+怎么做：
+- 打开 `~/.hermes/.env`
+- 写入：
 
 ```bash
-GLM_API_KEY=***
+GLM_API_KEY=你的真实密钥
 ```
 
-然后在 Hermes 里执行：
+看到什么算成功：
+- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=你的真实密钥`
+
+失败先查什么：
+- 是否写错变量名
+- 是否写进了别的文件而不是 `~/.hermes/.env`
+- 是否复制时混入了空格、引号或残缺值
+
+### Step 4. 用 `hermes model` 选择 `z.ai / GLM`
+
+现在做什么：
+- 在 Hermes 里把 provider 切到 GLM
+
+为什么做：
+- 只有 provider 真正切过去，后面的会话才会走 GLM
+
+怎么做：
+- 运行：
 
 ```bash
 hermes model
-# 选择 Z.AI / GLM
-# 再选择目标模型
 ```
 
-你真正要看的，是实际运行 `hermes model` 时的设置界面。看到 `Z.AI / GLM` 高亮后，直接确认即可：
+- 在 provider 列表里选择 `z.ai / GLM`
+- 再选择你当前要测试的 GLM 模型
 
-![Hermes model 设置截图：在 Select provider 中直接选择 Z.AI / GLM](./assets/glm-hermes-model-menu-docs.png)
+官方文档截图里也能看到 Hermes 的 provider 选择入口：
 
-### 4）详细配置方法
+![Hermes model 设置截图：选择 GLM / z.ai provider](./assets/glm-hermes-model-menu-docs.png)
 
-先在 `~/.hermes/.env` 中加入你的智谱 API Key：
+看到什么算成功：
+- Hermes 已经保存 GLM 作为当前 provider
+- 模型已切到你准备测试的那一档
 
-```bash
-GLM_API_KEY=your_z..._key
-```
+失败先查什么：
+- `GLM_API_KEY` 是否已经被 Hermes 正常读取
+- 你是不是还停留在别的 provider 上
+- 当前模型是否是你账号真正可用的模型
 
-然后运行：
+### Step 5. 先做一次最小验证
 
-```bash
-hermes model
-```
+现在做什么：
+- 先用一条最简单的问题证明链路可用
 
-进入菜单后按这三个动作完成：
+为什么做：
+- 因为“Key 已写入”不等于“模型真的能返回结果”
 
-1. 选择 `Z.AI / GLM`
-2. 选择模型
-3. 保存为默认 provider / model
+怎么做：
+- 启动 Hermes
+- 先发一句最短问题，例如让它做一句自我介绍
+- 先确认会话能正常返回，再继续跑更复杂的任务
 
-### 5）验证是否接通
+看到什么算成功：
+- Hermes 能正常进入会话
+- 不再报 provider / API Key 错误
+- GLM 模型能稳定返回一条回复
 
-- 能正常进入工具会话
-- 能顺利调用 GLM 模型
-- 日常任务可以先从 GLM-4.7 开始
-- 复杂任务再切到 GLM-5.1 或 GLM-5-Turbo
+失败先查什么：
+- Key 是否复制错误
+- provider 是否没有真正切到 GLM
+- 模型是否选到了当前账号不可用的那一档
 
-## ⚠️ 什么时候先别选它
+## ❓FAQ
 
-- 你现在只想最低门槛先试跑
-- 你还没确定是不是要走单厂商订阅
-- 你更想先在多家模型里横向切换
+### 1. 这页为什么不是默认起步页？
 
-## ✅ 默认建议
+因为这页默认你已经做了“我要重点看 GLM / z.ai”这个厂商选择。
 
-- **先体验**：先用 GLM Coding Plan 跑通最小闭环
-- **日常使用**：优先 GLM-4.7
-- **复杂任务**：再切到 GLM-5.1 或 GLM-5-Turbo
-- **工具选择**：先选一个最熟的工具，不要一开始铺太宽
+如果你现在只是想先跑通 Hermes，按量页通常更轻。
+
+### 2. 为什么这里不先讲 custom endpoint？
+
+因为 Hermes 已经原生支持 GLM provider。
+
+只有在你不是拿官方 GLM Key、而是拿第三方兼容层地址时，才更应该去看自定义兼容接口页。
+
+### 3. 这页最核心的配置是什么？
+
+最核心的就是两件事：
+- `GLM_API_KEY`
+- 在 `hermes model` 里选 `z.ai / GLM`
+
+## ⚠️ 风险点与默认建议
+
+### 风险点
+- 其实是兼容层场景，却误把自己当成原生 provider 场景
+- 还没完成开通，就直接在 Hermes 里切 provider
+- 一上来就折腾复杂模型，而不是先做最小验证
+
+### 默认建议
+- 如果你已经认准 GLM，再看这页最值
+- 默认先走原生 provider，不要先走 custom endpoint
+- 默认先完成一次最小验证，再去细化模型和工作流
 
 ## ➡️ 下一步
 
 完成后进入：
+- [05-MiniMax Token Plan](./05-MiniMax Token Plan.md)
 
-- 如果你想继续看下一条路线，继续看 [05-MiniMax Token Plan](<./05-MiniMax Token Plan.md>)
-- 如果你还在横向比较，回 [国内模型总览](./01-总览.md)
+如果你想先回到上一阶段入口重新确认位置：
+- [02-国内模型总览](./01-总览.md)
 
 ## 📎 官方依据
 
 - https://hermes-agent.nousresearch.com/docs/integrations/providers
-- https://hermes-agent.nousresearch.com/docs/reference/cli-commands
-- https://docs.bigmodel.cn/cn/coding-plan/overview
-- https://docs.bigmodel.cn/cn/coding-plan/quick-start
-- https://docs.bigmodel.cn/cn/coding-plan/faq
+- https://z.ai/subscribe
+- https://docs.z.ai/
