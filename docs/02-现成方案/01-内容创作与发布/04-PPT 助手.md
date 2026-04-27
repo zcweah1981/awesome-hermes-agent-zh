@@ -198,7 +198,7 @@
 | 我已经准备开始逐页落版 | ACP | 可以顺着结果继续细修每页内容、标题、备注和配图 |
 | 我想边做边改成自己的汇报语气 | ACP | 可以在编辑器里持续打磨，不只停在第一稿 |
 
-![对比图：左边是 CLI 先快速出一版 PPT 稿，右边是 ACP 进入编辑器继续精修逐页内容和表达](../../assets/solution-ppt-cli-vs-acp-v2-cliproxy.png)
+![对比图：左边是 CLI 先快速出一版 PPT 稿，右边是 ACP 进入编辑器继续精修逐页内容和表达，背景统一为深蓝黑技术文档家族并补足科技线条点缀](../../assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.png)
 
 最简单的记法：
 - CLI：先拿整套稿
