@@ -1,175 +1,135 @@
 # 🪞 02-Holographic记忆
 
 这一页只解决一件事：
-当你已经理解内建记忆的边界、又想先接通第一条最容易落地的外部记忆路线时，怎样用最短路径把 Holographic 跑起来。
+把第一条最容易落地的外部记忆路线接通，并且知道接通后该看哪些信号验收。
 
 ![Holographic 接入结构图：中央为 Holographic 接入节点，下连内建 USER.md 与 MEMORY.md；图中同时标出一条优先接入的外部记忆路线](../../../assets/rm2-5-memory-providers-02-holographic-first-route.png)
 
 ---
 
-## 🧭 先记住：这一页讲的是“第一条最容易落地的外部记忆路线”
+## 先判断：Holographic 是不是你现在该走的路线
 
-这一页不是在做复杂架构选型。
-也不是在讲多助手共享建模。
+下面这些情况，通常优先走 Holographic：
 
-它真正要解决的是：
+- 你第一次接外部 memory provider
+- 你想先跑通一条最短、最稳的路线
+- 你当前还是单助手或单工作流为主
+- 你希望先本地落地，不想先搭复杂服务
+- 你要先搞懂“外部 provider 叠加在内建记忆之上”到底是什么感觉
 
-如果你已经知道外部记忆值得接，但又不想一上来就进入最复杂的系统结构，那第一条最容易落地的外部记忆路线怎么跑通？
-
-这条路线通常就是 Holographic。
-
----
-
-## ❓ 什么时候更适合先走 Holographic
-
-如果你现在更像下面这种情况，通常就该先走 Holographic：
-
-- 你第一次接外部 memory provider，想先跑通一条最短路径
-- 你当前主要还是单助手、单工作流，而不是多助手协同建模
-- 你希望外部记忆先落在本地，不想一开始就引入云端服务或额外账号体系
-- 你想先验证“外部 provider 叠加在内建记忆之上”到底会怎么工作
-- 你接受先用本地 SQLite fact store，把外部长期记忆能力接起来
-
-如果你这里对“内建记忆”和“外部 provider”还会混，先回到[03-接入外部记忆系统总览](01-总览.md)把边界再看清一次。
-
-一句话判断：
-如果你要的不是复杂选型，而是“先把第一条外部记忆路线跑通”，Holographic 就是最自然的起点。
+如果你真正要解决的是多助手共享工作区、peer 身份和共享用户认知，这一页不是主线，先去看：
+- [03-Honcho记忆](./03-Honcho记忆.md)
 
 ---
 
-## ❓ 它和内建记忆是什么关系
+## 先把关系讲清楚
 
-这里先只记住 2 个边界：
+接上 Holographic 之后：
 
-- 内建 `USER.md` / `MEMORY.md` 一直都在
-- 外部 provider 是 additive 叠加层，不是替代层
+- `USER.md` 继续负责用户偏好
+- `MEMORY.md` 继续负责环境、项目、稳定事实
+- Holographic 额外提供外部事实存储与检索能力
 
-所以接上 Holographic 之后，不是把原来的记忆删掉，而是变成：
+它不是替代内建记忆，而是在上面再加一层。
 
-- `USER.md` 继续承接你的用户偏好与协作习惯
-- `MEMORY.md` 继续承接环境、项目与稳定经验事实
-- Holographic 再额外提供一层外部事实存储与检索能力
+另外别忘了：
 
-如果你已经开始把“单助手记忆”理解成“多助手共享长期认知”，那这一页就不一定是最优先入口，更应该先看[03-Honcho记忆](./03-Honcho记忆.md)。
-
-还有一个边界也别忘：
-
-- 同一时刻只能激活 1 个外部 provider
+- 同一时刻只能启用 1 个外部 provider
 
 ---
 
-## 🎯 走 Holographic 这条路，你真正会得到什么
+## 这一步为什么值得现在做
 
-这一页最该让你看见的，不是 provider 名，而是收益：
+对当前阶段来说，Holographic 的价值不是“最强”。
 
-1. 你会第一次真正把外部记忆 provider 接进 Hermes
-2. 记忆开始不只停留在两份本地 markdown 文件里
-3. 你能更直观理解“外部 provider 叠加在内建记忆之上”是什么感觉
-4. 后面做更复杂的记忆系统比较时，你会更有参照物
+而是：
 
-一句话说透：
-
-Holographic 的价值，不是更高级，而是让你先把“外部记忆这件事”真正接通一次。
+1. 它最适合第一次接外部记忆
+2. 它能让你先建立正确的系统心智
+3. 它通常是最低理解成本的一条外部路线
+4. 跑通后，你再看 Honcho 或选型对比会更有参照
 
 ---
 
-## ❓ 它更像什么
+## 最短接入路径
 
-Holographic 更像：
+下面按最小闭环做，不要一上来研究所有参数。
 
-- 一个本地可落地的外部事实库
-- 第一条最容易跑通的外部记忆路线
-- 在内建记忆之上，再加一层 SQLite fact store
+### 第 1 步：确认你现在就是要接第一条外部记忆路线
 
-官方文档与代码路径里，可直接确认的几个点是：
+动手前先确认两件事：
 
-- provider 名就是 `holographic`
-- 可通过 `hermes memory setup` 选择 `holographic`
-- 或直接设置 `hermes config set memory.provider holographic`
-- 配置放在 `config.yaml` 的 `plugins.hermes-memory-store`
-- 默认数据库路径是 `$HERMES_HOME/memory_store.db`
-- 不需要额外硬依赖；SQLite 一直可用，NumPy 只是可选项
+- 你知道 `USER.md` / `MEMORY.md` 不会消失
+- 你要解决的是“先接通 provider”，不是“先搭多助手共享结构”
 
----
+### 第 2 步：运行 setup，选择 `holographic`
 
-## 📌 最小接入路径
-
-如果你的目标只是先跑通，不要一上来研究全部参数。先按这 4 步走就够了。
-
-### 第 1 步：先确认你是在接“外部记忆的第一条路线”
-
-在动手前，先确认两件事：
-
-- 你已经知道内建 `USER.md` / `MEMORY.md` 不会消失
-- 你现在要的是“先跑通外部 provider”，不是“先做多助手记忆设计”
-
-### 第 2 步：执行 setup，直接选择 Holographic
+在终端输入：
 
 ```bash
 hermes memory setup
 ```
 
-然后在交互选择里选：
+看到 provider 选择列表后，输入或选中：
 
 ```text
 holographic
 ```
 
-如果你不走交互入口，也可以直接设：
+如果你不走交互，也可以直接执行：
 
 ```bash
 hermes config set memory.provider holographic
 ```
 
-### 第 3 步：确认配置确实写到了正确位置
+### 第 3 步：确认配置已经写对位置
 
-Holographic 的配置位于：
+重点看 `config.yaml` 里有没有这两层：
 
 ```yaml
+memory:
+  provider: holographic
 plugins:
   hermes-memory-store:
 ```
 
-你这一步不用把所有参数都背下来，只要知道：
+你这一步不需要把所有字段都背下来，只要确认：
 
-- 它不是写进内建 `USER.md` / `MEMORY.md` 的开关里
-- 它是作为外部 memory provider，写在 `plugins.hermes-memory-store` 这一层
-- 默认数据库文件会落到 `$HERMES_HOME/memory_store.db`
+- provider 已经切到 `holographic`
+- 插件配置确实落在 `plugins.hermes-memory-store`
 
-### 第 4 步：启用后，看“外部记忆是不是已经真的接上”
+### 第 4 步：检查本地数据库是否落地
 
-接完后先不要急着研究高级能力，先检查最基本的三个结果：
+默认数据库路径是：
 
-- 当前激活的外部 provider 已经是 `holographic`
-- Holographic 相关配置已经出现在 `config.yaml`
-- 本地数据库文件已经按默认路径或你的自定义路径落地
+```text
+$HERMES_HOME/memory_store.db
+```
+
+如果你用了默认路径，确认这个文件已经出现。
 
 ---
 
-## ✅ 成功标准
+## 成功信号：看到这 4 个就够了
 
-这页只看“是否接通”，不看“是否把玩法都吃透”。
+### 1. 状态里已经显示 provider 是 `holographic`
 
-最稳的成功信号，通常是下面这些：
-
-### 成功信号 1：状态层面已经显示 Holographic 在生效
-
-优先看：
+执行：
 
 ```bash
 hermes memory status
 ```
 
-如果状态里显示当前外部 provider 是 `holographic`，这是第一层成功信号。
+成功时，你要看到当前外部 provider 指向 `holographic`。
 
-### 成功信号 2：配置层面已经写对位置
+### 2. 配置里已经写对
 
-你能在 `config.yaml` 里看到：
+重点检查：
 
-- `memory.provider` 已经指向 `holographic`
-- `plugins.hermes-memory-store` 这层已经存在对应配置
+- `memory.provider: holographic`
+- `plugins.hermes-memory-store` 已存在
 
-### 成功信号 3：本地 SQLite 落地已经出现
+### 3. 本地 SQLite 已经落地
 
 重点看：
 
@@ -177,48 +137,59 @@ hermes memory status
 $HERMES_HOME/memory_store.db
 ```
 
-### 成功信号 4：你已经能把它理解成“内建记忆之上的外部事实层”
+### 4. 你的理解已经没有跑偏
 
-也就是你已经不会再把它误解成：
+你已经不会再把 Holographic 误解成：
 
 - 替代 `USER.md` / `MEMORY.md`
-- 多助手共享工作区的第一主线
+- 多助手共享工作区的主路线
 - 必须先做复杂选型才能开始
 
 ---
 
-## 🚫 哪些情况不该先走它
+## 第一次失败时，先查这 4 件事
 
-下面这些情况，通常不建议把 Holographic 当第一步：
+### 1. provider 有没有真的切过去
 
-- 你连内建 [持久记忆](<../../03-玩出花样/03-让 Hermes 记住你.md>) 还没用顺
-- 你当前真正需要的是多助手 / 多 profile 共享与建模，而不是先接一个本地外部 fact store
-- 你现在的问题其实是助手角色混乱，更应该先看 [02-多个助手一起工作](../02-多个助手一起工作.md)
-- 你还没确认自己为什么需要外部 provider，只是想先装一个看起来更高级的东西
-- 你已经明确要走 Honcho 或外部记忆对比 的选型方向
+先跑：
 
-简单说：
-Holographic 适合“先跑通第一条外部记忆路线”，不适合拿来替代对多助手结构、选型判断或基础记忆边界的理解。
+```bash
+hermes memory status
+```
+
+如果状态里不是 `holographic`，说明切换还没生效。
+
+### 2. 配置是不是写错层级了
+
+检查 `config.yaml`，重点确认：
+
+- `memory.provider` 是否正确
+- `plugins.hermes-memory-store` 是否存在
+
+### 3. 你是不是还在拿它解决多助手问题
+
+如果你的真实问题是多个助手共享长期认知，换成 Holographic 也不会直接解决。
+
+### 4. 你是不是还没把内建记忆用顺
+
+如果 `USER.md` / `MEMORY.md` 本身就没整理好，接了外部 provider 也只会把混乱往外扩。
 
 ---
 
-## ✅ 什么时候算通过
+## 什么时候算通过
 
-当你已经能明确回答下面这些问题，这一页就算通过：
+当你已经满足下面这些判断，这一页就算通过：
 
 - 我知道 Holographic 是 `holographic` 这个外部 provider
-- 我知道它叠加在内建 `USER.md` / `MEMORY.md` 之上，而不是替代它们
-- 我知道它是第一条最容易跑通的外部记忆落地路线，更像本地 SQLite fact store
-- 我知道走 Holographic 这条路以后，我真正会得到什么
-- 我知道最短接入方式是 `hermes memory setup` 选 `holographic`，或直接 `hermes config set memory.provider holographic`
-- 我知道接完后该检查 `hermes memory status`、`config.yaml` 和 `$HERMES_HOME/memory_store.db`
+- 我知道它叠加在 `USER.md` / `MEMORY.md` 之上
+- 我知道最短接法是 `hermes memory setup` 选择 `holographic`，或直接设置 provider
+- 我知道该用 `hermes memory status`、`config.yaml`、`memory_store.db` 验收
+- 我知道它适合第一条外部记忆路线，不适合拿来代替多助手结构设计
 
 ---
 
 ## ➡️ 下一步
-
 完成后进入：
-- [03-Honcho记忆](03-Honcho记忆.md)
-
+- [03-Honcho记忆](./03-Honcho记忆.md)
 如果你想先回到上一阶段入口重新确认位置：
-- [03-接入外部记忆系统](01-总览.md)
+- [03-接入外部记忆系统](./01-总览.md)
