@@ -4,8 +4,8 @@
 
 **一套面向中文用户的 Hermes Agent 实战入口**
 
-从第一次跑通，到日常上手、现成方案、国内落地、排障参考，再到系统化搭建。  
-这里不是零散笔记，而是一套可以顺着往下走的中文路径。
+从第一次跑通，到日常上手、现成方案、国内落地、迁移判断、排障参考，再到系统化搭建。  
+这里不是零散资料堆，而是一套可以顺着往下走的中文路径。
 
 [🚀 01-从这开始](./docs/01-从这开始/总览.md) · [🧰 02-现成方案](./docs/02-现成方案/01-总览.md) · [🇨🇳 03-国内落地](./docs/03-国内落地/01-总览.md) · [🔄 04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md) · [🩺 05-遇到问题](./docs/05-遇到问题/01-总览.md) · [📚 06-reference](./docs/06-reference/01-总览.md)
 
@@ -14,14 +14,14 @@
 </div>
 
 <p align="center">
-  <img src="./assets/readme-hero-v1.jpg" alt="Hermes Agent 中文站首页主视觉" width="100%">
+  <img src="./assets/readme-hero-hub.jpg" alt="Hermes Agent 中文站首页主视觉：AI Agent 全流程实践指南，从这开始、国内落地、OpenClaw 迁移三大入口" width="100%">
 </p>
 
 ## 这是什么
 
 Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入口。
 
-它重点解决三件事：
+它重点解决 3 件事：
 - 帮第一次接触 Hermes 的人，先跑通第一轮
 - 帮已经有明确目标的人，直接找到最短入口
 - 帮已经开始长期使用的人，继续往定制、集成、自动化和系统化搭建走
@@ -46,13 +46,13 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 | 我现在卡住了，想快速定位问题 | [05-遇到问题](./docs/05-遇到问题/01-总览.md) | 安装、模型、CLI、Gateway、MCP、Profiles、远程后端排障 |
 | 我不是来学概念，我只想查命令/配置/参考 | [06-reference](./docs/06-reference/01-总览.md) | CLI、Slash Commands、Profiles、环境变量、Tools、Toolsets、MCP、Skills 目录 |
 
-## 如果你想先理解 Hermes 再决定从哪进
-
-下面这张图更适合帮助你快速理解：Hermes 和普通“对话型助手”相比，为什么更适合长期运行、能力沉淀、记忆唤回和工具连接。
-
 <p align="center">
-  <img src="./assets/readme-hermes-capability-map.jpg" alt="Hermes Agent 的核心机制、实战优势与设计差异总览图" width="100%">
+  <img src="./assets/readme-user-routing.jpg" alt="Hermes Agent 中文站用户分流区：从这开始、国内落地、从 OpenClaw 过来、文档总览四类入口" width="100%">
 </p>
+
+## 为什么很多人会用 Hermes，而不只是普通对话助手
+
+Hermes 的价值，不只是“能聊”，而是更适合长期运行、能力沉淀、背景记忆和外部系统连接。
 
 你可以先记住 4 个关键词：
 - **闭环学习**：对话经验可以沉淀成可复用能力
@@ -60,9 +60,30 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 - **Skill 演化**：能力不是一次写死，而是能持续优化
 - **MCP 扩展**：不只是聊天，还能连接更多工具与外部系统
 
-说明：
-- 这张图适合帮你建立整体认知
+<p align="center">
+  <img src="./assets/readme-core-features.jpg" alt="Hermes Agent 中文站核心特性区：自改进学习循环、三层记忆系统、agentskills.io 标准" width="100%">
+</p>
+
+补充理解：
+- 上面这张图适合帮你建立“为什么是 Hermes”的整体认知
 - 真正开始上手时，还是建议直接回到 [01-从这开始](./docs/01-从这开始/总览.md)
+
+## 你会在哪些实战场景里真正用到它
+
+Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可复用工作流：
+- **多 Agent 编排**：把调研、写稿、测试等工作拆给不同 Agent 协同处理
+- **MCP 集成**：把 GitHub、数据库、Slack 和更多外部应用接到 Agent 身上
+- **个人知识助手**：利用记忆与持续上下文，把长周期调研串起来
+
+<p align="center">
+  <img src="./assets/readme-scenarios.jpg" alt="Hermes Agent 中文站实战场景区：多 Agent 编排、MCP 集成、个人知识助手" width="100%">
+</p>
+
+如果你想直接看可交付方案，而不是先学原理：
+- 进入 [02-现成方案](./docs/02-现成方案/01-总览.md)
+
+如果你想先解决国内使用条件，再决定怎么跑：
+- 进入 [03-国内落地](./docs/03-国内落地/01-总览.md)
 
 ## 推荐阅读顺序
 
@@ -77,15 +98,22 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 4. 过程中卡住了，就回到 [05-遇到问题](./docs/05-遇到问题/01-总览.md)
 5. 只想查资料时，直接去 [06-reference](./docs/06-reference/01-总览.md)
 
-## 这套内容的设计目标
+## 仓库与治理
 
-这套中文站追求的不是“文档很多”，而是“你每一步都知道下一步去哪”。
+这个仓库不只是放文档正文，也明确区分了：
+- 什么属于公开交付
+- 什么属于最小治理文件
+- 页面从哪里来、为什么会出现在这里
 
-所以 README 和 docs 都按同一套思路组织：
-- 先给入口，再给细节
-- 先给判断，再给动作
-- 先给最短路径，再展开能力边界
-- 先让你能跑，再让你能定制、集成、自动化
+<p align="center">
+  <img src="./assets/readme-governance-panel.jpg" alt="Hermes Agent 中文站项目信息与治理：治理与来源、仓库基础信息" width="100%">
+</p>
+
+如果你关心这个仓库怎么组织、哪些内容应该公开保留、页面从哪里来：
+- [治理说明](./governance/README.md)
+- [仓库保留原则](./governance/repo-policy.md)
+- [仓库结构](./governance/repo-structure.md)
+- [页面来源映射](./governance/page-source-map.md)
 
 ## 仓库里主要有什么
 
@@ -104,12 +132,3 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 - 想查问题：看 [05-遇到问题](./docs/05-遇到问题/01-总览.md)
 - 想查参考：看 [06-reference](./docs/06-reference/01-总览.md)
 - 想看全站导航：看 [文档总览](./docs/00-文档总览.md)
-
-## 仓库治理入口
-
-如果你关心的是这个仓库怎么组织、哪些内容应该公开保留、页面从哪里来：
-
-- [治理说明](./governance/README.md)
-- [仓库保留原则](./governance/repo-policy.md)
-- [仓库结构](./governance/repo-structure.md)
-- [页面来源映射](./governance/page-source-map.md)
