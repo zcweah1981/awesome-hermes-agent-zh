@@ -278,6 +278,18 @@ hermes -p webdev-product chat --skills agile-web-product-agent -q "$(cat 01-prod
 
 如果第一棒还没把需求和边界压清楚，就不要急着让 builder / api 往后接。
 
+### 🏃 跑完第一棒，怎么接第二棒？
+当 `webdev-product` 已经把页面、功能和边界压出来以后，第二棒就交给 `webdev-builder` 开始搭前端骨架。
+
+```bash
+hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-builder/skills/solutions/agile-web-builder-agent/examples/sample-input.md)"
+```
+
+更稳的用法是：
+- 先把第一棒已经确认的页面结构、功能边界和交接物贴进去
+- 再让 builder 产出前端骨架与目录建议
+- 如果 product 这一棒还没把需求讲清楚，就先不要急着往 builder 接
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说

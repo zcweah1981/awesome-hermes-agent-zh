@@ -290,6 +290,18 @@ hermes -p ppt-structure chat --skills ppt-structure-planner -q "$(cat 01-structu
 
 如果第一棒还没把结构压清楚，就不要急着进入逐页写稿。
 
+### 🏃 跑完第一棒，怎么接第二棒？
+当 `ppt-structure` 已经把主线、页序和每页职责压出来以后，第二棒就交给 `ppt-slidewriter` 开始逐页填内容。
+
+```bash
+hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writer/skills/solutions/ppt-slide-writer/examples/sample-input.md)"
+```
+
+更稳的用法是：
+- 先把第一棒已经确认的页序结构和每页职责贴进去
+- 再让 slide-writer 开始写每页标题、要点和图表建议
+- 如果第一页还没定清楚，就先不要往后面润稿和审校接
+
 ---
 
 ## 🪜 跑完第一轮后，下一句怎么说
