@@ -156,6 +156,13 @@
 | 04-review | 结构风险点、必须修改项、可讲判断 | 给 validator 做总体验收 |
 | 99-solution-validator | 最终结论：pass / pass with fixes / fail | 帮你判断这份 PPT 是否能进入正式汇报 |
 
+![团队接力图：structure-planner 先定主线与页序，slide-writer 接着展开逐页内容，polisher 再补口播与过渡，review 负责汇报前把关，validator 最后给出能否进入正式汇报的结论](../../assets/solution-ppt-team-handoff-review-candidate-02.png)
+
+上面这张图要表达的是：
+- 团队协作版不是把同一句需求扔给 5 个 Agent，而是按交接物一棒一棒往下传
+- 每个角色都只做自己最该做的那一段，避免一个 Agent 同时兼顾结构、写稿、润稿和审校
+- 最后一棒不是继续写内容，而是给出这份 PPT 能不能进入正式汇报的判断
+
 ### 它和单人版最大的区别
 - 单人版：一个 Agent 先帮你压出整套逐页稿，重点是快
 - 团队协作版：多角色接力，重点是结构、逐页内容和汇报把关更稳
