@@ -1,81 +1,58 @@
 # Page Source Map
 
-更新时间：RM2 持续推进 + RM4 / RM5 整模块完成
+更新时间：2026-04-25（北京时间）
 
-本文件只记录当前已经真实落仓的页面来源边界、路径基准与近端待补链接，不提前铺满整站。
+本文件只记录当前已经真实落仓、并且仍属于当前正式路径口径的页面来源映射。
+
+## 当前正式路径口径
+当前外部仓 docs 正式模块目录为：
+- `docs/01-从这开始/`
+- `docs/02-现成方案/`
+- `docs/03-国内落地/`
+- `docs/04-从OpenClaw过来/`
+- `docs/05-遇到问题/`
+- `docs/06-reference/`
+
+旧英文目录名（如 start-here / china / migrate / issues / solutions / reference）只作为历史命名理解，不再作为当前正式路径口径。
 
 ## 上游依据
-- `从这开始模块 PRD V2.0.md`
-- `从这开始_GitHub_docs目录映射表 V2.0.md`
-- `RM2_START_HERE_PAGE_CARDS.md`
-- `RM2_1_COPY_DRAFT.md`
-- `RM2_2_COPY_DRAFT.md`
-- `RM2_FULL_IMAGE_PRODUCTION_BOARD.md`
-- `RM2_IMAGE_SHOTLIST.md`
-- `RM4_CHINA_PAGE_CARDS.md`
-- `RM5_MIGRATE_PAGE_CARDS.md`
+当前公开页的上游依据主要来自：
+- 内部 PRD / PAGE_CARDS / CHECKLIST / PHASES 体系
+- 已确认的模块级页面卡与来源整理
+- 当前外部仓已真实落仓的页面内容与导航关系
 
-## 已落仓页面
+说明：
+- 这些上游文件大多位于内部管理主包，不全部进入外部仓
+- 外部仓只记录“当前页从哪类依据来”，不复制整套内部治理资产
 
-| 页面路径 | 批次 | 主要来源 | 备注 |
+## 已落仓模块映射
+
+| 外部模块 | 当前正式路径 | 主要来源类型 | 说明 |
 |---|---|---|---|
-| `docs/01-从这开始/index.md` | RM2-1 | PRD、目录映射表、页面卡、RM2_1_COPY_DRAFT | 模块总入口页 |
-| `docs/01-从这开始/先跑起来/总览.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 先跑起来阶段入口 |
-| `docs/01-从这开始/先跑起来/准备环境.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 运行环境选择与分流 |
-| `docs/01-从这开始/先跑起来/连接终端.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 终端与 SSH 入门 |
-| `docs/01-从这开始/先跑起来/安装Hermes.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 官方一键安装路径 |
-| `docs/01-从这开始/先跑起来/配好AI大模型并完成第一次互动.md` | RM2-2 | PRD、目录映射表、页面卡、RM2_2_COPY_DRAFT | 模型接入与第一次互动 |
-| `docs/01-从这开始/开始上手/总览.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD、历史归档稿源 | 开始上手阶段入口 |
-| `docs/01-从这开始/开始上手/基础使用.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | CLI 日常使用入口 |
-| `docs/01-从这开始/开始上手/斜杠命令与会话.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 常用命令与会话管理入口 |
-| `docs/01-从这开始/开始上手/精选Skills.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | Skills 精选页 |
-| `docs/01-从这开始/开始上手/接入消息平台.md` | RM2-3 | PRD、目录映射表、RM2_FULL_IMAGE_PRODUCTION_BOARD | 飞书优先的消息平台接入过渡页 |
-| `docs/03-国内落地/总览.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
-| `docs/03-国内落地/01-总览.md` | RM4-1 | RM4_CHINA_PAGE_CARDS | 国内落地模块总入口页 |
-| `docs/03-国内落地/01-国内部署.md` | RM4-2 | RM4_CHINA_PAGE_CARDS | 国内部署分流页 |
-| `docs/03-国内落地/阿里云轻量服务器部署教程.md` | RM4-3 | RM4_CHINA_PAGE_CARDS | 阿里云部署教程 |
-| `docs/03-国内落地/腾讯云轻量服务器部署教程.md` | RM4-4 | RM4_CHINA_PAGE_CARDS | 腾讯云部署教程 |
-| `docs/03-国内落地/02-国内模型/01-总览.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 国内模型总览页 |
-|| `docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 阿里云百炼 Token Plan |
-|| `docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 腾讯云 Token Plan |
-|| `docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 智谱 GLM Coding Plan |
-|| `docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | MiniMax Token Plan |
-|| `docs/03-国内落地/02-国内模型/06-Kimi登月计划.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | Kimi 登月计划 |
-|| `docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | DeepSeek 按量计费接口 |
-|| `docs/03-国内落地/02-国内模型/08-自定义兼容接口.md` | RM4-5 | RM4_CHINA_PAGE_CARDS | 自定义兼容接口 |
-| `docs/04-从OpenClaw过来/总览.md` | RM5-1 | RM5_MIGRATE_PAGE_CARDS | 从 OpenClaw 过来模块总入口页 |
-| `docs/04-从OpenClaw过来/对比.md` | RM5-2 | RM5_MIGRATE_PAGE_CARDS | 差异对比页 |
-| `docs/04-从OpenClaw过来/迁移判断.md` | RM5-3 | RM5_MIGRATE_PAGE_CARDS | 迁移判断页 |
-| `docs/04-从OpenClaw过来/结合使用.md` | RM5-4 | RM5_MIGRATE_PAGE_CARDS | 结合使用页 |
-| `docs/04-从OpenClaw过来/迁移清单.md` | RM5-5 | RM5_MIGRATE_PAGE_CARDS | 迁移检查清单页 |
-| `docs/05-遇到问题/01-总览.md` | RM6-1 | Hermes 官方 Quickstart / Installation / FAQ、官方 Labels | 问题定位总入口页 |
-| `docs/05-遇到问题/02-安装更新与环境问题.md` | RM6-2 | Hermes 官方 Installation / Quickstart / FAQ、WSL2 官方说明、官方 Issue #6147 | 安装 / 更新 / 环境问题页 |
-| `docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md` | RM6-3 | Hermes 官方 AI Providers / FAQ / Quickstart、国内模型总览、自定义兼容接口页 | 模型 / Provider / 自定义 endpoint 问题页 |
-| `docs/05-遇到问题/04-CLI TUI 与会话问题.md` | RM6-4 | Hermes 官方 Quickstart / CLI Commands Reference / FAQ、开始上手相关页 | CLI / TUI / 会话问题页 |
-| `docs/05-遇到问题/05-Gateway Messaging 与推送问题.md` | RM6-5 | Hermes 官方 Messaging Gateway / CLI Commands Reference / FAQ、国内入口总览 | Gateway / Messaging / 推送问题页 |
-| `docs/05-遇到问题/06-Tools Skills MCP 问题.md` | RM6-6 | Hermes 官方 Skills Hub / CLI Commands Reference / FAQ、自己造东西总览、MCP 页 | Tools / Skills / MCP 问题页 |
-| `docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md` | RM6-7 | Hermes 官方 Configuration / FAQ / CLI Commands Reference、Profiles 页 | 配置 / Profiles / 环境隔离问题页 |
-| `docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md` | RM6-8 | Hermes 官方 Configuration / Installation / FAQ、部署与配置相关页 | Docker / Nix / SSH / 远程后端问题页 |
-| `docs/06-reference/01-总览.md` | RM7-1 | 用户提供的 Reference 模块详细文档、Hermes 官方各 Reference 原文入口 | Reference 模块总入口页 |
-| `docs/06-reference/02-CLI 命令参考.md` | RM7-2 | 用户提供的 Reference 模块详细文档、Hermes 官方 CLI Commands Reference | CLI 命令参考页 |
-| `docs/06-reference/03-Slash Commands 参考.md` | RM7-3 | 用户提供的 Reference 模块详细文档、Hermes 官方 Slash Commands Reference | Slash Commands 参考页 |
-| `docs/06-reference/04-Profile 命令参考.md` | RM7-4 | 用户提供的 Reference 模块详细文档、Hermes 官方 Profile Commands Reference | Profile 命令参考页 |
-| `docs/06-reference/05-环境变量参考.md` | RM7-5 | 用户提供的 Reference 模块详细文档、Hermes 官方 Environment Variables Reference | 环境变量参考页 |
-| `docs/06-reference/06-Built-in Tools 参考.md` | RM7-6 | 用户提供的 Reference 模块详细文档、Hermes 官方 Built-in Tools Reference | Built-in Tools 参考页 |
-| `docs/06-reference/07-Toolsets 参考.md` | RM7-7 | 用户提供的 Reference 模块详细文档、Hermes 官方 Toolsets Reference | Toolsets 参考页 |
-| `docs/06-reference/08-MCP 配置参考.md` | RM7-8 | 用户提供的 Reference 模块详细文档、Hermes 官方 MCP Config Reference | MCP 配置参考页 |
-| `docs/06-reference/09-内置 Skills 目录.md` | RM7-9 | 用户提供的 Reference 模块详细文档、Hermes 官方 Bundled Skills Catalog | 内置 Skills 目录页 |
-| `docs/06-reference/10-可选 Skills 目录.md` | RM7-10 | 用户提供的 Reference 模块详细文档、Hermes 官方 Optional Skills Catalog | 可选 Skills 目录页 |
+| 从这开始 | `docs/01-从这开始/` | 原始 PRD、目录映射表、页面卡、逐页内容稿 | 学习主线路径模块 |
+| 现成方案 | `docs/02-现成方案/` | 方案页卡、已验收页面结构、配套 packs | 解决方案与下载包模块 |
+| 国内落地 | `docs/03-国内落地/` | 国内落地页面卡、逐页落地内容、真实截图与结构图 | 国内部署 / 模型 / 入口模块 |
+| 从OpenClaw过来 | `docs/04-从OpenClaw过来/` | 迁移页卡、对比 / 迁移 / 共存说明 | OpenClaw 迁移模块 |
+| 遇到问题 | `docs/05-遇到问题/` | FAQ 结构页、官方问题边界、排障整理 | 问题定位与排障模块 |
+| Reference | `docs/06-reference/` | 官方 reference 原文、中文重写与目录化整理 | 参考手册模块 |
 
-## 当前待补占位链接
-- `TODO_LINK_CHINA_ALIYUN`
-- `TODO_LINK_CHINA_TENCENT`
-- `TODO_LINK_CHINA_BUDGET`
-- `TODO_LINK_WSL2_PREP`
-- `TODO_LINK_CHINA_MODEL_SELECTION`
+## 当前仓内关键入口映射
 
-## 当前待补资源
-- RM2-1：四阶段学习路径图、入口分流图
-- RM2-2：流程图、环境选择图、终端/安装/首次互动真实截图
-- RM2-4：玩出花样子模块正文与配图
-- RM4-1：国内落地总入口图（如后续需要）
+| 入口 | 当前正式目标 |
+|---|---|
+| 仓库首页 | `README.md` |
+| 文档总览 | `docs/00-文档总览.md` |
+| 从这开始 | `docs/01-从这开始/总览.md` |
+| 现成方案 | `docs/02-现成方案/01-总览.md` |
+| 国内落地 | `docs/03-国内落地/01-总览.md` |
+| 从OpenClaw过来 | `docs/04-从OpenClaw过来/01-总览.md` |
+| 遇到问题 | `docs/05-遇到问题/01-总览.md` |
+| Reference | `docs/06-reference/01-总览.md` |
+
+## 维护规则
+1. 只记录当前真实存在的入口与模块，不预写未来占位页。
+2. 页面正式路径一旦切到编号中文目录树，治理文件同步跟进，不再继续维护旧英文目录口径。
+3. 如果模块树继续扩展，优先更新这里的模块级映射与入口映射，而不是先补内部说明性文字。
+
+## 一句话规则
+只映射当前真实落仓页面，不映射历史旧路径，不映射未来占位页。
