@@ -318,6 +318,12 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 - `ppt-review` 负责汇报前把关
 - `ppt-validator` 最后只回答一件事：这份 PPT 现在能不能进入正式汇报
 
+### ⚡ 团队协作：最短命令总览
+| 第一棒：结构（Structure） | 第二棒：逐页写稿（Slide Writer） | 最终棒：验收（Validator） |
+|---|---|---|
+| `hermes -p ppt-structure chat --skills ppt-structure-planner -q "$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)"` | `hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writer/skills/solutions/ppt-slide-writer/examples/sample-input.md)"` | `hermes -p ppt-validator chat --skills solution-validator-ppt -q "$(cat 99-solution-validator/skills/solutions/solution-validator-ppt/examples/sample-input.md)"` |
+| 先拿主线、页序、每页职责 | 先拿每页标题、要点、图表建议 | 最后拿到 `pass / pass with fixes / fail` |
+
 ### 🛠️ 交付验收：怎么交给 Validator？
 当 `ppt-review` 已经把结构风险、必须修改项和可讲判断压清楚以后，再把这一版交给 `ppt-validator`。
 
