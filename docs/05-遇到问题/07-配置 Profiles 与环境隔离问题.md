@@ -46,6 +46,56 @@
 - 不要把 session、memory、skills、gateway、secret 混成一个层次
 - 不要在没分清环境边界前重复安装或重复登录
 
+## 📌 先记住这 4 个官方基线
+
+### 1）Profile 不是换皮肤，是切整套 Hermes 环境
+
+官方 profile 命令文档说得很清楚：
+- `hermes profile use <name>` 会切活动 profile
+- 之后不带 `-p` 的 Hermes 命令，都会默认走这套 profile
+
+所以 profile 切换后，下面这些变化很多时候都是正常的：
+- `config.yaml`
+- `.env`
+- sessions
+- skills
+- memories
+- gateway 状态
+
+### 2）最先该会的 profile 命令只有这几个
+
+```bash
+hermes profile list
+hermes profile use <name>
+hermes profile show <name>
+hermes config
+```
+
+这几条最适合回答：
+- 我现在在哪个 profile
+- 当前默认活动 profile 是谁
+- 这套 profile 的 Hermes home 在哪
+- 我现在看到的 config 到底是哪份
+
+### 3）`.env`、`config.yaml`、gateway、skills 本来就不是一层
+
+先强行拆成四层：
+1. secret 在 `.env`
+2. 行为配置在 `config.yaml`
+3. skills 是能力资产
+4. gateway 是运行入口
+
+如果你把这四层混成一句“怎么都不对”，几乎一定会误判。
+
+### 4）改完文件，不等于当前运行态已经切过去
+
+官方命令链里最容易被忽略的是：
+- 你改的是哪套 profile 下的文件
+- 当前 CLI / gateway / session 是不是还在旧运行态
+- 你是不是在 profile A 改完，又去 profile B 测
+
+所以“文件已经保存”不等于“当前链路已经生效”。
+
 ## ❓FAQ
 
 <a id="faq-config-not-applied"></a>
@@ -66,7 +116,7 @@
 - 你保存了文件，但运行态还没切过去
 
 什么时候该跳转：
-- 如果已经确认是 provider / model 层值不对，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果已经确认是 provider / model 层值不对，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 如果核心问题仍是“到底哪份配置在生效”，留在本页
 
 ---
@@ -89,7 +139,7 @@
 - 你以为文件改了，运行态就会立即同步
 
 什么时候该跳转：
-- 如果你已经确认是 gateway 重启 / 运行态问题，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
+- 如果你已经确认是 gateway 重启 / 运行态问题，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
 - 如果本质还是当前环境没切过来，留在本页
 
 ---
@@ -159,8 +209,8 @@
 - 在旧环境里保存的会话，去新环境里恢复
 
 什么时候该跳转：
-- 如果更像 CLI / TUI 会话理解问题，跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
-- 如果更像 gateway per-chat 行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
+- 如果更像 CLI / TUI 会话理解问题，跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
+- 如果更像 gateway per-chat 行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
 - 如果根因是环境切错，留在本页
 
 ---
@@ -182,8 +232,8 @@
 4. gateway 当前用的是哪套环境
 
 什么时候该跳转：
-- 如果你主要卡在 gateway 行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
-- 如果你主要卡在 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
+- 如果你主要卡在 gateway 行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
+- 如果你主要卡在 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 - 如果本质是层次混线和环境隔离，留在本页
 
 ---
@@ -205,8 +255,8 @@
 - 新会话 vs 旧会话
 
 什么时候该跳转：
-- 如果差异主要来自消息平台行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway Messaging 与推送问题.md>)
-- 如果差异主要来自会话交互，跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
+- 如果差异主要来自消息平台行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
+- 如果差异主要来自会话交互，跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
 - 如果你先要整理环境边界，留在本页
 
 ---
@@ -223,8 +273,8 @@
 - 先问自己：是“环境切错”，还是“能力本身坏了”
 
 什么时候该跳转：
-- 如果更像 provider / model，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
-- 如果更像 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
+- 如果更像 provider / model，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
+- 如果更像 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 - 如果更像当前环境搞错了，留在本页
 
 ---
@@ -265,7 +315,7 @@
 
 ## ➡️ 下一步
 完成后进入：
-- [08-Docker / Nix / SSH / 远程后端问题](<./08-Docker Nix SSH 与远程后端问题.md>)
+- [08-Docker / Nix / SSH / 远程后端问题](<./08-Docker%20Nix%20SSH%20%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%90%8E%E7%AB%AF%E9%97%AE%E9%A2%98.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [01-总览](./01-总览.md)

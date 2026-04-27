@@ -19,7 +19,7 @@
 
 ### C. 平台显示已连接，但机器人不回复
 - 看这里：[#04 为什么看起来连上了却不回？](#faq-connected-no-reply)
-- 如果更像模型报错：跳转到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果更像模型报错：跳转到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 
 ### D. 会话老是断 / 像总在开新对话
 - 看这里：[#05 为什么消息平台里像总在开新会话？](#faq-session-reset)
@@ -60,6 +60,64 @@ hermes gateway
 - 不要同时切 profile、改 token、改平台事件订阅
 - 不要把“平台显示在线”直接当成“消息链路正常”
 - 不要把“前台能跑”直接当成“服务化配置也一样”
+
+## 📌 先记住这 4 个官方基线
+
+### 1）Gateway 的核心命令要先分清
+
+先记住这几条：
+
+```bash
+hermes gateway setup
+hermes gateway
+hermes gateway status
+```
+
+如果你明确要做后台服务，再看：
+
+```bash
+hermes gateway install
+hermes gateway start
+hermes gateway restart
+```
+
+官方 CLI 命令参考里给出的重点是：
+- `hermes gateway` = 前台运行 gateway
+- `hermes gateway setup` = 交互式配置消息平台
+- `hermes gateway status` = 查当前服务状态
+- `install/start/restart` = Linux / macOS 的服务化链路
+
+### 2）先跑前台，再做服务化
+
+如果你连消息能不能进来都还没证实，先优先：
+
+```bash
+hermes gateway
+```
+
+而不是一上来就把问题压进后台服务里。
+
+对排障最有价值的是先回答：
+- 前台到底有没有收到消息
+- 前台收到后有没有立即报错
+- 你当前 profile / token / 平台配置是不是真的这套
+
+### 3）平台接通，不等于 gateway 已经可稳定回复
+
+你至少要把链路拆成 3 段：
+1. 平台侧机器人 / 应用 / token / callback 配没配好
+2. gateway 进程有没有真的在跑
+3. 消息进来以后，是卡在权限、会话，还是 provider / model
+
+所以“平台显示在线”只能证明一小段，不等于全链路通了。
+
+### 4）消息平台是多用户入口，不是 CLI 原样镜像
+
+官方 FAQ 明确把 messaging gateway 当成多用户入口。
+这意味着：
+- 每个平台 / chat 的会话感受可能不同于本地 CLI
+- allowlist / pairing / per-chat session 都会影响你体感
+- slash 命令、回复方式、会话边界，本来就不等于本地终端
 
 ## ❓FAQ
 
@@ -151,7 +209,7 @@ hermes gateway
 - 你把“已连接”误读成“已可稳定回复”
 
 什么时候该跳转：
-- 如果更像模型、provider、endpoint 问题，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果更像模型、provider、endpoint 问题，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 如果更像某个平台的机器人权限或事件订阅问题，跳到 [03-国内入口 / 01-总览](../03-国内落地/03-国内入口/01-总览.md)
 
 ---
@@ -173,8 +231,8 @@ hermes gateway
 - 消息平台里的会话感受，不等于 CLI 会话感受
 
 什么时候该跳转：
-- 如果你怀疑是 CLI 会话恢复逻辑搞混，跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
-- 如果你怀疑是 profile / 环境切错导致“像丢记忆”，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
+- 如果你怀疑是 CLI 会话恢复逻辑搞混，跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
+- 如果你怀疑是 profile / 环境切错导致“像丢记忆”，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 
 ---
 
@@ -199,7 +257,7 @@ hermes gateway
 - 以为聊天平台等于完整本地操作台
 
 什么时候该跳转：
-- 如果你真正要学的是本地交互和 slash 语义，跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
+- 如果你真正要学的是本地交互和 slash 语义，跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
 - 如果你查的是消息平台内命令边界，留在本页
 
 ---
@@ -243,7 +301,7 @@ hermes gateway
 - 你以为多个平台共用一条会话，实际是按 chat 分开的
 
 什么时候该跳转：
-- 如果你主要在查 cron / 自动化，跳到 [07-让 Hermes 自己自动跑](<../01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md>)
+- 如果你主要在查 cron / 自动化，跳到 [07-让 Hermes 自己自动跑](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/07-%E8%AE%A9%20Hermes%20%E8%87%AA%E5%B7%B1%E8%87%AA%E5%8A%A8%E8%B7%91.md>)
 - 如果你主要在查消息平台收发，留在本页
 
 ---
@@ -284,7 +342,7 @@ hermes gateway
 
 ## ➡️ 下一步
 完成后进入：
-- [06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
+- [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [01-总览](./01-总览.md)

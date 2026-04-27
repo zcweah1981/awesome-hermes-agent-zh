@@ -56,6 +56,52 @@ hermes doctor
 - 不要一边切 profile、一边改 MCP、一边重装 skills
 - 不要把 tools、skills、MCP、provider、gateway 全混成一件事
 
+## 📌 先记住这 4 个官方基线
+
+### 1）Tools、Skills、MCP 是三层，不是一层
+
+先用最短方式分开：
+- `hermes tools`：看当前入口可暴露的工具能力
+- `hermes skills list`：看当前环境已安装的 skills
+- `mcp_servers`：看外部 MCP server 有没有真的注册进当前配置
+
+只要你把这三层混成一句“功能没了”，排障就会乱。
+
+### 2）先确认“当前环境里有什么”，再讨论“为什么没被调用”
+
+官方命令里最有价值的起手式还是：
+
+```bash
+hermes tools
+hermes skills list
+hermes doctor
+```
+
+如果你查的是 MCP，再补：
+- 当前 `config.yaml` 里有没有 `mcp_servers`
+- 这个环境是不是你以为的 profile
+
+### 3）MCP 配置写上去，不等于 server 已接通
+
+MCP 最常见误判是：
+- `mcp_servers` 写了
+- 但 stdio command 根本跑不起来
+- 或 HTTP server 地址 / 认证没对
+
+所以你至少要分清：
+- 是“没注册到当前配置”
+- 还是“注册了，但 server 起不来”
+- 还是“server 能连，任务层仍不好用”
+
+### 4）Skill browse / list / `/skill-name` 根本不是一件事
+
+这一层必须先拆开：
+- browse / search：看可安装内容
+- list：看当前环境已安装内容
+- `/<skill-name>`：在当前交互里调用已可用 skill
+
+很多“skill 不见了”的体感，其实只是把这三件事混成了一件。
+
 ## ❓FAQ
 
 <a id="faq-tools-list"></a>
@@ -77,7 +123,7 @@ hermes doctor
 
 什么时候该跳转：
 - 如果只是 toolsets 边界没分清，留在本页
-- 如果已经发现是 provider / model 报错导致工具链失效，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果已经发现是 provider / model 报错导致工具链失效，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 
 ---
 
@@ -98,7 +144,7 @@ hermes doctor
 - 以为所有模型在工具调用上都同样稳定
 
 什么时候该跳转：
-- 如果你已经怀疑是模型不稳定或 endpoint 兼容性问题，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果你已经怀疑是模型不稳定或 endpoint 兼容性问题，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 如果只是触发条件不清，留在本页
 
 ---
@@ -120,7 +166,7 @@ hermes doctor
 - 以为 CLI 可见，消息平台里也一定同样可见
 
 什么时候该跳转：
-- 如果你已经明显怀疑是 profile / 配置隔离，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
+- 如果你已经明显怀疑是 profile / 配置隔离，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 - 如果只是 skill 没装到当前环境，留在本页
 
 ---
@@ -142,7 +188,7 @@ hermes doctor
 
 什么时候该跳转：
 - 如果只是命令语义没分清，留在本页
-- 如果你真正卡的是本地交互 / slash 行为，跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
+- 如果你真正卡的是本地交互 / slash 行为，跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20%E4%B8%8E%E4%BC%9A%E8%AF%9D%E9%97%AE%E9%A2%98.md>)
 
 ---
 
@@ -165,7 +211,7 @@ hermes doctor
 - 你把“配置写上了”误当成“连接一定成功”
 
 什么时候该跳转：
-- 如果你要重新建立 MCP 主线理解，跳到 [05-把 Hermes 接进外部系统](<../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md>)
+- 如果你要重新建立 MCP 主线理解，跳到 [05-把 Hermes 接进外部系统](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>)
 - 如果你已经明确在查当前 MCP 接通失败，留在本页
 
 ---
@@ -187,8 +233,8 @@ hermes doctor
 - 查一个固定对象
 
 什么时候该跳转：
-- 如果你发现工具能调用，但结果质量差、调用不稳定，也要交叉看 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
-- 如果你还没搞懂 MCP 适合解决什么，跳到 [05-把 Hermes 接进外部系统](<../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md>)
+- 如果你发现工具能调用，但结果质量差、调用不稳定，也要交叉看 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
+- 如果你还没搞懂 MCP 适合解决什么，跳到 [05-把 Hermes 接进外部系统](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>)
 
 ---
 
@@ -204,7 +250,7 @@ hermes doctor
 - 先问自己：是工具没有，还是模型没正确使用它
 
 什么时候该跳转：
-- 如果根因更像 provider / model，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-模型 Provider 与自定义 endpoint 问题.md>)
+- 如果根因更像 provider / model，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 如果根因更像能力没接进来，留在本页
 
 ---
@@ -247,7 +293,7 @@ hermes doctor
 - 本机有的工具，以为 gateway / 远端环境也自动有
 
 什么时候该跳转：
-- 如果你已经明显进入 profile / config 隔离问题，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
+- 如果你已经明显进入 profile / config 隔离问题，跳到 [07-配置 / Profiles / 环境隔离问题](<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 - 如果还只是 tools / skills / MCP 的语义边界不清，留在本页
 
 ## 🔹 官方依据
@@ -256,7 +302,7 @@ hermes doctor
 - [CLI Commands Reference](https://hermes-agent.nousresearch.com/docs/reference/cli-commands)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
 - [04-自己造东西](../01-从这开始/04-自己造东西/01-总览.md)
-- [05-把 Hermes 接进外部系统](<../01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md>)
+- [05-把 Hermes 接进外部系统](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/04-%E8%87%AA%E5%B7%B1%E9%80%A0%E4%B8%9C%E8%A5%BF/05-%E6%8A%8A%20Hermes%20%E6%8E%A5%E8%BF%9B%E5%A4%96%E9%83%A8%E7%B3%BB%E7%BB%9F.md>)
 
 ## ✅ 看完这页，你应该能立刻判断
 
@@ -267,7 +313,7 @@ hermes doctor
 
 ## ➡️ 下一步
 完成后进入：
-- [07-配置 / Profiles / 环境隔离问题](<./07-配置 Profiles 与环境隔离问题.md>)
+- [07-配置 / Profiles / 环境隔离问题](<./07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 - [01-总览](./01-总览.md)
