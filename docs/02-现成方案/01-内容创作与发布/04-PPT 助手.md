@@ -277,6 +277,13 @@ hermes profile create ppt-validator --clone
 bash ./install_all.sh
 ```
 
+默认不传参数时，这个脚本会按 `ppt` 作为前缀，把内容分别装进：
+- `ppt-structure`
+- `ppt-slidewriter`
+- `ppt-polish`
+- `ppt-review`
+- `ppt-validator`
+
 #### 第五步：先跑第一棒
 ```bash
 hermes -p ppt-structure chat --skills ppt-structure-planner -q "$(cat 01-structure-planner/skills/solutions/ppt-structure-planner/examples/sample-input.md)"
