@@ -41,18 +41,20 @@
 
 ## 🧪 先做最小判断
 
-先跑这 3 条，先定位，不要一边测一边同时改 5 个配置：
+先跑这 4 条，先定位，不要一边测一边同时改 5 个配置：
 
 ```bash
 hermes model
+hermes config
 hermes version
 hermes doctor
 ```
 
 怎么理解结果：
 - `hermes version` 跑不起来：先回 [02-安装 / 更新 / 环境问题](./02-安装更新与环境问题.md)
+- `hermes config` 里 provider / model 已经和你认知不一致：先修主路线，不要继续猜
 - `hermes version` 正常，`hermes model` / `doctor` 开始报鉴权、model、endpoint：继续留在本页
-- 命令和模型都正常，只是 CLI / 会话行为怪：跳到 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
+- 命令和模型都正常，只是 CLI / 会话行为怪：跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20与会话问题.md>)
 
 ## ✅ 先做什么：4 步排查清单
 
@@ -69,6 +71,130 @@ hermes doctor
 - 以为 404 是模型不存在，实际是 `base_url` / `/v1` 写错
 - 以为“能聊天”就等于完整兼容 Hermes 所需能力
 
+## 📌 先记住这 4 个官方基线
+
+### 1）先用 `hermes model`，不要先手改一堆配置
+
+官方 provider 与 Custom Endpoint 的主入口都是：
+
+```bash
+hermes model
+```
+
+如果你只是第一次把 Hermes 跑通，默认先走：
+- 官方 provider
+- 正确的 API Key
+- 最小可用模型
+
+不要第一步就同时改：
+- provider
+- model
+- `base_url`
+- 网关
+- 代理
+- 本地服务
+
+### 2）常见 provider 的正确 key 名，要和 provider 对上
+
+按官方 providers 文档，这几组最常见：
+- OpenRouter → `OPENROUTER_API_KEY`
+- z.ai / GLM → `GLM_API_KEY`
+- Kimi / Moonshot → `KIMI_API_KEY`
+- MiniMax → `MINIMAX_API_KEY`
+- DeepSeek → `DEEPSEEK_API_KEY`
+- DashScope / Alibaba → `DASHSCOPE_API_KEY`
+- Gemini → `GOOGLE_API_KEY` 或 `GEMINI_API_KEY`
+- Custom Endpoint → 主要通过 `hermes model` 写入 `config.yaml`
+
+如果你连 provider 名都还没分清，先不要直接怀疑 Key 无效。
+
+### 3）官方要求模型上下文至少 64K
+
+这一条不是“可选优化”，而是 Hermes 的硬边界之一。
+
+如果你在接本地或自托管模型，至少先确认：
+- model id 是真实存在的
+- 实际 context length 足够
+- 不是宣传页写很大，但实际给 Hermes 只有 8K / 16K
+
+### 4）Custom Endpoint 先验三件事：地址、模型、兼容性
+
+先不要上来就说“OpenAI-compatible 应该都一样”。
+真正要先核对的是：
+- `base_url` 是否对
+- `/v1` 是否重复或缺失
+- `/models` 是否能列到你要的模型
+- 这个 endpoint 是否真的支持 Hermes 需要的能力
+
+## 🧭 先做一轮最小体检
+
+先只跑这 4 条，不要一边测一边继续改配置：
+
+```bash
+hermes model
+hermes config
+hermes version
+hermes doctor
+```
+
+怎么看：
+- `hermes version` 都不正常：先退回 [02-安装 / 更新 / 环境问题](./02-安装更新与环境问题.md)
+- `hermes config` 里 provider / model 明显不是你以为那条：先修主路线，不要继续猜
+- `hermes doctor` 开始报 auth / model / endpoint：继续留在本页
+- 基础都正常，只是交互和工具行为怪：跳到 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20与会话问题.md>) 或 [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20问题.md>)
+
+## 🌐 `base_url` / `/v1` 最容易搞错的地方
+
+把这张表先看一遍，再继续查 404：
+
+| 你手里的地址长什么样 | 你在 Hermes 里通常该填什么 | 最常见错误 |
+|---|---|---|
+| 官方 provider，本来就支持 Hermes | 不必先手写 `base_url`，优先走 `hermes model` | 把官方 provider 硬改成 custom endpoint |
+| OpenAI-compatible 根地址本身不带 `/v1` | 补成 `.../v1` 后再用 | 少一层 `/v1` |
+| OpenAI-compatible 文档已经给到 `.../v1` | 直接用它给的 `.../v1` | 再手动补一次，变成双 `/v1` |
+| 你手里是聊天接口全路径，如 `/v1/chat/completions` | 回退到服务级 `base_url`，不要直接贴聊天接口 | 把接口路径当 `base_url` |
+| 你接的是 Ollama / vLLM / SGLang / LM Studio | 先确认它真的暴露了 OpenAI-compatible 路线 | 以为“本地服务能启动”就等于 Hermes 一定能接 |
+
+一句话记法：
+- Hermes 要的是服务级 `base_url`
+- 不是单个聊天接口 URL
+- `/v1` 要不要补，看上游文档原本给到哪一层
+
+## 🔎 Custom Endpoint 最小验证法
+
+不要一上来就拿主环境硬试。先拆成两段：
+
+### A. 先看 Hermes 侧到底选中了什么
+
+```bash
+hermes config
+hermes model
+```
+
+你至少要确认：
+- 当前 provider 是不是 `custom`
+- 当前 model 名是不是你想要的那个
+- 现在是不是还挂着旧 provider 或旧 endpoint
+
+### B. 再直接打 endpoint 本身
+
+最小思路不是“先跑长对话”，而是先确认服务有没有正常暴露模型列表。
+
+例如常见 OpenAI-compatible 检查会像这样：
+
+```bash
+curl -sS http://localhost:11434/v1/models
+```
+
+如果你拿到的是远程地址，就把上面的地址替换成你的真实 `base_url + /models`。
+
+你最该看的是：
+- 这个地址是否真的能通
+- 返回里有没有你要的 model id
+- 返回是不是已经在 401 / 403 / 404
+
+如果连 `/models` 都不通，就不要先把锅甩给 Hermes。
+
 ## ❓FAQ
 
 <a id="faq-api-key-invalid"></a>
@@ -80,17 +206,21 @@ hermes doctor
 先做什么：
 ```bash
 hermes model
+hermes config
 ```
 
-然后只确认两件事：
+然后只确认三件事：
 1. 当前实际选中的 provider 是谁
 2. 这个 provider 对应的 Key 是否放进了正确变量名
+3. 你当前 session / profile 看的，是不是你刚刚改过的那份环境
 
 常见变量名：
 - OpenRouter → `OPENROUTER_API_KEY`
 - z.ai / GLM → `GLM_API_KEY`
 - Kimi → `KIMI_API_KEY`
+- MiniMax → `MINIMAX_API_KEY`
 - DeepSeek → `DEEPSEEK_API_KEY`
+- DashScope / Alibaba → `DASHSCOPE_API_KEY`
 - Gemini → `GOOGLE_API_KEY` / `GEMINI_API_KEY`
 - Custom Endpoint → 主要通过 `hermes model` 写入 `config.yaml`
 
@@ -136,10 +266,19 @@ hermes model
 - 你填的是服务根地址，还是直接把聊天接口地址贴进去了
 - 这个接口到底是不是 OpenAI-compatible
 
+先做最小验证：
+```bash
+hermes config
+curl -sS http://localhost:11434/v1/models
+```
+
+如果你不是本地 Ollama，就把第二条替换成你的真实 `base_url + /models`。
+
 国内兼容层特别常见的坑：
 - `/v1` 重复
 - `/v1` 缺失
 - 网关路径被代理层改写
+- 上游只暴露聊天接口，没有暴露标准 `/models`
 
 什么时候该跳转：
 - 你接的是 OneAPI / NewAPI / Ollama / LM Studio / 本地兼容层：看 [08-自定义兼容接口](../03-国内落地/02-国内模型/08-自定义兼容接口.md)
@@ -159,10 +298,22 @@ hermes model
 2. 当前这台机器真的能访问这个地址吗
 3. 你有没有把本地地址、局域网地址、云主机地址混用了
 
+先跑最小检查：
+```bash
+hermes config
+curl -sS http://localhost:11434/v1/models
+```
+
 如果你走的是本地模型路线，再优先怀疑：
 - 模型还没加载完
 - 本地服务没起来
 - context 太大导致首包时间很慢
+- Ollama / 本地兼容服务实际给 Hermes 的 context 没对齐
+
+官方 FAQ 里还提到一个本地端点常见补救：
+```bash
+HERMES_STREAM_READ_TIMEOUT=1800
+```
 
 什么时候该跳转：
 - 明显是国内网络 / 云主机 / 部署问题：回 [03-国内落地 / 01-总览](../03-国内落地/01-总览.md)
@@ -248,7 +399,7 @@ hermes model
 什么时候该跳转：
 - 你要的是稳定 Agent 工作流：优先回官方 provider
 - 你要继续走兼容层：去 [08-自定义兼容接口](../03-国内落地/02-国内模型/08-自定义兼容接口.md)
-- 你已经开始碰到工具调用和会话行为异常：也一起看 [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)、[06-Tools / Skills / MCP 问题](<./06-Tools Skills MCP 问题.md>)
+- 你已经开始碰到工具调用和会话行为异常：也一起看 [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20与会话问题.md>)、[06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20问题.md>)
 
 ---
 
@@ -304,6 +455,7 @@ hermes model
 ## 🔹 官方依据
 
 - [AI Providers](https://hermes-agent.nousresearch.com/docs/integrations/providers)
+- [Environment Variables Reference](https://hermes-agent.nousresearch.com/docs/reference/environment-variables)
 - [FAQ & Troubleshooting](https://hermes-agent.nousresearch.com/docs/reference/faq)
 - [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
 - [08-自定义兼容接口](../03-国内落地/02-国内模型/08-自定义兼容接口.md)
@@ -318,6 +470,6 @@ hermes model
 
 ## ➡️ 下一步
 完成后进入：
-- [04-CLI / TUI / 会话问题](<./04-CLI TUI 与会话问题.md>)
+- [04-CLI / TUI / 会话问题](<./04-CLI%20TUI%20与会话问题.md>)
 如果你想先回到上一阶段入口重新确认位置：
 - [01-总览](./01-总览.md)
