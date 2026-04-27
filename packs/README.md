@@ -1,44 +1,149 @@
-# packs
+# 📦 Packs 方案包总览
 
-这一层放的是可直接下载、解压、安装进 Hermes profile 的打包方案。
+这一层放的不是文档正文，也不是源码工程本体。
 
-## 当前已开放的包
+这里放的是：
+- 可直接下载的方案包
+- 可解压后安装进 Hermes profile 的工作流包
+- 面向具体任务的 solo / team 运行包
 
-- [miniapp-lab](./miniapp-lab/)
+如果你已经在 `docs/02-现成方案/` 里找到某个方案，下一步通常就会进入这里。
 
-## miniapp-lab 是什么
+## ✨ 这一层是干什么的
 
-`miniapp-lab` 不是源码工程本体，而是一组给 Hermes 用的现成包：
+你可以把 `packs/` 理解成“文档里方案页的可执行落地层”。
 
-- `01-super-individual`：一个 Agent 先把微信小程序需求压成可开工骨架
-- `02-team`：把 product、builder、api、qa、validator 拆开协作
+文档页负责告诉你：
+- 这个方案适合谁
+- 解决什么问题
+- 该怎么选 solo 还是 team
 
-## 你什么时候先进这一层
+`packs/` 负责给你：
+- 可下载 zip
+- 安装说明
+- profile 安装脚本
+- SOUL / skills / sample input-output
+- 真正可试跑的最小包
 
-如果你已经在文档里看到了某个现成方案，接下来要做的是：
+## 🧭 你什么时候该进这一层
 
-- 下载 zip
-- 解压
-- 安装到自己的 Hermes profile
-- 直接试跑
+当你已经完成下面任一件事时，就应该从 docs 进入 `packs/`：
 
-那你就会进入这一层。
+- 你已经确定要试跑某个现成方案
+- 你不想自己从零拼 workflow，想直接下载包
+- 你已经知道自己要用 solo 版还是 team 版
+- 你要把方案安装进自己的 Hermes profile
 
-## 默认入口
+## ⚡ 默认使用顺序
 
-如果你是跟着当前文档主线来的，默认先看：
+进入任何一个 pack，默认都按这个顺序走：
 
+1. 先看该包根目录的 `INSTALL.md`
+2. 再判断你要进：
+   - `01-super-individual`
+   - 还是 `02-team`
+3. 再执行安装脚本
+4. 再用 sample input 试跑第一轮
+
+## 📚 当前已开放的方案包
+
+| 方案包 | 适合什么任务 | 当前可用模式 | 默认入口 |
+|---|---|---|---|
+| [miniapp-lab](./miniapp-lab/INSTALL.md) | 微信小程序需求梳理、产品到开发接力 | Solo + Team | [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md) |
+| [meeting-lab](./meeting-lab/INSTALL.md) | 会议纪要整理与结构化输出 | Solo | [meeting-lab/INSTALL.md](./meeting-lab/INSTALL.md) |
+| [daily-report-lab](./daily-report-lab/INSTALL.md) | 项目日报整理、汇总、跟进输出 | Solo | [daily-report-lab/INSTALL.md](./daily-report-lab/INSTALL.md) |
+| [ppt-lab](./ppt-lab/INSTALL.md) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+
+## 🔍 每个包里通常会有什么
+
+一个标准 pack 一般包含这些层：
+
+### 1. 根入口
+- `INSTALL.md`
+- `.zip` 下载包
+
+### 2. Solo 模式
+- `01-super-individual/`
+- 适合你想先自己快速跑通一轮
+
+### 3. Team 模式
+- `02-team/`
+- 适合你想按多角色接力跑完整工作流
+- 并不是每个包都会提供 team 版
+
+### 4. 角色与能力资产
+- `SOUL.md`
+- `skills/`
+- `templates/`
+- `references/`
+- `examples/`
+
+### 5. 安装动作
+- `install_to_profile.sh`
+- 或 `install_all.sh`
+
+## ✅ 你怎么快速判断该选哪个包
+
+### 如果你要做应用 / 原型 / 小程序类任务
+直接进：
+- [miniapp-lab](./miniapp-lab/INSTALL.md)
+
+### 如果你要做会议整理
+直接进：
+- [meeting-lab](./meeting-lab/INSTALL.md)
+
+### 如果你要做项目日报 / 日报类整理
+直接进：
+- [daily-report-lab](./daily-report-lab/INSTALL.md)
+
+### 如果你要做 PPT 相关任务
+直接进：
+- [ppt-lab](./ppt-lab/INSTALL.md)
+
+## 🧠 Solo 和 Team 怎么选
+
+### 先选 Solo，如果你现在只是想：
+- 先跑通一次
+- 先看输出长什么样
+- 先验证这个方案适不适合自己
+
+### 选 Team，如果你现在已经明确要：
+- 多角色接力
+- 把任务拆给 product / writer / api / qa / validator
+- 跑完整流程，而不是只试一个单点输出
+
+## 🚫 这一层不负责什么
+
+`packs/` 不负责：
+- 解释方案为什么成立
+- 详细讲解 Hermes 基础概念
+- 替代 docs 正文教程
+
+这些内容请回到：
+- [01-从这开始](../docs/01-从这开始/总览.md)
+- [02-现成方案](../docs/02-现成方案/01-总览.md)
+- [06-reference](../docs/06-reference/01-总览.md)
+
+## 🚀 如果你现在就想开始
+
+默认建议：
+
+1. 先看 [02-现成方案](../docs/02-现成方案/01-总览.md)
+2. 确认你要试的方案页
+3. 再回到对应 pack：
+   - [miniapp-lab](./miniapp-lab/INSTALL.md)
+   - [meeting-lab](./meeting-lab/INSTALL.md)
+   - [daily-report-lab](./daily-report-lab/INSTALL.md)
+   - [ppt-lab](./ppt-lab/INSTALL.md)
+
+如果你已经明确要先试一个，默认最适合快速起跑的是：
 - [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md)
 
-它会先帮你判断：
+## 📌 看完这页你应该能马上判断什么
 
-- 该下 `01-super-individual.zip`
-- 还是该下 `02-team.zip`
-
-## ✅ 看完这页你应该能立刻判断什么
-
-看完这一层，你应该能马上判断：
-
-- `packs` 是包目录，不是 docs 页面目录
-- 当前有哪些可直接安装的打包方案
-- 我下一步该不该进 `miniapp-lab`
+看完这一页，你应该已经能立刻判断：
+- `packs/` 是方案包目录，不是 docs 正文目录
+- 当前有哪些可直接下载和安装的方案包
+- 我该先进哪个 pack
+- 我应该先选 solo 还是 team
+- 我下一步应该先看哪个 `INSTALL.md`
