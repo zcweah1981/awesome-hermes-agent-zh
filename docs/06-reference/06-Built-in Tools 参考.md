@@ -2,7 +2,7 @@
 
 > 这页查的是 Hermes 内置工具（built-in tools），以及它们和 toolsets、平台、凭据之间的关系。 如果你要查 MCP server 暴露出来的工具，请看 [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页帮助你理解 Hermes 内置工具的查表逻辑。
 
@@ -20,7 +20,7 @@
 - MCP server 连不上排障
 - Feishu / Home Assistant 等特定工具接入排障
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/tools-reference>
 - 官方页面标题：Built-in Tools Reference
@@ -28,7 +28,7 @@
 
 中文站这一页不会把 50+ 工具原样长表堆给你，而是先帮你建立“怎么查”的结构。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 你遇到下面这些场景时，就该先查这页：
 
@@ -40,7 +40,7 @@
 
 如果你要解决的是“为什么它现在不能用”，那已经偏排障。
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 Built-in Tools 是 Hermes 自带注册的工具
 
@@ -86,7 +86,7 @@ github_create_issue
 
 所以在实际使用中，你往往不是一个个开工具，而是启用某个 toolset。
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 先记住的工具大类
 
@@ -125,7 +125,7 @@ github_create_issue
 | `search` 和 `web` 看起来像一回事 | `search` 只搜，`web` 还会抽取网页 |
 | Feishu 工具没在常规聊天里出现 | 官方明确有作用域限制，不是通用暴露 |
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 官方定义下的 built-in tools
 
@@ -250,7 +250,7 @@ Hermes tool registry 中已经注册好的工具集合。
 - 插件提供
 - MCP 动态提供
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 这页是“查工具分类”，不是“查所有工具全量细节”
 
@@ -278,7 +278,7 @@ Hermes tool registry 中已经注册好的工具集合。
 - 以为“开了一个 tool”就等于“开了一组能力”
 - 以为“toolset 名字”就是具体 tool 名字
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -287,13 +287,13 @@ Hermes tool registry 中已经注册好的工具集合。
 | 配置改了工具还是没变 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 Built-in Tools Reference：<https://hermes-agent.nousresearch.com/docs/reference/tools-reference>
 - 官方 Toolsets Reference：<https://hermes-agent.nousresearch.com/docs/reference/toolsets-reference>
 - 官方 MCP Config Reference：<https://hermes-agent.nousresearch.com/docs/reference/mcp-config-reference>
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [07-Toolsets 参考](<./07-Toolsets%20%E5%8F%82%E8%80%83.md>)

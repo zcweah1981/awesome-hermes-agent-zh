@@ -2,7 +2,7 @@
 
 > 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页只负责帮你查 MCP 配置结构。
 
@@ -21,7 +21,7 @@
 - OAuth 流程排障
 - 某个外部 MCP server 功能本身的使用教程
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/mcp-config-reference>
 - 官方页面标题：MCP Config Reference
@@ -29,7 +29,7 @@
 
 中文站这一页保留官方字段名，但把“字段含义、优先级、常见误区”按查表方式整理好。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 你在下面这些场景里，应该先查这页：
 
@@ -39,7 +39,7 @@
 - 你想关闭 resources / prompts 这种 utility tools
 - 你想确认某个 server 为什么最终没有任何 tool 注册出来
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 MCP 配置的根入口叫 `mcp_servers`
 
@@ -100,7 +100,7 @@ mcp_servers:
 
 即使你开了它们，也要 server 本身真的暴露对应 capability，Hermes 才会注册出来。
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 Root config shape
 
@@ -153,7 +153,7 @@ mcp_servers:
 | `resources: false` | 禁用 `list_resources` / `read_resource` |
 | `prompts: false` | 禁用 `list_prompts` / `get_prompt` |
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 Root config shape 的实际理解
 
@@ -294,7 +294,7 @@ tools:
 
 这个 server 在工具层面像“没有出现过”。
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 不要把 stdio 和 HTTP 字段混用成教程拼盘
 
@@ -316,7 +316,7 @@ tools:
 
 如果你要查具体某个 server 的安装、授权、服务端实现，请回该 server 自己的文档。
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -326,11 +326,11 @@ tools:
 | 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 MCP Config Reference：<https://hermes-agent.nousresearch.com/docs/reference/mcp-config-reference>
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)

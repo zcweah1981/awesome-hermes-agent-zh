@@ -2,7 +2,7 @@
 
 > 这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页只负责帮你查 profile 相关命令。
 
@@ -22,7 +22,7 @@
 
 如果你现在的问题是“为什么我切了 profile 还是不对”，请直接去文末的“出问题了去哪”。
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/profile-commands>
 - 官方页面标题：Profile Commands Reference
@@ -30,7 +30,7 @@
 
 中文站这一页保留官方命令结构，但会把“profile 到底隔离了什么”“clone 到底复制到什么程度”讲清楚。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 下面这些场景，最适合来这页：
 
@@ -45,7 +45,7 @@
 - [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)
 - [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>)
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 Profile 可以理解成“一套独立使用环境”
 
@@ -112,7 +112,7 @@ terminal.cwd
 - `--clone` 更适合“复制一个配置模板”
 - `--clone-all` 更适合“把当前环境整体克隆一份”
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 最常用的 profile 子命令
 
@@ -147,7 +147,7 @@ terminal.cwd
 | `--clone-all` | 复制所有状态 | 不是“只复制模型配置” |
 | `alias` | 生成 wrapper 启动入口 | 不是 profile 本身 |
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 总入口
 
@@ -340,7 +340,7 @@ hermes profile import <archive> [--name NAME]
 - 导入别人给你的 profile 模板
 - 迁移旧环境
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 不要把 profile 当聊天标签用
 
@@ -376,7 +376,7 @@ profile 管的是 Hermes home，不是 shell 当前目录。
 
 那已经是排障场景。
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -385,14 +385,14 @@ profile 管的是 Hermes home，不是 shell 当前目录。
 | tools / skills 在不同 profile 下表现不一致 | [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 Profile Commands Reference：<https://hermes-agent.nousresearch.com/docs/reference/profile-commands>
 - 官方 CLI Commands Reference：<https://hermes-agent.nousresearch.com/docs/reference/cli-commands>
 
 如果你需要核对完整参数、边界条件或导入导出行为，以官方原文为准。
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)

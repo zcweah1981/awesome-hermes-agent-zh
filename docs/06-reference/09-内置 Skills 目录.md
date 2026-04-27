@@ -2,7 +2,7 @@
 
 > 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页帮助你用“目录脑图”理解 Hermes 的 bundled skills。
 
@@ -20,7 +20,7 @@
 - 某个 skill command 不显示排障
 - optional skill 的完整目录
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/skills-catalog>
 - 官方页面标题：Bundled Skills Catalog
@@ -28,7 +28,7 @@
 
 中文站这一页不会机械复制几百条 skill 目录，而是按用途重新分组，并挑高频项做中文索引。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 下面这些场景，最适合查这页：
 
@@ -37,7 +37,7 @@
 - 你想知道某个 skill 是 bundled 还是 optional
 - 你想理解“skill 是能力包，不是单条命令”
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 Bundled Skills 是随 Hermes 一起提供的技能库
 
@@ -75,7 +75,7 @@ skill 本质上是能力包 / 工作流包，不是一个个零散命令按钮�
 
 所以这页只负责 bundled skills。
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 先记住的路径与边界
 
@@ -171,7 +171,7 @@ skill 本质上是能力包 / 工作流包，不是一个个零散命令按钮�
 - Web 应用探索式 QA
 - 对产品做对抗性体验测试
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 Bundled Skills 的官方定位
 
@@ -240,7 +240,7 @@ skill 本质上是能力包 / 工作流包，不是一个个零散命令按钮�
 - devops / integration 类
 - research / docs / media 类
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 不要把 skills 当作“另一套命令行总表”
 
@@ -254,7 +254,7 @@ skill 的本体是任务能力包，不是单独命令库。
 
 Reference 页帮你查“有哪些”，但具体是否启用、在哪个平台启用，还是要回 skills 管理或配置层。
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -263,11 +263,11 @@ Reference 页帮你查“有哪些”，但具体是否启用、在哪个平台�
 | 不知道该用哪个 skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 Bundled Skills Catalog：<https://hermes-agent.nousresearch.com/docs/reference/skills-catalog>
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)

@@ -2,7 +2,7 @@
 
 > 这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页帮助你查 toolsets 的概念、分类和配置方式。
 
@@ -20,7 +20,7 @@
 - MCP server 过滤规则排障
 - gateway 平台权限异常排障
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/toolsets-reference>
 - 官方页面标题：Toolsets Reference
@@ -28,7 +28,7 @@
 
 中文站这一页保留官方的 toolset 分类与配置思路，但会把“tool / toolset / platform toolset”之间的关系讲清楚。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 下面这些场景，最适合查这页：
 
@@ -40,7 +40,7 @@
 
 如果你要解决的是“为什么我明明开了还是看不到”，那更偏排障。
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 Toolset 可以理解成“工具权限包”
 
@@ -86,7 +86,7 @@ Toolset = 一组工具的命名打包。
 - 不同 session 的工具也不一定一样
 - 同一个模型下，能力范围可能因为 toolset 配置不同而不同
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 三类 toolsets 速查
 
@@ -121,7 +121,7 @@ Toolset = 一组工具的命名打包。
 | `/tools enable browser` | 当前 session 开关层 |
 | `hermes tools` | 平台配置层 |
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 按 session 配置 toolsets
 
@@ -244,7 +244,7 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 - Telegram：更要保守
 - 某些 comment handler：可能是特化工具集
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 不要默认 `all`
 
@@ -272,7 +272,7 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 
 实际上它们就是两层不同作用域。
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -281,12 +281,12 @@ Platform toolset 是最容易被忽视、但对真实落地最重要的一层。
 | 配置改了像没生效 | [05-遇到问题 / 07-配置 Profiles 与环境隔离问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/07-%E9%85%8D%E7%BD%AE%20Profiles%20%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB%E9%97%AE%E9%A2%98.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 Toolsets Reference：<https://hermes-agent.nousresearch.com/docs/reference/toolsets-reference>
 - 官方 Built-in Tools Reference：<https://hermes-agent.nousresearch.com/docs/reference/tools-reference>
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)

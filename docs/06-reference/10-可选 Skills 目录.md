@@ -2,7 +2,7 @@
 
 > 这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
 
-## 1. 页面用途
+## 🎯 1. 页面用途
 
 这一页帮助你查 optional skills 的目录和使用边界。
 
@@ -20,7 +20,7 @@
 - 某个 skill 自己的完整教程
 - MCP server 本身的配置教程
 
-## 2. 官方来源
+## 🔹 2. 官方来源
 
 - 官方页面：<https://hermes-agent.nousresearch.com/docs/reference/optional-skills-catalog>
 - 官方页面标题：Optional Skills Catalog
@@ -28,7 +28,7 @@
 
 中文站这一页会把 optional skills 按类别与适用场景整理，不机械照抄全量目录。
 
-## 3. 什么时候查这页
+## 🧭 3. 什么时候查这页
 
 下面这些场景，最适合先查这页：
 
@@ -39,7 +39,7 @@
 
 如果你还是刚入门，通常不建议从 optional skills 开始。
 
-## 4. 核心概念中文解释
+## 🧠 4. 核心概念中文解释
 
 ### 4.1 Optional Skills 是“仓库自带但默认不激活”的扩展技能
 
@@ -103,7 +103,7 @@ optional skill 的本质是：
 - 我有没有这个场景
 - 我有没有这些依赖
 
-## 5. 常用项速查
+## ⚡ 5. 常用项速查
 
 ### 5.1 先记住的安装与目录规则
 
@@ -197,7 +197,7 @@ optional skill 的本质是：
 
 这类很强，但通常只在明确垂直场景里才值得装。
 
-## 6. 完整参考结构
+## 🗂️ 6. 完整参考结构
 
 ### 6.1 Optional Skills 的官方定位
 
@@ -284,7 +284,7 @@ scripts/
 
 如果这三个问题答不出来，就先别乱装。
 
-## 7. 注意事项
+## ⚠️ 7. 注意事项
 
 ### 7.1 Optional skill 不代表新手必须安装
 
@@ -311,7 +311,7 @@ Reference 页只帮你判断“有什么、适合谁、什么时候用”。
 
 真正安装、启用、调通，往往还要结合该 skill 自己的文档与依赖环境。
 
-## 8. 出问题了去哪
+## 🚦 8. 出问题了去哪
 
 | 你现在卡在哪 | 先去哪里 |
 |---|---|
@@ -320,11 +320,11 @@ Reference 页只帮你判断“有什么、适合谁、什么时候用”。
 | 不知道该不该装某个 optional skill | [01-从这开始 / 02-开始上手 / 04-常用 Skills（按日常使用场景精选）](<../01-%E4%BB%8E%E8%BF%99%E5%BC%80%E5%A7%8B/02-%E5%BC%80%E5%A7%8B%E4%B8%8A%E6%89%8B/04-%E5%B8%B8%E7%94%A8%20Skills%EF%BC%88%E6%8C%89%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E7%B2%BE%E9%80%89%EF%BC%89.md>) |
 | 不确定问题在哪 | [05-遇到问题 / 01-总览](../05-遇到问题/01-总览.md) |
 
-## 9. 官方原文链接
+## 🌐 9. 官方原文链接
 
 - 官方 Optional Skills Catalog：<https://hermes-agent.nousresearch.com/docs/reference/optional-skills-catalog>
 
-## 10. 相关中文站页面
+## 📚 10. 相关中文站页面
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
 - [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)
