@@ -46,3 +46,14 @@ hermes -p ppt-solo chat --skills ppt-assistant -q "$(cat skills/solutions/ppt-as
 - 有没有把逐页要点写出来
 - 有没有补图表 / 配图 / 备注建议
 - 有没有给下一轮继续落版的句子
+
+---
+
+## 🤝 如果你要直接走团队协作版
+
+如果你已经不是一个人单独做 PPT，而是想按角色接力推进，直接进入 `02-team/` 或下载 `02-team.zip`。
+
+最短入口：
+- 阅读团队包说明：`02-team/README.md`
+- 或直接进入：`02-team/`
+- 或直接下载：`02-team.zip`

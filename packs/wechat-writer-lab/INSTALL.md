@@ -47,3 +47,14 @@ hermes -p gzh-solo chat --skills wechat-official-account-writer -q "$(cat skills
 - 有没有把大纲、导语、正文初稿写出来
 - 有没有补结尾 CTA 和配图建议
 - 有没有给发前检查单和下一轮续跑句子
+
+---
+
+## 🤝 如果你要直接走团队协作版
+
+如果你已经不是一个人单独写文章，而是想按角色接力推进，直接进入 `02-team/` 或下载 `02-team.zip`。
+
+最短入口：
+- 阅读团队包说明：`02-team/README.md`
+- 或直接进入：`02-team/`
+- 或直接下载：`02-team.zip`

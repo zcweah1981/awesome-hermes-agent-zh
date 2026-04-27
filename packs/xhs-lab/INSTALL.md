@@ -47,3 +47,14 @@ hermes -p xhs-solo chat --skills xiaohongshu-content-assistant -q "$(cat skills/
 - 有没有把开头和正文底稿写出来
 - 有没有补封面短句和评论区引导
 - 有没有给发前检查单和下一轮续跑句子
+
+---
+
+## 🤝 如果你要直接走团队协作版
+
+如果你已经不是一个人单独出稿，而是想按角色接力推进，直接进入 `02-team/` 或下载 `02-team.zip`。
+
+最短入口：
+- 阅读团队包说明：`02-team/README.md`
+- 或直接进入：`02-team/`
+- 或直接下载：`02-team.zip`
