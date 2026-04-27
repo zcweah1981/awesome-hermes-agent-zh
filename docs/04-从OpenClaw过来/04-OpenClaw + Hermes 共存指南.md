@@ -168,4 +168,4 @@
 - [从 OpenClaw 到 Hermes：迁移路径](<./05-从 OpenClaw 到 Hermes：迁移路径.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
-- [从 OpenClaw 过来，不一定要马上迁移](./01-总览.md)
+- [04-从OpenClaw过来 | 总览](./01-总览.md)
