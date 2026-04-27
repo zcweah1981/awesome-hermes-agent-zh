@@ -51,13 +51,13 @@
 | 方案包 | 对应文档页 | 适合什么任务 | 当前可用模式 | 默认入口 |
 |---|---|---|---|---|
 | [miniapp-lab](./miniapp-lab/INSTALL.md) | [微信小程序助手](../docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md) | 微信小程序需求梳理、产品到开发接力 | Solo + Team | [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md) |
-| [webdev-lab](./webdev-lab/INSTALL.md) | [敏捷 Web 开发助手](../docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md) | Web 应用骨架、页面、接口和开发接力 | Solo + Team | [webdev-lab/INSTALL.md](./webdev-lab/INSTALL.md) |
+| [webdev-lab](./webdev-lab/INSTALL.md) | [敏捷 Web 开发助手](<../docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md>) | Web 应用骨架、页面、接口和开发接力 | Solo + Team | [webdev-lab/INSTALL.md](./webdev-lab/INSTALL.md) |
 | [meeting-lab](./meeting-lab/INSTALL.md) | [会议纪要助手](../docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md) | 会议纪要整理与结构化输出 | Solo | [meeting-lab/INSTALL.md](./meeting-lab/INSTALL.md) |
 | [daily-report-lab](./daily-report-lab/INSTALL.md) | [项目日报助手](../docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md) | 项目日报整理、汇总、跟进输出 | Solo | [daily-report-lab/INSTALL.md](./daily-report-lab/INSTALL.md) |
 | [summary-lab](./summary-lab/INSTALL.md) | [资料总结助手](../docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md) | 散资料压缩、结构化总结、发送版总结输出 | Solo | [summary-lab/INSTALL.md](./summary-lab/INSTALL.md) |
 | [xhs-lab](./xhs-lab/INSTALL.md) | [小红书内容助手](../docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md) | 小红书选题、标题、正文、配图提示、发布检查 | Solo + Team | [xhs-lab/INSTALL.md](./xhs-lab/INSTALL.md) |
 | [wechat-writer-lab](./wechat-writer-lab/INSTALL.md) | [公众号写作助手](../docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md) | 公众号文章选题、初稿、编辑、审校 | Solo + Team | [wechat-writer-lab/INSTALL.md](./wechat-writer-lab/INSTALL.md) |
-| [ppt-lab](./ppt-lab/INSTALL.md) | [PPT 助手](../docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+| [ppt-lab](./ppt-lab/INSTALL.md) | [PPT 助手](<../docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md>) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
 
 ## 🗂️ 按方案类型快速分组
 
