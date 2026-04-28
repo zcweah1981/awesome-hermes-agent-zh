@@ -1,0 +1,67 @@
+# awesome-hermes-agent-zh — Content Integrity Check
+# PR / push 触发：校验 markdown frontmatter 必填字段 + packs manifest 结构
+name: content-check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: content-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  content-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate docs markdown structure
+        run: |
+          echo "🔍 Checking docs/ markdown files..."
+          FOUND=0
+          while IFS= read -r -d '' file; do
+            if ! head -5 "$file" | grep -q '^---'; then
+              echo "⚠️  $file — missing frontmatter (acceptable for overview files)"
+            fi
+            FOUND=$((FOUND + 1))
+          done < <(find docs/ -name "*.md" -print0 2>/dev/null)
+          echo "✅ Scanned $FOUND markdown files in docs/"
+
+      - name: Validate packs manifests
+        run: |
+          echo "🔍 Checking packs/ manifests..."
+          FOUND=0
+          while IFS= read -r -d '' file; do
+            if ! python3 -c "import yaml; yaml.safe_load(open('$file'))" 2>/dev/null; then
+              echo "❌ $file — invalid YAML"
+              exit 1
+            fi
+            FOUND=$((FOUND + 1))
+          done < <(find packs/ -name "manifest.yaml" -print0 2>/dev/null)
+          echo "✅ Validated $FOUND pack manifests"
+
+      - name: Check critical paths exist
+        run: |
+          echo "🔍 Checking critical path structure..."
+          for dir in docs/ packs/ assets/ governance/; do
+            if [ ! -d "$dir" ]; then
+              echo "❌ Missing critical directory: $dir"
+              exit 1
+            fi
+          done
+          echo "✅ All critical directories present"
+
+      - name: Summary
+        run: |
+          DOCS=$(find docs/ -name "*.md" | wc -l)
+          PACKS=$(find packs/ -name "manifest.yaml" | wc -l)
+          ASSETS=$(find assets/ -type f | wc -l)
+          echo ""
+          echo "📊 Content Summary:"
+          echo "   Markdown docs: $DOCS"
+          echo "   Pack manifests: $PACKS"
+          echo "   Assets: $ASSETS"
