@@ -1,17 +1,3 @@
----
-title: "🧠 03-让 Hermes 记住你"
-module: "start"
-section: "memory-basics"
-slug: "/start/personalize/memory-basics"
-description: "这一页只解决一件事："
-order: 32
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "03-玩出花样"
-page_type: "doc-page"
----
-
 # 🧠 03-让 Hermes 记住你
 
 这一页只解决一件事：

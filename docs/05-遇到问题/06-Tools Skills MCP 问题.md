@@ -1,17 +1,3 @@
----
-title: "06-Tools / Skills / MCP 问题"
-module: "issues"
-section: "tools-skills-mcp"
-slug: "/issues/tools-skills-mcp"
-description: "一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "05-遇到问题"
-page_type: "doc-page"
----
-
 # 06-Tools / Skills / MCP 问题
 
 > 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。

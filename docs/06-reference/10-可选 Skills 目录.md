@@ -1,17 +1,3 @@
----
-title: "🧩 10-可选 Skills 目录"
-module: "reference"
-section: "optional-skills"
-slug: "/reference/optional-skills"
-description: "这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "06-reference"
-page_type: "doc-page"
----
-
 # 🧩 10-可选 Skills 目录
 
 > 这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)。

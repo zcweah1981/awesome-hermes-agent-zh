@@ -1,17 +1,3 @@
----
-title: "03-API 服务与 Open WebUI"
-module: "china"
-section: "api-service-open-webui"
-slug: "/china/entry/api-service-open-webui"
-description: "🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。"
-order: 62
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "03-国内入口"
-page_type: "doc-page"
----
-
 # 03-API 服务与 Open WebUI
 
 > 🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。

@@ -1,17 +1,3 @@
----
-title: "07-配置 / Profiles / 环境隔离问题"
-module: "issues"
-section: "config-profiles-environment"
-slug: "/issues/config-profiles-environment"
-description: "一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "05-遇到问题"
-page_type: "doc-page"
----
-
 # 07-配置 / Profiles / 环境隔离问题
 
 > 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。

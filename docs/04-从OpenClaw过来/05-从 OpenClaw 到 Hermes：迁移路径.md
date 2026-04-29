@@ -1,17 +1,3 @@
----
-title: "05-从 OpenClaw 到 Hermes：迁移路径"
-module: "openclaw"
-section: "migration-path"
-slug: "/openclaw/migration-path"
-description: "一句话先说清楚：迁移不是复制配置，而是把 OpenClaw 中已经跑通的经验，重构成 Hermes 中可复用的角色、技能、模板和工作流。"
-order: 71
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "04-从OpenClaw过来"
-page_type: "doc-page"
----
-
 # 05-从 OpenClaw 到 Hermes：迁移路径
 
 > 一句话先说清楚：迁移不是复制配置，而是把 OpenClaw 中已经跑通的经验，重构成 Hermes 中可复用的角色、技能、模板和工作流。

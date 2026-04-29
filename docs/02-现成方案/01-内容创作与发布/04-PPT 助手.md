@@ -1,17 +1,3 @@
----
-title: "04-PPT 助手"
-module: "solutions"
-section: "ppt"
-slug: "/solutions/ppt"
-description: "一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。"
-order: 12
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "01-内容创作与发布"
-page_type: "doc-page"
----
-
 # 04-PPT 助手
 
 > 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。

@@ -1,17 +1,3 @@
----
-title: "04-智谱 GLM Coding Plan"
-module: "china"
-section: "glm-coding-plan"
-slug: "/china/models/glm-coding-plan"
-description: "🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。"
-order: 55
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-国内模型"
-page_type: "doc-page"
----
-
 # 04-智谱 GLM Coding Plan
 
 > 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。

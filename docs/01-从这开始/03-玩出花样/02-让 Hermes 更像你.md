@@ -1,17 +1,3 @@
----
-title: "🪞 02-让 Hermes 更像你"
-module: "start"
-section: "soul"
-slug: "/start/personalize/soul"
-description: "这一页只解决一件事："
-order: 31
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "03-玩出花样"
-page_type: "doc-page"
----
-
 # 🪞 02-让 Hermes 更像你
 
 这一页只解决一件事：

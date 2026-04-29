@@ -1,17 +1,3 @@
----
-title: "06-Kimi登月计划"
-module: "china"
-section: "kimi-plan"
-slug: "/china/models/kimi-plan"
-description: "🎯 一句话先说清楚：如果你最看重的是 Kimi 的 Coding 体验，或者你正在判断“先买会员权益”还是“直接走开放平台接口”，那这页必须拆成两条线看：`Kimi Code` 和 `Kimi API`。"
-order: 57
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-国内模型"
-page_type: "doc-page"
----
-
 # 06-Kimi登月计划
 
 > 🎯 一句话先说清楚：如果你最看重的是 Kimi 的 Coding 体验，或者你正在判断“先买会员权益”还是“直接走开放平台接口”，那这页必须拆成两条线看：`Kimi Code` 和 `Kimi API`。

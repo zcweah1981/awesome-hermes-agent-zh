@@ -1,17 +1,3 @@
----
-title: "02-阿里云百炼 Token Plan"
-module: "china"
-section: "alibaba-bailian-token-plan"
-slug: "/china/models/alibaba-bailian-token-plan"
-description: "🎯 一句话先说清楚：如果你想先买一个“多模型统一入口”，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。"
-order: 53
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-国内模型"
-page_type: "doc-page"
----
-
 # 02-阿里云百炼 Token Plan
 
 > 🎯 一句话先说清楚：如果你想先买一个“多模型统一入口”，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。

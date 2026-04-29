@@ -1,17 +1,3 @@
----
-title: "03-腾讯云 Token Plan"
-module: "china"
-section: "tencent-token-plan"
-slug: "/china/models/tencent-token-plan"
-description: "🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。"
-order: 54
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-国内模型"
-page_type: "doc-page"
----
-
 # 03-腾讯云 Token Plan
 
 > 🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。

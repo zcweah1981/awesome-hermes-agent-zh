@@ -1,17 +1,3 @@
----
-title: "05-Gateway / Messaging / 推送问题"
-module: "issues"
-section: "gateway-messaging"
-slug: "/issues/gateway-messaging"
-description: "一句话结论：这页只处理“消息为什么没进来、为什么不回、为什么会话乱、为什么 gateway status 不对”这类排障问题；先分清是平台接入层、gateway 运行层，还是会话 / 权限层。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "05-遇到问题"
-page_type: "doc-page"
----
-
 # 05-Gateway / Messaging / 推送问题
 
 > 一句话结论：这页只处理“消息为什么没进来、为什么不回、为什么会话乱、为什么 gateway status 不对”这类排障问题；先分清是平台接入层、gateway 运行层，还是会话 / 权限层。

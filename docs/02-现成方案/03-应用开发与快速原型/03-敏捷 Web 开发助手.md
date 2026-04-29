@@ -1,17 +1,3 @@
----
-title: "03-敏捷 Web 开发助手"
-module: "solutions"
-section: "webdev"
-slug: "/solutions/webdev"
-description: "一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。"
-order: 19
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "03-应用开发与快速原型"
-page_type: "doc-page"
----
-
 # 03-敏捷 Web 开发助手
 
 > 一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。

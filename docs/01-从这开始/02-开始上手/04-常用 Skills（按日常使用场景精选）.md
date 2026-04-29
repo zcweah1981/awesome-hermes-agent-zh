@@ -1,17 +1,3 @@
----
-title: "🏷️ 04-常用 Skills（按日常使用场景精选）"
-module: "start"
-section: "curated-skills"
-slug: "/start/getting-started/curated-skills"
-description: "这一页不是让你背完整技能目录，而是帮你建立第一层判断：我现在手上的任务属于哪一类，应该先试哪一类 Skill。"
-order: 28
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-开始上手"
-page_type: "doc-page"
----
-
 # 🏷️ 04-常用 Skills（按日常使用场景精选）
 
 ![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../../assets/rm2-3-skills-curated-01-skill-scenario-map.png)

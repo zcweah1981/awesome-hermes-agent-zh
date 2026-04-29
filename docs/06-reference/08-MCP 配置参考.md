@@ -1,17 +1,3 @@
----
-title: "🔌 08-MCP 配置参考"
-module: "reference"
-section: "mcp-config"
-slug: "/reference/mcp-config"
-description: "这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "06-reference"
-page_type: "doc-page"
----
-
 # 🔌 08-MCP 配置参考
 
 > 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。

@@ -1,17 +1,3 @@
----
-title: "04-命令行（CLI）"
-module: "china"
-section: "cli"
-slug: "/china/entry/cli"
-description: "🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。"
-order: 63
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "03-国内入口"
-page_type: "doc-page"
----
-
 # 04-命令行（CLI）
 
 > 🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。

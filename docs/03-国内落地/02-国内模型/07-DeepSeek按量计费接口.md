@@ -1,17 +1,3 @@
----
-title: "07-DeepSeek按量计费接口"
-module: "china"
-section: "deepseek-metered-api"
-slug: "/china/models/deepseek-metered-api"
-description: "🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。"
-order: 58
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "02-国内模型"
-page_type: "doc-page"
----
-
 # 07-DeepSeek按量计费接口
 
 > 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。

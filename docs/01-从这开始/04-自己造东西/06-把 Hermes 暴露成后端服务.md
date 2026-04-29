@@ -1,17 +1,3 @@
----
-title: "🌐 06-把 Hermes 暴露成后端服务"
-module: "start"
-section: "api-server"
-slug: "/start/build/api-server"
-description: "这一页只解决一件事："
-order: 46
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "04-自己造东西"
-page_type: "doc-page"
----
-
 # 🌐 06-把 Hermes 暴露成后端服务
 
 这一页只解决一件事：

@@ -1,17 +1,3 @@
----
-title: "👤 04-Profile 命令参考"
-module: "reference"
-section: "profile-commands"
-slug: "/reference/profile-commands"
-description: "这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。"
-order: 999
-status: "published"
-updated: "2026-04-28"
-source_type: "original"
-nav_group: "06-reference"
-page_type: "doc-page"
----
-
 # 👤 04-Profile 命令参考
 
 > 这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
