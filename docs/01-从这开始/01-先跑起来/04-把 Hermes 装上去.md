@@ -1,3 +1,17 @@
+---
+title: "📦 04-把 Hermes 装上去"
+module: "start"
+section: "install-hermes"
+slug: "/start/get-running/install-hermes"
+description: "一句话先说清楚：这一页不再帮你选环境、也不再帮你进终端，它只做一件事——把 Hermes 真正装上去，并确认 `hermes` 命令已经能用。"
+order: 6
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "01-先跑起来"
+page_type: "doc-page"
+---
+
 # 📦 04-把 Hermes 装上去
 
 ![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../../assets/rm2-2-install-hermes-01-install-command-running.png)

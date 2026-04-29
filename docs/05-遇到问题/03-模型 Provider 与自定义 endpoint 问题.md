@@ -1,3 +1,17 @@
+---
+title: "03-模型 / Provider / 自定义 endpoint 问题"
+module: "issues"
+section: "provider-endpoint"
+slug: "/issues/provider-endpoint"
+description: "一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。"
+order: 999
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "05-遇到问题"
+page_type: "doc-page"
+---
+
 # 03-模型 / Provider / 自定义 endpoint 问题
 
 > 一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。

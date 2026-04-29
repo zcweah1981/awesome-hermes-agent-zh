@@ -1,3 +1,17 @@
+---
+title: "🤖 07-让 Hermes 自己自动跑"
+module: "start"
+section: "automation"
+slug: "/start/build/automation"
+description: "这一页只解决一件事："
+order: 47
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "04-自己造东西"
+page_type: "doc-page"
+---
+
 # 🤖 07-让 Hermes 自己自动跑
 
 这一页只解决一件事：

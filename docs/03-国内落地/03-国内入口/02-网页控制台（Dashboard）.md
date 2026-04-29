@@ -1,3 +1,17 @@
+---
+title: "02-网页控制台（Dashboard）"
+module: "china"
+section: "dashboard"
+slug: "/china/entry/dashboard"
+description: "🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。"
+order: 61
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-国内入口"
+page_type: "doc-page"
+---
+
 # 02-网页控制台（Dashboard）
 
 > 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。

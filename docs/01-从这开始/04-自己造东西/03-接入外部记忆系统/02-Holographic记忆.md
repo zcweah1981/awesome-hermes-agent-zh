@@ -1,3 +1,17 @@
+---
+title: "🪞 02-Holographic记忆"
+module: "start"
+section: "holographic"
+slug: "/start/build/memory-providers/holographic"
+description: "这一页只解决一件事："
+order: 39
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-接入外部记忆系统"
+page_type: "doc-page"
+---
+
 # 🪞 02-Holographic记忆
 
 这一页只解决一件事：

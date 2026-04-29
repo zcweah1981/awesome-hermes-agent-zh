@@ -1,3 +1,17 @@
+---
+title: "04-CLI / TUI / 会话问题"
+module: "issues"
+section: "cli-tui-session"
+slug: "/issues/cli-tui-session"
+description: "一句话结论：这一页只处理“界面显示怪、按键像没反应、slash command 不出现、会话恢复不对、看起来像卡住了”这类问题。只要 `hermes` 能启动，很多时候就不是“完全坏了”，而是入口、交互方式、会话预期或终端环境没对齐。"
+order: 999
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "05-遇到问题"
+page_type: "doc-page"
+---
+
 # 04-CLI / TUI / 会话问题
 
 > 一句话结论：这一页只处理“界面显示怪、按键像没反应、slash command 不出现、会话恢复不对、看起来像卡住了”这类问题。只要 `hermes` 能启动，很多时候就不是“完全坏了”，而是入口、交互方式、会话预期或终端环境没对齐。

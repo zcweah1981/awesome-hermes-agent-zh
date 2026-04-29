@@ -1,4 +1,9 @@
 routes:
+  - source: docs/00-文档总览.md
+    slug: /docs-overview
+    module: overview
+    page_type: module-overview
+
   - source: docs/01-从这开始/总览.md
     slug: /start
     module: start
@@ -113,3 +118,324 @@ routes:
     slug: /packs
     module: packs
     page_type: pack-entry
+
+  - source: docs/01-从这开始/02-开始上手/01-总览.md
+    slug: /start/getting-started
+    module: start
+    page_type: module-overview
+
+  - source: docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md
+    slug: /start/getting-started/basic-usage
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md
+    slug: /start/getting-started/slash-commands-and-sessions
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
+    slug: /start/getting-started/curated-skills
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
+    slug: /start/getting-started/connect-message-platform
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/03-玩出花样/01-总览.md
+    slug: /start/personalize
+    module: start
+    page_type: module-overview
+
+  - source: docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
+    slug: /start/personalize/soul
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+    slug: /start/personalize/memory-basics
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md
+    slug: /start/personalize/custom-model
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/03-玩出花样/05-让工具更顺手.md
+    slug: /start/personalize/toolsets-and-workflow
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md
+    slug: /start/personalize/skins-and-themes
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/01-总览.md
+    slug: /start/build
+    module: start
+    page_type: module-overview
+
+  - source: docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md
+    slug: /start/build/profiles
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md
+    slug: /start/build/memory-providers
+    module: start
+    page_type: module-overview
+
+  - source: docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md
+    slug: /start/build/memory-providers/holographic
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md
+    slug: /start/build/memory-providers/honcho
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md
+    slug: /start/build/memory-providers/compare
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md
+    slug: /start/build/context-system
+    module: start
+    page_type: module-overview
+
+  - source: docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md
+    slug: /start/build/context-system/context-files
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md
+    slug: /start/build/context-system/context-references
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md
+    slug: /start/build/mcp-and-plugins
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
+    slug: /start/build/api-server
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md
+    slug: /start/build/automation
+    module: start
+    page_type: doc-page
+
+  - source: docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md
+    slug: /start/build/acp-ide
+    module: start
+    page_type: doc-page
+
+  - source: docs/03-国内落地/01-国内部署/01-总览.md
+    slug: /china/deploy
+    module: china
+    page_type: module-overview
+
+  - source: docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md
+    slug: /china/deploy/alicloud-lite-server
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md
+    slug: /china/deploy/tencent-lite-server
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/01-总览.md
+    slug: /china/models
+    module: china
+    page_type: module-overview
+
+  - source: docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
+    slug: /china/models/alibaba-bailian-token-plan
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
+    slug: /china/models/tencent-token-plan
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
+    slug: /china/models/glm-coding-plan
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
+    slug: /china/models/minimax-token-plan
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
+    slug: /china/models/kimi-plan
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
+    slug: /china/models/deepseek-metered-api
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
+    slug: /china/models/openai-compatible-endpoint
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/01-总览.md
+    slug: /china/entry
+    module: china
+    page_type: module-overview
+
+  - source: docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
+    slug: /china/entry/dashboard
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
+    slug: /china/entry/api-service-open-webui
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
+    slug: /china/entry/cli
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/05-飞书.md
+    slug: /china/entry/feishu
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md
+    slug: /china/entry/wecom-ai-bot
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/07-钉钉.md
+    slug: /china/entry/dingtalk
+    module: china
+    page_type: doc-page
+
+  - source: docs/03-国内落地/03-国内入口/08-个人微信.md
+    slug: /china/entry/personal-wechat
+    module: china
+    page_type: doc-page
+
+  - source: docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
+    slug: /openclaw/relationship
+    module: openclaw
+    page_type: doc-page
+
+  - source: docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md
+    slug: /openclaw/decision
+    module: openclaw
+    page_type: doc-page
+
+  - source: docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
+    slug: /openclaw/coexistence
+    module: openclaw
+    page_type: doc-page
+
+  - source: docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
+    slug: /openclaw/migration-path
+    module: openclaw
+    page_type: doc-page
+
+  - source: docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
+    slug: /openclaw/checklist
+    module: openclaw
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/02-安装更新与环境问题.md
+    slug: /issues/install-environment
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
+    slug: /issues/provider-endpoint
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/04-CLI TUI 与会话问题.md
+    slug: /issues/cli-tui-session
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
+    slug: /issues/gateway-messaging
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/06-Tools Skills MCP 问题.md
+    slug: /issues/tools-skills-mcp
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
+    slug: /issues/config-profiles-environment
+    module: issues
+    page_type: doc-page
+
+  - source: docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md
+    slug: /issues/docker-nix-remote
+    module: issues
+    page_type: doc-page
+
+  - source: docs/06-reference/02-CLI 命令参考.md
+    slug: /reference/cli-commands
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/03-Slash Commands 参考.md
+    slug: /reference/slash-commands
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/04-Profile 命令参考.md
+    slug: /reference/profile-commands
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/05-环境变量参考.md
+    slug: /reference/environment-variables
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/06-Built-in Tools 参考.md
+    slug: /reference/built-in-tools
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/07-Toolsets 参考.md
+    slug: /reference/toolsets
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/08-MCP 配置参考.md
+    slug: /reference/mcp-config
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/09-内置 Skills 目录.md
+    slug: /reference/bundled-skills
+    module: reference
+    page_type: doc-page
+
+  - source: docs/06-reference/10-可选 Skills 目录.md
+    slug: /reference/optional-skills
+    module: reference
+    page_type: doc-page
+

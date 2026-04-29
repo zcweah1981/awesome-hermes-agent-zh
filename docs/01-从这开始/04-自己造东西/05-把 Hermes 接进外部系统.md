@@ -1,3 +1,17 @@
+---
+title: "🔌 05-把 Hermes 接进外部系统"
+module: "start"
+section: "mcp-and-plugins"
+slug: "/start/build/mcp-and-plugins"
+description: "这一页只解决一件事："
+order: 45
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "04-自己造东西"
+page_type: "doc-page"
+---
+
 # 🔌 05-把 Hermes 接进外部系统
 
 这一页只解决一件事：

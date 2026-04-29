@@ -1,3 +1,17 @@
+---
+title: "06-企业微信（AI Bot）"
+module: "china"
+section: "wecom-ai-bot"
+slug: "/china/entry/wecom-ai-bot"
+description: "🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。"
+order: 65
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-国内入口"
+page_type: "doc-page"
+---
+
 # 06-企业微信（AI Bot）
 
 > 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。

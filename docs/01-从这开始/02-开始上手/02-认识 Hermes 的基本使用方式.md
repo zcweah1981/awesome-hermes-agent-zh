@@ -1,3 +1,17 @@
+---
+title: "⚙️ 02-认识 Hermes 的基本使用方式"
+module: "start"
+section: "basic-usage"
+slug: "/start/getting-started/basic-usage"
+description: "这一页不讲高级玩法，只帮你把每天最常用的那条路径练顺：打开 Hermes、问一句、接着追问、最后正常退出。"
+order: 26
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "02-开始上手"
+page_type: "doc-page"
+---
+
 # ⚙️ 02-认识 Hermes 的基本使用方式
 
 ![终端主入口界面截图：在 Linux 终端执行 `hermes` 后，界面显示已进入 Hermes Agent 交互主入口，并停在可继续输入的提示符位置。](../../assets/rm2-3-basic-usage-01-cli-main-surface.png)

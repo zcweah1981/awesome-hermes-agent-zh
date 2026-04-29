@@ -1,3 +1,17 @@
+---
+title: "OpenClaw + Hermes 共存指南"
+module: "openclaw"
+section: "coexistence"
+slug: "/openclaw/coexistence"
+description: "一句话先说清楚：共存不是折中方案，而是从“临时使用”走向“长期复用”的最稳升级路径。"
+order: 70
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "04-从OpenClaw过来"
+page_type: "doc-page"
+---
+
 # OpenClaw + Hermes 共存指南
 
 > 一句话先说清楚：共存不是折中方案，而是从“临时使用”走向“长期复用”的最稳升级路径。

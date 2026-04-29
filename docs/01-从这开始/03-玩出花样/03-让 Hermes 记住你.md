@@ -1,3 +1,17 @@
+---
+title: "🧠 03-让 Hermes 记住你"
+module: "start"
+section: "memory-basics"
+slug: "/start/personalize/memory-basics"
+description: "这一页只解决一件事："
+order: 32
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-玩出花样"
+page_type: "doc-page"
+---
+
 # 🧠 03-让 Hermes 记住你
 
 这一页只解决一件事：
@@ -278,8 +292,8 @@ $HERMES_HOME/memories/
    - 持久记忆不是保险箱，不要放秘钥和隐私数据
 
 如果你确认不是记忆边界问题，而是会话、CLI 或环境本身有异常，先看：
-- [04-CLI TUI 与会话问题](../../05-遇到问题/04-CLI%20TUI%20与会话问题.md)
-- [07-配置 Profiles 与环境隔离问题](../../05-遇到问题/07-配置%20Profiles%20与环境隔离问题.md)
+- [04-CLI TUI 与会话问题](../../05-遇到问题/04-CLI TUI 与会话问题.md)
+- [07-配置 Profiles 与环境隔离问题](../../05-遇到问题/07-配置 Profiles 与环境隔离问题.md)
 
 ---
 

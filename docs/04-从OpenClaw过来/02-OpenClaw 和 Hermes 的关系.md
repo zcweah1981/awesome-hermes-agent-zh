@@ -1,3 +1,17 @@
+---
+title: "OpenClaw 和 Hermes 的关系"
+module: "openclaw"
+section: "relationship"
+slug: "/openclaw/relationship"
+description: "一句话先说清楚：如果你把 Hermes 理解成 OpenClaw 的直接替代品，一开始就容易做错判断。更准确的理解是：OpenClaw 更像实验场，Hermes 更像沉淀层和长期运行层。"
+order: 68
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "04-从OpenClaw过来"
+page_type: "doc-page"
+---
+
 # OpenClaw 和 Hermes 的关系
 
 > 一句话先说清楚：如果你把 Hermes 理解成 OpenClaw 的直接替代品，一开始就容易做错判断。更准确的理解是：OpenClaw 更像实验场，Hermes 更像沉淀层和长期运行层。

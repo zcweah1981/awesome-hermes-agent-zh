@@ -1,3 +1,17 @@
+---
+title: "🪞 02-让 Hermes 更像你"
+module: "start"
+section: "soul"
+slug: "/start/personalize/soul"
+description: "这一页只解决一件事："
+order: 31
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-玩出花样"
+page_type: "doc-page"
+---
+
 # 🪞 02-让 Hermes 更像你
 
 这一页只解决一件事：
@@ -263,7 +277,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请先给结论，再列出2�
    - 第一次先保留最少几条核心偏好
 
 如果你不是人格层分不清，而是会话表现、CLI、会话切换本身出问题，去看：
-- [04-CLI TUI 与会话问题](../../05-遇到问题/04-CLI%20TUI%20与会话问题.md)
+- [04-CLI TUI 与会话问题](../../05-遇到问题/04-CLI TUI 与会话问题.md)
 
 ---
 

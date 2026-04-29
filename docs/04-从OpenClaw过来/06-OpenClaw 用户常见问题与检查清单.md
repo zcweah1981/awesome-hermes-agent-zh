@@ -1,3 +1,17 @@
+---
+title: "OpenClaw 用户常见问题与检查清单"
+module: "openclaw"
+section: "checklist"
+slug: "/openclaw/checklist"
+description: "一句话先说清楚：这一页不是替你重做迁移判断，而是帮你把“共存 / 迁移过程中卡住的问题”先分到正确类别，再用最小检查单收缩问题范围。"
+order: 72
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "04-从OpenClaw过来"
+page_type: "doc-page"
+---
+
 # OpenClaw 用户常见问题与检查清单
 
 > 一句话先说清楚：这一页不是替你重做迁移判断，而是帮你把“共存 / 迁移过程中卡住的问题”先分到正确类别，再用最小检查单收缩问题范围。

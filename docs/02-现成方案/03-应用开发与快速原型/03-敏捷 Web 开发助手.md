@@ -1,3 +1,17 @@
+---
+title: "03-敏捷 Web 开发助手"
+module: "solutions"
+section: "webdev"
+slug: "/solutions/webdev"
+description: "一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。"
+order: 19
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-应用开发与快速原型"
+page_type: "doc-page"
+---
+
 # 03-敏捷 Web 开发助手
 
 > 一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。
@@ -208,7 +222,7 @@
 
 ### 第一步：下载它
 先拿这个包：
-- [01-super-individual.zip](../../../packs/webdev-lab/01-super-individual.zip)
+- [packs/webdev-lab/01-super-individual.zip](../../../packs/webdev-lab/01-super-individual.zip)
 
 ### 第二步：解压后进入目录
 ```bash
@@ -244,7 +258,7 @@ hermes -p webdev-solo chat --skills agile-web-development-solo-assistant -q "$(c
 
 #### 第一步：下载团队包
 先拿这个包：
-- [02-team.zip](../../../packs/webdev-lab/02-team.zip)
+- [packs/webdev-lab/02-team.zip](../../../packs/webdev-lab/02-team.zip)
 
 #### 第二步：解压后进入目录
 ```bash
@@ -367,12 +381,10 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 
 ## 📁 你现在直接能用的东西
 
-- 超级个体版 zip：[01-super-individual.zip](../../../packs/webdev-lab/01-super-individual.zip)
-- 团队协作版 zip：[02-team.zip](../../../packs/webdev-lab/02-team.zip)
-- 超级个体版输入示例：[sample-input.md](../../../packs/webdev-lab/01-super-individual/skills/solutions/agile-web-development-solo-assistant/examples/sample-input.md)
-- 超级个体版输出示例：[sample-output.md](../../../packs/webdev-lab/01-super-individual/skills/solutions/agile-web-development-solo-assistant/examples/sample-output.md)
-- 团队版说明入口：[02-team README](../../../packs/webdev-lab/02-team/README.md)
-- 安装说明：[webdev-lab/INSTALL.md](../../../packs/webdev-lab/INSTALL.md)
+- 超级个体版下载：[packs/webdev-lab/01-super-individual.zip](../../../packs/webdev-lab/01-super-individual.zip)
+- 团队协作版下载：[packs/webdev-lab/02-team.zip](../../../packs/webdev-lab/02-team.zip)
+- 安装说明：[packs/webdev-lab/INSTALL.md](../../../packs/webdev-lab/INSTALL.md)
+- 使用说明：当前页里的「⚡ 5 分钟跑一轮」和「🤝 团队协作版怎么安装和开跑」就是默认 doc 入口
 
 ---
 

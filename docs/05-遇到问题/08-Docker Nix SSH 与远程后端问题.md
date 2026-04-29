@@ -1,3 +1,17 @@
+---
+title: "08-Docker / Nix / SSH / 远程后端问题"
+module: "issues"
+section: "docker-nix-remote"
+slug: "/issues/docker-nix-remote"
+description: "一句话结论：这页只处理“为什么容器里起不来、为什么 SSH backend 连不上、为什么远端文件和本地不一致、为什么我以为在一台机器上运行，实际跑在另一台”这类排障问题；先分清到底是谁在执行、谁在读文件、谁持有依赖和配置。"
+order: 999
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "05-遇到问题"
+page_type: "doc-page"
+---
+
 # 08-Docker / Nix / SSH / 远程后端问题
 
 > 一句话结论：这页只处理“为什么容器里起不来、为什么 SSH backend 连不上、为什么远端文件和本地不一致、为什么我以为在一台机器上运行，实际跑在另一台”这类排障问题；先分清到底是谁在执行、谁在读文件、谁持有依赖和配置。

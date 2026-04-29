@@ -1,3 +1,17 @@
+---
+title: "04-PPT 助手"
+module: "solutions"
+section: "ppt"
+slug: "/solutions/ppt"
+description: "一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。"
+order: 12
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "01-内容创作与发布"
+page_type: "doc-page"
+---
+
 # 04-PPT 助手
 
 > 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。
@@ -220,7 +234,7 @@
 
 ### 第一步：下载它
 先拿这个包：
-- [01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)
+- [packs/ppt-lab/01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)
 
 ### 第二步：解压后进入目录
 ```bash
@@ -256,7 +270,7 @@ hermes -p ppt-solo chat --skills ppt-assistant -q "$(cat skills/solutions/ppt-as
 
 #### 第一步：下载团队包
 先拿这个包：
-- [02-team.zip](../../../packs/ppt-lab/02-team.zip)
+- [packs/ppt-lab/02-team.zip](../../../packs/ppt-lab/02-team.zip)
 
 #### 第二步：解压后进入目录
 ```bash
@@ -384,12 +398,10 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 
 ## 📁 你现在直接能用的东西
 
-- 团队协作版 zip：[02-team.zip](../../../packs/ppt-lab/02-team.zip)
-- 团队协作版安装说明：[ppt-lab/02-team/README.md](../../../packs/ppt-lab/02-team/README.md)
-- 超级个体版 zip：[01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)
-- 输入示例：[sample-input.md](../../../packs/ppt-lab/01-super-individual/skills/solutions/ppt-assistant/examples/sample-input.md)
-- 输出示例：[sample-output.md](../../../packs/ppt-lab/01-super-individual/skills/solutions/ppt-assistant/examples/sample-output.md)
-- 安装说明：[ppt-lab/INSTALL.md](../../../packs/ppt-lab/INSTALL.md)
+- 超级个体版下载：[packs/ppt-lab/01-super-individual.zip](../../../packs/ppt-lab/01-super-individual.zip)
+- 团队协作版下载：[packs/ppt-lab/02-team.zip](../../../packs/ppt-lab/02-team.zip)
+- 安装说明：[packs/ppt-lab/INSTALL.md](../../../packs/ppt-lab/INSTALL.md)
+- 使用说明：当前页里的「⚡ 5 分钟跑一轮」和「🤝 团队协作版怎么安装和开跑」就是默认 doc 入口
 
 ---
 

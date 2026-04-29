@@ -1,3 +1,17 @@
+---
+title: "🧠 09-内置 Skills 目录"
+module: "reference"
+section: "bundled-skills"
+slug: "/reference/bundled-skills"
+description: "这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。"
+order: 999
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "06-reference"
+page_type: "doc-page"
+---
+
 # 🧠 09-内置 Skills 目录
 
 > 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。

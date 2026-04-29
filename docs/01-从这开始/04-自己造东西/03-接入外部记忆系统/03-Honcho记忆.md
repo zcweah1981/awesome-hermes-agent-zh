@@ -1,3 +1,17 @@
+---
+title: "🧠 03-Honcho记忆"
+module: "start"
+section: "honcho"
+slug: "/start/build/memory-providers/honcho"
+description: "这一页只解决一件事："
+order: 40
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "03-接入外部记忆系统"
+page_type: "doc-page"
+---
+
 # 🧠 03-Honcho记忆
 
 这一页只解决一件事：

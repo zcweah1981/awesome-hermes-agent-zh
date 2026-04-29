@@ -1,3 +1,17 @@
+---
+title: "05-MiniMax Token Plan"
+module: "china"
+section: "minimax-token-plan"
+slug: "/china/models/minimax-token-plan"
+description: "🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。"
+order: 56
+status: "published"
+updated: "2026-04-28"
+source_type: "original"
+nav_group: "02-国内模型"
+page_type: "doc-page"
+---
+
 # 05-MiniMax Token Plan
 
 > 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
