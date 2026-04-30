@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/hermes-logo.png" alt="Hermes Agent 中文站 Logo" width="42" height="42" align="absmiddle">
+  <img src="./assets/hermes-logo.png" alt="Hermes Agent 中文站 Logo" width="36" height="36" align="absmiddle" style="vertical-align: -0.14em; border-radius: 9px;">
   Hermes Agent 中文站
 </h1>
 
