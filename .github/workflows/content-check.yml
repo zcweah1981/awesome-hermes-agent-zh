@@ -4,9 +4,9 @@ name: content-check
 
 on:
   push:
-    branches: [site-content-anchor]
+    branches: [main]
   pull_request:
-    branches: [site-content-anchor]
+    branches: [main]
 
 concurrency:
   group: content-check-${{ github.ref }}

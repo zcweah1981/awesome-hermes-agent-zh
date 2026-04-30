@@ -13,7 +13,6 @@
 │     └─ content-check.yml
 ├─ README.md
 ├─ assets/
-│  ├─ readme-core-features.jpg
 │  ├─ readme-governance-panel.jpg
 │  ├─ readme-hermes-capability-map.jpg
 │  ├─ readme-hero-hub.jpg

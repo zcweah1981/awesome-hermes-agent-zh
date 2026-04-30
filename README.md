@@ -77,14 +77,19 @@ Hermes 的价值，不只是“能聊”，而是更适合长期运行、能力�
 - **Skill 演化**：能力不是一次写死，而是能持续优化
 - **MCP 扩展**：不只是聊天，还能连接更多工具与外部系统
 
+下面这张图把 **Learning Loop、三层记忆、Skill 自我进化、MCP 连接、低成本后台运行** 和主流工具差异放在同一张图里。它适合先建立整体理解；真正开始操作时，仍然建议从上面的模块入口进入。
+
 <p align="center">
-  <img src="./assets/readme-core-features.jpg" alt="Hermes Agent 中文站核心特性区：自改进学习循环、三层记忆系统、agentskills.io 标准" width="100%">
+  <img src="./assets/readme-hermes-capability-map.jpg" alt="Hermes Agent 能力总览：闭环学习、三层记忆、Skill 自我进化、MCP 连接、低成本部署以及与 OpenClaw 和 Claude Code 的差异" width="100%">
 </p>
 
-### 核心差异，你先抓住这 4 点就够了
+### 这张图建议这样读
 
-- 上面这张图适合帮你建立“为什么是 Hermes”的整体认知
-- 真正开始上手时，还是建议直接回到 [01-从这开始](./docs/01-从这开始/总览.md)
+- **左侧看机制**：闭环学习、三层记忆、Skill 自我进化
+- **右侧看落地**：低成本部署、自主后台、MCP 连接外部应用
+- **底部看差异**：Hermes Agent、OpenClaw、Claude Code 的设计取向不同
+
+如果你已经理解 Hermes 的定位，下一步直接进入 [01-从这开始](./docs/01-从这开始/总览.md)。
 
 ## 🛠️ 你会在哪些实战场景里真正用到它
 
