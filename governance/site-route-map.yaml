@@ -279,6 +279,14 @@ routes:
   slug: /packs
   module: packs
   page_type: pack-entry
+  title: Packs 方案包总览
+  section: overview
+  description: Hermes 中文站现成方案包入口，汇总可下载、可安装、可试跑的工作流包。
+  order: 1
+  status: published
+  updated: '2026-04-30'
+  source_type: original
+  nav_group: packs
 - source: docs/01-从这开始/02-开始上手/01-总览.md
   slug: /start/getting-started
   module: start

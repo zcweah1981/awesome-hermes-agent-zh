@@ -48,11 +48,19 @@
 | 从OpenClaw过来 | `docs/04-从OpenClaw过来/01-总览.md` |
 | 遇到问题 | `docs/05-遇到问题/01-总览.md` |
 | Reference | `docs/06-reference/01-总览.md` |
+| 治理说明 | `governance/README.md` |
+| 仓库结构 | `governance/repo-structure.md` |
+| 内容合同 | `governance/content-contract.md` |
+| 页面来源映射 | `governance/page-source-map.md` |
+| 站点路由合同 | `governance/site-route-map.yaml` |
+| 方案包映射 | `governance/packs-map.md` |
+| 发布自检 | `governance/publishing-checklist.md` |
+| 方案包总览 | `packs/README.md` |
 
 ## 维护规则
 1. 只记录当前真实存在的入口与模块，不预写未来占位页。
 2. 页面正式路径一旦切到编号中文目录树，治理文件同步跟进，不再继续维护旧英文目录口径。
-3. 如果模块树继续扩展，优先更新这里的模块级映射与入口映射，而不是先补内部说明性文字。
+3. 如果模块树、governance 文件或 packs 继续扩展，优先更新这里的模块级映射与入口映射，而不是先补内部说明性文字。
 
 ## 一句话规则
 只映射当前真实落仓页面，不映射历史旧路径，不映射未来占位页。

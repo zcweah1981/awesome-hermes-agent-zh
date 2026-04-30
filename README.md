@@ -9,7 +9,7 @@
 
 [🚀 01-从这开始](./docs/01-从这开始/总览.md) · [🧰 02-现成方案](./docs/02-现成方案/01-总览.md) · [🇨🇳 03-国内落地](./docs/03-国内落地/01-总览.md) · [🔄 04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md) · [🩺 05-遇到问题](./docs/05-遇到问题/01-总览.md) · [📚 06-reference](./docs/06-reference/01-总览.md)
 
-[🗺️ 文档总览](./docs/00-文档总览.md) · [🧭 治理说明](./governance/README.md) · [🧱 仓库结构](./governance/repo-structure.md) · [🧬 页面来源映射](./governance/page-source-map.md)
+[🗺️ 文档总览](./docs/00-文档总览.md) · [🧭 治理说明](./governance/README.md) · [🧱 仓库结构](./governance/repo-structure.md) · [🧩 内容合同](./governance/content-contract.md) · [🧬 页面来源映射](./governance/page-source-map.md)
 
 </div>
 
@@ -143,7 +143,10 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - [治理说明](./governance/README.md)
 - [仓库保留原则](./governance/repo-policy.md)
 - [仓库结构](./governance/repo-structure.md)
+- [内容合同](./governance/content-contract.md)
 - [页面来源映射](./governance/page-source-map.md)
+- [方案包映射](./governance/packs-map.md)
+- [发布自检](./governance/publishing-checklist.md)
 
 ### 这一层适合谁看
 
