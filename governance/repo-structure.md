@@ -13,6 +13,7 @@
 │     └─ content-check.yml
 ├─ README.md
 ├─ assets/
+│  ├─ hermes-logo.png
 │  ├─ readme-governance-panel.jpg
 │  ├─ readme-hermes-capability-map.jpg
 │  ├─ readme-hero-hub.jpg

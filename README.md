@@ -1,4 +1,7 @@
-# 🌌 Hermes Agent 中文站
+<h1 align="center">
+  <img src="./assets/hermes-logo.png" alt="Hermes Agent 中文站 Logo" width="42" height="42" style="vertical-align: middle; border-radius: 10px;">
+  Hermes Agent 中文站
+</h1>
 
 <div align="center">
 
@@ -8,8 +11,6 @@
 这里不是零散资料堆，而是一套可以顺着往下走的中文路径。
 
 [🚀 01-从这开始](./docs/01-从这开始/总览.md) · [🧰 02-现成方案](./docs/02-现成方案/01-总览.md) · [🇨🇳 03-国内落地](./docs/03-国内落地/01-总览.md) · [🔄 04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md) · [🩺 05-遇到问题](./docs/05-遇到问题/01-总览.md) · [📚 06-reference](./docs/06-reference/01-总览.md)
-
-[🗺️ 文档总览](./docs/00-文档总览.md) · [🧭 治理说明](./governance/README.md) · [🧱 仓库结构](./governance/repo-structure.md) · [🧩 内容合同](./governance/content-contract.md) · [🧬 页面来源映射](./governance/page-source-map.md)
 
 </div>
 
@@ -175,7 +176,27 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - 想处理迁移：看 [04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md)
 - 想查问题：看 [05-遇到问题](./docs/05-遇到问题/01-总览.md)
 - 想查参考：看 [06-reference](./docs/06-reference/01-总览.md)
-- 想看全站导航：看 [文档总览](./docs/00-文档总览.md)
+
+## 🔗 页尾导航
+
+### 读者入口
+
+- [文档总览](./docs/00-文档总览.md)：从全站结构快速定位页面
+- [01-从这开始](./docs/01-从这开始/总览.md)：第一次安装、跑通、上手
+- [02-现成方案](./docs/02-现成方案/01-总览.md)：直接拿可复用工作流
+- [03-国内落地](./docs/03-国内落地/01-总览.md)：处理国内模型、部署与入口
+- [04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md)：判断共存、迁移或继续使用
+- [05-遇到问题](./docs/05-遇到问题/01-总览.md)：按问题类型排障
+- [06-reference](./docs/06-reference/01-总览.md)：查命令、配置、工具与 Skills
+
+### 维护者入口
+
+- [治理说明](./governance/README.md)：公开治理层的阅读入口
+- [仓库结构](./governance/repo-structure.md)：当前目录与资源说明
+- [内容合同](./governance/content-contract.md)：内容仓与独立站之间的消费约定
+- [页面来源映射](./governance/page-source-map.md)：页面来源与公开路径对应关系
+- [方案包映射](./governance/packs-map.md)：docs 与 packs 的对应关系
+- [发布自检](./governance/publishing-checklist.md)：发布前检查清单
 
 ---
 
