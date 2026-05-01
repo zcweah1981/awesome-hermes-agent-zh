@@ -155,7 +155,6 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - [页面来源映射](./governance/page-source-map.md)
 - [方案包映射](./governance/packs-map.md)
 - [发布自检](./governance/publishing-checklist.md)
-- [死链检查治理](./governance/link-check.md)
 
 ### 这一层适合谁看
 
@@ -201,7 +200,6 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - [页面来源映射](./governance/page-source-map.md)：页面来源与公开路径对应关系
 - [方案包映射](./governance/packs-map.md)：docs 与 packs 的对应关系
 - [发布自检](./governance/publishing-checklist.md)：发布前检查清单
-- [死链检查治理](./governance/link-check.md)：链接巡检结果的维护处理规则
 
 ---
 
