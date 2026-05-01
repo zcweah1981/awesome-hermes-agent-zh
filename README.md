@@ -12,9 +12,6 @@
 
 <a href="https://hermes-zh.com"><strong>🌐 访问中文站官网：https://hermes-zh.com</strong></a>
 
-[![content-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml)
-[![link-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml)
-
 [🚀 01-从这开始](./docs/01-从这开始/总览.md) · [🧰 02-现成方案](./docs/02-现成方案/01-总览.md) · [🇨🇳 03-国内落地](./docs/03-国内落地/01-总览.md) · [🔄 04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md) · [🩺 05-遇到问题](./docs/05-遇到问题/01-总览.md) · [📚 06-reference](./docs/06-reference/01-总览.md)
 
 </div>
@@ -158,6 +155,7 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - [页面来源映射](./governance/page-source-map.md)
 - [方案包映射](./governance/packs-map.md)
 - [发布自检](./governance/publishing-checklist.md)
+- [死链检查治理](./governance/link-check.md)
 
 ### 这一层适合谁看
 
@@ -173,24 +171,6 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - `packs/`：现成方案相关的可下载资源与工作流包
 - `assets/`：README 和文档使用的图片资源
 
-## 🔎 死链检查怎么处理
-
-本仓库通过 [link-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml) GitHub Actions 使用 Lychee 巡检 README、docs、governance、packs 里的 Markdown / HTML / YAML 链接。结果会写入 workflow summary，并上传 `lychee-report` artifact。
-
-处理规则：
-
-| 类型 | 处理方式 |
-|---|---|
-| `404` / `410` | 优先修正文档链接或移除失效引用；如果是仓库内相对路径，必须改到真实文件。 |
-| `301` / `302` | 若是稳定新地址，直接更新为最终 URL，减少读者跳转和搜索引擎重复抓取。 |
-| `403` / `429` | 多为平台反爬或 GitHub runner 限流；人工浏览器确认可访问后，可保守加入 `.lycheeignore`，不要当真实断链批量改正文。 |
-| `timeout` | 先重跑一次 workflow；若连续失败，再判断是站点不稳定、网络限制还是需要替换来源。 |
-| `fragment` / 锚点错误 | 检查目标页面标题或锚点是否变更；仓库内文档优先改成当前真实 heading 生成的锚点。 |
-| 相对路径错误 | 按当前文件所在目录重新计算路径；不要为了通过检查改成不存在的旧英文目录或站点私有路径。 |
-
-`.lycheeignore` 只放 GitHub runner 上高频误报或反爬链接；真实 404、仓库内部相对路径错误、图片路径错误不要加入忽略规则。
-
-下一阶段可以在定时检查失败时自动开 tracking issue；本轮先保留 summary + artifact，避免误报直接制造 issue 噪音。
 
 ## 🚀 如果你准备继续往下走
 
@@ -221,6 +201,7 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - [页面来源映射](./governance/page-source-map.md)：页面来源与公开路径对应关系
 - [方案包映射](./governance/packs-map.md)：docs 与 packs 的对应关系
 - [发布自检](./governance/publishing-checklist.md)：发布前检查清单
+- [死链检查治理](./governance/link-check.md)：链接巡检结果的维护处理规则
 
 ---
 

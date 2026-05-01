@@ -4,7 +4,7 @@
 
 本目录是 `awesome-hermes-agent-zh` 内容仓的公开最小治理层。
 
-它只回答 6 个问题：
+它只回答 7 个问题：
 
 1. 这个公开仓应该保留什么？
 2. 当前真实目录结构是什么？
@@ -12,6 +12,7 @@
 4. 独立站如何消费这些页面？
 5. packs 方案包和 docs 方案页如何对应？
 6. 发布前维护者应该检查什么？
+7. 链接巡检结果应该怎样处理？
 
 ## 当前治理文件
 
@@ -30,6 +31,7 @@
 ### 发布自检
 
 - [`publishing-checklist.md`](./publishing-checklist.md)：内容仓发布前自检清单。
+- [`link-check.md`](./link-check.md)：死链检查、误报判断、忽略规则和报告处理方式。
 
 ## 当前公开仓核心结构
 
@@ -73,6 +75,7 @@
 - 内容仓与独立站之间的 route-map 合同。
 - docs 与 packs 的公开映射。
 - 发布前维护者自检项。
+- 链接巡检结果、误报边界和忽略规则。
 
 ### 本目录不应该记录
 
@@ -91,6 +94,7 @@
 3. 如果新增 docs 页面，更新 [`site-route-map.yaml`](./site-route-map.yaml)。
 4. 如果新增或调整方案包，更新 [`packs-map.md`](./packs-map.md)。
 5. 发布前按 [`publishing-checklist.md`](./publishing-checklist.md) 自检。
+6. 如果链接检查失败，按 [`link-check.md`](./link-check.md) 处理。
 
 ## 一句话规则
 
