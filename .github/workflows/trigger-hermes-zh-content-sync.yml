@@ -1,5 +1,5 @@
 # awesome-hermes-agent-zh — Trigger hermes-zh content sync
-# Push to content paths on main validates content and then sends repository_dispatch to site repo.
+# Push or manual dispatch validates content paths and then sends repository_dispatch to site repo.
 name: trigger-hermes-zh-content-sync
 
 on:
