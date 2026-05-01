@@ -60,17 +60,19 @@ jobs:
       - name: Publish job summary
         if: always()
         run: |
-          echo "## Link Check" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Event: ${{ github.event_name }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Commit: ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "- Result: ${{ steps.lychee.outcome }}" >> "$GITHUB_STEP_SUMMARY"
-          echo "" >> "$GITHUB_STEP_SUMMARY"
-          if [ -f lychee-report.md ]; then
-            cat lychee-report.md >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "lychee-report.md was not generated." >> "$GITHUB_STEP_SUMMARY"
-          fi
+          {
+            echo "## Link Check"
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- Commit: ${{ github.sha }}"
+            echo "- Result: ${{ steps.lychee.outcome }}"
+            echo ""
+            if [ -f lychee-report.md ]; then
+              cat lychee-report.md
+            else
+              echo "lychee-report.md was not generated."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload link-check report
         if: always()
