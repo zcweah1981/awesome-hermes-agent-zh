@@ -1,0 +1,83 @@
+# awesome-hermes-agent-zh — Link Check
+# 检查 README / docs / governance / packs 中的外部链接、相对路径和锚点。
+name: link-check
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    # 每周一北京时间 09:20；UTC 为 01:20
+    - cron: "20 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: link-check-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lychee:
+    name: Lychee link check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        continue-on-error: true
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-file .lycheeignore
+            --max-concurrency 6
+            --retry-wait-time 2
+            --timeout 20
+            --root-dir ${{ github.workspace }}
+            './README.md'
+            './docs/**/*.md'
+            './governance/**/*.md'
+            './governance/**/*.yml'
+            './governance/**/*.yaml'
+            './.github/**/*.yml'
+            './.github/**/*.yaml'
+            './**/*.html'
+            './packs/**/*.md'
+            './packs/**/*.yml'
+            './packs/**/*.yaml'
+          format: markdown
+          output: lychee-report.md
+          fail: true
+
+      - name: Publish job summary
+        if: always()
+        run: |
+          echo "## Link Check" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Event: ${{ github.event_name }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Commit: ${{ github.sha }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "- Result: ${{ steps.lychee.outcome }}" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f lychee-report.md ]; then
+            cat lychee-report.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "lychee-report.md was not generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload link-check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee-report.md
+          if-no-files-found: warn
+
+      - name: Fail if Lychee failed
+        if: steps.lychee.outcome == 'failure'
+        run: exit 1
