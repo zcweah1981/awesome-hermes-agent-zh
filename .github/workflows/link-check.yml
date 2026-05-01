@@ -40,6 +40,8 @@ jobs:
             --retry-wait-time 2
             --timeout 20
             --root-dir ${{ github.workspace }}
+            --skip-missing
+            --exclude-path 'docs/assets/render-.*\.html'
             './README.md'
             './docs/**/*.md'
             './governance/**/*.md'

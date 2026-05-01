@@ -1,0 +1,143 @@
+# awesome-hermes-agent-zh — Trigger hermes-zh content sync
+# Push to content paths on main validates content and then sends repository_dispatch to site repo.
+name: trigger-hermes-zh-content-sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'packs/**'
+      - 'assets/**'
+      - 'governance/site-route-map.yaml'
+      - 'governance/content-contract.md'
+      - 'governance/packs-map.md'
+      - 'README.md'
+      - '.github/workflows/trigger-hermes-zh-content-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: trigger-hermes-zh-content-sync-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate-and-dispatch:
+    name: Validate content and dispatch site sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install validation dependencies
+        run: python3 -m pip install --user pyyaml
+
+      - name: Check critical paths exist
+        run: |
+          set -euo pipefail
+          echo "Checking critical content paths..."
+          for dir in docs/ packs/ assets/ governance/; do
+            if [ ! -d "$dir" ]; then
+              echo "Missing critical directory: $dir" >&2
+              exit 1
+            fi
+          done
+          for file in README.md governance/site-route-map.yaml governance/content-contract.md governance/packs-map.md; do
+            if [ ! -f "$file" ]; then
+              echo "Missing critical file: $file" >&2
+              exit 1
+            fi
+          done
+
+      - name: Validate route map sources
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          root = Path('.')
+          data = yaml.safe_load((root / 'governance/site-route-map.yaml').read_text()) or {}
+          routes = data.get('routes', [])
+          if not routes:
+              raise SystemExit('No routes found in governance/site-route-map.yaml')
+
+          required = ['source', 'slug', 'module', 'title', 'order', 'status']
+          missing = []
+          for idx, route in enumerate(routes, 1):
+              for key in required:
+                  if key not in route:
+                      raise SystemExit(f'route #{idx} missing required field: {key}')
+              if not (root / route['source']).exists():
+                  missing.append(route['source'])
+          if missing:
+              raise SystemExit('Missing route sources:\n' + '\n'.join(missing))
+          print(f'Validated {len(routes)} route sources')
+          PY
+
+      - name: Validate packs manifests
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import yaml
+
+          root = Path('.')
+          manifests = sorted(root.glob('packs/*/manifest.yaml'))
+          if not manifests:
+              raise SystemExit('No pack manifests found')
+
+          required = ['id', 'title', 'category', 'summary', 'modes', 'doc', 'install', 'download', 'status', 'order']
+          for mf in manifests:
+              data = yaml.safe_load(mf.read_text()) or {}
+              for key in required:
+                  if key not in data:
+                      raise SystemExit(f'{mf} missing required field: {key}')
+              for key in ['doc', 'install', 'download']:
+                  target = root / data[key]
+                  if not target.exists():
+                      raise SystemExit(f'{mf}: {key} points to missing path: {data[key]}')
+          print(f'Validated {len(manifests)} pack manifests')
+          PY
+
+      - name: Dispatch hermes-zh site content sync
+        env:
+          SITE_REPO_DISPATCH_TOKEN: ${{ secrets.SITE_REPO_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SITE_REPO_DISPATCH_TOKEN:-}" ]; then
+            echo "SITE_REPO_DISPATCH_TOKEN is not configured; cannot trigger zcweah1981/hermes-zh repository_dispatch." >&2
+            exit 1
+          fi
+
+          payload=$(python3 - <<'PY'
+          import json
+          import os
+
+          body = {
+              'event_type': 'content-updated',
+              'client_payload': {
+                  'content_repo': os.environ['GITHUB_REPOSITORY'],
+                  'content_ref': 'main',
+                  'content_sha': os.environ['GITHUB_SHA'],
+                  'actor': os.environ['GITHUB_ACTOR'],
+                  'run_id': os.environ['GITHUB_RUN_ID'],
+                  'source_workflow_url': f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
+              },
+          }
+          print(json.dumps(body, ensure_ascii=False))
+          PY
+          )
+
+          curl -sS -f -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${SITE_REPO_DISPATCH_TOKEN}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/zcweah1981/hermes-zh/dispatches \
+            -d "${payload}"
+
+          echo "Dispatched hermes-zh content-updated event for ${GITHUB_SHA}." >> "$GITHUB_STEP_SUMMARY"
