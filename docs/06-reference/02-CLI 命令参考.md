@@ -462,3 +462,12 @@ hermes gateway <subcommand>
 如果你想先回到上一阶段入口重新确认位置：
 
 - [01-总览｜Reference 参考手册](./01-总览.md)
+
+---
+
+## 🔗 Reference 相关入口
+
+- 第一次使用 Hermes：先看[从这开始](/docs/start)，不要直接从参考表硬啃。
+- 查命令：看[CLI 命令参考](/docs/reference/cli-commands)和[Slash Commands 参考](/docs/reference/slash-commands)。
+- 查 Profiles / Tools / Skills / MCP：分别看[Profile 命令参考](/docs/reference/profile-commands)、[Built-in Tools 参考](/docs/reference/built-in-tools)、[内置 Skills 目录](/docs/reference/bundled-skills)和[MCP 配置参考](/docs/reference/mcp-config)。
+- 配置报错：回到[遇到问题](/docs/issues)，按模型、Gateway、Tools、Profiles 或远程环境分类排查。

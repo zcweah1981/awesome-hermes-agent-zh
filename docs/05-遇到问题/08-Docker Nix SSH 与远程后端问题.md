@@ -309,3 +309,14 @@ SSH / Docker 最容易出现的误判是：
 如果你想先回到上一阶段入口重新确认位置：
 
 - [01-总览](<./01-总览.md>)
+
+---
+
+## 🔗 相关排查入口
+
+- [国内部署](/docs/china/deploy)
+- [阿里云轻量服务器部署教程](/docs/china/deploy/alicloud-lite-server)
+- [腾讯云轻量服务器部署教程](/docs/china/deploy/tencent-lite-server)
+- [先准备运行环境](/docs/start/get-running/prepare-environment)
+
+如果当前页没有命中症状，先回到[遇到问题总入口](/docs/issues)重新按问题类型分流。

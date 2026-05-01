@@ -279,3 +279,12 @@
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-从OpenClaw过来 | 总览](./01-总览.md)
+
+---
+
+## 🔗 检查后继续处理
+
+- 想回到选择分岔：看[继续用、共存，还是迁移](/docs/openclaw/decision)。
+- 决定共存：看[OpenClaw + Hermes 共存指南](/docs/openclaw/coexistence)。
+- 决定迁移：看[迁移路径](/docs/openclaw/migration-path)。
+- 如果问题不只来自 OpenClaw：进入[遇到问题](/docs/issues)按安装、模型、CLI、Gateway、Tools、Profiles 分类排查。

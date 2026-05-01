@@ -327,3 +327,14 @@ hermes
 如果你想先回到上一阶段入口重新确认位置：
 
 - [01-总览](<./01-总览.md>)
+
+---
+
+## 🔗 相关排查入口
+
+- [CLI 命令参考](/docs/reference/cli-commands)
+- [Slash Commands 参考](/docs/reference/slash-commands)
+- [认识 Hermes 的基本使用方式](/docs/start/getting-started/basic-usage)
+- [常用斜杠命令与会话管理](/docs/start/getting-started/slash-commands-and-sessions)
+
+如果当前页没有命中症状，先回到[遇到问题总入口](/docs/issues)重新按问题类型分流。

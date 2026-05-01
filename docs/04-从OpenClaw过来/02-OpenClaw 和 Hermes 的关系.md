@@ -125,3 +125,12 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-从OpenClaw过来 | 总览](./01-总览.md)
+
+---
+
+## 🔗 读完关系后怎么走
+
+- 如果还不确定要不要迁移：继续看[继续用、共存，还是迁移](/docs/openclaw/decision)。
+- 如果想两边并行：直接看[OpenClaw + Hermes 共存指南](/docs/openclaw/coexistence)。
+- 如果已决定迁移：进入[迁移路径](/docs/openclaw/migration-path)。
+- 遇到概念或命令差异：回到[Reference](/docs/reference)查 Hermes 的命令、Profiles、Tools 和 Skills。

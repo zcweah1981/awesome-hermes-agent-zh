@@ -246,3 +246,12 @@
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-从OpenClaw过来 | 总览](./01-总览.md)
+
+---
+
+## 🔗 迁移过程相关入口
+
+- 迁移前检查：先看[OpenClaw 用户常见问题与检查清单](/docs/openclaw/checklist)。
+- 迁移 Profiles：对照[多个助手一起工作](/docs/start/build/profiles)和[Profile 命令参考](/docs/reference/profile-commands)。
+- 迁移长期规则：对照[上下文文件](/docs/start/build/context-system/context-files)。
+- 迁移工具能力：对照[Tools / Skills / MCP 问题](/docs/issues/tools-skills-mcp)和[MCP 配置参考](/docs/reference/mcp-config)。

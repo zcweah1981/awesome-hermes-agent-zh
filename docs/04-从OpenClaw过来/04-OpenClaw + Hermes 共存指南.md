@@ -169,3 +169,12 @@
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-从OpenClaw过来 | 总览](./01-总览.md)
+
+---
+
+## 🔗 共存后的下一步
+
+- 共存稳定后，如果要逐步迁移：看[迁移路径](/docs/openclaw/migration-path)。
+- 如果共存时出现配置冲突：看[配置 Profiles 与环境隔离问题](/docs/issues/config-profiles-environment)。
+- 需要查 Hermes Profiles：看[Profile 命令参考](/docs/reference/profile-commands)。
+- 想把 OpenClaw 经验沉淀为 Hermes 用法：看[多个助手一起工作](/docs/start/build/profiles)和[上下文系统](/docs/start/build/context-system)。

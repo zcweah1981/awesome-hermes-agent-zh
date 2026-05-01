@@ -278,3 +278,12 @@ hermes chat -m qwen3.6-plus
 - https://www.aliyun.com/benefit/scene/tokenplan
 - https://help.aliyun.com/zh/model-studio/hermes-agent-token-plan
 - https://help.aliyun.com/zh/model-studio/get-api-key
+
+---
+
+## 🔗 模型接入关联路径
+
+- 还没部署 Hermes：先回到[国内部署](/docs/china/deploy)确认服务器和远程环境。
+- 要换国内模型：优先比较[DeepSeek](/docs/china/models/deepseek-metered-api)、[Kimi](/docs/china/models/kimi-plan)、[智谱 GLM](/docs/china/models/glm-coding-plan)、[阿里云百炼](/docs/china/models/alibaba-bailian-token-plan)和[腾讯云](/docs/china/models/tencent-token-plan)。
+- 使用非内置平台：看[自定义兼容接口](/docs/china/models/openai-compatible-endpoint)，再对照[模型 Provider 与自定义 endpoint 问题](/docs/issues/provider-endpoint)。
+- 要查环境变量和配置项：进入[环境变量参考](/docs/reference/environment-variables)和[Profile 命令参考](/docs/reference/profile-commands)。

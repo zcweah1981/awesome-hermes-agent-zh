@@ -322,3 +322,14 @@ hermes config
 如果你想先回到上一阶段入口重新确认位置：
 
 - [01-总览](<./01-总览.md>)
+
+---
+
+## 🔗 相关排查入口
+
+- [多个助手一起工作](/docs/start/build/profiles)
+- [Profile 命令参考](/docs/reference/profile-commands)
+- [上下文系统](/docs/start/build/context-system)
+- [OpenClaw 共存指南](/docs/openclaw/coexistence)
+
+如果当前页没有命中症状，先回到[遇到问题总入口](/docs/issues)重新按问题类型分流。

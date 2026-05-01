@@ -396,3 +396,13 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 如果你想继续留在这一条线里：
 
 - [回 02-微信小程序助手](./02-微信小程序助手.md)
+
+---
+
+## 🔗 相关入口
+
+- Pack 详情：[敏捷 Web 开发助手 Pack](/packs/webdev-lab)，先确认适合谁用、安装入口和下载入口。
+- 同类方案：回到[当前方案分组](/docs/solutions/dev)，继续比较同一类任务。
+- 下一步延展：如果这个方案不完全匹配，可以继续看[相邻方案](/docs/solutions/miniapp)。
+- 跑不起来时：先去[遇到问题](/docs/issues)按安装、模型、Tools、Profiles 分类排查。
+- 要查命令和配置：进入[Reference](/docs/reference)查看 CLI、Slash Commands、Profiles、Tools、Skills 与环境变量。

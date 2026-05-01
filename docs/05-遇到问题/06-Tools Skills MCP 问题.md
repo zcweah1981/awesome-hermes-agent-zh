@@ -320,3 +320,14 @@ MCP 最常见误判是：
 如果你想先回到上一阶段入口重新确认位置：
 
 - [01-总览](<./01-总览.md>)
+
+---
+
+## 🔗 相关排查入口
+
+- [Built-in Tools 参考](/docs/reference/built-in-tools)
+- [Toolsets 参考](/docs/reference/toolsets)
+- [内置 Skills 目录](/docs/reference/bundled-skills)
+- [MCP 配置参考](/docs/reference/mcp-config)
+
+如果当前页没有命中症状，先回到[遇到问题总入口](/docs/issues)重新按问题类型分流。

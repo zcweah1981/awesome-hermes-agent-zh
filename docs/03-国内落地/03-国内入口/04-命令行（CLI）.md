@@ -514,3 +514,12 @@ CLI 不只是“安装完成后打个 hello”的入口，它也是：
 
 - 前进到 [05-飞书](./05-飞书.md)
 - 回 [01-总览](./01-总览.md)
+
+---
+
+## 🔗 国内入口关联路径
+
+- 还没选模型：先看[国内模型](/docs/china/models)，避免入口跑通后模型不可用。
+- 想暴露给前端或 Open WebUI：看[把 Hermes 暴露成后端服务](/docs/start/build/api-server)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
+- 要接消息平台：先看[飞书](/docs/china/entry/feishu)、[企业微信](/docs/china/entry/wecom-ai-bot)、[钉钉](/docs/china/entry/dingtalk)或[个人微信](/docs/china/entry/personal-wechat)。
+- 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。
