@@ -42,6 +42,19 @@ class CheckOptions:
     no_network: bool
 
 
+
+def fetch_latest_github_release(repo: str = "NousResearch/hermes-agent") -> str | None:
+    try:
+        req = Request(
+            f"https://api.github.com/repos/{repo}/releases/latest",
+            headers={"User-Agent": "hermes-zh-upstream-sync", "Accept": "application/vnd.github.v3+json"}
+        )
+        with urlopen(req, timeout=5) as res:
+            data = json.loads(res.read().decode("utf-8"))
+            return data.get("tag_name")
+    except Exception as e:
+        return None
+
 def repo_relative(path: Path) -> str:
     try:
         return str(path.resolve().relative_to(REPO_ROOT))
@@ -179,6 +192,15 @@ def validate(options: CheckOptions) -> dict[str, Any]:
         for provider in r2_providers
         if str(provider.get("status", "")).startswith("needs_") or not provider.get("source_urls")
     )
+    baseline_ver = registry.get('hermes_upstream_baseline_version', 'unknown')
+    latest_ver = fetch_latest_github_release() if not options.no_network else None
+    
+    version_info = {'baseline': baseline_ver, 'latest': latest_ver}
+    if latest_ver and baseline_ver and latest_ver != baseline_ver:
+        version_info['outdated'] = True
+        issues.append(f"Official upstream release is at {latest_ver}, but baseline is {baseline_ver}")
+        
+
 
     payload = {
         "status": "failed" if issues else "ok",
@@ -186,6 +208,8 @@ def validate(options: CheckOptions) -> dict[str, Any]:
         "network_checked": not options.no_network,
         "required_files": required_files,
         "source_ids": source_ids,
+        "version_sync": version_info,
+
         "summary": {
             "sources_total": len(sources),
             "official_sources": official_count,
