@@ -254,6 +254,19 @@
 - https://cloud.tencent.com/document/product/1823/130060
 - https://cloud.tencent.com/document/product/1823/130119
 
+## 🧾 R2 官方同步记录
+
+- source_id: `tencent-cloud-models`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md`
+- 本轮结论：已确认 TokenHub Token Plan 套餐定位、模型/工具入口、API Key 管理路径；页面不复制长期易变价格表，以官方套餐页为准。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://cloud.tencent.com/document/product/1823/130060
+  - https://cloud.tencent.com/document/product/1823/130119
+  - https://cloud.tencent.com/document/product/1729/111008
+
 ---
 
 ## 🔗 模型接入关联路径

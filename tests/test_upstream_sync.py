@@ -39,7 +39,8 @@ def test_digest_renders_human_markdown_without_internal_logs():
     body = result.stdout
     assert "# 官方来源同步 Digest" in body
     assert "hermes-official-docs" in body
-    assert "R2 待补官方来源" in body
+    assert "R2 官方来源确认状态" in body
+    assert "r2_provider_sources_pending" not in body
     assert "dispatch" not in body.lower()
     assert "worker_run" not in body.lower()
 
@@ -53,7 +54,7 @@ def test_issue_dry_run_never_calls_github_and_marks_no_side_effect():
     assert payload["side_effect"] == "none"
     assert payload["title"].startswith("R1 官方来源同步")
     assert "gh issue create" not in payload["body"]
-    assert "R2 待补官方来源" in payload["body"]
+    assert "R2 官方来源确认状态" in payload["body"]
 
 
 def test_check_fails_when_registry_missing_required_official_source(tmp_path: Path):

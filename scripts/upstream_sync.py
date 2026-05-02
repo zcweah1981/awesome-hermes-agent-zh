@@ -167,6 +167,19 @@ def validate(options: CheckOptions) -> dict[str, Any]:
     for key in failed_reachability:
         warnings.append(f"source reachability failed: {key}")
 
+    r2_provider_block = registry.get("provider_sources_to_fill_in_r2", {})
+    r2_providers = r2_provider_block.get("providers", []) if isinstance(r2_provider_block, dict) else []
+    r2_confirmed = sum(
+        1
+        for provider in r2_providers
+        if str(provider.get("status", "")).startswith("confirmed_") and provider.get("source_urls")
+    )
+    r2_pending = sum(
+        1
+        for provider in r2_providers
+        if str(provider.get("status", "")).startswith("needs_") or not provider.get("source_urls")
+    )
+
     payload = {
         "status": "failed" if issues else "ok",
         "checked_at": date.today().isoformat(),
@@ -178,9 +191,9 @@ def validate(options: CheckOptions) -> dict[str, Any]:
             "official_sources": official_count,
             "provider_official_sources": provider_count,
             "local_content_sources": local_count,
-            "r2_provider_placeholders": len(
-                (registry.get("provider_sources_to_fill_in_r2", {}) or {}).get("providers", [])
-            ) if isinstance(registry.get("provider_sources_to_fill_in_r2", {}), dict) else 0,
+            "r2_provider_sources_total": len(r2_providers),
+            "r2_provider_sources_confirmed": r2_confirmed,
+            "r2_provider_sources_pending": r2_pending,
         },
         "issues": issues,
         "warnings": warnings,
@@ -245,20 +258,23 @@ def render_digest(options: CheckOptions) -> str:
                 rule=str(source.get("sync_rule", "")).replace("|", "/"),
             )
         )
-    lines.extend(["", "## R2 待补官方来源", ""])
+    lines.extend(["", "## R2 官方来源确认状态", ""])
     if providers:
-        lines.extend(["| ID | Area | Status |", "|---|---|---|"])
+        lines.extend(["| ID | Area | Status | Source URLs |", "|---|---|---|---|"])
         for provider in providers:
-            lines.append(f"| `{provider.get('id', '')}` | {provider.get('area', '')} | `{provider.get('status', '')}` |")
+            source_count = len(provider.get("source_urls") or [])
+            lines.append(
+                f"| `{provider.get('id', '')}` | {provider.get('area', '')} | `{provider.get('status', '')}` | {source_count} |"
+            )
     else:
         lines.append("- none")
     lines.extend([
         "",
         "## 维护者下一步",
         "",
-        "1. R1 只建立 registry / policy / 脚本，不批量改正文事实。",
-        "2. R2 更新国内模型或部署页面前，先补厂商官方来源 URL 与 checked date。",
-        "3. 如发现本仓内容与官方来源冲突，先开 review issue，再改正文。",
+        "1. R1 已完成 registry / policy / 脚本基座。",
+        "2. R2 已把国内模型 / 部署页面的厂商官方来源写回 registry 与页面同步记录。",
+        "3. 后续如发现本仓内容与官方来源冲突，先开 review issue，再改正文。",
         "",
         "## 禁止项确认",
         "",
@@ -278,16 +294,16 @@ def render_issue_body(options: CheckOptions) -> str:
     digest = render_digest(options)
     return "\n".join([
         "## 背景",
-        "R1 已建立官方来源 registry / policy，需要进入 R2 前确认国内模型与部署页面的厂商官方来源。",
+        "R1 已建立官方来源 registry / policy；R2 已确认国内模型与部署页面的厂商官方来源，并把来源写回 registry 与页面同步记录。",
         "",
-        "## R1 dry-run digest",
+        "## R2 digest",
         "",
         digest,
         "",
         "## 建议处理",
         "",
-        "- [ ] 为 R2 国内模型页面补厂商官方来源 URL。",
-        "- [ ] 为 R2 国内部署页面补厂商官方来源 URL。",
+        "- [ ] 后续修改国内模型页面前，先复查 registry 中对应 source_urls。",
+        "- [ ] 后续修改国内部署页面前，先复查 registry 中对应 source_urls。",
         "- [ ] 对任何影响用户操作的正文改动记录 source / checked_at / affected_docs。",
         "",
         "## Dry-run 声明",

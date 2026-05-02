@@ -279,6 +279,18 @@ hermes chat -m qwen3.6-plus
 - https://help.aliyun.com/zh/model-studio/hermes-agent-token-plan
 - https://help.aliyun.com/zh/model-studio/get-api-key
 
+## 🧾 R2 官方同步记录
+
+- source_id: `aliyun-bailian`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md`
+- 本轮结论：已确认 Token Plan 团队版 OpenAI/Anthropic 兼容端点、专属 API Key 口径，以及不要混用通用百炼 API Key / Coding Plan Key 的风险。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://help.aliyun.com/zh/model-studio/other-tools-token-plan
+  - https://help.aliyun.com/zh/model-studio/token-plan-faq
+
 ---
 
 ## 🔗 模型接入关联路径
