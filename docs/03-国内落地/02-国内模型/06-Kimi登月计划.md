@@ -286,6 +286,19 @@ hermes model
 - https://www.kimi.com/membership/pricing
 - https://platform.kimi.com/docs/overview
 
+## 🧾 R2 官方同步记录
+
+- source_id: `kimi-moonshot`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/06-Kimi登月计划.md`
+- 本轮结论：已确认 Kimi Code API 接入、Kimi API OpenAI SDK 示例、MOONSHOT_API_KEY 与 base_url 口径；具体模型名以后续官方文档为准。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://www.kimi.com/code/docs/
+  - https://platform.kimi.ai/docs/guide/start-using-kimi-api
+  - https://platform.kimi.ai/docs/guide/kimi-k2-quickstart
+
 ---
 
 ## 🔗 模型接入关联路径

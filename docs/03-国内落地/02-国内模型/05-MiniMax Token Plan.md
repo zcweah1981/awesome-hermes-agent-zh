@@ -278,6 +278,19 @@ hermes model
 - https://www.minimax.io/
 - https://www.minimax.io/platform/
 
+## 🧾 R2 官方同步记录
+
+- source_id: `minimax`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md`
+- 本轮结论：已确认 Token Plan quickstart、API Key 获取、Anthropic 推荐端点和 OpenAI-compatible 文本接口；页面保留“以官方模型/额度页为准”。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://platform.minimax.io/docs/token-plan/quickstart
+  - https://platform.minimax.io/docs/guides/quickstart-preparation
+  - https://platform.minimax.io/docs/api-reference/text-openai-api
+
 ---
 
 ## 🔗 模型接入关联路径

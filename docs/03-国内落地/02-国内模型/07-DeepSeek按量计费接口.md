@@ -315,6 +315,18 @@ hermes model
 如果你想先回到上一阶段入口重新确认位置：
 - [02-国内模型总览](./01-总览.md)
 
+## 🧾 R2 官方同步记录
+
+- source_id: `deepseek`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md`
+- 本轮结论：已确认 DeepSeek 官方 OpenAI/Anthropic 兼容、base_url、当前模型名与旧模型名弃用提示；页面不写死密钥或账户信息。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://api-docs.deepseek.com/
+  - https://api-docs.deepseek.com/guides/anthropic_api
+
 ---
 
 ## 🔗 模型接入关联路径

@@ -249,6 +249,18 @@ hermes model
 - https://z.ai/subscribe
 - https://docs.z.ai/
 
+## 🧾 R2 官方同步记录
+
+- source_id: `zhipu-glm`
+- checked_at: `2026-05-02`
+- change_type: `official-source-confirmation`
+- affected_doc: `docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md`
+- 本轮结论：已确认 GLM Coding Plan 快速开始、API Key 获取、Claude Code/通用兼容配置和 HTTP API 端点口径。
+- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 官方来源：
+  - https://docs.bigmodel.cn/cn/coding-plan/quick-start
+  - https://docs.bigmodel.cn/cn/guide/develop/http/introduction
+
 ---
 
 ## 🔗 模型接入关联路径

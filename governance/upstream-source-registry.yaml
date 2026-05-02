@@ -89,35 +89,86 @@ sources:
     sync_rule: "The site consumes this content repository; it must not become a second content truth source."
 
 provider_sources_to_fill_in_r2:
-  note: "R2 must verify each provider page against provider-official docs before publishing material claim updates. Keep source URLs in the R2 working notes or update this registry when stable."
+  note: "R2 has confirmed provider-official sources for domestic model and deployment pages. Re-check volatile pricing/console UI before future material claim updates."
+  checked_at: "2026-05-02"
   providers:
     - id: aliyun-bailian
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://help.aliyun.com/zh/model-studio/other-tools-token-plan"
+        - "https://help.aliyun.com/zh/model-studio/token-plan-faq"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md"
     - id: tencent-cloud-models
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://cloud.tencent.com/document/product/1823/130060"
+        - "https://cloud.tencent.com/document/product/1823/130119"
+        - "https://cloud.tencent.com/document/product/1729/111008"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md"
     - id: zhipu-glm
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://docs.bigmodel.cn/cn/coding-plan/quick-start"
+        - "https://docs.bigmodel.cn/cn/guide/develop/http/introduction"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md"
     - id: minimax
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://platform.minimax.io/docs/token-plan/quickstart"
+        - "https://platform.minimax.io/docs/guides/quickstart-preparation"
+        - "https://platform.minimax.io/docs/api-reference/text-openai-api"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md"
     - id: kimi-moonshot
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://www.kimi.com/code/docs/"
+        - "https://platform.kimi.ai/docs/guide/start-using-kimi-api"
+        - "https://platform.kimi.ai/docs/guide/kimi-k2-quickstart"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/06-Kimi登月计划.md"
     - id: deepseek
       area: "国内模型"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://api-docs.deepseek.com/"
+        - "https://api-docs.deepseek.com/guides/anthropic_api"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md"
     - id: custom-openai-compatible-provider
       area: "国内模型"
-      status: "needs_hermes_and_provider_compatibility_confirmation"
+      status: "confirmed_hermes_and_provider_compatibility_sources"
+      source_urls:
+        - "https://hermes-agent.nousresearch.com/docs/reference/environment-variables"
+        - "https://github.com/NousResearch/hermes-agent/blob/main/website/docs/developer-guide/adding-providers.md"
+        - "https://docs.ollama.com/openai"
+        - "https://lmstudio.ai/docs/"
+      affected_docs:
+        - "docs/03-国内落地/02-国内模型/08-自定义兼容接口.md"
     - id: aliyun-lightweight-server
       area: "国内部署"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://help.aliyun.com/zh/simple-application-server/getting-started/getting-started"
+        - "https://help.aliyun.com/zh/simple-application-server/user-guide/manage-the-firewall-of-a-server"
+      affected_docs:
+        - "docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md"
     - id: tencent-cloud-lighthouse
       area: "国内部署"
-      status: "needs_provider_official_url_confirmation"
+      status: "confirmed_provider_official_sources"
+      source_urls:
+        - "https://cloud.tencent.com/product/lighthouse"
+        - "https://cloud.tencent.com/document/product/1207/44569"
+      affected_docs:
+        - "docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md"
 
 change_policy:
   record_on_doc_update:
