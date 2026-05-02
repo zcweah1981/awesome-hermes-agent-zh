@@ -18,6 +18,7 @@
 
 # 新 workflow 首次合并前 badge 可能短暂 404；workflow 文件自身仍由 Actions 加载验证。
 ^https?://github\.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check\.yml/badge\.svg.*
+^https?://github\.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check\.yml/badge\.svg.*
 
 # GitHub REST endpoints and private companion repos that require authentication intentionally return 404 to anonymous HEAD/GET.
 ^https://api\.github\.com/repos/zcweah1981/hermes-zh/dispatches$
