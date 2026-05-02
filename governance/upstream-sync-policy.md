@@ -148,7 +148,7 @@ R1：建立 registry、policy、R2 计划，不大规模改正文。
 
 R2：优先同步国内模型 / 部署页面，因为这些页面最容易因厂商变化过期。
 
-R3：再评估 Hermes 官方 docs / GitHub release 的周期巡检机制。
+R3：Hermes 官方 docs / GitHub release 的周期巡检机制已生效。
 
 ## 验收清单
 
