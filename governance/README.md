@@ -37,6 +37,7 @@
 - [`upstream-source-registry.yaml`](./upstream-source-registry.yaml)：官方来源同步的机器可读 registry。
 - [`upstream-sync-policy.md`](./upstream-sync-policy.md)：从官方 / 厂商来源同步内容时的规则和禁止项。
 - [`r2-china-model-deployment-plan.md`](./r2-china-model-deployment-plan.md)：R2 国内模型 / 部署官方同步规划。
+- [`upstream-sync-r1-qa-proof.md`](./upstream-sync-r1-qa-proof.md)：R1 官方来源同步本地 QA 与远端分支 proof。
 
 ## 当前公开仓核心结构
 
