@@ -35,6 +35,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-先跑起来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
 - source: docs/01-从这开始/01-先跑起来/02-先准备运行环境.md
   slug: /start/get-running/prepare-environment
   module: start
@@ -47,6 +57,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-先跑起来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
 - source: docs/01-从这开始/01-先跑起来/03-进入终端并连接服务器.md
   slug: /start/get-running/connect-terminal
   module: start
@@ -59,6 +79,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-先跑起来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
 - source: docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
   slug: /start/get-running/install-hermes
   module: start
@@ -71,6 +101,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-先跑起来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -83,6 +123,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-先跑起来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
 - source: docs/02-现成方案/01-总览.md
   slug: /solutions
   module: solutions
@@ -239,6 +289,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内落地
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/04-从OpenClaw过来/01-总览.md
   slug: /openclaw
   module: openclaw
@@ -275,6 +334,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: packs/README.md
   slug: /packs
   module: packs
@@ -587,6 +656,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-国内部署
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md
   slug: /china/deploy/alicloud-lite-server
   module: china
@@ -599,6 +677,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-国内部署
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - aliyun-lightweight-server
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md
   slug: /china/deploy/tencent-lite-server
   module: china
@@ -611,6 +700,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 01-国内部署
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - tencent-cloud-lighthouse
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/01-总览.md
   slug: /china/models
   module: china
@@ -623,6 +723,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
   slug: /china/models/alibaba-bailian-token-plan
   module: china
@@ -635,6 +744,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - aliyun-bailian
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
   slug: /china/models/tencent-token-plan
   module: china
@@ -647,18 +767,41 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - tencent-cloud-models
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
   slug: /china/models/glm-coding-plan
   module: china
   page_type: doc-page
   title: 04-智谱 GLM Coding Plan
   section: glm-coding-plan
-  description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
+  description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan
+    值得先看。
   order: 55
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - zhipu-glm
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
   slug: /china/models/minimax-token-plan
   module: china
@@ -671,6 +814,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - minimax
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
   slug: /china/models/kimi-plan
   module: china
@@ -683,6 +837,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - kimi-moonshot
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   slug: /china/models/deepseek-metered-api
   module: china
@@ -695,6 +860,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - deepseek
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
 - source: docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
   slug: /china/models/openai-compatible-endpoint
   module: china
@@ -707,6 +883,17 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    provider_pending:
+    - custom-openai-compatible-provider
+  source_review:
+    state: needs-provider-official-confirmation
+    checked_at: '2026-05-02'
+    note: R1 maps Hermes config dependency; R2 must confirm compatible-provider constraints before body updates.
 - source: docs/03-国内落地/03-国内入口/01-总览.md
   slug: /china/entry
   module: china
@@ -719,18 +906,37 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
   slug: /china/entry/dashboard
   module: china
   page_type: doc-page
   title: 02-网页控制台（Dashboard）
   section: dashboard
-  description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
+  description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI
+    的第一主入口。
   order: 61
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
   slug: /china/entry/api-service-open-webui
   module: china
@@ -743,6 +949,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
   slug: /china/entry/cli
   module: china
@@ -755,6 +970,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/05-飞书.md
   slug: /china/entry/feishu
   module: china
@@ -767,42 +991,81 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md
   slug: /china/entry/wecom-ai-bot
   module: china
   page_type: doc-page
   title: 06-企业微信（AI Bot）
   section: wecom-ai-bot
-  description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。
+  description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回
+    Hermes”这条主线走顺。
   order: 65
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/07-钉钉.md
   slug: /china/entry/dingtalk
   module: china
   page_type: doc-page
   title: 07-钉钉
   section: dingtalk
-  description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。
+  description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client
+    ID / Client Secret → 填回 Hermes”这条主线跑顺。
   order: 66
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/03-国内落地/03-国内入口/08-个人微信.md
   slug: /china/entry/personal-wechat
   module: china
   page_type: doc-page
   title: 08-个人微信
   section: personal-wechat
-  description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录 → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
+  description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录
+    → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
   order: 67
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-国内入口
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
 - source: docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
   slug: /openclaw/relationship
   module: openclaw
@@ -917,7 +1180,8 @@ routes:
   page_type: doc-page
   title: 06-Tools / Skills / MCP 问题
   section: tools-skills-mcp
-  description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。
+  description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server
+    根本没接通。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -929,7 +1193,8 @@ routes:
   page_type: doc-page
   title: 07-配置 / Profiles / 环境隔离问题
   section: config-profiles-environment
-  description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。
+  description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个
+    profile。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -959,6 +1224,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/03-Slash Commands 参考.md
   slug: /reference/slash-commands
   module: reference
@@ -971,6 +1246,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/04-Profile 命令参考.md
   slug: /reference/profile-commands
   module: reference
@@ -983,6 +1268,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/05-环境变量参考.md
   slug: /reference/environment-variables
   module: reference
@@ -995,6 +1290,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/06-Built-in Tools 参考.md
   slug: /reference/built-in-tools
   module: reference
@@ -1007,6 +1312,16 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/07-Toolsets 参考.md
   slug: /reference/toolsets
   module: reference
@@ -1019,30 +1334,62 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/08-MCP 配置参考.md
   slug: /reference/mcp-config
   module: reference
   page_type: doc-page
   title: 🔌 08-MCP 配置参考
   section: mcp-config
-  description: 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
+  description: 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题
+    / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
   order: 999
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/09-内置 Skills 目录.md
   slug: /reference/bundled-skills
   module: reference
   page_type: doc-page
   title: 🧠 09-内置 Skills 目录
   section: bundled-skills
-  description: 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
+  description: 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选
+    Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
   order: 999
   status: published
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
 - source: docs/06-reference/10-可选 Skills 目录.md
   slug: /reference/optional-skills
   module: reference
@@ -1055,3 +1402,27 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-05-02'
+    note: Reference pages should be checked against official docs/GitHub before command or config changes.
+source_mapping_contract:
+  version: r1
+  updated: '2026-05-02'
+  registry: governance/upstream-source-registry.yaml
+  fields:
+    source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.
+    source_refs.official: Registered official Hermes sources that should be checked before changing user-impacting Hermes
+      behavior.
+    source_refs.provider_pending: Provider/deployment source ids that must be confirmed against provider-official docs in
+      R2 before body updates.
+    source_review.state: r1-mapped, needs-official-check, or needs-provider-official-confirmation.
+    source_review.checked_at: Date when this mapping was added or last confirmed, not a claim that the page body was fully
+      resynced.
+    source_review.note: Short maintainer-facing boundary for the route entry.

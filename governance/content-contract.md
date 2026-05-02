@@ -101,11 +101,14 @@
 - `updated`：内容更新时间。
 - `source_type`：来源类型，例如 `original`、`official-reference`、`curated`。
 - `nav_group`：站点侧导航分组。
+- `source_refs`：R1 起新增的来源映射字段，用于把 route 关联到 `upstream-source-registry.yaml` 中的来源 ID；首批包含 `local`、`official`、`provider_pending` 三类。
+- `source_review`：R1 起新增的来源复核状态字段，记录 `state`、`checked_at` 和维护说明；它只表示来源映射/复核状态，不代表正文已经完成官方同步。
 
 维护要求：
 - `source`、`slug`、`title`、`module`、`order` 为关键字段。
 - 新增 route 前先确认 Markdown 文件已经真实存在。
 - 删除或移动 Markdown 文件时，必须同步修改 route-map。
+- 如果 route 涉及安装、配置、Reference、国内模型或部署等会影响用户操作的内容，优先补 `source_refs` / `source_review`，并引用 `governance/upstream-source-registry.yaml` 中已有来源 ID。
 
 ## pack manifest 字段合同
 
