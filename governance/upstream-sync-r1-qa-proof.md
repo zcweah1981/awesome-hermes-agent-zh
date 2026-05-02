@@ -5,8 +5,7 @@
 ## 任务
 
 - task_id: `hermes-zh:UPSTREAM-SYNC-R1-QA`
-- branch: `feature/upstream-sync-r1`
-- compare URL: <https://github.com/zcweah1981/awesome-hermes-agent-zh/compare/main...feature/upstream-sync-r1?expand=1>
+- branch: `feature/upstream-sync-r1` (已合并清理)
 
 ## 本轮交付范围
 
@@ -52,8 +51,7 @@
 
 ## Remote proof
 
-- pushed branch: `feature/upstream-sync-r1`
-- compare URL: <https://github.com/zcweah1981/awesome-hermes-agent-zh/compare/main...feature/upstream-sync-r1?expand=1>
+- pushed branch: `feature/upstream-sync-r1` (已合入 main 并删除)
 
 ## PR 状态
 
