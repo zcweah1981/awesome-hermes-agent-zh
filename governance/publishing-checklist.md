@@ -36,6 +36,7 @@
 - [ ] `module`、`section`、`nav_group` 与目录位置一致。
 - [ ] `order` 不与同组页面冲突到影响导航排序。
 - [ ] `status` 为当前真实发布状态。
+- [ ] 如果页面涉及安装、配置、Reference、国内模型或部署，已补 `source_refs` 与 `source_review`，并且来源 ID 能在 `upstream-source-registry.yaml` 找到。
 
 ### 4. packs
 
@@ -62,6 +63,8 @@
 - [ ] `page-source-map.md` 覆盖当前模块入口。
 - [ ] `content-contract.md` 与 route-map / packs 实际字段一致。
 - [ ] `packs-map.md` 覆盖当前开放方案包。
+- [ ] 如果改动涉及官方来源同步，`upstream-source-registry.md` / `upstream-source-registry.yaml` 已记录来源层级。
+- [ ] 如果改动涉及国内模型或部署，已按 `upstream-sync-policy.md` 和 `r2-china-model-deployment-plan.md` 标记官方来源、checked date 与待确认项。
 
 ## 推荐本地检查命令
 

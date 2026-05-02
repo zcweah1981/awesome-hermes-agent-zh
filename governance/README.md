@@ -4,7 +4,7 @@
 
 本目录是 `awesome-hermes-agent-zh` 内容仓的公开最小治理层。
 
-它只回答 7 个问题：
+它只回答 8 个问题：
 
 1. 这个公开仓应该保留什么？
 2. 当前真实目录结构是什么？
@@ -13,6 +13,7 @@
 5. packs 方案包和 docs 方案页如何对应？
 6. 发布前维护者应该检查什么？
 7. 链接巡检结果应该怎样处理？
+8. 官方来源同步应该以哪些来源和规则为准？
 
 ## 当前治理文件
 
@@ -28,10 +29,15 @@
 - [`site-route-map.yaml`](./site-route-map.yaml)：独立站消费的页面路由合同。
 - [`packs-map.md`](./packs-map.md)：当前开放方案包、模式、文档页和安装入口映射。
 
-### 发布自检
+### 发布与同步治理
 
 - [`publishing-checklist.md`](./publishing-checklist.md)：内容仓发布前自检清单。
 - [`link-check.md`](./link-check.md)：死链检查、误报判断、忽略规则和报告处理方式。
+- [`upstream-source-registry.md`](./upstream-source-registry.md)：官方来源同步的人类可读 registry。
+- [`upstream-source-registry.yaml`](./upstream-source-registry.yaml)：官方来源同步的机器可读 registry。
+- [`upstream-sync-policy.md`](./upstream-sync-policy.md)：从官方 / 厂商来源同步内容时的规则和禁止项。
+- [`r2-china-model-deployment-plan.md`](./r2-china-model-deployment-plan.md)：R2 国内模型 / 部署官方同步规划。
+- [`upstream-sync-r1-qa-proof.md`](./upstream-sync-r1-qa-proof.md)：R1 官方来源同步本地 QA 与远端分支 proof。
 
 ## 当前公开仓核心结构
 
@@ -76,6 +82,7 @@
 - docs 与 packs 的公开映射。
 - 发布前维护者自检项。
 - 链接巡检结果、误报边界和忽略规则。
+- 官方来源 registry、官方同步 policy，以及下一轮公开内容同步规划。
 
 ### 本目录不应该记录
 
@@ -93,8 +100,9 @@
 2. 再看 [`repo-structure.md`](./repo-structure.md)，确认应该放在哪个目录。
 3. 如果新增 docs 页面，更新 [`site-route-map.yaml`](./site-route-map.yaml)。
 4. 如果新增或调整方案包，更新 [`packs-map.md`](./packs-map.md)。
-5. 发布前按 [`publishing-checklist.md`](./publishing-checklist.md) 自检。
-6. 如果链接检查失败，按 [`link-check.md`](./link-check.md) 处理。
+5. 如果改动来自官方 / 厂商来源，先按 [`upstream-source-registry.md`](./upstream-source-registry.md) 和 [`upstream-sync-policy.md`](./upstream-sync-policy.md) 记录依据。
+6. 发布前按 [`publishing-checklist.md`](./publishing-checklist.md) 自检。
+7. 如果链接检查失败，按 [`link-check.md`](./link-check.md) 处理。
 
 ## 一句话规则
 

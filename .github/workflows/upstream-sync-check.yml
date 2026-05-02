@@ -1,0 +1,114 @@
+# awesome-hermes-agent-zh — Upstream Sync Check
+# 每周 / 手动检查官方 upstream registry，并为维护者创建 R2 review issue。
+name: upstream-sync-check
+
+on:
+  schedule:
+    # 每周一北京时间 09:40；UTC 为 01:40
+    - cron: "40 1 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: upstream-sync-check-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  upstream-sync-check:
+    name: Check upstream sources and create issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content repo
+        uses: actions/checkout@v4
+
+      - name: Install validation dependencies
+        run: python3 -m pip install --user pyyaml
+
+      - name: Run upstream registry check
+        run: |
+          set -euo pipefail
+          python3 scripts/upstream_sync.py check \
+            --format markdown \
+            --output upstream-check.md
+
+      - name: Render upstream review issue body
+        run: |
+          set -euo pipefail
+          python3 scripts/upstream_sync.py issue --dry-run --format json --output upstream-issue.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path('upstream-issue.json').read_text(encoding='utf-8'))
+          Path('upstream-issue.md').write_text(payload['body'], encoding='utf-8')
+          print(payload['title'])
+          PY
+
+      - name: Publish check summary
+        if: always()
+        run: |
+          {
+            echo "## Upstream Sync Check"
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- Commit: ${{ github.sha }}"
+            echo "- Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo ""
+            if [ -f upstream-check.md ]; then
+              cat upstream-check.md
+            else
+              echo "upstream-check.md was not generated."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload upstream sync artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: upstream-sync-check
+          path: |
+            upstream-check.md
+            upstream-issue.json
+            upstream-issue.md
+          if-no-files-found: warn
+
+      - name: Create or reuse GitHub issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          ISSUE_DATE="$(date -u +%F)"
+          TITLE="R1 官方来源同步：${ISSUE_DATE} upstream 检查"
+
+          gh label create upstream-sync --color 1D76DB --description "Upstream source review" >/dev/null 2>&1 || true
+          gh label create maintenance --color 0E8A16 --description "Repository maintenance" >/dev/null 2>&1 || true
+
+          existing_issue="$(gh issue list \
+            --state open \
+            --label upstream-sync \
+            --search "${TITLE} in:title" \
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [ -n "${existing_issue}" ]; then
+            {
+              echo "本次 upstream 检查已运行；同日 issue 已存在，追加本次 run 记录。"
+              echo ""
+              echo "- run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo "- commit: ${{ github.sha }}"
+              echo ""
+              cat upstream-check.md
+            } > upstream-comment.md
+            gh issue comment "${existing_issue}" --body-file upstream-comment.md
+            echo "Reused existing upstream-sync issue #${existing_issue}." >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh issue create \
+              --title "${TITLE}" \
+              --body-file upstream-issue.md \
+              --label upstream-sync \
+              --label maintenance
+            echo "Created upstream-sync issue for ${ISSUE_DATE}." >> "$GITHUB_STEP_SUMMARY"
+          fi

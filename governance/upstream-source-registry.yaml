@@ -1,0 +1,134 @@
+# Upstream source registry for official-source sync governance.
+# Keep this file factual and conservative. Do not store tokens, cookies, private notes, or internal dispatch logs here.
+updated: "2026-05-02"
+owner: content-maintainers
+purpose: "Define which external sources can be used when updating Hermes Agent Chinese content, and how each source should be treated."
+
+source_tiers:
+  official:
+    description: "Primary truth sources for Hermes Agent behavior, install, configuration, CLI, gateway, tools, skills, MCP, deployment, and release changes."
+    allowed_use:
+      - "Confirm upstream behavior before changing Chinese docs."
+      - "Record source URL and checked date in update notes when a doc changes because of upstream."
+    required_before_public_claim: true
+  provider_official:
+    description: "Official cloud/model/provider documentation used for China-specific model, endpoint, billing, and deployment pages."
+    allowed_use:
+      - "Confirm provider-specific endpoints, compatibility notes, billing model names, and console flows."
+      - "Link to provider docs instead of copying credentials, pricing tables, or volatile console screenshots."
+    required_before_public_claim: true
+  local_content:
+    description: "This repository's existing docs, packs, manifests, and route map."
+    allowed_use:
+      - "Maintain structure, route slugs, internal links, and packs mapping."
+      - "Keep Chinese user journey consistent with the current content tree."
+    required_before_public_claim: false
+  secondary_reference:
+    description: "Community articles, examples, old notes, screenshots, or experiments."
+    allowed_use:
+      - "Use only as context or issue discovery."
+      - "Never override official or provider-official sources."
+    required_before_public_claim: false
+
+sources:
+  - id: hermes-official-docs
+    tier: official
+    name: "Hermes Agent official documentation"
+    url: "https://hermes-agent.nousresearch.com/docs"
+    checked_status: "reachable"
+    checked_at: "2026-05-02"
+    use_for:
+      - install
+      - configuration
+      - providers
+      - CLI
+      - tools
+      - skills
+      - MCP
+      - gateway
+      - deployment
+      - automation
+    sync_rule: "Use as the first source for official Hermes Agent behavior. If local docs conflict, mark local doc for review before publishing changes."
+  - id: hermes-official-github
+    tier: official
+    name: "NousResearch/hermes-agent GitHub repository"
+    url: "https://github.com/NousResearch/hermes-agent"
+    checked_status: "reachable"
+    checked_at: "2026-05-02"
+    use_for:
+      - releases
+      - README
+      - examples
+      - issue references
+      - source-level confirmation
+    sync_rule: "Use for source-level or release-level confirmation; do not mirror private issues, comments, or unstable branch behavior as public guidance."
+  - id: content-repo
+    tier: local_content
+    name: "awesome-hermes-agent-zh content repository"
+    url: "https://github.com/zcweah1981/awesome-hermes-agent-zh"
+    checked_status: "local_ssot"
+    checked_at: "2026-05-02"
+    use_for:
+      - Chinese docs source of truth
+      - packs
+      - route map
+      - governance
+    sync_rule: "All public Chinese content changes land here before the standalone site consumes them."
+  - id: site-repo
+    tier: local_content
+    name: "hermes-zh standalone site repository"
+    url: "https://github.com/zcweah1981/hermes-zh"
+    checked_status: "rendering_consumer"
+    checked_at: "2026-05-02"
+    use_for:
+      - rendering
+      - manifests
+      - search
+      - SEO
+      - deployment
+    sync_rule: "The site consumes this content repository; it must not become a second content truth source."
+
+provider_sources_to_fill_in_r2:
+  note: "R2 must verify each provider page against provider-official docs before publishing material claim updates. Keep source URLs in the R2 working notes or update this registry when stable."
+  providers:
+    - id: aliyun-bailian
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: tencent-cloud-models
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: zhipu-glm
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: minimax
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: kimi-moonshot
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: deepseek
+      area: "国内模型"
+      status: "needs_provider_official_url_confirmation"
+    - id: custom-openai-compatible-provider
+      area: "国内模型"
+      status: "needs_hermes_and_provider_compatibility_confirmation"
+    - id: aliyun-lightweight-server
+      area: "国内部署"
+      status: "needs_provider_official_url_confirmation"
+    - id: tencent-cloud-lighthouse
+      area: "国内部署"
+      status: "needs_provider_official_url_confirmation"
+
+change_policy:
+  record_on_doc_update:
+    - source_id
+    - source_url
+    - checked_at
+    - affected_doc
+    - change_type
+  forbidden:
+    - "raw credentials"
+    - "private tokens"
+    - "internal dispatch logs"
+    - "unverified provider claims"
+    - "pricing copied without checked date"
