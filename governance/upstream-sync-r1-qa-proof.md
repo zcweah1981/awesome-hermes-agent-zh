@@ -6,7 +6,6 @@
 
 - task_id: `hermes-zh:UPSTREAM-SYNC-R1-QA`
 - branch: `feature/upstream-sync-r1`
-- commit: `a7eddd14e3aede86406a466241d33fa3c7db7719`
 - compare URL: <https://github.com/zcweah1981/awesome-hermes-agent-zh/compare/main...feature/upstream-sync-r1?expand=1>
 
 ## 本轮交付范围
@@ -54,7 +53,6 @@
 ## Remote proof
 
 - pushed branch: `feature/upstream-sync-r1`
-- pushed commit: `a7eddd14e3aede86406a466241d33fa3c7db7719`
 - compare URL: <https://github.com/zcweah1981/awesome-hermes-agent-zh/compare/main...feature/upstream-sync-r1?expand=1>
 
 ## PR 状态
