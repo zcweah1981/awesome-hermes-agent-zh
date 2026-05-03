@@ -1,6 +1,6 @@
-updated: '2026-05-02'
+updated: '2026-05-03'
 owner: content-maintainers
-hermes_upstream_baseline_version: v2026.4.30
+hermes_upstream_baseline_version: v0.2.14
 purpose: Define which external sources can be used when updating Hermes Agent Chinese
   content, and how each source should be treated.
 source_tiers:
