@@ -37,7 +37,7 @@ jobs:
       - name: Render upstream review issue body
         run: |
           set -euo pipefail
-          python3 scripts/upstream_sync.py issue --dry-run --format json --output upstream-issue.json
+          python3 scripts/upstream_sync.py issue --format json --output upstream-issue.json
           python3 - <<'PY'
           import json
           from pathlib import Path
