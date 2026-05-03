@@ -2,7 +2,7 @@
 # Keep this file factual and conservative. Do not store tokens, cookies, private notes, or internal dispatch logs here.
 updated: "2026-05-02"
 owner: content-maintainers
-hermes_upstream_baseline_version: v1.1.2
+hermes_upstream_baseline_version: "v2026.4.30"
 purpose: "Define which external sources can be used when updating Hermes Agent Chinese content, and how each source should be treated."
 
 source_tiers:
