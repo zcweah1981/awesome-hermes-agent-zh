@@ -368,7 +368,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     issue = sub.add_parser("issue", help="Render issue body; only dry-run is supported")
     add_common_options(issue)
-    issue.add_argument("--dry-run", action="store_true", help="Required; never creates a remote issue")
+    issue.add_argument("--dry-run", action="store_true", help="Deprecated, no-op")
     issue.add_argument("--format", choices=("markdown", "json"), default="markdown")
     issue.add_argument("--output")
     return parser
@@ -390,27 +390,36 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if args.command == "issue":
-        if not args.dry_run:
-            print("Refusing to create remote issue. Re-run with --dry-run.", file=sys.stderr)
-            return 2
+        payload = validate(options)
+        version_sync = payload.get("version_sync", {})
+        baseline = version_sync.get("baseline", "unknown")
+        latest = version_sync.get("latest", "unknown")
+        outdated = version_sync.get("outdated", False)
+        
         body = render_issue_body(options)
+        title = "R1 官方来源同步：R2 官方来源确认待办"
+        if outdated:
+            title = f"⚠️ [需要同步] Hermes 官方版本已更新到 {latest}，本地基线停留在 {baseline}"
+            body = f"## ⚠️ 版本落后警告\n\nHermes 官方最新 Release 是 `{latest}`，但内容仓当前登记的基线版本是 `{baseline}`。\n\n请内容维护者复查官方 release notes，如果存在破坏性变更、新功能或废弃项，请启动同步工作流。\n\n---\n\n" + body
+
         if args.format == "json":
             text = json.dumps(
                 {
-                    "dry_run": True,
-                    "side_effect": "none",
-                    "title": "R1 官方来源同步：R2 官方来源确认待办",
+                    "dry_run": args.dry_run,
+                    "side_effect": "none" if args.dry_run else "create-issue",
+                    "title": title,
                     "body": body,
+                    "outdated": outdated
                 },
                 ensure_ascii=False,
                 indent=2,
             )
         else:
             text = "\n".join([
-                "# R1 官方来源同步：R2 官方来源确认待办",
+                f"# {title}",
                 "",
-                "dry_run: true",
-                "side_effect: none",
+                f"dry_run: {str(args.dry_run).lower()}",
+                f"side_effect: {'none' if args.dry_run else 'create-issue'}",
                 "",
                 body,
             ])
