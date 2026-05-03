@@ -81,7 +81,17 @@ jobs:
         run: |
           set -euo pipefail
           ISSUE_DATE="$(date -u +%F)"
-          TITLE="R1 官方来源同步：${ISSUE_DATE} upstream 检查"
+          
+          # Get title from python script output or set default
+          if [ -f upstream-issue.json ]; then
+            TITLE="$(jq -r '.title' upstream-issue.json)"
+            # Update title based on whether check has outdated warning
+            if grep -q "Official upstream release is at" upstream-check.md; then
+              TITLE="【版本落后预警】${TITLE}"
+            fi
+          else
+            TITLE="R1 官方来源同步：${ISSUE_DATE} upstream 检查"
+          fi
 
           gh label create upstream-sync --color 1D76DB --description "Upstream source review" >/dev/null 2>&1 || true
           gh label create maintenance --color 0E8A16 --description "Repository maintenance" >/dev/null 2>&1 || true
@@ -96,6 +106,10 @@ jobs:
           if [ -n "${existing_issue}" ]; then
             {
               echo "本次 upstream 检查已运行；同日 issue 已存在，追加本次 run 记录。"
+              if grep -q "Official upstream release is at" upstream-check.md; then
+                echo ""
+                echo "⚠️ **注意：检测到版本落后预警！**"
+              fi
               echo ""
               echo "- run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
               echo "- commit: ${{ github.sha }}"
