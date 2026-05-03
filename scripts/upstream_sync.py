@@ -402,6 +402,12 @@ def main(argv: list[str] | None = None) -> int:
             title = f"⚠️ [需要同步] Hermes 官方版本已更新到 {latest}，本地基线停留在 {baseline}"
             body = f"## ⚠️ 版本落后警告\n\nHermes 官方最新 Release 是 `{latest}`，但内容仓当前登记的基线版本是 `{baseline}`。\n\n请内容维护者复查官方 release notes，如果存在破坏性变更、新功能或废弃项，请启动同步工作流。\n\n---\n\n" + body
 
+        if not args.dry_run:
+            body = body.replace(
+                "## Dry-run 声明\n本输出仅用于本地 dry-run；未调用 GitHub API，未创建远端 issue。",
+                ""
+            ).strip()
+
         if args.format == "json":
             text = json.dumps(
                 {
