@@ -22,6 +22,7 @@
 
 # GitHub REST endpoints and private companion repos that require authentication intentionally return 404 to anonymous HEAD/GET.
 ^https://api\.github\.com/repos/zcweah1981/hermes-zh/dispatches$
+^https://api\.github\.com/repos/\$\{TARGET_REPO\}/dispatches$
 ^https?://github\.com/zcweah1981/hermes-zh/?$
 
 # 站点内绝对路由由独立站 route-map / smoke 流程验证；本仓 Lychee 专注外链与本地相对路径。
