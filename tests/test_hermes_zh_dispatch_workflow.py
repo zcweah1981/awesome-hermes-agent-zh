@@ -62,7 +62,10 @@ def test_dispatch_curl_fails_clearly_and_summary_reports_audit_fields():
     body = workflow_text()
 
     assert "curl -sS -fL --retry 3 --retry-delay 2 -X POST" in body
-    assert "https://api.github.com/repos/${TARGET_REPO}/dispatches" in body
+    assert "https://api.github.com/repos/${TARGET_REPO}/dispatches" not in body
+    assert "api_base=\"https://api.github.com\"" in body
+    assert "dispatch_path=\"/repos/${TARGET_REPO}/dispatches\"" in body
+    assert '"${api_base}${dispatch_path}"' in body
     assert "X-GitHub-Api-Version: 2022-11-28" in body
 
     for summary_line in [
