@@ -107,37 +107,53 @@ jobs:
       - name: Dispatch hermes-zh site content sync
         env:
           SITE_REPO_DISPATCH_TOKEN: ${{ secrets.SITE_REPO_DISPATCH_TOKEN }}
+          TARGET_REPO: zcweah1981/hermes-zh
+          DISPATCH_EVENT_TYPE: content-updated
         run: |
           set -euo pipefail
           if [ -z "${SITE_REPO_DISPATCH_TOKEN:-}" ]; then
-            echo "SITE_REPO_DISPATCH_TOKEN is not configured; cannot trigger zcweah1981/hermes-zh repository_dispatch." >&2
+            echo "SITE_REPO_DISPATCH_TOKEN is not configured; cannot trigger ${TARGET_REPO} repository_dispatch." >&2
             exit 1
           fi
+          echo "::add-mask::${SITE_REPO_DISPATCH_TOKEN}"
 
-          payload=$(python3 - <<'PY'
+          python3 - <<'PY'
           import json
           import os
+          import re
+          from pathlib import Path
 
-          body = {
-              'event_type': 'content-updated',
+          sha = os.environ['GITHUB_SHA']
+          if not re.fullmatch(r'[0-9a-f]{40}', sha):
+              raise SystemExit(f'GITHUB_SHA must be a full 40-character lowercase git SHA, got: {sha!r}')
+
+          payload = {
+              'event_type': os.environ['DISPATCH_EVENT_TYPE'],
               'client_payload': {
                   'content_repo': os.environ['GITHUB_REPOSITORY'],
                   'content_ref': 'main',
-                  'content_sha': os.environ['GITHUB_SHA'],
+                  'content_sha': sha,
                   'actor': os.environ['GITHUB_ACTOR'],
                   'run_id': os.environ['GITHUB_RUN_ID'],
                   'source_workflow_url': f"{os.environ['GITHUB_SERVER_URL']}/{os.environ['GITHUB_REPOSITORY']}/actions/runs/{os.environ['GITHUB_RUN_ID']}",
               },
           }
-          print(json.dumps(body, ensure_ascii=False))
+          if payload['event_type'] != 'content-updated':
+              raise SystemExit('repository_dispatch event_type must be content-updated')
+          Path('dispatch-payload.json').write_text(json.dumps(payload, ensure_ascii=False, separators=(',', ':')) + '\n', encoding='utf-8')
           PY
-          )
 
-          curl -sS -f -X POST \
+          curl -sS -fL --retry 3 --retry-delay 2 -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${SITE_REPO_DISPATCH_TOKEN}" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/zcweah1981/hermes-zh/dispatches \
-            -d "${payload}"
+            "https://api.github.com/repos/${TARGET_REPO}/dispatches" \
+            --data-binary @dispatch-payload.json
 
-          echo "Dispatched hermes-zh content-updated event for ${GITHUB_SHA}." >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## hermes-zh content sync dispatch"
+            echo "- target_repo: ${TARGET_REPO}"
+            echo "- event_type: ${DISPATCH_EVENT_TYPE}"
+            echo "- content_sha: ${GITHUB_SHA}"
+            echo "- content_ref: main"
+          } >> "$GITHUB_STEP_SUMMARY"
