@@ -187,10 +187,22 @@ routes:
   page_type: doc-page
   title: 04-PPT 助手
   section: ppt
-  description: 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成“可继续做成 PPT 的整套稿”。
+  description: 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成"可继续做成 PPT 的整套稿"。
   order: 12
   status: published
   updated: '2026-04-28'
+  source_type: original
+  nav_group: 01-内容创作与发布
+- source: docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
+  slug: /solutions/x-twitter
+  module: solutions
+  page_type: doc-page
+  title: 05-X/Twitter 内容与互动助手
+  section: x-twitter
+  description: 一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。
+  order: 12.5
+  status: published
+  updated: '2026-05-16'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/02-办公效率与知识整理/01-总览.md
