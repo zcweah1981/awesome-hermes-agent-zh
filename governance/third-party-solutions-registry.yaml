@@ -1,0 +1,48 @@
+schema_version: 1
+updated_at: '2026-05-16'
+owner: content-maintainers
+purpose: >-
+  Track third-party Hermes Agent solutions referenced by the Chinese content repo,
+  including their source-of-truth URLs, locally documented versions, and weekly
+  review policy. This registry is review-only: detected source changes create a
+  maintainer review issue/payload and must not automatically rewrite public docs.
+review_policy:
+  cadence: weekly
+  auto_update_docs: false
+  on_change: create_review_issue_only
+  token_policy: GitHub issue creation must use secrets.GITHUB_TOKEN; without a token, run dry-run/report only.
+solutions:
+  - id: hermes-tweet
+    name: Hermes Tweet
+    type: third_party_skill
+    tier: third_party_solution
+    maintainer: Xquik-dev
+    local_doc: docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
+    source:
+      github_repo: Xquik-dev/hermes-tweet
+      github_url: https://github.com/Xquik-dev/hermes-tweet
+      pypi_package: hermes-tweet
+      pypi_url: https://pypi.org/project/hermes-tweet/
+      docs_url: https://docs.xquik.com/guides/hermes-tweet
+      agent_skill_url: https://agentskill.sh/@xquik-dev/hermes-tweet
+    version:
+      recorded_pypi: 0.1.6
+      recorded_github_tag: v0.1.6
+      latest_pypi: 0.1.6
+      latest_github_tag: v0.1.6
+      github_pushed_at: null
+      readme_fingerprint: null
+      package_metadata_fingerprint: null
+    last_checked_at: '2026-05-16'
+    checks:
+      github_latest_release: true
+      github_latest_tag: true
+      github_pushed_at: true
+      pypi_version: true
+      docs_reachable: true
+      readme_metadata_change: true
+      package_metadata_change: true
+    review_policy:
+      auto_update_docs: false
+      on_change: create_review_issue_only
+      reviewer: content-maintainers

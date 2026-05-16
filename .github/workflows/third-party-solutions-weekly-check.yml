@@ -1,0 +1,124 @@
+# awesome-hermes-agent-zh — Third-party Solutions Weekly Check
+# 每周 / 手动检查第三方方案 source registry；检测到变化时只创建 review issue，不自动改正文。
+name: third-party-solutions-weekly-check
+
+on:
+  schedule:
+    # 每周一北京时间 10:20；UTC 为 02:20
+    - cron: "20 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: third-party-solutions-weekly-check-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  third-party-solutions-weekly-check:
+    name: Check third-party solution sources
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout content repo
+        uses: actions/checkout@v4
+
+      - name: Install validation dependencies
+        run: python3 -m pip install --user pyyaml
+
+      - name: Run third-party registry check
+        run: |
+          set -euo pipefail
+          python3 scripts/third_party_solutions_check.py check \
+            --format markdown \
+            --output third-party-report.md
+
+      - name: Render review issue payload
+        run: |
+          set -euo pipefail
+          python3 scripts/third_party_solutions_check.py issue --format json --output third-party-issue.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path('third-party-issue.json').read_text(encoding='utf-8'))
+          Path('third-party-issue.md').write_text(payload['body'], encoding='utf-8')
+          print(payload['title'])
+          PY
+
+      - name: Publish check summary
+        if: always()
+        run: |
+          {
+            echo "## Third-party Solutions Weekly Check"
+            echo ""
+            echo "- Event: ${{ github.event_name }}"
+            echo "- Commit: ${{ github.sha }}"
+            echo "- Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo "- Document update: forbidden"
+            echo ""
+            if [ -f third-party-report.md ]; then
+              cat third-party-report.md
+            else
+              echo "third-party-report.md was not generated."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload third-party check artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: third-party-solutions-weekly-check
+          path: |
+            third-party-report.md
+            third-party-issue.json
+            third-party-issue.md
+          if-no-files-found: warn
+
+      - name: Create review issue when needed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "GH_TOKEN is not available; dry-run/report only." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          WOULD_CREATE="$(jq -r '.would_create_issue' third-party-issue.json)"
+          if [ "${WOULD_CREATE}" != "true" ]; then
+            echo "No third-party source changes detected; issue creation skipped." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          TITLE="$(jq -r '.title' third-party-issue.json)"
+          gh label create third-party-review --color 5319E7 --description "Third-party solution source review" >/dev/null 2>&1 || true
+          gh label create maintenance --color 0E8A16 --description "Repository maintenance" >/dev/null 2>&1 || true
+
+          existing_issue="$(gh issue list \
+            --state open \
+            --label third-party-review \
+            --search "${TITLE} in:title" \
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [ -n "${existing_issue}" ]; then
+            {
+              echo "本次 third-party check 检测到变化；复用已存在 review issue。"
+              echo ""
+              echo "- run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+              echo "- commit: ${{ github.sha }}"
+              echo ""
+              cat third-party-report.md
+            } > third-party-comment.md
+            gh issue comment "${existing_issue}" --body-file third-party-comment.md
+            echo "Reused existing third-party review issue #${existing_issue}." >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh issue create \
+              --title "${TITLE}" \
+              --body-file third-party-issue.md \
+              --label third-party-review \
+              --label maintenance
+            echo "Created third-party review issue." >> "$GITHUB_STEP_SUMMARY"
+          fi
