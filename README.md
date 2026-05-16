@@ -139,6 +139,28 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - **卡住就回排障**：看 [05-遇到问题](./docs/05-遇到问题/01-总览.md)
 - **只查资料就进参考**：看 [06-reference](./docs/06-reference/01-总览.md)
 
+## ❓ 常见问题
+
+### Hermes Agent 中文站是什么？和官方英文文档是什么关系？
+
+Hermes Agent 中文站是围绕 Hermes Agent 的中文实战文档入口，不是对官方英文文档的翻译。它从中文用户的使用路径出发，提供从安装、国内部署、模型接入到日常上手的完整中文路线。官方英文文档地址：[hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs)。
+
+### 在国内能用 Hermes Agent 吗？怎么接入国内模型？
+
+可以。国内用户可以直接走 [03-国内落地](./docs/03-国内落地/01-总览.md) 模块，里面有完整的国内云部署、国内模型接入（DeepSeek、阿里云百炼、腾讯云、智谱GLM、MiniMax、Kimi）和国内消息平台入口（飞书、企业微信、钉钉、个人微信）教程。最低门槛起步路线：[DeepSeek 按量计费接口](./docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md)。
+
+### Hermes Agent 支持哪些国内大模型？
+
+当前已验证并写成教程的国内模型路线有：DeepSeek（按量计费接口）、阿里云百炼 Token Plan、腾讯云 Token Plan、智谱 GLM Coding Plan、MiniMax Token Plan、Kimi 登月计划，以及自定义兼容接口（支持 OneAPI / NewAPI / Ollama 等）。详见 [02-国内模型总览](./docs/03-国内落地/02-国内模型/01-总览.md)。
+
+### 有没有中文教程或视频？
+
+本仓库就是 Hermes Agent 的完整中文教程。从 [01-从这开始](./docs/01-从这开始/总览.md) 进入，按阶段走即可。目前没有视频教程，所有内容以文档形式组织，每个模块都有明确的"适合谁""解决什么问题""下一步去哪"。
+
+### Hermes 和 OpenClaw 是什么关系？
+
+Hermes 是从 OpenClaw 分支发展出来的独立项目。如果你已经在用 OpenClaw，可以先看 [04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md)，里面有详细的共存、迁移判断和检查清单。
+
 ## 🧱 仓库与治理
 
 这个仓库不只是放文档正文，也明确区分了：
