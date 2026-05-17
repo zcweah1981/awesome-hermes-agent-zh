@@ -1,6 +1,20 @@
-# 05-X/Twitter 内容与互动助手
+---
+title: "X/Twitter 内容与互动助手"
+module: solutions
+section: x-twitter
+slug: /solutions/x-twitter
+description: "通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。"
+order: 12.5
+status: published
+updated: "2026-05-17"
+source_type: third_party_solution
+---
+
+# X/Twitter 内容与互动助手
 
 > 一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。
+
+**摘要**：本页介绍如何通过第三方插件 [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet)（由 [Xquik-dev](https://github.com/Xquik-dev) 开发维护），将 X/Twitter 搜索、推文阅读、时间线浏览、趋势查看、发推、回复等操作接入 Hermes Agent。插件分为读取能力（默认可用）和写操作（需显式启用 `HERMES_TWEET_ENABLE_ACTIONS=true`）。本方案为第三方解决方案，非 Hermes 官方内置功能，采用 weekly review only 策略，不自动更新正文。
 
 > ⚠️ **第三方插件声明**
 > Hermes Tweet 是由 [Xquik-dev](https://github.com/Xquik-dev) 开发和维护的**第三方 Hermes Agent 插件**，不是 Hermes 官方内置功能。它的功能边界、更新节奏和安全策略由第三方作者负责。本页仅做中文介绍与使用引导，不对其稳定性、安全性和持续维护做官方背书。
