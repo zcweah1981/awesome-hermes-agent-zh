@@ -144,7 +144,7 @@ hermes chat --skills hermes-tweet -q "搜索 X 上最近关于 AI Agent 的讨�
 
 如果这 3 件事都正常，说明读取链路通了。
 
-![结构图：从安装 hermes-tweet、配置 X API 凭据、先跑读取测试，到确认无误后再决定是否开启写操作的最短链路](../../assets/solution-twitter-setup-chain-v1.png)
+![结构图：从安装 hermes-tweet、配置 X API 凭据、先跑读取测试，到确认无误后再决定是否开启写操作的最短链路](../../assets/solution-twitter-setup-chain-v3-approved-style.png)
 
 ---
 
