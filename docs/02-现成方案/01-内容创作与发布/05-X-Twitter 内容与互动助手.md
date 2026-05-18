@@ -1,15 +1,3 @@
----
-title: "X/Twitter 内容与互动助手"
-module: solutions
-section: x-twitter
-slug: /solutions/x-twitter
-description: "通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。"
-order: 12.5
-status: published
-updated: "2026-05-17"
-source_type: third_party_solution
----
-
 # X/Twitter 内容与互动助手
 
 > 一句话先说清楚：这一页是帮你把 X/Twitter 上的搜索、阅读、发推、回复、互动等操作，通过一个第三方插件接入 Hermes Agent，让你能用对话方式完成 X 平台的内容工作。
