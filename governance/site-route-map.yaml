@@ -289,6 +289,42 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-应用开发与快速原型
+- source: docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
+  slug: /solutions/multi-platform-rewrite
+  module: solutions
+  page_type: doc-page
+  title: 06-多平台内容改写助手
+  section: multi-platform-rewrite
+  description: 把一篇现成内容，改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，直接复制就能发。
+  order: 13
+  status: published
+  updated: '2026-05-18'
+  source_type: original
+  nav_group: 01-内容创作与发布
+- source: docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md
+  slug: /solutions/action-plan
+  module: solutions
+  page_type: doc-page
+  title: 05-行动计划助手
+  section: action-plan
+  description: 把一个项目目标、会议结论或头脑风暴的结果，直接压成有负责人、截止时间和优先级的可执行行动计划表。
+  order: 17
+  status: published
+  updated: '2026-05-18'
+  source_type: original
+  nav_group: 02-办公效率与知识整理
+- source: docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
+  slug: /solutions/message-summary
+  module: solutions
+  page_type: doc-page
+  title: 06-邮件群消息摘要助手
+  section: message-summary
+  description: 把一封长邮件或一堆群消息，压成一段能直接转发或同步给同事的结构化摘要。
+  order: 18
+  status: published
+  updated: '2026-05-18'
+  source_type: original
+  nav_group: 02-办公效率与知识整理
 - source: docs/03-国内落地/01-总览.md
   slug: /china
   module: china
