@@ -1,0 +1,16 @@
+id: action-plan-lab
+title: 行动计划助手
+category: 办公效率与知识整理
+summary: 把一个项目目标、会议结论或头脑风暴的结果，直接压成有负责人、截止时间和优先级的可执行行动计划表。
+modes:
+- solo
+doc: docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md
+install: packs/action-plan-lab/INSTALL.md
+download: packs/action-plan-lab/01-super-individual.zip
+status: published
+featured: false
+order: 17
+tags:
+- action-plan
+- project
+- office

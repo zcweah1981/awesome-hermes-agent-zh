@@ -1,0 +1,16 @@
+id: multi-platform-rewrite-lab
+title: 多平台内容改写助手
+category: 内容创作与发布
+summary: 把一篇已有内容，直接改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，复制就能发。
+modes:
+- solo
+doc: docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
+install: packs/multi-platform-rewrite-lab/INSTALL.md
+download: packs/multi-platform-rewrite-lab/01-super-individual.zip
+status: published
+featured: false
+order: 13
+tags:
+- rewrite
+- content
+- multi-platform

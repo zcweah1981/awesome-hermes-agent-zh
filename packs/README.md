@@ -57,7 +57,10 @@
 | [summary-lab](./summary-lab/INSTALL.md) | [资料总结助手](../docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md) | 散资料压缩、结构化总结、发送版总结输出 | Solo | [summary-lab/INSTALL.md](./summary-lab/INSTALL.md) |
 | [xhs-lab](./xhs-lab/INSTALL.md) | [小红书内容助手](../docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md) | 小红书选题、标题、正文、配图提示、发布检查 | Solo + Team | [xhs-lab/INSTALL.md](./xhs-lab/INSTALL.md) |
 | [wechat-writer-lab](./wechat-writer-lab/INSTALL.md) | [公众号写作助手](../docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md) | 公众号文章选题、初稿、编辑、审校 | Solo + Team | [wechat-writer-lab/INSTALL.md](./wechat-writer-lab/INSTALL.md) |
-| [ppt-lab](./ppt-lab/INSTALL.md) | [PPT 助手](<../docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md>) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+|| [ppt-lab](./ppt-lab/INSTALL.md) | [PPT 助手](<../docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md>) | PPT 内容生成、分工写稿与评审 | Solo + Team | [ppt-lab/INSTALL.md](./ppt-lab/INSTALL.md) |
+|| [multi-platform-rewrite-lab](./multi-platform-rewrite-lab/INSTALL.md) | [多平台内容改写助手](../docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md) | 一篇内容改写成小红书、公众号、X 多平台版本 | Solo | [multi-platform-rewrite-lab/INSTALL.md](./multi-platform-rewrite-lab/INSTALL.md) |
+|| [action-plan-lab](./action-plan-lab/INSTALL.md) | [行动计划助手](../docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md) | 会议结论/目标拆成可执行行动计划表 | Solo | [action-plan-lab/INSTALL.md](./action-plan-lab/INSTALL.md) |
+|| [message-summary-lab](./message-summary-lab/INSTALL.md) | [邮件群消息摘要助手](../docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md) | 邮件/群消息压成可转发结构化摘要 | Solo | [message-summary-lab/INSTALL.md](./message-summary-lab/INSTALL.md) |
 
 ## 🗂️ 按方案类型快速分组
 
@@ -65,11 +68,14 @@
 - [xhs-lab](./xhs-lab/INSTALL.md) → 小红书内容助手
 - [wechat-writer-lab](./wechat-writer-lab/INSTALL.md) → 公众号写作助手
 - [ppt-lab](./ppt-lab/INSTALL.md) → PPT 助手
+- [multi-platform-rewrite-lab](./multi-platform-rewrite-lab/INSTALL.md) → 多平台内容改写助手
 
 ### 办公效率与知识整理
 - [meeting-lab](./meeting-lab/INSTALL.md) → 会议纪要助手
 - [daily-report-lab](./daily-report-lab/INSTALL.md) → 项目日报助手
 - [summary-lab](./summary-lab/INSTALL.md) → 资料总结助手
+- [action-plan-lab](./action-plan-lab/INSTALL.md) → 行动计划助手
+- [message-summary-lab](./message-summary-lab/INSTALL.md) → 邮件群消息摘要助手
 
 ### 应用开发与快速原型
 - [miniapp-lab](./miniapp-lab/INSTALL.md) → 微信小程序助手
@@ -127,6 +133,15 @@
 - [xhs-lab](./xhs-lab/INSTALL.md)
 - [wechat-writer-lab](./wechat-writer-lab/INSTALL.md)
 - [ppt-lab](./ppt-lab/INSTALL.md)
+- [multi-platform-rewrite-lab](./multi-platform-rewrite-lab/INSTALL.md)
+
+### 如果你要做行动计划 / 任务拆解
+直接进：
+- [action-plan-lab](./action-plan-lab/INSTALL.md)
+
+### 如果你要做邮件 / 群消息摘要
+直接进：
+- [message-summary-lab](./message-summary-lab/INSTALL.md)
 
 ## 🧠 Solo 和 Team 怎么选
 
@@ -144,6 +159,9 @@
 - `meeting-lab`
 - `daily-report-lab`
 - `summary-lab`
+- `action-plan-lab`
+- `message-summary-lab`
+- `multi-platform-rewrite-lab`
 
 ### 当前同时提供 Solo + Team 的包
 - `miniapp-lab`
@@ -187,6 +205,9 @@
    - [xhs-lab](./xhs-lab/INSTALL.md)
    - [wechat-writer-lab](./wechat-writer-lab/INSTALL.md)
    - [ppt-lab](./ppt-lab/INSTALL.md)
+   - [multi-platform-rewrite-lab](./multi-platform-rewrite-lab/INSTALL.md)
+   - [action-plan-lab](./action-plan-lab/INSTALL.md)
+   - [message-summary-lab](./message-summary-lab/INSTALL.md)
 
 如果你已经明确要先试一个，默认最适合快速起跑的是：
 - [miniapp-lab/INSTALL.md](./miniapp-lab/INSTALL.md)

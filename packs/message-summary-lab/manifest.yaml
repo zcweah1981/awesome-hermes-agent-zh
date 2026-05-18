@@ -1,0 +1,16 @@
+id: message-summary-lab
+title: 邮件群消息摘要助手
+category: 办公效率与知识整理
+summary: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要。
+modes:
+- solo
+doc: docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
+install: packs/message-summary-lab/INSTALL.md
+download: packs/message-summary-lab/01-super-individual.zip
+status: published
+featured: false
+order: 18
+tags:
+- message
+- summary
+- office
