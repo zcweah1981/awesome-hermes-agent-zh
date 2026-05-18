@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-05-18 21:59:31 CST",
+  "base_url": "https://cliproxy.biztint.com/v1",
+  "model": "gemini-3.1-flash-image",
+  "assets": [
+    {
+      "filename": "solution-twitter-read-vs-actions-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-twitter-read-vs-actions-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/01-solution-twitter-read-vs-actions-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/01-solution-twitter-read-vs-actions-v2-cliproxy.json",
+      "sha256": "b2b74e53e10ba45577562a6ac999fe34342219ffaef8cdca860e81ad58d5015e",
+      "provider_sha256": "6e47099a9e477468e993bb8b6a2b7e110f2d12167fb06faedbcf75d83708232b",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: X/Twitter plugin capability boundary comparison. Left cluster = safer default read capability zone. Right cluster = higher-risk write action zone. Add a slim center boundary pillar between them. Keep left and right balanced, with subtle tension across the boundary."
+    },
+    {
+      "filename": "solution-twitter-setup-chain-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-twitter-setup-chain-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/02-solution-twitter-setup-chain-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/02-solution-twitter-setup-chain-v2-cliproxy.json",
+      "sha256": "1e157ccbf0f79c708e5d466518604dc74a57cc0adb9f5486c24e437d37d41ae0",
+      "provider_sha256": "26e46b9285b91e22a8b601dce8ce70165a7758382ad02c7c2e261c605f7130dc",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: shortest setup chain for a third-party X/Twitter plugin in Hermes. Build one graceful left-to-right route of four main cards that ends in a fork of two outcomes. Composition should feel like a guided route, not a process chart screenshot."
+    },
+    {
+      "filename": "solution-action-plan-standard-vs-lite-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-action-plan-standard-vs-lite-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/03-solution-action-plan-standard-vs-lite-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/03-solution-action-plan-standard-vs-lite-v2-cliproxy.json",
+      "sha256": "c9b57a6fc6f5c406624b66cbc1119b563f133d56b265fdf3ce2bbb18dd5d76e1",
+      "provider_sha256": "b53b5055da6cf95691bc6f920733ebb295f128a459d33c16c55d2305eb07590d",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: action-plan output mode comparison. Left side should feel fuller and more complete but still airy. Right side should feel lighter and faster. No business UI. Premium documentation-diagram look."
+    },
+    {
+      "filename": "solution-action-plan-output-map-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-action-plan-output-map-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/04-solution-action-plan-output-map-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/04-solution-action-plan-output-map-v2-cliproxy.json",
+      "sha256": "d9cafe115936accc419c888b4f416933f099c3f6a41ef12a9b7764b5a9ac3208",
+      "provider_sha256": "5ef55013385a6b8cfb244d4aa358b97e665c9935b2db4b37da2a2d51d4d4aaa8",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: output bundle for an action-plan assistant. One source card expands into three structured mid-stage deliverables, then converges into one final send-ready card. The center should feel like a refined operations map."
+    },
+    {
+      "filename": "solution-multiplatform-solo-vs-batch-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-multiplatform-solo-vs-batch-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/05-solution-multiplatform-solo-vs-batch-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/05-solution-multiplatform-solo-vs-batch-v2-cliproxy.json",
+      "sha256": "0d839948fbb30c33c337eafd7ef4832f021db8c3a999c1e9c0b575fdd794f476",
+      "provider_sha256": "0ff61baf8c5400964550f57677603352d95b8782fbc89b85f29212970c90b357",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: single-platform rewrite versus batch multi-platform rewrite. Left = focused trial route. Right = one-source-to-many-destinations route. Right side should visibly imply branching outputs without looking like social media UI thumbnails."
+    },
+    {
+      "filename": "solution-multiplatform-output-bundle-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-multiplatform-output-bundle-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/06-solution-multiplatform-output-bundle-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/06-solution-multiplatform-output-bundle-v2-cliproxy.json",
+      "sha256": "d3151fa06dbdfa2086bd8093b32f34926e75058ce672f4a3e8c68ab632f5c535",
+      "provider_sha256": "3ca068a8b150358206fe278abdbbe262d75cae62e19af5fe3e51572727a2f6e5",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: multi-platform rewrite output bundle. One source content block, one central refinement hub, then three balanced destination cards. The image should feel centered, premium, and concise, with slim cyan routes to each destination."
+    },
+    {
+      "filename": "solution-message-summary-complete-vs-quick-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-message-summary-complete-vs-quick-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/07-solution-message-summary-complete-vs-quick-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/07-solution-message-summary-complete-vs-quick-v2-cliproxy.json",
+      "sha256": "ef00bcfe698c6773d1cf84254f47cc119df2dad962ed0a0f65095973629da35c",
+      "provider_sha256": "ee71aa9614a7d765bfb8ff627d764da161501f8282a150ccb4883a9a61c40ed4",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: complete summary versus quick summary for long messages and emails. Left side = richer structured coverage. Right side = compressed quick-forward summary. Avoid any chat-bubble look; this must feel like a structure comparison diagram."
+    },
+    {
+      "filename": "solution-message-summary-output-map-v2-cliproxy.png",
+      "final_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/solution-message-summary-output-map-v2-cliproxy.png",
+      "provider_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/provider/08-solution-message-summary-output-map-v2-cliproxy-provider.jpeg",
+      "raw_response_path": "/opt/projects/awesome-hermes-agent-zh/docs/assets/proof/cliproxy-approved-redo-20260518/raw/08-solution-message-summary-output-map-v2-cliproxy.json",
+      "sha256": "8a38acc5581d3539e18e586bea8097a5b3a472ccbb9b2ccf39e8aaba721070e5",
+      "provider_sha256": "bb0e2dabb77a4ad44688676b3878afef7ae9c9c5354bcf27c329d7632f7bcd4c",
+      "prompt": "Create a premium 16:9 technical documentation illustration for a Chinese AI tools website. Deep navy to blue-black background, cinematic but restrained cyan glow, translucent dark glass cards, white and cyan wireframe outlines, thin luminous connector lines, a few tiny orange signal nodes, strong hierarchy, large breathing room, elegant spacing, rich but clean composition, premium docs-diagram feeling. Absolutely no realistic UI, no dashboard, no browser window, no mobile app shell, no screenshot, no code editor, no terminal screen. No logos, no watermark, no readable text, no letters, no numbers. Design abstract composition only with obvious blank card zones for later overlay text. Cards should feel layered, slightly floating, semi-transparent, and refined rather than flat rectangles. Use 3 to 5 major structural groups only. Keep the image scannable in 3 seconds. Topic: summary output map for long emails and group messages. Two abstract source inputs merge into one structured summary card, then split into three summary chips and one final forwardable card. Elegant and abstract only."
+    }
+  ]
+}
