@@ -4,6 +4,7 @@
 This script is intentionally local-first and side-effect safe:
 - `check` validates registry/policy contracts and can optionally check source reachability.
 - `digest` renders a concise Markdown digest for maintainers.
+- `plan` reads the version ledger and official release info to suggest sync steps.
 - `issue --dry-run` renders a GitHub issue body without calling GitHub.
 
 No credentials are read or printed.
@@ -13,6 +14,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import re
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -27,23 +29,22 @@ except Exception:  # pragma: no cover - PyYAML is available in this repo environ
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_REGISTRY = REPO_ROOT / "governance" / "upstream-source-registry.yaml"
+DEFAULT_LEDGER = REPO_ROOT / "governance" / "version-ledger.yaml"
 DEFAULT_POLICY = REPO_ROOT / "governance" / "upstream-sync-policy.md"
 DEFAULT_HUMAN_REGISTRY = REPO_ROOT / "governance" / "upstream-source-registry.md"
 
 REQUIRED_SOURCE_FIELDS = ("id", "tier", "name", "url")
 FORBIDDEN_PUBLIC_TERMS = ("dispatch", "worker_run", "runtime log", "private tokens", "raw credentials")
 
-
 @dataclass(frozen=True)
 class CheckOptions:
     registry: Path
+    ledger: Path
     policy: Path
     human_registry: Path
     no_network: bool
 
-
-
-def fetch_latest_github_release(repo: str = "NousResearch/hermes-agent") -> str | None:
+def fetch_latest_github_release(repo: str = "NousResearch/hermes-agent") -> dict[str, Any] | None:
     try:
         req = Request(
             f"https://api.github.com/repos/{repo}/releases/latest",
@@ -51,8 +52,13 @@ def fetch_latest_github_release(repo: str = "NousResearch/hermes-agent") -> str 
         )
         with urlopen(req, timeout=5) as res:
             data = json.loads(res.read().decode("utf-8"))
-            return data.get("tag_name")
-    except Exception as e:
+            return {
+                "tag_name": data.get("tag_name"),
+                "html_url": data.get("html_url"),
+                "body": data.get("body", ""),
+                "published_at": data.get("published_at")
+            }
+    except Exception:
         return None
 
 def repo_relative(path: Path) -> str:
@@ -61,17 +67,15 @@ def repo_relative(path: Path) -> str:
     except ValueError:
         return str(path)
 
-
-def load_registry(path: Path) -> dict[str, Any]:
+def load_yaml(path: Path) -> dict[str, Any]:
     if not path.exists():
-        raise FileNotFoundError(f"registry not found: {path}")
+        raise FileNotFoundError(f"YAML file not found: {path}")
     if yaml is None:
-        raise RuntimeError("PyYAML is required to parse upstream-source-registry.yaml")
+        raise RuntimeError("PyYAML is required to parse YAML files")
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict):
-        raise ValueError("registry YAML root must be a mapping")
+        raise ValueError(f"YAML root must be a mapping: {path}")
     return data
-
 
 def source_list(registry: dict[str, Any]) -> list[dict[str, Any]]:
     sources = registry.get("sources")
@@ -79,28 +83,46 @@ def source_list(registry: dict[str, Any]) -> list[dict[str, Any]]:
         return []
     return [source for source in sources if isinstance(source, dict)]
 
-
 def check_url(url: str, timeout: float = 8.0) -> dict[str, Any]:
     request = Request(url, method="HEAD", headers={"User-Agent": "hermes-zh-upstream-sync-check/1.0"})
     try:
-        with urlopen(request, timeout=timeout) as response:  # nosec: official registry URLs only, operator-controlled.
+        with urlopen(request, timeout=timeout) as response:
             return {"status": "ok", "code": response.status}
     except HTTPError as exc:
-        # Some hosts disallow HEAD but still exist. Report HTTP code without treating 405/403 as hard crash.
         if exc.code in {403, 405}:
             return {"status": "warning", "code": exc.code, "message": "HEAD not allowed or blocked"}
         return {"status": "failed", "code": exc.code, "message": str(exc)}
     except URLError as exc:
         return {"status": "failed", "message": str(exc.reason)}
-    except Exception as exc:  # pragma: no cover - defensive, reported in JSON.
+    except Exception as exc:
         return {"status": "failed", "message": str(exc)}
 
+def categorize_changes(body: str) -> list[str]:
+    categories = []
+    lower_body = body.lower()
+    keywords = {
+        "install": ["install", "npm", "pip", "setup"],
+        "cli": ["cli", "command", "args", "terminal"],
+        "configuration": ["config", ".env", "yaml", "settings"],
+        "provider": ["openai", "anthropic", "gemini", "provider", "model"],
+        "tools": ["tool", "function call"],
+        "skills": ["skill"],
+        "mcp": ["mcp", "context protocol"],
+        "breaking_change": ["breaking", "deprecated", "removed"],
+        "bug_fix": ["fix", "bug", "resolved"],
+        "new_feature": ["new", "added", "feature"]
+    }
+    for cat, words in keywords.items():
+        if any(word in lower_body for word in words):
+            categories.append(cat)
+    return sorted(list(set(categories)))
 
 def validate(options: CheckOptions) -> dict[str, Any]:
     issues: list[str] = []
     warnings: list[str] = []
     required_files = {
         repo_relative(options.registry): "ok" if options.registry.exists() else "missing",
+        repo_relative(options.ledger): "ok" if options.ledger.exists() else "missing",
         repo_relative(options.policy): "ok" if options.policy.exists() else "missing",
         repo_relative(options.human_registry): "ok" if options.human_registry.exists() else "missing",
     }
@@ -112,10 +134,19 @@ def validate(options: CheckOptions) -> dict[str, Any]:
     sources: list[dict[str, Any]] = []
     if options.registry.exists():
         try:
-            registry = load_registry(options.registry)
+            registry = load_yaml(options.registry)
             sources = source_list(registry)
         except Exception as exc:
             issues.append(f"registry parse failed: {exc}")
+
+    ledger: dict[str, Any] = {}
+    if options.ledger.exists():
+        try:
+            ledger = load_yaml(options.ledger)
+            if ledger.get("ledger_meta", {}).get("project_id") != "hermes-zh":
+                issues.append(f"ledger project_id mismatch: expected hermes-zh, got {ledger.get('ledger_meta', {}).get('project_id')}")
+        except Exception as exc:
+            issues.append(f"ledger parse failed: {exc}")
 
     if not sources:
         issues.append("registry must contain a sources list")
@@ -180,27 +211,31 @@ def validate(options: CheckOptions) -> dict[str, Any]:
     for key in failed_reachability:
         warnings.append(f"source reachability failed: {key}")
 
-    r2_provider_block = registry.get("provider_sources_to_fill_in_r2", {})
-    r2_providers = r2_provider_block.get("providers", []) if isinstance(r2_provider_block, dict) else []
-    r2_confirmed = sum(
-        1
-        for provider in r2_providers
-        if str(provider.get("status", "")).startswith("confirmed_") and provider.get("source_urls")
-    )
-    r2_pending = sum(
-        1
-        for provider in r2_providers
-        if str(provider.get("status", "")).startswith("needs_") or not provider.get("source_urls")
-    )
-    baseline_ver = registry.get('hermes_upstream_baseline_version', 'unknown')
-    latest_ver = fetch_latest_github_release() if not options.no_network else None
+    # Version Info
+    baseline_ver = ledger.get("current_content_baseline") or registry.get('hermes_upstream_baseline_version', 'unknown')
+    latest_release = fetch_latest_github_release() if not options.no_network else None
+    latest_ver = latest_release.get("tag_name") if latest_release else None
     
-    version_info = {'baseline': baseline_ver, 'latest': latest_ver}
+    change_cats = categorize_changes(latest_release.get("body", "")) if latest_release else []
+    affected_docs_candidates = []
+    if change_cats and ledger.get("sync_priority_tiers"):
+        tiers = ledger.get("sync_priority_tiers")
+        for tier_name, tier_info in tiers.items():
+            tier_cats = tier_info.get("categories", [])
+            if any(c in tier_cats for c in change_cats):
+                affected_docs_candidates.extend(tier_info.get("affected_docs", []))
+    
+    version_info = {
+        'baseline': baseline_ver, 
+        'latest': latest_ver,
+        'html_url': latest_release.get("html_url") if latest_release else None,
+        'outdated': False,
+        'change_categories': change_cats,
+        'affected_docs_candidates': sorted(list(set(affected_docs_candidates)))
+    }
     if latest_ver and baseline_ver and latest_ver != baseline_ver:
         version_info['outdated'] = True
         issues.append(f"Official upstream release is at {latest_ver}, but baseline is {baseline_ver}")
-        
-
 
     payload = {
         "status": "failed" if issues else "ok",
@@ -209,15 +244,11 @@ def validate(options: CheckOptions) -> dict[str, Any]:
         "required_files": required_files,
         "source_ids": source_ids,
         "version_sync": version_info,
-
         "summary": {
             "sources_total": len(sources),
             "official_sources": official_count,
             "provider_official_sources": provider_count,
             "local_content_sources": local_count,
-            "r2_provider_sources_total": len(r2_providers),
-            "r2_provider_sources_confirmed": r2_confirmed,
-            "r2_provider_sources_pending": r2_pending,
         },
         "issues": issues,
         "warnings": warnings,
@@ -225,9 +256,21 @@ def validate(options: CheckOptions) -> dict[str, Any]:
     }
     return payload
 
-
 def render_check_markdown(payload: dict[str, Any]) -> str:
     lines = ["# 官方来源同步 Check", "", f"- status: `{payload['status']}`", f"- checked_at: `{payload['checked_at']}`", f"- network_checked: `{str(payload['network_checked']).lower()}`", ""]
+    lines.append("## Version Status")
+    v = payload["version_sync"]
+    lines.append(f"- Baseline: `{v['baseline']}`")
+    lines.append(f"- Latest: `{v['latest'] or 'unknown'}`")
+    lines.append(f"- Outdated: `{str(v['outdated']).lower()}`")
+    if v['html_url']:
+        lines.append(f"- Release URL: {v['html_url']}")
+    if v['change_categories']:
+        lines.append(f"- Categories: {', '.join(v['change_categories'])}")
+    if v.get('affected_docs_candidates'):
+        lines.append("- Affected Docs (Candidates):")
+        lines.extend(f"  - {doc}" for doc in v['affected_docs_candidates'])
+    lines.append("")
     lines.append("## Summary")
     for key, value in payload["summary"].items():
         lines.append(f"- {key}: {value}")
@@ -238,34 +281,23 @@ def render_check_markdown(payload: dict[str, Any]) -> str:
     else:
         lines.append("- none")
     lines.append("")
-    lines.append("## Warnings")
-    if payload["warnings"]:
-        lines.extend(f"- {warning}" for warning in payload["warnings"])
-    else:
-        lines.append("- none")
-    lines.append("")
     return "\n".join(lines)
 
-
 def render_digest(options: CheckOptions) -> str:
-    registry = load_registry(options.registry)
+    registry = load_yaml(options.registry)
     payload = validate(options)
     sources = source_list(registry)
-    provider_block = registry.get("provider_sources_to_fill_in_r2", {})
-    providers = provider_block.get("providers", []) if isinstance(provider_block, dict) else []
 
     lines = [
         "# 官方来源同步 Digest",
         "",
         f"生成日期：{date.today().isoformat()}",
         "",
-        "## R1 当前状态",
+        "## 版本台账摘要",
         "",
-        f"- check_status: `{payload['status']}`",
-        f"- registered_sources: {payload['summary']['sources_total']}",
-        f"- official_sources: {payload['summary']['official_sources']}",
-        f"- local_content_sources: {payload['summary']['local_content_sources']}",
-        "- side_effect: `none`",
+        f"- 当前基线: `{payload['version_sync']['baseline']}`",
+        f"- 官方最新: `{payload['version_sync']['latest'] or 'unknown'}`",
+        f"- 状态: `{'⚠️ 落后' if payload['version_sync']['outdated'] else '✅ 已对齐'}`",
         "",
         "## 已登记来源",
         "",
@@ -282,23 +314,7 @@ def render_digest(options: CheckOptions) -> str:
                 rule=str(source.get("sync_rule", "")).replace("|", "/"),
             )
         )
-    lines.extend(["", "## R2 官方来源确认状态", ""])
-    if providers:
-        lines.extend(["| ID | Area | Status | Source URLs |", "|---|---|---|---|"])
-        for provider in providers:
-            source_count = len(provider.get("source_urls") or [])
-            lines.append(
-                f"| `{provider.get('id', '')}` | {provider.get('area', '')} | `{provider.get('status', '')}` | {source_count} |"
-            )
-    else:
-        lines.append("- none")
     lines.extend([
-        "",
-        "## 维护者下一步",
-        "",
-        "1. R1 已完成 registry / policy / 脚本基座。",
-        "2. R2 已把国内模型 / 部署页面的厂商官方来源写回 registry 与页面同步记录。",
-        "3. 后续如发现本仓内容与官方来源冲突，先开 review issue，再改正文。",
         "",
         "## 禁止项确认",
         "",
@@ -309,31 +325,33 @@ def render_digest(options: CheckOptions) -> str:
     ])
     digest = "\n".join(lines)
     for term in FORBIDDEN_PUBLIC_TERMS[:2]:
-        # Keep digest clean from internal execution logs. Credential prohibition phrases are allowed as policy text.
         digest = digest.replace(term, "[internal-term-redacted]")
     return digest
 
+def render_plan(options: CheckOptions) -> dict[str, Any]:
+    payload = validate(options)
+    v = payload["version_sync"]
+    
+    plan_data = {
+        "status": "up_to_date" if not v["outdated"] else "sync_needed",
+        "baseline": v["baseline"],
+        "latest": v["latest"],
+        "outdated": v["outdated"],
+        "steps": []
+    }
 
-def render_issue_body(options: CheckOptions) -> str:
-    digest = render_digest(options)
-    return "\n".join([
-        "## 背景",
-        "R1 已建立官方来源 registry / policy；R2 已确认国内模型与部署页面的厂商官方来源，并把来源写回 registry 与页面同步记录。",
-        "",
-        "## R2 digest",
-        "",
-        digest,
-        "",
-        "## 建议处理",
-        "",
-        "- [ ] 后续修改国内模型页面前，先复查 registry 中对应 source_urls。",
-        "- [ ] 后续修改国内部署页面前，先复查 registry 中对应 source_urls。",
-        "- [ ] 对任何影响用户操作的正文改动记录 source / checked_at / affected_docs。",
-        "",
-        "## Dry-run 声明",
-        "本输出仅用于本地 dry-run；未调用 GitHub API，未创建远端 issue。",
-    ])
+    if v["outdated"]:
+        plan_data["steps"] = [
+            f"1. 复查官方 Release Notes: {v['html_url']}",
+            f"2. 识别变更分类: {', '.join(v['change_categories'])}",
+            "3. 确定受影响的文档列表 (参考 governance/version-ledger.yaml 中的 P0/P1/P2 定义)",
+            f"4. 在内容仓执行同步，更新 baseline 为 {v['latest']}",
+            "5. 更新 governance/version-ledger.yaml 的 versions 列表"
+        ]
+    else:
+        plan_data["steps"] = ["无需同步。当前内容仓已与上游基线对齐。"]
 
+    return plan_data
 
 def write_or_print(text: str, output: str | None) -> None:
     if output:
@@ -344,20 +362,19 @@ def write_or_print(text: str, output: str | None) -> None:
     else:
         print(text)
 
-
 def add_common_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)
+    parser.add_argument("--ledger", type=Path, default=DEFAULT_LEDGER)
     parser.add_argument("--policy", type=Path, default=DEFAULT_POLICY)
     parser.add_argument("--human-registry", type=Path, default=DEFAULT_HUMAN_REGISTRY)
     parser.add_argument("--no-network", action="store_true", help="Skip reachability checks")
-
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Official-source sync helper")
     add_common_options(parser)
     sub = parser.add_subparsers(dest="command", required=True)
 
-    check = sub.add_parser("check", help="Validate registry and policy")
+    check = sub.add_parser("check", help="Validate registry, ledger and policy")
     add_common_options(check)
     check.add_argument("--format", choices=("markdown", "json"), default="markdown")
     check.add_argument("--output")
@@ -366,6 +383,11 @@ def build_parser() -> argparse.ArgumentParser:
     add_common_options(digest)
     digest.add_argument("--output")
 
+    plan = sub.add_parser("plan", help="Generate sync plan based on ledger and latest release")
+    add_common_options(plan)
+    plan.add_argument("--format", choices=("markdown", "json"), default="markdown")
+    plan.add_argument("--output")
+
     issue = sub.add_parser("issue", help="Render issue body; only dry-run is supported")
     add_common_options(issue)
     issue.add_argument("--dry-run", action="store_true", help="Deprecated, no-op")
@@ -373,11 +395,10 @@ def build_parser() -> argparse.ArgumentParser:
     issue.add_argument("--output")
     return parser
 
-
 def main(argv: list[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
-    options = CheckOptions(args.registry, args.policy, args.human_registry, args.no_network)
+    options = CheckOptions(args.registry, args.ledger, args.policy, args.human_registry, args.no_network)
 
     if args.command == "check":
         payload = validate(options)
@@ -389,52 +410,51 @@ def main(argv: list[str] | None = None) -> int:
         write_or_print(render_digest(options), args.output)
         return 0
 
-    if args.command == "issue":
-        payload = validate(options)
-        version_sync = payload.get("version_sync", {})
-        baseline = version_sync.get("baseline", "unknown")
-        latest = version_sync.get("latest", "unknown")
-        outdated = version_sync.get("outdated", False)
-        
-        body = render_issue_body(options)
-        title = "R1 官方来源同步：R2 官方来源确认待办"
-        if outdated:
-            title = f"⚠️ [需要同步] Hermes 官方版本已更新到 {latest}，本地基线停留在 {baseline}"
-            body = f"## ⚠️ 版本落后警告\n\nHermes 官方最新 Release 是 `{latest}`，但内容仓当前登记的基线版本是 `{baseline}`。\n\n请内容维护者复查官方 release notes，如果存在破坏性变更、新功能或废弃项，请启动同步工作流。\n\n---\n\n" + body
-
-        if not args.dry_run:
-            body = body.replace(
-                "## Dry-run 声明\n本输出仅用于本地 dry-run；未调用 GitHub API，未创建远端 issue。",
-                ""
-            ).strip()
-
+    if args.command == "plan":
+        plan_data = render_plan(options)
         if args.format == "json":
-            text = json.dumps(
-                {
-                    "dry_run": args.dry_run,
-                    "side_effect": "none" if args.dry_run else "create-issue",
-                    "title": title,
-                    "body": body,
-                    "outdated": outdated
-                },
-                ensure_ascii=False,
-                indent=2,
-            )
+            text = json.dumps(plan_data, ensure_ascii=False, indent=2)
         else:
-            text = "\n".join([
-                f"# {title}",
-                "",
-                f"dry_run: {str(args.dry_run).lower()}",
-                f"side_effect: {'none' if args.dry_run else 'create-issue'}",
-                "",
-                body,
-            ])
+            lines = [f"# Sync Plan for {plan_data['latest'] or plan_data['baseline']}", "", f"Status: {plan_data['status']}"]
+            lines.append(f"Outdated: {str(plan_data['outdated']).lower()}")
+            lines.append("")
+            lines.append("## Steps")
+            lines.extend(plan_data["steps"])
+            text = "\n".join(lines)
         write_or_print(text, args.output)
         return 0
 
-    parser.error("unknown command")
-    return 2
+    if args.command == "issue":
+        payload = validate(options)
+        v = payload.get("version_sync", {})
+        baseline = v.get("baseline", "unknown")
+        latest = v.get("latest", "unknown")
+        outdated = v.get("outdated", False)
+        
+        digest = render_digest(options)
+        title = "R1 官方来源同步：R2 官方来源确认待办"
+        warning = ""
+        affected_section = ""
+        if v.get('affected_docs_candidates'):
+            affected_section = "\n## 影响页面候选\n\n" + "\n".join(f"- {doc}" for doc in v['affected_docs_candidates']) + "\n"
 
+        if outdated:
+            title = f"⚠️ [需要同步] Hermes 官方版本已更新到 {latest}，本地基线停留在 {baseline}"
+            warning = f"## ⚠️ 版本落后警告\n\nHermes 官方最新 Release 是 `{latest}`，但内容仓当前登记的基线版本是 `{baseline}`。\n\n请内容维护者复查官方 release notes，如果存在破坏性变更、新功能或废弃项，请启动同步工作流。\n\n---\n\n"
+
+        body = f"{warning}## 背景\nR1 已建立官方来源 registry / policy；R2 已确认国内模型与部署页面的厂商官方来源。\n\n## R2 digest\n\n{digest}\n{affected_section}\n## 建议处理\n\n- [ ] 后续修改国内模型页面前，先复查 registry 中对应 source_urls。\n- [ ] 对任何影响用户操作的正文改动记录 source / checked_at / affected_docs。\n\n"
+        
+        if args.dry_run:
+            body += "## Dry-run 声明\n本输出仅用于本地 dry-run；未调用 GitHub API，未创建远端 issue。"
+
+        if args.format == "json":
+            text = json.dumps({"dry_run": args.dry_run, "title": title, "body": body, "outdated": outdated}, ensure_ascii=False, indent=2)
+        else:
+            text = f"# {title}\n\ndry_run: {str(args.dry_run).lower()}\n\n{body}"
+        write_or_print(text, args.output)
+        return 0
+
+    return 0
 
 if __name__ == "__main__":
     raise SystemExit(main())

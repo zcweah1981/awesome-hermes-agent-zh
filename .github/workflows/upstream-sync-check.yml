@@ -34,10 +34,17 @@ jobs:
             --format markdown \
             --output upstream-check.md
 
+      - name: Generate Sync Plan
+        run: |
+          set -euo pipefail
+          python3 scripts/upstream_sync.py plan \
+            --format markdown \
+            --output upstream-plan.md
+
       - name: Render upstream review issue body
         run: |
           set -euo pipefail
-          python3 scripts/upstream_sync.py issue --dry-run --format json --output upstream-issue.json
+          python3 scripts/upstream_sync.py issue --format json --output upstream-issue.json
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -59,8 +66,11 @@ jobs:
             echo ""
             if [ -f upstream-check.md ]; then
               cat upstream-check.md
-            else
-              echo "upstream-check.md was not generated."
+            fi
+            if [ -f upstream-plan.md ]; then
+              echo ""
+              echo "## Sync Plan"
+              cat upstream-plan.md
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
@@ -68,9 +78,10 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: upstream-sync-check
+          name: upstream-sync-check-report-${{ github.run_id }}
           path: |
             upstream-check.md
+            upstream-plan.md
             upstream-issue.json
             upstream-issue.md
           if-no-files-found: warn
