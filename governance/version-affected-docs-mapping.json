@@ -1,0 +1,559 @@
+{
+  "meta": {
+    "project_id": "hermes-zh",
+    "task_group": "hermes-zh:UPSTREAM-VERSION-LEDGER-SYNC-20260519",
+    "task_id": "hermes-zh:UPSTREAM-VERSION-LEDGER-SYNC-20260519-T3-CONTENT-AFFECTED-DOCS-MAPPING",
+    "created_at": "2026-05-19",
+    "owner": "ikki-content-1",
+    "status": "draft_pending_pm_review",
+    "source_files": [
+      "governance/version-ledger.yaml",
+      "governance/site-route-map.yaml",
+      "governance/upstream-source-registry.yaml"
+    ],
+    "output_file": "governance/version-affected-docs-mapping.md",
+    "json_output_file": "governance/version-affected-docs-mapping.json"
+  },
+  "mapping_rules": {
+    "domain_to_tier": {
+      "install": "P0",
+      "cli": "P0",
+      "configuration": "P0",
+      "provider": "P1",
+      "gateway": "P1",
+      "tools": "P1",
+      "skills": "P1",
+      "mcp": "P1",
+      "memory": "P2",
+      "troubleshooting": "P2",
+      "profiles": "P2",
+      "automation": "P2",
+      "api_server": "P2"
+    },
+    "meta_tag_rules": {
+      "breaking_change": "upgrade_tier_by_1",
+      "deprecation": "upgrade_tier_by_1",
+      "new_feature": "keep_domain_tier",
+      "bug_fix": "keep_domain_tier"
+    },
+    "sla": {
+      "P0": "48h",
+      "P1": "1_week",
+      "P2": "2_weeks"
+    }
+  },
+  "tiered_pages": {
+    "P0": {
+      "count": 6,
+      "sla": "48h",
+      "pages": [
+        {
+          "source": "docs/01-从这开始/01-先跑起来/02-先准备运行环境.md",
+          "slug": "/start/get-running/prepare-environment",
+          "title": "🧱 02-先准备运行环境",
+          "domains": [
+            "install",
+            "configuration"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md",
+          "slug": "/start/get-running/install-hermes",
+          "title": "📦 04-把 Hermes 装上去",
+          "domains": [
+            "install"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md",
+          "slug": "/start/get-running/first-hello",
+          "title": "💬 05-配好 AI 大模型并完成第一次互动",
+          "domains": [
+            "install",
+            "configuration"
+          ]
+        },
+        {
+          "source": "docs/06-reference/02-CLI 命令参考.md",
+          "slug": "/reference/cli-commands",
+          "title": "⌨️ 02-CLI 命令参考",
+          "domains": [
+            "cli"
+          ]
+        },
+        {
+          "source": "docs/06-reference/05-环境变量参考.md",
+          "slug": "/reference/environment-variables",
+          "title": "⚙️ 05-环境变量参考",
+          "domains": [
+            "configuration"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/02-安装更新与环境问题.md",
+          "slug": "/issues/install-environment",
+          "title": "02-安装/更新/环境问题",
+          "domains": [
+            "install",
+            "troubleshooting"
+          ]
+        }
+      ]
+    },
+    "P1": {
+      "count": 12,
+      "sla": "1_week",
+      "pages": [
+        {
+          "source": "docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md",
+          "slug": "/start/personalize/custom-model",
+          "title": "🤖 04-自定义 AI 大模型",
+          "domains": [
+            "provider"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/03-玩出花样/05-让工具更顺手.md",
+          "slug": "/start/personalize/toolsets-and-workflow",
+          "title": "🧩 05-让工具更顺手",
+          "domains": [
+            "tools"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md",
+          "slug": "/start/getting-started/curated-skills",
+          "title": "🏷️ 04-常用 Skills",
+          "domains": [
+            "skills"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md",
+          "slug": "/start/build/mcp-and-plugins",
+          "title": "🔌 05-把 Hermes 接进外部系统",
+          "domains": [
+            "mcp"
+          ]
+        },
+        {
+          "source": "docs/06-reference/06-Built-in Tools 参考.md",
+          "slug": "/reference/built-in-tools",
+          "title": "🧰 06-Built-in Tools 参考",
+          "domains": [
+            "tools"
+          ]
+        },
+        {
+          "source": "docs/06-reference/07-Toolsets 参考.md",
+          "slug": "/reference/toolsets",
+          "title": "🗂️ 07-Toolsets 参考",
+          "domains": [
+            "tools"
+          ]
+        },
+        {
+          "source": "docs/06-reference/08-MCP 配置参考.md",
+          "slug": "/reference/mcp-config",
+          "title": "🔌 08-MCP 配置参考",
+          "domains": [
+            "mcp"
+          ]
+        },
+        {
+          "source": "docs/06-reference/09-内置 Skills 目录.md",
+          "slug": "/reference/bundled-skills",
+          "title": "🧠 09-内置 Skills 目录",
+          "domains": [
+            "skills"
+          ]
+        },
+        {
+          "source": "docs/06-reference/10-可选 Skills 目录.md",
+          "slug": "/reference/optional-skills",
+          "title": "🧩 10-可选 Skills 目录",
+          "domains": [
+            "skills"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md",
+          "slug": "/issues/provider-endpoint",
+          "title": "03-模型/Provider/自定义 endpoint 问题",
+          "domains": [
+            "provider"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/05-Gateway Messaging 与推送问题.md",
+          "slug": "/issues/gateway-messaging",
+          "title": "05-Gateway/Messaging/推送问题",
+          "domains": [
+            "gateway"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/06-Tools Skills MCP 问题.md",
+          "slug": "/issues/tools-skills-mcp",
+          "title": "06-Tools/Skills/MCP 问题",
+          "domains": [
+            "tools",
+            "skills",
+            "mcp"
+          ]
+        }
+      ]
+    },
+    "P2": {
+      "count": 11,
+      "sla": "2_weeks",
+      "pages": [
+        {
+          "source": "docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md",
+          "slug": "/start/personalize/memory-basics",
+          "title": "🧠 03-让 Hermes 记住你",
+          "domains": [
+            "memory"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md",
+          "slug": "/start/build/memory-providers/holographic",
+          "title": "🪞 02-Holographic记忆",
+          "domains": [
+            "memory"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md",
+          "slug": "/start/build/memory-providers/honcho",
+          "title": "🧠 03-Honcho记忆",
+          "domains": [
+            "memory"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md",
+          "slug": "/start/build/memory-providers/compare",
+          "title": "⚖️ 04-外部记忆对比",
+          "domains": [
+            "memory"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md",
+          "slug": "/start/build/context-system/context-files",
+          "title": "📄 02-上下文文件",
+          "domains": [
+            "configuration"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md",
+          "slug": "/start/build/context-system/context-references",
+          "title": "🔗 03-上下文引用",
+          "domains": [
+            "configuration"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md",
+          "slug": "/start/build/api-server",
+          "title": "🌐 06-把 Hermes 暴露成后端服务",
+          "domains": [
+            "api_server"
+          ]
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md",
+          "slug": "/start/build/automation",
+          "title": "🤖 07-让 Hermes 自己自动跑",
+          "domains": [
+            "automation"
+          ]
+        },
+        {
+          "source": "docs/06-reference/04-Profile 命令参考.md",
+          "slug": "/reference/profile-commands",
+          "title": "👤 04-Profile 命令参考",
+          "domains": [
+            "profiles"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/04-CLI TUI 与会话问题.md",
+          "slug": "/issues/cli-tui-session",
+          "title": "04-CLI/TUI/会话问题",
+          "domains": [
+            "troubleshooting"
+          ]
+        },
+        {
+          "source": "docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md",
+          "slug": "/issues/config-profiles-environment",
+          "title": "07-配置/Profiles/环境隔离问题",
+          "domains": [
+            "profiles",
+            "troubleshooting"
+          ]
+        }
+      ]
+    }
+  },
+  "untiered_pages": {
+    "exempt_solutions": {
+      "count": 12,
+      "sync_rule": "不纳入版本同步，按本地节奏维护",
+      "pages": [
+        {
+          "slug": "/solutions/xiaohongshu",
+          "title": "02-小红书内容助手"
+        },
+        {
+          "slug": "/solutions/wechat-writer",
+          "title": "03-公众号写作助手"
+        },
+        {
+          "slug": "/solutions/ppt",
+          "title": "04-PPT 助手"
+        },
+        {
+          "slug": "/solutions/x-twitter",
+          "title": "05-X/Twitter 内容与互动助手"
+        },
+        {
+          "slug": "/solutions/meeting",
+          "title": "02-会议纪要助手"
+        },
+        {
+          "slug": "/solutions/daily-report",
+          "title": "03-项目日报助手"
+        },
+        {
+          "slug": "/solutions/summary",
+          "title": "04-资料总结助手"
+        },
+        {
+          "slug": "/solutions/miniapp",
+          "title": "02-微信小程序助手"
+        },
+        {
+          "slug": "/solutions/webdev",
+          "title": "03-敏捷 Web 开发助手"
+        },
+        {
+          "slug": "/solutions/multi-platform-rewrite",
+          "title": "06-多平台内容改写助手"
+        },
+        {
+          "slug": "/solutions/action-plan",
+          "title": "05-行动计划助手"
+        },
+        {
+          "slug": "/solutions/message-summary",
+          "title": "06-邮件群消息摘要助手"
+        }
+      ]
+    },
+    "exempt_openclaw": {
+      "count": 5,
+      "sync_rule": "不纳入版本同步，按本地节奏维护",
+      "pages": [
+        {
+          "slug": "/openclaw/relationship",
+          "title": "OpenClaw 和 Hermes 的关系"
+        },
+        {
+          "slug": "/openclaw/decision",
+          "title": "继续用、共存，还是迁移"
+        },
+        {
+          "slug": "/openclaw/coexistence",
+          "title": "OpenClaw + Hermes 共存指南"
+        },
+        {
+          "slug": "/openclaw/migration-path",
+          "title": "05-从 OpenClaw 到 Hermes：迁移路径"
+        },
+        {
+          "slug": "/openclaw/checklist",
+          "title": "OpenClaw 用户常见问题与检查清单"
+        }
+      ]
+    },
+    "provider_driven": {
+      "count": 9,
+      "sync_rule": "按 upstream-source-registry.yaml provider_sources 独立同步",
+      "pages": [
+        {
+          "slug": "/china/deploy/alicloud-lite-server",
+          "title": "02-阿里云轻量服务器部署教程",
+          "provider": "aliyun-lightweight-server"
+        },
+        {
+          "slug": "/china/deploy/tencent-lite-server",
+          "title": "03-腾讯云轻量服务器部署教程",
+          "provider": "tencent-cloud-lighthouse"
+        },
+        {
+          "slug": "/china/models/alibaba-bailian-token-plan",
+          "title": "02-阿里云百炼 Token Plan",
+          "provider": "aliyun-bailian"
+        },
+        {
+          "slug": "/china/models/tencent-token-plan",
+          "title": "03-腾讯云 Token Plan",
+          "provider": "tencent-cloud-models"
+        },
+        {
+          "slug": "/china/models/glm-coding-plan",
+          "title": "04-智谱 GLM Coding Plan",
+          "provider": "zhipu-glm"
+        },
+        {
+          "slug": "/china/models/minimax-token-plan",
+          "title": "05-MiniMax Token Plan",
+          "provider": "minimax"
+        },
+        {
+          "slug": "/china/models/kimi-plan",
+          "title": "06-Kimi登月计划",
+          "provider": "kimi-moonshot"
+        },
+        {
+          "slug": "/china/models/deepseek-metered-api",
+          "title": "07-DeepSeek按量计费接口",
+          "provider": "deepseek"
+        },
+        {
+          "slug": "/china/models/openai-compatible-endpoint",
+          "title": "08-自定义兼容接口",
+          "provider": "custom-openai-compatible-provider"
+        }
+      ]
+    },
+    "provider_driven_with_upstream_check": {
+      "count": 7,
+      "sync_rule": "provider 变更时同步，gateway 变更时额外检查",
+      "pages": [
+        {
+          "slug": "/china/entry/dashboard",
+          "title": "02-网页控制台（Dashboard）"
+        },
+        {
+          "slug": "/china/entry/api-service-open-webui",
+          "title": "03-API 服务与 Open WebUI"
+        },
+        {
+          "slug": "/china/entry/cli",
+          "title": "04-命令行（CLI）"
+        },
+        {
+          "slug": "/china/entry/feishu",
+          "title": "05-飞书"
+        },
+        {
+          "slug": "/china/entry/wecom-ai-bot",
+          "title": "06-企业微信（AI Bot）"
+        },
+        {
+          "slug": "/china/entry/dingtalk",
+          "title": "07-钉钉"
+        },
+        {
+          "slug": "/china/entry/personal-wechat",
+          "title": "08-个人微信"
+        }
+      ]
+    },
+    "recommend_add_to_tier": {
+      "count": 10,
+      "sync_rule": "建议 PM 评估后补充进入 version-ledger",
+      "recommendations": [
+        {
+          "source": "docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md",
+          "slug": "/start/getting-started/basic-usage",
+          "title": "⚙️ 02-认识 Hermes 的基本使用方式",
+          "recommended_tier": "P0",
+          "reason": "CLI 基本操作，cli 变更直接影响"
+        },
+        {
+          "source": "docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md",
+          "slug": "/start/getting-started/slash-commands-and-sessions",
+          "title": "⌨️ 03-常用斜杠命令与会话管理",
+          "recommended_tier": "P0",
+          "reason": "斜杠命令，cli 变更直接影响"
+        },
+        {
+          "source": "docs/06-reference/03-Slash Commands 参考.md",
+          "slug": "/reference/slash-commands",
+          "title": "🧭 03-Slash Commands 参考",
+          "recommended_tier": "P0",
+          "reason": "命令参考，cli 变更直接影响"
+        },
+        {
+          "source": "docs/01-从这开始/01-先跑起来/03-进入终端并连接服务器.md",
+          "slug": "/start/get-running/connect-terminal",
+          "title": "💻 03-进入终端并连接服务器",
+          "recommended_tier": "P0",
+          "reason": "安装前序步骤，install 变更影响"
+        },
+        {
+          "source": "docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md",
+          "slug": "/start/getting-started/connect-message-platform",
+          "title": "📡 05-接入一个消息平台（推荐飞书）",
+          "recommended_tier": "P1",
+          "reason": "消息平台接入，gateway 变更影响"
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md",
+          "slug": "/start/build/acp-ide",
+          "title": "🧑‍💻 08-放进编辑器里用",
+          "recommended_tier": "P1",
+          "reason": "ACP/IDE 集成，cli 变更影响"
+        },
+        {
+          "source": "docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md",
+          "slug": "/start/personalize/soul",
+          "title": "🪞 02-让 Hermes 更像你",
+          "recommended_tier": "P2",
+          "reason": "个性化配置，configuration 变更影响"
+        },
+        {
+          "source": "docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md",
+          "slug": "/start/personalize/skins-and-themes",
+          "title": "🎭 06-让终端更顺眼",
+          "recommended_tier": "P2",
+          "reason": "终端主题，configuration 变更影响"
+        },
+        {
+          "source": "docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md",
+          "slug": "/start/build/profiles",
+          "title": "👥 02-多个助手一起工作",
+          "recommended_tier": "P2",
+          "reason": "Profiles 功能，profiles 变更影响"
+        },
+        {
+          "source": "docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md",
+          "slug": "/issues/docker-nix-remote",
+          "title": "08-Docker/Nix/SSH/远程后端问题",
+          "recommended_tier": "P2",
+          "reason": "排障页，troubleshooting 变更影响"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_routes_in_site_map": 92,
+    "total_tiered_doc_pages": 29,
+    "total_untiered_doc_pages": 43,
+    "P0_pages": 6,
+    "P1_pages": 12,
+    "P2_pages": 11,
+    "exempt_solutions": 12,
+    "exempt_openclaw": 5,
+    "provider_driven": 9,
+    "provider_driven_with_upstream_check": 7,
+    "recommend_add_to_tier": 10
+  }
+}
