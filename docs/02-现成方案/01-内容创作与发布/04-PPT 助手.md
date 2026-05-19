@@ -407,18 +407,15 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 
 完成后进入：
 
-- [01-总览｜办公效率与知识整理](../02-办公效率与知识整理/01-总览.md)
+- [05-X/Twitter 内容与互动助手](<./05-X-Twitter%20%E5%86%85%E5%AE%B9%E4%B8%8E%E4%BA%92%E5%8A%A8%E5%8A%A9%E6%89%8B.md>)
 
-如果你想先回到现成方案入口重新确认位置：
+如果你想先回到当前位置重新确认：
 
-- [01-总览｜现成方案](../01-总览.md)
+- [01-总览｜内容创作与发布](./01-总览.md)
 
 ---
 
 ## 🔗 相关入口
 
 - Pack 详情：[PPT 助手 Pack](/packs/ppt-lab)，先确认适合谁用、安装入口和下载入口。
-- 同类方案：回到[当前方案分组](/docs/solutions/content)，继续比较同一类任务。
-- 下一步延展：如果这个方案不完全匹配，可以继续看[相邻方案](/docs/solutions/xiaohongshu)。
-- 跑不起来时：先去[遇到问题](/docs/issues)按安装、模型、Tools、Profiles 分类排查。
-- 要查命令和配置：进入[Reference](/docs/reference)查看 CLI、Slash Commands、Profiles、Tools、Skills 与环境变量。
+

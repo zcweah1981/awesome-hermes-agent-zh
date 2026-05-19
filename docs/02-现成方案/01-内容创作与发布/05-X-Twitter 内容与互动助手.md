@@ -243,22 +243,17 @@ hermes chat --skills hermes-tweet -q "检查 Hermes Tweet 插件状态"
 
 完成后进入：
 
+- [06-多平台内容改写助手](./06-多平台内容改写助手.md)
+
+如果你想先回到当前位置重新确认：
+
 - [01-总览｜内容创作与发布](./01-总览.md)
-
-如果你想先回到现成方案入口重新确认位置：
-
-- [01-总览｜现成方案](../01-总览.md)
 
 ---
 
 ## 🔗 相关入口
 
 - 插件详情：[Hermes Tweet on GitHub](https://github.com/Xquik-dev/hermes-tweet)，先确认版本和兼容性。
-- 同类方案：回到[当前方案分组](./01-总览.md)，继续比较同一类任务。
-- 跑不起来时：先去[遇到问题](/docs/issues)按安装、模型、Tools、Profiles 分类排查。
-- 要查命令和配置：进入[Reference](/docs/reference)查看 CLI、Slash Commands、Profiles、Tools、Skills 与环境变量。
-
----
 
 ## 📋 来源与核验
 
