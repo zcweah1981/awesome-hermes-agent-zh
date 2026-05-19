@@ -1,0 +1,161 @@
+# Hermes Agent 官方版本台账 (Version Ledger)
+# 本文件是内容仓版本追踪的机器可读真相源。
+# 由 Content 维护者更新，由 upstream_sync.py 消费，由 CI 工作流校验。
+
+ledger_meta:
+  created_at: '2026-05-19'
+  updated_at: '2026-05-19'
+  owner: content-maintainers
+  project_id: hermes-zh
+  # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
+  backward_compat_baseline_field: hermes_upstream_baseline_version
+  backward_compat_baseline_value: v2026.4.30
+
+# 当前内容仓已同步的官方版本（等同于旧 hermes_upstream_baseline_version）
+current_content_baseline: v2026.4.30
+
+# 上游已发布的最新版本（由脚本或 CI 自动更新）
+latest_seen: v2026.4.30
+
+# 最近一次检查上游的时间
+last_checked_at: '2026-05-19'
+
+# 版本来源
+source:
+  id: hermes-official-github
+  url: https://github.com/NousResearch/hermes-agent
+  check_method: github_api_latest_release
+  docs_url: https://hermes-agent.nousresearch.com/docs
+
+# 当前台账状态
+status: current
+# 可选值: current | behind | syncing | review_blocked
+
+# ============================================================
+# 同步分级定义
+# P0 = 直接阻塞安装/运行，必须立即同步
+# P1 = 影响核心功能体验，应尽快同步
+# P2 = 周边体验与参考，按节奏同步
+# ============================================================
+
+sync_priority_tiers:
+
+  P0:
+    description: 直接阻塞安装或运行——用户跑不通，必须立即同步
+    categories:
+      - install
+      - cli
+      - configuration
+    affected_docs:
+      - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
+      - docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
+      - docs/01-从这开始/01-先跑起来/02-先准备运行环境.md
+      - docs/06-reference/02-CLI 命令参考.md
+      - docs/06-reference/05-环境变量参考.md
+      - docs/05-遇到问题/02-安装更新与环境问题.md
+    sync_sla: 检测到变更后 48 小时内完成内容仓同步
+
+  P1:
+    description: 影响核心功能体验——用户能跑但体验受损，应尽快同步
+    categories:
+      - provider
+      - gateway
+      - tools
+      - skills
+      - mcp
+    affected_docs:
+      - docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md
+      - docs/01-从这开始/03-玩出花样/05-让工具更顺手.md
+      - docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
+      - docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md
+      - docs/06-reference/06-Built-in Tools 参考.md
+      - docs/06-reference/07-Toolsets 参考.md
+      - docs/06-reference/08-MCP 配置参考.md
+      - docs/06-reference/09-内置 Skills 目录.md
+      - docs/06-reference/10-可选 Skills 目录.md
+      - docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
+      - docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
+      - docs/05-遇到问题/06-Tools Skills MCP 问题.md
+    sync_sla: 检测到变更后 1 周内完成内容仓同步
+
+  P2:
+    description: 周边体验与参考——不影响核心使用，可按节奏同步
+    categories:
+      - memory
+      - troubleshooting
+      - profiles
+      - automation
+      - api_server
+    affected_docs:
+      - docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+      - docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md
+      - docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md
+      - docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md
+      - docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md
+      - docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md
+      - docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
+      - docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md
+      - docs/06-reference/04-Profile 命令参考.md
+      - docs/05-遇到问题/04-CLI TUI 与会话问题.md
+      - docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
+    sync_sla: 检测到变更后 2 周内完成内容仓同步
+
+# ============================================================
+# 版本历史记录
+# 每条记录代表一次版本变更观察与同步决策
+# ============================================================
+
+versions:
+  - version: v2026.4.30
+    source: hermes-official-github
+    checked_at: '2026-05-02'
+    status: current_baseline
+    change_categories: []
+    affected_docs: []
+    sync_decision: baseline_established
+    task_group: null
+    notes: R3 baseline，从 upstream-source-registry.yaml 迁移
+
+# ============================================================
+# 同步决策类型说明
+# ============================================================
+
+sync_decision_types:
+  - id: baseline_established
+    description: 初始基线建立，无需同步
+  - id: no_action_needed
+    description: 版本更新但无影响内容仓的变更
+  - id: sync_required
+    description: 需要同步——存在影响用户操作的变更
+  - id: sync_in_progress
+    description: 同步进行中
+  - id: sync_completed
+    description: 同步完成，内容仓已更新
+  - id: review_blocked
+    description: 同步被阻塞——需 PM/Content 审核
+  - id: deferred
+    description: 延后同步——变更影响低或需要更多官方信息
+
+# ============================================================
+# change_categories 分类说明
+# 用于标记版本变更涉及的功能域
+# ============================================================
+
+change_categories_enum:
+  - install
+  - cli
+  - configuration
+  - provider
+  - gateway
+  - tools
+  - skills
+  - mcp
+  - memory
+  - troubleshooting
+  - profiles
+  - automation
+  - api_server
+  - breaking_change
+  - deprecation
+  - new_feature
+  - bug_fix

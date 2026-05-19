@@ -36,7 +36,10 @@
 - [`upstream-source-registry.md`](./upstream-source-registry.md)：官方来源同步的人类可读 registry。
 - [`upstream-source-registry.yaml`](./upstream-source-registry.yaml)：官方来源同步的机器可读 registry。
 - [`upstream-sync-policy.md`](./upstream-sync-policy.md)：从官方 / 厂商来源同步内容时的规则和禁止项。
+- [`version-ledger.yaml`](./version-ledger.yaml)：官方版本台账——记录 current_content_baseline、latest_seen、P0/P1/P2 同步分级、版本历史与同步决策。
+- [`version-ledger-field-contract.md`](./version-ledger-field-contract.md)：版本台账字段契约——供 Coder 消费的完整字段定义与示例 JSON。
 - [`r2-china-model-deployment-plan.md`](./r2-china-model-deployment-plan.md)：R2 国内模型 / 部署官方同步规划。
+- [`r3-upstream-patrol-plan.md`](./r3-upstream-patrol-plan.md)：R3 官方版本周期巡检计划。
 - [`upstream-sync-r1-qa-proof.md`](./upstream-sync-r1-qa-proof.md)：R1 官方来源同步本地 QA 与远端分支 proof。
 
 ## 当前公开仓核心结构
