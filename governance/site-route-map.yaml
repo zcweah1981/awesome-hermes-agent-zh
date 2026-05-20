@@ -307,7 +307,7 @@ routes:
   page_type: doc-page
   title: 05-行动计划助手
   section: action-plan
-  description: 把一个项目目标、会议结论或头脑风暴的结果，直接压成有负责人、截止时间和优先级的可执行行动计划表。
+  description: 把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。
   order: 17
   status: published
   updated: '2026-05-18'
@@ -319,7 +319,7 @@ routes:
   page_type: doc-page
   title: 06-邮件群消息摘要助手
   section: message-summary
-  description: 把一封长邮件或一堆群消息，压成一段能直接转发或同步给同事的结构化摘要。
+  description: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。
   order: 18
   status: published
   updated: '2026-05-18'
