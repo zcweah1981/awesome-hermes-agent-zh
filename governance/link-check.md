@@ -42,6 +42,12 @@
 
 维护原则：能修正文档就修正文档；只有确认属于检查环境误报时，才加入忽略。
 
+## 独立站 slug 链接说明
+
+部分导航页底部 `🔗` 区域使用了 `/docs/...` 格式的路径（如 `/docs/china/models`、`/docs/solutions/xiaohongshu`、`/docs/reference/cli-commands`）。这些是独立站（hermes-zh.com）的语义内链，由 `governance/site-route-map.yaml` 映射到实际中文目录。它们在 GitHub 上不可解析，但属于预期行为，不应被标记为断链。
+
+link-check 工作流应忽略匹配 `/docs/` 前缀且不包含文件扩展名的 markdown 链接。
+
 ## Summary 和 artifact 怎么看
 
 1. 进入 GitHub Actions 的 `link-check` run。

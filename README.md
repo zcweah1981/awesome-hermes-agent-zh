@@ -161,6 +161,10 @@ Hermes Agent 中文站是围绕 Hermes Agent 的中文实战文档入口，不�
 
 Hermes 是从 OpenClaw 分支发展出来的独立项目。如果你已经在用 OpenClaw，可以先看 [04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md)，里面有详细的共存、迁移判断和检查清单。
 
+### 有没有在线版本？
+
+有。本文档也发布在 [hermes-zh.com](https://hermes-zh.com)，支持全文检索和在线阅读。如果你在 GitHub 上浏览不太方便，可以直接去在线版。
+
 ## 🧱 仓库与治理
 
 这个仓库不只是放文档正文，也明确区分了：
