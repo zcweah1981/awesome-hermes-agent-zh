@@ -5,6 +5,14 @@
 
 ![前端接入结构图：Open WebUI、LobeChat、LibreChat 通过 OpenAI-compatible /v1 请求连接 Hermes API 服务器；右侧示意其内部网关、路由与负载均衡结构](../../assets/rm2-5-api-server-01-openai-compatible-backend-map-v5.png)
 
+> **一句话结论**：把 Hermes 暴露成 OpenAI-compatible 的 API Server，让前端或应用通过 HTTP 调用它。
+
+**适合谁**：想让 Open WebUI、LobeChat 等前端，或自己的应用通过 HTTP 标准接口调用 Hermes 的用户。
+**不适合谁**：只在 CLI 里自己用 Hermes 的个人用户——不需要服务化就先跳过这页。
+**最短路径**：启动 Hermes API Server → 配置 OpenAI-compatible endpoint（`/v1/chat/completions`）→ 用前端或 curl 接入验证联通。
+**关键限制**：需要先有部署环境（本机或服务器）；API Server 涉及 gateway 配置、端口暴露和访问控制，生产环境需额外考虑鉴权与稳定性。
+**下一步**：继续阅读下方 [先判断：你是不是已经进入"服务化暴露"阶段](#-先判断你是不是已经进入服务化暴露阶段) 章节。
+
 ---
 
 ## 🎯 先判断：你是不是已经进入“服务化暴露”阶段

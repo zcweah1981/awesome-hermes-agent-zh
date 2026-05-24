@@ -1,6 +1,14 @@
 # 🔌 08-MCP 配置参考
 
-> 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
+> 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是"为什么 MCP server 连不上"，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
+
+> **一句话结论**：快速查阅 `mcp_servers` 配置的字段结构、工具过滤规则和 resources/prompts 开关。
+
+**适合谁**：已经决定要接 MCP server，需要查具体配置字段怎么填的用户。
+**不适合谁**：MCP server 连不上需要排障的用户——请去 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
+**最短路径**：找到你的 server 类型（stdio / HTTP）→ 按对应字段模板填入 `mcp_servers` → 配好 `tools.include` / `tools.exclude` 过滤 → 重启 Hermes 验证工具注册。
+**关键限制**：这页只管配置结构和字段含义，不管连不上排障、OAuth 流程、或某个具体 MCP server 的功能使用教程。
+**下一步**：直接跳到 [stdio server 配置模板](#-3-stdio-server-配置) 或 [HTTP server 配置模板](#-4-http-server-配置) 按需查阅。
 
 ## 🎯 1. 页面用途
 
