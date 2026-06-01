@@ -4,21 +4,21 @@
 
 ledger_meta:
   created_at: '2026-05-19'
-  updated_at: '2026-05-19'
+  updated_at: '2026-06-02'
   owner: content-maintainers
   project_id: hermes-zh
   # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
   backward_compat_baseline_field: hermes_upstream_baseline_version
-  backward_compat_baseline_value: v2026.4.30
+  backward_compat_baseline_value: v2026.5.29.2
 
 # 当前内容仓已同步的官方版本（等同于旧 hermes_upstream_baseline_version）
-current_content_baseline: v2026.4.30
+current_content_baseline: v2026.5.29.2
 
 # 上游已发布的最新版本（由脚本或 CI 自动更新）
-latest_seen: v2026.4.30
+latest_seen: v2026.5.29.2
 
 # 最近一次检查上游的时间
-last_checked_at: '2026-05-19'
+last_checked_at: '2026-06-02'
 
 # 版本来源
 source:
@@ -106,6 +106,24 @@ sync_priority_tiers:
 # ============================================================
 
 versions:
+  - version: v2026.5.29.2
+    source: hermes-official-github
+    checked_at: '2026-06-02'
+    status: current_baseline
+    change_categories:
+      - bug_fix
+      - packaging
+    affected_docs:
+      - docs/05-遇到问题/02-安装更新与环境问题.md
+    sync_decision: sync_completed
+    task_group: UPSTREAM-SYNC-CI-SEMANTICS-20260602-0001
+    release_url: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.29.2
+    compared_from: v2026.4.30
+    notes: >-
+      v2026.5.29.2 是 v0.15.2 包装修复版本；官方 release note 仅确认 wheel/sdist
+      补发 bundled plugin.yaml manifests。对普通 CLI、provider、环境变量、MCP 配置说明无新增操作步骤；
+      仅在安装/更新排障页补充“升级后 plugin.yaml manifest 缺失”判断口径。
+
   - version: v2026.4.30
     source: hermes-official-github
     checked_at: '2026-05-02'
