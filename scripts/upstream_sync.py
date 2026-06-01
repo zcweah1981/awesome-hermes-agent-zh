@@ -226,16 +226,18 @@ def validate(options: CheckOptions) -> dict[str, Any]:
                 affected_docs_candidates.extend(tier_info.get("affected_docs", []))
     
     version_info = {
-        'baseline': baseline_ver, 
+        'baseline': baseline_ver,
         'latest': latest_ver,
         'html_url': latest_release.get("html_url") if latest_release else None,
         'outdated': False,
+        'status': 'unknown' if latest_ver is None else 'up_to_date',
         'change_categories': change_cats,
         'affected_docs_candidates': sorted(list(set(affected_docs_candidates)))
     }
     if latest_ver and baseline_ver and latest_ver != baseline_ver:
         version_info['outdated'] = True
-        issues.append(f"Official upstream release is at {latest_ver}, but baseline is {baseline_ver}")
+        version_info['status'] = 'sync_needed'
+        warnings.append(f"Official upstream release is at {latest_ver}, but baseline is {baseline_ver}")
 
     payload = {
         "status": "failed" if issues else "ok",
