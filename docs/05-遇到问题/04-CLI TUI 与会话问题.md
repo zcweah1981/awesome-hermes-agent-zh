@@ -15,6 +15,7 @@
 - classic CLI 和 `--tui` 表现差很多
 - 先看：[01｜为什么 CLI / TUI 看起来乱码、错位、emoji 不显示](#faq-ui-garbled)
 - 先看：[02｜为什么我明明进了 Hermes，但界面看起来很怪](#faq-ui-weird)
+- 先看：[02.5｜TUI 和 classic CLI 表现不一样，怎么判断是 bug 还是正常差异](#faq-tui-vs-cli)
 
 ### ⌨️ 交互 / slash / 退出方式不符合预期
 - 输入 `/` 没看到命令补全
@@ -128,6 +129,31 @@ hermes --tui
 什么时候该跳转：
 - 两个入口都异常，而且基础聊天也跑不顺：交叉回看 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - classic CLI 正常、只有 TUI 体验怪：继续留在本页
+
+---
+
+<a id="faq-tui-vs-cli"></a>
+
+### 02.5｜TUI 和 classic CLI 表现不一样，怎么判断是 bug 还是正常差异
+
+先说结论：TUI 是 Hermes 推荐的交互式运行方式（`hermes --tui`），它在 classic CLI 基础上增加了 richer display 和额外的 slash commands。两者有些表现差异是正常的。
+
+正常差异包括：
+- TUI 有更丰富的状态行（显示工作目录、git branch、运行时间）
+- TUI 支持 LaTeX 数学公式渲染为 Unicode
+- TUI 有可折叠启动 Banner
+- TUI 支持 `/mouse`、`/indicator` 等独有命令
+- TUI 支持 Ctrl+X 快速切换会话
+
+什么时候该怀疑是 bug：
+- TUI 完全无法启动，而 classic CLI 正常
+- TUI 里输入后一直没反应，而 classic CLI 同样输入正常
+- TUI 里输出乱码，而 classic CLI 同样输入正常
+
+如果 TUI 有问题，可以先回退到 classic CLI：
+```bash
+hermes --cli
+```
 
 ---
 

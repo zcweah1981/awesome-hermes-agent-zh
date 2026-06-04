@@ -234,6 +234,7 @@ hermes model
 | `/statusbar` | 开关状态栏 |
 | `/voice [on\|off\|tts\|status]` | 管语音模式 |
 | `/yolo` | 切换 YOLO |
+| `/indicator` | 切换状态指示器风格（kaomoji/emoji/unicode/ascii） |
 
 其中 `/model` 支持的常见写法包括：
 
@@ -297,6 +298,22 @@ hermes model
 
 - 能在 CLI 里看到，不代表消息平台一定一样
 - 消息平台里不生效，也不代表 command 本身不存在
+
+### 6.6 TUI 独有的交互增强
+
+当你使用 `hermes --tui` 启动时，以下额外能力可用：
+
+| 功能 | 说明 |
+|---|---|
+| `/mouse` | 开关鼠标跟踪（TUI 模式下） |
+| `/reload` | 重新加载配置和 skills，不需要重启 |
+| `/usage` | 查看当前会话的 token 使用统计 |
+| `/details` | 切换详细输出模式 |
+| `/indicator` | 切换状态行指示器风格 |
+| Ctrl+X | 快速切换历史会话（live session switcher） |
+| 可折叠启动 Banner | TUI 启动信息可以折叠收起 |
+
+注意：这些命令和功能仅在 TUI 模式下可用，classic CLI 和消息平台不一定支持。
 
 ## ⚠️ 7. 注意事项
 

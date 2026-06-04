@@ -143,6 +143,10 @@ hermes gateway status
 | `hermes status` | 看当前状态 | 快速看模型、认证、平台状态 |
 | `hermes config` | 查看 / 编辑配置 | 想改 `config.yaml` 时 |
 | `hermes gateway` | 运行或管理消息网关 | Telegram / Discord / Slack / WhatsApp 等 |
+| `hermes -z <prompt>` | 脚本式单次调用：输入 prompt，只输出最终回复，不输出其他内容 | 脚本集成、CI/CD、管道调用 |
+| `hermes desktop` | 启动桌面端应用 | 想用 GUI 而不是终端 |
+| `hermes portal` | Nous Portal 配置 | Portal 用户快速配置 |
+| `hermes kanban` | 看板任务管理 | 多 Agent 协作场景 |
 
 ### 5.2 最常用的 global options
 
@@ -157,6 +161,9 @@ hermes gateway status
 | `--ignore-user-config` | 忽略 `~/.hermes/config.yaml` | 排查配置污染 |
 | `--ignore-rules` | 跳过 AGENTS / SOUL / memory 等规则注入 | 做纯净对照测试 |
 | `--tui` | 启动 TUI 界面 | 想直接进入 TUI |
+| `--cli` | 强制使用经典 CLI 界面 | TUI 是默认但你想用旧界面 |
+| `--dev` | 开发者模式 | 调试和开发 |
+| `--pass-session-id` | 输出 session ID | 脚本集成需要跟踪会话 |
 
 ### 5.3 最容易混淆的一组命令
 
@@ -208,6 +215,8 @@ hermes chat [options]
 | `--resume <session>` / `--continue [name]` | 直接从 chat 命令恢复会话 |
 | `--worktree` | 为这次运行创建隔离 worktree |
 | `--checkpoints` | 打开文件系统 checkpoints |
+| `--max-turns <n>` | 最大交互轮数（默认 90），限制单次运行轮数 |
+| `--source <path>` | 指定上下文来源，加载特定上下文 |
 
 中文站补充理解：
 

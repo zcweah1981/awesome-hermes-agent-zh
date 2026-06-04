@@ -109,8 +109,25 @@ terminal.cwd
 
 也就是说：
 
-- `--clone` 更适合“复制一个配置模板”
-- `--clone-all` 更适合“把当前环境整体克隆一份”
+- `--clone` 更适合"复制一个配置模板"
+- `--clone-all` 更适合"把当前环境整体克隆一份"
+
+### 4.5 Profile 和 Profile Distribution 不是同一件事
+
+可以简单记成：
+
+- **Profile**：你自己在本机创建的一套隔离使用环境
+- **Profile Distribution**：别人打包好的一整套 Agent，通过 Git 仓库分发
+
+Distribution 安装后，会自动成为一个 profile，但它额外带有：
+- `distribution.yaml`：分发包的清单文件
+- 上游 Git 仓库的跟踪关系
+- 作者维护文件 vs 用户私有文件的隔离机制
+
+这和中文站已有的「现成方案 / packs」体系的关系：
+- packs 是 Hermes 中文站整理的快速配置方案，偏模板化
+- Distribution 是官方标准的 Agent 分发协议，偏完整打包
+- 两者不冲突，可以配合使用
 
 ## ⚡ 5. 常用项速查
 
@@ -127,6 +144,8 @@ terminal.cwd
 | `rename <old> <new>` | 重命名 profile | 调整命名 |
 | `export <name>` | 导出为 tar.gz | 备份 / 迁移 / 分享 |
 | `import <archive>` | 导入 profile 压缩包 | 恢复或迁移环境 |
+| `install <source>` | 从 Git 仓库安装 Profile Distribution | 安装别人分享的一整套 Agent |
+| `update <name>` | 更新已安装的 Distribution | 拉取上游最新版本 |
 
 ### 5.2 最常用的 create 选项
 
@@ -339,6 +358,63 @@ hermes profile import <archive> [--name NAME]
 - 恢复历史备份
 - 导入别人给你的 profile 模板
 - 迁移旧环境
+
+### 6.9 Profile Distribution 命令
+
+Profile Distribution 是官方新增的 Agent 分发方式，可以把一整套 Agent 打包成 Git 仓库分享。
+
+它和普通 profile 的核心区别：
+- 普通 profile：你自己在本机创建和配置
+- Distribution：从别人的 Git 仓库直接安装一整套 Agent（含 SOUL.md、config.yaml、skills、cron、mcp.json）
+
+#### `hermes profile install`
+
+```bash
+hermes profile install <source> [--alias] [--name <name>]
+```
+
+作用：从 Git 仓库安装一个 Profile Distribution。
+
+支持四种来源：
+
+| 来源类型 | 写法示例 |
+|---|---|
+| GitHub 简写 | `github.com/you/my-agent` |
+| HTTPS | `https://github.com/you/my-agent` |
+| SSH | `git@github.com:you/my-agent` |
+| 本地路径 | `/path/to/local/distribution` |
+
+常用参数：
+
+| 参数 | 中文说明 |
+|---|---|
+| `--alias` | 安装后自动创建快速启动别名 |
+| `--name <name>` | 自定义 profile 名称 |
+
+示例：
+
+```bash
+hermes profile install github.com/you/my-research-agent --alias
+hermes profile install https://github.com/team/code-reviewer --name reviewer --alias
+```
+
+#### `hermes profile update`
+
+```bash
+hermes profile update <name> [--force-config]
+```
+
+作用：拉取 Distribution 的上游更新。
+
+更新时有两类文件：
+- 作者维护的文件（SOUL.md、config.yaml、skills/、cron/、mcp.json）会被更新覆盖
+- 你自己的私有文件（memories、sessions、state.db、.env、logs）永远不会被碰
+
+参数说明：
+
+| 参数 | 中文说明 |
+|---|---|
+| `--force-config` | 强制用上游的 config.yaml 覆盖你的本地版本（默认保留你的 config.yaml） |
 
 ## ⚠️ 7. 注意事项
 

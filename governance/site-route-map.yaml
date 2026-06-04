@@ -536,6 +536,18 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-玩出花样
+- source: docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+  slug: /start/personalize/desktop-app
+  module: start
+  page_type: doc-page
+  title: 🖥 07-用桌面端操作 Hermes
+  section: desktop-app
+  description: Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
+  order: 35.5
+  status: published
+  updated: '2026-06-04'
+  source_type: official_reference
+  nav_group: 03-玩出花样
 - source: docs/01-从这开始/04-自己造东西/01-总览.md
   slug: /start/build
   module: start
@@ -692,6 +704,18 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 04-自己造东西
+- source: docs/01-从这开始/04-自己造东西/09-把一整套 Agent 打包分享.md
+  slug: /start/build/profile-distribution
+  module: start
+  page_type: doc-page
+  title: 📦 09-把一整套 Agent 打包分享
+  section: profile-distribution
+  description: 用 Profile Distribution 把你的 Agent 打包成一个 Git 仓库，别人一条命令就能装上、用起来。
+  order: 48.5
+  status: published
+  updated: '2026-06-04'
+  source_type: official_reference
+  nav_group: 04-自己造东西
 - source: docs/03-国内落地/01-国内部署/01-总览.md
   slug: /china/deploy
   module: china
@@ -759,6 +783,54 @@ routes:
     state: needs-provider-official-confirmation
     checked_at: '2026-05-02'
     note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+- source: docs/03-国内落地/01-国内部署/04-国外教程精选.md
+  slug: /china/deploy/third-party-tutorials
+  module: china
+  page_type: doc-page
+  title: 国外教程精选：社区怎么教 Hermes
+  section: third-party-tutorials
+  description: 精选国外社区的高质量 Hermes Agent 教程和深度文章，帮助中文用户找到适合自己的学习路径。
+  order: 51.1
+  status: published
+  updated: '2026-06-04'
+  source_type: third-party
+  nav_group: 01-国内部署
+- source: docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md
+  slug: /china/deploy/community-use-cases
+  module: china
+  page_type: doc-page
+  title: 别人正在用 Hermes 做什么：社区场景库
+  section: community-use-cases
+  description: 收集整理国内外社区中真实用户正在用 Hermes Agent 做的事情，帮你找到适合自己的使用场景。
+  order: 51.2
+  status: published
+  updated: '2026-06-04'
+  source_type: third-party
+  nav_group: 01-国内部署
+- source: docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md
+  slug: /china/deploy/who-is-hermes-for
+  module: china
+  page_type: doc-page
+  title: Hermes 适合谁：和其他 Agent 工具怎么选
+  section: who-is-hermes-for
+  description: 中性说明 Hermes、Claude Code、Codex、OpenClaw、自托管方案之间的选择边界。
+  order: 51.3
+  status: published
+  updated: '2026-06-04'
+  source_type: third-party
+  nav_group: 01-国内部署
+- source: docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
+  slug: /china/deploy/self-hosting-ecosystem
+  module: china
+  page_type: doc-page
+  title: 国外自托管生态参考：Umbrel、TrueNAS、AUR、Docker
+  section: self-hosting-ecosystem
+  description: 整理 Docker Hub、Umbrel、TrueNAS、AUR、VPS 教程等自托管生态资料，只作参考，不写成官方推荐部署路线。
+  order: 51.4
+  status: published
+  updated: '2026-06-04'
+  source_type: third-party
+  nav_group: 01-国内部署
 - source: docs/03-国内落地/02-国内模型/01-总览.md
   slug: /china/models
   module: china
@@ -832,8 +904,7 @@ routes:
   page_type: doc-page
   title: 04-智谱 GLM Coding Plan
   section: glm-coding-plan
-  description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan
-    值得先看。
+  description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
   order: 55
   status: published
   updated: '2026-04-28'
@@ -969,8 +1040,7 @@ routes:
   page_type: doc-page
   title: 02-网页控制台（Dashboard）
   section: dashboard
-  description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI
-    的第一主入口。
+  description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
   order: 61
   status: published
   updated: '2026-04-28'
@@ -1054,8 +1124,7 @@ routes:
   page_type: doc-page
   title: 06-企业微信（AI Bot）
   section: wecom-ai-bot
-  description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回
-    Hermes”这条主线走顺。
+  description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。
   order: 65
   status: published
   updated: '2026-04-28'
@@ -1076,8 +1145,7 @@ routes:
   page_type: doc-page
   title: 07-钉钉
   section: dingtalk
-  description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client
-    ID / Client Secret → 填回 Hermes”这条主线跑顺。
+  description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。
   order: 66
   status: published
   updated: '2026-04-28'
@@ -1098,8 +1166,7 @@ routes:
   page_type: doc-page
   title: 08-个人微信
   section: personal-wechat
-  description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录
-    → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
+  description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录 → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
   order: 67
   status: published
   updated: '2026-04-28'
@@ -1228,8 +1295,7 @@ routes:
   page_type: doc-page
   title: 06-Tools / Skills / MCP 问题
   section: tools-skills-mcp
-  description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server
-    根本没接通。
+  description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -1241,8 +1307,7 @@ routes:
   page_type: doc-page
   title: 07-配置 / Profiles / 环境隔离问题
   section: config-profiles-environment
-  description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个
-    profile。
+  description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -1398,8 +1463,7 @@ routes:
   page_type: doc-page
   title: 🔌 08-MCP 配置参考
   section: mcp-config
-  description: 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题
-    / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
+  description: 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -1421,8 +1485,7 @@ routes:
   page_type: doc-page
   title: 🧠 09-内置 Skills 目录
   section: bundled-skills
-  description: 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选
-    Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
+  description: 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
   order: 999
   status: published
   updated: '2026-04-28'
@@ -1466,11 +1529,8 @@ source_mapping_contract:
   registry: governance/upstream-source-registry.yaml
   fields:
     source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.
-    source_refs.official: Registered official Hermes sources that should be checked before changing user-impacting Hermes
-      behavior.
-    source_refs.provider_pending: Provider/deployment source ids that must be confirmed against provider-official docs in
-      R2 before body updates.
+    source_refs.official: Registered official Hermes sources that should be checked before changing user-impacting Hermes behavior.
+    source_refs.provider_pending: Provider/deployment source ids that must be confirmed against provider-official docs in R2 before body updates.
     source_review.state: r1-mapped, needs-official-check, or needs-provider-official-confirmation.
-    source_review.checked_at: Date when this mapping was added or last confirmed, not a claim that the page body was fully
-      resynced.
+    source_review.checked_at: Date when this mapping was added or last confirmed, not a claim that the page body was fully resynced.
     source_review.note: Short maintainer-facing boundary for the route entry.

@@ -56,6 +56,21 @@
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 ```
 
+### Windows 用户：如果你走的是 Windows Native 路线
+
+在 PowerShell 里执行：
+
+```powershell
+iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
+```
+
+注意：
+- Windows Native 目前处于早期测试阶段（early beta）
+- 安装器会自动处理 uv、Python 3.11、Node.js 22、Portable Git、ripgrep、ffmpeg 等依赖
+- 安装路径在 `%LOCALAPPDATA%\Hermes` 目录下
+
+---
+
 这就是当前最短、最直接的 Hermes 安装路线。
 
 你现在不用先研究：
@@ -98,7 +113,9 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 - 语言运行时准备或下载信息出现
 - 安装输出持续刷新，而不是立即静默退出
 
-这一步你真正想看到的不是“长得很专业的输出”，而是：
+> **Windows Native 用户注意**：如果你用的是 PowerShell 安装命令，看到的输出会和上面描述的不完全一样——比如你会看到 PowerShell 的进度条而不是 curl 的下载输出。只要安装器在持续推进、没有立刻报错退出，就说明在正常走流程。
+
+这一步你真正想看到的不是"长得很专业的输出"，而是：
 - 终端已经开始真正执行安装逻辑
 - 它不是一敲就立刻报错退出
 
@@ -130,6 +147,10 @@ source ~/.bashrc
 ```bash
 source ~/.zshrc
 ```
+
+### 如果你是 Windows Native 用户
+
+不需要执行 `source` 命令。直接关闭当前 PowerShell 窗口，重新打开一个新的 PowerShell 窗口即可。安装器已经把 `hermes` 命令注册到了系统 PATH 里，新窗口会自动生效。
 
 重新加载 shell 的目的只有一个：
 - 让新的 `hermes` 命令立刻生效
