@@ -716,6 +716,138 @@ routes:
   updated: '2026-06-04'
   source_type: official_reference
   nav_group: 04-自己造东西
+- source: docs/01-从这开始/05-实战应用/01-总览.md
+  slug: /start/practical
+  module: start
+  page_type: module-overview
+  title: 🧪 05-实战应用
+  section: practical
+  description: 10 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban 与 Home Assistant。
+  order: 48.6
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/01-用 Hermes 做每日晨间简报.md
+  slug: /start/practical/daily-briefing
+  module: start
+  page_type: doc-page
+  title: ☀️ 01-用 Hermes 做每日晨间简报
+  section: daily-briefing
+  description: 用 Cron 自动生成每日晨间简报，并投递到 Telegram 或本地文件。
+  order: 48.61
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/02-Telegram 消息入口接入.md
+  slug: /start/practical/telegram-entry
+  module: start
+  page_type: doc-page
+  title: 💬 02-Telegram 消息入口接入
+  section: telegram-entry
+  description: 把 Hermes 接入 Telegram，让手机成为日常 Agent 对话入口。
+  order: 48.62
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/03-GitHub 备份 Cron Job.md
+  slug: /start/practical/github-backup-cron
+  module: start
+  page_type: doc-page
+  title: 🔄 03-GitHub 备份 Cron Job
+  section: github-backup-cron
+  description: 用 Hermes Cron 自动备份 SOUL、memory、skills 等核心资产到 GitHub。
+  order: 48.63
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/04-月费8美金三层模型级联省钱指南.md
+  slug: /start/practical/three-tier-model-routing
+  module: start
+  page_type: doc-page
+  title: 💰 04-月费 8 美金跑 Hermes：三层模型级联省钱指南
+  section: three-tier-model-routing
+  description: 用三层模型路由把日常任务、分析任务和复杂任务分层控费。
+  order: 48.64
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/05-Token 成本优化避坑指南.md
+  slug: /start/practical/token-cost-optimization
+  module: start
+  page_type: doc-page
+  title: 🧮 05-Token 成本优化避坑指南
+  section: token-cost-optimization
+  description: 从工具表面、Skill 加载和上下文堆叠三层减少 Token 固定成本。
+  order: 48.65
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/06-VPS 自托管 Hermes.md
+  slug: /start/practical/vps-self-hosting
+  module: start
+  page_type: doc-page
+  title: 🏠 06-VPS 自托管 Hermes
+  section: vps-self-hosting
+  description: 在 VPS 上部署 Hermes，让 Telegram、Cron 和 Gateway 能 7×24 小时在线。
+  order: 48.66
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/07-SOUL.md 人格定制.md
+  slug: /start/practical/soul-persona
+  module: start
+  page_type: doc-page
+  title: 🪞 07-SOUL.md 人格定制
+  section: soul-persona
+  description: 用 SOUL.md 固化长期人格、语气和协作偏好。
+  order: 48.67
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/08-Obsidian 第二大脑知识库.md
+  slug: /start/practical/obsidian-second-brain
+  module: start
+  page_type: doc-page
+  title: 🧠 08-Obsidian 第二大脑知识库
+  section: obsidian-second-brain
+  description: 把 Hermes 接入 Obsidian Vault，让笔记可检索、可对话、可整理。
+  order: 48.68
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/09-Kanban 多 Agent 编排.md
+  slug: /start/practical/kanban-multi-agent
+  module: start
+  page_type: doc-page
+  title: 📋 09-Kanban 多 Agent 编排
+  section: kanban-multi-agent
+  description: 用 Kanban 把多 Agent 分工、状态流转和验收过程可视化。
+  order: 48.69
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/10-Home Assistant 智能家居.md
+  slug: /start/practical/home-assistant
+  module: start
+  page_type: doc-page
+  title: 🏡 10-Home Assistant 智能家居
+  section: home-assistant
+  description: 把 Hermes 接入 Home Assistant，用自然语言控制和查询智能家居设备。
+  order: 48.70
+  status: published
+  updated: '2026-06-04'
+  source_type: adapted
+  nav_group: 05-实战应用
 - source: docs/03-国内落地/01-国内部署/01-总览.md
   slug: /china/deploy
   module: china
