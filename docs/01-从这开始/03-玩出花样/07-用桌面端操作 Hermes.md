@@ -2,12 +2,6 @@
 
 Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
 
-![Hermes Desktop 真实聊天界面截图：左侧项目与会话列表、右侧对话区共享同一个 Hermes Runtime](../../assets/desktop-07-real-chat-v1.png)
-
-> 下面这张结构图保留用来说明 Desktop、CLI、TUI 和 Gateway 的关系；真实界面以上方截图为准。
->
-> ![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.png)
-
 ---
 
 ## 🎯 这页做完以后，你应该得到什么
@@ -33,6 +27,10 @@ Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
 
 一句话记住：
 Desktop 只是把同一个 Hermes 换了个窗口呈现给你，底层没有任何区别。
+
+下面是真实 Desktop 聊天界面示例。你可以把它理解成同一套 Hermes runtime 的图形化窗口：左边管理项目与会话，右边继续进行对话与工具调用。
+
+![Hermes Desktop 真实聊天界面截图：左侧项目与会话列表、右侧对话区共享同一个 Hermes Runtime](../../assets/desktop-07-real-chat-v1.png)
 
 ---
 
@@ -129,6 +127,10 @@ Hermes 有多种使用方式，它们共享同一个底层 runtime：
 - **记忆完全共用**：不管是哪个入口写入的记忆，全局可见
 - **工具完全共用**：MCP tools、自定义工具，所有入口都能用
 
+> 下面这张结构图保留用来说明 Desktop、CLI、TUI 和 Gateway 的关系；真实界面以上方截图为准。
+>
+> ![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.png)
+
 ---
 
 ## 🔄 怎么更新
@@ -188,7 +190,7 @@ Desktop 支持几个专用环境变量，适合需要精细控制的场景：
 ## ➡️ 下一步
 
 完成后进入：
-- [08-放进编辑器里用](../04-自己造东西/08-放进编辑器里用.md) —— 把 Hermes 集成到你的编辑器工作流里
+- [04-自己造东西](../04-自己造东西/01-总览.md)
 
 如果你想先回到这一阶段的总览重新确认位置：
 - [03-玩出花样](./01-总览.md)
