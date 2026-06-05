@@ -13,6 +13,12 @@
 # 仅忽略当前内容仓实际引用的具体文章 URL，不放宽到整域；新增 Medium 引用时单独审计。
 ^https?://medium\.com/@roanmonteiro/hermes-agent-advanced-self-evolving-skills-mcp-subagents-and-production-8c827c79ce7e$
 
+# Substack 同样对 GitHub Actions runner IP 反爬返回 403（与 Medium 同源行为）。
+# 仅忽略当前内容仓实际引用的具体文章 URL，文章对普通浏览器可正常打开；
+# 新增 Substack 引用时单独审计，不要直接整域放宽。
+^https?://defi0xjeff\.substack\.com/p/6-workflows-6-lessons-60-days$
+^https?://gaodalie\.substack\.com/p/hermes-agent-ollama-fastest-way-to$
+
 # 视频/搜索类页面偶发 403/429；人工确认可访问后再保留。
 ^https?://(www\.)?youtube\.com/.*
 ^https?://youtu\.be/.*
