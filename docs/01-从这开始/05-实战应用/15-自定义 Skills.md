@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页讲的不是"用 Hermes 自带的 skill"，而是"把你重复做的事情固化成 Hermes 自己的 skill"——下次一句话或一个 slash 命令就能让 Agent 复用你的整套工作流。Skills 是 Hermes 区别于"一次性 prompt"的核心机制。
 
-![自定义 Skill 工作流：识别重复任务 → 写 SKILL.md → 放到 skills 目录 → 一句话触发，Agent 自动加载并按步骤执行](../../assets/practical-15-skills-official-screenshot-zh-v1.png)
+![Hermes Agent 自定义 Skill 工作流：识别重复任务 → 写 SKILL.md（含 when_to_use/prerequisites/known_failure_modes/last_verified_against）→ 放到 ~/.hermes/skills/ → 一句话或 /skill 触发，Agent 自动加载并按步骤执行 → /reset 生效](../../assets/practical-v2-04-custom-skills.png)
 
 ---
 
@@ -396,7 +396,7 @@ A skill 调用 B skill、B 又调用 A，会无限循环。给每个 skill 加�
 ## ➡️ 下一步
 
 完成后进入：
-[18-安全加固：给你的 AI Agent 划好安全红线](<./18-安全加固.md>)
+[16-安全加固：给你的 AI Agent 划好安全红线](<./16-安全加固.md>)
 
 如果你想先回到上一阶段入口重新确认位置：
 [05-实战应用总览](./01-总览.md)

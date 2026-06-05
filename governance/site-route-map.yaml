@@ -722,7 +722,7 @@ routes:
   page_type: module-overview
   title: 🧪 05-实战应用
   section: practical
-  description: 17 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban、Home Assistant、Discord、MCP、Ollama、GitHub PR Review、自定义 Skills、安全加固与语音模式。
+  description: 22 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban、Home Assistant、Discord、MCP、Ollama、GitHub PR Review、自定义 Skills、安全加固、语音模式；并新增 5 篇深度应用专题：进阶实战（自进化 Skills/MCP/Subagent 治理）、控制室（多 Agent 团队演进模板）、60 天分析师工作流（6 条架构教训）、Hermes + Ollama 最快路径、深度拆解与自建指南。
   order: 48.6
   status: published
   updated: '2026-06-05'
@@ -843,7 +843,7 @@ routes:
   title: 🏡 10-Home Assistant 智能家居
   section: home-assistant
   description: 把 Hermes 接入 Home Assistant，用自然语言控制和查询智能家居设备。
-  order: 48.70
+  order: 48.7
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -879,7 +879,7 @@ routes:
   title: 🦙 13-Ollama 本地模型：让 Hermes 完全免费跑起来
   section: ollama-local-model
   description: 用 Ollama 跑本地推理后端，零账单零数据出网；讲清楚什么场景适合本地、什么场景必须留云端。
-  order: 48.73
+  order: 48.72
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -891,7 +891,7 @@ routes:
   title: 🔍 14-GitHub PR 自动审查：给仓库配一个不睡觉的 Code Reviewer
   section: github-pr-reviewer
   description: 用 Webhook + Hermes Skill 搭一条 PR 打开就自动审查 + 评论的流水线，比手动 /review 更持续更一致。
-  order: 48.74
+  order: 48.75
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -903,34 +903,94 @@ routes:
   title: 🧠 15-自定义 Skills：教 Hermes 学会你的独门工作流
   section: custom-skills
   description: 把重复操作固化成 SKILL.md，下次一句话触发；讲清楚 Skill 和 Prompt 的本质区别、Progressive Disclosure 机制、团队 Skill 共享。
-  order: 48.75
+  order: 48.74
   status: published
   updated: '2026-06-05'
   source_type: original
   nav_group: 05-实战应用
-- source: docs/01-从这开始/05-实战应用/18-安全加固.md
+- source: docs/01-从这开始/05-实战应用/16-安全加固.md
   slug: /start/practical/security-hardening
   module: start
   page_type: doc-page
-  title: 🔒 18-安全加固：给你的 AI Agent 划好安全红线
+  title: 🔒 16-安全加固：给你的 AI Agent 划好安全红线
   section: security-hardening
   description: 对外部署 Hermes 前必看的四道红线：用户白名单、命令审批、容器隔离、密钥保护。
-  order: 48.76
+  order: 48.8
   status: published
   updated: '2026-06-05'
   source_type: original
   nav_group: 05-实战应用
-- source: docs/01-从这开始/05-实战应用/19-语音模式.md
+- source: docs/01-从这开始/05-实战应用/17-语音模式.md
   slug: /start/practical/voice-mode
   module: start
   page_type: doc-page
-  title: 🎙️ 19-语音模式：让 Hermes 听懂你说的话、开口回答你
+  title: 🎙️ 17-语音模式：让 Hermes 听懂你说的话、开口回答你
   section: voice-mode
   description: CLI Ctrl+B 录音、Telegram 语音消息、Discord 语音频道，三种入口一套 STT/TTS 引擎。
-  order: 48.77
+  order: 48.81
   status: published
   updated: '2026-06-05'
   source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/18-Hermes Agent 进阶实战.md
+  slug: /start/practical/hermes-advanced-production
+  module: start
+  page_type: doc-page
+  title: 🧭 18-Hermes Agent 进阶实战：自进化 Skills、MCP、Subagent 编排与生产纪律
+  section: hermes-advanced-production
+  description: 把 Hermes 从"我让它干活它能干"推到"长期生产可靠运行"必须补的四道纪律——自进化 Skills 治理、MCP 深度集成、Subagent 编排、生产可观测。基于 Roan Brasil Monteiro 在 Medium 的进阶文章公开部分整理。
+  order: 48.76
+  status: published
+  updated: '2026-06-05'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/19-Hermes Agent 控制室.md
+  slug: /start/practical/hermes-control-room
+  module: start
+  page_type: doc-page
+  title: 🕹️ 19-Hermes Agent 控制室：从一个 Agent 到专员团队的演进模板
+  section: hermes-control-room
+  description: 当你从 1 个 Hermes 实例走向 5 个，需要的不是更多 Hermes，而是一个控制室——登记册、运行手册、任务总线、备份策略、安全审计。四级演进模板。基于 shannhk/hermes-agent-control-room 整理。
+  order: 48.77
+  status: published
+  updated: '2026-06-05'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/20-60 天分析师工作流.md
+  slug: /start/practical/60day-analyst-lessons
+  module: start
+  page_type: doc-page
+  title: 📊 20-60 天分析师工作流：6 条架构教训
+  section: 60day-analyst-lessons
+  description: 一个真实社区用户跑了 60 天分析师工作流后总结的 6 条架构教训。结论反直觉：Agent 不败在智能，败在架构。基于 0xJeff 在 Substack 的系列文章整理。
+  order: 48.78
+  status: published
+  updated: '2026-06-05'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/21-Hermes Agent 与 Ollama 最快路径.md
+  slug: /start/practical/hermes-ollama-fastest
+  module: start
+  page_type: doc-page
+  title: ⚡ 21-Hermes Agent + Ollama：本地部署最快路径
+  section: hermes-ollama-fastest
+  description: 5 分钟、7 步、零账单跑通 Hermes + Ollama。和 13-Ollama 本地模型的边界：这一页只讲最短路径，不展开原理。
+  order: 48.73
+  status: published
+  updated: '2026-06-05'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/22-Hermes Agent 深度拆解与自建指南.md
+  slug: /start/practical/hermes-deep-dive-build-your-own
+  module: start
+  page_type: doc-page
+  title: 🔮 22-Hermes Agent 深度拆解与自建指南
+  section: hermes-deep-dive-build-your-own
+  description: 拆开 Hermes 黑盒：Agent Loop 六步、System Prompt 12 段组装、Frozen-Snapshot 模式、Tools 自注册 Registry、四种 API 模式自动切换、Prompt Caching 省 90% 钱、自建/二开路径。基于 Truong Phung 在 dev.to 的深度文章整理。
+  order: 48.79
+  status: published
+  updated: '2026-06-05'
+  source_type: adapted
   nav_group: 05-实战应用
 - source: docs/03-国内落地/01-国内部署/01-总览.md
   slug: /china/deploy

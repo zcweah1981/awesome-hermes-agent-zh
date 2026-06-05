@@ -2,7 +2,12 @@
 
 > 一句话先说清楚：这一页讲的是怎么让 Hermes 接入 Ollama 作为推理后端，跑在自家显卡上——零账单、零数据出网、零外部 API 依赖。但更重要的是讲清楚"什么时候值得用，什么时候会反过来拖累你"。
 
-![Ollama 本地模型实操边界：本地推理零成本但受显存和速度限制，适合低频/隐私场景；复杂任务仍走云端](../../assets/practical-13-ollama-official-screenshot-zh-v1.png)
+**和 21-Hermes Agent + Ollama 最快路径 的边界**：
+- 这一页 = **原理篇**：三层路由、显存边界、混搭策略、隐私边界、何时退回云端
+- [21-Hermes Agent + Ollama：本地部署最快路径](./21-Hermes%20Agent%20与%20Ollama%20最快路径.md) = **速通篇**：5 分钟从 0 到第一次本地对话
+- 建议：先读这一页理解边界 → 再用 21 跑通 → 跑一周后回来调优
+
+![Hermes Agent 接入 Ollama 三层决策树：本地零账单推理路径、显存与速度边界、隐私 vs 工具上云的真实区分、三层路由（本地兜底 + 云端高难度 + 强模型专用）](../../assets/practical-v2-02-ollama-local-model.png)
 
 ---
 
