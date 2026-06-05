@@ -1,5 +1,7 @@
 # 🦙 13-Ollama 本地模型：让 Hermes 完全免费跑起来
 
+> 💡 **速答**：Hermes Agent 接入 Ollama 只需两步——装 Ollama 并拉模型 → 在 Hermes 用 `hermes model` 选 Ollama provider，`base_url` 填 `http://127.0.0.1:11434/v1`。最低 8 GB 显存可跑 Qwen2.5-7B，零账单零数据出网。适合日常轻量任务，复杂推理仍建议走云端模型。
+
 > 一句话先说清楚：这一页讲的是怎么让 Hermes 接入 Ollama 作为推理后端，跑在自家显卡上——零账单、零数据出网、零外部 API 依赖。但更重要的是讲清楚"什么时候值得用，什么时候会反过来拖累你"。
 
 **和 21-Hermes Agent + Ollama 最快路径 的边界**：

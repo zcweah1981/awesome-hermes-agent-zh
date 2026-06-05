@@ -1,5 +1,7 @@
 # 🏠 06-VPS 自托管 Hermes
 
+> 💡 **速答**：VPS 自托管 Hermes 的标准流程——SSH 登录服务器 → 装 Hermes → 配模型 → 启动 Gateway → 用 tmux/systemd/Docker 持久化运行。2 GB RAM VPS + DeepSeek 按量接口即可流畅跑，月费低至 $5。国内推荐腾讯云/阿里云轻量，海外推荐 RackNerd/DMIT。
+
 > 一句话先说清楚：这一页教你在 VPS 上从零部署 Hermes，让它 7×24 小时在线，通过 Telegram 随时访问。
 
 ![VPS 自托管路径图：选择机器、准备系统、安装 Hermes、配置模型、启动 Gateway](../../assets/solution-practical-06-vps-self-hosting-path-v1.png)

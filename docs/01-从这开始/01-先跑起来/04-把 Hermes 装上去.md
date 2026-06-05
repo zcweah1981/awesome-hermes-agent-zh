@@ -2,6 +2,8 @@
 
 ![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../../assets/rm2-2-install-hermes-01-install-command-running.png)
 
+> 💡 **速答**：Hermes Agent 安装只需一条命令——Linux/macOS 用 `curl … | bash`，Windows Native（早期测试）用 PowerShell `iex (irm …)`。装完跑 `hermes version` 和 `hermes doctor` 验证，全过即安装成功。
+
 > 一句话先说清楚：这一页不再帮你选环境、也不再帮你进终端，它只做一件事——把 Hermes 真正装上去，并确认 `hermes` 命令已经能用。
 
 如果你已经完成上一页，那你现在应该已经满足这两个前提：
@@ -43,6 +45,16 @@
 - 如果你现在网络就明显不稳，后面很可能一开始就失败
 
 如果这 4 件事都没问题，就直接进入安装。
+
+### 📊 三种操作系统安装路线对比
+
+| 系统 | 推荐路线 | 一键命令 | 状态 |
+|------|---------|---------|------|
+| **Linux / macOS / WSL2** | 官方 shell installer | `curl -fsSL …/install.sh \| bash` | ✅ 稳定主线 |
+| **Windows Native** | PowerShell installer | `iex (irm …/install.ps1)` | ⚠️ 早期测试（early beta） |
+| **任意 OS + Docker** | 拉官方镜像 | `docker run ghcr.io/nousresearch/hermes-agent` | ✅ 环境隔离 |
+
+> 如果你用的是 Windows 但不确定走哪条，默认先走 WSL2 路线，它是当前最稳的 Windows 体验。Windows Native 路线适合不想装 WSL2 的用户，但仍在早期测试阶段。
 
 ---
 
@@ -261,6 +273,30 @@ hermes doctor
 
 最小通过标准可以再说白一点：
 - 你现在已经能明确回答：Hermes 已经装好了，而且 `hermes` 命令在这个环境里已经能用
+
+---
+
+## ❓ 安装常见问题
+
+### Hermes Agent 安装失败怎么办？
+
+先分清失败层次：(1) 脚本拉不下来 → 网络问题，检查能否访问 GitHub；(2) 依赖下载慢 → 国内网络波动，重试或配置代理；(3) `command not found` → shell 没重载，先 `source ~/.bashrc` 再试。详见 [安装更新与环境问题](../../05-遇到问题/02-安装更新与环境问题.md)。
+
+### Windows 用户应该选 WSL2 还是 Windows Native？
+
+当前默认推荐 WSL2 路线，它是稳定主线。Windows Native（PowerShell 安装）仍处于早期测试（early beta），适合不想装 WSL2 的用户。两条路线安装的 Hermes 功能一致，区别在于底层运行环境。
+
+### Hermes Agent 需要什么系统配置？
+
+最低 2 GB RAM、10 GB 磁盘、能访问 LLM API 的网络。Hermes 本身不跑本地模型，推理是远程 API 调用，因此 2 GB VPS 就能跑。4 GB 更稳。详见 [VPS 自托管](../05-实战应用/06-VPS%20自托管%20Hermes.md)。
+
+### 安装后 `hermes version` 显示 command not found？
+
+99% 的情况是 shell 没有重新加载。先执行 `source ~/.bashrc`（Bash）或 `source ~/.zshrc`（Zsh），再重试。Windows Native 用户关闭并重新打开 PowerShell 即可。
+
+### 在国内网络环境安装 Hermes 需要注意什么？
+
+官方安装命令不变，但下载脚本和拉取依赖时可能因网络波动失败。建议：(1) 先确认能正常访问 GitHub；(2) 如果反复失败，考虑配置代理或使用国内云服务器（阿里云/腾讯云已有 Hermes 官方镜像，详见 [国内部署](../../03-国内落地/01-国内部署/01-总览.md)）。
 
 ---
 

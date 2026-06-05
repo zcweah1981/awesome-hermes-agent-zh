@@ -1,5 +1,7 @@
 # 04-智谱 GLM Coding Plan
 
+> 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。在 Hermes 里用 `hermes model` 选 `z.ai / GLM` provider 即可，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。
+
 > 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
 
 这一页只解决一件事：帮你判断 GLM Coding Plan 值不值得买，以及怎么按 Hermes 原生 `z.ai / GLM` provider 路线把它接起来。
@@ -202,6 +204,18 @@ hermes model
 - Key 是否复制错误
 - provider 是否没有真正切到 GLM
 - 模型是否选到了当前账号不可用的那一档
+
+### 📊 GLM Coding Plan vs DeepSeek 按量：怎么选
+
+| 维度 | GLM Coding Plan | DeepSeek 按量计费 |
+|------|----------------|------------------|
+| 计费方式 | 包月订阅 | 充值按量扣费 |
+| 适合谁 | 已认准 GLM、想长期深用一家 | 想先最低门槛跑通 |
+| Hermes provider | `zai`（原生支持） | `deepseek`（原生支持） |
+| 起步成本 | 需要开通订阅 | 充值余额即可，0 门槛 |
+| 最短接入步骤 | 开通 → 拿 Key → `hermes model` | 充值 → 拿 Key → `hermes model` |
+
+> 如果你还没决定用哪家模型，先走 [DeepSeek 按量计费接口](./07-DeepSeek按量计费接口.md) 跑通；跑通后再决定要不要切到 GLM Coding Plan 长期用。
 
 ## ❓FAQ
 

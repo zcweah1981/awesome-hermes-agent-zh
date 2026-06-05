@@ -1,6 +1,8 @@
 # 07-DeepSeek按量计费接口
 
-> 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
+> 💡 **速答**：Hermes Agent 接入 DeepSeek 只需三步——充值余额 → 创建 API Key → 写入 `~/.hermes/.env` 里的 `DEEPSEEK_API_KEY=***`。在 Hermes 里用 `hermes model` 选 DeepSeek provider，默认先选 `deepseek-v4-flash`（低成本起步档），不需要买套餐。
+
+> 🎯 一句话先说清楚：如果你当前最重要的目标是"先用最低门槛把 Hermes 跑起来"，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
 
 这一页只解决一件事：帮你用 DeepSeek 的按量 API，把「充值余额 → 创建 Key → 接入 Hermes → 跑出第一条回复」这条最短链路真正跑通。
 

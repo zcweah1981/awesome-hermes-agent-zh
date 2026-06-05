@@ -12,6 +12,8 @@ source_type: third-party
 
 # Hermes 适合谁：和其他 Agent 工具怎么选
 
+> 💡 **速答**：Hermes Agent 适合能接受 VPS/终端部署、希望 Agent 越用越懂你、重视数据本地存储的用户。月费 $5 VPS + DeepSeek 按量接口即可流畅运行。如果你完全不想碰终端，或需要大量现成技能市场，建议考虑其他方案。
+
 > 本页内容综合自第三方评测和社区讨论，**不是官方立场**。所有对比观点均标注来源，帮助你独立判断。
 
 ## 适合谁
@@ -143,6 +145,26 @@ Flowtivity AI 的对比文章把 Hermes 和 OpenClaw 的差异概括为两个哲
 - [OpenClaw 和 Hermes 的关系](../../04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md)
 - [继续用、共存，还是迁移](../../04-从OpenClaw过来/03-继续用、共存，还是迁移.md)
 - [迁移路径](../../04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md)
+
+---
+
+## ❓ 选型常见问题
+
+### Hermes Agent 和 Claude Code 有什么区别？
+
+Hermes Agent 和 Claude Code 是不同类型的工具。Claude Code 是 Anthropic 官方的编码 CLI，绑定 Claude 模型，专注于代码生成和仓库操作。Hermes Agent 是模型无关的开源 Agent 框架，支持 DeepSeek、GLM、Ollama、OpenRouter 等数十种模型提供商，覆盖编码、内容创作、办公效率、智能家居等多场景，并支持飞书/钉钉/企微/Telegram 等消息平台入口。
+
+### Hermes Agent vs OpenClaw：应该选哪个？
+
+两者都是开源 MIT 协议的 AI Agent。核心差异：Hermes 主打"学习型代理"（Agent 随使用越来越懂你），技术栈 Python；OpenClaw 主打"技能市场"（13,000+ 社区技能），技术栈 Node.js。如果你需要大量现成技能插件，OpenClaw 更成熟；如果你重视跨会话记忆和自写技能能力，Hermes 更合适。详见 [OpenClaw 和 Hermes 的关系](../../04-从OpenClaw过来/02-OpenClaw%20和%20Hermes%20的关系.md)。
+
+### Hermes Agent 一个月大概多少钱？
+
+典型配置：$5/月 VPS（RackNerd/腾讯云轻量）+ DeepSeek 按量计费（日常使用 10-50 元/月）。如果你有显卡，可以接 Ollama 本地模型跑日常任务，模型费用可降到接近零。详见 [月费 8 美金三层模型级联省钱指南](../../01-从这开始/05-实战应用/04-月费8美金三层模型级联省钱指南.md)。
+
+### Hermes Agent 需要编程基础吗？
+
+基础使用（安装、配模型、对话、接消息平台）不需要编程基础，跟着教程走即可。进阶使用（自定义 Skills、SOUL.md 人格定制、Cron 自动化）需要能读懂 YAML 和 Markdown，但不要求写代码。
 
 ---
 
