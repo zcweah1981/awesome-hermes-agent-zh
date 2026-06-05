@@ -300,7 +300,7 @@ find "$HERMES_HOME/profiles/content/skills/agent_created/" -name "SKILL.md" -mti
 
 本文基于以下来源做了原创中文整理：
 
-- Roan Brasil Monteiro — [Hermes Agent Advanced: Self-Evolving Skills, MCP, Subagents, and Production](https://medium.com/@roanmonteiro/hermes-agent-advanced-self-evolving-skills-mcp-subagents-and-production-8c827c79ce7e)（2026-05-20，Medium，部分内容 paywall）
+- Roan Brasil Monteiro — [Hermes Agent Advanced: Self-Evolving Skills, MCP, Subagents, and Production](https://medium.com/@roanmonteiro/hermes-agent-advanced-self-evolving-skills-mcp-subagents-and-production-8c827c79ce7e)（2026-05-20，Medium，部分内容 paywall；GitHub Actions runner 受 Medium 反爬影响返回 403，普通浏览器可正常打开）
 - Sathish Raju 在 Medium 发表的相关评论（公开引用部分）
-- Hermes 官方文档 — [Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)、[Native MCP Client](https://hermes-agent.nousresearch.com/docs/user-guide/integrations/mcp)
+- Hermes 官方文档 — [Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)、[Native MCP Client](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)

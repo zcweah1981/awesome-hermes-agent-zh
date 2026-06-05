@@ -297,7 +297,7 @@ hermes model
 - 官方来源：
   - https://www.kimi.com/code/docs/
   - https://platform.kimi.ai/docs/guide/start-using-kimi-api
-  - https://platform.kimi.ai/docs/guide/kimi-k2-quickstart
+  - https://platform.kimi.ai/docs/guide/kimi-k2-6-quickstart
 
 ---
 

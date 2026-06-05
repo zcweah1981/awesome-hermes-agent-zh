@@ -140,7 +140,7 @@ provider_sources_to_fill_in_r2:
     source_urls:
     - https://www.kimi.com/code/docs/
     - https://platform.kimi.ai/docs/guide/start-using-kimi-api
-    - https://platform.kimi.ai/docs/guide/kimi-k2-quickstart
+    - https://platform.kimi.ai/docs/guide/kimi-k2-6-quickstart
     affected_docs:
     - docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
   - id: deepseek

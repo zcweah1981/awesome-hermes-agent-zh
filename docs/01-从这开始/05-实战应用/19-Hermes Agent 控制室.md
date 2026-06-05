@@ -333,5 +333,5 @@ README.md → inventory.md → runbook.md
 
 - shannhk — [hermes-agent-control-room](https://github.com/shannhk/hermes-agent-control-room)（GitHub，MIT 协议）
 - shannholmberg — [Hermes Agent Control Room — From One Agent to Specialist Teams](https://x.com/shannholmberg/article/2055335043904492011)（X article）
-- Hermes 官方文档 — [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/configuration/profiles)
+- Hermes 官方文档 — [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)

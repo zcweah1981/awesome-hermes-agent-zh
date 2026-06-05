@@ -334,4 +334,4 @@ model_routing:
 - gaodalie — [Hermes Agent + Ollama: FASTEST Way to Install Locally](https://gaodalie.substack.com/p/hermes-agent-ollama-fastest-way-to)（Substack）
 - Hermes 官方文档 — [AI Providers: Ollama / Custom OpenAI-compatible](https://hermes-agent.nousresearch.com/docs/integrations/providers)
 - Ollama 官方 — [ollama.com](https://ollama.com/)
-- Microsoft 开源 — [gpt-oss-20b 模型卡](https://ollama.com/library/gpt-os)
+- Microsoft 开源 — [gpt-oss-20b 模型卡](https://ollama.com/library/gpt-oss)

@@ -326,7 +326,7 @@ Hermes 的实现：
 建议下一步：
 
 - 回到 [05-实战应用总览](./01-总览.md)，挑一篇深读复用
-- 或前往 [06-reference](../06-reference/01-总览.md) 查 API 参考
+- 或前往 [06-reference](../../06-reference/01-总览.md) 查 API 参考
 - 或开始你的 [04-自己造东西](../04-自己造东西/01-总览.md) 之旅
 
 如果你想自建 / 二开 Hermes，参考：
@@ -340,6 +340,6 @@ Hermes 的实现：
 本文基于以下来源做了原创中文整理：
 
 - Truong Phung — [Hermes Agent — Deep Dive & Build-Your-Own Guide](https://dev.to/truongpx396/hermes-agent-deep-dive-build-your-own-guide-1pcc)（dev.to，2026-04-30，编辑 2026-05-31）
-- Hermes 官方文档 — [Architecture Overview](https://hermes-agent.nousresearch.com/docs/contributing/architecture)
-- Hermes 官方文档 — [System Prompt Assembly](https://hermes-agent.nousresearch.com/docs/contributing/prompt-architecture)
+- Hermes 官方文档 — [Architecture Overview](https://hermes-agent.nousresearch.com/docs/developer-guide/architecture)
+- Hermes 官方文档 — [System Prompt Assembly](https://hermes-agent.nousresearch.com/docs/developer-guide/prompt-assembly)
 - Anthropic 官方 — [Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)

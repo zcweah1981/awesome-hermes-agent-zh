@@ -9,6 +9,10 @@
 ^https?://(www\.)?discord\.gg/.*
 ^https?://t\.me/.*
 
+# Medium 对 GitHub Actions runner IP 反爬返回 403；文章对普通浏览器可正常访问。
+# 仅忽略当前内容仓实际引用的具体文章 URL，不放宽到整域；新增 Medium 引用时单独审计。
+^https?://medium\.com/@roanmonteiro/hermes-agent-advanced-self-evolving-skills-mcp-subagents-and-production-8c827c79ce7e$
+
 # 视频/搜索类页面偶发 403/429；人工确认可访问后再保留。
 ^https?://(www\.)?youtube\.com/.*
 ^https?://youtu\.be/.*
