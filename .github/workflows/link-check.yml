@@ -104,7 +104,6 @@ jobs:
               --repo "${{ github.repository }}" \
               --title "${TITLE}" \
               --body "${BODY}" \
-              --label "link-check,automated" \
               || echo "Issue creation failed (non-fatal)"
           fi
           exit 1
