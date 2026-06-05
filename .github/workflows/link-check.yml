@@ -84,4 +84,11 @@ jobs:
 
       - name: Fail if Lychee failed
         if: steps.lychee.outcome == 'failure'
-        run: exit 1
+        run: |
+          echo "::error::Lychee link check failed. Full report:"
+          if [ -f lychee-report.md ]; then
+            cat lychee-report.md
+          else
+            echo "lychee-report.md was not generated."
+          fi
+          exit 1
