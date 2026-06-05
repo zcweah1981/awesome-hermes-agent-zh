@@ -722,10 +722,10 @@ routes:
   page_type: module-overview
   title: 🧪 05-实战应用
   section: practical
-  description: 10 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban 与 Home Assistant。
+  description: 17 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban、Home Assistant、Discord、MCP、Ollama、GitHub PR Review、自定义 Skills、安全加固与语音模式。
   order: 48.6
   status: published
-  updated: '2026-06-04'
+  updated: '2026-06-05'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/01-用 Hermes 做每日晨间简报.md
@@ -845,8 +845,92 @@ routes:
   description: 把 Hermes 接入 Home Assistant，用自然语言控制和查询智能家居设备。
   order: 48.70
   status: published
-  updated: '2026-06-04'
+  updated: '2026-06-05'
   source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/11-Discord 接入.md
+  slug: /start/practical/discord-entry
+  module: start
+  page_type: doc-page
+  title: 🎮 11-Discord 接入：让你的 AI 助手住进服务器
+  section: discord-entry
+  description: 把 Hermes 接入 Discord 服务器，让团队成员在频道里 @ Bot 就能用 Agent，支持线程、自由回复频道和语音频道。
+  order: 48.71
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/12-MCP 接入指南.md
+  slug: /start/practical/mcp-universal-plug
+  module: start
+  page_type: doc-page
+  title: 🔌 12-MCP 接入指南：给 Hermes 装上"万能插头"
+  section: mcp-universal-plug
+  description: 用 MCP 协议让 Hermes 直接调用 GitHub、Linear、数据库等外部工具，不用自己写 wrapper。
+  order: 48.72
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
+  slug: /start/practical/ollama-local-model
+  module: start
+  page_type: doc-page
+  title: 🦙 13-Ollama 本地模型：让 Hermes 完全免费跑起来
+  section: ollama-local-model
+  description: 用 Ollama 跑本地推理后端，零账单零数据出网；讲清楚什么场景适合本地、什么场景必须留云端。
+  order: 48.73
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/14-GitHub PR 自动审查.md
+  slug: /start/practical/github-pr-reviewer
+  module: start
+  page_type: doc-page
+  title: 🔍 14-GitHub PR 自动审查：给仓库配一个不睡觉的 Code Reviewer
+  section: github-pr-reviewer
+  description: 用 Webhook + Hermes Skill 搭一条 PR 打开就自动审查 + 评论的流水线，比手动 /review 更持续更一致。
+  order: 48.74
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/15-自定义 Skills.md
+  slug: /start/practical/custom-skills
+  module: start
+  page_type: doc-page
+  title: 🧠 15-自定义 Skills：教 Hermes 学会你的独门工作流
+  section: custom-skills
+  description: 把重复操作固化成 SKILL.md，下次一句话触发；讲清楚 Skill 和 Prompt 的本质区别、Progressive Disclosure 机制、团队 Skill 共享。
+  order: 48.75
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/18-安全加固.md
+  slug: /start/practical/security-hardening
+  module: start
+  page_type: doc-page
+  title: 🔒 18-安全加固：给你的 AI Agent 划好安全红线
+  section: security-hardening
+  description: 对外部署 Hermes 前必看的四道红线：用户白名单、命令审批、容器隔离、密钥保护。
+  order: 48.76
+  status: published
+  updated: '2026-06-05'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/19-语音模式.md
+  slug: /start/practical/voice-mode
+  module: start
+  page_type: doc-page
+  title: 🎙️ 19-语音模式：让 Hermes 听懂你说的话、开口回答你
+  section: voice-mode
+  description: CLI Ctrl+B 录音、Telegram 语音消息、Discord 语音频道，三种入口一套 STT/TTS 引擎。
+  order: 48.77
+  status: published
+  updated: '2026-06-05'
+  source_type: original
   nav_group: 05-实战应用
 - source: docs/03-国内落地/01-国内部署/01-总览.md
   slug: /china/deploy
