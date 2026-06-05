@@ -199,8 +199,11 @@ Syncthing 双向同步可能产生冲突文件（`.sync-conflict-*`）。
 
 ## ➡️ 下一步
 
-- [07-SOUL.md 人格定制](./07-SOUL.md%20人格定制.md)
-- [09-Kanban 多 Agent 编排](./09-Kanban%20多%20Agent%20编排.md)
+完成后进入：
+[09-Kanban 多 Agent 编排](./09-Kanban%20多%20Agent%20编排.md)
+
+如果你想先回到上一阶段入口重新确认位置：
+[05-实战应用总览](./01-总览.md)
 
 ---
 

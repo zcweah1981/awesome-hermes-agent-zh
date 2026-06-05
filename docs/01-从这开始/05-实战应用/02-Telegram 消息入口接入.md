@@ -213,8 +213,11 @@ Telegram Bot API 需要访问 `api.telegram.org`。
 
 ## ➡️ 下一步
 
-- [01-用 Hermes 做每日晨间简报](./01-用%20Hermes%20做每日晨间简报.md)
-- [03-GitHub 备份 Cron Job](./03-GitHub%20备份%20Cron%20Job.md)
+完成后进入：
+[03-GitHub 备份 Cron Job](./03-GitHub%20备份%20Cron%20Job.md)
+
+如果你想先回到上一阶段入口重新确认位置：
+[05-实战应用总览](./01-总览.md)
 
 ---
 
