@@ -2,7 +2,11 @@
 
 Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
 
-![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.png)
+![Hermes Desktop 真实聊天界面截图：左侧项目与会话列表、右侧对话区共享同一个 Hermes Runtime](../../assets/desktop-07-real-chat-v1.png)
+
+> 下面这张结构图保留用来说明 Desktop、CLI、TUI 和 Gateway 的关系；真实界面以上方截图为准。
+>
+> ![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.png)
 
 ---
 
@@ -60,7 +64,9 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 ## 🚀 怎么启动
 
-![Hermes Desktop 操作图：从 hermes desktop 启动、选择项目、打开会话，到继续聊天并共享记录](../../assets/desktop-07-operation-v1.png)
+![Hermes Desktop 真实项目选择界面截图：启动后选择工作目录并进入项目](../../assets/desktop-07-real-project-picker-v1.png)
+
+![Hermes Desktop 真实会话恢复界面截图：选择历史会话并继续聊天](../../assets/desktop-07-real-session-resume-v1.png)
 
 装好之后，最常用的启动方式：
 
