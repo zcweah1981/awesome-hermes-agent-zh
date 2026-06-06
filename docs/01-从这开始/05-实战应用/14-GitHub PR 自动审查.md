@@ -347,6 +347,83 @@ Haiku / 7B 本地模型做 review 经常给出"看着有理实际错误"的建�
 
 ---
 
+## ❓ FAQ：Webhook 入站与多平台分发
+
+<a id="faq-webhook-what-and-how"></a>
+
+### Q1｜Hermes 的 Webhook 入站是什么？怎么用它接 GitHub / GitLab / n8n / Make？
+
+**速答**：Webhook 入站是 Hermes 的"被外部系统触发"机制——GitHub PR 打开、GitLab push、n8n 工作流跑完、Make.com 接到新事件，都可以通过 HTTP POST 打到 Hermes 的 webhook endpoint，由 Hermes 路由到对应的 skill 或 agent 执行，再把结果通过 deliver 推回 Telegram / Discord / 飞书 / 钉钉 / 企业微信 / 微信。
+
+**和 cron 的区别**：
+- `hermes cron` = 时间触发（每 30 分钟、每天 9 点）
+- Webhook 入站 = 事件触发（GitHub 那边有动静就打过来）
+
+**最短路径**：
+
+```bash
+# 1. 看已订阅的 webhook
+hermes webhook list
+
+# 2. 订阅一个 GitHub PR 事件
+hermes webhook subscribe pr-review \
+  --source github \
+  --event pull_request.opened \
+  --skill github-code-review
+
+# 3. 测试一次（不依赖真实 GitHub 事件）
+hermes webhook test pr-review --payload ./test-payload.json
+```
+
+**HMAC 验签（强烈建议开）**：
+
+GitHub / GitLab 推过来的 webhook 必须验签，防止有人伪造请求触发你的 agent。Hermes 支持 HMAC-SHA256：
+
+```bash
+hermes webhook subscribe pr-review \
+  --source github \
+  --secret $WEBHOOK_SECRET
+```
+
+GitHub 那边配同一个 secret，Hermes 收到请求时会验签，验不过直接丢弃。
+
+**deliver 路由：触发完往哪儿推结果**
+
+webhook 触发 skill 跑完后，结果默认进会话历史。如果你想让结果自动推到某个消息平台，用 `--deliver`：
+
+```bash
+hermes webhook subscribe pr-review \
+  --source github \
+  --skill github-code-review \
+  --deliver telegram:-1001234567890:pr-review-topic
+```
+
+支持的 deliver 目标：`telegram`、`discord`、`feishu`、`dingtalk`、`wecom`、`weixin`。
+
+**常见误判**：
+- 以为 webhook 不通是 Hermes 的 bug → 多数情况是 GitHub 那边 secret 没配对，或 Hermes 服务没暴露公网
+- 以为 webhook 能取代 cron → 错，cron 是时间触发，webhook 是事件触发，两者不重叠
+
+来源：[官方文档 — Webhooks](https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/messaging/webhooks)；[YouTube — Hermes + Webhooks 实战](https://www.youtube.com/watch?v=WNYe5mD4fY8)；[02-CLI 命令参考 — `hermes webhook`](../06-reference/02-CLI%20命令参考.md)。
+
+---
+
+<a id="faq-webhook-vs-api-server"></a>
+
+### Q2｜Webhook 入站和 API Server / Hermes Proxy 是同一个东西吗？
+
+**速答**：不是。三者方向完全不同：
+
+| 机制 | 方向 | 用途 |
+|------|------|------|
+| **Webhook 入站** | 外部 → Hermes | GitHub / n8n / Make 推事件给 Hermes |
+| **API Server** | 应用 → Hermes | 你的前端 / Open WebUI / LobeChat 调 Hermes |
+| **Hermes Proxy** | Hermes → 上游 | v0.14 新增的 OAuth 透传本地代理 |
+
+如果你要做"PR 自动评论"，用 Webhook 入站；如果你要做"Open WebUI 接 Hermes"，用 API Server；如果你要让本地 Hermes 走上游 OAuth 订阅（Nous Portal 等），用 Proxy。
+
+---
+
 ## ➡️ 下一步
 
 完成后进入：

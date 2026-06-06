@@ -380,6 +380,38 @@ hermes gateway <subcommand>
 | `hermes honcho` | 管理 Honcho 相关配置 | 使用 Honcho 记忆时 |
 | `hermes acp` | 作为 ACP server 启动 Hermes | 编辑器集成时 |
 
+#### `hermes skills` 子命令速查（高频使用）
+
+`hermes skills` 是 skills 系统的总入口，下面 7 个子命令覆盖浏览、搜索、安装、检查、卸载、源管理全流程。
+
+| 子命令 | 中文说明 | 典型用法 |
+|--------|---------|---------|
+| `hermes skills browse` | 浏览官方 + 社区 skill 目录 | 不知道装什么时，先 `browse` 看推荐 |
+| `hermes skills search <关键词>` | 按关键词搜索 skill | `hermes skills search git` |
+| `hermes skills install <name\|url>` | 装 skill（支持名字或直链） | `hermes skills install xurl` 或 `hermes skills install https://github.com/.../my-skill` |
+| `hermes skills inspect <name>` | 看某 skill 的 frontmatter / 依赖 / 来源 | 装之前先 `inspect` 看清楚 |
+| `hermes skills tap <github-repo>` | 把第三方 GitHub 仓库注册为 skill 源 | `hermes skills tap https://github.com/xxx/skills` |
+| `hermes skills reset` | 把 skill 状态重置为默认 | skill 装坏了想重来 |
+| `hermes skills remove <name>` | 卸载某 skill | 不再需要某个 skill |
+
+**`--source` 选项**：`install` 和 `browse` 支持 `--source` 指定来源：
+
+- `--source official`：只看 Hermes 官方内置 skill
+- `--source skills-sh`：从社区聚合站 skills.sh 装
+- `--source <custom-github>`：从你 tap 过的自定义仓库装
+
+**三种 skill 来源层级**：
+
+| 来源 | 数量（截至 v0.15） | 怎么用 |
+|------|------------------|--------|
+| **Hermes 官方内置**（bundled） | 77 个 | 装完 Hermes 自带，`hermes skills browse --source official` |
+| **官方可选**（optional） | 50 个 | `hermes skills install <name>`，需手动装 |
+| **社区**（skills.sh / ClawHub / 自定义 GitHub） | 521+ | `hermes skills install <url>` 或 `hermes skills tap <repo>` |
+
+更多 skill 系统说明：[09-内置 Skills 目录](./09-内置%20Skills%20目录.md)、[10-可选 Skills 目录](./10-可选%20Skills%20目录.md)、[15-自定义 Skills](../01-从这开始/05-实战应用/15-自定义%20Skills.md)。
+
+来源：[官方文档 — User Guide: Skills](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)；[runoob — Hermes Agent Skills](https://www.runoob.com/ai-agent/hermes-agent-skills.html)；[SegmentFault — 必装 10 个 skill](https://segmentfault.com/a/1190000047720279)。
+
 ### 6.7 Profile、环境隔离与迁移命令
 
 | 命令 | 中文说明 |

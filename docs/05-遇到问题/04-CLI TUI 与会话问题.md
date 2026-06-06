@@ -329,6 +329,56 @@ hermes
 - 是 provider / model / endpoint 层：回 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
 - 已确认只是 CLI / TUI / 会话层：继续留在本页
 
+---
+
+<a id="faq-cron-not-firing"></a>
+
+### 10｜Hermes 的 cron 定时任务不触发 / cron 跑了但 profile 不对，怎么办？
+
+**速答**：这是 v0.13 之前的已知 bug（issue #25310）：CLI 交互式配置 cron 时写入的 profile 路径，和 gateway 后台读取 cron 时使用的 profile 路径不一致，导致 cron 要么完全不触发，要么触发后用了默认 profile 而不是你想要的那一个。v0.13.0 已修复（PR #12304，5/14 合并）。如果你还在 v0.12 或更早，先升级。
+
+**先做这 3 步**：
+
+1. **确认版本**：
+```bash
+hermes version
+# 如果版本号 < 0.13.0，先升级
+hermes update
+```
+
+2. **确认 cron profile 路径是否生效**：
+```bash
+hermes cron list
+# 看每条 cron 项的 profile 字段，是否指向你期望的 profile 名
+```
+
+3. **如果版本已 ≥ 0.13 但仍不触发，按下面分类排查**：
+
+| 症状 | 真因 | 处理 |
+|------|------|------|
+| `hermes cron list` 是空的 | 你只在交互式会话里说过\"每天 9 点跑\"，但没真正落到 cron 表 | `hermes cron create` 显式建 |
+| cron 项有，但触发时间不对 | 时区没对齐：cron 引擎读的是系统时区，不是 Hermes 内部时区 | 检查 `timedatectl status`，必要时 `sudo timedatectl set-timezone Asia/Shanghai` |
+| cron 项触发，但跑出来结果像用了默认 profile | 你触到了 issue #25310 的旧 bug | 升级到 ≥ 0.13.0 后重建该 cron 项 |
+| cron 项触发，但 gateway 没收到 | systemd linger 没开，用户级服务在退出会话后被回收 | `sudo loginctl enable-linger $USER`，参考 [06-VPS 自托管 Hermes](../01-从这开始/05-实战应用/06-VPS%20自托管%20Hermes.md) |
+
+**容易踩的误判**：
+- 把 cron 不触发当成 \"模型没响应\" → 错，cron 是 Hermes 内部调度层，根本没走到模型层
+- 把 cron profile 错位当成 \"SOUL.md 没加载\" → 错，这是 cron 项自己的 profile 字段问题，跳 [07-配置 / Profiles](./07-配置%20Profiles%20与环境隔离问题.md)
+
+**cron 和 `/goal` 持久循环的区别**：
+- `hermes cron` = 时间触发（每天 9 点 / 每 30 分钟）
+- `/goal` = 长任务持续运行（v0.13 引入），不依赖时间，而是依赖一个目标是否达成
+
+🚦 什么时候该跳转：
+
+- 你的问题是 systemd / linger / VPS 守护：跳 [08-Docker / Nix / SSH 与远程后端问题](./08-Docker%20Nix%20SSH%20与远程后端问题.md)
+- 你想了解 `/goal` 持久循环（v0.13 新增）：先升级到 v0.13+，再用 `/goal` 命令
+- 你想在 CLI 命令参考里看 cron 全部子命令：跳 [02-CLI 命令参考](../06-reference/02-CLI%20命令参考.md)
+
+来源：[GitHub Issue #25310](https://github.com/NousResearch/hermes-agent/issues/25310)；[修复 PR #12304](https://github.com/NousResearch/hermes-agent/pull/12304)；[v0.13.0 release notes](https://hermes-agent.nousresearch.com/docs/changelog)。
+
+---
+
 ## 🔹 官方依据
 
 - [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)

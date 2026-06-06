@@ -301,6 +301,84 @@ hermes chat -Q -q "请先给结论，再列出2条你的回答习惯。总共不
 
 ---
 
+## ❓ FAQ：SOUL.md vs AGENTS.md vs USER.md
+
+<a id="faq-soul-vs-agents"></a>
+
+### Q1｜`SOUL.md` 和 `AGENTS.md` 到底有什么区别？我该把规则写在哪？
+
+**速答**：`SOUL.md` 管"这个 Hermes 长期是什么样的人"（人格、语气、风格）；`AGENTS.md` 管"在这个项目里 Hermes 该遵守什么规则"（技术约定、commit 规范、构建命令）。两者作用域不同，互不覆盖，新会话启动时都会自动加载。
+
+**对照表**：
+
+| 维度 | SOUL.md | AGENTS.md |
+|------|---------|-----------|
+| 作用域 | 全局（所有项目、所有会话） | 项目级（仅当前项目目录生效） |
+| 路径 | `$HERMES_HOME/SOUL.md`（默认 `~/.hermes/SOUL.md`） | 项目根目录的 `AGENTS.md` |
+| 写什么 | 人格、语气、回答风格、沟通偏好 | 项目规则、技术栈、构建命令、commit 规范、目录结构 |
+| 加载时机 | session start | session start（同时加载） |
+| 谁来读 | Hermes 主 agent | Hermes 主 agent + 所有 subagent / cron job |
+| 改了之后 | 新会话生效 | 新会话生效 |
+
+**典型例子**：
+
+```markdown
+# ~/.hermes/SOUL.md（人格）
+- 用中文回答
+- 直接给结论，少铺垫
+- 不用"好的，我来"这种客套
+- 代码注释用中文
+```
+
+```markdown
+# /opt/projects/my-app/AGENTS.md（项目规则）
+- 技术栈：Next.js 15 + TypeScript + TailwindCSS
+- commit 用 conventional commits
+- 构建命令：pnpm build
+- 测试：pnpm test
+- 不要在 src/lib 里写 React 组件
+```
+
+**容易踩的坑**：
+
+- 把项目规则写进 SOUL.md → 多项目时人格文件被技术细节塞满
+- 把人格写进 AGENTS.md → 不同项目里 Hermes 表现不一致
+- 两个文件都不写，靠 `/personality` 临时改 → 重启就没了
+
+**优先级**：当 SOUL.md 和 AGENTS.md 有冲突时（比如 SOUL 说"简短"，AGENTS 说"详细说明"），AGENTS.md 在该项目内优先；离开该项目后 SOUL.md 仍然生效。
+
+来源：[官方文档 — Personality & SOUL.md](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)；[官方文档 — Context Files](https://hermes-agent.nousresearch.com/docs/user-guide/configuration/context-files)。
+
+---
+
+<a id="faq-soul-vs-user"></a>
+
+### Q2｜`SOUL.md` 和 `USER.md` 又是什么关系？
+
+**速答**：`SOUL.md` 描述 AI 的样子；`USER.md` 描述你的样子——你的名字、角色、时区、编码偏好、技术栈。两者一起加载，Hermes 就既能保持稳定人格，又能根据你的身份调整回答。
+
+**典型 `USER.md`**：
+
+```markdown
+- 名字：seiya
+- 角色：独立开发者，主要做 AI Agent 产品
+- 时区：Asia/Shanghai
+- 偏好：用 Telegram 接 Hermes，不喜欢长邮件
+- 技术栈：Python / Rust / TypeScript / Next.js
+```
+
+**三者各管什么**：
+
+| 文件 | 描述谁 | 在哪 | 改动频率 |
+|------|--------|------|---------|
+| `SOUL.md` | AI 助手 | `$HERMES_HOME/SOUL.md` | 偶尔调（人格定型后很少改） |
+| `USER.md` | 你（用户） | `$HERMES_HOME/USER.md` | 偶尔调（身份变化时） |
+| `AGENTS.md` | 项目规则 | 项目根目录 | 经常调（项目演进时） |
+
+如果你只写一个，先写 `SOUL.md`——它带来的体验差异最大。
+
+---
+
 ## ➡️ 下一步
 
 完成后进入：

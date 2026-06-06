@@ -15,7 +15,23 @@
 
 ---
 
-## 🎯 先判断：你是不是已经进入“服务化暴露”阶段
+## ⚡ 速答：Hermes Proxy vs API Server，到底用哪个？
+
+> **速答**：这两个不是同一个东西。**API Server** 是把 Hermes 暴露成 OpenAI 兼容的 HTTP 端点（`/v1/chat/completions`），让 Open WebUI / LobeChat / 你的应用通过 HTTP 调 Hermes——这页讲的就是它。**Hermes Proxy**（v0.14 新增）是反方向的：本地 Hermes 通过它走上游 OAuth 订阅（Nous Portal 等），不是给应用调的。如果你要做"前端接 Hermes"，看这页；如果你要让本地 Hermes 走 Nous Portal 订阅，去看 [04-自定义 AI 大模型](../03-玩出花样/04-自定义%20AI%20大模型.md)。
+
+| 机制 | 方向 | 端点 | 用途 | 引入版本 |
+|------|------|------|------|---------|
+| **API Server**（本页主题） | 应用 → Hermes | `http://your-host:8642/v1/chat/completions` | Open WebUI / LobeChat / curl 调 Hermes | 早就有 |
+| **Hermes Proxy** | Hermes → 上游 | 本地 `http://localhost:PORT` 透传 | 本地 Hermes 走 Nous Portal OAuth 订阅 | v0.14 |
+| **Webhook 入站** | 外部 → Hermes | `http://your-host/webhook/...` | GitHub / n8n 推事件给 Hermes | 早就有 |
+
+**最容易混的两种误判**：
+- 以为"开了 Proxy 就能接 Open WebUI" → 错，Proxy 是给 Hermes 自己用的，不是给前端
+- 以为"API Server 要 OAuth" → 错，API Server 用你自己在 Hermes 里配的 provider Key
+
+---
+
+## 🎯 先判断：你是不是已经进入"服务化暴露"阶段
 
 下面这些情况，通常就该看这一页：
 

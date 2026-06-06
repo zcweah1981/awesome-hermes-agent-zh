@@ -532,6 +532,69 @@ hermes model
 
 ---
 
+<a id="faq-anthropic-baseurl-slash-v1"></a>
+
+### 12｜Anthropic / 智谱 GLM 自定义 base_url 末尾带 `/v1`，请求直接 404，怎么办？
+
+**速答**：这是 v0.12 之前的高频坑——你在 `base_url` 里写成了 `https://api.anthropic.com/v1` 或 `https://open.bigmodel.cn/api/anthropic/v1`，Hermes 内部又会自动追加 `/v1/messages`，结果路径变成 `/v1/v1/messages`，上游返回 404。同一日三个独立 PR（#24877 / #24873 / #24876）修复了同一个症状：Hermes 启动时自动剥离末尾 `/v1`。v0.13.0 已合并修复。如果你还在 v0.12 或更早，先升级；如果已经升级，按下面排查。
+
+**先做这 3 步**：
+
+1. **确认 Hermes 版本**：
+```bash
+hermes version
+# 如果 < 0.13.0，先升级
+hermes update
+```
+
+2. **检查你当前 `base_url` 写法**：
+```bash
+hermes config | grep -i base_url
+# 看 ANTHROPIC_BASE_URL / GLM_BASE_URL 末尾是不是 /v1
+```
+
+3. **如果末尾确实是 `/v1`**，二选一处理：
+
+| 写法 | 是否正确 | 说明 |
+|------|---------|------|
+| `https://api.anthropic.com` | ✅ 正确 | Hermes 自动追加 `/v1/messages` |
+| `https://api.anthropic.com/v1` | ⚠️ v0.13+ 自动剥离 | v0.12 及更早会触发 404 |
+| `https://api.anthropic.com/v1/messages` | ❌ 错 | 多了 `/v1/messages`，Hermes 会再追加一次 |
+| `https://open.bigmodel.cn/api/anthropic` | ✅ 正确（智谱 Anthropic 兼容） | Hermes 自动追加 |
+| `https://open.bigmodel.cn/api/anthropic/v1` | ⚠️ v0.13+ 自动剥离 | 同上 |
+
+**手动剥离（如果你无法立即升级）**：
+
+打开 `~/.hermes/config.yaml`（或对应 profile 的 config.yaml），把 `base_url` 末尾的 `/v1` 删掉：
+
+```yaml
+providers:
+  anthropic:
+    base_url: https://api.anthropic.com   # 不要带 /v1
+    api_key: ${ANTHROPIC_API_KEY}
+```
+
+改完保存，重启 Hermes 即可。
+
+**容易混的两个误判**：
+- 以为是 \"Anthropic Key 失效\" → 错，401/403 才是 Key 问题，404 几乎都是路径
+- 以为是 \"Hermes 不兼容 Anthropic 协议\" → 错，Hermes 原生支持 `anthropic_messages` 模式，参考 FAQ #11
+
+**同类问题：智谱 GLM 的 `/v1` 重复**
+
+智谱 Anthropic 兼容层（GLM Coding Plan 走 Claude Code 模式时使用）有完全一样的症状。如果你在 `hermes model` 里选了 GLM 但手动改了 `base_url`，也会触发 `/v1/v1/messages` 404。处理方式和 Anthropic 完全一致：删末尾 `/v1`，或升级到 v0.13+。
+
+🚦 什么时候该跳转：
+
+- 你的报错是 401/403（不是 404）：跳 [FAQ 02｜为什么一直报 401 / 403](#faq-401-403)
+- 你的报错是 timeout 而不是 404：跳 [FAQ 04｜为什么一直报 Connection timeout](#faq-timeout)
+- 你想搞清楚三种协议模式（chat_completions / anthropic_messages / codex_responses）：跳 [FAQ 11｜三种协议模式对比](#faq-anthropic-vs-openai-modes)
+- 你的 base_url 已经不带 `/v1`，但智谱 GLM 还是 429/404：跳 [FAQ 10｜智谱 GLM 429/404 + auxiliary_client](#faq-glm-auxiliary-404)
+
+来源：[GitHub PR #24877](https://github.com/NousResearch/hermes-agent/pull/24877)；[PR #24873](https://github.com/NousResearch/hermes-agent/pull/24873)；[PR #24876](https://github.com/NousResearch/hermes-agent/pull/24876)（三 PR 同日独立修复同一症状）；[官方文档 — Environment Variables](https://hermes-agent.nousresearch.com/docs/reference/environment-variables)。
+
+---
+
 ## ✅ 看完这页，你应该立刻能判断
 
 - 我现在卡的是 Key / 权限、endpoint、model 名，还是兼容能力边界
