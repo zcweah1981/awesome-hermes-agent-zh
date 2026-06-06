@@ -1,5 +1,7 @@
 # 🖥 07-用桌面端操作 Hermes
 
+> 💡 **速答**：Hermes Desktop 不是独立产品。它就是 CLI 同一个 runtime，外面套了一层 Electron 桌面窗口——配置、会话、记忆、工具全部共用，改一处处处生效。当前支持 macOS、Windows、Linux 三平台，启动命令是 `hermes desktop`。
+
 Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
 
 ---

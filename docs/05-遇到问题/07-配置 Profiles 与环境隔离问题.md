@@ -283,7 +283,7 @@ hermes config
 
 ### 09｜什么时候该回 Profiles / 自己造东西相关页？
 
-先说结论：只要你现在的问题已经不是“这一份配置哪里写错了”，而是“我到底该怎么组织多助手 / 多环境 / 记忆 / 系统边界”，就不该继续在这页硬试配置键。
+先说结论：只要你现在的问题已经不是"这一份配置哪里写错了"，而是"我到底该怎么组织多助手 / 多环境 / 记忆 / 系统边界"，就不该继续在这页硬试配置键。
 
 先做什么：
 - 先回总览，把系统边界重新整理出来
@@ -297,6 +297,74 @@ hermes config
 什么时候该跳转：
 - 跳到 [02-多个助手一起工作](../01-从这开始/04-自己造东西/02-多个助手一起工作.md)
 - 或跳到 [04-自己造东西](../01-从这开始/04-自己造东西/01-总览.md)
+
+---
+
+<a id="faq-soul-path"></a>
+
+### 10｜SOUL.md 写了却不生效？`~/.hermes/SOUL.md` vs `~/.hermes/memories/SOUL.md` 路径错位坑
+
+❓ 问题
+
+我写了 SOUL.md，但助手行为完全没有变化。检查发现有的教程说要放在 `~/.hermes/SOUL.md`，有的说要放在 `~/.hermes/memories/SOUL.md`，到底是哪个？
+
+💡 先说结论
+
+**正确路径是 `~/.hermes/SOUL.md`**（与 `config.yaml` 同级）。
+
+`~/.hermes/memories/` 目录下放的是**长期记忆条目**（Hermes 自动写入或你用 `memory` 工具写入的片段），不是 SOUL.md 的位置。把 SOUL.md 误放到 `memories/` 目录，是最常见的人格"不生效"根因。
+
+🔎 怎么验证
+
+```bash
+# 1. 看文件到底在哪
+ls -la ~/.hermes/SOUL.md
+ls -la ~/.hermes/memories/SOUL.md
+
+# 2. 用 doctor 直接检查 Hermes 期望路径
+hermes doctor | grep -i soul
+
+# 3. 看当前 profile 的实际 SOUL 路径
+hermes config | grep -i soul
+```
+
+**正确状态**：
+- `~/.hermes/SOUL.md` 存在
+- `~/.hermes/memories/` 目录存在，但里面**没有** SOUL.md，只有记忆片段
+
+**错位状态**：
+- `~/.hermes/SOUL.md` 不存在
+- `~/.hermes/memories/SOUL.md` 存在 → **这就是不生效的根因**
+
+🛠 怎么修
+
+```bash
+# 1. 移到正确位置
+mv ~/.hermes/memories/SOUL.md ~/.hermes/SOUL.md
+
+# 2. 重新开一个会话验证
+hermes
+# 在会话里问一句能触发人格识别的问题，确认 SOUL 生效
+```
+
+⚠️ 容易混淆的相邻坑
+
+| 路径 | 用途 | 是不是 SOUL.md 该放的 |
+|------|------|---------------------|
+| `~/.hermes/SOUL.md` | 助手人格定义 | ✅ 正确 |
+| `~/.hermes/USER.md` | 用户档案（你的偏好） | ❌ 不是 |
+| `~/.hermes/memories/*.md` | 跨会话记忆片段 | ❌ 不是 |
+| `~/.hermes/skills/*/SKILL.md` | skill 定义文件 | ❌ 不是 |
+| `<project>/AGENTS.md` | 项目级规则（在项目目录里） | ❌ 不是 |
+
+如果你在多个 profile 之间切换，每个 profile 都有独立的 `~/.hermes/` 目录（位于 `~/.hermes/profiles/<name>/` 下），SOUL.md 也要在对应 profile 的根目录里。
+
+🚦 什么时候该跳转
+
+- 你写好了 SOUL.md 但不知道怎么定制人格：[07-SOUL.md 人格定制](../01-从这开始/05-实战应用/07-SOUL.md%20人格定制.md)
+- 你想知道 USER.md / memories / SOUL.md 三者的关系：[03-让 Hermes 记住你](../01-从这开始/03-玩出花样/03-让%20Hermes%20记住你.md)
+
+来源：[cnblogs.com/addozhang — Hermes SOUL.md 路径踩坑记录](https://www.cnblogs.com/addozhang/p/19868739)；[官方文档 — Personality](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)。
 
 ## 🔹 官方依据
 

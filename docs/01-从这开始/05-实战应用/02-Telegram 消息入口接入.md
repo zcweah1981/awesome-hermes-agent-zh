@@ -188,6 +188,59 @@ Telegram Bot API 需要访问 `api.telegram.org`。
 不配 `TELEGRAM_ALLOWED_USERS`，任何人发现你的 Bot 都能用。
 一定配上白名单，哪怕只有你一个人用。
 
+### 5. 在群里 @ Bot 没反应 / BotFather 隐私模式
+
+❓ 问题：把 Bot 拉进 Telegram 群，@ 它完全没有反应。
+
+💡 速答：BotFather 默认开启"隐私模式"（Privacy Mode），Bot 在群里**只能收到**以下消息：
+- 直接 @ 它的消息
+- 回复它的消息
+- 命令（以 `/` 开头）
+
+要让 Bot 能读到群里所有消息（普通群聊模式），有两种方式：
+
+**方式 1（推荐）**：在 BotFather 里关闭隐私模式
+```
+1. Telegram 里找 @BotFather
+2. /setprivacy
+3. 选你的 Bot
+4. 选 Disable
+```
+改完之后要把 Bot **踢出群再重新拉进来**才会生效（Telegram 的限制）。
+
+**方式 2**：把 Bot 设为群管理员
+- 群设置 → 管理员 → 添加 Bot → 设为 admin
+- 管理员身份会绕过隐私模式限制
+
+来源：[官方 Telegram 文档 — BotFather /setprivacy](https://core.telegram.org/bots/faq#what-messages-will-my-bot-get)、[官方 Hermes Telegram 文档](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram)。
+
+### 6. 不知道走 Webhook 还是 Long-polling
+
+❓ 问题：Hermes Telegram 接入有两种模式——Long-polling 和 Webhook，我该选哪个？
+
+💡 速答：Hermes 默认走 **Long-polling（长轮询）**，绝大多数用户不需要改。Webhook 适合有公网域名 + 反向代理 + 高并发的生产场景。
+
+| 模式 | 工作方式 | 适合 | 不适合 |
+|------|---------|------|--------|
+| **Long-polling（默认）** | Hermes 主动轮询 Telegram API 拉消息 | 99% 个人和小团队场景；VPS 部署；没有公网域名 | 极高并发、消息频率非常高的群 |
+| **Webhook** | Telegram 主动 POST 消息到你的 HTTPS 端点 | 已有公网域名 + 反向代理 + 高并发 Bot | 本地开发；没有 HTTPS 证书；NAT 后的家用网络 |
+
+**切换到 Webhook**（仅在你明确知道自己需要时）：
+
+```bash
+# 通常通过 hermes gateway setup 或手动配
+# Hermes 配置里启用 webhook 模式
+TELEGRAM_WEBHOOK_URL=https://your-domain.com/telegram/webhook
+TELEGRAM_WEBHOOK_MODE=true
+```
+
+⚠️ 切换前确认：
+1. 你有公网 HTTPS 证书（Let's Encrypt 可）
+2. 反向代理（nginx / caddy）把 `/telegram/webhook` 转发到 Hermes Gateway 端口
+3. 服务器防火墙开放 443 入站
+
+来源：[官方 Hermes Telegram 文档 — Polling vs Webhook](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram)。
+
 ---
 
 ## ✅ 推荐做法

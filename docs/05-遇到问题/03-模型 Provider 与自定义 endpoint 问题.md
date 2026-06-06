@@ -461,6 +461,77 @@ hermes model
 - [08-自定义兼容接口](../03-国内落地/02-国内模型/08-自定义兼容接口.md)
 - [02-国内模型 | 总览](../03-国内落地/02-国内模型/01-总览.md)
 
+---
+
+<a id="faq-glm-auxiliary-404"></a>
+
+### 10｜智谱 GLM 报 429 / 404，或 auxiliary_client 启动失败，怎么办？
+
+**速答**：智谱 GLM 用户最常见的两个坑——(1) endpoint 路径填错导致 429 或 404；(2) `auxiliary_client` 启动报错。根因都是同一个：智谱官方同时存在 `/api/paas/v4`（标准 Paas v4）和 `/api/anthropic`（Anthropic 兼容层）两条路径，但 Hermes 默认走的是其中一条，需要你在 `hermes model` 里明确选 provider 而不是手动改 `base_url`。
+
+**先做这 3 步**：
+
+1. **先确认走的是哪条路径**：
+```bash
+hermes config | grep -i glm
+```
+
+2. **如果 `base_url` 是手动改的**，先撤销，回 `hermes model` 重选：
+```bash
+hermes model
+# 选 z.ai / GLM 这个 provider，不要选 Custom Endpoint
+```
+
+3. **如果 429 持续**，先确认 GLM Coding Plan 额度没耗尽：
+   - 登录智谱开放平台查 RPM / TPM 限流
+   - 见 [04-智谱 GLM Coding Plan](../03-国内落地/02-国内模型/04-智谱GLM%20Coding%20Plan.md)
+
+**`auxiliary_client` 报错的常见根因**：
+
+| 报错 | 真正原因 | 处理 |
+|------|---------|------|
+| `auxiliary_client: connection refused` | 走的是 Paas v4 但 model 名不识别 | 改用 GLM Coding Plan 模型名，不要手填 `glm-4-plus` 之类 |
+| `auxiliary_client: 404 not found` | base_url 写成了聊天接口而不是服务根 | 回 `hermes model`，不要手填 base_url |
+| `auxiliary_client: 429` | Coding Plan 额度或 RPM 超限 | 检查智谱控制台 |
+
+**5 路径绕过手填 base_url 速查**：
+
+1. `hermes model` 选 GLM provider → 填 `GLM_API_KEY` → 自动配置
+2. 如要走 Anthropic 兼容层（GLM Coding Plan 走 Claude Code 模式），同样 `hermes model` 选 GLM，不要手动改 base_url
+3. 不要把 `https://open.bigmodel.cn/api/paas/v4/chat/completions` 当 base_url，要去掉 `/chat/completions`
+4. 不要把 `/api/anthropic/v1/messages` 当 base_url，要去掉 `/v1/messages`
+5. 走 OneAPI / NewAPI 中转时，model 名必须用中转层暴露的真实名（通常是 `glm-4-plus` 或智谱官方 model id），不是 Hermes 内置名
+
+来源：[GitHub Issue #18302](https://github.com/NousResearch/hermes-agent/issues/18302)（社区完整根因分析）；[智谱 GLM Coding Plan](../03-国内落地/02-国内模型/04-智谱GLM%20Coding%20Plan.md)。
+
+---
+
+<a id="faq-anthropic-vs-openai-modes"></a>
+
+### 11｜Hermes 接 Custom Endpoint 时，`anthropic_messages` / `chat_completions` / `codex_responses` 三种模式有什么区别？
+
+**速答**：这三种是 Hermes 处理上游 LLM API 的三种协议模式，决定请求/响应格式。绝大多数用户走 `chat_completions`（OpenAI 兼容，最通用）。
+
+| 模式 | 适用上游 | 协议 | 典型用例 |
+|------|---------|------|---------|
+| `chat_completions` | OpenAI-Compatible（默认） | OpenAI `/v1/chat/completions` | OneAPI / NewAPI / Ollama / LM Studio / 99% 兼容层 |
+| `anthropic_messages` | Anthropic 原生 | Anthropic `/v1/messages` | Claude 官方 API、智谱 GLM Coding Plan（Anthropic 兼容层） |
+| `codex_responses` | OpenAI Codex / Responses API | OpenAI `/v1/responses` | 早期 Codex 接入，少见 |
+
+**怎么选**：
+
+- 上游是 OpenAI-compatible 兼容层 → `chat_completions`
+- 上游是 Anthropic 官方或 Anthropic 兼容层（GLM Coding Plan 走 Claude Code 模式） → `anthropic_messages`
+- 你不知道上游是哪种 → 默认 `chat_completions`，先用 `curl /v1/models` 试
+
+**不要混的两种误判**：
+- 以为"GLM 一定要走 anthropic_messages"——错。GLM Coding Plan 才走 Anthropic 兼容层，标准 Paas v4 走 chat_completions。
+- 以为"所有自定义兼容层都走 chat_completions"——错。如果中转层只暴露 Anthropic 协议，必须走 anthropic_messages。
+
+参考：[官方文档 — Integrations: Providers](https://hermes-agent.nousresearch.com/docs/integrations/providers)。
+
+---
+
 ## ✅ 看完这页，你应该立刻能判断
 
 - 我现在卡的是 Key / 权限、endpoint、model 名，还是兼容能力边界

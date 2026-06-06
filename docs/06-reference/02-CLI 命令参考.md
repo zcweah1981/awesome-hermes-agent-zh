@@ -301,6 +301,18 @@ hermes doctor [--fix]
 - 更新后状态怪异
 - 想先做一次系统性体检
 
+**输出按层分段**，每段对应一个故障层。完整字段对照表见 [02-安装更新与环境问题 — hermes doctor 输出字段对照表](../05-遇到问题/02-安装更新与环境问题.md#faq-doctor-fields)。
+
+最常见三种判断：
+
+| 输出状态 | 含义 | 下一步 |
+|---------|------|--------|
+| 全绿 | 环境健康，问题不在安装层 | 跳模型 / Gateway / Tools 排查 |
+| Python / Hermes 红 | 安装或 PATH 没生效 | [02-安装更新与环境问题](../05-遇到问题/02-安装更新与环境问题.md) |
+| Provider / Gateway 红 | 已离开安装层 | [03-模型 Provider](../05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md) 或 [05-Gateway Messaging](../05-遇到问题/05-Gateway Messaging 与推送问题.md) |
+
+`--fix` 参数会尝试自动修复部分常见问题（例如 linger 没开、shell PATH 没生效等），但不会动你的 `config.yaml`。
+
 #### 维护相关命令
 
 | 命令 | 中文说明 |
