@@ -2,6 +2,20 @@
 
 > 这页查的是 Hermes 内置工具（built-in tools），以及它们和 toolsets、平台、凭据之间的关系。 如果你要查 MCP server 暴露出来的工具，请看 [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)。
 
+## 📋 速答（你可能正在搜的）
+
+**Hermes Agent 内置工具有哪些？**
+> Hermes 内置工具按 toolset 分组，主要包括：browser（`browser_navigate`、`browser_click`、`browser_snapshot` 等）、file（`read_file`、`write_file`、`search_files`、`patch`）、terminal（`terminal`、`process`）、web（`web_search`、`web_extract`）、skills（`skills_list`、`skill_view`）、memory、vision、tts、delegation 等，共约 50+ 个。
+
+**Built-in Tools 和 MCP Tools 有什么区别？**
+> Built-in tools 是 Hermes 项目自带的工具，跟着 Hermes 走；MCP tools 是你通过外部 MCP server 动态接入的工具（如 `github_create_issue`），跟着你的配置走。MCP 工具通常带 `server-name` 前缀。
+
+**为什么有些工具看不到或不能用？**
+> 工具是否可见取决于三个条件：平台（CLI vs Telegram）、凭据（是否配了 API Key）、已启用的 toolset。没配凭据、toolset 没开、或当前平台不支持，都会导致工具不出现。这不是 bug，是作用域设计。
+
+**`search` 和 `web` toolset 有什么区别？**
+> `search` 只有 `web_search`（只搜索）；`web` 包含 `web_search` + `web_extract`（搜索 + 抽取网页正文）。只想快速检索用 `search`，需要抓取页面内容用 `web`。
+
 ## 🎯 1. 页面用途
 
 这一页帮助你理解 Hermes 内置工具的查表逻辑。

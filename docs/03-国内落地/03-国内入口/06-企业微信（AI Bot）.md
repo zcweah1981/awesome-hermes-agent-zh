@@ -10,6 +10,20 @@
 - 云服务器怎么买
 - Dashboard / Open WebUI 怎么配
 
+## 📋 速答（你可能正在搜的）
+
+**Hermes Agent 怎么接入企业微信？**
+> 在企业微信后台创建智能机器人 → 选 API 模式 + 长连接 → 拿到 Bot ID 和 Secret → 填入 Hermes 的 `WECOM_BOT_ID` 和 `WECOM_SECRET` → 运行 `hermes gateway` 启动。不需要公网回调地址，走的是 WebSocket 长连接。
+
+**企业微信接入教程的完整流程是什么？**
+> 6 步闭环：① 确认 CLI 已跑顺 ② 在企业微信工作台进入智能机器人创建页 ③ 选 API 模式 + 长连接 ④ 保存 Bot ID 和 Secret ⑤ 写入 Hermes `.env` ⑥ 启动 `hermes gateway` 验证消息收发。
+
+**企业微信 AI Bot 和 Hermes 是什么关系？**
+> 企业微信 AI Bot 是企业微信官方推荐的 Agent 对接方式。Hermes 官方 WeCom adapter 就是围绕 AI Bot WebSocket 网关（`wss://openws.work.weixin.qq.com`）设计的。Hermes 作为 AI 后端，企业微信作为消息触达前端。
+
+**接入企业微信前需要先准备好什么？**
+> Hermes 本体已在 CLI 里正常工作、已有可用模型入口、当前环境能运行 gateway。企业微信是消息触达层，不是第一排错入口——如果 CLI 还没跑顺，先回 CLI。
+
 ## 🚀 企业微信接入主线图
 
 ![企业微信接入主线图](./assets/wecom-entry-structure-v1.png)

@@ -2,6 +2,20 @@
 
 > 这页查的是你已经进入 Hermes 对话之后，在会话里输入的 `/xxx` 命令。 如果你要查终端 shell 里的 `hermes ...`，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
 
+## 📋 速答（你可能正在搜的）
+
+**Hermes Agent 的 slash commands 有哪些？**
+> Hermes 对话内的 slash commands 分四组：会话管理（`/new`、`/clear`、`/history`、`/save`、`/undo`、`/retry`）、配置调整（`/model`、`/provider`、`/verbose`、`/reasoning`、`/fast`）、工具管理（`/tools`、`/toolsets`、`/skills`、`/browser`）、以及其他（`/plan`、`/compress`、`/background` 等）。在对话中输入 `/` 即可看到自动补全菜单。
+
+**`/model` 和 `hermes model` 有什么区别？**
+> `/model` 是会话内切换已配置好的模型，不新增 provider。`hermes model` 是终端命令，用于新增 provider、做 OAuth、填 API Key、设默认模型。想新增 provider 必须回终端用 `hermes model`，不要在会话里试 `/model`。
+
+**怎么在对话里管理工具？**
+> 会话内输入 `/tools list` 查看当前可用工具，`/tools enable browser` 开启某类工具，`/tools disable browser` 关闭。这只影响当前 session；要改平台默认配置，用终端命令 `hermes tools`。
+
+**为什么有些 slash commands 别人有我没有？**
+> 部分 slash commands 是动态的——它们来自已安装的 skills。比如 `/plan` 来自 bundled plan skill。你和别人安装的 skills 不同，`/` 菜单就不完全一样。另外 CLI 和 Messaging Gateway（Telegram/Discord）两个表面的命令也不完全一致。
+
 ## 🎯 1. 页面用途
 
 这一页用来查 Hermes 的 Slash Commands，也就是你在 Hermes 对话界面里直接输入的 `/...` 命令。

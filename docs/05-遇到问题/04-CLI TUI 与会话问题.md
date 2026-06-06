@@ -5,6 +5,17 @@
 如果你现在很急，先记住：
 > 先分清你卡的是显示层、交互层、会话恢复层，还是模型响应层；不要把“界面怪”和“模型坏”混成一件事。
 
+## 📋 速答（你可能正在搜的）
+
+**Hermes Agent 的 TUI 和 CLI 有什么区别？**
+> Classic CLI（`hermes`）是传统终端交互模式，兼容性最好。TUI（`hermes --tui`）是增强终端界面，额外支持鼠标跟踪、`/reload` 热重载、`/usage` token 统计、`/details` 详细模式、Ctrl+X 快速切换历史会话、可折叠启动 Banner。两个模式共享同一套 slash commands 核心，但 TUI 有更多交互增强。
+
+**什么时候用 TUI，什么时候用 CLI？**
+> 日常深度使用选 TUI——更好的视觉反馈和交互效率。SSH 远程连接或终端兼容性差时选 classic CLI——更轻量、兼容性更好。如果你遇到界面乱码、emoji 不显示，先试 classic CLI 排除终端兼容问题。
+
+**TUI 模式怎么启动？**
+> 运行 `hermes --tui`。TUI 独有命令包括 `/mouse`（鼠标跟踪）、`/reload`（热重载配置和 skills）、`/usage`（token 统计）、`/details`（详细输出）。这些在 classic CLI 和消息平台不一定可用。
+
 ## ⚡ 先按症状选路
 
 你现在最像哪一种，直接跳：

@@ -2,6 +2,20 @@
 
 > 这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)。
 
+## 📋 速答（你可能正在搜的）
+
+**Hermes Agent 的 toolset 是什么？**
+> Toolset 是 Hermes 的"工具权限包"——每个工具归属到一个 toolset，启用某个 toolset 时包内工具一起可用。比如开 `file` 就能用 `read_file`、`write_file`、`search_files`、`patch`，开 `web` 就能用 `web_search` + `web_extract`。
+
+**Hermes Agent 有哪些内置 toolset？**
+> 分三类：Core（`file`、`terminal`、`web`、`search`、`browser`、`skills`、`vision`、`tts`、`memory`、`session_search` 等）、Composite（`debugging`、`safe` 等组合包）、Platform（`hermes-cli`、`hermes-telegram` 等平台默认配置）。共约 15 个 core toolset。
+
+**怎么按需开启或关闭 toolset？**
+> 会话内用 `/tools enable/disable` 管理当前 session；启动时用 `hermes chat --toolsets web,file,terminal` 指定；平台级默认配置在 `config.yaml` 的 `toolsets` 列表或 `hermes tools` 命令管理。
+
+**为什么 CLI 和 Telegram 里可用工具不一样？**
+> 因为不同平台有不同的 platform toolset（如 `hermes-cli` 和 `hermes-telegram`），它们定义了各自入口的默认工具权限边界。同一个 Hermes 在不同平台上能力范围可以不同，这是设计如此而非 bug。
+
 ## 🎯 1. 页面用途
 
 这一页帮助你查 toolsets 的概念、分类和配置方式。
