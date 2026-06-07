@@ -318,7 +318,7 @@ hermes setup model  # 只补模型这一块
 
 如果你只想做最小验证，不必先跑 setup，直接 `hermes model` 配一个 provider 和 model，然后 `hermes` 就能进入聊天。setup 的价值在于"集中式补齐"，不是"必须先跑完才能用"。
 
-更多子命令和参数详见 [CLI 命令参考 — hermes setup](../../06-reference/02-%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md)。
+更多子命令和参数详见 [CLI 命令参考 — hermes setup](<../../06-reference/02-CLI 命令参考.md>)。
 
 ---
 

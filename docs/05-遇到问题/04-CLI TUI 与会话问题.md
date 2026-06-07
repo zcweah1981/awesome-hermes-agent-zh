@@ -386,7 +386,7 @@ hermes cron list
 - 你想了解 `/goal` 持久循环（v0.13 新增）：先升级到 v0.13+，再用 `/goal` 命令
 - 你想在 CLI 命令参考里看 cron 全部子命令：跳 [02-CLI 命令参考](../06-reference/02-CLI%20命令参考.md)
 
-来源：[GitHub Issue #25310](https://github.com/NousResearch/hermes-agent/issues/25310)；[修复 PR #12304](https://github.com/NousResearch/hermes-agent/pull/12304)；[v0.13.0 release notes](https://hermes-agent.nousresearch.com/docs/changelog)。
+来源：[GitHub Issue #25310](https://github.com/NousResearch/hermes-agent/issues/25310)；[修复 PR #12304](https://github.com/NousResearch/hermes-agent/pull/12304)；[更新与卸载文档](https://hermes-agent.nousresearch.com/docs/getting-started/updating)。
 
 ---
 

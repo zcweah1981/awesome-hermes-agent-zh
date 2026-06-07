@@ -404,7 +404,7 @@ hermes webhook subscribe pr-review \
 - 以为 webhook 不通是 Hermes 的 bug → 多数情况是 GitHub 那边 secret 没配对，或 Hermes 服务没暴露公网
 - 以为 webhook 能取代 cron → 错，cron 是时间触发，webhook 是事件触发，两者不重叠
 
-来源：[官方文档 — Webhooks](https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/messaging/webhooks)；[YouTube — Hermes + Webhooks 实战](https://www.youtube.com/watch?v=WNYe5mD4fY8)；[02-CLI 命令参考 — `hermes webhook`](../06-reference/02-CLI%20命令参考.md)。
+来源：[官方文档 — Webhooks](https://hermes-agent.nousresearch.com/docs/zh-Hans/user-guide/messaging/webhooks)；[YouTube — Hermes + Webhooks 实战](https://www.youtube.com/watch?v=WNYe5mD4fY8)；[02-CLI 命令参考 — `hermes webhook`](<../../06-reference/02-CLI 命令参考.md>)。
 
 ---
 

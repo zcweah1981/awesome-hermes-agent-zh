@@ -347,7 +347,7 @@ hermes chat -Q -q "请先给结论，再列出2条你的回答习惯。总共不
 
 **优先级**：当 SOUL.md 和 AGENTS.md 有冲突时（比如 SOUL 说"简短"，AGENTS 说"详细说明"），AGENTS.md 在该项目内优先；离开该项目后 SOUL.md 仍然生效。
 
-来源：[官方文档 — Personality & SOUL.md](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)；[官方文档 — Context Files](https://hermes-agent.nousresearch.com/docs/user-guide/configuration/context-files)。
+来源：[官方文档 — Personality & SOUL.md](https://hermes-agent.nousresearch.com/docs/user-guide/features/personality)；[官方文档 — Configuration / context files](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)。
 
 ---
 
