@@ -70,7 +70,7 @@
 | 还没想清楚这份汇报该先讲什么 | 先出一版结构 | Hermes 先帮你定叙事主线 |
 | 已经确定主题，只想快点做成稿 | 先出逐页讲稿 | 先拿逐页可执行内容，再进 PPT 工具 |
 
-![对比图：左边是先出一版结构，右边是先出逐页讲稿，内容结构保持清楚，背景统一到整体深蓝黑技术文档家族](../../assets/solution-ppt-structure-vs-script-review-candidate-07-integrated.png)
+![对比图：左边是先出一版结构，右边是先出逐页讲稿，内容结构保持清楚，背景统一到整体深蓝黑技术文档家族](../../assets/solution-ppt-structure-vs-script-review-candidate-07-integrated.webp)
 
 如果你现在拿不准，默认先走：
 - 先出一版结构
@@ -157,7 +157,7 @@
 | 04-review | 结构风险点、必须修改项、可讲判断 | 给 validator 做总体验收 |
 | 99-solution-validator | 最终结论：pass / pass with fixes / fail | 帮你判断这份 PPT 是否能进入正式汇报 |
 
-![团队接力图：structure-planner 先定主线与页序，slide-writer 接着展开逐页内容，polisher 再补口播与过渡，review 负责汇报前把关，validator 最后给出能否进入正式汇报的结论](../../assets/solution-ppt-team-handoff-review-candidate-02.png)
+![团队接力图：structure-planner 先定主线与页序，slide-writer 接着展开逐页内容，polisher 再补口播与过渡，review 负责汇报前把关，validator 最后给出能否进入正式汇报的结论](../../assets/solution-ppt-team-handoff-review-candidate-02.webp)
 
 上面这张图要表达的是：
 - 团队协作版不是把同一句需求扔给 5 个 Agent，而是按交接物一棒一棒往下传
@@ -186,7 +186,7 @@
 | 演讲备注 | `这一页口头重点是先讲结论，不先讲细节` | 方便自己讲或交给汇报人 |
 | 继续执行清单 | `缺哪些数据、截图、素材、图表` | 立刻推进下一轮落版 |
 
-![交付物总览图：先看你会拿到什么，再看它在输出里大概长什么样，最后看你下一步立刻能干嘛；标题与排版统一为深蓝黑技术文档家族内容页风格](../../assets/solution-ppt-output-map-review-candidate-09-cn-teamstyle.png)
+![交付物总览图：先看你会拿到什么，再看它在输出里大概长什么样，最后看你下一步立刻能干嘛；标题与排版统一为深蓝黑技术文档家族内容页风格](../../assets/solution-ppt-output-map-review-candidate-09-cn-teamstyle.webp)
 
 如果你觉得表格还是偏文字，这张图可以帮助你更快扫一眼：
 - 第一层看叙事主线
@@ -206,7 +206,7 @@
 | 我已经准备开始逐页落版 | ACP | 可以顺着结果继续细修每页内容、标题、备注和配图 |
 | 我想边做边改成自己的汇报语气 | ACP | 可以在编辑器里持续打磨，不只停在第一稿 |
 
-![对比图：左边是 CLI 先快速出一版 PPT 稿，右边是 ACP 进入编辑器继续精修逐页内容和表达，背景统一为深蓝黑技术文档家族并补足科技线条点缀](../../assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.png)
+![对比图：左边是 CLI 先快速出一版 PPT 稿，右边是 ACP 进入编辑器继续精修逐页内容和表达，背景统一为深蓝黑技术文档家族并补足科技线条点缀](../../assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.webp)
 
 最简单的记法：
 - CLI：先拿整套稿

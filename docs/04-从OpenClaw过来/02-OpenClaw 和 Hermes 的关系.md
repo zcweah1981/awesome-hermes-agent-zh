@@ -28,7 +28,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 ## 🧱 结构图：两者不是替代关系，而是不同层级
 
-![OpenClaw 和 Hermes 的关系图：OpenClaw 作为探索层与前台交互，Hermes 作为沉淀层与长期运行层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-relationship-structure-v4.png)
+![OpenClaw 和 Hermes 的关系图：OpenClaw 作为探索层与前台交互，Hermes 作为沉淀层与长期运行层，中间最稳路径是先共存再迁移。](./assets/openclaw-hermes-relationship-structure-v4.webp)
 
 这张图最重要的不是“谁更强”，而是先把位置摆对：
 - OpenClaw 更适合快速开始、验证需求、试 prompt、试流程
@@ -39,7 +39,7 @@ OpenClaw 帮你先做起来，Hermes 帮你一直做下去。
 
 ## 📊 真正会影响判断的差异是什么
 
-![OpenClaw vs Hermes 核心对比图：对比上手方式、适合阶段、Prompt 使用、协作方式、自动化和默认建议，强调两者处在不同使用层级。](./assets/openclaw-hermes-comparison-v4.png)
+![OpenClaw vs Hermes 核心对比图：对比上手方式、适合阶段、Prompt 使用、协作方式、自动化和默认建议，强调两者处在不同使用层级。](./assets/openclaw-hermes-comparison-v4.webp)
 
 这页不是功能 PK 页，也不是拉踩页。真正值得你先看的，不是“谁功能更多”，而是下面这些会改变工作方式的差异：
 - 你是继续围绕现有流程微调，还是准备沉淀一套长期复用系统

@@ -13,13 +13,13 @@
 │     └─ content-check.yml
 ├─ README.md
 ├─ assets/
-│  ├─ hermes-logo.png
-│  ├─ readme-governance-panel.jpg
-│  ├─ readme-hermes-capability-map.jpg
-│  ├─ readme-hero-hub.jpg
-│  ├─ readme-hero-v1.jpg
-│  ├─ readme-scenarios.jpg
-│  └─ readme-user-routing.jpg
+│  ├─ hermes-logo.webp
+│  ├─ readme-governance-panel.webp
+│  ├─ readme-hermes-capability-map.webp
+│  ├─ readme-hero-hub.webp
+│  ├─ readme-hero-v1.webp
+│  ├─ readme-scenarios.webp
+│  └─ readme-user-routing.webp
 ├─ docs/
 │  ├─ 00-文档总览.md
 │  ├─ 01-从这开始/

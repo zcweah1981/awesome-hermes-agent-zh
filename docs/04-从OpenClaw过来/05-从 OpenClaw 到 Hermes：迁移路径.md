@@ -24,7 +24,7 @@
 
 ## 🧭 迁移步骤图：先盘点，再 Hermes 化，再最小验证
 
-![迁移路径图：先盘点已有资产，再提炼角色、沉淀技能，最后接入模型与入口，并用一个最小场景完成验证。](./assets/openclaw-hermes-migration-flow-v6.png)
+![迁移路径图：先盘点已有资产，再提炼角色、沉淀技能，最后接入模型与入口，并用一个最小场景完成验证。](./assets/openclaw-hermes-migration-flow-v6.webp)
 
 这页真正要做的，不是“大迁移”，而是按顺序完成这 5 步：
 1. 先盘点 OpenClaw 里已经有效的资产

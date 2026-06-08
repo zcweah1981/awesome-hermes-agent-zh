@@ -13,7 +13,7 @@
 
 ## 🚀 先看主线
 
-![阿里云百炼 Token 接入流程示意图（Hermes 风格版）](./assets/aliyun-bailian-tokenplan-hero-v18.png)
+![阿里云百炼 Token 接入流程示意图（Hermes 风格版）](./assets/aliyun-bailian-tokenplan-hero-v18.webp)
 
 这张图只想帮你先抓住 4 个点：
 - 这是一条“统一套餐入口”路线，不是单模型按量页
@@ -224,7 +224,7 @@ hermes chat -m qwen3.6-plus
 
 ### 1. Token Plan 团队版接入说明
 
-![Hermes Agent 配置 Token Plan 团队版的官方说明截图](./assets/aliyun-bailian-hermes-config-section.png)
+![Hermes Agent 配置 Token Plan 团队版的官方说明截图](./assets/aliyun-bailian-hermes-config-section.webp)
 
 这张图只证明三件事：
 - 先去 Token Plan 团队版页面拿专属 API Key
@@ -233,7 +233,7 @@ hermes chat -m qwen3.6-plus
 
 ### 2. 通用百炼 API Key 创建页（补充参考）
 
-![阿里云百炼通用 API Key 创建页截图](./assets/aliyun-bailian-get-api-key-section.png)
+![阿里云百炼通用 API Key 创建页截图](./assets/aliyun-bailian-get-api-key-section.webp)
 
 这张图是通用 API Key 创建页，只适合作为补充参考，不应替代 Token Plan 团队版主线。
 

@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Home Assistant，用自然语言控制家里的灯、空调、窗帘、传感器——"帮我把客厅灯调暗一点"就够了。
 
-![Home Assistant 智能家居控制图：自然语言请求进入 Hermes，再通过 HA API 控制设备并读取传感器状态](../../assets/solution-practical-10-home-assistant-control-loop-v1.png)
+![Home Assistant 智能家居控制图：自然语言请求进入 Hermes，再通过 HA API 控制设备并读取传感器状态](../../assets/solution-practical-10-home-assistant-control-loop-v1.webp)
 
 ---
 

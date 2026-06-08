@@ -1,6 +1,6 @@
 # 🏷️ 04-常用 Skills（按日常使用场景精选）
 
-![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../../assets/rm2-3-skills-curated-01-skill-scenario-map.png)
+![技能场景地图：第一次开始上手时，先认识文档与知识库、办公协作、研究检索、开发协作这 4 类常用 Skills](../../assets/rm2-3-skills-curated-01-skill-scenario-map.webp)
 
 > 这一页不是让你背完整技能目录，而是帮你建立第一层判断：我现在手上的任务属于哪一类，应该先试哪一类 Skill。
 
@@ -125,7 +125,7 @@
 
 ## ✅ 第四步：第一次试 Skill，先只选一个贴近你工作的场景
 
-![Skills 调用成功示意图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../../assets/rm2-3-skills-curated-02-skill-call-success.png)
+![Skills 调用成功示意图：直接使用 arxiv skill 查找 AI Agents 论文，并返回论文标题、arXiv 编号、作者与中文重点概括](../../assets/rm2-3-skills-curated-02-skill-call-success.webp)
 
 第一次开始用，最稳的方式不是一口气试很多个，而是：
 1. 先选一个你最近最常见的任务场景

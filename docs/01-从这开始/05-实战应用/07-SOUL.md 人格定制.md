@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 从"通用 AI 助手"变成"你自己的长期搭档"——只需要改一个文件。
 
-![SOUL 分层示意图：SOUL.md 管长期人格，AGENTS.md 管项目规则，会话临时提示覆盖当前任务](../../assets/solution-practical-07-soul-persona-layers-v1.png)
+![SOUL 分层示意图：SOUL.md 管长期人格，AGENTS.md 管项目规则，会话临时提示覆盖当前任务](../../assets/solution-practical-07-soul-persona-layers-v1.webp)
 
 ---
 
@@ -175,7 +175,7 @@ HERMES_HOME=/tmp/hermes-before hermes chat -Q -q "请先给结论，再列出2�
 hermes chat -Q -q "请先给结论，再列出2条你的回答习惯。总共不超过60字。"
 ```
 
-![Before / After 对照图：左侧没有 SOUL.md 更像通用默认风格；右侧有 SOUL.md 更贴近个人偏好](../../assets/rm2-4-soul-02-soul-behavior-diff.png)
+![Before / After 对照图：左侧没有 SOUL.md 更像通用默认风格；右侧有 SOUL.md 更贴近个人偏好](../../assets/rm2-4-soul-02-soul-behavior-diff.webp)
 
 ---
 

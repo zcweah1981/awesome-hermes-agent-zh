@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：[13-Ollama 本地模型](./13-Ollama%20本地模型.md) 讲的是"为什么要用、什么时候不该用、怎么混搭三层路由"。这一页**只讲一件事**：从 0 到第一次本地对话完成，最短路径、最少配置、最少坑。**适合不想读 300 行原理，只想 5 分钟跑通的人**。
 
-![Hermes + Ollama 最快路径：装 Hermes → 装配置向导 → 选 Custom OpenAI 兼容 → 指向 localhost:11434 → 选 gpt-oss:20b → 跑通](../../assets/practical-v2-03-ollama-fast-local-install.png)
+![Hermes + Ollama 最快路径：装 Hermes → 装配置向导 → 选 Custom OpenAI 兼容 → 指向 localhost:11434 → 选 gpt-oss:20b → 跑通](../../assets/practical-v2-03-ollama-fast-local-install.webp)
 
 ---
 

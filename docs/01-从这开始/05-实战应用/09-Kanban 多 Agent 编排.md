@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你怎么用 Hermes 的 Kanban 看板把多个 Agent 任务串起来——从需求拆解到分工执行到验收交付，全流程可视化。
 
-![多 Agent 看板图：任务进入看板后，经 Dispatcher 分配到不同 Profile，流转到 review 与 done](../../assets/solution-practical-09-kanban-multi-agent-orchestration-v1.png)
+![多 Agent 看板图：任务进入看板后，经 Dispatcher 分配到不同 Profile，流转到 review 与 done](../../assets/solution-practical-09-kanban-multi-agent-orchestration-v1.webp)
 
 ---
 

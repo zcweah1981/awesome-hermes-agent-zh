@@ -32,7 +32,7 @@ Desktop 只是把同一个 Hermes 换了个窗口呈现给你，底层没有任�
 
 下面是真实 Desktop 聊天界面示例。你可以把它理解成同一套 Hermes runtime 的图形化窗口：左边管理项目与会话，右边继续进行对话与工具调用。
 
-![Hermes Desktop 真实聊天界面截图：左侧项目与会话列表、右侧对话区共享同一个 Hermes Runtime](../../assets/desktop-07-real-chat-v1.png)
+![Hermes Desktop 真实聊天界面截图：左侧项目与会话列表、右侧对话区共享同一个 Hermes Runtime](../../assets/desktop-07-real-chat-v1.webp)
 
 ---
 
@@ -64,9 +64,9 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 
 ## 🚀 怎么启动
 
-![Hermes Desktop 真实项目选择界面截图：启动后选择工作目录并进入项目](../../assets/desktop-07-real-project-picker-v1.png)
+![Hermes Desktop 真实项目选择界面截图：启动后选择工作目录并进入项目](../../assets/desktop-07-real-project-picker-v1.webp)
 
-![Hermes Desktop 真实会话恢复界面截图：选择历史会话并继续聊天](../../assets/desktop-07-real-session-resume-v1.png)
+![Hermes Desktop 真实会话恢复界面截图：选择历史会话并继续聊天](../../assets/desktop-07-real-session-resume-v1.webp)
 
 装好之后，最常用的启动方式：
 
@@ -131,7 +131,7 @@ Hermes 有多种使用方式，它们共享同一个底层 runtime：
 
 > 下面这张结构图保留用来说明 Desktop、CLI、TUI 和 Gateway 的关系；真实界面以上方截图为准。
 >
-> ![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.png)
+> ![Hermes Desktop 结构图：Desktop、CLI、TUI 和 Gateway 共享同一个 Hermes Runtime、配置、会话、记忆和工具](../../assets/desktop-07-structure-v1.webp)
 
 ---
 

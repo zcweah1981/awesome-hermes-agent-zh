@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把 Hermes 的长期默认风格放到对的位置，让它不用你每次重复提醒，也能更像你希望长期合作的那个助手。
 
-![SOUL.md、/personality、AGENTS.md 分层结构图：SOUL.md 管长期默认人格，/personality 是会话内临时覆盖，AGENTS.md 管项目与仓库规则](../../assets/rm2-4-soul-01-soul-structure-map.png)
+![SOUL.md、/personality、AGENTS.md 分层结构图：SOUL.md 管长期默认人格，/personality 是会话内临时覆盖，AGENTS.md 管项目与仓库规则](../../assets/rm2-4-soul-01-soul-structure-map.webp)
 
 ---
 
@@ -237,7 +237,7 @@ HERMES_HOME=/tmp/hermes-after  hermes chat -Q -q "请先给结论，再列出2�
 - after 明显更贴近你写的风格
 - 同类问题重复问时，风格仍然稳定
 
-![终端前后对照图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧多出一份 SOUL.md 后，输出更贴近“先给结论、短句、列表”的长期风格](../../assets/rm2-4-soul-02-soul-behavior-diff.png)
+![终端前后对照图：左侧在临时 HERMES_HOME 中不放 SOUL.md，回答更接近通用默认风格；右侧多出一份 SOUL.md 后，输出更贴近“先给结论、短句、列表”的长期风格](../../assets/rm2-4-soul-02-soul-behavior-diff.webp)
 
 ---
 

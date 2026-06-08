@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：前面所有实战页都是"把 Hermes 当黑盒用"。这一页**拆开黑盒**——系统提示怎么组装、Agent Loop 怎么转、工具怎么注册、四种 API 模式怎么切换、缓存怎么省 90% 钱。**适合想自建、想魔改、想二次开发的人**。
 
-![Hermes 内核四象限：Agent Loop（左上）、System Prompt 12 段组装（右上）、Tools 自注册 registry（左下）、四种 API 模式自动切换（右下）](../../assets/practical-v2-09-deep-dive-build-your-own.png)
+![Hermes 内核四象限：Agent Loop（左上）、System Prompt 12 段组装（右上）、Tools 自注册 registry（左下）、四种 API 模式自动切换（右下）](../../assets/practical-v2-09-deep-dive-build-your-own.webp)
 
 ---
 

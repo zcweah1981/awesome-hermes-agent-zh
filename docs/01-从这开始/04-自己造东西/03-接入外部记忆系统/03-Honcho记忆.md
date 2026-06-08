@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把 Honcho 按“先跑起来、再接进去、最后验证”的顺序接通，并建立多助手共享记忆的正确心智。
 
-![Honcho 结构示意图：上层为 Honcho 外部记忆层，连接多个 Profile 与共享 Workspace；下层为始终保留的 USER.md 与 MEMORY.md](../../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.png)
+![Honcho 结构示意图：上层为 Honcho 外部记忆层，连接多个 Profile 与共享 Workspace；下层为始终保留的 USER.md 与 MEMORY.md](../../../assets/rm2-5-memory-providers-03-honcho-multi-agent-route.webp)
 
 ---
 

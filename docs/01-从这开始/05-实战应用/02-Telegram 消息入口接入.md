@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Telegram，让你在手机上直接跟 Agent 对话，不用每次 SSH 到服务器。
 
-![Telegram 接入结构图：BotFather 创建 Bot、用户白名单、Hermes Gateway、手机端对话入口](../../assets/solution-practical-02-telegram-entry-map-v1.png)
+![Telegram 接入结构图：BotFather 创建 Bot、用户白名单、Hermes Gateway、手机端对话入口](../../assets/solution-practical-02-telegram-entry-map-v1.webp)
 
 ---
 

@@ -1,6 +1,6 @@
 # 📦 04-把 Hermes 装上去
 
-![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../../assets/rm2-2-install-hermes-01-install-command-running.png)
+![Hermes 安装执行截图：在终端里执行官方一键安装命令后，已经开始出现安装输出](../../assets/rm2-2-install-hermes-01-install-command-running.webp)
 
 > 💡 **速答**：Hermes Agent 安装只需一条命令——Linux/macOS 用 `curl … | bash`，Windows Native（早期测试）用 PowerShell `iex (irm …)`。装完跑 `hermes version` 和 `hermes doctor` 验证，全过即安装成功。
 
@@ -195,7 +195,7 @@ hermes version
 hermes doctor
 ```
 
-![Hermes 安装后检查截图：图中展示 `hermes version` 的版本输出，以及一轮 `hermes doctor` 检查结果](../../assets/rm2-2-install-hermes-02-version-and-doctor-success.png)
+![Hermes 安装后检查截图：图中展示 `hermes version` 的版本输出，以及一轮 `hermes doctor` 检查结果](../../assets/rm2-2-install-hermes-02-version-and-doctor-success.webp)
 
 成功标志：
 - 命令可以正常执行

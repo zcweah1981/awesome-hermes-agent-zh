@@ -4,7 +4,7 @@
 
 > 一句话先说清楚：这一页教你在 VPS 上从零部署 Hermes，让它 7×24 小时在线，通过 Telegram 随时访问。
 
-![VPS 自托管路径图：选择机器、准备系统、安装 Hermes、配置模型、启动 Gateway](../../assets/solution-practical-06-vps-self-hosting-path-v1.png)
+![VPS 自托管路径图：选择机器、准备系统、安装 Hermes、配置模型、启动 Gateway](../../assets/solution-practical-06-vps-self-hosting-path-v1.webp)
 
 ---
 

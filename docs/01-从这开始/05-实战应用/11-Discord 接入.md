@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Discord 服务器，让团队成员在频道里 @ 一下 Bot 就能拿到 Agent 的回答，不用再切到 CLI 或 Telegram。
 
-![Hermes Agent 接入 Discord 全景：Developer Portal 创建 Application 与 Bot、Privileged Gateway Intents（Server Members + Message Content）、OAuth2 邀请链接、白名单与 Role 权限分级、频道与线程会话隔离](../../assets/practical-v2-01-discord-entry.png)
+![Hermes Agent 接入 Discord 全景：Developer Portal 创建 Application 与 Bot、Privileged Gateway Intents（Server Members + Message Content）、OAuth2 邀请链接、白名单与 Role 权限分级、频道与线程会话隔离](../../assets/practical-v2-01-discord-entry.webp)
 
 ---
 

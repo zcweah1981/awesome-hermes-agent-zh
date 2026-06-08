@@ -26,7 +26,7 @@
 
 ## 🚀 企业微信接入主线图
 
-![企业微信接入主线图](./assets/wecom-entry-structure-v1.png)
+![企业微信接入主线图](./assets/wecom-entry-structure-v1.webp)
 
 先看图，再记住这页真正的闭环：
 
@@ -100,7 +100,7 @@ Hermes 这边真正需要接住的是：
 
 ## 🖼️ 操作截图：进入创建企业微信智能机器人入口
 
-![企业微信官方创建智能机器人入口截图](./assets/wecom-create-bot-entry-official.png)
+![企业微信官方创建智能机器人入口截图](./assets/wecom-create-bot-entry-official.webp)
 
 这张官方截图证明的是：
 

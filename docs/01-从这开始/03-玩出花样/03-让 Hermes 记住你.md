@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把真正值得跨会话保留的信息，写进 Hermes 的持久记忆里，让它在下一次新会话里更像是真的记住了你。
 
-![持久记忆双层结构图：USER.md 记录用户画像与协作偏好，MEMORY.md 记录环境、项目与经验事实；session_search 是另一条独立机制](../../assets/rm2-4-memory-01-memory-layer-map.png)
+![持久记忆双层结构图：USER.md 记录用户画像与协作偏好，MEMORY.md 记录环境、项目与经验事实；session_search 是另一条独立机制](../../assets/rm2-4-memory-01-memory-layer-map.webp)
 
 ---
 

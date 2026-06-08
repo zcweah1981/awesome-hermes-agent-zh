@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你想让前端、客户端或自己的应用通过 HTTP 调用 Hermes 时，怎样把它暴露成一个可接入的 API Server。
 
-![前端接入结构图：Open WebUI、LobeChat、LibreChat 通过 OpenAI-compatible /v1 请求连接 Hermes API 服务器；右侧示意其内部网关、路由与负载均衡结构](../../assets/rm2-5-api-server-01-openai-compatible-backend-map-v5.png)
+![前端接入结构图：Open WebUI、LobeChat、LibreChat 通过 OpenAI-compatible /v1 请求连接 Hermes API 服务器；右侧示意其内部网关、路由与负载均衡结构](../../assets/rm2-5-api-server-01-openai-compatible-backend-map-v5.webp)
 
 > **一句话结论**：把 Hermes 暴露成 OpenAI-compatible 的 API Server，让前端或应用通过 HTTP 调用它。
 

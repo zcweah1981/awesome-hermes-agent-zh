@@ -11,7 +11,7 @@
 
 ## 🚀 先看主线
 
-![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.png)
+![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.webp)
 
 这张图只想帮你先抓住 4 个点：
 - 这是一条“全模态订阅 + 官方原生 provider”路线
@@ -173,7 +173,7 @@ hermes model
 
 官方文档截图里的 provider 选择界面如下：
 
-![Hermes model 设置截图：选择 MiniMax China (mainland China endpoint)](./assets/minimax-hermes-provider-cn.png)
+![Hermes model 设置截图：选择 MiniMax China (mainland China endpoint)](./assets/minimax-hermes-provider-cn.webp)
 
 看到什么算成功：
 - Hermes 已经切到 `MiniMax China`
@@ -195,7 +195,7 @@ hermes model
 
 官方依据截图里的关键字段如下：
 
-![MiniMax 官方依据截图：Hermes Agent 配置中的 MiniMax CN API Key 字段](./assets/minimax-hermes-apikey-cn.png)
+![MiniMax 官方依据截图：Hermes Agent 配置中的 MiniMax CN API Key 字段](./assets/minimax-hermes-apikey-cn.webp)
 
 看到什么算成功：
 - Hermes 已正确保存当前 Key
@@ -218,7 +218,7 @@ hermes model
 
 官方模型选择界面如下：
 
-![Hermes model 设置截图：选择 MiniMax-M2.7](./assets/minimax-hermes-model-select.png)
+![Hermes model 设置截图：选择 MiniMax-M2.7](./assets/minimax-hermes-model-select.webp)
 
 - 选完后启动 Hermes，先发一条最简单的问题
 

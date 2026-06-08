@@ -2,7 +2,7 @@
 
 这一页教你如何把一个完整的 Agent（含 SOUL、配置、技能、定时任务）打包成 Git 仓库，分享给别人一键安装。
 
-![Profile Distribution 结构图：本地 Profile 整理成不含密钥和私有数据的 Git 分发仓库，经 hermes profile install 安装后生成用户自己的 Profile](../../assets/rm2-4-profile-distribution-structure-v1.png)
+![Profile Distribution 结构图：本地 Profile 整理成不含密钥和私有数据的 Git 分发仓库，经 hermes profile install 安装后生成用户自己的 Profile](../../assets/rm2-4-profile-distribution-structure-v1.webp)
 
 > **一句话结论**：用 Profile Distribution 把你的 Agent 打包成一个 Git 仓库，别人一条命令就能装上、用起来。
 
@@ -227,7 +227,7 @@ distribution_owned:
 
 ### 第 4 步：推到 GitHub
 
-![Profile Distribution 操作截图示意：创建 distribution.yaml、放入 SOUL 和配置模板、完成脱敏检查、发布后用 hermes profile install 安装](../../assets/rm2-4-profile-distribution-operation-v1.png)
+![Profile Distribution 操作截图示意：创建 distribution.yaml、放入 SOUL 和配置模板、完成脱敏检查、发布后用 hermes profile install 安装](../../assets/rm2-4-profile-distribution-operation-v1.webp)
 
 ```bash
 git init

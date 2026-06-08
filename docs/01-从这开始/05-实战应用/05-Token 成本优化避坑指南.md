@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页帮你找到 Hermes 账单里最隐蔽的 Token 浪费源——工具定义膨胀、冗余 Skill 加载、上下文堆叠——并给出具体可操作的削减方法。
 
-![Token 成本拆解图：工具定义、系统 Prompt、记忆、技能、对话上下文分别占用多少输入成本](../../assets/solution-practical-05-token-cost-stack-v1.png)
+![Token 成本拆解图：工具定义、系统 Prompt、记忆、技能、对话上下文分别占用多少输入成本](../../assets/solution-practical-05-token-cost-stack-v1.webp)
 
 ---
 

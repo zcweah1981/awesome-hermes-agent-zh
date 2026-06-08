@@ -11,7 +11,7 @@
 
 ## 🚀 CLI 主线图
 
-![CLI 主线图](./assets/cli-entry-structure-v2.png)
+![CLI 主线图](./assets/cli-entry-structure-v2.webp)
 
 先看图，再记住这页真正的主线：
 

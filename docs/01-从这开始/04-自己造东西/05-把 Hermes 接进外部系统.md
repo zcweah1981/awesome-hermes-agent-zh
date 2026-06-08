@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你想让 Hermes 去用一个已经存在的外部工具或系统时，先用 MCP 跑通第一条接入主线。
 
-![结构图：当前阶段更自然的外部系统接入主线是 Hermes → MCP server → 外部工具系统；Plugins 在后位补充，不是这一页的主线](../../assets/rm2-5-mcp-and-plugins-01-main-route.png)
+![结构图：当前阶段更自然的外部系统接入主线是 Hermes → MCP server → 外部工具系统；Plugins 在后位补充，不是这一页的主线](../../assets/rm2-5-mcp-and-plugins-01-main-route.webp)
 
 > **一句话结论**：让 Hermes 通过 MCP 调用你已有的外部工具或系统，跑通第一条接入主线。
 

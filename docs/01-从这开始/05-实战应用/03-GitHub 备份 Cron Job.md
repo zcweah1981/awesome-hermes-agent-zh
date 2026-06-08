@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你用 Hermes Cron 每天自动把 SOUL.md、memory.md、skills 等核心文件推到 GitHub，给整个 Hermes 实例上一份保险。
 
-![GitHub 备份流程图：本地 Hermes 目录、定时 git add commit push、远程私有仓库存档](../../assets/solution-practical-03-github-backup-cron-v1.png)
+![GitHub 备份流程图：本地 Hermes 目录、定时 git add commit push、远程私有仓库存档](../../assets/solution-practical-03-github-backup-cron-v1.webp)
 
 ---
 

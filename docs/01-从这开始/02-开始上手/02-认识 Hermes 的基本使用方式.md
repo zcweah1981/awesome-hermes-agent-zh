@@ -1,6 +1,6 @@
 # ⚙️ 02-认识 Hermes 的基本使用方式
 
-![终端主入口界面截图：在 Linux 终端执行 `hermes` 后，界面显示已进入 Hermes Agent 交互主入口，并停在可继续输入的提示符位置。](../../assets/rm2-3-basic-usage-01-cli-main-surface.png)
+![终端主入口界面截图：在 Linux 终端执行 `hermes` 后，界面显示已进入 Hermes Agent 交互主入口，并停在可继续输入的提示符位置。](../../assets/rm2-3-basic-usage-01-cli-main-surface.webp)
 
 > 这一页不讲高级玩法，只帮你把每天最常用的那条路径练顺：打开 Hermes、问一句、接着追问、最后正常退出。
 
@@ -83,7 +83,7 @@ hermes
 hermes chat -q "请用一句中文确认你已经可以正常工作"
 ```
 
-![终端快速请求返回截图：在终端执行 `hermes chat -q` 后，界面返回一条正常中文回复，并给出会话恢复信息。](../../assets/rm2-3-basic-usage-02-basic-chat-flow-success.png)
+![终端快速请求返回截图：在终端执行 `hermes chat -q` 后，界面返回一条正常中文回复，并给出会话恢复信息。](../../assets/rm2-3-basic-usage-02-basic-chat-flow-success.webp)
 
 这条命令适合 3 种情况：
 - 你只想快速验证 Hermes 现在是否正常

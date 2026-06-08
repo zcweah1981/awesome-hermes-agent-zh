@@ -13,7 +13,7 @@
 
 ## 🚀 先看主线
 
-![智谱 GLM Coding Plan 主线图](./assets/glm-coding-hero-v1.png)
+![智谱 GLM Coding Plan 主线图](./assets/glm-coding-hero-v1.webp)
 
 这张图只想帮你先抓住 4 个点：
 - 这是一条“单厂商深用”路线，不是统一聚合套餐页
@@ -171,7 +171,7 @@ hermes model
 
 官方文档截图里也能看到 Hermes 的 provider 选择入口：
 
-![Hermes model 设置截图：选择 GLM / z.ai provider](./assets/glm-hermes-model-menu-docs.png)
+![Hermes model 设置截图：选择 GLM / z.ai provider](./assets/glm-hermes-model-menu-docs.webp)
 
 看到什么算成功：
 - Hermes 已经保存 GLM 作为当前 provider

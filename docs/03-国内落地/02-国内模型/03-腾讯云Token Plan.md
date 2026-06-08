@@ -11,7 +11,7 @@
 
 ## 🚀 先看主线
 
-![腾讯云 Token Plan 深色接入主线图](./assets/tencent-tokenplan-hero-gemini-31-v4.png)
+![腾讯云 Token Plan 深色接入主线图](./assets/tencent-tokenplan-hero-gemini-31-v4.webp)
 
 这张图只想帮你先抓住 4 个点：
 - 这是一条“统一套餐入口”路线，不是最低门槛按量页
@@ -113,7 +113,7 @@
 
 如果你要先把最关键的接入步骤跑通，先看这张真实截图：
 
-![腾讯云 Token Plan 获取 API Key 的官方页面真实截图](./assets/tencent-tokenplan-api-key-real-screenshot.png)
+![腾讯云 Token Plan 获取 API Key 的官方页面真实截图](./assets/tencent-tokenplan-api-key-real-screenshot.webp)
 
 这张图只证明两件事：
 - 在 TokenHub > Token Plan 页面点击“生成密钥”

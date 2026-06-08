@@ -6,7 +6,7 @@
 
 ## 🚀 API 服务与 Open WebUI 主线图
 
-![API 服务与 Open WebUI 主线图](./assets/api-openwebui-entry-structure-v3.png)
+![API 服务与 Open WebUI 主线图](./assets/api-openwebui-entry-structure-v3.webp)
 
 先看图，再记住这页真正的主线：
 

@@ -48,7 +48,7 @@
 
 ## ✅ 先做完成度检查：你现在卡在迁移前、共存中，还是 Hermes 化阶段？
 
-![OpenClaw 到 Hermes 的迁移阶段检查图：按迁移前检查、共存中检查、Hermes 化检查三列确认自己当前所处阶段，不要跳步。](./assets/openclaw-checklist-overview-v4.png)
+![OpenClaw 到 Hermes 的迁移阶段检查图：按迁移前检查、共存中检查、Hermes 化检查三列确认自己当前所处阶段，不要跳步。](./assets/openclaw-checklist-overview-v4.webp)
 
 这张图不是让你一次全勾完，而是帮你确认：
 - 你现在是不是还没到迁移阶段
@@ -233,7 +233,7 @@
 
 ## 🔁 回退路径：如果迁移后越改越乱，怎么收回来
 
-![迁移卡住后的排障与回退路径图：先看症状，再判断属于角色、模板、技能还是模型入口层，最后决定修结构还是退回共存模式。](./assets/openclaw-troubleshooting-path-v4.png)
+![迁移卡住后的排障与回退路径图：先看症状，再判断属于角色、模板、技能还是模型入口层，最后决定修结构还是退回共存模式。](./assets/openclaw-troubleshooting-path-v4.webp)
 
 如果你已经改到自己都说不清问题在哪，按这个顺序收回来：
 1. 停止同时改多层变量

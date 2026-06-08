@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Obsidian，让你的知识库从"死笔记"变成"能对话、能自动整理、能自主学习的第二大脑"。
 
-![Obsidian 第二大脑流程图：Vault 笔记、搜索检索、对话提炼、自动写回知识库](../../assets/solution-practical-08-obsidian-second-brain-v1.png)
+![Obsidian 第二大脑流程图：Vault 笔记、搜索检索、对话提炼、自动写回知识库](../../assets/solution-practical-08-obsidian-second-brain-v1.webp)
 
 ---
 

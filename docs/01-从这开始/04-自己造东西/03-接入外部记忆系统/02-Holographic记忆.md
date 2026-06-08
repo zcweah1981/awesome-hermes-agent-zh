@@ -3,7 +3,7 @@
 这一页只解决一件事：
 把第一条最容易落地的外部记忆路线接通，并且知道接通后该看哪些信号验收。
 
-![Holographic 接入结构图：中央为 Holographic 接入节点，下连内建 USER.md 与 MEMORY.md；图中同时标出一条优先接入的外部记忆路线](../../../assets/rm2-5-memory-providers-02-holographic-first-route.png)
+![Holographic 接入结构图：中央为 Holographic 接入节点，下连内建 USER.md 与 MEMORY.md；图中同时标出一条优先接入的外部记忆路线](../../../assets/rm2-5-memory-providers-02-holographic-first-route.webp)
 
 ---
 

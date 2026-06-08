@@ -13,7 +13,7 @@
 
 ## 🚀 先看主线
 
-![DeepSeek 按量接口最短接入主线图](./assets/deepseek-api-hero-v1.png)
+![DeepSeek 按量接口最短接入主线图](./assets/deepseek-api-hero-v1.webp)
 
 这张图只想帮你先抓住 4 个点：
 - DeepSeek 这条路是按量计费，不是套餐页

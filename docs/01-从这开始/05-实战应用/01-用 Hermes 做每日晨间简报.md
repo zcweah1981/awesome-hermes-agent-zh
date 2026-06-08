@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把"每天早上刷新闻、看热点、整理要点"这件事，交给 Hermes 的 Cron 自动执行，结果直接送到你的 Telegram 或本地文件。
 
-![每日晨间简报流程图：定时触发、抓取来源、摘要筛选、投递到 Telegram 或本地](../../assets/solution-practical-01-daily-briefing-flow-v1.png)
+![每日晨间简报流程图：定时触发、抓取来源、摘要筛选、投递到 Telegram 或本地](../../assets/solution-practical-01-daily-briefing-flow-v1.webp)
 
 ---
 

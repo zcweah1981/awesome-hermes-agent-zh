@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="./assets/hermes-logo.png" alt="Hermes Agent 中文站 Logo" width="36" height="36" align="absmiddle" style="vertical-align: -0.14em; border-radius: 9px;">
+  <img src="./assets/hermes-logo.webp" alt="Hermes Agent 中文站 Logo" width="36" height="36" align="absmiddle" style="vertical-align: -0.14em; border-radius: 9px;">
   Hermes Agent 中文站
 </h1>
 
@@ -20,7 +20,7 @@
 </div>
 
 <p align="center">
-  <img src="./assets/readme-hero-hub.jpg" alt="Hermes Agent 中文站首页主视觉：AI Agent 全流程实践指南，从这开始、国内落地、OpenClaw 迁移三大入口" width="100%">
+  <img src="./assets/readme-hero-hub.webp" alt="Hermes Agent 中文站首页主视觉：AI Agent 全流程实践指南，从这开始、国内落地、OpenClaw 迁移三大入口" width="100%">
 </p>
 
 ## ✨ 这是什么
@@ -61,7 +61,7 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 | 我不是来学概念，我只想查命令/配置/参考 | [06-reference](./docs/06-reference/01-总览.md) | CLI、Slash Commands、Profiles、环境变量、Tools、Toolsets、MCP、Skills 目录 |
 
 <p align="center">
-  <img src="./assets/readme-user-routing.jpg" alt="Hermes Agent 中文站用户分流区：从这开始、国内落地、从 OpenClaw 过来、文档总览四类入口" width="100%">
+  <img src="./assets/readme-user-routing.webp" alt="Hermes Agent 中文站用户分流区：从这开始、国内落地、从 OpenClaw 过来、文档总览四类入口" width="100%">
 </p>
 
 ### ✅ 如果你只想最快决定从哪进
@@ -86,7 +86,7 @@ Hermes 的价值，不只是“能聊”，而是更适合长期运行、能力�
 下面这张图把 **Learning Loop、三层记忆、Skill 自我进化、MCP 连接、低成本后台运行** 和主流工具差异放在同一张图里。它适合先建立整体理解；真正开始操作时，仍然建议从上面的模块入口进入。
 
 <p align="center">
-  <img src="./assets/readme-hermes-capability-map.jpg" alt="Hermes Agent 能力总览：闭环学习、三层记忆、Skill 自我进化、MCP 连接、低成本部署以及与 OpenClaw 和 Claude Code 的差异" width="100%">
+  <img src="./assets/readme-hermes-capability-map.webp" alt="Hermes Agent 能力总览：闭环学习、三层记忆、Skill 自我进化、MCP 连接、低成本部署以及与 OpenClaw 和 Claude Code 的差异" width="100%">
 </p>
 
 ### 这张图建议这样读
@@ -105,7 +105,7 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - **个人知识助手**：利用记忆与持续上下文，把长周期调研串起来
 
 <p align="center">
-  <img src="./assets/readme-scenarios.jpg" alt="Hermes Agent 中文站实战场景区：多 Agent 编排、MCP 集成、个人知识助手" width="100%">
+  <img src="./assets/readme-scenarios.webp" alt="Hermes Agent 中文站实战场景区：多 Agent 编排、MCP 集成、个人知识助手" width="100%">
 </p>
 
 ### 这张图更适合回答两个问题
@@ -173,7 +173,7 @@ Hermes 是从 OpenClaw 分支发展出来的独立项目。如果你已经在用
 - 页面从哪里来、为什么会出现在这里
 
 <p align="center">
-  <img src="./assets/readme-governance-panel.jpg" alt="Hermes Agent 中文站项目信息与治理：治理与来源、仓库基础信息" width="100%">
+  <img src="./assets/readme-governance-panel.webp" alt="Hermes Agent 中文站项目信息与治理：治理与来源、仓库基础信息" width="100%">
 </p>
 
 如果你关心这个仓库怎么组织、哪些内容应该公开保留、页面从哪里来：

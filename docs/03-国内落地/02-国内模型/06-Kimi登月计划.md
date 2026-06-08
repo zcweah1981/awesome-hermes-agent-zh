@@ -11,7 +11,7 @@
 
 ## 🚀 先看主线
 
-![Kimi登月计划核心与四模块结构图](./assets/kimi-moonshot-modules-cliproxy-v2.png)
+![Kimi登月计划核心与四模块结构图](./assets/kimi-moonshot-modules-cliproxy-v2.webp)
 
 这张图只想帮你先抓住 4 个点：
 - `Kimi Code` 是会员权益型路线

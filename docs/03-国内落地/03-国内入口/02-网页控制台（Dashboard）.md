@@ -6,7 +6,7 @@
 
 ## 🚀 Dashboard 主线图
 
-![Dashboard 主线图](./assets/dashboard-entry-structure-v2.png)
+![Dashboard 主线图](./assets/dashboard-entry-structure-v2.webp)
 
 先看图，再记住这页真正的主线：
 
