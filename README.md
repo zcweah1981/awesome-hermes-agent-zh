@@ -103,7 +103,7 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 - **多 Agent 编排**：把调研、写稿、测试等工作拆给不同 Agent 协同处理
 - **MCP 集成**：把 GitHub、数据库、Slack 和更多外部应用接到 Agent 身上
 - **个人知识助手**：利用记忆与持续上下文，把长周期调研串起来
-- **X/Twitter 工作流**：用 [Hermes Tweet](https://github.com/Xquik-dev/hermes-tweet) 扩展搜索、资料/时间线读取，以及显式开关保护的发布/关注动作
+- **X/Twitter 工作流**：先读 [X/Twitter 内容与互动助手](./docs/02-现成方案/01-内容创作与发布/05-X-Twitter%20内容与互动助手.md)，再按该页说明用 Hermes Tweet 扩展搜索、资料/时间线读取，以及显式开关保护的发布/关注动作
 
 <p align="center">
   <img src="./assets/readme-scenarios.webp" alt="Hermes Agent 中文站实战场景区：多 Agent 编排、MCP 集成、个人知识助手" width="100%">
