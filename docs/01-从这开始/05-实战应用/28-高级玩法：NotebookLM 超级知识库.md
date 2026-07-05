@@ -130,12 +130,9 @@ Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作
 ### 2. Cookie 的安全与时效
 你提取的 Cookie 有有效期，一旦过期就需要重新获取。同时，必须用安全的方式（如环境变量）来存储它，避免硬编码在脚本里。
 
-## ➡️ 下一步
+## ⬅️ 上一步
 
-这个工作流只是一个起点。你可以继续深化：
-- **创建真正的 Skill**：将上述脚本封装成一个完整的 Hermes Skill，用更自然的语言进行调用。
-- **自动化上传**：创建一个 Cron 定时任务，每天自动将指定文件夹的新文档上传到 NotebookLM。
-- **结合搜索**：让 Agent 用 `web_search` 搜索网页，然后将高质量内容存入 NotebookLM 作为永久知识。
+- [**实战：基于 Telegram 和 Gmail 打造个人事务处理中心**](./27-实战：个人事务处理中心.md)
 
 ## 📖 出处
 - [notebooklm-py on GitHub](https://github.com/dwarvesf/notebooklm-py)

@@ -319,21 +319,13 @@ Hermes 的实现：
 
 ---
 
+## ⬅️ 上一步
+
+- [**21-Hermes Agent + Ollama：本地部署最快路径**](./21-Hermes%20Agent%20与%20Ollama%20最快路径.md)
+
 ## ➡️ 下一步
 
-恭喜——你已经把 [05-实战应用](./01-总览.md) 的所有 22 篇都看完了。
-
-建议下一步：
-
-- 回到 [05-实战应用总览](./01-总览.md)，挑一篇深读复用
-- 或前往 [06-reference](../../06-reference/01-总览.md) 查 API 参考
-- 或开始你的 [04-自己造东西](../04-自己造东西/01-总览.md) 之旅
-
-如果你想自建 / 二开 Hermes，参考：
-- [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)（上游）
-- [Hermes 官方文档](https://hermes-agent.nousresearch.com/docs)
-
----
+- [**23. 实战：个人项目开发工作流**](./23-实战：个人项目开发工作流.md)
 
 ## 📖 出处
 

@@ -274,15 +274,13 @@ Discord 区分 User Token 和 Bot Token。Hermes 必须用 Bot Token（在 Bot �
 
 ---
 
+## ⬅️ 上一步
+
+- [**10-Home Assistant 智能家居**](./10-Home%20Assistant%20智能家居.md)
+
 ## ➡️ 下一步
 
-完成后进入：
-[12-MCP 接入指南：给 Hermes 装上"万能插头"](<./12-MCP 接入指南.md>)
-
-如果你想先回到上一阶段入口重新确认位置：
-[05-实战应用总览](./01-总览.md)
-
----
+- [**12-MCP 接入指南：给 Hermes 装上"万能插头"**](./12-MCP%20接入指南.md)
 
 ## 📖 出处
 

@@ -286,15 +286,13 @@ find "$HERMES_HOME/profiles/content/skills/agent_created/" -name "SKILL.md" -mti
 
 ---
 
+## ⬅️ 上一步
+
+- [**17-语音模式：让 Hermes 听懂你说的话、开口回答你**](./17-语音模式.md)
+
 ## ➡️ 下一步
 
-完成后进入：
-[19-Hermes Agent 控制室：从一个 Agent 到专员团队的演进模板](./19-Hermes%20Agent%20控制室.md)
-
-如果你想先回到上一阶段入口重新确认位置：
-[05-实战应用总览](./01-总览.md)
-
----
+- [**19-Hermes Agent 控制室：从一个 Agent 到专员团队的演进模板**](./19-Hermes%20Agent%20控制室.md)
 
 ## 📖 出处
 

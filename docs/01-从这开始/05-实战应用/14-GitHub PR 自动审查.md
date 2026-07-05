@@ -424,15 +424,13 @@ hermes webhook subscribe pr-review \
 
 ---
 
+## ⬅️ 上一步
+
+- [**13-Ollama 本地模型：让 Hermes 完全免费跑起来**](./13-Ollama%20本地模型.md)
+
 ## ➡️ 下一步
 
-完成后进入：
-[15-自定义 Skills：教 Hermes 学会你的独门工作流](<./15-自定义 Skills.md>)
-
-如果你想先回到上一阶段入口重新确认位置：
-[05-实战应用总览](./01-总览.md)
-
----
+- [**15-自定义 Skills：教 Hermes 学会你的独门工作流**](./15-自定义%20Skills.md)
 
 ## 📖 出处
 
