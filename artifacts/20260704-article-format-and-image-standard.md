@@ -228,29 +228,30 @@ description: "..."
 
 ## 10. 结构图 / 流程图视觉风格
 
-基于现有站内图（如 `practical-v2-*`、`solution-*`、`rm2-*`）抽样分析，后续结构图和流程图统一采用以下风格：
+基准图：`docs/assets/practical-v2-02-ollama-local-model.webp`。后续实战结构图必须复刻它的“深色电路板架构图”语言，而不是泛科技发光节点图。
 
 - **画幅**：优先 16:9 横图，推荐 1600×900 或 1376×768；复杂大图可用 2752×1536。
-- **背景**：深蓝黑或近黑背景，带细微科技网格、电路纹理或数字蓝图质感；背景不能抢正文信息。
-- **主色**：冷色科技蓝 / 青色作为主强调色，用于节点边框、连线、箭头、图标。
-- **辅助色**：少量橙色/琥珀色用于关键触发、告警或最终交付；少量绿色用于成功、通过、健康状态。
-- **节点**：圆角矩形卡片，深色填充，青色发光边框，轻微玻璃拟态或科技 UI 质感。
-- **连线**：发光青色线条，圆角转折，清晰箭头；复杂流程允许分叉和汇聚，但不能缠绕。
-- **布局**：优先模块化、留白充分；流程图强调“从左到右 / 从上到下”的方向；对比图用左右两栏；中心协作图用 hub-and-spoke。
-- **字体**：现代无衬线中文字体风格，白色/浅灰文字，标题略粗；图片内文字必须短，避免整段说明。
-- **图标**：使用简单线性图标或抽象 UI 图标，颜色与主色一致；不要使用复杂插画人物抢焦点。
-- **可读性**：中文标签要大、短、清楚；一张图只表达一个核心关系。
+- **构图**：使用“中央核心模块 + 周边功能模块/对照卡”的架构图布局；信息关系要像系统设计图，不要做星图、脑图、雷达图、粒子网络或随机 hub-and-spoke。
+- **背景**：深蓝黑或近黑背景，叠加克制的细网格/电路板纹理；背景只提供蓝图感，不要星空、强粒子、强光晕或海报渐变。
+- **主色**：前景以白色/浅蓝白为主，模块边框、文字、连线保持高对比；浅蓝灰只用于标题条或少量模块填充。
+- **辅助色**：只用少量橙色/琥珀色实心圆点作为连接器或关键触发点；绿色只用于“健康/成功”状态，不做大面积装饰。
+- **节点**：统一圆角矩形。大模块是白色细边框容器；内部子模块是深蓝灰填充 + 白色边框；“对照卡”可用浅蓝灰标题条；核心模块边框略粗，内部要有芯片/电路/路由中枢线框图标。
+- **连线**：使用白色或浅蓝白 1-2px 直角折线，模拟 PCB 电路走线；连接点和转折重点放 6-8px 橙色圆点；避免霓虹粗线、曲线蛛网和杂乱箭头。
+- **布局**：模块分布要平衡，左右/上下留白充足；流程图可以从左到右，但仍要保持电路走线和容器层级；对比图用左右大容器 + 中央路由/判断模块。
+- **字体**：现代无衬线中文字体，白色文字；图片内文字短、粗、清楚。主标题最大，核心模块次之，子模块标签更小；禁止整段说明。
+- **图标**：统一白色线框图标，主题明确；核心模块图标更复杂，其它模块图标简洁。不要人物、吉祥物、3D 图标、彩色贴纸或装饰性图标堆砌。
+- **可读性**：一张图只表达一个核心系统关系；读者 5 秒内能看懂主线。
 
 生图提示词必须明确包含：
 
 ```text
-16:9 futuristic tech diagram, dark blue-black background, subtle glowing grid or circuit pattern, rounded rectangular UI cards, glowing cyan borders, clean sans-serif Chinese typography, white and light gray text, cyan flow lines with rounded corners and arrowheads, small orange highlight for key trigger or alert, small green dots for success status, professional high-tech documentation style, minimalist, readable, no SVG, no hand-drawn style
+16:9 dark circuit-board architecture diagram, deep blue-black background with subtle fine grid, central Hermes routing hub module, surrounding rounded rectangular system modules and comparison cards, white thin borders, dark blue-gray card fills, clean white Chinese typography, PCB-style right-angle connector lines in white or pale cyan, small orange circular connection nodes at endpoints and turns, white outline icons, balanced technical documentation layout, minimal glow, readable, professional, similar style to practical-v2-02-ollama-local-model.webp
 ```
 
 负面约束：
 
 ```text
-no cartoon characters, no messy arrows, no tiny unreadable text, no colorful gradient poster, no random icons, no 3D mascot, no photorealistic people, no decorative-only image, no SVG line art export look
+no cartoon characters, no hand-drawn style, no SVG export look, no neon spider web, no random particle network, no star map, no colorful gradient poster, no 3D mascot, no photorealistic people, no tiny unreadable text, no messy arrows, no decorative-only image, no large glowing cyan borders
 ```
 
 ## 11. 图片类型标准
