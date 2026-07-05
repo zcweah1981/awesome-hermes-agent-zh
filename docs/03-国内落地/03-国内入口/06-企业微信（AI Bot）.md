@@ -308,6 +308,121 @@ hermes gateway
 - `WECOM_SECRET` 是否填写
 - Gateway 是否使用了正确配置文件 / profile
 
+
+## 💡 实际应用场景
+
+只完成接入还不够，将 Hermes Agent 与企业微信结合，能在团队协作中发挥巨大价值。以下是两个常见的实际应用场景。
+
+### 📊 场景一：信息聚合日报
+
+每天自动搜集特定主题的最新动态，整理成日报推送到团队群，让所有人保持信息同步。
+
+**🎯 目标**：创建一个定时任务，每天早上 9 点自动搜索“AI Agent”相关的最新资讯，并将结果摘要发送到企业微信指定群聊。
+
+**🔑 核心思路**：
+1.  使用 `cronjob` 工具创建一个定时任务。
+2.  任务的 `prompt` 负责定义信息搜集（`web_search`）和内容摘要的核心逻辑。
+3.  任务的 `deliver` 参数指定推送到企业微信。
+
+**📝 配置示例**：
+
+你可以通过 Hermes Agent 的 `cronjob` 命令直接创建这个任务：
+
+```bash
+hermes cronjob create \
+  --name "ai-agent-daily-briefing" \
+  --schedule "0 9 * * *" \
+  --prompt "请使用 web_search 搜索最新的'AI Agent'相关技术文章和新闻，然后将结果汇总成一个不超过 300 字的摘要。摘要应包含标题、链接和简短介绍。请确保排版清晰，适合在企业微信群中阅读。" \
+  --deliver "wecom:your_chat_id" \
+  --enabled_toolsets '["web"]'
+```
+
+**🤔 如何获取 `wecom:your_chat_id`？**
+- `your_chat_id` 是企业微信中目标群聊或用户的 ID。通常在 Gateway 启动时，当有消息从企业微信发过来，日志里会打印出 `chat_id`。你可以先在目标群里 @机器人发个消息，然后从 Gateway 日志中找到它。
+
+**✅ 验收**：
+- 任务创建后，在第二天早上 9 点，你应该能在指定的企业微信群里收到 Hermes Agent 自动发送的 AI Agent 资讯日报。
+
+### 🚨 场景二：服务器与业务告警
+
+将 Hermes Agent 部署在服务器上，充当一个 7x24 小时的“数字运维工程师”，在发现异常时第一时间通过企业微信告警。
+
+**🎯 目标**：定时监控服务器的磁盘空间、内存使用率和 Nginx 服务状态。当任何指标超出阈值时，立即通过企业微信发送告警信息。
+
+**🔑 核心思路**：
+1.  同样使用 `cronjob` 创建一个高频（例如每 5 分钟）巡检任务。
+2.  但这次使用 `script` 参数，让 cron job 执行一个本地的监控脚本。
+3.  监控脚本负责检查系统状态，**只在发现异常时才打印告警信息**。
+4.  Cron 任务会将脚本的输出（也就是告警信息）通过企业微信发送出来。如果脚本没有输出，则保持静默。
+
+**🖼️ 告警流程图**：
+
+我们将复用在“服务器自动化运维”一文中已有的流程图，因为它清晰地展示了从巡检到告警的完整闭环。
+
+![Hermes Agent 做服务器自动化运维闭环：Cron 定时巡检磁盘、内存和 Nginx 状态，异常时通过企业微信告警，正常时保持沉默。](../../assets/rm2-5-cron-and-automation-01-scheduled-flow-map.webp)
+
+**📝 监控脚本示例 (`/opt/hermes/scripts/server_watchdog.sh`)**
+
+首先，你需要创建一个监控脚本。
+
+```bash
+#!/bin/bash
+
+# 设置告警阈值
+DISK_USAGE_THRESHOLD=90
+MEMORY_USAGE_THRESHOLD=85
+
+# 检查磁盘使用率
+DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+if [ "$DISK_USAGE" -gt "$DISK_USAGE_THRESHOLD" ]; then
+  echo "🚨 **【一级告警：磁盘空间不足】** 🚨
+- **服务器**: prod-server-01
+- **挂载点**: /
+- **当前使用率**: $DISK_USAGE%
+- **阈值**: $DISK_USAGE_THRESHOLD%
+- **建议**: 请立即登录服务器清理空间！"
+fi
+
+# 检查内存使用率
+MEMORY_USAGE=$(free | awk '/Mem/ {printf("%.0f"), $3/$2*100}')
+if [ "$MEMORY_USAGE" -gt "$MEMORY_USAGE_THRESHOLD" ]; then
+  echo "⚠️ **【二级告警：内存使用率过高】** ⚠️
+- **服务器**: prod-server-01
+- **当前使用率**: $MEMORY_USAGE%
+- **阈值**: $MEMORY_USAGE_THRESHOLD%
+- **建议**: 请检查是否有内存泄漏或高负载进程。"
+fi
+
+# 检查 Nginx 服务状态
+if ! systemctl is-active --quiet nginx; then
+  echo "🔥 **【紧急告警：Nginx 服务已停止】** 🔥
+- **服务器**: prod-server-01
+- **服务**: Nginx
+- **状态**: Inactive/Failed
+- **建议**: 请立即重启服务并检查日志！"
+fi
+```
+
+**⚙️ 创建 Cron 任务**
+
+然后用 `cronjob` 工具把这个脚本变成一个告警机器人。
+
+```bash
+hermes cronjob create \
+  --name "server-watchdog-alert" \
+  --schedule "*/5 * * * *" \
+  --script "/opt/hermes/scripts/server_watchdog.sh" \
+  --deliver "wecom:your_admin_chat_id"
+```
+
+**✅ 验收**：
+- **正常情况**：你的企业微信会非常安静，不会收到任何消息。
+- **异常情况**：一旦服务器磁盘、内存或 Nginx 出现问题，你会在 5 分钟内收到来自 Hermes Agent 的精准告警。
+
+这两个场景展示了企业微信作为企业内部强大通知与交互渠道的潜力。你可以举一反三，创造更多符合团队需求的自动化工作流，例如：
+- **审批/待办提醒**：定时检查项目管理工具（Jira, Trello）中分配给你的“待办”事项，并通过企微提醒。
+- **团队知识同步**：当团队知识库（Confluence, Notion）有重要更新时，自动将更新摘要推送到相关群聊。
+
 ## ❓FAQ
 
 ### 1. 企业微信是不是 Hermes 的第一主入口？
