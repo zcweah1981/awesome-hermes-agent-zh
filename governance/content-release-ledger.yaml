@@ -1,4 +1,22 @@
 releases:
+- release_id: hz-practical-nav-image-repair-20260705-T4-governance-and-final-qa
+  task_group: hz-practical-nav-image-repair-20260705
+  release_date: '2026-07-05'
+  status: staged
+  summary: 新增“实战：用一张图帮用户选对入口”文章，并修复相关页面的导航链接与图片元数据。
+  content_sets:
+  - priority: P2
+    summary: 新增实战案例并修复周边导航。
+    files:
+    - docs/01-从这开始/02-开始上手/04-实战-用一张图帮用户选对入口.md
+  verification:
+    content_review:
+      status: pending
+      reviewer: seiya
+    deployment:
+      status: pending
+      deployed_at: null
+      commit_sha: null
 - release_id: hz-p0-p1-style-repair-20260705-T3-governance-metadata-update
   task_group: hz-p0-p1-style-repair-20260705
   release_date: '2026-07-05'

@@ -440,6 +440,27 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-开始上手
+  image:
+    src: /images/slash-commands-and-sessions/hero.webp
+    alt: '常用斜杠命令与会话管理'
+  prev_page: /start/getting-started/basic-usage
+  next_page: /start/getting-started/practical-entry-selection
+  slug: /start/getting-started/practical-entry-selection
+  module: start
+  page_type: doc-page
+  title: '🖼️ 04-实战：用一张图帮用户选对入口'
+  section: practical-entry-selection
+  description: 这一页是一个完整的实战案例，带你用 Hermes 的 browser+vision 工具分析一个文档站，并用 excalidraw 工具画出一张能帮用户选对入口的导航图。
+  order: 27.5
+  status: published
+  updated: '2026-07-05'
+  source_type: practical_example
+  nav_group: 02-开始上手
+  image:
+    src: /images/practical-entry-selection/hero.webp
+    alt: '用一张图帮用户选对入口'
+  prev_page: /start/getting-started/slash-commands-and-sessions
+  next_page: /start/getting-started/curated-skills
 - source: docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
   slug: /start/getting-started/curated-skills
   module: start
@@ -452,7 +473,11 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-开始上手
-- source: docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
+  image:
+    src: /images/curated-skills/hero.webp
+    alt: '常用 Skills（按日常使用场景精选）'
+  prev_page: /start/getting-started/practical-entry-selection
+  next_page: /start/getting-started/connect-message-platform
   slug: /start/getting-started/connect-message-platform
   module: start
   page_type: doc-page
@@ -464,7 +489,11 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 02-开始上手
-- source: docs/01-从这开始/03-玩出花样/01-总览.md
+  image:
+    src: /images/connect-message-platform/hero.webp
+    alt: '接入一个消息平台（推荐飞书）'
+  prev_page: /start/getting-started/curated-skills
+  next_page: /start/personalize
   slug: /start/personalize
   module: start
   page_type: module-overview
@@ -488,7 +517,11 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 03-玩出花样
-- source: docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+  image:
+    src: /images/soul/hero.webp
+    alt: '让 Hermes 更像你'
+  prev_page: /start/getting-started/connect-message-platform
+  next_page: /start/personalize/memory-basics
   slug: /start/personalize/memory-basics
   module: start
   page_type: doc-page

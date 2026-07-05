@@ -19,7 +19,7 @@
 3.  **闭环任务**：使用 `execute_code` 替代零散的 `terminal` 调用，确保多步任务的原子性。
 4.  **索要证据**：要求 Agent 在完成后提供 PR 链接、Commit ID 或文件路径，而非口头承诺。
 
-![Hermes Agent 能力总览图](../../assets/readme-hermes-capability-map.webp "一张描绘了 Hermes Agent 从基础安装、连接、使用到构建和创造的完整学习路径图。这象征着一个 Agent 从简单工具演变为复杂助理的成长过程。")
+![从工具到助理的最佳实践示意图：围绕 Hermes 展开健康则沉默、知识边界、闭环任务、证据优先等七条原则](../../assets/practical-v2-26-tool-to-assistant-best-practices.webp "Hermes Agent 从工具升级为助理的七条方法论原则图，强调少打扰、可恢复和可验证。")
 
 ## 具体怎么做/工作流拆解
 
