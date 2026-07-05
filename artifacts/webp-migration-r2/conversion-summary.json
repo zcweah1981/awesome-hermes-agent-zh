@@ -1,0 +1,17 @@
+{
+  "converted_count": 0,
+  "deleted_count": 0,
+  "exceptions": [],
+  "converted": [],
+  "deleted": [],
+  "replacement_hits": [
+    {
+      "file": "governance/plans/2026-06-05-practical-deep-apps-image-spec.md",
+      "note": "stale image extension references normalized to .webp"
+    }
+  ],
+  "total_before_bytes": 0,
+  "total_after_bytes": 0,
+  "total_saved_bytes": 0,
+  "total_saved_percent": 0
+}

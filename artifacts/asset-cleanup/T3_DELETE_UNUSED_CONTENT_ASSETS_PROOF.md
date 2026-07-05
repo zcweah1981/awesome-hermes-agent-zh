@@ -1,0 +1,79 @@
+# T3 Delete unused content assets proof
+
+- confirmed_unreferenced_count: 65
+- deleted_content_files_count: 65
+- deleted_site_public_copies_count: 61
+- site_public_copies_missing_before_count: 4
+- bytes_saved_content_repo: 33906793
+- bytes_saved_site_public_copies: 33277678
+- bytes_saved_total_worktree: 67184471
+- pre_delete_blocking_hits: 0
+- post_delete_blocking_hits: 0
+- nonblocking_hits_before: 12
+
+## Deleted files
+- `docs/assets/desktop-07-operation-v1.webp` (1339301 bytes, PNG 2560x1440); site_copy_exists_before=True
+- `docs/assets/solution-meeting-output-map-v1.webp` (1223226 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-daily-output-map-v1.webp` (990065 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-summary-output-map-v1.webp` (968709 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-xhs-output-map-v1.webp` (964580 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-ppt-output-map-v1.webp` (962762 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-summary-standard-vs-decision-v1.webp` (911407 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-gzh-output-map-v1.webp` (896430 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-daily-cli-vs-acp-v1.webp` (895610 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-daily-standard-vs-manager-v1.webp` (888040 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-meeting-standard-vs-action-v1.webp` (845920 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-gzh-cli-vs-acp-v1.webp` (842962 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-gzh-single-vs-series-v1.webp` (791457 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-summary-cli-vs-acp-v1.webp` (768654 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-ppt-structure-vs-script-v1.webp` (748063 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map-v2.webp` (677419 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map-v5.webp` (636601 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map-v3.webp` (632035 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-v4.webp` (603265 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-zh-v1.webp` (598824 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/03-domestic-deploy-overview-map-v17.webp` (591283 bytes, PNG 1280x720); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v1.webp` (586677 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-zh-v2.webp` (581702 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map-v6.webp` (537619 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-v2.webp` (536715 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map-v4.webp` (527897 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v2.webp` (510637 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-ppt-structure-vs-script-v3-cliproxy-g31.webp` (510366 bytes, JPEG 1376x768); site_copy_exists_before=False
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v5.webp` (496481 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v3.webp` (472286 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/03-aliyun-hermes-remote-login.webp` (450057 bytes, PNG 834x456); site_copy_exists_before=True
+- `docs/assets/practical-11-discord-official-screenshot-zh-v1.webp` (444864 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-zh-v5.webp` (439214 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v9.webp` (414013 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/03-aliyun-hermes-dangerous-command.webp` (409320 bytes, PNG 2660x326); site_copy_exists_before=True
+- `docs/assets/practical-18-security-official-screenshot-zh-v1.webp` (409269 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-ppt-output-map-review-pass-01.webp` (408676 bytes, JPEG 1408x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v8.webp` (396819 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/03-domestic-deploy-overview-map-v6.webp` (392115 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v7.webp` (390528 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/practical-19-voice-mode-official-screenshot-zh-v1.webp` (389696 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-zh-v3.webp` (385654 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v6.webp` (384975 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp` (381746 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/03-aliyun-hermes-instance-list.webp` (380651 bytes, PNG 2348x606); site_copy_exists_before=True
+- `docs/assets/03-domestic-deploy-overview-map-v8.webp` (379206 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-cli-vs-acp-map-zh-v4.webp` (364082 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-solo-vs-team-map-zh-v4.webp` (361557 bytes, JPEG 1376x768); site_copy_exists_before=True
+- `docs/assets/practical-13-ollama-official-screenshot-zh-v1.webp` (350367 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/rm2-5-api-server-01-openai-compatible-backend-map.webp` (349690 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/solution-xhs-single-vs-series-v1.webp` (341836 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/03-aliyun-hermes-terminal-start.webp` (337427 bytes, PNG 2732x250); site_copy_exists_before=True
+- `docs/assets/solution-meeting-cli-vs-acp-v1.webp` (315729 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-batch2-qc-sheet-v1.webp` (305225 bytes, PNG 860x1020); site_copy_exists_before=False
+- `docs/assets/rm2-5-build-your-own-index-01-system-capability-map.webp` (298027 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/solution-xhs-cli-vs-acp-v1.webp` (295663 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/solution-ppt-cli-vs-acp-v1.webp` (286747 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/03-domestic-deploy-overview-map-v4.webp` (274015 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/practical-15-skills-official-screenshot-zh-v1.webp` (166172 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/rm2-4-memory-02-memory-read-write-success.webp` (162305 bytes, PNG 1720x980); site_copy_exists_before=True
+- `docs/assets/rm2-5-memory-providers-03-honcho-status-proof.webp` (156481 bytes, PNG 1280x1292); site_copy_exists_before=False
+- `docs/assets/rm2-5-profiles-02-profile-switch-success.webp` (154219 bytes, PNG 1720x1260); site_copy_exists_before=True
+- `docs/assets/03-domestic-deploy-overview-map.webp` (149103 bytes, PNG 2752x1536); site_copy_exists_before=True
+- `docs/assets/solution-miniapp-3-layer-map.webp` (139578 bytes, PNG 1600x900); site_copy_exists_before=True
+- `docs/assets/rm2-5-memory-providers-02-holographic-status-proof.webp` (104774 bytes, PNG 1280x782); site_copy_exists_before=False

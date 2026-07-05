@@ -1,0 +1,1 @@
+- governance/plans/2026-06-05-practical-deep-apps-image-spec.md: stale image extension references normalized to .webp

@@ -1,0 +1,1611 @@
+{
+  "task_id": "HERMES-ZH-P0-FOT-CONTENT-IMAGE-WEBP-CLEANUP-R1-20260608-133412-T4-LONG-SYNC-SITE-ASSETS-AND-LOCAL-BUILD",
+  "content_repo": "/opt/projects/awesome-hermes-agent-zh",
+  "site_repo": "/opt/projects/hermes-zh",
+  "reference_summary": {
+    "markdown_image_refs": 158,
+    "unique_referenced_assets": 157,
+    "referenced_webp_count": 67,
+    "referenced_png_jpg_count": 91
+  },
+  "conversions_from_deleted_old_to_webp": [
+    {
+      "old": "docs/assets/desktop-07-real-chat-v1.webp",
+      "new": "docs/assets/desktop-07-real-chat-v1.webp",
+      "before_bytes": 2517005,
+      "after_bytes": 119100,
+      "saved_bytes": 2397905,
+      "saved_percent": 95.27,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.7364
+    },
+    {
+      "old": "docs/assets/desktop-07-real-project-picker-v1.webp",
+      "new": "docs/assets/desktop-07-real-project-picker-v1.webp",
+      "before_bytes": 1644153,
+      "after_bytes": 79796,
+      "saved_bytes": 1564357,
+      "saved_percent": 95.15,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.804
+    },
+    {
+      "old": "docs/assets/desktop-07-real-session-resume-v1.webp",
+      "new": "docs/assets/desktop-07-real-session-resume-v1.webp",
+      "before_bytes": 2426298,
+      "after_bytes": 103824,
+      "saved_bytes": 2322474,
+      "saved_percent": 95.72,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.8741
+    },
+    {
+      "old": "docs/assets/desktop-07-structure-v1.webp",
+      "new": "docs/assets/desktop-07-structure-v1.webp",
+      "before_bytes": 2487101,
+      "after_bytes": 120744,
+      "saved_bytes": 2366357,
+      "saved_percent": 95.15,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.882
+    },
+    {
+      "old": "docs/assets/practical-12-mcp-official-screenshot-zh-v1.webp",
+      "new": "docs/assets/practical-12-mcp-official-screenshot-zh-v1.webp",
+      "before_bytes": 421015,
+      "after_bytes": 123598,
+      "saved_bytes": 297417,
+      "saved_percent": 70.64,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 3.5711
+    },
+    {
+      "old": "docs/assets/practical-v2-01-discord-entry.webp",
+      "new": "docs/assets/practical-v2-01-discord-entry.webp",
+      "before_bytes": 1287003,
+      "after_bytes": 56468,
+      "saved_bytes": 1230535,
+      "saved_percent": 95.61,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.1367
+    },
+    {
+      "old": "docs/assets/practical-v2-02-ollama-local-model.webp",
+      "new": "docs/assets/practical-v2-02-ollama-local-model.webp",
+      "before_bytes": 1420673,
+      "after_bytes": 79446,
+      "saved_bytes": 1341227,
+      "saved_percent": 94.41,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.5593
+    },
+    {
+      "old": "docs/assets/practical-v2-03-ollama-fast-local-install.webp",
+      "new": "docs/assets/practical-v2-03-ollama-fast-local-install.webp",
+      "before_bytes": 1346905,
+      "after_bytes": 61190,
+      "saved_bytes": 1285715,
+      "saved_percent": 95.46,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.2099
+    },
+    {
+      "old": "docs/assets/practical-v2-04-custom-skills.webp",
+      "new": "docs/assets/practical-v2-04-custom-skills.webp",
+      "before_bytes": 1348817,
+      "after_bytes": 60938,
+      "saved_bytes": 1287879,
+      "saved_percent": 95.48,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.3615
+    },
+    {
+      "old": "docs/assets/practical-v2-05-github-pr-review.webp",
+      "new": "docs/assets/practical-v2-05-github-pr-review.webp",
+      "before_bytes": 1311630,
+      "after_bytes": 60230,
+      "saved_bytes": 1251400,
+      "saved_percent": 95.41,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.2802
+    },
+    {
+      "old": "docs/assets/practical-v2-06-advanced-skills-mcp-subagents.webp",
+      "new": "docs/assets/practical-v2-06-advanced-skills-mcp-subagents.webp",
+      "before_bytes": 1393934,
+      "after_bytes": 91188,
+      "saved_bytes": 1302746,
+      "saved_percent": 93.46,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.4451
+    },
+    {
+      "old": "docs/assets/practical-v2-07-control-room-specialist-teams.webp",
+      "new": "docs/assets/practical-v2-07-control-room-specialist-teams.webp",
+      "before_bytes": 1280940,
+      "after_bytes": 63400,
+      "saved_bytes": 1217540,
+      "saved_percent": 95.05,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.1236
+    },
+    {
+      "old": "docs/assets/practical-v2-08-60-days-6-lessons.webp",
+      "new": "docs/assets/practical-v2-08-60-days-6-lessons.webp",
+      "before_bytes": 1460393,
+      "after_bytes": 78170,
+      "saved_bytes": 1382223,
+      "saved_percent": 94.65,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.4965
+    },
+    {
+      "old": "docs/assets/practical-v2-09-deep-dive-build-your-own.webp",
+      "new": "docs/assets/practical-v2-09-deep-dive-build-your-own.webp",
+      "before_bytes": 1387033,
+      "after_bytes": 82890,
+      "saved_bytes": 1304143,
+      "saved_percent": 94.02,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.5034
+    },
+    {
+      "old": "docs/assets/practical-v2-10-security-hardening.webp",
+      "new": "docs/assets/practical-v2-10-security-hardening.webp",
+      "before_bytes": 1613250,
+      "after_bytes": 96160,
+      "saved_bytes": 1517090,
+      "saved_percent": 94.04,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 2.422
+    },
+    {
+      "old": "docs/assets/practical-v2-11-voice-mode.webp",
+      "new": "docs/assets/practical-v2-11-voice-mode.webp",
+      "before_bytes": 1043944,
+      "after_bytes": 38776,
+      "saved_bytes": 1005168,
+      "saved_percent": 96.29,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1600,
+        900
+      ],
+      "new_dimensions": [
+        1600,
+        900
+      ],
+      "rgb_rms": 1.8292
+    },
+    {
+      "old": "docs/assets/prepare-environment-01-choice-map-cards-v2.webp",
+      "new": "docs/assets/prepare-environment-01-choice-map-cards-v2.webp",
+      "before_bytes": 2677879,
+      "after_bytes": 252720,
+      "saved_bytes": 2425159,
+      "saved_percent": 90.56,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 3.0019
+    },
+    {
+      "old": "docs/assets/rm2-2-connect-terminal-01-local-vs-ssh-route.webp",
+      "new": "docs/assets/rm2-2-connect-terminal-01-local-vs-ssh-route.webp",
+      "before_bytes": 2282545,
+      "after_bytes": 154732,
+      "saved_bytes": 2127813,
+      "saved_percent": 93.22,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.6121
+    },
+    {
+      "old": "docs/assets/rm2-3-connect-platform-03-first-message-success-v3.webp",
+      "new": "docs/assets/rm2-3-connect-platform-03-first-message-success-v3.webp",
+      "before_bytes": 349777,
+      "after_bytes": 50674,
+      "saved_bytes": 299103,
+      "saved_percent": 85.51,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        900,
+        757
+      ],
+      "new_dimensions": [
+        900,
+        757
+      ],
+      "rgb_rms": 2.2173
+    },
+    {
+      "old": "docs/assets/rm2-3-get-started-index-01-daily-usage-path.webp",
+      "new": "docs/assets/rm2-3-get-started-index-01-daily-usage-path.webp",
+      "before_bytes": 993679,
+      "after_bytes": 57106,
+      "saved_bytes": 936573,
+      "saved_percent": 94.25,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.3267
+    },
+    {
+      "old": "docs/assets/rm2-3-skills-curated-01-skill-scenario-map.webp",
+      "new": "docs/assets/rm2-3-skills-curated-01-skill-scenario-map.webp",
+      "before_bytes": 2345876,
+      "after_bytes": 169134,
+      "saved_bytes": 2176742,
+      "saved_percent": 92.79,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.5651
+    },
+    {
+      "old": "docs/assets/rm2-3-slash-commands-01-command-groups.webp",
+      "new": "docs/assets/rm2-3-slash-commands-01-command-groups.webp",
+      "before_bytes": 2278712,
+      "after_bytes": 144910,
+      "saved_bytes": 2133802,
+      "saved_percent": 93.64,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.4978
+    },
+    {
+      "old": "docs/assets/rm2-3-slash-commands-02-session-save-resume.webp",
+      "new": "docs/assets/rm2-3-slash-commands-02-session-save-resume.webp",
+      "before_bytes": 515439,
+      "after_bytes": 52250,
+      "saved_bytes": 463189,
+      "saved_percent": 89.86,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1408,
+        768
+      ],
+      "new_dimensions": [
+        1408,
+        768
+      ],
+      "rgb_rms": 2.0405
+    },
+    {
+      "old": "docs/assets/rm2-3-slash-commands-03-persona-command-success.webp",
+      "new": "docs/assets/rm2-3-slash-commands-03-persona-command-success.webp",
+      "before_bytes": 478313,
+      "after_bytes": 44130,
+      "saved_bytes": 434183,
+      "saved_percent": 90.77,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1408,
+        768
+      ],
+      "new_dimensions": [
+        1408,
+        768
+      ],
+      "rgb_rms": 1.9571
+    },
+    {
+      "old": "docs/assets/rm2-4-advanced-usage-index-01-single-agent-upgrade-map.webp",
+      "new": "docs/assets/rm2-4-advanced-usage-index-01-single-agent-upgrade-map.webp",
+      "before_bytes": 2250961,
+      "after_bytes": 161834,
+      "saved_bytes": 2089127,
+      "saved_percent": 92.81,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.5484
+    },
+    {
+      "old": "docs/assets/rm2-4-profile-distribution-operation-v1.webp",
+      "new": "docs/assets/rm2-4-profile-distribution-operation-v1.webp",
+      "before_bytes": 2138732,
+      "after_bytes": 84460,
+      "saved_bytes": 2054272,
+      "saved_percent": 96.05,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.7197
+    },
+    {
+      "old": "docs/assets/rm2-4-profile-distribution-structure-v1.webp",
+      "new": "docs/assets/rm2-4-profile-distribution-structure-v1.webp",
+      "before_bytes": 2286418,
+      "after_bytes": 105006,
+      "saved_bytes": 2181412,
+      "saved_percent": 95.41,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2560,
+        1440
+      ],
+      "new_dimensions": [
+        2560,
+        1440
+      ],
+      "rgb_rms": 1.8534
+    },
+    {
+      "old": "docs/assets/rm2-4-skins-01-theme-comparison.webp",
+      "new": "docs/assets/rm2-4-skins-01-theme-comparison.webp",
+      "before_bytes": 2231372,
+      "after_bytes": 147434,
+      "saved_bytes": 2083938,
+      "saved_percent": 93.39,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.4741
+    },
+    {
+      "old": "docs/assets/rm2-4-soul-01-soul-structure-map.webp",
+      "new": "docs/assets/rm2-4-soul-01-soul-structure-map.webp",
+      "before_bytes": 2246257,
+      "after_bytes": 165464,
+      "saved_bytes": 2080793,
+      "saved_percent": 92.63,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.595
+    },
+    {
+      "old": "docs/assets/rm2-4-toolsets-01-toolset-map-v4.webp",
+      "new": "docs/assets/rm2-4-toolsets-01-toolset-map-v4.webp",
+      "before_bytes": 2180479,
+      "after_bytes": 127806,
+      "saved_bytes": 2052673,
+      "saved_percent": 94.14,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.4266
+    },
+    {
+      "old": "docs/assets/rm2-5-profiles-01-multi-profile-map.webp",
+      "new": "docs/assets/rm2-5-profiles-01-multi-profile-map.webp",
+      "before_bytes": 2309097,
+      "after_bytes": 181600,
+      "saved_bytes": 2127497,
+      "saved_percent": 92.14,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.8247
+    },
+    {
+      "old": "docs/assets/solution-action-plan-output-map-v1.webp",
+      "new": "docs/assets/solution-action-plan-output-map-v1.webp",
+      "before_bytes": 1271867,
+      "after_bytes": 75018,
+      "saved_bytes": 1196849,
+      "saved_percent": 94.1,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.7134
+    },
+    {
+      "old": "docs/assets/solution-action-plan-standard-vs-lite-v1.webp",
+      "new": "docs/assets/solution-action-plan-standard-vs-lite-v1.webp",
+      "before_bytes": 1264556,
+      "after_bytes": 66892,
+      "saved_bytes": 1197664,
+      "saved_percent": 94.71,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.6004
+    },
+    {
+      "old": "docs/assets/solution-gzh-cli-vs-acp-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-gzh-cli-vs-acp-v3-cliproxy-g31.webp",
+      "before_bytes": 596285,
+      "after_bytes": 60436,
+      "saved_bytes": 535849,
+      "saved_percent": 89.86,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.6507
+    },
+    {
+      "old": "docs/assets/solution-gzh-output-map-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-gzh-output-map-v3-cliproxy-g31.webp",
+      "before_bytes": 517665,
+      "after_bytes": 47026,
+      "saved_bytes": 470639,
+      "saved_percent": 90.92,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.2162
+    },
+    {
+      "old": "docs/assets/solution-gzh-single-vs-series-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-gzh-single-vs-series-v3-cliproxy-g31.webp",
+      "before_bytes": 633672,
+      "after_bytes": 51172,
+      "saved_bytes": 582500,
+      "saved_percent": 91.92,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.435
+    },
+    {
+      "old": "docs/assets/solution-message-summary-complete-vs-quick-v1.webp",
+      "new": "docs/assets/solution-message-summary-complete-vs-quick-v1.webp",
+      "before_bytes": 1224334,
+      "after_bytes": 62712,
+      "saved_bytes": 1161622,
+      "saved_percent": 94.88,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.5753
+    },
+    {
+      "old": "docs/assets/solution-message-summary-output-map-v1.webp",
+      "new": "docs/assets/solution-message-summary-output-map-v1.webp",
+      "before_bytes": 1268986,
+      "after_bytes": 70598,
+      "saved_bytes": 1198388,
+      "saved_percent": 94.44,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.7044
+    },
+    {
+      "old": "docs/assets/solution-miniapp-3-layer-map-v7.webp",
+      "new": "docs/assets/solution-miniapp-3-layer-map-v7.webp",
+      "before_bytes": 588424,
+      "after_bytes": 61632,
+      "saved_bytes": 526792,
+      "saved_percent": 89.53,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.2605
+    },
+    {
+      "old": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v10.webp",
+      "new": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v10.webp",
+      "before_bytes": 505070,
+      "after_bytes": 41404,
+      "saved_bytes": 463666,
+      "saved_percent": 91.8,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.0144
+    },
+    {
+      "old": "docs/assets/solution-miniapp-solo-followup-proof.webp",
+      "new": "docs/assets/solution-miniapp-solo-followup-proof.webp",
+      "before_bytes": 373096,
+      "after_bytes": 186818,
+      "saved_bytes": 186278,
+      "saved_percent": 49.93,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1450,
+        2271
+      ],
+      "new_dimensions": [
+        1450,
+        2271
+      ],
+      "rgb_rms": 5.3904
+    },
+    {
+      "old": "docs/assets/solution-miniapp-solo-real-run-proof.webp",
+      "new": "docs/assets/solution-miniapp-solo-real-run-proof.webp",
+      "before_bytes": 553263,
+      "after_bytes": 235654,
+      "saved_bytes": 317609,
+      "saved_percent": 57.41,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1430,
+        3831
+      ],
+      "new_dimensions": [
+        1430,
+        3831
+      ],
+      "rgb_rms": 4.8875
+    },
+    {
+      "old": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v6.webp",
+      "new": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v6.webp",
+      "before_bytes": 544259,
+      "after_bytes": 45984,
+      "saved_bytes": 498275,
+      "saved_percent": 91.55,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.1357
+    },
+    {
+      "old": "docs/assets/solution-miniapp-team-handoff-proof.webp",
+      "new": "docs/assets/solution-miniapp-team-handoff-proof.webp",
+      "before_bytes": 599931,
+      "after_bytes": 273448,
+      "saved_bytes": 326483,
+      "saved_percent": 54.42,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1450,
+        3494
+      ],
+      "new_dimensions": [
+        1450,
+        3494
+      ],
+      "rgb_rms": 5.4578
+    },
+    {
+      "old": "docs/assets/solution-multiplatform-output-bundle-v1.webp",
+      "new": "docs/assets/solution-multiplatform-output-bundle-v1.webp",
+      "before_bytes": 1372381,
+      "after_bytes": 86682,
+      "saved_bytes": 1285699,
+      "saved_percent": 93.68,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.8978
+    },
+    {
+      "old": "docs/assets/solution-multiplatform-solo-vs-batch-v1.webp",
+      "new": "docs/assets/solution-multiplatform-solo-vs-batch-v1.webp",
+      "before_bytes": 1233314,
+      "after_bytes": 60954,
+      "saved_bytes": 1172360,
+      "saved_percent": 95.06,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.5676
+    },
+    {
+      "old": "docs/assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.webp",
+      "new": "docs/assets/solution-ppt-cli-vs-acp-review-candidate-02-lines.webp",
+      "before_bytes": 1014747,
+      "after_bytes": 68070,
+      "saved_bytes": 946677,
+      "saved_percent": 93.29,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1408,
+        768
+      ],
+      "new_dimensions": [
+        1408,
+        768
+      ],
+      "rgb_rms": 2.2905
+    },
+    {
+      "old": "docs/assets/solution-ppt-structure-vs-script-review-candidate-07-integrated.webp",
+      "new": "docs/assets/solution-ppt-structure-vs-script-review-candidate-07-integrated.webp",
+      "before_bytes": 657447,
+      "after_bytes": 88880,
+      "saved_bytes": 568567,
+      "saved_percent": 86.48,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1408,
+        768
+      ],
+      "new_dimensions": [
+        1408,
+        768
+      ],
+      "rgb_rms": 2.4992
+    },
+    {
+      "old": "docs/assets/solution-ppt-team-handoff-review-candidate-02.webp",
+      "new": "docs/assets/solution-ppt-team-handoff-review-candidate-02.webp",
+      "before_bytes": 565731,
+      "after_bytes": 64814,
+      "saved_bytes": 500917,
+      "saved_percent": 88.54,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1408,
+        768
+      ],
+      "new_dimensions": [
+        1408,
+        768
+      ],
+      "rgb_rms": 2.2315
+    },
+    {
+      "old": "docs/assets/solution-practical-01-daily-briefing-flow-v1.webp",
+      "new": "docs/assets/solution-practical-01-daily-briefing-flow-v1.webp",
+      "before_bytes": 935623,
+      "after_bytes": 47182,
+      "saved_bytes": 888441,
+      "saved_percent": 94.96,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.2197
+    },
+    {
+      "old": "docs/assets/solution-practical-02-telegram-entry-map-v1.webp",
+      "new": "docs/assets/solution-practical-02-telegram-entry-map-v1.webp",
+      "before_bytes": 973948,
+      "after_bytes": 51792,
+      "saved_bytes": 922156,
+      "saved_percent": 94.68,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.3207
+    },
+    {
+      "old": "docs/assets/solution-practical-03-github-backup-cron-v1.webp",
+      "new": "docs/assets/solution-practical-03-github-backup-cron-v1.webp",
+      "before_bytes": 914526,
+      "after_bytes": 49810,
+      "saved_bytes": 864716,
+      "saved_percent": 94.55,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.148
+    },
+    {
+      "old": "docs/assets/solution-practical-04-three-tier-model-routing-v1.webp",
+      "new": "docs/assets/solution-practical-04-three-tier-model-routing-v1.webp",
+      "before_bytes": 982156,
+      "after_bytes": 66562,
+      "saved_bytes": 915594,
+      "saved_percent": 93.22,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.4056
+    },
+    {
+      "old": "docs/assets/solution-practical-05-token-cost-stack-v1.webp",
+      "new": "docs/assets/solution-practical-05-token-cost-stack-v1.webp",
+      "before_bytes": 969773,
+      "after_bytes": 54666,
+      "saved_bytes": 915107,
+      "saved_percent": 94.36,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.2889
+    },
+    {
+      "old": "docs/assets/solution-practical-06-vps-self-hosting-path-v1.webp",
+      "new": "docs/assets/solution-practical-06-vps-self-hosting-path-v1.webp",
+      "before_bytes": 938345,
+      "after_bytes": 57594,
+      "saved_bytes": 880751,
+      "saved_percent": 93.86,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.21
+    },
+    {
+      "old": "docs/assets/solution-practical-07-soul-persona-layers-v1.webp",
+      "new": "docs/assets/solution-practical-07-soul-persona-layers-v1.webp",
+      "before_bytes": 941744,
+      "after_bytes": 48792,
+      "saved_bytes": 892952,
+      "saved_percent": 94.82,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.192
+    },
+    {
+      "old": "docs/assets/solution-practical-08-obsidian-second-brain-v1.webp",
+      "new": "docs/assets/solution-practical-08-obsidian-second-brain-v1.webp",
+      "before_bytes": 895666,
+      "after_bytes": 47582,
+      "saved_bytes": 848084,
+      "saved_percent": 94.69,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.12
+    },
+    {
+      "old": "docs/assets/solution-practical-09-kanban-multi-agent-orchestration-v1.webp",
+      "new": "docs/assets/solution-practical-09-kanban-multi-agent-orchestration-v1.webp",
+      "before_bytes": 933314,
+      "after_bytes": 45858,
+      "saved_bytes": 887456,
+      "saved_percent": 95.09,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.303
+    },
+    {
+      "old": "docs/assets/solution-practical-10-home-assistant-control-loop-v1.webp",
+      "new": "docs/assets/solution-practical-10-home-assistant-control-loop-v1.webp",
+      "before_bytes": 810639,
+      "after_bytes": 39036,
+      "saved_bytes": 771603,
+      "saved_percent": 95.18,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1360,
+        765
+      ],
+      "new_dimensions": [
+        1360,
+        765
+      ],
+      "rgb_rms": 2.1101
+    },
+    {
+      "old": "docs/assets/solution-twitter-read-vs-actions-v1.webp",
+      "new": "docs/assets/solution-twitter-read-vs-actions-v1.webp",
+      "before_bytes": 1232502,
+      "after_bytes": 75466,
+      "saved_bytes": 1157036,
+      "saved_percent": 93.88,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.7455
+    },
+    {
+      "old": "docs/assets/solution-twitter-setup-chain-v1.webp",
+      "new": "docs/assets/solution-twitter-setup-chain-v1.webp",
+      "before_bytes": 1241912,
+      "after_bytes": 63674,
+      "saved_bytes": 1178238,
+      "saved_percent": 94.87,
+      "old_format": "PNG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.5752
+    },
+    {
+      "old": "docs/assets/solution-webdev-3-layer-map-v1.webp",
+      "new": "docs/assets/solution-webdev-3-layer-map-v1.webp",
+      "before_bytes": 580513,
+      "after_bytes": 63772,
+      "saved_bytes": 516741,
+      "saved_percent": 89.01,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.4809
+    },
+    {
+      "old": "docs/assets/solution-webdev-cli-vs-acp-map-v1.webp",
+      "new": "docs/assets/solution-webdev-cli-vs-acp-map-v1.webp",
+      "before_bytes": 519031,
+      "after_bytes": 43560,
+      "saved_bytes": 475471,
+      "saved_percent": 91.61,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.3649
+    },
+    {
+      "old": "docs/assets/solution-webdev-solo-vs-team-map-v1.webp",
+      "new": "docs/assets/solution-webdev-solo-vs-team-map-v1.webp",
+      "before_bytes": 565015,
+      "after_bytes": 60718,
+      "saved_bytes": 504297,
+      "saved_percent": 89.25,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.6077
+    },
+    {
+      "old": "docs/assets/solution-xhs-cli-vs-acp-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-xhs-cli-vs-acp-v3-cliproxy-g31.webp",
+      "before_bytes": 464959,
+      "after_bytes": 40848,
+      "saved_bytes": 424111,
+      "saved_percent": 91.21,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 1.9878
+    },
+    {
+      "old": "docs/assets/solution-xhs-output-map-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-xhs-output-map-v3-cliproxy-g31.webp",
+      "before_bytes": 593774,
+      "after_bytes": 65236,
+      "saved_bytes": 528538,
+      "saved_percent": 89.01,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.4717
+    },
+    {
+      "old": "docs/assets/solution-xhs-single-vs-series-v3-cliproxy-g31.webp",
+      "new": "docs/assets/solution-xhs-single-vs-series-v3-cliproxy-g31.webp",
+      "before_bytes": 587199,
+      "after_bytes": 61850,
+      "saved_bytes": 525349,
+      "saved_percent": 89.47,
+      "old_format": "JPEG",
+      "new_format": "WEBP",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.6605
+    }
+  ],
+  "modified_existing_images": [
+    {
+      "path": "docs/assets/rm2-2-get-running-index-06-stage-map-closed.webp",
+      "before_bytes": 2139689,
+      "after_bytes": 292891,
+      "saved_bytes": 1846798,
+      "saved_percent": 86.31,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.032
+    },
+    {
+      "path": "docs/assets/rm2-3-connect-platform-01-platform-connection-map.webp",
+      "before_bytes": 2039344,
+      "after_bytes": 250799,
+      "saved_bytes": 1788545,
+      "saved_percent": 87.7,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.8993
+    },
+    {
+      "path": "docs/assets/rm2-3-connect-platform-02-platform-config-ui.webp",
+      "before_bytes": 2020883,
+      "after_bytes": 231301,
+      "saved_bytes": 1789582,
+      "saved_percent": 88.55,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.7885
+    },
+    {
+      "path": "docs/assets/rm2-4-custom-llm-01-model-routing-map.webp",
+      "before_bytes": 2088288,
+      "after_bytes": 269584,
+      "saved_bytes": 1818704,
+      "saved_percent": 87.09,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.9205
+    },
+    {
+      "path": "docs/assets/rm2-4-memory-01-memory-layer-map.webp",
+      "before_bytes": 2149172,
+      "after_bytes": 271706,
+      "saved_bytes": 1877466,
+      "saved_percent": 87.36,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.9699
+    },
+    {
+      "path": "docs/assets/rm2-5-acp-ide-01-editor-workflow-map.webp",
+      "before_bytes": 2079650,
+      "after_bytes": 271531,
+      "saved_bytes": 1808119,
+      "saved_percent": 86.94,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.8717
+    },
+    {
+      "path": "docs/assets/rm2-5-context-files-01-long-term-rules-map.webp",
+      "before_bytes": 2103782,
+      "after_bytes": 274278,
+      "saved_bytes": 1829504,
+      "saved_percent": 86.96,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.9396
+    },
+    {
+      "path": "docs/assets/rm2-5-context-references-01-temporary-material-map.webp",
+      "before_bytes": 2122732,
+      "after_bytes": 286302,
+      "saved_bytes": 1836430,
+      "saved_percent": 86.51,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.9955
+    },
+    {
+      "path": "docs/assets/rm2-5-context-system-01-two-layer-map.webp",
+      "before_bytes": 2129903,
+      "after_bytes": 285561,
+      "saved_bytes": 1844342,
+      "saved_percent": 86.59,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.007
+    },
+    {
+      "path": "docs/assets/rm2-5-cron-and-automation-01-scheduled-flow-map.webp",
+      "before_bytes": 2109812,
+      "after_bytes": 274916,
+      "saved_bytes": 1834896,
+      "saved_percent": 86.97,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.953
+    },
+    {
+      "path": "docs/assets/rm2-5-mcp-and-plugins-01-main-route.webp",
+      "before_bytes": 2073712,
+      "after_bytes": 293595,
+      "saved_bytes": 1780117,
+      "saved_percent": 85.84,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 2.0783
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-01-overview-map.webp",
+      "before_bytes": 1967493,
+      "after_bytes": 244490,
+      "saved_bytes": 1723003,
+      "saved_percent": 87.57,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.768
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-02-holographic-first-route.webp",
+      "before_bytes": 1990791,
+      "after_bytes": 248590,
+      "saved_bytes": 1742201,
+      "saved_percent": 87.51,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.8842
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-03-honcho-multi-agent-route.webp",
+      "before_bytes": 2073793,
+      "after_bytes": 266352,
+      "saved_bytes": 1807441,
+      "saved_percent": 87.16,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.8393
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-04-compare-decision-route.webp",
+      "before_bytes": 2033086,
+      "after_bytes": 242613,
+      "saved_bytes": 1790473,
+      "saved_percent": 88.07,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        2752,
+        1536
+      ],
+      "new_dimensions": [
+        2752,
+        1536
+      ],
+      "rgb_rms": 1.9036
+    },
+    {
+      "path": "docs/assets/rm2-learning-path-gemini-final-v2.webp",
+      "before_bytes": 509551,
+      "after_bytes": 118194,
+      "saved_bytes": 391357,
+      "saved_percent": 76.8,
+      "old_format": "JPEG",
+      "new_format": "JPEG",
+      "old_dimensions": [
+        1376,
+        768
+      ],
+      "new_dimensions": [
+        1376,
+        768
+      ],
+      "rgb_rms": 2.6485
+    }
+  ],
+  "conversion_totals": {
+    "count": 67,
+    "before_bytes": 81821297,
+    "after_bytes": 5847370,
+    "saved_bytes": 75973927,
+    "saved_percent": 92.85
+  },
+  "modified_totals": {
+    "count": 16,
+    "before_bytes": 31631681,
+    "after_bytes": 4122703,
+    "saved_bytes": 27508978,
+    "saved_percent": 86.97
+  },
+  "deleted_old_source_images_count": 132,
+  "new_webp_source_count": 67,
+  "source_site_sha_mismatches": [],
+  "missing_site_referenced_assets": [],
+  "missing_content_referenced_assets": [],
+  "remaining_public_orphan_png_jpg_excluding_site_logo": [],
+  "site_public_content_assets_after": {
+    "bytes": 44271509,
+    "file_count": 158
+  },
+  "site_public_orphan_deleted_this_task": {
+    "files": [
+      "public/content-assets/readme-governance-panel.webp",
+      "public/content-assets/readme-hermes-capability-map.webp",
+      "public/content-assets/readme-hero-hub.webp",
+      "public/content-assets/readme-hero-v1.webp",
+      "public/content-assets/readme-scenarios.webp",
+      "public/content-assets/readme-user-routing.webp"
+    ],
+    "bytes_saved": 776131
+  }
+}

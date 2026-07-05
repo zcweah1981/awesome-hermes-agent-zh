@@ -1,0 +1,1326 @@
+{
+  "task_id": "HERMES-ZH-P0-FOT-CONTENT-IMAGE-WEBP-CLEANUP-R1-20260608-133412-T3-LONG-DELETE-UNUSED-CONTENT-ASSETS",
+  "source_inventory": "/opt/projects/awesome-hermes-agent-zh/artifacts/asset-inventory/CONTENT_IMAGE_ASSET_INVENTORY_R1_20260608.json",
+  "confirmed_unreferenced_count": 65,
+  "ambiguous_deleted_count": 0,
+  "referenced_deleted_count_by_this_task": 0,
+  "pre_delete_blocking_reference_scan_hits": [],
+  "pre_delete_nonblocking_scan_hits": {
+    "content_governance": [
+      {
+        "asset": "docs/assets/practical-11-discord-official-screenshot-zh-v1.webp",
+        "token": "practical-11-discord-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-18-security-official-screenshot-zh-v1.webp",
+        "token": "practical-18-security-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-19-voice-mode-official-screenshot-zh-v1.webp",
+        "token": "practical-19-voice-mode-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+        "token": "practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-13-ollama-official-screenshot-zh-v1.webp",
+        "token": "practical-13-ollama-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-15-skills-official-screenshot-zh-v1.webp",
+        "token": "practical-15-skills-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      }
+    ],
+    "site_stale_content_cache_raw": [
+      {
+        "asset": "docs/assets/solution-xhs-output-map-v1.webp",
+        "token": "solution-xhs-output-map-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-xhs-single-vs-series-v1.webp",
+        "token": "solution-xhs-single-vs-series-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-xhs-cli-vs-acp-v1.webp",
+        "token": "solution-xhs-cli-vs-acp-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-output-map-v1.webp",
+        "token": "solution-gzh-output-map-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-cli-vs-acp-v1.webp",
+        "token": "solution-gzh-cli-vs-acp-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-single-vs-series-v1.webp",
+        "token": "solution-gzh-single-vs-series-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      }
+    ]
+  },
+  "post_delete_blocking_reference_scan_hits": [],
+  "post_delete_nonblocking_scan_hits": {
+    "content_governance": [
+      {
+        "asset": "docs/assets/practical-11-discord-official-screenshot-zh-v1.webp",
+        "token": "practical-11-discord-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-18-security-official-screenshot-zh-v1.webp",
+        "token": "practical-18-security-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-19-voice-mode-official-screenshot-zh-v1.webp",
+        "token": "practical-19-voice-mode-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+        "token": "practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-13-ollama-official-screenshot-zh-v1.webp",
+        "token": "practical-13-ollama-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      },
+      {
+        "asset": "docs/assets/practical-15-skills-official-screenshot-zh-v1.webp",
+        "token": "practical-15-skills-official-screenshot-zh-v1.webp",
+        "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+      }
+    ],
+    "site_stale_content_cache_raw": [
+      {
+        "asset": "docs/assets/solution-xhs-output-map-v1.webp",
+        "token": "solution-xhs-output-map-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-xhs-single-vs-series-v1.webp",
+        "token": "solution-xhs-single-vs-series-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-xhs-cli-vs-acp-v1.webp",
+        "token": "solution-xhs-cli-vs-acp-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-output-map-v1.webp",
+        "token": "solution-gzh-output-map-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-cli-vs-acp-v1.webp",
+        "token": "solution-gzh-cli-vs-acp-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      },
+      {
+        "asset": "docs/assets/solution-gzh-single-vs-series-v1.webp",
+        "token": "solution-gzh-single-vs-series-v1.webp",
+        "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+      }
+    ]
+  },
+  "deleted_files": [
+    {
+      "path": "docs/assets/desktop-07-operation-v1.webp",
+      "public_copy": "public/content-assets/desktop-07-operation-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 1339301,
+      "bytes_source_current": 1339301,
+      "bytes_site_current": 1787032,
+      "dimensions": {
+        "width": 2560,
+        "height": 1440
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-meeting-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-meeting-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 1223226,
+      "bytes_source_current": 1223226,
+      "bytes_site_current": 1223226,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-daily-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-daily-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 990065,
+      "bytes_source_current": 990065,
+      "bytes_site_current": 990065,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-summary-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-summary-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 968709,
+      "bytes_source_current": 968709,
+      "bytes_site_current": 968709,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-xhs-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-xhs-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 964580,
+      "bytes_source_current": 964580,
+      "bytes_site_current": 964580,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-ppt-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-ppt-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 962762,
+      "bytes_source_current": 962762,
+      "bytes_site_current": 962762,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-summary-standard-vs-decision-v1.webp",
+      "public_copy": "public/content-assets/solution-summary-standard-vs-decision-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 911407,
+      "bytes_source_current": 911407,
+      "bytes_site_current": 911407,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-gzh-output-map-v1.webp",
+      "public_copy": "public/content-assets/solution-gzh-output-map-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 896430,
+      "bytes_source_current": 896430,
+      "bytes_site_current": 896430,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-daily-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-daily-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 895610,
+      "bytes_source_current": 895610,
+      "bytes_site_current": 895610,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-daily-standard-vs-manager-v1.webp",
+      "public_copy": "public/content-assets/solution-daily-standard-vs-manager-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 888040,
+      "bytes_source_current": 888040,
+      "bytes_site_current": 888040,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-meeting-standard-vs-action-v1.webp",
+      "public_copy": "public/content-assets/solution-meeting-standard-vs-action-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 845920,
+      "bytes_source_current": 845920,
+      "bytes_site_current": 845920,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-gzh-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-gzh-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 842962,
+      "bytes_source_current": 842962,
+      "bytes_site_current": 842962,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-gzh-single-vs-series-v1.webp",
+      "public_copy": "public/content-assets/solution-gzh-single-vs-series-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 791457,
+      "bytes_source_current": 791457,
+      "bytes_site_current": 791457,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-summary-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-summary-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 768654,
+      "bytes_source_current": 768654,
+      "bytes_site_current": 768654,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-ppt-structure-vs-script-v1.webp",
+      "public_copy": "public/content-assets/solution-ppt-structure-vs-script-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 748063,
+      "bytes_source_current": 748063,
+      "bytes_site_current": 748063,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map-v2.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map-v2.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 677419,
+      "bytes_source_current": 677419,
+      "bytes_site_current": 677419,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map-v5.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map-v5.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 636601,
+      "bytes_source_current": 636601,
+      "bytes_site_current": 636601,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map-v3.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map-v3.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 632035,
+      "bytes_source_current": 632035,
+      "bytes_site_current": 632035,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-v4.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-v4.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 603265,
+      "bytes_source_current": 603265,
+      "bytes_site_current": 603265,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v1.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 598824,
+      "bytes_source_current": 598824,
+      "bytes_site_current": 598824,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-domestic-deploy-overview-map-v17.webp",
+      "public_copy": "public/content-assets/03-domestic-deploy-overview-map-v17.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 591283,
+      "bytes_source_current": 591283,
+      "bytes_site_current": 591283,
+      "dimensions": {
+        "width": 1280,
+        "height": 720
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v1.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 586677,
+      "bytes_source_current": 586677,
+      "bytes_site_current": 586677,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v2.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-zh-v2.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 581702,
+      "bytes_source_current": 581702,
+      "bytes_site_current": 581702,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map-v6.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map-v6.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 537619,
+      "bytes_source_current": 537619,
+      "bytes_site_current": 537619,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-v2.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-v2.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 536715,
+      "bytes_source_current": 536715,
+      "bytes_site_current": 536715,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map-v4.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map-v4.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 527897,
+      "bytes_source_current": 527897,
+      "bytes_site_current": 527897,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v2.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v2.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 510637,
+      "bytes_source_current": 510637,
+      "bytes_site_current": 510637,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-ppt-structure-vs-script-v3-cliproxy-g31.webp",
+      "public_copy": "public/content-assets/solution-ppt-structure-vs-script-v3-cliproxy-g31.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 510366,
+      "bytes_source_current": 510366,
+      "bytes_site_current": null,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": false,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v5.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v5.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 496481,
+      "bytes_source_current": 496481,
+      "bytes_site_current": 496481,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v3.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v3.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 472286,
+      "bytes_source_current": 472286,
+      "bytes_site_current": 472286,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-aliyun-hermes-remote-login.webp",
+      "public_copy": "public/content-assets/03-aliyun-hermes-remote-login.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 450057,
+      "bytes_source_current": 450057,
+      "bytes_site_current": 450057,
+      "dimensions": {
+        "width": 834,
+        "height": 456
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-11-discord-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-11-discord-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 444864,
+      "bytes_source_current": 444864,
+      "bytes_site_current": 444864,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v5.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-zh-v5.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 439214,
+      "bytes_source_current": 439214,
+      "bytes_site_current": 439214,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v9.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v9.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 414013,
+      "bytes_source_current": 414013,
+      "bytes_site_current": 414013,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-aliyun-hermes-dangerous-command.webp",
+      "public_copy": "public/content-assets/03-aliyun-hermes-dangerous-command.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 409320,
+      "bytes_source_current": 409320,
+      "bytes_site_current": 409320,
+      "dimensions": {
+        "width": 2660,
+        "height": 326
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-18-security-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-18-security-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 409269,
+      "bytes_source_current": 409269,
+      "bytes_site_current": 409269,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-ppt-output-map-review-pass-01.webp",
+      "public_copy": "public/content-assets/solution-ppt-output-map-review-pass-01.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 408676,
+      "bytes_source_current": 408676,
+      "bytes_site_current": 408676,
+      "dimensions": {
+        "width": 1408,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v8.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v8.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 396819,
+      "bytes_source_current": 396819,
+      "bytes_site_current": 396819,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-domestic-deploy-overview-map-v6.webp",
+      "public_copy": "public/content-assets/03-domestic-deploy-overview-map-v6.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 392115,
+      "bytes_source_current": 392115,
+      "bytes_site_current": 392115,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v7.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v7.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 390528,
+      "bytes_source_current": 390528,
+      "bytes_site_current": 390528,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-19-voice-mode-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-19-voice-mode-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 389696,
+      "bytes_source_current": 389696,
+      "bytes_site_current": 389696,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v3.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-zh-v3.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 385654,
+      "bytes_source_current": 385654,
+      "bytes_site_current": 385654,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v6.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v6.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 384975,
+      "bytes_source_current": 384975,
+      "bytes_site_current": 384975,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 381746,
+      "bytes_source_current": 381746,
+      "bytes_site_current": 381746,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-aliyun-hermes-instance-list.webp",
+      "public_copy": "public/content-assets/03-aliyun-hermes-instance-list.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 380651,
+      "bytes_source_current": 380651,
+      "bytes_site_current": 380651,
+      "dimensions": {
+        "width": 2348,
+        "height": 606
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-domestic-deploy-overview-map-v8.webp",
+      "public_copy": "public/content-assets/03-domestic-deploy-overview-map-v8.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 379206,
+      "bytes_source_current": 379206,
+      "bytes_site_current": 379206,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-cli-vs-acp-map-zh-v4.webp",
+      "public_copy": "public/content-assets/solution-miniapp-cli-vs-acp-map-zh-v4.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 364082,
+      "bytes_source_current": 364082,
+      "bytes_site_current": 364082,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-solo-vs-team-map-zh-v4.webp",
+      "public_copy": "public/content-assets/solution-miniapp-solo-vs-team-map-zh-v4.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 361557,
+      "bytes_source_current": 361557,
+      "bytes_site_current": 361557,
+      "dimensions": {
+        "width": 1376,
+        "height": 768
+      },
+      "format": "JPEG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-13-ollama-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-13-ollama-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 350367,
+      "bytes_source_current": 350367,
+      "bytes_site_current": 350367,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-5-api-server-01-openai-compatible-backend-map.webp",
+      "public_copy": "public/content-assets/rm2-5-api-server-01-openai-compatible-backend-map.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 349690,
+      "bytes_source_current": 349690,
+      "bytes_site_current": 349690,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-xhs-single-vs-series-v1.webp",
+      "public_copy": "public/content-assets/solution-xhs-single-vs-series-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 341836,
+      "bytes_source_current": 341836,
+      "bytes_site_current": 341836,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-aliyun-hermes-terminal-start.webp",
+      "public_copy": "public/content-assets/03-aliyun-hermes-terminal-start.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 337427,
+      "bytes_source_current": 337427,
+      "bytes_site_current": 337427,
+      "dimensions": {
+        "width": 2732,
+        "height": 250
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-meeting-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-meeting-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 315729,
+      "bytes_source_current": 315729,
+      "bytes_site_current": 315729,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-batch2-qc-sheet-v1.webp",
+      "public_copy": "public/content-assets/solution-batch2-qc-sheet-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 305225,
+      "bytes_source_current": 305225,
+      "bytes_site_current": null,
+      "dimensions": {
+        "width": 860,
+        "height": 1020
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": false,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-5-build-your-own-index-01-system-capability-map.webp",
+      "public_copy": "public/content-assets/rm2-5-build-your-own-index-01-system-capability-map.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 298027,
+      "bytes_source_current": 298027,
+      "bytes_site_current": 298027,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-xhs-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-xhs-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 295663,
+      "bytes_source_current": 295663,
+      "bytes_site_current": 295663,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-ppt-cli-vs-acp-v1.webp",
+      "public_copy": "public/content-assets/solution-ppt-cli-vs-acp-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 286747,
+      "bytes_source_current": 286747,
+      "bytes_site_current": 286747,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-domestic-deploy-overview-map-v4.webp",
+      "public_copy": "public/content-assets/03-domestic-deploy-overview-map-v4.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 274015,
+      "bytes_source_current": 274015,
+      "bytes_site_current": 274015,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/practical-15-skills-official-screenshot-zh-v1.webp",
+      "public_copy": "public/content-assets/practical-15-skills-official-screenshot-zh-v1.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 166172,
+      "bytes_source_current": 166172,
+      "bytes_site_current": 166172,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-4-memory-02-memory-read-write-success.webp",
+      "public_copy": "public/content-assets/rm2-4-memory-02-memory-read-write-success.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 162305,
+      "bytes_source_current": 162305,
+      "bytes_site_current": 162305,
+      "dimensions": {
+        "width": 1720,
+        "height": 980
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-03-honcho-status-proof.webp",
+      "public_copy": "public/content-assets/rm2-5-memory-providers-03-honcho-status-proof.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 156481,
+      "bytes_source_current": 156481,
+      "bytes_site_current": null,
+      "dimensions": {
+        "width": 1280,
+        "height": 1292
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": false,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-5-profiles-02-profile-switch-success.webp",
+      "public_copy": "public/content-assets/rm2-5-profiles-02-profile-switch-success.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 154219,
+      "bytes_source_current": 154219,
+      "bytes_site_current": 154219,
+      "dimensions": {
+        "width": 1720,
+        "height": 1260
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/03-domestic-deploy-overview-map.webp",
+      "public_copy": "public/content-assets/03-domestic-deploy-overview-map.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 149103,
+      "bytes_source_current": 149103,
+      "bytes_site_current": 149103,
+      "dimensions": {
+        "width": 2752,
+        "height": 1536
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/solution-miniapp-3-layer-map.webp",
+      "public_copy": "public/content-assets/solution-miniapp-3-layer-map.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 139578,
+      "bytes_source_current": 139578,
+      "bytes_site_current": 139578,
+      "dimensions": {
+        "width": 1600,
+        "height": 900
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": true,
+      "content_exists_after": false,
+      "site_exists_after": false
+    },
+    {
+      "path": "docs/assets/rm2-5-memory-providers-02-holographic-status-proof.webp",
+      "public_copy": "public/content-assets/rm2-5-memory-providers-02-holographic-status-proof.webp",
+      "t1_status": "unreferenced",
+      "reference_count": 0,
+      "bytes_source_t1": 104774,
+      "bytes_source_current": 104774,
+      "bytes_site_current": null,
+      "dimensions": {
+        "width": 1280,
+        "height": 782
+      },
+      "format": "PNG",
+      "content_exists_before": true,
+      "site_exists_before": false,
+      "content_exists_after": false,
+      "site_exists_after": false
+    }
+  ],
+  "deleted_content_files_count": 65,
+  "deleted_site_public_copies_count": 61,
+  "site_public_copies_missing_before_count": 4,
+  "bytes_saved_content_repo": 33906793,
+  "bytes_saved_site_public_copies": 33277678,
+  "bytes_saved_total_worktree": 67184471,
+  "reference_replacements": [],
+  "conversion_before_after": [],
+  "notes": [
+    "Only T1 inventory status=unreferenced assets were deleted.",
+    "Blocking scan roots: content docs and site source code/tests/scripts.",
+    "Nonblocking hits are governance planning docs and stale site content-cache/raw copies; build:content should refresh cache from source."
+  ]
+}

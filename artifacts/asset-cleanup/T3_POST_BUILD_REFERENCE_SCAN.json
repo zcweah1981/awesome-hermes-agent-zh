@@ -1,0 +1,70 @@
+{
+  "content_docs_hits": [],
+  "content_governance_hits": [
+    {
+      "asset": "docs/assets/practical-11-discord-official-screenshot-zh-v1.webp",
+      "token": "practical-11-discord-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    },
+    {
+      "asset": "docs/assets/practical-18-security-official-screenshot-zh-v1.webp",
+      "token": "practical-18-security-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    },
+    {
+      "asset": "docs/assets/practical-19-voice-mode-official-screenshot-zh-v1.webp",
+      "token": "practical-19-voice-mode-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    },
+    {
+      "asset": "docs/assets/practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+      "token": "practical-14-github-pr-review-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    },
+    {
+      "asset": "docs/assets/practical-13-ollama-official-screenshot-zh-v1.webp",
+      "token": "practical-13-ollama-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    },
+    {
+      "asset": "docs/assets/practical-15-skills-official-screenshot-zh-v1.webp",
+      "token": "practical-15-skills-official-screenshot-zh-v1.webp",
+      "file": "/opt/projects/awesome-hermes-agent-zh/governance/plans/2026-06-05-practical-deep-apps-image-spec.md"
+    }
+  ],
+  "site_source_hits": [],
+  "site_content_cache_hits": [
+    {
+      "asset": "docs/assets/solution-xhs-output-map-v1.webp",
+      "token": "solution-xhs-output-map-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+    },
+    {
+      "asset": "docs/assets/solution-xhs-single-vs-series-v1.webp",
+      "token": "solution-xhs-single-vs-series-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+    },
+    {
+      "asset": "docs/assets/solution-xhs-cli-vs-acp-v1.webp",
+      "token": "solution-xhs-cli-vs-acp-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md"
+    },
+    {
+      "asset": "docs/assets/solution-gzh-output-map-v1.webp",
+      "token": "solution-gzh-output-map-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+    },
+    {
+      "asset": "docs/assets/solution-gzh-cli-vs-acp-v1.webp",
+      "token": "solution-gzh-cli-vs-acp-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+    },
+    {
+      "asset": "docs/assets/solution-gzh-single-vs-series-v1.webp",
+      "token": "solution-gzh-single-vs-series-v1.webp",
+      "file": "/opt/projects/hermes-zh/content-cache/raw/docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md"
+    }
+  ],
+  "site_public_existing_deleted_assets": [],
+  "content_existing_deleted_assets": []
+}
