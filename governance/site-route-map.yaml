@@ -540,14 +540,18 @@ routes:
   slug: /start/personalize/desktop-app
   module: start
   page_type: doc-page
-  title: 🖥 07-用桌面端操作 Hermes
+  title: 🖥️ 07-用桌面端操作 Hermes
   section: desktop-app
-  description: Desktop 不是独立产品，而是和 CLI 同一个 runtime 的桌面入口。
-  order: 35.5
+  description: 这一页只解决一件事：
+  order: 36
   status: published
-  updated: '2026-06-04'
-  source_type: official_reference
+  updated: '2026-04-28'
+  source_type: feature_deep_dive
   nav_group: 03-玩出花样
+  source_review:
+    state: needs-review
+    checked_at: '2026-07-05'
+    note: Feature deep-dive. Must be checked against official docs for accuracy.
 - source: docs/01-从这开始/04-自己造东西/01-总览.md
   slug: /start/build
   module: start

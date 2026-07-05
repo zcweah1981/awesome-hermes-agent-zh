@@ -1,222 +1,143 @@
----
-title: "高级玩法：集成 NotebookLM，将 Hermes 打造成超级知识库"
-module: "从这开始"
-section: "实战应用"
-slug: hermes-as-notebooklm-knowledge-base
-description: "通过非官方 API 将 Hermes Agent 与 Google NotebookLM 连接，让 Hermes 拥有一个由你私人文档构成的云端大脑，实现跨文档的智能问答与内容再创作。"
-order: 28
-status: "published"
-updated: "2026-07-05"
-source_type: "original"
----
+# 高级玩法：集成 NotebookLM 打造超级知识库
 
-# ✍️ 高级玩法：集成 NotebookLM，将 Hermes 打造成超级知识库
+想象一下，如果你的 Hermes Agent 能读懂你所有的私人文档——无论是 PDF 还是 Google Docs，并能随时跨文档回答你的复杂问题。本页将引导你实现这个目标，将 Agent 从一个命令执行器，升级为一个熟悉你所有知识的“云端大脑”。
 
-## 适合谁
+我们将通过一个社区开发的工具，把 Hermes Agent 和 Google 的下一代笔记工具 **NotebookLM** 连接起来。NotebookLM 擅长理解和提炼长篇文档，而 Hermes 擅长执行任务和自动化。两者的结合，将创造出一个真正强大的个性化知识助理。
 
-- **知识沉淀者**：你拥有大量 PDF、Google Docs 文档，希望有一个智能助理能帮你阅读和提炼。
-- **效率探索家**：你希望将 Hermes Agent 的能力与云端知识库结合，打造更强大的个人自动化工作流。
-- **技术爱好者**：你对探索 API、编写简单脚本和封装 Hermes Skill 有浓厚兴趣，且不畏惧折腾。
+![Hermes 与 NotebookLM 集成架构图](../../assets/solution-practical-08-obsidian-second-brain-v1.webp "一张架构图，展示了用户通过 Hermes Agent 发出指令，Hermes 调用一个脚本，该脚本通过非官方 API 与 Google NotebookLM 服务进行通信，实现对用户私人文档的增、查、改等操作。")
 
-**前提**：你需要具备基本的 Python 与命令行使用经验，并理解使用非官方 API 可能带来的风险。
+> **注意**：这是一个高级玩法，需要你具备基本的 Python 和命令行使用经验，并且不畏惧折腾。我们将使用一个非官方 API，这意味着它可能随时会因 Google 的更新而失效。
 
-## 目标
+## 🚀 准备工作：连接到 NotebookLM
 
-本文将引导你一步步地将 Hermes Agent 与 Google 的下一代笔记工具 NotebookLM 集成。集成后，你的 Hermes Agent 将不仅仅是一个命令执行器，更是一个熟悉你所有私人文档的“知识专家”。你可以随时向它提问，让它帮你：
+连接的关键是一个名为 `notebooklm-py` 的社区开源库。
 
-- **秒传文档**：一个指令将本地文件或 Google Doc 添加到知识库。
-- **智能问答**：跨越数十个文档，向你的私人数据提问并获得精准答案。
-- **内容再创作**：让 Agent 阅读指定来源，为你生成摘要、报告大纲或社交媒体文案。
+### 1. 📦 安装连接库
 
-## 核心信息
-
-我们将利用一个社区开发的非官方 Python 库 `notebooklm-py`，通过 Hermes 的 `Skill` 和 `terminal` 工具，间接操作 NotebookLM。这套组合拳的核心价值在于，将 Hermes 强大的“行动能力”与 NotebookLM 卓越的“知识理解能力”相结合，创造出一个真正个性化的超级知识库。
-
-##  arquitetura
-
-![Hermes 与 NotebookLM 集成架构图](../../assets/solution-practical-08-obsidian-second-brain-v1.webp "一张架构图，清晰地展示了用户通过 Hermes Agent 发出指令，Hermes 调用一个封装了 notebooklm-py 脚本的 Skill，该脚本通过非官方 API 与 Google NotebookLM 服务进行通信，从而实现对用户存储在 Google Drive 或上传的私人文档进行增、查、改等操作的完整流程。")
-
-上图展示了整个工作流程：
-
-1.  **用户**：向 Hermes Agent 发出指令，如“总结一下我关于‘项目A’的所有文档”。
-2.  **Hermes Agent**：识别意图，激活一个专门编写的 `Skill`。
-3.  **Skill & 脚本**：`Skill` 调用一个 Python 脚本，该脚本使用 `notebooklm-py` 库。
-4.  **notebooklm-py**：将用户的指令转化为对 NotebookLM 后端服务的 API 请求。
-5.  **NotebookLM**：执行请求，检索和处理用户的私人文档（PDF、Google Docs 等）。
-6.  **返回结果**：处理后的信息沿原路返回给用户。
-
-## 准备工作：`notebooklm-py`
-
-`notebooklm-py` 是一个由社区贡献者开发的 Python 库，它通过逆向工程实现了对 NotebookLM 的基本操作。
-
-### 📦 安装
-
+首先，在你的终端环境中安装这个库：
 ```bash
 pip install notebooklm-py
 ```
 
-### ⚠️ 获取身份验证
+### 2. ⚠️ 获取“临时钥匙”：Cookie
 
-由于这是非官方 API，身份验证相对繁琐。你需要从浏览器中手动提取你的 NotebookLM 会话 Cookie。
+由于 `notebooklm-py` 是一个**非官方**工具，它无法像正式产品那样通过标准的“用户名密码”登录。我们需要手动从浏览器中提取一个名为 **Cookie** 的“临时访问钥匙”，并交给它。
 
-1.  登录你的 Google 账户并访问 [NotebookLM](https://notebooklm.google.com/)。
-2.  打开浏览器的开发者工具（通常是 F12）。
+1.  在浏览器中登录你的 Google 账户并访问 [NotebookLM](https://notebooklm.google.com/)。
+2.  打开浏览器的开发者工具（通常按 F12）。
 3.  切换到“网络”（Network）标签页。
-4.  找到对 `notebooklm.google.com` 的任意请求。
-5.  在请求头中找到 `Cookie` 字段，并复制其内容。
-6.  将其保存到一个安全的地方，后续脚本将需要读取它。
+4.  随便操作一下 NotebookLM 页面（例如点击一个笔记），在网络请求列表中找到任意一个发往 `notebooklm.google.com` 的请求。
+5.  点击该请求，在右侧的“标头”（Headers）中找到 `Cookie` 字段，并**完整复制**其内容。
+6.  将这段长长的文本保存好。我们马上就要用到它。
 
-**请务必妥善保管你的 Cookie，不要泄露给任何人或提交到公开的代码仓库中。**
+**请像保护密码一样保护你的 Cookie！** 它包含了你当前会话的完整权限，切勿泄露或上传到任何公开地方。最安全的做法是将其设置为环境变量。
 
-## 封装为 Hermes Skill
+## 🦾 封装为 Skill 核心脚本
 
-为了让操作更便捷，我们将其封装成一个 `Skill`。
-
-### 📜 `SKILL.md`
-
-创建一个名为 `notebooklm` 的 Skill：
-
-```markdown
----
-name: notebooklm
-description: "使用 notebooklm-py 与 Google NotebookLM 交互，管理和查询云端知识库。"
-category: "data-science"
----
-
-# 核心指令
-
-## `nl-query <问题>`
-对 NotebookLM 中的所有文档进行提问。
-
-## `nl-add-file <文件路径>`
-上传一个本地文件到 NotebookLM。
-
-## `nl-summarize <来源>`
-总结指定的来源文档。
-
-# 脚本
-- `scripts/notebook.py`
-
-# 依赖
-- `notebooklm-py`
-```
-
-### 🐍 `scripts/notebook.py` 示例
-
-这是一个简化的 Python 脚本示例，它处理命令行参数并调用 `notebooklm-py`。
+为了方便 Agent 调用，我们将所有操作都封装在一个 Python 脚本中。这个脚本就是我们未来要创建的 Skill 的核心。
 
 ```python
-# scripts/notebook.py
+# 建议保存路径: /root/.hermes/skills/scripts/notebooklm_handler.py
 import sys
 import os
 from notebooklm import NotebookLM
 
-# 从环境变量或安全文件中读取 Cookie
+# 从环境变量读取 Cookie，这是推荐的安全做法
 auth_cookie = os.getenv('NBLM_COOKIE')
 if not auth_cookie:
-    print("错误：请设置 NBLM_COOKIE 环境变量。")
+    print("错误：请先设置 NBLM_COOKIE 环境变量。")
     sys.exit(1)
 
-client = NotebookLM(cookie=auth_cookie)
+try:
+    client = NotebookLM(cookie=auth_cookie)
+except Exception as e:
+    print(f"初始化 NotebookLM 客户端失败，请检查 Cookie 是否正确或已过期: {e}")
+    sys.exit(1)
+
+if len(sys.argv) < 2:
+    print("用法: python notebooklm_handler.py [query|add_file|summarize] [参数...]")
+    sys.exit(1)
 
 command = sys.argv[1]
 args = sys.argv[2:]
 
 if command == "query":
+    if not args:
+        print("错误: 'query' 命令需要一个问题作为参数。")
+        sys.exit(1)
     question = " ".join(args)
     response = client.query(question)
     print(response)
+
 elif command == "add_file":
+    if not args:
+        print("错误: 'add_file' 命令需要一个文件路径作为参数。")
+        sys.exit(1)
     file_path = args[0]
-    # ... 实现上传逻辑 ...
-    print(f"文件 {file_path} 上传成功。")
+    # ... 此处省略上传文件的具体实现逻辑 ...
+    # 你需要根据 notebooklm-py 的文档来实现文件上传
+    print(f"文件 {file_path} 上传成功（伪代码）。")
+
 else:
     print(f"未知命令: {command}")
 
 ```
 
-## 核心操作演示
+这个脚本通过命令行参数来接收指令（如 `query`），然后调用 `notebooklm-py` 库来执行相应操作。
 
-### 1. 📂 添加来源
+## ✅ 开始使用：三大核心操作
 
-**目标**：将本地的 `project-alpha-brief.pdf` 上传到 NotebookLM。
+将上述脚本保存好，并设置好 `NBLM_COOKIE` 环境变量后，你就可以通过 Hermes 的 `terminal` 工具开始使用了。
 
-**指令** (`terminal`):
+### 1. 📂 添加新知识
 
-> hermes, run python /path/to/your/skill/scripts/notebook.py add_file /path/to/project-alpha-brief.pdf
-
-Hermes 会执行脚本，将文件上传到你的 NotebookLM 空间，并自动建立索引。
+**目标**：将本地的 `project-alpha-brief.pdf` 文件上传到 NotebookLM，让它成为知识库的一部分。
+**指令**:
+```
+terminal(
+  command="python /root/.hermes/skills/scripts/notebooklm_handler.py add_file /path/to/project-alpha-brief.pdf"
+)
+```
+Agent 会执行脚本，将文件上传并自动建立索引。
 
 ### 2. ❓ 跨文档智能问答
 
 **目标**：你上传了多个关于“项目A”和“项目B”的文档，现在想知道它们在技术选型上的主要差异。
-
-**指令** (`terminal`):
-
-> hermes, run python /path/to/your/skill/scripts/notebook.py query "项目A和项目B在技术选型上的核心差异是什么？"
-
-Hermes 会调用脚本，将问题发送给 NotebookLM。NotebookLM 会综合所有相关文档，提供一个精准的、带有引用来源的答案。
+**指令**:
+```
+terminal(
+  command="python /root/.hermes/skills/scripts/notebooklm_handler.py query '项目A和项目B在技术选型上的核心差异是什么？'"
+)
+```
+NotebookLM 会综合所有相关文档，提供一个精准的、带有引用来源的答案。
 
 ### 3. 📝 内容再创作
 
 **目标**：你需要根据几份市场研究报告，为下周的会议准备一个 PPT 大纲。
+**指令**:
+```
+terminal(
+  command="python /root/.hermes/skills/scripts/notebooklm_handler.py query '请根据‘2026年Q2市场分析报告’和‘竞品动态观察’这两份文档，生成一份新产品发布策略的PPT大纲，需包含市场定位、目标用户、核心卖点和推广渠道四部分。'"
+)
+```
+Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作。
 
-**指令** (`terminal`):
+## 🚧 风险与挑战
 
-> hermes, run python /path/to/your/skill/scripts/notebook.py query "请根据‘2026年Q2市场分析报告’和‘竞品动态观察’这两份文档，生成一份关于我们新产品发布策略的PPT大纲，需要包含市场定位、目标用户、核心卖点和推广渠道四个部分。"
+### 1. 非官方 API 的稳定性
+这是最大的风险。Google 随时可能更新 NotebookLM 后端，导致 `notebooklm-py` 库失效，我们建立于其上的整个工作流也会随之瘫痪。
 
-Hermes 会返回一个结构清晰的 PPT 大纲，你可以直接复制到演示文稿中开始工作。
+### 2. Cookie 的安全与时效
+你提取的 Cookie 有有效期，一旦过期就需要重新获取。同时，必须用安全的方式（如环境变量）来存储它，避免硬编码在脚本里。
 
-## 限制与风险
+## ➡️ 下一步
 
-### ⚙️ 技术门槛
+这个工作流只是一个起点。你可以继续深化：
+- **创建真正的 Skill**：将上述脚本封装成一个完整的 Hermes Skill，用更自然的语言进行调用。
+- **自动化上传**：创建一个 Cron 定时任务，每天自动将指定文件夹的新文档上传到 NotebookLM。
+- **结合搜索**：让 Agent 用 `web_search` 搜索网页，然后将高质量内容存入 NotebookLM 作为永久知识。
 
-此方案需要你具备一定的技术动手能力，包括：
-- 使用命令行。
-- 安装 Python 库。
-- 理解并处理 API 身份验证（如 Cookie）。
-- 编写和调试简单的脚本。
-
-### 💔 非官方 API 稳定性风险
-
-这是最主要的风险。`notebooklm-py` 依赖的是非官方、可能随时变化的 API。Google 一旦更新 NotebookLM 的后端，这个库和我们建立于其上的整个工作流就可能**瞬间失效**。你需要为此做好心理准备，并关注 `notebooklm-py` 库的更新。
-
-### 🔒 隐私与安全注意事项
-
-- **Cookie 安全**：你手动提取的 `Cookie` 拥有你账户的完整权限。必须以安全的方式存储和使用它（例如，通过环境变量），绝对不能硬编码在脚本里或上传到 Git 仓库。
-- **数据流**：虽然数据在你的设备和 Google 服务器之间传输，但 `notebooklm-py` 这个第三方库的安全性未经官方审计。请自行评估其代码和风险。
-
-## CTA (Call to Action)
-
-这只是一个开始！你可以基于这个思路，创造更复杂、更自动化的工作流。比如：
-
-- 创建一个 `cronjob`，每天自动将指定文件夹的新文档上传到 NotebookLM。
-- 结合 `web_search` 工具，让 Hermes 搜索网页，然后将高质量内容存入 NotebookLM 作为永久知识。
-
-## 给下游的说明
-
-本文档已根据任务要求完成初稿。
-- **文章路径**: `/opt/projects/awesome-hermes-agent-zh/docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md`
-- **图片路径 (占位符)**: `../../assets/solution-practical-08-obsidian-second-brain-v1.webp`
-- **引用旧文**:
-    - [将重复工作流沉淀为 Skill](./04-自己造东西/09-将重复工作流沉淀为-Skill.md)
-    - [让 Hermes 记住你](./03-玩出花样/03-让 Hermes 记住你.md)
-    - [接入外部记忆系统-总览](./04-自己造东西/03-接入外部记忆系统/01-总览.md)
-- **去重说明**: 本文聚焦于 Hermes 与 NotebookLM 的集成，这是一个全新的主题，与现有的 Memory、Obsidian 或通用知识库文章在具体实现和工具链上完全不同，不存在内容重复。
-- **验收自查**:
-    - [x] 已阅读所有标准文件。
-    - [x] 文章已放置在 `docs/01-从这开始/05-实战应用/` 目录下，并采用连续编号 `28`。
-    - [x] 主题聚焦 Hermes 与 NotebookLM 的联动。
-    - [x] 包含 emoji H2 段落、适合谁、架构图、`notebooklm-py` 链接/安装、Skill/脚本片段、3个核心操作、限制与风险。
-    - [x] 已明确说明技术门槛、API 风险和隐私事项。
-    - [x] 已引用 T1 图片（使用占位符）并添加中文 alt。
-    - [x] 已链接 Skill, Memory, 外部记忆系统相关的旧文。
-    - [x] Proof 部分已按要求填写。
-
-请求 Designer 或 PM 评审。
-
-## 相关阅读
-
-- [将重复工作流沉淀为 Skill](./04-自己造东西/09-将重复工作流沉淀为-Skill.md)
-- [让 Hermes 记住你](./03-玩出花样/03-让 Hermes 记住你.md) (了解内置记忆)
-- [接入外部记忆系统-总览](./04-自己造东西/03-接入外部记忆系统/01-总览.md) (对比不同记忆方案)
+## 📖 出处
+- [notebooklm-py on GitHub](https://github.com/dwarvesf/notebooklm-py)
+- [Hermes Agent 官方文档：terminal](/docs/hermes-agent/tools/terminal)
+- [Hermes Agent 官方文档：skills](/docs/hermes-agent/concepts/skills)

@@ -1,0 +1,55 @@
+releases:
+- release_id: hz-p0-p1-style-repair-20260705-T3-governance-metadata-update
+  task_group: hz-p0-p1-style-repair-20260705
+  release_date: '2026-07-05'
+  status: staged
+  summary: 补齐 P0/P1 内容批次的路由、发布与来源治理记录。
+  content_sets:
+  - priority: P0
+    summary: 用户首次运行的最短路径，包含环境准备、安装和第一次互动。
+    files:
+    - docs/01-从这开始/01-先跑起来/01-总览.md
+    - docs/01-从这开始/01-先跑起来/02-先准备运行环境.md
+    - docs/01-从这开始/01-先跑起来/03-进入终端并连接服务器.md
+    - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
+    - docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
+  - priority: P1
+    summary: 核心功能上手、模块总览和个性化配置。
+    files:
+    - docs/00-文档总览.md
+    - docs/01-从这开始/总览.md
+    - docs/02-现成方案/01-总览.md
+    - docs/02-现成方案/01-内容创作与发布/01-总览.md
+    - docs/02-现成方案/02-办公效率与知识整理/01-总览.md
+    - docs/02-现成方案/03-应用开发与快速原型/01-总览.md
+    - docs/03-国内落地/01-总览.md
+    - docs/04-从OpenClaw过来/01-总览.md
+    - docs/05-遇到问题/01-总览.md
+    - docs/06-reference/01-总览.md
+    - docs/01-从这开始/02-开始上手/01-总览.md
+    - docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md
+    - docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md
+    - docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
+    - docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
+    - docs/01-从这开始/03-玩出花样/01-总览.md
+    - docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
+    - docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+    - docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md
+    - docs/01-从这开始/03-玩出花样/05-让工具更顺手.md
+    - docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md
+    - docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+    - docs/01-从这开始/04-自己造东西/01-总览.md
+    - docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md
+    - docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md
+    - docs/01-从这开始/05-实战应用/01-总览.md
+    - docs/03-国内落地/01-国内部署/01-总览.md
+    - docs/03-国内落地/02-国内模型/01-总览.md
+    - docs/03-国内落地/03-国内入口/01-总览.md
+  verification:
+    content_review:
+      status: pending
+      reviewer: seiya
+    deployment:
+      status: pending
+      deployed_at: null
+      commit_sha: null

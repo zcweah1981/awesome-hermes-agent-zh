@@ -1,523 +1,138 @@
-# 06-企业微信（AI Bot）
+# 企业微信接入指南 (AI Bot)
 
-> 💡 **速答**：Hermes Agent 接入企业微信走官方推荐的 AI Bot 长连接模式——在企业微信里创建智能机器人 → 选 API 模式 + 长连接 → 拿到 Bot ID / Secret → 填入 Hermes 的 `WECOM_BOT_ID` 和 `WECOM_SECRET` → 启动 Gateway。不需要公网回调地址。
+如果你的团队主协作平台是企业微信，那么这一页将帮你把 Hermes Agent 无缝地“请”进团队，成为每个人的智能助理。
 
-> 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把"创建机器人 → 获取 Bot ID / Secret → 填回 Hermes"这条主线走顺。
+我们将走官方推荐的 **AI Bot 长连接**路线，这种方式无需公网 IP 和复杂的回调配置，稳定又高效。
 
-这一页只讲**企业微信消息入口**本身，不重复展开：
+![企业微信接入主线图](./assets/wecom-entry-structure-v1.webp "一张流程图，展示了从在企业微信创建机器人，到获取凭据，再到配置 Hermes Gateway 并最终建立连接的完整步骤。")
 
-- 模型怎么买
-- 云服务器怎么买
-- Dashboard / Open WebUI 怎么配
+> **一句话结论**：先在企业微信后台创建 AI 机器人拿到凭据，再把凭据填回 Hermes 启动 Gateway，两边就通了。
 
-## 📋 速答（你可能正在搜的）
+## 🚀 接入三步走
 
-**Hermes Agent 怎么接入企业微信？**
-> 在企业微信后台创建智能机器人 → 选 API 模式 + 长连接 → 拿到 Bot ID 和 Secret → 填入 Hermes 的 `WECOM_BOT_ID` 和 `WECOM_SECRET` → 运行 `hermes gateway` 启动。不需要公网回调地址，走的是 WebSocket 长连接。
+在开始之前，请确保你的 Hermes Agent 至少已经在命令行（CLI）里跑通了。企业微信是消息入口，不是排错的第一站。
 
-**企业微信接入教程的完整流程是什么？**
-> 6 步闭环：① 确认 CLI 已跑顺 ② 在企业微信工作台进入智能机器人创建页 ③ 选 API 模式 + 长连接 ④ 保存 Bot ID 和 Secret ⑤ 写入 Hermes `.env` ⑥ 启动 `hermes gateway` 验证消息收发。
+### 第 1 步：在企业微信创建 AI Bot
 
-**企业微信 AI Bot 和 Hermes 是什么关系？**
-> 企业微信 AI Bot 是企业微信官方推荐的 Agent 对接方式。Hermes 官方 WeCom adapter 就是围绕 AI Bot WebSocket 网关（`wss://openws.work.weixin.qq.com`）设计的。Hermes 作为 AI 后端，企业微信作为消息触达前端。
+进入企业微信工作台，找到“智能机器人”功能，创建一个新的机器人。
 
-**接入企业微信前需要先准备好什么？**
-> Hermes 本体已在 CLI 里正常工作、已有可用模型入口、当前环境能运行 gateway。企业微信是消息触达层，不是第一排错入口——如果 CLI 还没跑顺，先回 CLI。
+- **关键点**：选择 **API 模式**，连接方式选择 **使用长连接**。
 
-## 🚀 企业微信接入主线图
+这是企业微信官方为 Agent 类应用推荐的方式，也是 Hermes 适配器支持得最好的方式。
 
-![企业微信接入主线图](./assets/wecom-entry-structure-v1.webp)
+![企业微信官方创建智能机器人入口截图](./assets/wecom-create-bot-entry-official.webp "企业微信后台创建智能机器人的官方页面截图，清晰地展示了“创建机器人”按钮。")
 
-先看图，再记住这页真正的闭环：
+### 第 2 步：获取凭据
 
-- 在企业微信里创建智能机器人
-- 选择 API 模式 + 长连接
-- 拿到 Bot ID / Secret
-- 把凭据填回 Hermes Gateway
+创建成功后，企业微信会提供给你两样关键的东西：
+- **Bot ID**
+- **Secret**
 
-## ✨ 这条路适合谁
+请妥善保管它们，尤其是 `Secret`，它就像是机器人的密码，绝不能泄露。
 
-- 你的组织已经把企业微信作为主协作平台
-- 你希望 Hermes 直接进入企业内部聊天与协作场景
-- 你更看重企业内触达，而不是公网聊天入口
-- 你希望走官方推荐的 AI Bot 长连接方式，而不是先自己搭 URL 回调
-- 你已经理解：企业微信页讲的是消息入口，不是第一排错入口
+### 第 3 步：配置并启动 Hermes Gateway
 
-## 📌 先记住这页的核心判断
-
-企业微信这页最重要的，不是“聊天页面开没开”，而是先把 4 件事分清：
-
-1. **企业微信属于 Gateway 消息入口。**
-2. **Hermes 官方 WeCom 适配器优先对应的是 AI Bot 长连接网关。**
-3. **真正关键的凭据是 Bot ID 和 Secret。**
-4. **如果 CLI 没跑顺，企业微信入口出了问题会更难排查。**
-
-所以这页默认服务的是：
-
-- Hermes 本体已经大致可用
-- 你现在开始接团队消息入口
-
-## 🧭 最短决策
-
-| 你的情况 | 建议 |
-|---|---|
-| 你第一次用 Hermes，还没跑顺 CLI | 先回 CLI，不要先做企业微信 |
-| 你已经有 Hermes 可用实例，想把它接进企业微信 | 直接看这页 |
-| 你需要企业内部正式协作入口 | 企业微信值得优先做 |
-| 你只想做浏览器聊天前端 | 不要先做企业微信，先回 Open WebUI |
-| 你还没准备好部署环境或模型入口 | 先回对应主线页 |
-
-如果你只想记一句话：
-
-- **企业微信 = 团队消息入口**
-- **CLI = 第一主入口**
-
-## 🧱 企业微信这条路到底分几步
-
-从接入角度，这页主线可以压缩成 3 步：
-
-### 第 1 步：在企业微信里创建智能机器人
-进入：
-
-- 工作台
-- 智能机器人
-- 创建机器人
-
-### 第 2 步：选择 API 模式 + 长连接
-这是官方对接 Agent 的推荐方式，重点是：
-
-- 用 API 模式创建
-- 连接方式选“使用长连接”
-- 创建后妥善保存 Bot ID 和 Secret
-
-### 第 3 步：把 Bot ID / Secret 填回 Hermes
-Hermes 这边真正需要接住的是：
-
-- `WECOM_BOT_ID`
-- `WECOM_SECRET`
-
-然后启动 gateway，让 Hermes 与企业微信的 AI Bot 网关建立长连接。
-
-## 🖼️ 操作截图：进入创建企业微信智能机器人入口
-
-![企业微信官方创建智能机器人入口截图](./assets/wecom-create-bot-entry-official.webp)
-
-这张官方截图证明的是：
-
-- 你进入的是企业微信的**智能机器人**页面
-- 当前所在的是“创建”页
-- 页面上已经明确给出 **创建机器人** 的入口按钮
-
-这张图适合作为“进入创建机器人入口”这一步的官方操作证据。
-
-## 🔧 官方推荐方式到底是什么
-
-结合企业微信官方文档和 Hermes 官方 WeCom 文档，这页最关键的技术判断其实非常清楚：
-
-### 企业微信官方推荐的机器人创建方式
-企业微信官方文档明确指出：
-
-- 推荐通过 **API 模式（长连接）** 创建智能机器人
-- 这种方式支持：
-  - 被动回复多条消息
-  - 主动向用户发消息
-- 并且会生成：
-  - `Bot ID`
-  - `Secret`
-
-### Hermes 官方 WeCom 适配器对应的接入方式
-Hermes 官方文档则明确写了：
-
-- WeCom adapter 使用 **WeCom AI Bot WebSocket gateway**
-- 核心连接地址是：
-  - `wss://openws.work.weixin.qq.com`
-- 并且：
-  - **不需要公网回调地址 / webhook**
-  - 本质上走的是**长连接**而不是公开 HTTP callback
-
-所以把这两边对上以后，你会发现这页真正的推荐路线是一致的：
-
-- 企业微信侧：创建 AI Bot，选 API 模式 + 长连接
-- Hermes 侧：填入 `WECOM_BOT_ID` 和 `WECOM_SECRET`，启动 gateway 建立 WebSocket 长连接
-
-## ✅ 先把最短闭环跑通
-
-下面这部分是这页真正的操作主线。
-
----
-
-## 第 1 步：先确认现在适不适合做企业微信接入
-
-现在做什么：
-- 先判断当前环境是否已经具备接企业微信的最小前提
-
-为什么做：
-- 企业微信是消息触达层，不是基础排错层
-- 如果 Hermes 本体还没跑顺，这里出问题会很难判断是哪一层错了
-
-先确认这 3 件事：
-
-- Hermes 至少已经能在 CLI 里正常工作
-- 你已经有可用模型入口
-- 当前环境已经具备运行 gateway 的条件
-
-看到什么算成功：
-- 你已经能确认“CLI 是通的”“模型是可用的”“现在只是开始接企业微信入口”
-
-如果没成功先查什么：
-- 回 [04-命令行（CLI）](./04-命令行（CLI）.md)
-- 回 [01-国内部署 | 总览](../01-国内部署/01-总览.md)
-- 回 [02-国内模型 | 总览](../02-国内模型/01-总览.md)
-
----
-
-## 第 2 步：在企业微信里进入创建机器人入口
-
-现在做什么：
-- 在企业微信客户端里进入智能机器人创建页
-
-为什么做：
-- 企业微信这条路的第一动作，不是先改 Hermes 配置，而是先在企业微信里拥有一个真正的 AI Bot
-
-官方路径可以理解成：
-
-- 工作台
-- 智能机器人
-- 创建机器人
-- 手动创建
-
-看到什么算成功：
-- 你进入的是智能机器人创建流程
-- 能看到创建机器人入口，而不是普通群机器人页或其他应用页
-
-如果没成功先查什么：
-- 是否进入了错误的菜单
-- 当前企业微信版本是否过旧
-- 你是否具备创建智能机器人的权限
-
----
-
-## 第 3 步：选择 API 模式，并使用长连接
-
-现在做什么：
-- 在创建机器人过程中选择 **API 模式**，连接方式选 **使用长连接**
-
-为什么做：
-- 这是企业微信官方文档中对接 Agent 的推荐方式
-- Hermes 官方 WeCom adapter 也正是围绕 AI Bot WebSocket 长连接来设计的
-
-你在这一页至少要记住：
-
-- 不要先默认走 URL 回调
-- 长连接方式对 Hermes 这条主线更自然
-- 页面里会生成 Bot ID 和 Secret，后面 Hermes 要用
-
-看到什么算成功：
-- 页面已经进入 API 配置区
-- 连接方式明确选中了“使用长连接”
-- 系统生成或展示 Bot ID 与 Secret
-
-如果没成功先查什么：
-- 是否选错了创建模式
-- 是否还停留在普通创建页
-- 是否误把 URL 回调方式当主线
-
----
-
-## 第 4 步：保存 Bot ID 与 Secret
-
-现在做什么：
-- 保存企业微信返回的 Bot ID 和 Secret
-
-为什么做：
-- 这两个值是 Hermes 侧最关键的入口凭据
-
-Hermes 官方 WeCom 适配器需要的就是：
+现在，回到 Hermes Agent 这边。你需要将刚才获取的凭据配置到 `.env` 文件中：
 
 ```dotenv
 WECOM_BOT_ID=your-bot-id
 WECOM_SECRET=your-secret
 ```
 
-看到什么算成功：
-- 你已经能读取并保存 Bot ID / Secret
-- 不是只停留在“机器人建好了”的页面
-
-如果没成功先查什么：
-- 是否真正完成了 API 模式创建
-- 是否只看到了创建向导，但没有保存凭据
-- 是否忽略了 Secret 的保密要求
-
----
-
-## 第 5 步：把凭据填回 Hermes
-
-现在做什么：
-- 把 Bot ID / Secret 写入 Hermes
-
-为什么做：
-- 企业微信应用创建成功，不等于 Hermes 已经接通
-- 真正的闭环是 Hermes gateway 用这些凭据连到企业微信 AI Bot 网关
-
-Hermes 官方文档给出的最短 `.env` 形态是：
-
-```dotenv
-WECOM_BOT_ID=your-bot-id
-WECOM_SECRET=your-secret
-```
-
-如果你还要做访问控制，还可以再加：
-
-```dotenv
-WECOM_ALLOWED_USERS=user_id_1,user_id_2
-WECOM_HOME_CHANNEL=chat_id
-```
-
-看到什么算成功：
-- Hermes 已经写入所需凭据
-- 不是只在企业微信后台完成了应用创建
-
-如果没成功先查什么：
-- 凭据是否填错
-- `.env` 是否真的生效
-- 是否把别的企业微信 Secret / 应用 Secret 混进来了
-
----
-
-## 第 6 步：启动 Hermes Gateway
-
-现在做什么：
-- 启动 gateway，让 Hermes 与企业微信建立实际连接
-
-怎么做：
+配置好后，启动 Gateway 服务：
 
 ```bash
 hermes gateway
 ```
 
-为什么做：
-- 这一步才是让企业微信入口真正“活起来”的动作
+如果终端没有报错，恭喜你！你的 Hermes Agent 已经成功接入企业微信，你可以在对应的机器人聊天窗口里和它对话了。
 
-看到什么算成功：
-- Gateway 正常启动
-- 企业微信入口没有立即报错缺失凭据
-- 后续可以在企业微信中与 Hermes 进行实际消息交互
+## 💡 应用场景示例：把 Agent 变成你的团队助理
 
-如果没成功先查什么：
-- `WECOM_BOT_ID` 是否填写
-- `WECOM_SECRET` 是否填写
-- Gateway 是否使用了正确配置文件 / profile
+仅仅是接入对话还不够，企业微信真正的威力在于成为自动化工作流的“通知中心”和“交互入口”。
 
+### 场景一：7x24 小时服务器状态监控与告警
 
-## 💡 实际应用场景
+让 Agent 成为一名“数字运维工程师”，不知疲倦地监控服务器状态，并在异常发生时第一时间通过企业微信告警。
 
-只完成接入还不够，将 Hermes Agent 与企业微信结合，能在团队协作中发挥巨大价值。以下是两个常见的实际应用场景。
+**目标**：定时监控服务器的磁盘空间和 Nginx 服务状态。当指标异常时，立即通过企业微信发送告警；一切正常时，则保持沉默。
 
-### 📊 场景一：信息聚合日报
+![服务器自动化运维告警流程图](../../assets/server-devops-alert-flow-v1.webp "一张流程图，展示了 Cron 定时任务触发一个监控脚本，脚本检查服务器状态，如果发现异常，则生成告警消息，并通过企业微信发送给指定用户或群聊。")
 
-每天自动搜集特定主题的最新动态，整理成日报推送到团队群，让所有人保持信息同步。
-
-**🎯 目标**：创建一个定时任务，每天早上 9 点自动搜索“AI Agent”相关的最新资讯，并将结果摘要发送到企业微信指定群聊。
-
-**🔑 核心思路**：
-1.  使用 `cronjob` 工具创建一个定时任务。
-2.  任务的 `prompt` 负责定义信息搜集（`web_search`）和内容摘要的核心逻辑。
-3.  任务的 `deliver` 参数指定推送到企业微信。
-
-**📝 配置示例**：
-
-你可以通过 Hermes Agent 的 `cronjob` 命令直接创建这个任务：
-
-```bash
-hermes cronjob create \
-  --name "ai-agent-daily-briefing" \
-  --schedule "0 9 * * *" \
-  --prompt "请使用 web_search 搜索最新的'AI Agent'相关技术文章和新闻，然后将结果汇总成一个不超过 300 字的摘要。摘要应包含标题、链接和简短介绍。请确保排版清晰，适合在企业微信群中阅读。" \
-  --deliver "wecom:your_chat_id" \
-  --enabled_toolsets '["web"]'
-```
-
-**🤔 如何获取 `wecom:your_chat_id`？**
-- `your_chat_id` 是企业微信中目标群聊或用户的 ID。通常在 Gateway 启动时，当有消息从企业微信发过来，日志里会打印出 `chat_id`。你可以先在目标群里 @机器人发个消息，然后从 Gateway 日志中找到它。
-
-**✅ 验收**：
-- 任务创建后，在第二天早上 9 点，你应该能在指定的企业微信群里收到 Hermes Agent 自动发送的 AI Agent 资讯日报。
-
-### 🚨 场景二：服务器与业务告警
-
-将 Hermes Agent 部署在服务器上，充当一个 7x24 小时的“数字运维工程师”，在发现异常时第一时间通过企业微信告警。
-
-**🎯 目标**：定时监控服务器的磁盘空间、内存使用率和 Nginx 服务状态。当任何指标超出阈值时，立即通过企业微信发送告警信息。
-
-**🔑 核心思路**：
-1.  同样使用 `cronjob` 创建一个高频（例如每 5 分钟）巡检任务。
-2.  但这次使用 `script` 参数，让 cron job 执行一个本地的监控脚本。
+**核心思路**：
+1.  创建一个高频（例如每 5 分钟）运行的 `cronjob` 定时任务。
+2.  这个任务不直接执行 prompt，而是执行一个本地的监控脚本 (`script`)。
 3.  监控脚本负责检查系统状态，**只在发现异常时才打印告警信息**。
-4.  Cron 任务会将脚本的输出（也就是告警信息）通过企业微信发送出来。如果脚本没有输出，则保持静默。
+4.  Cron 任务会将脚本的输出（也就是告警信息）通过企业微信发送出来。如果脚本没有输出，则万事大吉，企微保持安静。
 
-**🖼️ 告警流程图**：
-
-我们将复用在“服务器自动化运维”一文中已有的流程图，因为它清晰地展示了从巡检到告警的完整闭环。
-
-![Hermes Agent 做服务器自动化运维闭环：Cron 定时巡检磁盘、内存和 Nginx 状态，异常时通过企业微信告警，正常时保持沉默。](../../assets/rm2-5-cron-and-automation-01-scheduled-flow-map.webp)
-
-**📝 监控脚本示例 (`/opt/hermes/scripts/server_watchdog.sh`)**
-
-首先，你需要创建一个监控脚本。
-
+**1. 监控脚本示例 (`/opt/hermes/scripts/server_watchdog.sh`)**
 ```bash
 #!/bin/bash
-
-# 设置告警阈值
 DISK_USAGE_THRESHOLD=90
-MEMORY_USAGE_THRESHOLD=85
 
 # 检查磁盘使用率
 DISK_USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
 if [ "$DISK_USAGE" -gt "$DISK_USAGE_THRESHOLD" ]; then
-  echo "🚨 **【一级告警：磁盘空间不足】** 🚨
+  echo "🚨 **【一级告警：磁盘空间不足】**
 - **服务器**: prod-server-01
-- **挂载点**: /
-- **当前使用率**: $DISK_USAGE%
-- **阈值**: $DISK_USAGE_THRESHOLD%
+- **当前使用率**: $DISK_USAGE% (阈值: $DISK_USAGE_THRESHOLD%)
 - **建议**: 请立即登录服务器清理空间！"
-fi
-
-# 检查内存使用率
-MEMORY_USAGE=$(free | awk '/Mem/ {printf("%.0f"), $3/$2*100}')
-if [ "$MEMORY_USAGE" -gt "$MEMORY_USAGE_THRESHOLD" ]; then
-  echo "⚠️ **【二级告警：内存使用率过高】** ⚠️
-- **服务器**: prod-server-01
-- **当前使用率**: $MEMORY_USAGE%
-- **阈值**: $MEMORY_USAGE_THRESHOLD%
-- **建议**: 请检查是否有内存泄漏或高负载进程。"
 fi
 
 # 检查 Nginx 服务状态
 if ! systemctl is-active --quiet nginx; then
-  echo "🔥 **【紧急告警：Nginx 服务已停止】** 🔥
+  echo "🔥 **【紧急告警：Nginx 服务已停止】**
 - **服务器**: prod-server-01
 - **服务**: Nginx
-- **状态**: Inactive/Failed
 - **建议**: 请立即重启服务并检查日志！"
 fi
 ```
 
-**⚙️ 创建 Cron 任务**
-
-然后用 `cronjob` 工具把这个脚本变成一个告警机器人。
-
-```bash
-hermes cronjob create \
-  --name "server-watchdog-alert" \
-  --schedule "*/5 * * * *" \
-  --script "/opt/hermes/scripts/server_watchdog.sh" \
-  --deliver "wecom:your_admin_chat_id"
+**2. 创建 Cron 任务**
 ```
+cronjob(
+  action='create',
+  name='server-watchdog-alert',
+  schedule='every 5m',
+  script='/opt/hermes/scripts/server_watchdog.sh',
+  no_agent=True, # 直接运行脚本，高效稳定
+  deliver='wecom:your_admin_chat_id' # 将结果发送到指定的企微群或用户
+)
+```
+这样，你就拥有了一个 7x24 小时工作的、任劳任怨且“健康则沉默”的运维助理。
 
-**✅ 验收**：
-- **正常情况**：你的企业微信会非常安静，不会收到任何消息。
-- **异常情况**：一旦服务器磁盘、内存或 Nginx 出现问题，你会在 5 分钟内收到来自 Hermes Agent 的精准告警。
+### 场景二：每日信息聚合与推送
 
-这两个场景展示了企业微信作为企业内部强大通知与交互渠道的潜力。你可以举一反三，创造更多符合团队需求的自动化工作流，例如：
-- **审批/待办提醒**：定时检查项目管理工具（Jira, Trello）中分配给你的“待办”事项，并通过企微提醒。
-- **团队知识同步**：当团队知识库（Confluence, Notion）有重要更新时，自动将更新摘要推送到相关群聊。
+让 Agent 成为团队的“信息官”，每天自动搜集特定主题的最新动态，整理成日报推送到团队群。
 
-## ❓FAQ
+**目标**：创建一个定时任务，每天早上 9 点自动搜索“AI Agent”的最新资讯，并将摘要发送到企业微信群。
 
-### 1. 企业微信是不是 Hermes 的第一主入口？
-不是。
+**核心思路**：
+1.  创建一个每天早上 9 点执行的 `cronjob`。
+2.  这次我们使用 `prompt`，让 Agent 自己去执行搜索、分析和总结的任务。
+3.  将 `deliver` 参数指定为目标企业微信群。
 
-第一主入口仍然是 CLI。
-企业微信是团队消息触达入口。
-
-### 2. 企业微信页和飞书页的本质区别是什么？
-两者都属于团队消息入口，但企业微信这页更明确强调：
-
-- 官方推荐的是 AI Bot 长连接模式
-- Hermes 官方 WeCom adapter 也是围绕这条线设计的
-
-### 3. 企业微信一定要公网回调地址吗？
-对 Hermes 官方 WeCom adapter 这条主线来说，不是必须。
-
-因为 Hermes 官方文档明确指出：
-
-- WeCom adapter 使用 AI Bot WebSocket gateway
-- **no public endpoint or webhook needed**
-
-### 4. 企业微信机器人创建完成后，为什么 Hermes 还不能用？
-因为“创建完成”只代表企业微信侧准备好了。
-
-你还需要：
-
-- 保存 Bot ID / Secret
-- 写入 Hermes
-- 启动 Gateway
-
-### 5. 我现在应该先做企业微信，还是先做 CLI？
-默认还是先做 CLI。
-
-只有在 CLI 已经跑顺之后，再做企业微信接入，排错成本才最低。
-
-## ⚠️ 风险点与默认建议
-
-### 1. 不要把“创建机器人成功”当成“接入已经完成”
-企业微信里看到机器人创建成功，只说明企业微信侧准备好了。
-
-真正完成还要看：
-
-- Bot ID / Secret 是否保存好了
-- Hermes 是否写入这些凭据
-- Gateway 是否成功建立连接
-
-### 2. 不要把企业微信入口当成第一排错层
-如果 CLI 没跑顺、模型没配好、Gateway 没跑起来，你在企业微信里看到的可能只是“机器人不回话”，但根本不知道错在哪层。
-
-### 3. Bot Secret 必须当作敏感凭据管理
-Hermes 官方文档明确提醒：
-
-- 拿到这个 Secret 的人，就可以冒充你的机器人。
-
-也就是说：
-
-- Secret 不能随便传播
-- 不能直接写进公开文档或截图
-- 不能把敏感凭据长期裸露在群里或工单里
-
-### 默认建议
-
-如果你问我：企业微信这页最稳的使用顺序是什么？
-
-我会建议你按这个顺序：
-
-1. 先确认 CLI 已经跑顺
-2. 再在企业微信里创建智能机器人
-3. 明确选 API 模式 + 长连接
-4. 保存 Bot ID / Secret
-5. 再把凭据填回 Hermes Gateway
-
-也就是说：
-
-- 企业微信非常适合做企业内部消息入口
-- 但它不是第一步
-- 它是“本体已经大致可用之后的团队触达层”
-
-## 📎 官方依据
-
-- https://hermes-agent.nousresearch.com/docs/user-guide/messaging/wecom
-- https://open.work.weixin.qq.com/help2/pc/21657
-- https://developer.work.weixin.qq.com/document/path/101463
+**创建 Cron 任务**
+```
+cronjob(
+  action='create',
+  name='ai-agent-daily-briefing',
+  schedule='0 9 * * *',
+  prompt="""
+  请使用 web_search 搜索最新的'AI Agent'相关技术文章和新闻（过去24小时内），
+  然后将最重要的 3-5 条结果汇总成一个摘要。
+  摘要应包含标题、链接和一句话介绍。
+  请确保排版清晰，适合在企业微信群中阅读。
+  """,
+  deliver='wecom:your_team_chat_id'
+)
+```
+设置好后，你的团队就能每天准时收到一份高质量的行业动态简报，轻松保持信息同步。
 
 ## ➡️ 下一步
+- **探索更多场景**：你可以举一反三，创造更多工作流，例如审批提醒、知识库更新同步等。
+- **深入了解 Cron Job**：阅读 Cron Job 的相关文档，学习更多高级用法。
 
-- 前进到 [07-钉钉](./07-钉钉.md)
-- 回 [01-总览](./01-总览.md)
-
----
-
-## 🔗 国内入口关联路径
-
-- 还没选模型：先看[国内模型](/docs/china/models)，避免入口跑通后模型不可用。
-- 想暴露给前端或 Open WebUI：看[把 Hermes 暴露成后端服务](/docs/start/build/api-server)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
-- 要接消息平台：先看[飞书](/docs/china/entry/feishu)、[企业微信](/docs/china/entry/wecom-ai-bot)、[钉钉](/docs/china/entry/dingtalk)或[个人微信](/docs/china/entry/personal-wechat)。
-- 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。
+## 📖 出处
+- [Hermes Agent 官方文档：cronjob](/docs/hermes-agent/tools/cronjob)
+- [Hermes Agent 官方文档：gateway](/docs/hermes-agent/concepts/gateway)
