@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你已经有一个清楚、重复、按时间发生的任务时，怎样把它交给 Hermes 的 Cron / Automation 稳定执行。
 
-![Cron Job 会在 Fresh Session 里运行：自动化执行必须使用自包含 Prompt，避免依赖当前聊天窗口的隐含上下文，并在上线前先试跑](../../assets/rm2-5-cron-and-automation-01-fresh-session-cron.webp)
+![07 让 Hermes 自己自动跑：挑重复任务、先手动跑顺、写成自包含 Prompt，再交给 Hermes Cron 定时执行并稳定交付](../../assets/rm2-5-cron-and-automation-00-auto-run-overview.webp)
 
 > **一句话结论**：把已跑顺的重复任务交给 Hermes Cron，让它按时间表自动执行并交付结果。
 
@@ -16,6 +16,9 @@
 ---
 
 ## 🎯 先判断：这件事适不适合自动化
+
+![判断任务是否适合自动化：重复发生、频率明确、目标稳定、能按时交付，并且能写成自包含说明](../../assets/rm2-5-cron-and-automation-02-automation-fit-check.webp)
+
 
 下面这些情况，通常值得自动化：
 
@@ -45,6 +48,8 @@
 ---
 
 ## 📌 先记住最关键的一条
+
+![Cron Job 会在 Fresh Session 里运行：自动化执行必须使用自包含 Prompt，避免依赖当前聊天窗口的隐含上下文，并在上线前先试跑](../../assets/rm2-5-cron-and-automation-01-fresh-session-cron.webp)
 
 Cron job 会在 fresh session 里运行。
 
@@ -143,6 +148,9 @@ Cron job 会在 fresh session 里运行。
 
 ## 🩺 第一次失败时，先查这 5 件事
 
+![自动化第一次失败时的排查清单：先看任务是否跑顺、上下文是否太隐含、频率是否太低、是否先试跑、结果是否送到真正消费的位置](../../assets/rm2-5-cron-and-automation-03-first-failure-checklist.webp)
+
+
 ### 1. 任务本身是不是还没跑顺
 
 如果手动都不稳定，先别怪自动化。
@@ -189,3 +197,4 @@ Cron job 会在 fresh session 里运行。
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-自己造东西](<./01-总览.md>)
+
