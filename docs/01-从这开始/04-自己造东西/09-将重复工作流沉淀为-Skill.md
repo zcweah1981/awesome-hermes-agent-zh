@@ -1,6 +1,6 @@
 # 09-将重复工作流沉淀为 Skill
 
-![安装与验证：使用 skill_manage 创建 Skill，用 use_skill 调用，并验证结果是否稳定可复用](../../assets/rm2-5-skill-workflow-01-install-and-validate.webp)
+![09 将重复工作流沉淀为 Skill：发现重复工作流、拆解与抽象、编写 SKILL.md，再通过 skill_manage 安装并用 use_skill 一键调用](../../assets/rm2-5-skill-workflow-00-overview.webp)
 
 你是否发现自己总在指挥 Hermes Agent 执行一套相似的“组合拳”？比如晨报整理、项目初始化、周报数据拉取……每次都得重复输入几乎一样的指令，费时又费力。
 
@@ -16,6 +16,9 @@
 
 ### 1. 拆解与抽象：从手动到配方
 
+![从手动流程到可复用配方：先跑顺 git clone、pygount、ls -R、README 和分析报告，再抽出 repo_url 并定义固定输出](../../assets/rm2-5-skill-workflow-02-manual-to-recipe.webp)
+
+
 我们先把手动流程拆解成原子操作，然后为这个流程定义清晰的输入和输出。
 
 *   **手动步骤**:
@@ -30,6 +33,9 @@
     *   **输出 (Output)**：我们期望得到什么？一份关于项目的分析报告。
 
 ### 2. 编写配方：`SKILL.md`
+
+![SKILL.md 应该怎么写：Frontmatter 定义名称描述和参数，Body 写清目标与步骤，Pitfalls 补齐注意事项，让 Skill 成为可维护 SOP](../../assets/rm2-5-skill-workflow-03-skill-md-structure.webp)
+
 
 现在，我们可以为这个“配方”编写一份正式的说明书——`SKILL.md` 文件。它包含两部分：**元数据 (Frontmatter)**，用来定义名称、描述和参数；**主体 (Body)**，用自然语言描述执行步骤、最佳实践和注意事项。
 
@@ -66,6 +72,9 @@ parameters:
 
 ### 3. 安装与验证：让 Agent 学会新技能
 
+![安装与验证：使用 skill_manage 创建 Skill，用 use_skill 调用，并验证结果是否稳定可复用](../../assets/rm2-5-skill-workflow-01-install-and-validate.webp)
+
+
 有了说明书，我们该如何让 Agent “学会”呢？使用 `skill_manage` 这个“技能安装器”！
 
 ```
@@ -97,4 +106,5 @@ Agent 会自动加载对应的 `SKILL.md`，像人类员工阅读 SOP 一样，�
 ## 📖 出处
 - [Hermes Agent 官方文档：skill_manage](/docs/hermes-agent/tools/skill_manage)
 - [Hermes Agent 官方文档：Memory](/docs/hermes-agent/concepts/memory)
+
 
