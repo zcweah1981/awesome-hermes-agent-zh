@@ -19,7 +19,7 @@
 3.  **闭环任务**：使用 `execute_code` 替代零散的 `terminal` 调用，确保多步任务的原子性。
 4.  **索要证据**：要求 Agent 在完成后提供 PR 链接、Commit ID 或文件路径，而非口头承诺。
 
-![从工具到助理的最佳实践示意图：围绕 Hermes 展开健康则沉默、知识边界、闭环任务、证据优先等七条原则](../../assets/practical-v2-26-tool-to-assistant-best-practices.webp "Hermes Agent 从工具升级为助理的七条方法论原则图，强调少打扰、可恢复和可验证。")
+![Hermes Agent 最佳实践总览图：从工具调用、上下文理解、闭环执行到可靠助理](../../assets/practical-v2-26-tool-to-assistant-best-practices.webp "Hermes Agent 最佳实践：从工具到助理总览图。")
 
 ## 具体怎么做/工作流拆解
 
@@ -33,6 +33,8 @@
 
 Agent 的“大脑”由不同部分组成，混用它们会导致混乱。一个好的助理必须清楚什么知识该记在哪里。
 
+![Hermes Agent 的知识边界示意图：已明确知识、当前上下文和未知需确认的信息分类](../../assets/practical-v2-26-knowledge-boundary.webp "Hermes Agent 的知识边界：知道什么、正在做什么、哪些必须确认。")
+
 - **Memory**：记录你的**偏好、习惯**（如“我偏好使用 `uv`”）。
 - **Skills**：固化**可重复的工作流程**（如“如何发布博客”）。参考 [自定义 Skills](./15-自定义-Skills.md)。
 - **外部知识库**：存储**领域知识和项目文档**。参考 [Obsidian 第二大脑知识库](./08-Obsidian-第二大脑知识库.md)。
@@ -41,9 +43,13 @@ Agent 的“大脑”由不同部分组成，混用它们会导致混乱。一�
 
 “闭环”设计要求 Agent **验证每一步的结果，并根据结果决定下一步行动**。多步任务推荐使用 `execute_code` 编写小型 Python 脚本来实现，而不是连续执行多个独立的 `terminal` 命令。
 
+![闭环任务流程图：从接收任务、拆解计划、执行步骤、自我验证、异常恢复到结果交付](../../assets/practical-v2-26-closed-loop-task.webp "闭环任务：从接收任务到可靠交付。")
+
 ### 原则四：用证据说话 (Proof Over Trust)
 
 “我完成了”是一句承诺，“这是完成的证据”才是一个结果。优秀的助理从不让你猜测，它会提供可验证的证据。
+
+![证据优先流程图：结论主张需要证据来源支撑，并通过验证动作确认](../../assets/practical-v2-26-evidence-first.webp "证据优先：没有证据的结论，不应直接交付。")
 
 - **正例**：Agent 完成代码提交后，应返回 **PR 链接** 和 **Commit SHA**，而不是只说“已完成”。
 
