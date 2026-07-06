@@ -3,7 +3,7 @@
 这一页只解决一件事：
 当你想让前端、客户端或自己的应用通过 HTTP 调用 Hermes 时，怎样把它暴露成一个可接入的 API Server。
 
-![前端接入结构图：Open WebUI、LobeChat、LibreChat 通过 OpenAI-compatible /v1 请求连接 Hermes API 服务器；右侧示意其内部网关、路由与负载均衡结构](../../assets/rm2-5-api-server-01-openai-compatible-backend-map-v5.webp)
+![把 Hermes 暴露成后端服务：打开 API Server、配置访问参数、启动 gateway，再让前端或应用通过 OpenAI-compatible HTTP API 接入](../../assets/rm2-5-api-server-00-backend-service-flow.webp)
 
 > **一句话结论**：把 Hermes 暴露成 OpenAI-compatible 的 API Server，让前端或应用通过 HTTP 调用它。
 
@@ -16,6 +16,9 @@
 ---
 
 ## ⚡ 速答：Hermes Proxy vs API Server，到底用哪个？
+
+![API Server、Hermes Proxy 和 Webhook 的区别：方向、端点和用途不同，前端接 Hermes 应看 API Server](../../assets/rm2-5-api-server-02-api-proxy-webhook-difference.webp)
+
 
 > **速答**：这两个不是同一个东西。**API Server** 是把 Hermes 暴露成 OpenAI 兼容的 HTTP 端点（`/v1/chat/completions`），让 Open WebUI / LobeChat / 你的应用通过 HTTP 调 Hermes——这页讲的就是它。**Hermes Proxy**（v0.14 新增）是反方向的：本地 Hermes 通过它走上游 OAuth 订阅（Nous Portal 等），不是给应用调的。如果你要做"前端接 Hermes"，看这页；如果你要让本地 Hermes 走 Nous Portal 订阅，去看 [04-自定义 AI 大模型](../03-玩出花样/04-自定义%20AI%20大模型.md)。
 
@@ -58,6 +61,8 @@ API Server 带来的不是“再开一个聊天入口”，而是能力边界变
 ---
 
 ## 🧠 它到底是什么
+
+![前端接入结构图：Open WebUI、LobeChat、LibreChat 和你的应用通过 /v1 调用 Hermes API Server，内部 gateway、模型 Provider、路由和访问控制仍留在 Hermes 内部](../../assets/rm2-5-api-server-01-openai-compatible-backend-map-v6.webp)
 
 Hermes 暴露的是：
 
@@ -147,7 +152,7 @@ API server listening on http://127.0.0.1:8642
 
 ```bash
 curl http://localhost:8642/v1/chat/completions \
-  -H "Authorization: Bearer YOUR_KEY" \
+  -H "Authorization: Bearer *** \
   -H "Content-Type: application/json" \
   -d '{
     "model": "hermes-agent",
@@ -162,6 +167,9 @@ curl http://localhost:8642/v1/chat/completions \
 ---
 
 ## 🩺 第一次失败时，先查这 5 件事
+
+![API Server 第一次失败时的排查顺序：检查开关、核对 Key、确认 gateway 启动、确认 Base URL 包含 /v1，最后先用 curl 做最小验证](../../assets/rm2-5-api-server-03-first-failure-checklist.webp)
+
 
 ### 1. `API_SERVER_ENABLED` 有没有写进去
 
@@ -211,3 +219,4 @@ http://localhost:8642/v1
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-自己造东西](<./01-总览.md>)
+
