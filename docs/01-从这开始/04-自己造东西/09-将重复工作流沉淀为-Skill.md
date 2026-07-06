@@ -1,7 +1,6 @@
 # 09-将重复工作流沉淀为 Skill
 
-![一名工程师正在一块巨大的数字白板前思考，白板上绘制着从混乱的手动步骤到一个结构化、可复用的 Skill 的演化流程图。](../../assets/practical-v2-04-custom-skills.webp)
-*<center>将混沌化为秩序：把重复的手工操作，提炼为可一键调用的结构化能力。</center>*
+![安装与验证：使用 skill_manage 创建 Skill，用 use_skill 调用，并验证结果是否稳定可复用](../../assets/rm2-5-skill-workflow-01-install-and-validate.webp)
 
 你是否发现自己总在指挥 Hermes Agent 执行一套相似的“组合拳”？比如晨报整理、项目初始化、周报数据拉取……每次都得重复输入几乎一样的指令，费时又费力。
 
