@@ -1,4 +1,4 @@
-# 如何将重复工作流沉淀为 Skill
+# 09-将重复工作流沉淀为 Skill
 
 ![一名工程师正在一块巨大的数字白板前思考，白板上绘制着从混乱的手动步骤到一个结构化、可复用的 Skill 的演化流程图。](../../assets/practical-v2-04-custom-skills.webp)
 *<center>将混沌化为秩序：把重复的手工操作，提炼为可一键调用的结构化能力。</center>*
@@ -98,3 +98,4 @@ Agent 会自动加载对应的 `SKILL.md`，像人类员工阅读 SOP 一样，�
 ## 📖 出处
 - [Hermes Agent 官方文档：skill_manage](/docs/hermes-agent/tools/skill_manage)
 - [Hermes Agent 官方文档：Memory](/docs/hermes-agent/concepts/memory)
+
