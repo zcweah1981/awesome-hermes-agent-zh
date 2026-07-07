@@ -1033,6 +1033,78 @@ routes:
   updated: '2026-06-05'
   source_type: adapted
   nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/23-实战：个人项目开发工作流.md
+  slug: /start/practical/personal-dev-workflow
+  module: start
+  page_type: doc-page
+  title: ⚙️ 23-实战：个人项目开发工作流
+  section: personal-dev-workflow
+  description: 用 Hermes 管住个人项目从需求、开发、测试到部署的完整闭环。
+  order: 48.80
+  status: published
+  updated: '2026-07-07'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/24-实战：用-session_search-打造你的外部记忆.md
+  slug: /start/practical/session-search-memory
+  module: start
+  page_type: doc-page
+  title: 🧠 24-实战：用 session_search 打造你的外部记忆
+  section: session-search-memory
+  description: 用 session_search 把 Hermes 历史对话变成随用随查的外部记忆。
+  order: 48.81
+  status: published
+  updated: '2026-07-07'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
+  slug: /start/practical/server-automation-ops
+  module: start
+  page_type: doc-page
+  title: 🛡️ 25-实战：7x24 小时服务器自动化运维
+  section: server-automation-ops
+  description: 让 VPS 自我监控，只在真的出问题时通过 Hermes 发出告警。
+  order: 48.82
+  status: published
+  updated: '2026-07-07'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/26-Hermes-Agent-最佳实践：从工具到助理.md
+  slug: /start/practical/hermes-best-practices
+  module: start
+  page_type: doc-page
+  title: 26-Hermes Agent 最佳实践：从工具到助理
+  section: hermes-best-practices
+  description: 从工具使用过渡到长期助理的 Hermes 最佳实践清单。
+  order: 48.83
+  status: published
+  updated: '2026-07-07'
+  source_type: adapted
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/27-实战：个人事务处理中心.md
+  slug: /start/practical/personal-affairs-center
+  module: start
+  page_type: doc-page
+  title: 27-实战：个人事务处理中心
+  section: personal-affairs-center
+  description: 基于 Telegram 和 Gmail，把邮件、日程、待办统一接进 Hermes。
+  order: 48.84
+  status: published
+  updated: '2026-07-07'
+  source_type: original
+  nav_group: 05-实战应用
+- source: docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
+  slug: /start/practical/notebooklm-knowledge-base
+  module: start
+  page_type: doc-page
+  title: 28-高级玩法：NotebookLM 超级知识库
+  section: notebooklm-knowledge-base
+  description: 把 Hermes 和 NotebookLM 连接起来，基于大量文档打造可问答的知识库 Agent。
+  order: 48.85
+  status: published
+  updated: '2026-07-07'
+  source_type: original
+  nav_group: 05-实战应用
 - source: docs/03-国内落地/01-国内部署/01-总览.md
   slug: /china/deploy
   module: china
