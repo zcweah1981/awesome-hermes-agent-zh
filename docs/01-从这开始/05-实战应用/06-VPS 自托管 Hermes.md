@@ -4,7 +4,7 @@
 
 > 一句话先说清楚：这一页教你在 VPS 上从零部署 Hermes，让它 7×24 小时在线，通过 Telegram 随时访问。
 
-![VPS 自托管路径图：选择机器、准备系统、安装 Hermes、配置模型、启动 Gateway](./assets/solution-practical-06-vps-self-hosting-path-v1.webp)
+![Hermes VPS 自托管架构图：Telegram、Nginx、Hermes Gateway、Worker Agents 与数据库/定时任务的部署关系](../../assets/practical-v2-06-vps-hosting-00-architecture-cn.webp)
 
 ---
 
@@ -30,6 +30,8 @@ VPS 解决全部三个问题：
 - 机房 7×24 在线，网络稳定
 - 公网 IP，Telegram Webhook 直接可达
 - 月费 $5-15，比电费还便宜
+
+![Hermes VPS 自托管运维清单：Docker、环境变量、日志监控、自动重启、防火墙与上线检查](../../assets/practical-v2-06-vps-hosting-01-ops-checklist-cn.webp)
 
 ---
 
