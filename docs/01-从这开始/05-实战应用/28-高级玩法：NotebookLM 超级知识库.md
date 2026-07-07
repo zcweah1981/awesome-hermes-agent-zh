@@ -4,7 +4,7 @@
 
 我们将通过一个社区开发的工具，把 Hermes Agent 和 Google 的下一代笔记工具 **NotebookLM** 连接起来。NotebookLM 擅长理解和提炼长篇文档，而 Hermes 擅长执行任务和自动化。两者的结合，将创造出一个真正强大的个性化知识助理。
 
-![NotebookLM 超级知识库架构图：PDF、网页与 Google Docs 进入云端知识中台，经 Hermes 生成问答、摘要、PPT 大纲与播客脚本](../../assets/practical-v2-28-notebooklm-super-knowledge-base.webp "Hermes Agent 连接 NotebookLM 的知识中台架构图，突出跨文档问答与知识再创作，不再使用 Obsidian 视觉。")
+![高级玩法：NotebookLM 超级知识库 总览图](../../assets/practical-v2-28-notebooklm-knowledge-base-00-overview-cn.webp)
 
 > **注意**：这是一个高级玩法，需要你具备基本的 Python 和命令行使用经验，并且不畏惧折腾。我们将使用一个非官方 API，这意味着它可能随时会因 Google 的更新而失效。
 
@@ -138,3 +138,6 @@ Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作
 - [notebooklm-py on GitHub](https://github.com/dwarvesf/notebooklm-py)
 - [Hermes Agent 官方文档：terminal](/docs/hermes-agent/tools/terminal)
 - [Hermes Agent 官方文档：skills](/docs/hermes-agent/concepts/skills)
+
+![高级玩法：NotebookLM 超级知识库 实操流程图](../../assets/practical-v2-28-notebooklm-knowledge-base-01-workflow-cn.webp)
+
