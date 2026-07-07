@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Obsidian，让你的知识库从"死笔记"变成"能对话、能自动整理、能自主学习的第二大脑"。
 
-![Obsidian 第二大脑流程图：Vault 笔记、搜索检索、对话提炼、自动写回知识库](../../assets/solution-practical-08-obsidian-second-brain-v1.webp)
+![Obsidian 第二大脑知识库总览：Hermes、Markdown 笔记、双向链接、每日记录和知识检索的关系](../../assets/practical-v2-08-obsidian-second-brain-00-knowledge-map-cn.webp)
 
 ---
 
@@ -30,6 +30,8 @@ Hermes + Obsidian 解决的是：
 - **自然语言检索**：直接问"我去年关于 Agent 的调研笔记在哪"，Agent 帮你找
 - **自动写入**：对话中产生的想法、结论、任务，可以直接存入 Vault
 - **自主学习**：Hermes 会在后台从你的对话中提取偏好和模式，自动更新记忆
+
+![Obsidian 知识捕获与复用流程：从 Telegram、网页和对话捕获信息，沉淀到知识库并生成输出](../../assets/practical-v2-08-obsidian-second-brain-01-capture-workflow-cn.webp)
 
 ---
 
