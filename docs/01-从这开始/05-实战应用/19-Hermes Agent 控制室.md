@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页讲的不是"怎么写一个 Agent"，而是"怎么管一堆 Agent"。Hermes 一个实例就是一个人格、一套记忆、一把钥匙——当你从 1 个走向 5 个，需要的不是更多的 Hermes，而是一个**控制室（Control Room）**：登记册、运行手册、任务总线、备份策略、安全审计。这一页给你一套可直接 fork 的演进模板。
 
-![Hermes Agent 控制室四层架构：Level 1 单 Agent、Level 2 直属专员、Level 3 Orchestrator + 任务总线、Level 4 自动化团队](../../assets/practical-v2-07-control-room-specialist-teams.webp)
+![Hermes Agent 控制室 总览图](../../assets/practical-v2-19-control-room-00-overview-cn.webp)
 
 ---
 
@@ -333,3 +333,6 @@ README.md → inventory.md → runbook.md
 - shannholmberg — [Hermes Agent Control Room — From One Agent to Specialist Teams](https://x.com/shannholmberg/article/2055335043904492011)（X article）
 - Hermes 官方文档 — [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)
+
+![Hermes Agent 控制室 实操流程图](../../assets/practical-v2-19-control-room-01-workflow-cn.webp)
+
