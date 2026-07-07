@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Discord 服务器，让团队成员在频道里 @ 一下 Bot 就能拿到 Agent 的回答，不用再切到 CLI 或 Telegram。
 
-![Hermes Agent 接入 Discord 全景：Developer Portal 创建 Application 与 Bot、Privileged Gateway Intents（Server Members + Message Content）、OAuth2 邀请链接、白名单与 Role 权限分级、频道与线程会话隔离](../../assets/practical-v2-01-discord-entry.webp)
+![Discord 接入 总览图](../../assets/practical-v2-11-discord-entry-00-overview-cn.webp)
 
 ---
 
@@ -39,6 +39,8 @@ Telegram 是一对一的私人助手入口，Discord 是团队协作的公共入
 | 团队权限 | 白名单即可 | 配合 Role 做"管理员/普通用户"分级 |
 
 一句话：Telegram 是私人 AI 管家，Discord 是团队 AI 同事。
+
+![Discord 接入 实操流程图](../../assets/practical-v2-11-discord-entry-01-workflow-cn.webp)
 
 ---
 
