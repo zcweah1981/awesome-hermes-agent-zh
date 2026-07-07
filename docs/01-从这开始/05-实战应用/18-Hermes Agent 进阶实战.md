@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页不是"再讲一遍 Skills 和 MCP 怎么用"，而是讲清楚 Hermes 从"我让它干活它能干"过渡到"它在生产环境长期可靠运行"必须补的四道纪律——**自进化 Skills 治理、MCP 深度集成、Subagent 编排、生产可观测**。框架本身只给能力，不给纪律。
 
-![Hermes Agent 进阶实战四象限：自进化 Skills 治理（左上）、MCP 深度集成（右上）、Subagent 编排（左下）、生产可观测（右下），中央为 Agent Loop](../../assets/practical-v2-06-advanced-skills-mcp-subagents.webp)
+![Hermes Agent 进阶实战 总览图](../../assets/practical-v2-18-advanced-practice-00-overview-cn.webp)
 
 ---
 
@@ -302,3 +302,6 @@ find "$HERMES_HOME/profiles/content/skills/agent_created/" -name "SKILL.md" -mti
 - Sathish Raju 在 Medium 发表的相关评论（公开引用部分）
 - Hermes 官方文档 — [Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)、[Native MCP Client](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)
+
+![Hermes Agent 进阶实战 实操流程图](../../assets/practical-v2-18-advanced-practice-01-workflow-cn.webp)
+
