@@ -445,6 +445,7 @@ routes:
     alt: '常用斜杠命令与会话管理'
   prev_page: /start/getting-started/basic-usage
   next_page: /start/getting-started/practical-entry-selection
+- source: docs/01-从这开始/02-开始上手/04-实战：用一张图帮用户选对入口.md
   slug: /start/getting-started/practical-entry-selection
   module: start
   page_type: doc-page
@@ -478,6 +479,7 @@ routes:
     alt: '常用 Skills（按日常使用场景精选）'
   prev_page: /start/getting-started/practical-entry-selection
   next_page: /start/getting-started/connect-message-platform
+- source: docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
   slug: /start/getting-started/connect-message-platform
   module: start
   page_type: doc-page
@@ -494,6 +496,7 @@ routes:
     alt: '接入一个消息平台（推荐飞书）'
   prev_page: /start/getting-started/curated-skills
   next_page: /start/personalize
+- source: docs/01-从这开始/03-玩出花样/01-总览.md
   slug: /start/personalize
   module: start
   page_type: module-overview
@@ -522,6 +525,7 @@ routes:
     alt: '让 Hermes 更像你'
   prev_page: /start/getting-started/connect-message-platform
   next_page: /start/personalize/memory-basics
+- source: docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
   slug: /start/personalize/memory-basics
   module: start
   page_type: doc-page
