@@ -24,11 +24,11 @@
 ## 具体怎么做/工作流拆解
 
 
-![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
-
 ### 场景：找回一个旧命令
 
 假设你记得之前配置过一个用于“博客自动备份”的 `cronjob`，但忘记了具体的 `schedule` 和 `script` 内容。
+
+![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
 
 **第一步：用关键词模糊搜索**
 
