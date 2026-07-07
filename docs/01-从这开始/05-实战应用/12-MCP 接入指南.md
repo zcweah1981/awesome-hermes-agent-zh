@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：MCP（Model Context Protocol）是一个让 Hermes 调用外部工具的标准协议。装上 MCP 之后，你的 Agent 不只能"自己跑命令"，还能直接读 GitHub Issue、查 Linear 任务、操作 Postgres、浏览 Figma 设计稿——不用你写一行工具代码。
 
-![MCP 接入示意：Hermes 通过 MCP 协议连接 GitHub、Linear、数据库、文件系统等外部工具，按需调用](../../assets/practical-12-mcp-official-screenshot-zh-v1.webp)
+![MCP 接入指南 总览图](../../assets/practical-v2-12-mcp-guide-00-overview-cn.webp)
 
 ---
 
@@ -42,6 +42,8 @@ MCP 把这件事标准化了：
 | 工具数 | 一人写 1-2 个顶天 | 社区已经有 100+ 个开箱即用 |
 
 一句话：MCP 不是让你"用某个工具"，而是让你"接入一整个工具生态"。
+
+![MCP 接入指南 实操流程图](../../assets/practical-v2-12-mcp-guide-01-workflow-cn.webp)
 
 ---
 
