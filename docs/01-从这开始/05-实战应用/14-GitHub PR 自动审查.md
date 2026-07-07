@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 变成一个"PR 打开瞬间自动跑检查 + 留评论"的 Code Reviewer。区别于手动 `/review`：它不是"被人叫才看"，而是仓库一有动静它就干活。
 
-![Hermes Agent 做 GitHub PR 自动审查端到端：PR opened/synchronized Webhook → Hermes 触发 → diff 解析 + 测试运行 + 安全扫描 + 反模式检测 → 评论回流与 inline comment + status check](../../assets/practical-v2-05-github-pr-review.webp)
+![GitHub PR 自动审查 总览图](../../assets/practical-v2-14-github-pr-review-00-overview-cn.webp)
 
 ---
 
@@ -38,6 +38,8 @@
 | 团队复用 | 别人不知道你查了啥 | 所有人能看到 Bot 的反馈 |
 
 一句话：手动 review 是"个人帮手"，自动 reviewer 是"团队基础设施"。
+
+![GitHub PR 自动审查 实操流程图](../../assets/practical-v2-14-github-pr-review-01-workflow-cn.webp)
 
 ---
 
