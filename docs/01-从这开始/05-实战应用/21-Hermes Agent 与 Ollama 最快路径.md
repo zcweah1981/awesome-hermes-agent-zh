@@ -61,6 +61,8 @@
 
 ---
 
+![Hermes Agent 与 Ollama 最快路径 实操流程图](../../assets/practical-v2-21-ollama-fast-path-01-workflow-cn.webp)
+
 ## 🛠️ 工作流拆解：7 步实操
 
 ### Step 1：装 Ollama
@@ -331,5 +333,4 @@ model_routing:
 - Ollama 官方 — [ollama.com](https://ollama.com/)
 - Microsoft 开源 — [gpt-oss-20b 模型卡](https://ollama.com/library/gpt-oss)
 
-![Hermes Agent 与 Ollama 最快路径 实操流程图](../../assets/practical-v2-21-ollama-fast-path-01-workflow-cn.webp)
 

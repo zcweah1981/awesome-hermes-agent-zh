@@ -57,6 +57,8 @@
 
 ---
 
+![Hermes Agent 控制室 实操流程图](../../assets/practical-v2-19-control-room-01-workflow-cn.webp)
+
 ## 🏗️ 工作流拆解：四级架构演进
 
 控制室模板（来自 [shannhk/hermes-agent-control-room](https://github.com/shannhk/hermes-agent-control-room)）把团队演进拆成 4 级。**每一级都对应明确的"什么时候升级"信号**——不要提前升级，也不要忽略信号。
@@ -334,5 +336,4 @@ README.md → inventory.md → runbook.md
 - Hermes 官方文档 — [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)
 
-![Hermes Agent 控制室 实操流程图](../../assets/practical-v2-19-control-room-01-workflow-cn.webp)
 

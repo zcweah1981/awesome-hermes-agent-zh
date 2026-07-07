@@ -8,6 +8,8 @@
 
 > **注意**：这是一个高级玩法，需要你具备基本的 Python 和命令行使用经验，并且不畏惧折腾。我们将使用一个非官方 API，这意味着它可能随时会因 Google 的更新而失效。
 
+![高级玩法：NotebookLM 超级知识库 实操流程图](../../assets/practical-v2-28-notebooklm-knowledge-base-01-workflow-cn.webp)
+
 ## 🚀 准备工作：连接到 NotebookLM
 
 连接的关键是一个名为 `notebooklm-py` 的社区开源库。
@@ -139,5 +141,4 @@ Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作
 - [Hermes Agent 官方文档：terminal](/docs/hermes-agent/tools/terminal)
 - [Hermes Agent 官方文档：skills](/docs/hermes-agent/concepts/skills)
 
-![高级玩法：NotebookLM 超级知识库 实操流程图](../../assets/practical-v2-28-notebooklm-knowledge-base-01-workflow-cn.webp)
 

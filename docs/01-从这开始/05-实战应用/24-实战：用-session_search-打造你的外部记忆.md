@@ -20,6 +20,8 @@
 
 ![实战：用-session_search-打造你的外部记忆 总览图](../../assets/practical-v2-24-session-search-memory-00-overview-cn.webp)
 
+![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
+
 ## 具体怎么做/工作流拆解
 
 ### 场景：找回一个旧命令
@@ -77,5 +79,4 @@ print(default_api.session_search(query="博客 备份 cronjob", limit=3))
 
 本实践总结自 Hermes Agent 核心用户对提升长期人机协作效率的探索，旨在将“历史记录”从单纯的日志，转变为可主动利用的“知识资产”。
 
-![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
 

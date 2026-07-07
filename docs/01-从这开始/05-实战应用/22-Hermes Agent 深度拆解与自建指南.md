@@ -56,6 +56,8 @@
 
 ---
 
+![Hermes Agent 深度拆解与自建指南 实操流程图](../../assets/practical-v2-22-deep-dive-build-your-own-01-workflow-cn.webp)
+
 ## 🛠️ 工作流拆解 1：Agent Loop（Hermes 的心脏）
 
 整个 `AIAgent` 类的核心就是这个循环：
@@ -336,5 +338,4 @@ Hermes 的实现：
 - Hermes 官方文档 — [System Prompt Assembly](https://hermes-agent.nousresearch.com/docs/developer-guide/prompt-assembly)
 - Anthropic 官方 — [Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
 
-![Hermes Agent 深度拆解与自建指南 实操流程图](../../assets/practical-v2-22-deep-dive-build-your-own-01-workflow-cn.webp)
 

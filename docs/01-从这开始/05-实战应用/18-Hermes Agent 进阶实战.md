@@ -54,6 +54,8 @@
 
 ---
 
+![Hermes Agent 进阶实战 实操流程图](../../assets/practical-v2-18-advanced-practice-01-workflow-cn.webp)
+
 ## 🛠️ 工作流拆解 1：自进化 Skills 的" curator 心智"
 
 ### 现象
@@ -303,5 +305,4 @@ find "$HERMES_HOME/profiles/content/skills/agent_created/" -name "SKILL.md" -mti
 - Hermes 官方文档 — [Skills System](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills)、[Native MCP Client](https://hermes-agent.nousresearch.com/docs/user-guide/features/mcp)
 - Hermes 官方文档 — [Delegation & Subagents](https://hermes-agent.nousresearch.com/docs/user-guide/features/delegation)
 
-![Hermes Agent 进阶实战 实操流程图](../../assets/practical-v2-18-advanced-practice-01-workflow-cn.webp)
 
