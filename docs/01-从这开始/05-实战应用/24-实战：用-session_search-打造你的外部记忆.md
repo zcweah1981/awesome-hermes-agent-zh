@@ -20,9 +20,11 @@
 
 ![实战：用-session_search-打造你的外部记忆 总览图](../../assets/practical-v2-24-session-search-memory-00-overview-cn.webp)
 
-![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
 
 ## 具体怎么做/工作流拆解
+
+
+![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
 
 ### 场景：找回一个旧命令
 
