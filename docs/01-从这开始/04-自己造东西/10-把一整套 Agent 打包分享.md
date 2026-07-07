@@ -28,6 +28,9 @@
 
 ## 🧠 Profile 和 Profile Distribution 有什么区别
 
+![Profile 和 Profile Distribution 的区别：Profile 是本地活助手，包含会话状态和用户数据；Distribution 是不含密钥和私有数据、可分享可安装的 Git 分发包](../../assets/rm2-5-profile-distribution-01-profile-vs-distribution.webp)
+
+
 简单说：
 
 - **Profile** 是你本地的 Agent 配置——它活在你机器上，包含 SOUL.md、config.yaml、技能、记忆等等
@@ -48,6 +51,9 @@
 ---
 
 ## 📋 distribution.yaml 长什么样
+
+![distribution.yaml 和标准目录结构：清单文件定义 name、version、description、env_requires 和 distribution_owned，目录按 SOUL、config、skills、cron、README 组织](../../assets/rm2-5-profile-distribution-02-yaml-structure.webp)
+
 
 每个 Distribution 的根目录必须有一个 `distribution.yaml`，它是这个安装包的清单文件。
 
@@ -120,6 +126,9 @@ my-daily-briefing/
 
 ## ⬇️ 安装别人分享的 Agent
 
+![安装别人分享的 Agent：核心命令 hermes profile install 支持 GitHub 简写、HTTPS、SSH 和本地路径，安装后生成可启动的本地 Profile](../../assets/rm2-5-profile-distribution-03-install-shared-agent.webp)
+
+
 安装命令只有一个：
 
 ```bash
@@ -182,6 +191,9 @@ hermes profile install someone/my-awesome-agent --name my-agent --alias ma
 
 ## ⬆️ 发布自己的 Agent
 
+![发布自己的 Agent 与更新机制：创建 distribution.yaml、写好 SOUL、添加配置附件、推到 GitHub，用户通过 hermes profile update 拉取新版本](../../assets/rm2-5-profile-distribution-04-publish-update.webp)
+
+
 把你的 Agent 打包成 Distribution 只需 4 步：
 
 ### 第 1 步：创建 distribution.yaml
@@ -227,7 +239,6 @@ distribution_owned:
 
 ### 第 4 步：推到 GitHub
 
-![Profile Distribution 操作截图示意：创建 distribution.yaml、放入 SOUL 和配置模板、完成脱敏检查、发布后用 hermes profile install 安装](../../assets/rm2-4-profile-distribution-operation-v1.webp)
 
 ```bash
 git init
@@ -280,6 +291,9 @@ hermes profile update my-agent --force-config
 ---
 
 ## 🛡️ 作者文件 vs 用户文件
+
+![作者文件 vs 用户文件：作者控制 distribution.yaml、SOUL、skills、cron、mcp 等图纸；用户控制 memories、sessions、state.db、env 和 logs，更新时不覆盖用户数据](../../assets/rm2-5-profile-distribution-05-author-vs-user-files.webp)
+
 
 一张表看清楚：
 
