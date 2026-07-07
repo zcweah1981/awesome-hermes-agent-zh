@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Home Assistant，用自然语言控制家里的灯、空调、窗帘、传感器——"帮我把客厅灯调暗一点"就够了。
 
-![Home Assistant 智能家居控制图：自然语言请求进入 Hermes，再通过 HA API 控制设备并读取传感器状态](../../assets/solution-practical-10-home-assistant-control-loop-v1.webp)
+![Home Assistant 智能家居 总览图](../../assets/practical-v2-10-home-assistant-00-control-loop-cn.webp)
 
 ---
 
@@ -30,6 +30,8 @@ Home Assistant 的核心交互方式是仪表盘——手动点按钮、设自�
 - **自动化升级**：把死板的 YAML 自动化规则变成有判断力的 AI 决策
 
 一句话：仪表盘是手动挡，Hermes + HA 是自动挡 + 语音控制。
+
+![Home Assistant 智能家居 实操流程图](../../assets/practical-v2-10-home-assistant-01-safe-automation-cn.webp)
 
 ---
 
