@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：前面所有实战页都是"把 Hermes 当黑盒用"。这一页**拆开黑盒**——系统提示怎么组装、Agent Loop 怎么转、工具怎么注册、四种 API 模式怎么切换、缓存怎么省 90% 钱。**适合想自建、想魔改、想二次开发的人**。
 
-![Hermes 内核四象限：Agent Loop（左上）、System Prompt 12 段组装（右上）、Tools 自注册 registry（左下）、四种 API 模式自动切换（右下）](../../assets/practical-v2-09-deep-dive-build-your-own.webp)
+![Hermes Agent 深度拆解与自建指南 总览图](../../assets/practical-v2-22-deep-dive-build-your-own-00-overview-cn.webp)
 
 ---
 
@@ -335,3 +335,6 @@ Hermes 的实现：
 - Hermes 官方文档 — [Architecture Overview](https://hermes-agent.nousresearch.com/docs/developer-guide/architecture)
 - Hermes 官方文档 — [System Prompt Assembly](https://hermes-agent.nousresearch.com/docs/developer-guide/prompt-assembly)
 - Anthropic 官方 — [Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
+
+![Hermes Agent 深度拆解与自建指南 实操流程图](../../assets/practical-v2-22-deep-dive-build-your-own-01-workflow-cn.webp)
+
