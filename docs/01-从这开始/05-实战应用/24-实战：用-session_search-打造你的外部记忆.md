@@ -18,7 +18,7 @@
 2.  **定位会话**：Hermes 会列出最相关的历史会话片段。
 3.  **获取完整上下文**：通过返回的 `session_id` 和 `message_id`，你可以像翻书一样浏览该次对话的完整记录，找回完整的解决方案。
 
-![Hermes Agent 外部记忆层示意图：短期会话、长期偏好、项目记录和检索入口共同组成可回溯的记忆系统](../../assets/rm2-4-memory-01-memory-layer-map.webp)
+![实战：用-session_search-打造你的外部记忆 总览图](../../assets/practical-v2-24-session-search-memory-00-overview-cn.webp)
 
 ## 具体怎么做/工作流拆解
 
@@ -76,3 +76,6 @@ print(default_api.session_search(query="博客 备份 cronjob", limit=3))
 ## 📖 出处
 
 本实践总结自 Hermes Agent 核心用户对提升长期人机协作效率的探索，旨在将“历史记录”从单纯的日志，转变为可主动利用的“知识资产”。
+
+![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
+
