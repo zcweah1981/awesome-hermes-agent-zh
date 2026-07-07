@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把"每天早上刷新闻、看热点、整理要点"这件事，交给 Hermes 的 Cron 自动执行，结果直接送到你的 Telegram 或本地文件。
 
-![每日晨间简报流程图：定时触发、抓取来源、摘要筛选、投递到 Telegram 或本地](../../assets/solution-practical-01-daily-briefing-flow-v1.webp)
+![用 Hermes 做每日晨间简报：每天定时搜索 AI agents 和开源 LLM 动态，筛选重点内容，生成中文 briefing 并交付到 Telegram 或本地文件](../../assets/practical-v2-01-daily-briefing-00-overview.webp)
 
 ---
 
@@ -30,6 +30,9 @@
 ---
 
 ## ✍️ 操作步骤：核心思路三步走
+
+![每日晨间简报工作流：信息来源进入 Hermes 汇总与筛选，生成中文 briefing，再按 Cron 时间表交付到真正会看的位置](../../assets/practical-v2-01-daily-briefing-01-workflow.webp)
+
 
 ### 第 1 步：先手动跑通一次
 
@@ -193,3 +196,4 @@ Docker 容器默认是 UTC。如果你在东八区，早上 8 点其实是 UTC 0
 
 - Hermes 官方文档 — [Tutorial: Daily Briefing Bot](https://hermes-agent.nousresearch.com/docs/guides/daily-briefing-bot)
 - Hermes 官方文档 — [Automate Anything with Cron](https://hermes-agent.nousresearch.com/docs/guides/automate-with-cron)
+
