@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 从"通用 AI 助手"变成"你自己的长期搭档"——只需要改一个文件。
 
-![SOUL 分层示意图：SOUL.md 管长期人格，AGENTS.md 管项目规则，会话临时提示覆盖当前任务](../../assets/solution-practical-07-soul-persona-layers-v1.webp)
+![SOUL 分层示意图：SOUL.md 管长期人格，AGENTS.md 管项目规则，会话临时提示覆盖当前任务](../../assets/practical-v2-07-soul-persona-00-layers-cn.webp)
 
 ---
 
@@ -66,6 +66,8 @@ $HERMES_HOME/SOUL.md
 - **助手定位**：偏工程搭档、偏研究助手、偏执行型支持
 
 判断法：如果这条要求是"长期默认如此"，它就属于 SOUL.md。
+
+![写好 SOUL.md 的清单：应该写长期偏好，不该写密钥、项目路径和一次性提示](../../assets/practical-v2-07-soul-persona-01-checklist-cn.webp)
 
 ---
 
