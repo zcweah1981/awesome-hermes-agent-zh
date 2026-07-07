@@ -78,4 +78,270 @@ distribution_owned:
 | `version` | 语义化版本号（semver），更新时靠它判断版本变化 | ✅ |
 | `description` | 一句话描述这个 Agent 是干什么的 | ✅ |
 | `hermes_requires` | 要求的 Hermes 最低版本，支持 semver 语法（如 `>=0.5.0`） | ❌ |
+| `author` | 作者名或组织名 | ❌ |
+| `license` | 开源协议（MIT、Apache-2.0 等） | ❌ |
+| `env_requires` | 列出安装后用户需要自己配置的环境变量（如 API Key） | ❌ |
+| `distribution_owned` | 列出哪些文件归 Distribution 管理（更新时会被替换） | ❌ |
 
+---
+
+## 🔧 Distribution 的标准目录结构
+
+一个规范的 Distribution 长这样：
+
+```
+my-daily-briefing/
+├── distribution.yaml       # 清单文件（必须）
+├── SOUL.md                 # Agent 人格（必须）
+├── config.yaml             # Agent 配置（可选，但常见）
+├── mcp.json                # MCP 服务器配置（可选）
+├── skills/                 # 自定义技能目录（可选）
+│   └── search-and-summarize.md
+├── cron/                   # 定时任务目录（可选）
+│   └── daily-briefing.yaml
+└── README.md               # 给人看的说明（推荐，但非必须）
+```
+
+每个文件的作用：
+
+| 文件 | 说明 |
+|---|---|
+| `distribution.yaml` | 安装包清单，定义名称、版本、依赖等元信息 |
+| `SOUL.md` | Agent 的人格描述，装完就是这个 Agent 的"灵魂" |
+| `config.yaml` | Agent 的运行配置（模型、工具、上下文等） |
+| `mcp.json` | 需要预装哪些 MCP 服务器 |
+| `skills/` | Agent 携带的自定义技能文件 |
+| `cron/` | Agent 携带的定时任务定义 |
+| `README.md` | 给人看的说明文档，告诉用户这个 Agent 干什么、怎么配 |
+
+不是所有文件都要有。**`distribution.yaml` 和 `SOUL.md` 是必须的**，其余按需加。
+
+---
+
+## ⬇️ 安装别人分享的 Agent
+
+安装命令只有一个：
+
+```bash
+hermes profile install <source>
+```
+
+`<source>` 支持四种格式：
+
+### 1. GitHub 简写
+
+```bash
+hermes profile install someone/my-awesome-agent
+```
+
+等同于从 `https://github.com/someone/my-awesome-agent` 拉取。
+
+### 2. HTTPS 完整地址
+
+```bash
+hermes profile install https://github.com/someone/my-awesome-agent.git
+```
+
+适用于 GitHub 以外的 Git 托管平台（Gitee、GitLab 等）。
+
+### 3. SSH 地址
+
+```bash
+hermes profile install git@github.com:someone/my-awesome-agent.git
+```
+
+适用于你已配好 SSH Key 的场景。
+
+### 4. 本地路径
+
+```bash
+hermes profile install /path/to/local/distribution
+```
+
+适用于你自己本地还没推远端的 Distribution，或者内网场景。
+
+### 起别名
+
+装完之后每次要打全名很麻烦，可以用 `--alias` 起个短名：
+
+```bash
+hermes profile install someone/my-awesome-agent --alias briefing
+```
+
+之后用 `hermes chat --profile briefing` 就能快速启动。
+
+### 自定义名称 + 别名
+
+如果你想同时改 Profile 名和别名：
+
+```bash
+hermes profile install someone/my-awesome-agent --name my-agent --alias ma
+```
+
+---
+
+## ⬆️ 发布自己的 Agent
+
+把你的 Agent 打包成 Distribution 只需 4 步：
+
+### 第 1 步：创建 distribution.yaml
+
+在项目根目录新建 `distribution.yaml`，填写名称、版本、描述等信息。
+
+```yaml
+name: my-agent
+version: "1.0.0"
+description: "一句话说清楚你的 Agent 干什么"
+author: "your-name"
+license: "MIT"
+hermes_requires: ">=0.5.0"
+env_requires:
+  - OPENAI_API_KEY
+distribution_owned:
+  - SOUL.md
+  - config.yaml
+  - skills/
+```
+
+`env_requires` 里写上你的 Agent 运行需要但 Distribution 不自带的环境变量（比如 API Key），安装时用户会被提醒自己配。
+
+### 第 2 步：写好 SOUL.md
+
+这是你的 Agent 的人格文件。
+
+直接把你已经跑顺的 SOUL.md 复制过来就行。如果之前没写过，参考 [让 Hermes 更像你](../../01-从这开始/03-玩出花样/02-让 Hermes 更像你.md)。
+
+### 第 3 步：添加配置和附件
+
+把你 Agent 的其他组成部分加进来：
+
+- `config.yaml` — 运行配置（模型选择、工具开关等）
+- `skills/` — 自定义技能文件
+- `cron/` — 定时任务定义
+- `mcp.json` — MCP 服务器配置
+
+需要注意：
+
+- **不要把密钥放进去**。API Key、数据库密码这些属于用户私有，放在 `env_requires` 里提醒用户自己配
+- `distribution_owned` 列出你希望更新时自动替换的文件
+
+### 第 4 步：推到 GitHub
+
+![Profile Distribution 操作截图示意：创建 distribution.yaml、放入 SOUL 和配置模板、完成脱敏检查、发布后用 hermes profile install 安装](../../assets/rm2-4-profile-distribution-operation-v1.webp)
+
+```bash
+git init
+git add .
+git commit -m "init: first release of my-agent"
+git remote add origin https://github.com/your-name/my-agent.git
+git push -u origin main
+```
+
+推完之后，别人就可以用 `hermes profile install your-name/my-agent` 一键安装了。
+
+---
+
+## 🔄 更新机制
+
+当你更新了 Distribution 并推送到远端后，安装过的人可以拉取更新：
+
+```bash
+hermes profile update my-agent
+```
+
+这条命令会从上游仓库拉取最新版本。
+
+### 更新时什么会被替换
+
+只有 `distribution_owned` 里列出的文件会被替换，比如 SOUL.md、skills/、cron/ 等。
+
+### 更新时什么不会被碰
+
+以下用户文件永远不会被更新覆盖：
+
+- 记忆文件（memories/）
+- 会话历史（sessions/）
+- 状态数据库（state.db）
+- 环境变量（.env）
+- 日志文件（logs/）
+
+### config.yaml 的特殊处理
+
+`config.yaml` 默认在更新时**不会被覆盖**——因为用户可能已经改过自己的配置。
+
+如果你确实想用 Distribution 的新版本 config.yaml 替换本地的，加 `--force-config`：
+
+```bash
+hermes profile update my-agent --force-config
+```
+
+⚠️ 这会覆盖用户对 config.yaml 的所有本地修改，用之前确认对方接受。
+
+---
+
+## 🛡️ 作者文件 vs 用户文件
+
+一张表看清楚：
+
+| 文件 | 归属 | 更新时行为 | 说明 |
+|---|---|---|---|
+| `distribution.yaml` | 📦 作者 | 替换 | 安装包清单 |
+| `SOUL.md` | 📦 作者 | 替换 | Agent 人格 |
+| `config.yaml` | 📦 作者 | **默认保留用户版**，`--force-config` 时替换 | 运行配置 |
+| `skills/` | 📦 作者 | 替换 | 自定义技能 |
+| `cron/` | 📦 作者 | 替换 | 定时任务 |
+| `mcp.json` | 📦 作者 | 替换 | MCP 服务器配置 |
+| `memories/` | 👤 用户 | 不碰 | Agent 的记忆 |
+| `sessions/` | 👤 用户 | 不碰 | 会话历史 |
+| `state.db` | 👤 用户 | 不碰 | 状态数据库 |
+| `.env` | 👤 用户 | 不碰 | 环境变量和密钥 |
+| `logs/` | 👤 用户 | 不碰 | 日志文件 |
+
+**核心原则**：作者控制 Agent 的"图纸"，用户控制自己的"数据"。
+
+密钥永远不会被包含在 Distribution 中——它是 `.env` 的一部分，属于用户文件。
+
+---
+
+## 🔗 和中文站「现成方案 / packs」的关系
+
+你可能会想：中文站本身就有"现成方案"或 packs 之类的推荐，这和 Distribution 有什么区别？
+
+它们解决的是不同层面的问题：
+
+| | Distribution（这一页讲的） | 中文站现成方案 / packs |
+|---|---|---|
+| **形式** | Git 仓库，`hermes profile install` 一键装 | 中文站上的推荐文档或配置示例 |
+| **用途** | 机器可读的安装包 | 人可读的方案指南 |
+| **适合谁** | 想直接装、直接用的人 | 想先了解方案再决定怎么搭的人 |
+| **能不能自动更新** | 能，`hermes profile update` | 不能，需要手动同步 |
+
+它们不冲突、不竞争。一个好的工作流是：
+
+1. 先在中文站看方案介绍，了解思路
+2. 看中了某个方案，找到对应的 Distribution 仓库
+3. 一条命令装上，开始用
+
+---
+
+## ✅ 这一页什么时候算通过
+
+当下面这些你都能确认，这一页就算通过：
+
+- 我知道 Profile 和 Profile Distribution 的区别：一个是本地活的助手，一个是可分享的安装包
+- 我知道怎么用 `hermes profile install` 安装别人分享的 Agent（GitHub 简写、HTTPS、SSH、本地路径都行）
+- 我知道怎么把自己的 Agent 打包成 Distribution：写 distribution.yaml → 放 SOUL.md → 加配置和附件 → 推到 GitHub
+- 我知道更新时哪些文件会被替换、哪些会被保留
+- 我知道密钥和用户数据永远不会被包含在 Distribution 里
+
+---
+
+## ➡️ 下一步
+
+完成这一页后，你可以：
+
+- 回到 [04-自己造东西 总览](./01-总览.md)，看看还有哪些方向没看
+- 回到 [01-从这开始 总览](../总览.md)，确认整体进度
+
+如果你想先回到上一阶段入口重新确认位置：
+- [04-自己造东西](./01-总览.md)
