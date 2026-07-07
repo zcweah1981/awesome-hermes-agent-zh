@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你把 Hermes 接入 Telegram，让你在手机上直接跟 Agent 对话，不用每次 SSH 到服务器。
 
-![Telegram 接入结构图：BotFather 创建 Bot、用户白名单、Hermes Gateway、手机端对话入口](../../assets/solution-practical-02-telegram-entry-map-v1.webp)
+![Telegram 消息入口接入总览：BotFather 创建 Bot、白名单控制、Hermes Gateway 接入、手机端消息回传形成远程 Agent 对话入口](../../assets/practical-v2-02-telegram-entry-00-overview.webp)
 
 ---
 
@@ -18,6 +18,9 @@
 
 ## 🎯 为什么值得做
 
+![Telegram 接入链路结构图：Telegram Bot、Hermes Gateway、Agent 会话和用户手机端之间的消息流转与回复闭环](../../assets/practical-v2-02-telegram-entry-01-architecture.webp)
+
+
 Telegram 是 Hermes 最成熟的远程入口。接上之后：
 
 - **随时随地对话**：通勤、午休、出差，掏出手机就能用
@@ -30,6 +33,9 @@ Telegram 是 Hermes 最成熟的远程入口。接上之后：
 ---
 
 ## ✍️ 操作步骤：四步接通
+
+![Telegram Gateway 配置步骤：从 BotFather 获取 Token、获取 User ID、写入环境变量或交互式配置，再启动 Hermes Gateway 验证](../../assets/practical-v2-02-telegram-entry-02-config.webp)
+
 
 ### 第 1 步：在 BotFather 创建 Bot
 
@@ -162,6 +168,9 @@ Telegram 里聊着聊着上下文会越来越长。定期用 `/new` 开新会话
 ---
 
 ## ⚠️ 踩坑提醒
+
+![Telegram 接入验收与排查：检查 Bot 是否回复、Token 是否安全、白名单是否正确、Gateway 服务是否持续运行、群聊隐私模式是否关闭](../../assets/practical-v2-02-telegram-entry-03-verify-troubleshoot.webp)
+
 
 ### 1. Token 泄露
 
