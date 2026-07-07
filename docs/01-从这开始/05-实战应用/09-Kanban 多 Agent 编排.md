@@ -2,7 +2,7 @@
 
 > 一句话先说清楚：这一页教你怎么用 Hermes 的 Kanban 看板把多个 Agent 任务串起来——从需求拆解到分工执行到验收交付，全流程可视化。
 
-![多 Agent 看板图：任务进入看板后，经 Dispatcher 分配到不同 Profile，流转到 review 与 done](../../assets/solution-practical-09-kanban-multi-agent-orchestration-v1.webp)
+![Kanban 多 Agent 编排 总览图](../../assets/practical-v2-09-kanban-multi-agent-00-board-orchestration-cn.webp)
 
 ---
 
@@ -29,6 +29,8 @@ Kanban 看板解决的是：
 - **自动分工**：Dispatcher 根据 Lane 和 Profile 自动分配
 - **依赖管理**：任务 A 完成后才触发任务 B
 - **持久化**：所有状态存在 SQLite，不怕重启
+
+![Kanban 多 Agent 编排 实操流程图](../../assets/practical-v2-09-kanban-multi-agent-01-handoff-proof-cn.webp)
 
 ---
 
