@@ -9,7 +9,7 @@
 - [21-Hermes Agent + Ollama：本地部署最快路径](./21-Hermes%20Agent%20与%20Ollama%20最快路径.md) = **速通篇**：5 分钟从 0 到第一次本地对话
 - 建议：先读这一页理解边界 → 再用 21 跑通 → 跑一周后回来调优
 
-![Hermes Agent 接入 Ollama 三层决策树：本地零账单推理路径、显存与速度边界、隐私 vs 工具上云的真实区分、三层路由（本地兜底 + 云端高难度 + 强模型专用）](../../assets/practical-v2-02-ollama-local-model.webp)
+![Ollama 本地模型 总览图](../../assets/practical-v2-13-ollama-local-model-00-overview-cn.webp)
 
 ---
 
@@ -77,6 +77,8 @@
 | Web Search 后的多源信息综合 | 推理能力不够 |
 
 **实操建议：把本地模型放在三层路由的"日常层"，复杂任务路由到云端。**
+
+![Ollama 本地模型 实操流程图](../../assets/practical-v2-13-ollama-local-model-01-workflow-cn.webp)
 
 ---
 
