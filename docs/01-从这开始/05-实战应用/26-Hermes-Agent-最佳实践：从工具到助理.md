@@ -36,8 +36,8 @@ Agent 的“大脑”由不同部分组成，混用它们会导致混乱。一�
 ![Hermes Agent 的知识边界示意图：已明确知识、当前上下文和未知需确认的信息分类](../../assets/practical-v2-26-knowledge-boundary.webp "Hermes Agent 的知识边界：知道什么、正在做什么、哪些必须确认。")
 
 - **Memory**：记录你的**偏好、习惯**（如“我偏好使用 `uv`”）。
-- **Skills**：固化**可重复的工作流程**（如“如何发布博客”）。参考 [自定义 Skills](./15-自定义-Skills.md)。
-- **外部知识库**：存储**领域知识和项目文档**。参考 [Obsidian 第二大脑知识库](./08-Obsidian-第二大脑知识库.md)。
+- **Skills**：固化**可重复的工作流程**（如“如何发布博客”）。参考 [自定义 Skills](./15-自定义%20Skills.md)。
+- **外部知识库**：存储**领域知识和项目文档**。参考 [Obsidian 第二大脑知识库](./08-Obsidian%20第二大脑知识库.md)。
 
 ### 原则三：任务必须闭环 (Tasks Must Be Closed-Loop)
 

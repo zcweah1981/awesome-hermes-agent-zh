@@ -137,7 +137,7 @@ Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作
 - [**实战：基于 Telegram 和 Gmail 打造个人事务处理中心**](./27-实战：个人事务处理中心.md)
 
 ## 📖 出处
-- [notebooklm-py on GitHub](https://github.com/dwarvesf/notebooklm-py)
+- notebooklm-py 社区库（原 GitHub 仓库当前不可公开访问，使用前需重新确认可用来源）
 - [Hermes Agent 官方文档：terminal](/docs/hermes-agent/tools/terminal)
 - [Hermes Agent 官方文档：skills](/docs/hermes-agent/concepts/skills)
 

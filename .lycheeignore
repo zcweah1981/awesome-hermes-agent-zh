@@ -13,6 +13,9 @@
 # 仅忽略当前内容仓实际引用的具体文章 URL，不放宽到整域；新增 Medium 引用时单独审计。
 ^https?://medium\.com/@roanmonteiro/hermes-agent-advanced-self-evolving-skills-mcp-subagents-and-production-8c827c79ce7e$
 
+# DataCamp 对 GitHub Actions runner/Docker link checker 返回 403；普通浏览器可访问，故仅忽略当前引用的具体 Hermes 教程 URL。
+^https?://www\.datacamp\.com/(es/)?tutorial/hermes-agent$
+
 # Substack 同样对 GitHub Actions runner IP 反爬返回 403（与 Medium 同源行为）。
 # 仅忽略当前内容仓实际引用的具体文章 URL，文章对普通浏览器可正常打开；
 # 新增 Substack 引用时单独审计，不要直接整域放宽。
@@ -38,4 +41,5 @@
 ^/docs/.*
 ^/packs/.*
 ^file://.*/docs/(solutions|china|issues|reference|start|openclaw).*
+^file://.*/docs/hermes-agent/.*
 ^file://.*/packs/.*
