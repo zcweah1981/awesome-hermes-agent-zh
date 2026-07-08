@@ -9,6 +9,11 @@
 - 单厂商会员权益型 Coding Plan 怎么买
 - 你已经有 OneAPI / NewAPI / LM Studio / Ollama 时该怎么复用现成兼容层
 
+## 🔎 搜索收录速答
+
+腾讯云 Token Plan 适合已经在腾讯云生态里部署服务、希望用统一账户和预算接入 Hermes 的团队。判断是否该选它，重点看模型覆盖、OpenAI 兼容程度、国内网络稳定性和后续部署位置。如果你还在横向比较，建议同时看[阿里云百炼 Token Plan](/docs/china/models/alibaba-bailian-token-plan)、[MiniMax Token Plan](/docs/china/models/minimax-token-plan)和[DeepSeek 按量计费接口](/docs/china/models/deepseek-metered-api)。
+
+
 ## 🚀 先看主线
 
 ![腾讯云 Token Plan 深色接入主线图](./assets/tencent-tokenplan-hero-gemini-31-v4.webp)

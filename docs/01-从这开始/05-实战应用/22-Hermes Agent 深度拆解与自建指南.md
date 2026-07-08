@@ -6,6 +6,11 @@
 
 ---
 
+## 🔎 搜索收录速答
+
+这篇适合想理解 Hermes Agent 内部机制、准备二开或自建 Agent 框架的人。重点看 Agent Loop、System Prompt 组装、工具注册、上下文压缩、模型路由和缓存策略六部分；如果只是想先把 Hermes 用起来，建议先回到[快速开始](/docs/start/getting-started)或[三层模型级联](/docs/start/practical/three-tier-model-routing)。
+
+
 ## 👀 适合谁
 
 - 想知道 Hermes 内部到底怎么工作的开发者

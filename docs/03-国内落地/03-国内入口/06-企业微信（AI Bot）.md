@@ -8,6 +8,11 @@
 
 > **一句话结论**：先在企业微信后台创建 AI 机器人拿到凭据，再把凭据填回 Hermes 启动 Gateway，两边就通了。
 
+## 🔎 搜索收录速答
+
+企业微信机器人适合把 Hermes 接到团队群、运维群或内容协作群里，核心链路是：企业微信回调接收消息、服务端调用 Hermes、再把结果回写到群聊。上线前要先处理公网 HTTPS、签名校验、超时重试和权限边界。相关入口还可以对比[飞书](/docs/china/entry/feishu)、[钉钉](/docs/china/entry/dingtalk)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
+
+
 ## 🚀 接入三步走
 
 在开始之前，请确保你的 Hermes Agent 至少已经在命令行（CLI）里跑通了。企业微信是消息入口，不是排错的第一站。

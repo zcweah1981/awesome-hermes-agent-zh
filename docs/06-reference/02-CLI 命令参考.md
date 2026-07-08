@@ -2,6 +2,11 @@
 
 > 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
 
+## 🔎 搜索收录速答
+
+CLI 命令参考适合快速查 `hermes` 主命令、会话命令、profile 管理、gateway、kanban、memory、model 等子命令。第一次使用时先掌握启动会话、检查版本、切换 profile、查看配置和运行诊断这几组命令；Slash 命令请看[Slash Commands 参考](/docs/reference/slash-commands)，环境变量请看[环境变量参考](/docs/reference/env-vars)。
+
+
 ## 🎯 1. 页面用途
 
 这一页只做一件事：

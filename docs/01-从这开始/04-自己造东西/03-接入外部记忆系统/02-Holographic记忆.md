@@ -7,6 +7,11 @@
 
 ---
 
+## 🔎 搜索收录速答
+
+Holographic 记忆适合想把 Hermes 的长期记忆从本地文件扩展到外部记忆服务的用户。最短路径是先跑通 `hermes memory setup`，确认 provider 指向 `holographic`，再用一次真实任务验证记忆写入和读取。还不确定要不要外部记忆时，先看[记忆基础](/docs/start/personalize/memory-basics)和[记忆 provider 对比](/docs/start/build/memory-providers/compare)。
+
+
 ## 🎯 先判断：Holographic 是不是你现在该走的路线
 
 下面这些情况，通常优先走 Holographic：

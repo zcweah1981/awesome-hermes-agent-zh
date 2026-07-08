@@ -11,6 +11,11 @@
 - 单厂商会员权益型 Coding Plan 怎么买
 - 你已经有 OneAPI / NewAPI / LM Studio / Ollama 时该怎么复用现成兼容层
 
+## 🔎 搜索收录速答
+
+阿里云百炼 Token Plan 适合想用一个 OpenAI-Compatible 入口管理 Qwen、DeepSeek 等模型的 Hermes 用户。你需要重点确认三件事：套餐是否覆盖目标模型、endpoint 是否能按 OpenAI 兼容格式调用、Hermes 里是否把 provider 与 model name 分开配置。想比较其它国内模型，可以继续看[腾讯云 Token Plan](/docs/china/models/tencent-token-plan)、[MiniMax Token Plan](/docs/china/models/minimax-token-plan)和[自定义兼容接口](/docs/china/models/openai-compatible-endpoint)。
+
+
 ## 🚀 先看主线
 
 ![阿里云百炼 Token 接入流程示意图（Hermes 风格版）](./assets/aliyun-bailian-tokenplan-hero-v18.webp)

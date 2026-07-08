@@ -6,6 +6,11 @@
 
 ---
 
+## 🔎 搜索收录速答
+
+Kanban 多 Agent 编排适合把复杂任务拆成待办、执行、验证和归档几个阶段，并让多个 Agent 或多轮会话围绕同一块看板协作。关键不是“开更多 Agent”，而是定义清楚状态流转、验收证据和失败回滚。想继续扩展自动化，可以接着看[三层模型级联](/docs/start/practical/three-tier-model-routing)和[上下文引用](/docs/start/build/context-system/context-references)。
+
+
 ## 👀 适合谁
 
 - 已经会用单 Agent 完成任务，但开始觉得一个人不够用的人

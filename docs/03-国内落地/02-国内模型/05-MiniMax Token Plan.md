@@ -9,6 +9,11 @@
 - 统一聚合套餐该选阿里云还是腾讯云
 - 你已经有 OneAPI / NewAPI / LM Studio / Ollama 时该怎么复用兼容层
 
+## 🔎 搜索收录速答
+
+MiniMax Token Plan 更适合重视中文长文本、角色对话或内容生成场景的 Hermes 用户。接入时先确认套餐模型名、兼容 endpoint、上下文长度和计费规则，再把它作为 Hermes 的一个独立 provider 验证。若目标是代码或通用 Agent，可以继续比较[智谱 GLM Coding Plan](/docs/china/models/glm-coding-plan)、[腾讯云 Token Plan](/docs/china/models/tencent-token-plan)和[阿里云百炼 Token Plan](/docs/china/models/alibaba-bailian-token-plan)。
+
+
 ## 🚀 先看主线
 
 ![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.webp)
