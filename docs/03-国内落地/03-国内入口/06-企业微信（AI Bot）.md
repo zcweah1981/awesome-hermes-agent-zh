@@ -55,7 +55,7 @@ hermes gateway
 ## ➡️ 下一步
 
 - 如果你还没确定入口形态，先对比[飞书](/docs/china/entry/feishu)、[钉钉](/docs/china/entry/dingtalk)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
-- 如果你想把接入后的机器人用于运维告警，单独看[实战：服务器自动化运维](/docs/start/practical/server-automation-ops)，不要把运维脚本配置混在企业微信接入步骤里。
+- 接入完成后，可以继续了解[实战：服务器自动化运维](/docs/start/practical/server-automation-ops)，学习如何把企业微信作为告警通知入口。
 
 ## 📖 出处
 
