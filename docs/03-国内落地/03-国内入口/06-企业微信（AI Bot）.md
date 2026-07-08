@@ -52,10 +52,13 @@ hermes gateway
 
 如果终端没有报错，恭喜你！你的 Hermes Agent 已经成功接入企业微信，你可以在对应的机器人聊天窗口里和它对话了。
 
+## ⬅️ 上一步
+
+- [05. 飞书接入指南](/docs/china/entry/feishu)
+
 ## ➡️ 下一步
 
-- 如果你还没确定入口形态，先对比[飞书](/docs/china/entry/feishu)、[钉钉](/docs/china/entry/dingtalk)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
-- 接入完成后，可以继续了解[实战：服务器自动化运维](/docs/start/practical/server-automation-ops)，学习如何把企业微信作为告警通知入口。
+- [07. 钉钉接入指南](/docs/china/entry/dingtalk)
 
 ## 📖 出处
 
