@@ -1,21 +1,21 @@
 # 09-多模型合奏（Mixture-of-Agents）
 
-> 💡 **速答**：MoA (Mixture-of-Agents) 是一种“专家集群”模式。它让多个参考模型先产出初稿，再由聚合模型进行融合，极大提升了逻辑推理的上限。
+> 💡 **速答**：MoA (Mixture-of-Agents) 让一组“参考模型”先生成答案，再由“聚合模型”提炼方案。这就像让 DeepSeek 负责草稿，Claude 负责逻辑，最后让 GPT 聚合出最稳的结果。
 
-![MoA 专家组合奏流转图：DeepSeek 逻辑推理 + Claude 意图对齐 -> Aggregator 聚合结论](../../assets/play-tricks-moa-v1.webp)
+![MoA 专家组合奏图：Reference Models 生成草稿 -> Aggregator 聚合结论](../../assets/play-tricks-moa-v1.webp)
 
 ---
 
-## 🛠️ 配置示例
-在你的 `config.yaml` 中，可以定义如下虚拟模型：
+## 🛠️ 配置实战
+在 `config.yaml` 中配置一个 MoA 模型：
 ```yaml
 models:
   moa-pro:
     provider: moa
-    aggregator: anthropic/claude-3-5-sonnet  # 聚合者：负责最终逻辑对齐
+    aggregator: anthropic/claude-3-5-sonnet
     references:
-      - deepseek/deepseek-chat           # 专家1：负责发散与推导
-      - openai/gpt-4o                    # 专家2：负责知识补充
+      - deepseek/deepseek-chat
+      - openai/gpt-4o
 ```
 
 ---
