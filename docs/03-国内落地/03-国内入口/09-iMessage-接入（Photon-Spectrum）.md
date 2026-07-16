@@ -1,44 +1,19 @@
 # 09-iMessage 接入（Photon Spectrum）
 
-> 💡 **速答**：Photon Spectrum 是 v0.17.0 引入的 iMessage 官方接入方案。它彻底解决了“必须拥有一台 7x24 小时开机的 Mac 做转发”的痛点，支持直接通过设备代码验证接入。
+> 💡 **速答**：Photon Spectrum 解决了“必须有一台 Mac 转发”的痛点，通过蓝气球原生协议实现移动端对话。
+
+![iMessage 接入架构图：iPhone 原生蓝气球协议通过 Photon Spectrum 网关直接连接云端的 Hermes Agent](../../assets/china-entry-imessage-v1.webp)
 
 ---
 
-## 🧠 为什么选择 Photon Spectrum
-
-在之前的版本中，接入 iMessage 通常需要：
-1. 一台运行 BlueBubbles 或 AirMessage 的 Mac 服务器。
-2. 复杂的内网穿透配置。
-
-**Photon Spectrum 的优势：**
-- **免硬件**：完全基于 Photon 的云端协议池，无需本地 Mac。
-- **免配置**：通过命令行即可完成登录。
-- **原生安全**：支持 iMessage 原生的蓝气球端到端加密通信。
-
 ## 🛠️ 接入步骤
-
-### 1. 登录与鉴权
-在安装了 Hermes 的终端中输入以下命令：
-```bash
-hermes photon login
-```
-系统会返回一个**验证 URL** 和一个 **8 位设备代码**。
-
-### 2. 验证设备
-- 在你的手机或电脑浏览器中打开返回的 URL。
-- 输入 8 位设备代码。
-- 确认授权。
-
-### 3. 开始对话
-一旦登录成功，Hermes 就会出现在你的 iMessage 列表里。你可以像给朋友发短信一样给它发送指令。
-
-## 🎯 推荐场景
-- **移动办公**：在路上通过手机快速询问 Agent 项目进度。
-- **紧急提醒**：将服务器的报警信息通过 iMessage 蓝气球实时推送到你的 iPhone。
+1. **登录**：执行 `hermes photon login`。
+2. **验证**：在手机浏览器输入 8 位设备代码。
+3. **对话**：直接在 iMessage 列表找到 Hermes。
 
 ---
 
 ## ➡️ 下一步
-- 上一步：[08-教-Hermes-学习新技能-learn](./08-教-Hermes-学习新技能-learn.md)
-- 下一步：[下一阶段：04-自己造东西](../04-自己造东西/01-总览.md)
-- 回到目录：[03-玩出花样](./01-总览.md)
+- 上一步：[08-个人微信](./08-个人微信.md)
+- 下一阶段：[04-从OpenClaw过来](../../04-从OpenClaw过来/01-总览.md)
+- 回到目录：[03-国内入口](./01-总览.md)
