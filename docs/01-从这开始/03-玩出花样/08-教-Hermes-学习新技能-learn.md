@@ -31,5 +31,9 @@
 
 ---
 
+---
+
 ## ➡️ 下一步
-- [09-多模型合奏（Mixture-of-Agents）](./09-多模型合奏（Mixture-of-Agents）.md)
+- 上一步：[07-用桌面端操作 Hermes](./07-用桌面端操作 Hermes.md)
+- 下一步：[09-多模型合奏（Mixture-of-Agents）](./09-多模型合奏（Mixture-of-Agents）.md)
+- 回到目录：[03-玩出花样](./01-总览.md)
