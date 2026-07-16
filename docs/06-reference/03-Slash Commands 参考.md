@@ -211,6 +211,8 @@ hermes model
 | `/save` | 保存当前会话 |
 | `/retry` | 重试上一条消息 |
 | `/undo` | 删除上一轮 user/assistant 交换 |
+| `/learn` | **[v0.18.0+]** 将当前会话中的成功经验固化为新 Skill |
+| `/journey` | **[v0.18.0+]** 查看当前任务的逻辑演进与状态路径 |
 | `/title` | 给当前会话设置标题 |
 | `/compress [focus topic]` | 手动压缩上下文 |
 | `/rollback [number]` | 查看或恢复文件系统 checkpoints |
