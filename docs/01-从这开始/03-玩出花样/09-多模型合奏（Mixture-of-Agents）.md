@@ -17,6 +17,8 @@
 
 ## 先说边界
 
+![什么时候该用 MoA：先判断任务价值与复杂度，再决定是否开启多模型合奏](../../assets/play-tricks-moa-when-to-use-v1.webp)
+
 MoA 不是“免费变聪明”。它的本质是用更多模型调用换更充分的思考。
 
 如果你只是问：
@@ -38,6 +40,8 @@ MoA 不是“免费变聪明”。它的本质是用更多模型调用换更充�
 ---
 
 ## MoA 的工作方式
+
+![MoA 的工作方式：Reference Models 提供不同视角，Aggregator 负责最终整合](../../assets/play-tricks-moa-workflow-v1.webp)
 
 一个典型 MoA 流程分为三层：
 
@@ -121,6 +125,8 @@ MoA 可以让不同模型分别从安全、工程、产品和运维角度提出�
 
 ## 配置思路
 
+![配置思路与使用方式：理解 references 与 aggregator 的角色关系，再切换组合模型](../../assets/play-tricks-moa-config-usage-v1.webp)
+
 不同 Hermes 版本和网关配置方式可能不同，但 MoA 的核心概念通常包含两类角色：
 
 ```yaml
@@ -175,6 +181,8 @@ models:
 
 ## 成本提醒
 
+![成本提醒与 A/B 验证：MoA 成本更高，必须验证是否真的带来价值](../../assets/play-tricks-moa-cost-ab-v1.webp)
+
 MoA 会同时消耗多个模型的 Token。
 
 如果你配置了：
@@ -214,6 +222,8 @@ MoA 会同时消耗多个模型的 Token。
 ---
 
 ## 常见坑
+
+![MoA 常见坑：模型多不等于答案更好，关键在组合质量与问题清晰度](../../assets/play-tricks-moa-pitfalls-v1.webp)
 
 ### 坑 1：参考模型太多
 
