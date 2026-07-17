@@ -2,7 +2,7 @@
 
 > 💡 **速答**：`/learn` 是 Hermes 的“经验固化”入口。你先带 Agent 完成一次真实任务，确认结果可复用，再让 Hermes 把这段流程提炼成 Skill。下一次遇到同类任务时，Agent 不需要重新摸索，而是直接调用已经沉淀下来的方法。
 
-![Hermes 自进化架构：演示、提炼、固化、复用形成闭环](../../assets/play-tricks-learn-v1.webp)
+![教 Hermes 学习新技能：真实任务、journey 回放、learn 固化和复用验证](../../assets/play-tricks-learn-overview-v2.webp)
 
 ---
 
@@ -28,7 +28,9 @@
 
 ## 核心原理：演示即编程
 
-传统自动化通常要求你先写脚本、配置 YAML、定义输入输出。`/learn` 的思路相反：
+![核心原理：演示即编程，先完成正确示范，再由 Agent 抽取稳定步骤生成 Skill](../../assets/play-tricks-learn-demo-programming-v1.webp)
+
+你不需要一开始就写复杂 YAML 或 Python 代码。Hermes 的学习方式更接近“示范”：你带它完成一次正确任务，再让它把稳定步骤提炼出来。
 
 1. 先做一遍真实任务。
 2. 让 Agent 观察你们如何达成结果。
@@ -40,6 +42,8 @@
 ---
 
 ## `/learn` 真正学习的是什么
+
+![learn 真正学习的是触发条件、稳定步骤、输入输出格式、检查点和验收标准](../../assets/play-tricks-learn-what-it-learns-v1.webp)
 
 `/learn` 不应该学习这些内容：
 
@@ -61,6 +65,8 @@
 ---
 
 ## 实战案例：把 CSV 报表流程教给 Hermes
+
+![实战案例：把 CSV 报表流程教给 Hermes，先完成流程、检查 journey，再 learn 成 Skill](../../assets/play-tricks-learn-csv-report-flow-v1.webp)
 
 假设你经常收到一个销售 CSV，需要做三件事：
 
@@ -183,7 +189,9 @@ description: 从销售 CSV 生成趋势图、异常行和业务摘要
 
 ## 常见坑
 
-### 坑 1：任务没成功就学习
+![常见坑和不要使用 learn 的情况：先成功、再检查、再学习，不稳定流程不要固化](../../assets/play-tricks-learn-pitfalls-v1.webp)
+
+### 1. 任务没成功就学习
 
 如果 Agent 只是“勉强跑完”，不要 `/learn`。否则你会把错误路径固化下来。
 
@@ -244,6 +252,6 @@ Skill 里不应该出现一次性路径、Token、验证码、个人隐私或只
 
 ## ➡️ 下一步
 
-- 上一步：[07-用桌面端操作 Hermes](./07-用桌面端操作 Hermes.md)
-- 下一步：[09-多模型合奏（Mixture-of-Agents）](./09-多模型合奏（Mixture-of-Agents）.md)
-- 回到目录：[03-玩出花样](./01-总览.md)
+- 上一步：[07-用桌面端操作 Hermes](./07-%E7%94%A8%E6%A1%8C%E9%9D%A2%E7%AB%AF%E6%93%8D%E4%BD%9C%20Hermes.md)
+- 下一步：[09-多模型合奏（Mixture-of-Agents）](./09-%E5%A4%9A%E6%A8%A1%E5%9E%8B%E5%90%88%E5%A5%8F%EF%BC%88Mixture-of-Agents%EF%BC%89.md)
+- 回到目录：[03-玩出花样](./01-%E6%80%BB%E8%A7%88.md)
