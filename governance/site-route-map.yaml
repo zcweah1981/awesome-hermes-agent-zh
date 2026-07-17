@@ -572,6 +572,30 @@ routes:
     state: needs-review
     checked_at: '2026-07-05'
     note: Feature deep-dive. Must be checked against official docs for accuracy.
+- source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
+  slug: /start/personalize/learn
+  module: start
+  page_type: doc-page
+  title: 🧠 08-教 Hermes 学习新技能（/learn）
+  section: learn
+  description: 用 /learn 把一次成功任务提炼成可复用 Skill，让 Hermes 从演示中沉淀工作流。
+  order: 36.1
+  status: published
+  updated: '2026-07-17'
+  source_type: feature_deep_dive
+  nav_group: 03-玩出花样
+- source: docs/01-从这开始/03-玩出花样/09-多模型合奏（Mixture-of-Agents）.md
+  slug: /start/personalize/moa
+  module: start
+  page_type: doc-page
+  title: 🤖 09-多模型合奏（Mixture-of-Agents）
+  section: moa
+  description: 理解 Mixture-of-Agents 的参考模型与聚合模型协作方式，判断何时值得用更高 Token 成本换更稳答案。
+  order: 36.2
+  status: published
+  updated: '2026-07-17'
+  source_type: feature_deep_dive
+  nav_group: 03-玩出花样
 - source: docs/01-从这开始/04-自己造东西/01-总览.md
   slug: /start/build
   module: start
@@ -579,7 +603,7 @@ routes:
   title: 🛠️ 04-自己造东西
   section: overview
   description: 一句话先说清楚：这一阶段不是“再学几个功能”，而是把你的 Hermes 使用方式，从“一个助手”推进到“开始搭一套系统”。
-  order: 36
+  order: 37
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1553,6 +1577,18 @@ routes:
     state: needs-official-check
     checked_at: '2026-05-02'
     note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+- source: docs/03-国内落地/03-国内入口/09-iMessage-接入（Photon-Spectrum）.md
+  slug: /china/entry/imessage
+  module: china
+  page_type: doc-page
+  title: 09-iMessage 接入（Photon Spectrum）
+  section: imessage
+  description: 在苹果设备原生信息入口中接入 Hermes Agent，理解 Photon Spectrum 网关、白名单、日志脱敏和二次确认边界。
+  order: 67.1
+  status: published
+  updated: '2026-07-17'
+  source_type: community_solution
+  nav_group: 03-国内入口
 - source: docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
   slug: /openclaw/relationship
   module: openclaw
