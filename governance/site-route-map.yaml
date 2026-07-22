@@ -1931,6 +1931,28 @@ routes:
     state: needs-official-check
     checked_at: '2026-05-02'
     note: Reference pages should be checked against official docs/GitHub before command or config changes.
+- source: docs/06-reference/11-v0.19.0-Quicksilver-更新指南.md
+  slug: /reference/v019-quicksilver
+  module: reference
+  page_type: doc-page
+  title: 🆕 11-v0.19.0 "Quicksilver" 更新指南
+  section: v019-quicksilver
+  description: v0.19.0 Quicksilver 版本完整更新指南，覆盖智能审批默认、密码管理器集成、Profile 多路复用、后台子代理持久化交付、新模型、推理强度 max/ultra、会话导出、终端订阅管理、setup --portal OAuth 等 11 项核心新功能。
+  order: 999
+  status: published
+  updated: '2026-07-22'
+  source_type: official_reference
+  nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-22'
+    note: Version update guide based on official v0.19.0 release notes. Verify feature details against official changelog before publishing.
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'

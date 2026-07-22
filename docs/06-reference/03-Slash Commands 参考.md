@@ -159,6 +159,8 @@ hermes model
 | `/statusbar` | 开关状态栏 | 调整 CLI 信息显示 |
 | `/voice [on\|off\|tts\|status]` | 管理语音模式 | 想开关 spoken playback |
 | `/yolo` | 开关 YOLO 模式 | 跳过危险命令审批提示 |
+| `/subscription` | 🆕 v0.19.0 查看订阅状态和用量 | 需要 Portal OAuth 授权 |
+| `/topup <amount>` | 🆕 v0.19.0 充值 credits | 需要 Portal OAuth 授权 |
 
 ### 5.3 最常用的工具 / 技能类命令
 

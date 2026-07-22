@@ -65,7 +65,7 @@
 直接把下面这条命令放到当前终端里执行：
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ```
 
 ### Windows 用户：如果你走的是 Windows Native 路线
@@ -73,7 +73,7 @@ curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scri
 在 PowerShell 里执行：
 
 ```powershell
-iex (irm https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.ps1)
+iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
 注意：
@@ -310,6 +310,8 @@ hermes doctor
 hermes setup        # 进入总配置向导
 hermes setup model  # 只补模型这一块
 ```
+
+> 🆕 **v0.19.0 新增**：`hermes setup --portal` 支持通过 Nous Portal 一次 OAuth 完成模型提供商 + 4 个工具网关（GitHub、Brave Search、Firecrawl、Computer Use）的授权配置，无需逐个手动填 API key。适合第一次安装后快速配齐整套环境。
 
 `hermes setup` 适合：
 - 第一次安装完，需要从头配齐 model + 入口

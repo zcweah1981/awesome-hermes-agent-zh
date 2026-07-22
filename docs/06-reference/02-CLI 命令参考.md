@@ -144,6 +144,7 @@ hermes gateway status
 | `hermes chat --resume <id>` | 恢复指定会话 | 明确知道要回哪条 session |
 | `hermes model` | 交互式设置 provider 与 model | 新增 provider、填 API Key、切默认模型 |
 | `hermes setup` | 进入总配置向导 | 第一次配置或集中补配置 |
+| `hermes setup --portal` | 🆕 v0.19.0 通过 Nous Portal 一次 OAuth 配齐模型 + 4 个工具网关 | 快速初始化整套环境 |
 | `hermes doctor` | 诊断配置和依赖问题 | 不知道哪里坏了时先查 |
 | `hermes status` | 看当前状态 | 快速看模型、认证、平台状态 |
 | `hermes config` | 查看 / 编辑配置 | 想改 `config.yaml` 时 |
@@ -152,6 +153,7 @@ hermes gateway status
 | `hermes desktop` | 启动桌面端应用 | 想用 GUI 而不是终端 |
 | `hermes portal` | Nous Portal 配置 | Portal 用户快速配置 |
 | `hermes kanban` | 看板任务管理 | 多 Agent 协作场景 |
+| `hermes sessions export` | 🆕 v0.19.0 导出会话为 Markdown / HTML / HuggingFace trace | 会话归档、训练数据导出 |
 
 ### 5.2 最常用的 global options
 

@@ -130,7 +130,7 @@ ollama run gpt-oss:20b "你好"
 ### Step 3：装 Hermes
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ```
 
 **如果你机器上已经有 OpenClaw**：

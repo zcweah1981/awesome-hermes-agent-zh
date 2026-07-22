@@ -5,7 +5,7 @@
 ## 📋 速答（你可能正在搜的）
 
 **Hermes Agent 内置工具有哪些？**
-> Hermes 内置工具按 toolset 分组，主要包括：browser（`browser_navigate`、`browser_click`、`browser_snapshot` 等）、file（`read_file`、`write_file`、`search_files`、`patch`）、terminal（`terminal`、`process`）、web（`web_search`、`web_extract`）、skills（`skills_list`、`skill_view`）、memory、vision、tts、delegation 等，共约 50+ 个。
+> Hermes 内置工具按 toolset 分组，主要包括：browser（`browser_navigate`、`browser_click`、`browser_snapshot` 等）、file（`read_file`、`write_file`、`search_files`、`patch`）、terminal（`terminal`、`process`）、web（`web_search`、`web_extract`）、skills（`skills_list`、`skill_view`）、memory、vision、tts、delegation 等，共约 60+ 个。v0.19.0 新增了 `delegate_task(background=true)` 后台子代理、`image_generate` 编辑模式等工具能力。
 
 **Built-in Tools 和 MCP Tools 有什么区别？**
 > Built-in tools 是 Hermes 项目自带的工具，跟着 Hermes 走；MCP tools 是你通过外部 MCP server 动态接入的工具（如 `github_create_issue`），跟着你的配置走。MCP 工具通常带 `server-name` 前缀。
@@ -40,7 +40,7 @@
 - 官方页面标题：Built-in Tools Reference
 - 官方页面定位：记录 Hermes tool registry 中的 built-in tools，并按 toolset 分组
 
-中文站这一页不会把 50+ 工具原样长表堆给你，而是先帮你建立“怎么查”的结构。
+中文站这一页不会把 60+ 工具原样长表堆给你，而是先帮你建立"怎么查"的结构。
 
 ## 🧭 3. 什么时候查这页
 
