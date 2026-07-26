@@ -79,6 +79,12 @@ jobs:
           print(f'Validated {len(routes)} route sources')
           PY
 
+      - name: Verify canonical route order
+        run: python scripts/normalize_route_order.py
+
+      - name: Verify content quality baseline
+        run: python scripts/content_quality_check.py
+
       - name: Validate packs manifests
         run: |
           set -euo pipefail

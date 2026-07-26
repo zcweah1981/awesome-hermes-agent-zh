@@ -24,6 +24,8 @@
 | 安装 | `python -m pip install -r requirements-ci.txt` | 是 | 已实现 |
 | unit/integration test | `python -m pytest -q` | 是 | 本地已验证，远端待验证 |
 | route map source | `content-check` 内置校验 | 是 | 已实现 |
+| route order | `python scripts/normalize_route_order.py` | 是 | 已实现 |
+| content quality ratchet | `python scripts/content_quality_check.py` | 是 | 已实现 |
 | Pack manifest | `content-check` 内置校验 | 是 | 已实现 |
 | 外部链接 | Lychee workflow | 否 | 独立检查 |
 | production build | 不适用，由代码仓负责 | 否 | 不适用 |
@@ -39,7 +41,7 @@
 - 并发取消：同 ref 取消旧运行
 - 权限：`contents: read`
 - Secret 使用：Required CI 不使用 Secret
-- `CI Gate` 汇总逻辑：单一顺序 job；pytest、route或Pack检查失败即失败
+- `CI Gate` 汇总逻辑：单一顺序 job；pytest、route/order、内容质量或 Pack 检查失败即失败
 
 `link-check`、上游巡查、第三方巡查和站点 dispatch 保持独立，不作为稳定 Required Check 的替代品。
 
@@ -60,8 +62,8 @@
 - 成功 run：待验证
 - Branch protection：已配置 Required `CI Gate`、PR、线性历史，禁止 force push 和删除
 - 自动合并验证：受阻；`docs/**` 合并会触发站点同步与发布，本任务不含生产部署授权
-- 本地验证：2026-07-26 已通过 15 项 pytest；workflow YAML 已完成解析校验
-- 已知限制：H1、图片格式/冗余资产、来源复核和页尾导航红线尚未全部进入 Required CI
+- 本地验证：2026-07-26 已通过 17 项 pytest、route order 检查和内容质量 baseline 检查；workflow YAML 已完成解析校验
+- 已知限制：历史 H1/ID、页尾导航、来源复核和未使用 WebP 欠账以精确 baseline 管理；门禁禁止新增欠账，但不会用伪造来源或批量删除资产制造“零问题”
 
 ## 6. 故障处理
 

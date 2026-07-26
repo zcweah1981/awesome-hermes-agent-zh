@@ -96,7 +96,7 @@
 - `title`：页面标题。
 - `section`：页面所在子分区。
 - `description`：用于站点摘要、搜索或卡片展示的简短说明。
-- `order`：模块内排序。
+- `order`：全站文档导航的机器排序权威，必须按 route map 审核顺序使用唯一递增整数。
 - `status`：当前发布状态，已发布页面使用 `published`。
 - `updated`：内容更新时间。
 - `source_type`：来源类型，例如 `original`、`official-reference`、`curated`。
@@ -105,7 +105,8 @@
 - `source_review`：R1 起新增的来源复核状态字段，记录 `state`、`checked_at` 和维护说明；它只表示来源映射/复核状态，不代表正文已经完成官方同步。
 
 维护要求：
-- `source`、`slug`、`title`、`module`、`order` 为关键字段。
+- `source`、`slug`、`title`、`module`、`order` 为关键字段；正式 route 的 `source` 只允许 `docs/**/*.md`。
+- `/packs` 由站点代码的 Pack 列表页提供，`packs/README.md` 是仓库目录说明，不进入 route map。
 - 新增 route 前先确认 Markdown 文件已经真实存在。
 - 删除或移动 Markdown 文件时，必须同步修改 route-map。
 - 如果 route 涉及安装、配置、Reference、国内模型或部署等会影响用户操作的内容，优先补 `source_refs` / `source_review`，并引用 `governance/upstream-source-registry.yaml` 中已有来源 ID。

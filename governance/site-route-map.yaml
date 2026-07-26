@@ -6,7 +6,7 @@ routes:
   title: 文档总览
   section: overview
   description: Hermes 中文站文档总入口，帮助用户先选对模块入口。
-  order: 0
+  order: 1
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -18,7 +18,7 @@ routes:
   title: 从这开始
   section: overview
   description: Hermes 中文站学习主线入口。
-  order: 1
+  order: 2
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -140,7 +140,7 @@ routes:
   title: 现成方案
   section: overview
   description: Hermes 中文站现成方案入口。
-  order: 1
+  order: 8
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -200,7 +200,7 @@ routes:
   title: 05-X/Twitter 内容与互动助手
   section: x-twitter
   description: 通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。
-  order: 12.5
+  order: 13
   status: published
   updated: '2026-05-17'
   source_type: third_party_solution
@@ -212,7 +212,7 @@ routes:
   title: 01-总览｜办公效率与知识整理
   section: overview
   description: 一句话先说清楚：这一层不是教你系统学项目管理或知识管理，而是帮你先挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报或总结做出来。
-  order: 13
+  order: 14
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -224,7 +224,7 @@ routes:
   title: 02-会议纪要助手
   section: meeting
   description: 一句话先说清楚：这一页不是教你系统学会议管理，而是帮你把一段会议内容，直接压成“能发给团队执行的会议纪要”。
-  order: 14
+  order: 15
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -236,7 +236,7 @@ routes:
   title: 03-项目日报助手
   section: daily-report
   description: 一句话先说清楚：这一页不是教你系统学项目管理，而是帮你把一天的零散进展，直接压成“能发给老板、团队或项目群的项目日报”。
-  order: 15
+  order: 16
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -248,7 +248,7 @@ routes:
   title: 04-资料总结助手
   section: summary
   description: 一句话先说清楚：这一页不是教你系统学做研究摘要，而是帮你把一堆零散资料、文章、会议记录或网页内容，直接压成“能继续看、能继续用、能继续转给别人”的总结稿。
-  order: 16
+  order: 17
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -260,7 +260,7 @@ routes:
   title: 01-总览｜应用开发与快速原型
   section: overview
   description: 一句话先说清楚：这一层不是教你系统学前端或后端，而是帮你先挑一套已经能直接试跑的开发原型方案，把一个想法先压成第一版可开工结构。
-  order: 17
+  order: 18
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -272,7 +272,7 @@ routes:
   title: 02-微信小程序助手
   section: miniapp
   description: 一句话先说清楚：这一页不是教你写方案，而是帮你把一个微信小程序想法，直接推进到“能开始搭代码”的状态。
-  order: 18
+  order: 19
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -284,7 +284,7 @@ routes:
   title: 03-敏捷 Web 开发助手
   section: webdev
   description: 一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。
-  order: 19
+  order: 20
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -296,7 +296,7 @@ routes:
   title: 06-多平台内容改写助手
   section: multi-platform-rewrite
   description: 把一篇现成内容，改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，直接复制就能发。
-  order: 13
+  order: 21
   status: published
   updated: '2026-05-18'
   source_type: original
@@ -308,7 +308,7 @@ routes:
   title: 05-行动计划助手
   section: action-plan
   description: 把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。
-  order: 17
+  order: 22
   status: published
   updated: '2026-05-18'
   source_type: original
@@ -320,7 +320,7 @@ routes:
   title: 06-邮件群消息摘要助手
   section: message-summary
   description: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。
-  order: 18
+  order: 23
   status: published
   updated: '2026-05-18'
   source_type: original
@@ -332,7 +332,7 @@ routes:
   title: 国内落地
   section: overview
   description: Hermes 中文站国内部署、模型与入口选择总览。
-  order: 1
+  order: 24
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -353,7 +353,7 @@ routes:
   title: 从 OpenClaw 过来
   section: overview
   description: 帮助 OpenClaw 用户判断继续用、共存还是迁移到 Hermes。
-  order: 1
+  order: 25
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -365,7 +365,7 @@ routes:
   title: 遇到问题
   section: overview
   description: Hermes 中文站排障入口，先定位问题类型再进入排查页。
-  order: 1
+  order: 26
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -377,7 +377,7 @@ routes:
   title: Reference 参考手册
   section: overview
   description: Hermes 官方 Reference 的中文查表入口。
-  order: 1
+  order: 27
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -392,18 +392,6 @@ routes:
     state: needs-official-check
     checked_at: '2026-05-02'
     note: Reference pages should be checked against official docs/GitHub before command or config changes.
-- source: packs/README.md
-  slug: /packs
-  module: packs
-  page_type: pack-entry
-  title: Packs 方案包总览
-  section: overview
-  description: Hermes 中文站现成方案包入口，汇总可下载、可安装、可试跑的工作流包。
-  order: 1
-  status: published
-  updated: '2026-04-30'
-  source_type: original
-  nav_group: packs
 - source: docs/01-从这开始/02-开始上手/01-总览.md
   slug: /start/getting-started
   module: start
@@ -411,7 +399,7 @@ routes:
   title: 🧰 02-开始上手
   section: overview
   description: 一句话先说清楚：这一阶段只做一件事——把 Hermes 从“能跑一次”变成“你会反复使用的日常助手”。
-  order: 25
+  order: 28
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -423,7 +411,7 @@ routes:
   title: ⚙️ 02-认识 Hermes 的基本使用方式
   section: basic-usage
   description: 这一页不讲高级玩法，只帮你把每天最常用的那条路径练顺：打开 Hermes、问一句、接着追问、最后正常退出。
-  order: 26
+  order: 29
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -435,7 +423,7 @@ routes:
   title: ⌨️ 03-常用斜杠命令与会话管理
   section: slash-commands-and-sessions
   description: 第一次开始用 Hermes，不需要背完整命令表。你现在最需要先学会的是两件事：找得到常用入口，以及别把正在做的会话弄丢。
-  order: 27
+  order: 30
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -452,7 +440,7 @@ routes:
   title: 🏷️ 04-常用 Skills（按日常使用场景精选）
   section: curated-skills
   description: 这一页不是让你背完整技能目录，而是帮你建立第一层判断：我现在手上的任务属于哪一类，应该先试哪一类 Skill。
-  order: 28
+  order: 31
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -469,7 +457,7 @@ routes:
   title: 📡 05-接入一个消息平台（推荐飞书）
   section: connect-message-platform
   description: 到这一页时，你应该已经在命令行里把 Hermes 用顺了。现在再把它接进消息平台，排错会简单很多，也更容易真的放进日常工作流。
-  order: 29
+  order: 32
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -486,7 +474,7 @@ routes:
   title: 🎨 03-玩出花样
   section: overview
   description: 一句话先说清楚：这一阶段仍然只围绕一个助手，先把它调成“更像你、更懂你、更顺手”的长期助手，还不是进入多助手和系统层。
-  order: 30
+  order: 33
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -498,7 +486,7 @@ routes:
   title: 🪞 02-让 Hermes 更像你
   section: soul
   description: 这一页只解决一件事：
-  order: 31
+  order: 34
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -515,7 +503,7 @@ routes:
   title: 🧠 03-让 Hermes 记住你
   section: memory-basics
   description: 这一页只解决一件事：
-  order: 32
+  order: 35
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -527,7 +515,7 @@ routes:
   title: 🤖 04-自定义 AI 大模型
   section: custom-model
   description: 这一页只解决一件事：
-  order: 33
+  order: 36
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -539,7 +527,7 @@ routes:
   title: 🧩 05-让工具更顺手
   section: toolsets-and-workflow
   description: 这一页只解决一件事：
-  order: 34
+  order: 37
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -551,7 +539,7 @@ routes:
   title: 🎭 06-让终端更顺眼
   section: skins-and-themes
   description: 这一页只解决一件事：
-  order: 35
+  order: 38
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -563,7 +551,7 @@ routes:
   title: 🖥️ 07-用桌面端操作 Hermes
   section: desktop-app
   description: 这一页只解决一件事：
-  order: 36
+  order: 39
   status: published
   updated: '2026-04-28'
   source_type: feature_deep_dive
@@ -579,7 +567,7 @@ routes:
   title: 🧠 08-教 Hermes 学习新技能（/learn）
   section: learn
   description: 用 /learn 把一次成功任务提炼成可复用 Skill，让 Hermes 从演示中沉淀工作流。
-  order: 36.1
+  order: 40
   status: published
   updated: '2026-07-17'
   source_type: feature_deep_dive
@@ -591,7 +579,7 @@ routes:
   title: 🤖 09-多模型合奏（Mixture-of-Agents）
   section: moa
   description: 理解 Mixture-of-Agents 的参考模型与聚合模型协作方式，判断何时值得用更高 Token 成本换更稳答案。
-  order: 36.2
+  order: 41
   status: published
   updated: '2026-07-17'
   source_type: feature_deep_dive
@@ -603,7 +591,7 @@ routes:
   title: 🛠️ 04-自己造东西
   section: overview
   description: 一句话先说清楚：这一阶段不是“再学几个功能”，而是把你的 Hermes 使用方式，从“一个助手”推进到“开始搭一套系统”。
-  order: 37
+  order: 42
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -615,7 +603,7 @@ routes:
   title: 👥 02-多个助手一起工作
   section: profiles
   description: 这一页只解决一件事：
-  order: 37
+  order: 43
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -627,7 +615,7 @@ routes:
   title: 🧠 03-接入外部记忆系统
   section: overview
   description: 这一页只解决一件事：
-  order: 38
+  order: 44
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -639,7 +627,7 @@ routes:
   title: 🪞 02-Holographic记忆
   section: holographic
   description: 这一页只解决一件事：
-  order: 39
+  order: 45
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -651,7 +639,7 @@ routes:
   title: 🧠 03-Honcho记忆
   section: honcho
   description: 这一页只解决一件事：
-  order: 40
+  order: 46
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -663,7 +651,7 @@ routes:
   title: ⚖️ 04-外部记忆对比
   section: compare
   description: 这一页只解决一件事：
-  order: 41
+  order: 47
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -675,7 +663,7 @@ routes:
   title: 🧩 04-上下文系统
   section: overview
   description: 这一页只解决一件事：
-  order: 42
+  order: 48
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -687,7 +675,7 @@ routes:
   title: 📄 02-上下文文件
   section: context-files
   description: 这一页只解决一件事：
-  order: 43
+  order: 49
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -699,7 +687,7 @@ routes:
   title: 🔗 03-上下文引用
   section: context-references
   description: 这一页只解决一件事：
-  order: 44
+  order: 50
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -711,7 +699,7 @@ routes:
   title: 🔌 05-把 Hermes 接进外部系统
   section: mcp-and-plugins
   description: 这一页只解决一件事：
-  order: 45
+  order: 51
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -723,7 +711,7 @@ routes:
   title: 🌐 06-把 Hermes 暴露成后端服务
   section: api-server
   description: 这一页只解决一件事：
-  order: 46
+  order: 52
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -735,7 +723,7 @@ routes:
   title: 🤖 07-让 Hermes 自己自动跑
   section: automation
   description: 这一页只解决一件事：
-  order: 47
+  order: 53
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -747,7 +735,7 @@ routes:
   title: 🧑‍💻 08-放进编辑器里用
   section: acp-ide
   description: 这一页只解决一件事：
-  order: 48
+  order: 54
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -759,7 +747,7 @@ routes:
   title: 📦 09-把一整套 Agent 打包分享
   section: profile-distribution
   description: 用 Profile Distribution 把你的 Agent 打包成一个 Git 仓库，别人一条命令就能装上、用起来。
-  order: 48.5
+  order: 55
   status: published
   updated: '2026-06-04'
   source_type: official_reference
@@ -771,7 +759,7 @@ routes:
   title: 🧪 05-实战应用
   section: practical
   description: 22 篇一篇一个明确主题的 Hermes 实战应用文章，覆盖 Cron、Telegram、备份、控费、VPS、SOUL、Obsidian、Kanban、Home Assistant、Discord、MCP、Ollama、GitHub PR Review、自定义 Skills、安全加固、语音模式；并新增 5 篇深度应用专题：进阶实战（自进化 Skills/MCP/Subagent 治理）、控制室（多 Agent 团队演进模板）、60 天分析师工作流（6 条架构教训）、Hermes + Ollama 最快路径、深度拆解与自建指南。
-  order: 48.6
+  order: 56
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -783,7 +771,7 @@ routes:
   title: ☀️ 01-用 Hermes 做每日晨间简报
   section: daily-briefing
   description: 用 Cron 自动生成每日晨间简报，并投递到 Telegram 或本地文件。
-  order: 48.61
+  order: 57
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -795,7 +783,7 @@ routes:
   title: 💬 02-Telegram 消息入口接入
   section: telegram-entry
   description: 把 Hermes 接入 Telegram，让手机成为日常 Agent 对话入口。
-  order: 48.62
+  order: 58
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -807,7 +795,7 @@ routes:
   title: 🔄 03-GitHub 备份 Cron Job
   section: github-backup-cron
   description: 用 Hermes Cron 自动备份 SOUL、memory、skills 等核心资产到 GitHub。
-  order: 48.63
+  order: 59
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -819,7 +807,7 @@ routes:
   title: 💰 04-月费 8 美金跑 Hermes：三层模型级联省钱指南
   section: three-tier-model-routing
   description: 用三层模型路由把日常任务、分析任务和复杂任务分层控费。
-  order: 48.64
+  order: 60
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -831,7 +819,7 @@ routes:
   title: 🧮 05-Token 成本优化避坑指南
   section: token-cost-optimization
   description: 从工具表面、Skill 加载和上下文堆叠三层减少 Token 固定成本。
-  order: 48.65
+  order: 61
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -843,7 +831,7 @@ routes:
   title: 🏠 06-VPS 自托管 Hermes
   section: vps-self-hosting
   description: 在 VPS 上部署 Hermes，让 Telegram、Cron 和 Gateway 能 7×24 小时在线。
-  order: 48.66
+  order: 62
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -855,7 +843,7 @@ routes:
   title: 🪞 07-SOUL.md 人格定制
   section: soul-persona
   description: 用 SOUL.md 固化长期人格、语气和协作偏好。
-  order: 48.67
+  order: 63
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -867,7 +855,7 @@ routes:
   title: 🧠 08-Obsidian 第二大脑知识库
   section: obsidian-second-brain
   description: 把 Hermes 接入 Obsidian Vault，让笔记可检索、可对话、可整理。
-  order: 48.68
+  order: 64
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -879,7 +867,7 @@ routes:
   title: 📋 09-Kanban 多 Agent 编排
   section: kanban-multi-agent
   description: 用 Kanban 把多 Agent 分工、状态流转和验收过程可视化。
-  order: 48.69
+  order: 65
   status: published
   updated: '2026-06-04'
   source_type: adapted
@@ -891,7 +879,7 @@ routes:
   title: 🏡 10-Home Assistant 智能家居
   section: home-assistant
   description: 把 Hermes 接入 Home Assistant，用自然语言控制和查询智能家居设备。
-  order: 48.7
+  order: 66
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -903,7 +891,7 @@ routes:
   title: 🎮 11-Discord 接入：让你的 AI 助手住进服务器
   section: discord-entry
   description: 把 Hermes 接入 Discord 服务器，让团队成员在频道里 @ Bot 就能用 Agent，支持线程、自由回复频道和语音频道。
-  order: 48.71
+  order: 67
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -915,7 +903,7 @@ routes:
   title: 🔌 12-MCP 接入指南：给 Hermes 装上"万能插头"
   section: mcp-universal-plug
   description: 用 MCP 协议让 Hermes 直接调用 GitHub、Linear、数据库等外部工具，不用自己写 wrapper。
-  order: 48.72
+  order: 68
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -927,7 +915,7 @@ routes:
   title: 🦙 13-Ollama 本地模型：让 Hermes 完全免费跑起来
   section: ollama-local-model
   description: 用 Ollama 跑本地推理后端，零账单零数据出网；讲清楚什么场景适合本地、什么场景必须留云端。
-  order: 48.72
+  order: 69
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -939,7 +927,7 @@ routes:
   title: 🔍 14-GitHub PR 自动审查：给仓库配一个不睡觉的 Code Reviewer
   section: github-pr-reviewer
   description: 用 Webhook + Hermes Skill 搭一条 PR 打开就自动审查 + 评论的流水线，比手动 /review 更持续更一致。
-  order: 48.75
+  order: 70
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -951,7 +939,7 @@ routes:
   title: 🧠 15-自定义 Skills：教 Hermes 学会你的独门工作流
   section: custom-skills
   description: 把重复操作固化成 SKILL.md，下次一句话触发；讲清楚 Skill 和 Prompt 的本质区别、Progressive Disclosure 机制、团队 Skill 共享。
-  order: 48.74
+  order: 71
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -963,7 +951,7 @@ routes:
   title: 🔒 16-安全加固：给你的 AI Agent 划好安全红线
   section: security-hardening
   description: 对外部署 Hermes 前必看的四道红线：用户白名单、命令审批、容器隔离、密钥保护。
-  order: 48.8
+  order: 72
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -975,7 +963,7 @@ routes:
   title: 🎙️ 17-语音模式：让 Hermes 听懂你说的话、开口回答你
   section: voice-mode
   description: CLI Ctrl+B 录音、Telegram 语音消息、Discord 语音频道，三种入口一套 STT/TTS 引擎。
-  order: 48.81
+  order: 73
   status: published
   updated: '2026-06-05'
   source_type: original
@@ -987,7 +975,7 @@ routes:
   title: 🧭 18-Hermes Agent 进阶实战：自进化 Skills、MCP、Subagent 编排与生产纪律
   section: hermes-advanced-production
   description: 把 Hermes 从"我让它干活它能干"推到"长期生产可靠运行"必须补的四道纪律——自进化 Skills 治理、MCP 深度集成、Subagent 编排、生产可观测。基于 Roan Brasil Monteiro 在 Medium 的进阶文章公开部分整理。
-  order: 48.76
+  order: 74
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -999,7 +987,7 @@ routes:
   title: 🕹️ 19-Hermes Agent 控制室：从一个 Agent 到专员团队的演进模板
   section: hermes-control-room
   description: 当你从 1 个 Hermes 实例走向 5 个，需要的不是更多 Hermes，而是一个控制室——登记册、运行手册、任务总线、备份策略、安全审计。四级演进模板。基于 shannhk/hermes-agent-control-room 整理。
-  order: 48.77
+  order: 75
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -1011,7 +999,7 @@ routes:
   title: 📊 20-60 天分析师工作流：6 条架构教训
   section: 60day-analyst-lessons
   description: 一个真实社区用户跑了 60 天分析师工作流后总结的 6 条架构教训。结论反直觉：Agent 不败在智能，败在架构。基于 0xJeff 在 Substack 的系列文章整理。
-  order: 48.78
+  order: 76
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -1023,7 +1011,7 @@ routes:
   title: ⚡ 21-Hermes Agent + Ollama：本地部署最快路径
   section: hermes-ollama-fastest
   description: 5 分钟、7 步、零账单跑通 Hermes + Ollama。和 13-Ollama 本地模型的边界：这一页只讲最短路径，不展开原理。
-  order: 48.73
+  order: 77
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -1035,7 +1023,7 @@ routes:
   title: 🔮 22-Hermes Agent 深度拆解与自建指南
   section: hermes-deep-dive-build-your-own
   description: 拆开 Hermes 黑盒：Agent Loop 六步、System Prompt 12 段组装、Frozen-Snapshot 模式、Tools 自注册 Registry、四种 API 模式自动切换、Prompt Caching 省 90% 钱、自建/二开路径。基于 Truong Phung 在 dev.to 的深度文章整理。
-  order: 48.79
+  order: 78
   status: published
   updated: '2026-06-05'
   source_type: adapted
@@ -1047,7 +1035,7 @@ routes:
   title: ⚙️ 23-实战：个人项目开发工作流
   section: personal-dev-workflow
   description: 用 Hermes 管住个人项目从需求、开发、测试到部署的完整闭环。
-  order: 48.80
+  order: 79
   status: published
   updated: '2026-07-07'
   source_type: original
@@ -1059,7 +1047,7 @@ routes:
   title: 🧠 24-实战：用 session_search 打造你的外部记忆
   section: session-search-memory
   description: 用 session_search 把 Hermes 历史对话变成随用随查的外部记忆。
-  order: 48.81
+  order: 80
   status: published
   updated: '2026-07-07'
   source_type: original
@@ -1071,7 +1059,7 @@ routes:
   title: 🛡️ 25-实战：7x24 小时服务器自动化运维
   section: server-automation-ops
   description: 让 VPS 自我监控，只在真的出问题时通过 Hermes 发出告警。
-  order: 48.82
+  order: 81
   status: published
   updated: '2026-07-07'
   source_type: original
@@ -1083,7 +1071,7 @@ routes:
   title: 26-Hermes Agent 最佳实践：从工具到助理
   section: hermes-best-practices
   description: 从工具使用过渡到长期助理的 Hermes 最佳实践清单。
-  order: 48.83
+  order: 82
   status: published
   updated: '2026-07-07'
   source_type: adapted
@@ -1095,7 +1083,7 @@ routes:
   title: 27-实战：个人事务处理中心
   section: personal-affairs-center
   description: 基于 Telegram 和 Gmail，把邮件、日程、待办统一接进 Hermes。
-  order: 48.84
+  order: 83
   status: published
   updated: '2026-07-07'
   source_type: original
@@ -1107,7 +1095,7 @@ routes:
   title: 28-高级玩法：NotebookLM 超级知识库
   section: notebooklm-knowledge-base
   description: 把 Hermes 和 NotebookLM 连接起来，基于大量文档打造可问答的知识库 Agent。
-  order: 48.85
+  order: 84
   status: published
   updated: '2026-07-07'
   source_type: original
@@ -1119,7 +1107,7 @@ routes:
   title: 01-国内部署 | 总览
   section: overview
   description: 一句话先说清楚：这一页不是教你立刻敲命令，而是先帮你选对国内部署路线，再进入正确的云厂商教程。
-  order: 49
+  order: 85
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1140,7 +1128,7 @@ routes:
   title: 02-阿里云轻量服务器部署教程
   section: alicloud-lite-server
   description: 一句话先说清楚：这一页不教你选模型，也不教你接入口，它只做一件事——用阿里云轻量应用服务器的官方 Hermes 镜像，把第一台国内机器真正跑起来。
-  order: 50
+  order: 86
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1163,7 +1151,7 @@ routes:
   title: 03-腾讯云轻量服务器部署教程
   section: tencent-lite-server
   description: 一句话先说清楚：这一页不讲模型选型，也不展开入口接入，它只做一件事——用腾讯云轻量应用服务器的 Hermes Agent 模板，把第一台国内机器真正跑起来。
-  order: 51
+  order: 87
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1186,7 +1174,7 @@ routes:
   title: 国外教程精选：社区怎么教 Hermes
   section: third-party-tutorials
   description: 精选国外社区的高质量 Hermes Agent 教程和深度文章，帮助中文用户找到适合自己的学习路径。
-  order: 51.1
+  order: 88
   status: published
   updated: '2026-06-04'
   source_type: third-party
@@ -1198,7 +1186,7 @@ routes:
   title: 别人正在用 Hermes 做什么：社区场景库
   section: community-use-cases
   description: 收集整理国内外社区中真实用户正在用 Hermes Agent 做的事情，帮你找到适合自己的使用场景。
-  order: 51.2
+  order: 89
   status: published
   updated: '2026-06-04'
   source_type: third-party
@@ -1210,7 +1198,7 @@ routes:
   title: Hermes 适合谁：和其他 Agent 工具怎么选
   section: who-is-hermes-for
   description: 中性说明 Hermes、Claude Code、Codex、OpenClaw、自托管方案之间的选择边界。
-  order: 51.3
+  order: 90
   status: published
   updated: '2026-06-04'
   source_type: third-party
@@ -1222,7 +1210,7 @@ routes:
   title: 国外自托管生态参考：Umbrel、TrueNAS、AUR、Docker
   section: self-hosting-ecosystem
   description: 整理 Docker Hub、Umbrel、TrueNAS、AUR、VPS 教程等自托管生态资料，只作参考，不写成官方推荐部署路线。
-  order: 51.4
+  order: 91
   status: published
   updated: '2026-06-04'
   source_type: third-party
@@ -1234,7 +1222,7 @@ routes:
   title: 02-国内模型 | 总览
   section: overview
   description: 一句话先说清楚：这一页不是让你马上挑最强模型，而是先帮你选对国内模型路线，再进入正确的厂商或接口页面。
-  order: 52
+  order: 92
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1255,7 +1243,7 @@ routes:
   title: 02-阿里云百炼 Token Plan
   section: alibaba-bailian-token-plan
   description: 🎯 一句话先说清楚：如果你想先买一个“多模型统一入口”，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。
-  order: 53
+  order: 93
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1278,7 +1266,7 @@ routes:
   title: 03-腾讯云 Token Plan
   section: tencent-token-plan
   description: 🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。
-  order: 54
+  order: 94
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1301,7 +1289,7 @@ routes:
   title: 04-智谱 GLM Coding Plan
   section: glm-coding-plan
   description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
-  order: 55
+  order: 95
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1324,7 +1312,7 @@ routes:
   title: 05-MiniMax Token Plan
   section: minimax-token-plan
   description: 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
-  order: 56
+  order: 96
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1347,7 +1335,7 @@ routes:
   title: 06-Kimi登月计划
   section: kimi-plan
   description: 🎯 一句话先说清楚：如果你最看重的是 Kimi 的 Coding 体验，或者你正在判断“先买会员权益”还是“直接走开放平台接口”，那这页必须拆成两条线看：`Kimi Code` 和 `Kimi API`。
-  order: 57
+  order: 97
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1370,7 +1358,7 @@ routes:
   title: 07-DeepSeek按量计费接口
   section: deepseek-metered-api
   description: 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
-  order: 58
+  order: 98
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1393,7 +1381,7 @@ routes:
   title: 08-自定义兼容接口
   section: openai-compatible-endpoint
   description: 🎯 一句话先说清楚：如果你手上已经有一个稳定的 OpenAI-Compatible 入口——不管它是 LM Studio、Ollama、OneAPI、NewAPI，还是企业自己的私有网关——那么“自定义兼容接口”就是最省重复劳动的一条路线；前提是你真的已经有这个入口。
-  order: 59
+  order: 99
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1416,7 +1404,7 @@ routes:
   title: 03-国内入口 | 总览
   section: overview
   description: 一句话先说清楚：这一页不是直接教你配某个平台，而是先帮你选对 Hermes 的使用入口，再进入正确的入口页面。
-  order: 60
+  order: 100
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1437,7 +1425,7 @@ routes:
   title: 02-网页控制台（Dashboard）
   section: dashboard
   description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
-  order: 61
+  order: 101
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1458,7 +1446,7 @@ routes:
   title: 03-API 服务与 Open WebUI
   section: api-service-open-webui
   description: 🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。
-  order: 62
+  order: 102
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1479,7 +1467,7 @@ routes:
   title: 04-命令行（CLI）
   section: cli
   description: 🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。
-  order: 63
+  order: 103
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1500,7 +1488,7 @@ routes:
   title: 05-飞书
   section: feishu
   description: 🎯 一句话结论：如果你想让团队成员在国内环境里先通过一个熟悉的消息入口触达 Hermes，飞书通常是最值得优先落地的第一站；但这页讲的是**飞书入口接入**，不是模型购买，也不是云部署。
-  order: 64
+  order: 104
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1521,7 +1509,7 @@ routes:
   title: 06-企业微信（AI Bot）
   section: wecom-ai-bot
   description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。
-  order: 65
+  order: 105
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1542,7 +1530,7 @@ routes:
   title: 07-钉钉
   section: dingtalk
   description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。
-  order: 66
+  order: 106
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1563,7 +1551,7 @@ routes:
   title: 08-个人微信
   section: personal-wechat
   description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录 → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
-  order: 67
+  order: 107
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1584,7 +1572,7 @@ routes:
   title: 09-iMessage 接入（Photon Spectrum）
   section: imessage
   description: 在苹果设备原生信息入口中接入 Hermes Agent，理解 Photon Spectrum 网关、白名单、日志脱敏和二次确认边界。
-  order: 67.1
+  order: 108
   status: published
   updated: '2026-07-17'
   source_type: community_solution
@@ -1596,7 +1584,7 @@ routes:
   title: OpenClaw 和 Hermes 的关系
   section: relationship
   description: 一句话先说清楚：如果你把 Hermes 理解成 OpenClaw 的直接替代品，一开始就容易做错判断。更准确的理解是：OpenClaw 更像实验场，Hermes 更像沉淀层和长期运行层。
-  order: 68
+  order: 109
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1608,7 +1596,7 @@ routes:
   title: 继续用、共存，还是迁移
   section: decision
   description: 一句话先说清楚：不要根据工具名做选择，而要根据你的任务是否稳定、是否重复、是否值得复用，以及你是不是已经需要自动化和团队协作来做选择。
-  order: 69
+  order: 110
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1620,7 +1608,7 @@ routes:
   title: OpenClaw + Hermes 共存指南
   section: coexistence
   description: 一句话先说清楚：共存不是折中方案，而是从“临时使用”走向“长期复用”的最稳升级路径。
-  order: 70
+  order: 111
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1632,7 +1620,7 @@ routes:
   title: 05-从 OpenClaw 到 Hermes：迁移路径
   section: migration-path
   description: 一句话先说清楚：迁移不是复制配置，而是把 OpenClaw 中已经跑通的经验，重构成 Hermes 中可复用的角色、技能、模板和工作流。
-  order: 71
+  order: 112
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1644,7 +1632,7 @@ routes:
   title: OpenClaw 用户常见问题与检查清单
   section: checklist
   description: 一句话先说清楚：这一页不是替你重做迁移判断，而是帮你把“共存 / 迁移过程中卡住的问题”先分到正确类别，再用最小检查单收缩问题范围。
-  order: 72
+  order: 113
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1656,7 +1644,7 @@ routes:
   title: 02-安装 / 更新 / 环境问题
   section: install-environment
   description: 一句话结论：这一页只处理“命令起不来、装不上、更新后变怪、环境边界混乱”这类问题。只要你还没确认 `hermes` 命令本身是否正常，就先不要跳去查模型、Gateway、Tools。
-  order: 73
+  order: 114
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1668,7 +1656,7 @@ routes:
   title: 03-模型 / Provider / 自定义 endpoint 问题
   section: provider-endpoint
   description: 一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。
-  order: 999
+  order: 115
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1680,7 +1668,7 @@ routes:
   title: 04-CLI / TUI / 会话问题
   section: cli-tui-session
   description: 一句话结论：这一页只处理“界面显示怪、按键像没反应、slash command 不出现、会话恢复不对、看起来像卡住了”这类问题。只要 `hermes` 能启动，很多时候就不是“完全坏了”，而是入口、交互方式、会话预期或终端环境没对齐。
-  order: 999
+  order: 116
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1692,7 +1680,7 @@ routes:
   title: 05-Gateway / Messaging / 推送问题
   section: gateway-messaging
   description: 一句话结论：这页只处理“消息为什么没进来、为什么不回、为什么会话乱、为什么 gateway status 不对”这类排障问题；先分清是平台接入层、gateway 运行层，还是会话 / 权限层。
-  order: 999
+  order: 117
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1704,7 +1692,7 @@ routes:
   title: 06-Tools / Skills / MCP 问题
   section: tools-skills-mcp
   description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。
-  order: 999
+  order: 118
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1716,7 +1704,7 @@ routes:
   title: 07-配置 / Profiles / 环境隔离问题
   section: config-profiles-environment
   description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。
-  order: 999
+  order: 119
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1728,7 +1716,7 @@ routes:
   title: 08-Docker / Nix / SSH / 远程后端问题
   section: docker-nix-remote
   description: 一句话结论：这页只处理“为什么容器里起不来、为什么 SSH backend 连不上、为什么远端文件和本地不一致、为什么我以为在一台机器上运行，实际跑在另一台”这类排障问题；先分清到底是谁在执行、谁在读文件、谁持有依赖和配置。
-  order: 999
+  order: 120
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1740,7 +1728,7 @@ routes:
   title: ⌨️ 02-CLI 命令参考
   section: cli-commands
   description: 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
-  order: 999
+  order: 121
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1762,7 +1750,7 @@ routes:
   title: 🧭 03-Slash Commands 参考
   section: slash-commands
   description: 这页查的是你已经进入 Hermes 对话之后，在会话里输入的 `/xxx` 命令。 如果你要查终端 shell 里的 `hermes ...`，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
-  order: 999
+  order: 122
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1784,7 +1772,7 @@ routes:
   title: 👤 04-Profile 命令参考
   section: profile-commands
   description: 这页查的是 `hermes profile ...` 这一组命令，用来管理不同的 Hermes profile。 如果你要查一般 CLI 命令，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
-  order: 999
+  order: 123
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1806,7 +1794,7 @@ routes:
   title: ⚙️ 05-环境变量参考
   section: environment-variables
   description: 这页查的是 Hermes 的环境变量、API Key、token 与 base URL。 如果你要排查 key 为什么不通过，请看 [05-遇到问题 / 03-模型 Provider 与自定义 endpoint 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)。
-  order: 999
+  order: 124
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1828,7 +1816,7 @@ routes:
   title: 🧰 06-Built-in Tools 参考
   section: built-in-tools
   description: 这页查的是 Hermes 内置工具（built-in tools），以及它们和 toolsets、平台、凭据之间的关系。 如果你要查 MCP server 暴露出来的工具，请看 [08-MCP 配置参考](<./08-MCP%20%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83.md>)。
-  order: 999
+  order: 125
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1850,7 +1838,7 @@ routes:
   title: 🗂️ 07-Toolsets 参考
   section: toolsets
   description: 这页查的是 Hermes 的 toolsets，也就是“工具包”层，不是单个工具细节。 如果你要查具体内置工具，请看 [06-Built-in Tools 参考](<./06-Built-in%20Tools%20%E5%8F%82%E8%80%83.md>)。
-  order: 999
+  order: 126
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1872,7 +1860,7 @@ routes:
   title: 🔌 08-MCP 配置参考
   section: mcp-config
   description: 这页查的是 `mcp_servers` 配置结构、server 字段、工具过滤规则和 resources / prompts 开关。 如果你要排查的是“为什么 MCP server 连不上”，请看 [05-遇到问题 / 06-Tools Skills MCP 问题](<../05-%E9%81%87%E5%88%B0%E9%97%AE%E9%A2%98/06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)。
-  order: 999
+  order: 127
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1894,7 +1882,7 @@ routes:
   title: 🧠 09-内置 Skills 目录
   section: bundled-skills
   description: 这页查的是 Hermes 官方 bundled skills，也就是默认随 Hermes 一起提供、安装后会复制到 `~/.hermes/skills/` 的技能库。 如果你要查按需安装的扩展技能，请看 [10-可选 Skills 目录](<./10-%E5%8F%AF%E9%80%89%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
-  order: 999
+  order: 128
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1916,7 +1904,7 @@ routes:
   title: 🧩 10-可选 Skills 目录
   section: optional-skills
   description: 这页查的是 Hermes 官方 optional skills，也就是仓库里有、但默认不会自动激活的扩展技能。 如果你要查默认随 Hermes 提供的技能库，请看 [09-内置 Skills 目录](<./09-%E5%86%85%E7%BD%AE%20Skills%20%E7%9B%AE%E5%BD%95.md>)。
-  order: 999
+  order: 129
   status: published
   updated: '2026-04-28'
   source_type: original
@@ -1938,7 +1926,7 @@ routes:
   title: 🆕 11-v0.19.0 "Quicksilver" 更新指南
   section: v019-quicksilver
   description: v0.19.0 Quicksilver 版本完整更新指南，覆盖智能审批默认、密码管理器集成、Profile 多路复用、后台子代理持久化交付、新模型、推理强度 max/ultra、会话导出、终端订阅管理、setup --portal OAuth 等 11 项核心新功能。
-  order: 999
+  order: 130
   status: published
   updated: '2026-07-22'
   source_type: official_reference

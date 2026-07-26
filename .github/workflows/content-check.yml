@@ -37,6 +37,12 @@ jobs:
       - name: Run tests
         run: python -m pytest -q
 
+      - name: Verify canonical route order
+        run: python scripts/normalize_route_order.py
+
+      - name: Verify content quality baseline
+        run: python scripts/content_quality_check.py
+
       - name: Check critical paths exist
         run: |
           echo "🔍 Checking critical path structure..."
