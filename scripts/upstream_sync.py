@@ -63,7 +63,7 @@ def fetch_latest_github_release(repo: str = "NousResearch/hermes-agent") -> dict
 
 def repo_relative(path: Path) -> str:
     try:
-        return str(path.resolve().relative_to(REPO_ROOT))
+        return path.resolve().relative_to(REPO_ROOT).as_posix()
     except ValueError:
         return str(path)
 
@@ -362,7 +362,12 @@ def write_or_print(text: str, output: str | None) -> None:
         path.write_text(text, encoding="utf-8")
         print(f"wrote {path}")
     else:
-        print(text)
+        try:
+            print(text)
+        except UnicodeEncodeError:
+            encoding = sys.stdout.encoding or "utf-8"
+            safe_text = text.encode(encoding, errors="replace").decode(encoding)
+            print(safe_text)
 
 def add_common_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--registry", type=Path, default=DEFAULT_REGISTRY)

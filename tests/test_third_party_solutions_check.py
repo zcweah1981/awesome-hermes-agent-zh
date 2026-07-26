@@ -33,7 +33,7 @@ def test_third_party_registry_schema_includes_hermes_tweet_contract():
 
     for field in ("local_doc", "source", "version", "last_checked_at"):
         assert hermes_tweet[field]
-    assert hermes_tweet["local_doc"] == str(LOCAL_DOC.relative_to(REPO))
+    assert hermes_tweet["local_doc"] == LOCAL_DOC.relative_to(REPO).as_posix()
     assert hermes_tweet["source"]["github_repo"] == "Xquik-dev/hermes-tweet"
     assert hermes_tweet["source"]["pypi_package"] == "hermes-tweet"
     assert hermes_tweet["source"]["docs_url"] == "https://docs.xquik.com/guides/hermes-tweet"
