@@ -391,8 +391,8 @@ tests/                  巡查与 dispatch 合同测试
 - CI 状态：`初始化中`
 - GitHub Actions 入口：`.github/workflows/content-check.yml`（稳定 `CI Gate`）与独立的 `.github/workflows/link-check.yml`
 - Required Check：`CI Gate`
-- `main` Ruleset：待配置并通过真实 PR 验证
-- auto-merge：待配置并通过真实 PR 验证
+- `main` Branch protection：已配置 Required `CI Gate`、PR、线性历史，并禁止 force push 和删除
+- auto-merge：仓库能力已启用；因内容合并会触发站点同步/发布，本次未启用 PR 自动合并闭环
 - 合并方式：`squash`
 
 真实验证命令：

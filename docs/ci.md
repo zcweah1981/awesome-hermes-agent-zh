@@ -45,21 +45,21 @@
 
 ## 4. PR 治理
 
-- 所有进入 `main` 的变更通过 PR：待 Ruleset 验证
+- 所有进入 `main` 的变更通过 PR：已配置 Branch protection
 - 人工 GitHub approval：默认不要求
 - Reviewer：按 `AGENTS.md` 风险规则
 - 合并方式：squash
-- Auto-merge：待验证
-- 合并后删除分支：待验证
-- Force push：应禁止
+- Auto-merge：仓库能力已启用；当前初始化 PR 未启用
+- 合并后删除分支：已启用，待安全 PR 合并验证
+- Force push：已禁止
 - 管理员绕过：不得用于绕过失败门禁
 
 ## 5. 验证证据
 
 - CI 初始化 PR：待创建
 - 成功 run：待验证
-- Ruleset：待配置
-- 自动合并验证：待验证
+- Branch protection：已配置 Required `CI Gate`、PR、线性历史，禁止 force push 和删除
+- 自动合并验证：受阻；`docs/**` 合并会触发站点同步与发布，本任务不含生产部署授权
 - 本地验证：2026-07-26 已通过 15 项 pytest；workflow YAML 已完成解析校验
 - 已知限制：H1、图片格式/冗余资产、来源复核和页尾导航红线尚未全部进入 Required CI
 
