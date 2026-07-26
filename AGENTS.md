@@ -317,11 +317,10 @@ gh pr merge --squash --auto --delete-branch
 
 ### 1. 项目概况与长期边界
 
-- 项目规则状态：`初始化中`
 - 项目名称：Hermes Agent 中文站内容仓（`awesome-hermes-agent-zh`）
 - 一句话定位：面向中文用户维护 Hermes Agent 实战文档、来源治理、公开图片与可下载 Pack。
 - 目标用户和核心结果：中文用户可以按目标完成上手、方案使用、国内落地、迁移判断、排障和参考查询。
-- 当前交付阶段：已公开发布并由独立站消费，正在补齐内容门禁与工程治理基础。
+- 当前交付阶段：已公开发布并由独立站消费，内容门禁与工程治理基础已建立。
 - 明确非目标：
   - 不承载 Next.js 页面实现、生产运行代码或站点部署凭据。
   - 不保存内部派单、运行日志、临时执行看板和私有研究材料。
@@ -388,7 +387,7 @@ tests/                  巡查与 dispatch 合同测试
 
 当前状态：
 
-- CI 状态：`初始化中`
+- CI 状态：`就绪`
 - GitHub Actions 入口：`.github/workflows/content-check.yml`（稳定 `CI Gate`）与独立的 `.github/workflows/link-check.yml`
 - Required Check：`CI Gate`
 - `main` Branch protection：已配置 Required `CI Gate`、PR、线性历史，并禁止 force push 和删除
@@ -409,7 +408,7 @@ tests/                  巡查与 dispatch 合同测试
 
 - 数据库、缓存、浏览器或其他隔离服务：不适用
 - 不允许访问的生产资源：生产站点、部署 Secrets 和外部写接口
-- 已知 CI 限制：Windows 路径分隔符与控制台编码兼容已在本地验证，仍待真实 PR 的 Linux Runner 复验
+- 跨平台验证：Windows 本地与 GitHub Linux Runner 均已验证
 
 ### 6. 本地环境、部署与发布
 
@@ -420,23 +419,3 @@ tests/                  巡查与 dispatch 合同测试
 - 健康检查与验收：内容CI通过、站点锁定对应SHA、站点构建与公开页面验收
 - 回滚原则：revert内容提交或让代码仓锁定历史内容SHA
 - 生产部署、Secrets、DNS、权限和破坏性数据操作必须由用户明确授权。
-
-### 7. 核心文档与待确认事项
-
-优先阅读：
-
-- `README.md`
-- `governance/content-contract.md`
-- `governance/site-route-map.yaml`
-- `governance/publishing-checklist.md`
-- `governance/upstream-sync-policy.md`
-- `docs/ci.md`
-- `../docs/existing-project-audit.md`（仅本地双仓工作区存在）
-
-仍待确认：
-
-- `packs/README.md` route 是正式站点页面还是纯治理入口。
-- 是否分阶段强制补齐全部 route 的 `source_refs` 和 `source_review`。
-- 导航排序以 `order` 还是 route map 物理顺序为最终权威。
-
-项目规则初始化完成前，Codex 不得把规划中的能力写成已实现事实。
