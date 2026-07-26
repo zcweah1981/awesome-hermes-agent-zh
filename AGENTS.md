@@ -236,64 +236,90 @@
 - CI 状态为 `就绪` 后，所有进入 `main` 的代码和文档变更统一使用 PR，不按任务大小设置例外。
 - 默认不用 Worktree。仅在同项目任务并行、隔离高风险实验、跨会话且不能影响当前目录，或用户明确要求时使用；一个任务对应一个 Worktree 和分支，结束后确认无未提交内容再清理。
 
-#### 8.2 CI 是自动 PR 的前置条件
+#### 8.2 CI 与合并治理能力
 
 - PR 不会自动产生 lint、测试和构建；仓库必须先建立真实可运行的 GitHub Actions CI。
-- CI 配置放在 `.github/workflows/`；项目真实命令、依赖环境和状态记录在“项目类”。本地与 CI 调用同一组脚本。
-- CI 状态统一为：`未建立`、`初始化中`、`就绪`、`降级`、`受阻`。未达到 `就绪` 前不得启用无人值守自动合并。
-- 用户要求“初始化项目”“建立 CI”或“启用 PR 全流程”时，视为授权 Agent 创建 CI、验证 PR、配置 `main` 门禁和自动合并；不包含生产部署、Secrets 写入及破坏性操作。
+- CI 配置放在 `.github/workflows/`；本地与 CI 调用同一组真实脚本。
+- CI 状态为：`未建立`、`初始化中`、`就绪`、`降级`、`受阻`。
+- 合并治理模式为：
+  - `platform-enforced`：平台支持 Required Checks、Branch Protection / Ruleset 和原生 Auto-merge；
+  - `agent-gated`：平台强制门禁不可用，由 Agent 在合并前验证 CI 和提交 SHA。
+- GitHub Free 私有仓库不能使用受保护分支或原生 Auto-merge 时，自动选择 `agent-gated`；不得因此要求升级 GitHub Pro，不得把仓库改为公开。
+- 用户要求“初始化项目”“建立 CI”或“启用 PR 流程”时，视为授权 Agent 创建 CI、验证 PR 和配置当前计划支持的仓库设置；不包含生产部署、Secrets、付费计划升级及破坏性操作。
 
 #### 8.3 首次 CI 建立
 
-新项目或 CI 不可靠时，Agent 自动完成一次性初始化：
+新项目或 CI 不可靠时：
 
 1. 扫描运行时、包管理器、锁文件、monorepo、脚本、测试框架、数据库和外部服务。
-2. 在项目类填写真实验证命令；缺失能力明确标记，不得用空脚本、无断言测试、`echo success` 或无条件 `--if-present` 伪造通过。
-3. 必要时补齐统一的 `lint`、`typecheck`、`test`、`build` 等项目脚本。
-4. 创建 CI：触发 Pull Request 和 `main` 推送；使用锁文件安装、最小权限、并发取消和超时；不依赖生产数据或生产凭据。
-5. 本地运行全部拟设为 Required 的命令，修复真实问题；无法安全修复的既有问题必须记录。
+2. 填写真实验证命令；不得用空脚本、无断言测试、`echo success` 或无条件 `--if-present` 伪造通过。
+3. 必要时补齐真实的 `lint`、`typecheck`、`test`、`build` 等项目脚本。
+4. 创建 CI：触发 PR 和 `main` 推送；使用锁文件、最小权限、并发取消和超时；不依赖生产数据和生产凭据。
+5. 本地运行全部纳入 `CI Gate` 的命令，修复真实问题；无法安全修复的既有问题必须记录。
 6. 推送 CI 初始化分支并创建 PR，读取 Actions 日志并迭代，直到真实通过。
-7. 配置 `main`：要求 PR 和稳定检查 `CI Gate`，阻止 force push 和删除，不要求人工 approval。
-8. 启用 squash merge、auto-merge、合并后删除 head branch，并用安全验证 PR 证明“推送 → CI → 自动合并 → 清理”闭环后标记 `就绪`。
+7. 检测仓库可见性、GitHub 计划和实际能力，选择 `platform-enforced` 或 `agent-gated`。
+8. `platform-enforced`：
+   - 配置 PR、Required `CI Gate`、禁止 force push/删除；
+   - 启用 squash、原生 Auto-merge 和分支清理。
+9. `agent-gated`：
+   - 保留 PR、Actions、Reviewer 和 `CI Gate`；
+   - 不配置当前计划不支持的 Ruleset；
+   - Agent 等待全部检查并核对 `CI Gate`；
+   - 合并前确认 head SHA 未变化；
+   - 使用 `gh pr merge --match-head-commit <SHA> --squash --delete-branch`。
+10. 用安全验证 PR 证明所选模式的“推送 → CI → 合并 → 清理”闭环后标记 `就绪`。
 
-权限、GitHub 方案或 API 不支持时标记 `受阻` 并报告缺口，不得直接推送 `main` 绕过。
+只有 PR 无法创建、Actions 无法运行、没有写权限或真实验证基线无法建立时，才标记 `受阻`。缺少 GitHub Pro 本身不是受阻。
 
 #### 8.4 CI 基线
 
-- Required Check 固定命名为 `CI Gate`；内部 job 可调整，仓库规则不反复改名。
-- 基础 CI 评估依赖安装、lint、类型检查、测试和生产构建；不存在的能力说明原因，不制造虚假通过。
-- API、数据库、权限、异步任务、连接器和 UI/E2E 按项目风险加入，不能用单一前端构建代替完整验证。
-- Required workflow 不使用会让整个工作流不触发的路径过滤或跳过标记；条件优化放在 job 内，并保证 `CI Gate` 始终返回明确结果。
-- `CI Gate` 必须在必需 job 失败、取消或超时时失败；禁止用 `continue-on-error` 或忽略退出码掩盖问题。
-- PR CI 不部署生产、不连接生产数据库、不读取生产数据；使用隔离测试服务或容器。普通 CI 默认只有仓库只读权限。
-- 使用锁文件确定性安装；缓存只负责提速。设置超时和并发取消，`main` 合并后再次运行基础 CI。
+- CI 汇总检查固定命名为 `CI Gate`；内部 job 可调整。
+- 基础 CI 评估依赖安装、lint、类型检查、测试和生产构建；不存在的能力说明原因。
+- API、数据库、权限、异步任务、连接器和 UI/E2E 按项目风险加入。
+- Required workflow 不使用导致整个工作流不触发的路径过滤；条件优化放在 job 内，并保证 `CI Gate` 总有明确结果。
+- `CI Gate` 必须在必需 job 失败、取消或超时时失败；不得用 `continue-on-error` 或忽略退出码掩盖问题。
+- PR CI 不部署生产、不连接生产数据库、不读取生产数据。
+- 默认使用标准 GitHub-hosted runner，不启用 larger runner、Codespaces 或其他付费产品。
+- 使用锁文件确定性安装；缓存只负责提速；设置超时和并发取消。
 - 仅在启用 merge queue 时增加 `merge_group` 触发。
 
 #### 8.5 日常无人值守 PR
 
-CI `就绪` 后默认执行：
+CI `就绪` 后：
 
 ```text
 任务分支 → 本地验证 → 按规则 Reviewer → 修复复验
 → commit/push → 创建 PR → 等待 CI
-→ 失败则读取日志并修复 → 自动 squash merge
+→ 失败则读取日志并修复 → 安全 squash merge
 → 删除远程/本地分支 → 同步本地 main
 ```
 
 - 不要求用户打开 GitHub、人工批准或点击合并。
 - PR 标题使用 Conventional Commit 风格；正文包含目标、关键改动、验证证据、Reviewer 结论和未完成项。
-- 创建 PR 后启用自动合并；若 auto-merge 不可用，Agent 等待 Required Checks 通过后用 CLI 合并。
-- CI 失败时主动读取日志、修复并重新推送；同一根因反复失败、需要产品决策或缺少外部条件时才请求用户介入。
-- 分支落后时更新并重新检查；不使用管理员权限绕过失败门禁，不因改动小而跳过 PR。
-- 合并前确认最新提交与已验证提交一致；合并后确认 PR 实际 merged，再报告完成。
+- `platform-enforced` 可使用 GitHub 原生 Auto-merge。
+- `agent-gated` 不使用 `--auto`：
+  1. 确认 `CI Gate` 已出现；
+  2. 等待全部检查完成；
+  3. 任一检查失败、取消或超时均不得合并；
+  4. 确认 PR head SHA 与通过检查的 SHA 一致；
+  5. 使用 `--match-head-commit` 执行 squash merge。
+- CI 失败时主动读取日志、修复并重新推送。
+- 不使用管理员权限绕过失败门禁，不因改动小而跳过 PR。
+- 合并后确认 PR 状态为 `MERGED`，再报告完成。
 
 常用命令：
 
 ```bash
 git push -u origin HEAD
 gh pr create --base main --fill
-gh pr checks --watch
+gh pr checks --watch --fail-fast
+
+# platform-enforced
 gh pr merge --squash --auto --delete-branch
+
+# agent-gated
+SHA=$(gh pr view --json headRefOid --jq '.headRefOid')
+gh pr merge --squash --delete-branch --match-head-commit "$SHA"
 ```
 
 #### 8.6 高风险远程操作
@@ -387,11 +413,13 @@ tests/                  巡查与 dispatch 合同测试
 
 当前状态：
 
-- CI 状态：`就绪`
+- CI 状态：`初始化中`（平台门禁已建立；自动合并与分支清理闭环等待生产发布授权）
 - GitHub Actions 入口：`.github/workflows/content-check.yml`（稳定 `CI Gate`）与独立的 `.github/workflows/link-check.yml`
-- Required Check：`CI Gate`
+- CI 汇总检查：`CI Gate`
+- 仓库能力：个人 Public 仓；Branch Protection、Required Status Checks 与原生 Auto-merge 可用
+- 合并治理模式：`platform-enforced`
 - `main` Branch protection：已配置 Required `CI Gate`、PR、线性历史，并禁止 force push 和删除
-- auto-merge：仓库能力已启用；因内容合并会触发站点同步/发布，本次未启用 PR 自动合并闭环
+- auto-merge：仓库能力已启用；仅在获得生产发布授权后对发布 PR 启用
 - 合并方式：`squash`
 
 真实验证命令：

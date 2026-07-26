@@ -14,7 +14,6 @@ on:
 
 permissions:
   contents: read
-  issues: write
 
 concurrency:
   group: link-check-${{ github.ref }}
@@ -86,24 +85,11 @@ jobs:
 
       - name: Fail if Lychee failed
         if: steps.lychee.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           echo "::error::Lychee link check failed. Full report:"
           if [ -f lychee-report.md ]; then
             cat lychee-report.md
           else
             echo "lychee-report.md was not generated."
-          fi
-          # Open a public issue with the report so we can inspect failures
-          # without admin log access. Issue title encodes run id for easy dedupe.
-          if [ -f lychee-report.md ]; then
-            TITLE="link-check failed on run #${{ github.run_id }} (${{ github.sha }})"
-            BODY=$(cat lychee-report.md)
-            gh issue create \
-              --repo "${{ github.repository }}" \
-              --title "${TITLE}" \
-              --body "${BODY}" \
-              || echo "Issue creation failed (non-fatal)"
           fi
           exit 1
