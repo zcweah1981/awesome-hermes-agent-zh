@@ -412,10 +412,39 @@ tests/                  巡查与 dispatch 合同测试
 
 ### 6. 本地环境、部署与发布
 
-- 本地启动方式与端口：不适用；内容可直接在 GitHub 阅读
-- 开发、测试、预览和生产边界：本仓只发布内容提交，不直接部署站点
-- 正式部署平台和入口：由代码仓负责
-- 发布触发方式：`main` 内容变更通过 repository dispatch 通知代码仓
-- 健康检查与验收：内容CI通过、站点锁定对应SHA、站点构建与公开页面验收
-- 回滚原则：revert内容提交或让代码仓锁定历史内容SHA
-- 生产部署、Secrets、DNS、权限和破坏性数据操作必须由用户明确授权。
+本地开发与验证：
+
+- 本仓没有本地 Web 服务和端口；Markdown 可直接在 GitHub 或编辑器中预览。
+- 安装 CI 依赖使用 `python -m pip install -r requirements-ci.txt`。
+- 内容变更至少执行 `python -m pytest -q`、`python scripts/normalize_route_order.py` 和 `python scripts/content_quality_check.py`。
+- 内容、route map、Pack manifest、来源治理和公开资产必须在同一 PR 中保持一致；不得把站点 generated 文件复制回内容仓。
+- `SITE_REPO_DISPATCH_TOKEN` 只允许存在于 GitHub Secret，不得写入仓库、日志、文档或示例。
+
+发布责任边界：
+
+- 本仓是内容唯一真相源，但不直接构建 Next.js、不直接部署 Vercel、不推送 GHCR，也不登录腾讯云服务器。
+- 正式站点 canonical 为 `https://hermes-zh.com`；Vercel 承载海外生产线，腾讯云 Docker/Caddy 承载国内生产线，DNSPod 按线路智能解析。
+- 本仓只能通过固定的 `repository_dispatch` 合同通知站点仓，不得直接持有 Vercel、GHCR、腾讯云或 DNSPod 凭据。
+
+内容发布流程：
+
+1. 内容 PR 通过 Required `CI Gate`、独立 `link-check` 和 Reviewer 验收。
+2. 获得生产发布授权后，以 squash 方式合并到内容仓 `main`；由于后续会触发站点生产链，合并本身属于生产发布动作。
+3. `trigger-hermes-zh-content-sync` 对内容相关变更再次执行 route、order、质量和 Pack 校验。
+4. 校验通过后向 `zcweah1981/hermes-zh` 发送 `repository_dispatch`，payload 必须包含本仓完整 commit SHA。
+5. 站点仓按该 SHA 生成完整内容快照，验证成功后原子提交 `content-lock.json` 与 generated；失败时保持上一版 lock 和生产内容。
+6. 站点仓 `main` 更新触发 Vercel 海外构建和 GHCR 镜像；腾讯云在获得授权后受控拉取同一站点 SHA 镜像，DNSPod 继续按既有线路分流。
+
+发布完成标准：
+
+- 内容仓 CI 成功不等于生产发布完成。
+- 必须确认站点 lock SHA 与本次内容 commit SHA 一致。
+- 必须确认 Vercel 与腾讯云 `/api/healthz` 返回相同的站点 revision 和内容 SHA。
+- 必须通过 DNSPod 国内、海外正式线路检查核心页面、Packs、sitemap、robots、llms.txt 和 AI Index。
+- 没有双端 revision/content SHA 和正式线路证据时，不得声明内容已上线。
+
+回滚与授权：
+
+- 内容回滚优先 revert 内容提交，或由站点仓受控同步到已验证的历史内容 SHA。
+- 回滚同样会触发站点构建与双生产线更新，必须重新完成发布验收。
+- 合并内容 PR、触发生产同步、修改 dispatch Secret、修改 DNSPod、更新腾讯云或执行搜索平台真实提交，均必须先获得用户明确授权。
