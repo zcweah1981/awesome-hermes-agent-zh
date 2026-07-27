@@ -370,6 +370,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to the official FAQ, quickstart, configuration, and feature documentation; re-check the relevant official page before changing troubleshooting claims.
 - source: docs/06-reference/01-总览.md
   slug: /reference
   module: reference
@@ -1649,6 +1658,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official installation and quickstart documentation; re-check platform-specific behavior before changing commands.
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues
@@ -1661,6 +1679,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official configuration and provider documentation; re-check provider-specific behavior before changing claims.
 - source: docs/05-遇到问题/04-CLI TUI 与会话问题.md
   slug: /issues/cli-tui-session
   module: issues
@@ -1673,6 +1700,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official quickstart, CLI, TUI, and session documentation; re-check commands and interaction behavior before updates.
 - source: docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
   slug: /issues/gateway-messaging
   module: issues
@@ -1685,6 +1721,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official messaging gateway and configuration documentation; re-check platform and permission behavior before updates.
 - source: docs/05-遇到问题/06-Tools Skills MCP 问题.md
   slug: /issues/tools-skills-mcp
   module: issues
@@ -1697,6 +1742,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official tools, skills, and MCP documentation; re-check feature availability before updates.
 - source: docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
   slug: /issues/config-profiles-environment
   module: issues
@@ -1709,6 +1763,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official configuration and profiles documentation; re-check HERMES_HOME and terminal home-mode behavior before updates.
 - source: docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md
   slug: /issues/docker-nix-remote
   module: issues
@@ -1721,6 +1784,15 @@ routes:
   updated: '2026-04-28'
   source_type: original
   nav_group: 05-遇到问题
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+  source_review:
+    state: needs-official-check
+    checked_at: '2026-07-27'
+    note: Mapped to official Docker and terminal-backend configuration documentation; re-check backend lifecycle and filesystem behavior before updates.
 - source: docs/06-reference/02-CLI 命令参考.md
   slug: /reference/cli-commands
   module: reference

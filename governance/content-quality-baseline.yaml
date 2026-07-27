@@ -167,14 +167,6 @@ source_refs_exceptions:
 - docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
 - docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
 - docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
-- docs/05-遇到问题/01-总览.md
-- docs/05-遇到问题/02-安装更新与环境问题.md
-- docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
-- docs/05-遇到问题/04-CLI TUI 与会话问题.md
-- docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
-- docs/05-遇到问题/06-Tools Skills MCP 问题.md
-- docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
-- docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md
 source_review_exceptions:
 - docs/00-文档总览.md
 - docs/01-从这开始/02-开始上手/01-总览.md
@@ -261,14 +253,6 @@ source_review_exceptions:
 - docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
 - docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
 - docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
-- docs/05-遇到问题/01-总览.md
-- docs/05-遇到问题/02-安装更新与环境问题.md
-- docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
-- docs/05-遇到问题/04-CLI TUI 与会话问题.md
-- docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
-- docs/05-遇到问题/06-Tools Skills MCP 问题.md
-- docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
-- docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md
 unused_webp_exceptions:
 - docs/03-国内落地/02-国内模型/assets/aliyun-bailian-tokenplan-hermes-ref-slide-v9.webp
 - docs/03-国内落地/02-国内模型/assets/aliyun-bailian-tokenplan-hermes-ref-slide.webp
