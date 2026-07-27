@@ -413,8 +413,8 @@ tests/                  巡查与 dispatch 合同测试
 
 当前状态：
 
-- CI 状态：`初始化中`（平台门禁已建立；自动合并与分支清理闭环等待生产发布授权）
-- GitHub Actions 入口：`.github/workflows/content-check.yml`（稳定 `CI Gate`）与独立的 `.github/workflows/link-check.yml`
+- CI 状态：`降级`（Actions 月度额度耗尽时先运行本地完整门禁；平台 Required `CI Gate` 在额度恢复后继续强制）
+- GitHub Actions 入口：仅 `.github/workflows/content-check.yml` 在 PR 自动运行稳定 `CI Gate`；其余巡查和同步均手动
 - CI 汇总检查：`CI Gate`
 - 仓库能力：个人 Public 仓；Branch Protection、Required Status Checks 与原生 Auto-merge 可用
 - 合并治理模式：`platform-enforced`
@@ -444,24 +444,23 @@ tests/                  巡查与 dispatch 合同测试
 
 - 本仓没有本地 Web 服务和端口；Markdown 可直接在 GitHub 或编辑器中预览。
 - 安装 CI 依赖使用 `python -m pip install -r requirements-ci.txt`。
-- 内容变更至少执行 `python -m pytest -q`、`python scripts/normalize_route_order.py` 和 `python scripts/content_quality_check.py`。
+- 内容变更统一使用 `scripts/verify-local.ps1` 执行 pytest、route order 与内容质量检查。
 - 内容、route map、Pack manifest、来源治理和公开资产必须在同一 PR 中保持一致；不得把站点 generated 文件复制回内容仓。
-- `SITE_REPO_DISPATCH_TOKEN` 只允许存在于 GitHub Secret，不得写入仓库、日志、文档或示例。
+- 仓库不保存 Vercel、GHCR、腾讯云、DNSPod 或站点部署凭据。
 
 发布责任边界：
 
 - 本仓是内容唯一真相源，但不直接构建 Next.js、不直接部署 Vercel、不推送 GHCR，也不登录腾讯云服务器。
 - 正式站点 canonical 为 `https://hermes-zh.com`；Vercel 承载海外生产线，腾讯云 Docker/Caddy 承载国内生产线，DNSPod 按线路智能解析。
-- 本仓只能通过固定的 `repository_dispatch` 合同通知站点仓，不得直接持有 Vercel、GHCR、腾讯云或 DNSPod 凭据。
+- 本仓只提供待发布的完整内容 SHA；站点仓通过手动同步或本地 lock-first 流程消费，不得直接持有 Vercel、GHCR、腾讯云或 DNSPod 凭据。
 
 内容发布流程：
 
-1. 内容 PR 通过 Required `CI Gate`、独立 `link-check` 和 Reviewer 验收。
-2. 获得生产发布授权后，以 squash 方式合并到内容仓 `main`；由于后续会触发站点生产链，合并本身属于生产发布动作。
-3. `trigger-hermes-zh-content-sync` 对内容相关变更再次执行 route、order、质量和 Pack 校验。
-4. 校验通过后向 `zcweah1981/hermes-zh` 发送 `repository_dispatch`，payload 必须包含本仓完整 commit SHA。
-5. 站点仓按该 SHA 生成完整内容快照，验证成功后原子提交 `content-lock.json` 与 generated；失败时保持上一版 lock 和生产内容。
-6. 站点仓 `main` 更新触发 Vercel 海外构建和 GHCR 镜像；腾讯云在获得授权后受控拉取同一站点 SHA 镜像，DNSPod 继续按既有线路分流。
+1. 内容 PR 先运行本地完整门禁和 Reviewer；有额度时由 Required `CI Gate` 复验。
+2. 以 squash 方式合并到内容仓 `main`；push 不自动派发同步或生产部署。
+3. 选定本仓完整 commit SHA，在站点仓手动运行 `content-auto-sync`；额度耗尽时使用本地 lock-first 生成。
+4. 站点仓原子提交 lock、generated、SEO queue/state 与 assets；失败时保持上一版 lock 和生产内容。
+5. 获得生产发布授权后，站点仓再显式发布 Vercel、GHCR 和腾讯云同一站点 SHA；DNSPod 保持既有线路。
 
 发布完成标准：
 
@@ -475,4 +474,4 @@ tests/                  巡查与 dispatch 合同测试
 
 - 内容回滚优先 revert 内容提交，或由站点仓受控同步到已验证的历史内容 SHA。
 - 回滚同样会触发站点构建与双生产线更新，必须重新完成发布验收。
-- 合并内容 PR、触发生产同步、修改 dispatch Secret、修改 DNSPod、更新腾讯云或执行搜索平台真实提交，均必须先获得用户明确授权。
+- 触发生产发布、修改 DNSPod、更新腾讯云、修改 Secret 或执行搜索平台真实提交，均必须先获得用户明确授权；普通内容 PR 合并不再自动发布。

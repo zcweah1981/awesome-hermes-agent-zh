@@ -101,13 +101,12 @@ def test_issue_payload_is_review_only_when_versions_change(tmp_path: Path):
     assert "只创建 review issue" in payload["body"]
 
 
-def test_weekly_workflow_supports_manual_schedule_token_safe_dry_run():
+def test_review_workflow_is_manual_only_and_token_safe():
     body = WORKFLOW.read_text(encoding="utf-8")
 
     assert "name: third-party-solutions-weekly-check" in body
     assert "workflow_dispatch:" in body
-    assert "schedule:" in body
-    assert "cron:" in body
+    assert "schedule:" not in body
     assert "issues: write" in body
     assert "python3 scripts/third_party_solutions_check.py check" in body
     assert "python3 scripts/third_party_solutions_check.py issue --format json" in body

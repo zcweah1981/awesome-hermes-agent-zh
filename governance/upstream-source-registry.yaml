@@ -1,6 +1,6 @@
-updated: '2026-07-16'
+updated: '2026-07-27'
 owner: content-maintainers
-hermes_upstream_baseline_version: v2026.7.7.2
+hermes_upstream_baseline_version: v2026.7.20
 version_ledger_path: governance/version-ledger.yaml
 purpose: Define which external sources can be used when updating Hermes Agent Chinese
   content, and how each source should be treated.
@@ -40,7 +40,7 @@ sources:
   name: Hermes Agent official documentation
   url: https://hermes-agent.nousresearch.com/docs
   checked_status: reachable
-  checked_at: '2026-05-02'
+  checked_at: '2026-07-27'
   use_for:
   - install
   - configuration
@@ -59,7 +59,7 @@ sources:
   name: NousResearch/hermes-agent GitHub repository
   url: https://github.com/NousResearch/hermes-agent
   checked_status: reachable
-  checked_at: '2026-05-02'
+  checked_at: '2026-07-27'
   use_for:
   - releases
   - README
