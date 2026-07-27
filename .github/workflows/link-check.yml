@@ -3,18 +3,10 @@
 name: link-check
 
 on:
-  pull_request:
-    branches: [main]
-  push:
-    branches: [main]
-  schedule:
-    # 每周一北京时间 09:20；UTC 为 01:20
-    - cron: "20 1 * * 1"
   workflow_dispatch:
 
 permissions:
   contents: read
-  issues: write
 
 concurrency:
   group: link-check-${{ github.ref }}
@@ -26,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Run Lychee
         id: lychee
-        uses: lycheeverse/lychee-action@v2
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         continue-on-error: true
         with:
           args: >-
@@ -78,7 +70,7 @@ jobs:
 
       - name: Upload link-check report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: lychee-report
           path: lychee-report.md
@@ -86,24 +78,11 @@ jobs:
 
       - name: Fail if Lychee failed
         if: steps.lychee.outcome == 'failure'
-        env:
-          GH_TOKEN: ${{ github.token }}
         run: |
           echo "::error::Lychee link check failed. Full report:"
           if [ -f lychee-report.md ]; then
             cat lychee-report.md
           else
             echo "lychee-report.md was not generated."
-          fi
-          # Open a public issue with the report so we can inspect failures
-          # without admin log access. Issue title encodes run id for easy dedupe.
-          if [ -f lychee-report.md ]; then
-            TITLE="link-check failed on run #${{ github.run_id }} (${{ github.sha }})"
-            BODY=$(cat lychee-report.md)
-            gh issue create \
-              --repo "${{ github.repository }}" \
-              --title "${TITLE}" \
-              --body "${BODY}" \
-              || echo "Issue creation failed (non-fatal)"
           fi
           exit 1

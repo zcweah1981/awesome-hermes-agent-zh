@@ -1,0 +1,309 @@
+schema_version: 1
+h1_exceptions:
+- docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+- docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
+- docs/01-从这开始/03-玩出花样/09-多模型合奏（Mixture-of-Agents）.md
+- docs/01-从这开始/05-实战应用/23-实战：个人项目开发工作流.md
+- docs/01-从这开始/05-实战应用/24-实战：用-session_search-打造你的外部记忆.md
+- docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
+- docs/01-从这开始/05-实战应用/26-Hermes-Agent-最佳实践：从工具到助理.md
+- docs/01-从这开始/05-实战应用/27-实战：个人事务处理中心.md
+- docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
+- docs/02-现成方案/01-内容创作与发布/01-总览.md
+- docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md
+- docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
+- docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
+- docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
+- docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
+- docs/02-现成方案/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
+- docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md
+- docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md
+- docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md
+- docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
+- docs/02-现成方案/03-应用开发与快速原型/01-总览.md
+- docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md
+- docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md
+- docs/03-国内落地/01-国内部署/01-总览.md
+- docs/03-国内落地/01-国内部署/02-阿里云轻量服务器部署教程.md
+- docs/03-国内落地/01-国内部署/03-腾讯云轻量服务器部署教程.md
+- docs/03-国内落地/01-国内部署/04-国外教程精选.md
+- docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md
+- docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md
+- docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
+- docs/03-国内落地/01-总览.md
+- docs/03-国内落地/02-国内模型/01-总览.md
+- docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
+- docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
+- docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
+- docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
+- docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
+- docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
+- docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
+- docs/03-国内落地/03-国内入口/01-总览.md
+- docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
+- docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
+- docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
+- docs/03-国内落地/03-国内入口/05-飞书.md
+- docs/03-国内落地/03-国内入口/06-企业微信（AI Bot）.md
+- docs/03-国内落地/03-国内入口/07-钉钉.md
+- docs/03-国内落地/03-国内入口/08-个人微信.md
+- docs/03-国内落地/03-国内入口/09-iMessage-接入（Photon-Spectrum）.md
+- docs/04-从OpenClaw过来/01-总览.md
+- docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
+- docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md
+- docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
+- docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
+- docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
+- docs/05-遇到问题/01-总览.md
+- docs/05-遇到问题/02-安装更新与环境问题.md
+- docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
+- docs/05-遇到问题/04-CLI TUI 与会话问题.md
+- docs/05-遇到问题/05-Gateway Messaging 与推送问题.md
+- docs/05-遇到问题/06-Tools Skills MCP 问题.md
+- docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
+- docs/05-遇到问题/08-Docker Nix SSH 与远程后端问题.md
+navigation_exceptions:
+- docs/00-文档总览.md
+- docs/01-从这开始/05-实战应用/01-总览.md
+- docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
+- docs/03-国内落地/01-国内部署/04-国外教程精选.md
+- docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md
+- docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md
+- docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
+- docs/03-国内落地/01-总览.md
+- docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
+- docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
+- docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
+- docs/03-国内落地/03-国内入口/05-飞书.md
+- docs/03-国内落地/03-国内入口/07-钉钉.md
+- docs/03-国内落地/03-国内入口/08-个人微信.md
+- docs/06-reference/11-v0.19.0-Quicksilver-更新指南.md
+source_refs_exceptions:
+- docs/00-文档总览.md
+- docs/01-从这开始/02-开始上手/01-总览.md
+- docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md
+- docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md
+- docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
+- docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
+- docs/01-从这开始/03-玩出花样/01-总览.md
+- docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
+- docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+- docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md
+- docs/01-从这开始/03-玩出花样/05-让工具更顺手.md
+- docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md
+- docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+- docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
+- docs/01-从这开始/03-玩出花样/09-多模型合奏（Mixture-of-Agents）.md
+- docs/01-从这开始/04-自己造东西/01-总览.md
+- docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md
+- docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md
+- docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
+- docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md
+- docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md
+- docs/01-从这开始/04-自己造东西/10-把一整套 Agent 打包分享.md
+- docs/01-从这开始/05-实战应用/01-总览.md
+- docs/01-从这开始/05-实战应用/01-用 Hermes 做每日晨间简报.md
+- docs/01-从这开始/05-实战应用/02-Telegram 消息入口接入.md
+- docs/01-从这开始/05-实战应用/03-GitHub 备份 Cron Job.md
+- docs/01-从这开始/05-实战应用/04-月费8美金三层模型级联省钱指南.md
+- docs/01-从这开始/05-实战应用/05-Token 成本优化避坑指南.md
+- docs/01-从这开始/05-实战应用/06-VPS 自托管 Hermes.md
+- docs/01-从这开始/05-实战应用/07-SOUL.md 人格定制.md
+- docs/01-从这开始/05-实战应用/08-Obsidian 第二大脑知识库.md
+- docs/01-从这开始/05-实战应用/09-Kanban 多 Agent 编排.md
+- docs/01-从这开始/05-实战应用/10-Home Assistant 智能家居.md
+- docs/01-从这开始/05-实战应用/11-Discord 接入.md
+- docs/01-从这开始/05-实战应用/12-MCP 接入指南.md
+- docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
+- docs/01-从这开始/05-实战应用/14-GitHub PR 自动审查.md
+- docs/01-从这开始/05-实战应用/15-自定义 Skills.md
+- docs/01-从这开始/05-实战应用/16-安全加固.md
+- docs/01-从这开始/05-实战应用/17-语音模式.md
+- docs/01-从这开始/05-实战应用/18-Hermes Agent 进阶实战.md
+- docs/01-从这开始/05-实战应用/19-Hermes Agent 控制室.md
+- docs/01-从这开始/05-实战应用/20-60 天分析师工作流.md
+- docs/01-从这开始/05-实战应用/21-Hermes Agent 与 Ollama 最快路径.md
+- docs/01-从这开始/05-实战应用/22-Hermes Agent 深度拆解与自建指南.md
+- docs/01-从这开始/05-实战应用/23-实战：个人项目开发工作流.md
+- docs/01-从这开始/05-实战应用/24-实战：用-session_search-打造你的外部记忆.md
+- docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
+- docs/01-从这开始/05-实战应用/26-Hermes-Agent-最佳实践：从工具到助理.md
+- docs/01-从这开始/05-实战应用/27-实战：个人事务处理中心.md
+- docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
+- docs/01-从这开始/总览.md
+- docs/02-现成方案/01-内容创作与发布/01-总览.md
+- docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md
+- docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
+- docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
+- docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
+- docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
+- docs/02-现成方案/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
+- docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md
+- docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md
+- docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md
+- docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
+- docs/02-现成方案/03-应用开发与快速原型/01-总览.md
+- docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md
+- docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md
+- docs/03-国内落地/01-国内部署/04-国外教程精选.md
+- docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md
+- docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md
+- docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
+- docs/03-国内落地/03-国内入口/09-iMessage-接入（Photon-Spectrum）.md
+- docs/04-从OpenClaw过来/01-总览.md
+- docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
+- docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md
+- docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
+- docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
+- docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
+source_review_exceptions:
+- docs/00-文档总览.md
+- docs/01-从这开始/02-开始上手/01-总览.md
+- docs/01-从这开始/02-开始上手/02-认识 Hermes 的基本使用方式.md
+- docs/01-从这开始/02-开始上手/03-常用斜杠命令与会话管理.md
+- docs/01-从这开始/02-开始上手/04-常用 Skills（按日常使用场景精选）.md
+- docs/01-从这开始/02-开始上手/05-接入一个消息平台（推荐飞书）.md
+- docs/01-从这开始/03-玩出花样/01-总览.md
+- docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
+- docs/01-从这开始/03-玩出花样/03-让 Hermes 记住你.md
+- docs/01-从这开始/03-玩出花样/04-自定义 AI 大模型.md
+- docs/01-从这开始/03-玩出花样/05-让工具更顺手.md
+- docs/01-从这开始/03-玩出花样/06-让终端更顺眼.md
+- docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
+- docs/01-从这开始/03-玩出花样/09-多模型合奏（Mixture-of-Agents）.md
+- docs/01-从这开始/04-自己造东西/01-总览.md
+- docs/01-从这开始/04-自己造东西/02-多个助手一起工作.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/02-Holographic记忆.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/03-Honcho记忆.md
+- docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/04-外部记忆对比.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/01-总览.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/02-上下文文件.md
+- docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md
+- docs/01-从这开始/04-自己造东西/05-把 Hermes 接进外部系统.md
+- docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
+- docs/01-从这开始/04-自己造东西/07-让 Hermes 自己自动跑.md
+- docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md
+- docs/01-从这开始/04-自己造东西/10-把一整套 Agent 打包分享.md
+- docs/01-从这开始/05-实战应用/01-总览.md
+- docs/01-从这开始/05-实战应用/01-用 Hermes 做每日晨间简报.md
+- docs/01-从这开始/05-实战应用/02-Telegram 消息入口接入.md
+- docs/01-从这开始/05-实战应用/03-GitHub 备份 Cron Job.md
+- docs/01-从这开始/05-实战应用/04-月费8美金三层模型级联省钱指南.md
+- docs/01-从这开始/05-实战应用/05-Token 成本优化避坑指南.md
+- docs/01-从这开始/05-实战应用/06-VPS 自托管 Hermes.md
+- docs/01-从这开始/05-实战应用/07-SOUL.md 人格定制.md
+- docs/01-从这开始/05-实战应用/08-Obsidian 第二大脑知识库.md
+- docs/01-从这开始/05-实战应用/09-Kanban 多 Agent 编排.md
+- docs/01-从这开始/05-实战应用/10-Home Assistant 智能家居.md
+- docs/01-从这开始/05-实战应用/11-Discord 接入.md
+- docs/01-从这开始/05-实战应用/12-MCP 接入指南.md
+- docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
+- docs/01-从这开始/05-实战应用/14-GitHub PR 自动审查.md
+- docs/01-从这开始/05-实战应用/15-自定义 Skills.md
+- docs/01-从这开始/05-实战应用/16-安全加固.md
+- docs/01-从这开始/05-实战应用/17-语音模式.md
+- docs/01-从这开始/05-实战应用/18-Hermes Agent 进阶实战.md
+- docs/01-从这开始/05-实战应用/19-Hermes Agent 控制室.md
+- docs/01-从这开始/05-实战应用/20-60 天分析师工作流.md
+- docs/01-从这开始/05-实战应用/21-Hermes Agent 与 Ollama 最快路径.md
+- docs/01-从这开始/05-实战应用/22-Hermes Agent 深度拆解与自建指南.md
+- docs/01-从这开始/05-实战应用/23-实战：个人项目开发工作流.md
+- docs/01-从这开始/05-实战应用/24-实战：用-session_search-打造你的外部记忆.md
+- docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
+- docs/01-从这开始/05-实战应用/26-Hermes-Agent-最佳实践：从工具到助理.md
+- docs/01-从这开始/05-实战应用/27-实战：个人事务处理中心.md
+- docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
+- docs/01-从这开始/总览.md
+- docs/02-现成方案/01-内容创作与发布/01-总览.md
+- docs/02-现成方案/01-内容创作与发布/02-小红书内容助手.md
+- docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
+- docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
+- docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
+- docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
+- docs/02-现成方案/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/01-总览.md
+- docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
+- docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md
+- docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md
+- docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md
+- docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
+- docs/02-现成方案/03-应用开发与快速原型/01-总览.md
+- docs/02-现成方案/03-应用开发与快速原型/02-微信小程序助手.md
+- docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md
+- docs/03-国内落地/01-国内部署/04-国外教程精选.md
+- docs/03-国内落地/01-国内部署/05-别人正在用 Hermes 做什么.md
+- docs/03-国内落地/01-国内部署/06-Hermes 适合谁：和其他 Agent 工具怎么选.md
+- docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
+- docs/03-国内落地/03-国内入口/09-iMessage-接入（Photon-Spectrum）.md
+- docs/04-从OpenClaw过来/01-总览.md
+- docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
+- docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md
+- docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
+- docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
+- docs/04-从OpenClaw过来/06-OpenClaw 用户常见问题与检查清单.md
+unused_webp_exceptions:
+- docs/03-国内落地/02-国内模型/assets/aliyun-bailian-tokenplan-hermes-ref-slide-v9.webp
+- docs/03-国内落地/02-国内模型/assets/aliyun-bailian-tokenplan-hermes-ref-slide.webp
+- docs/03-国内落地/02-国内模型/assets/custom-endpoint-hero-v1.webp
+- docs/03-国内落地/02-国内模型/assets/deepseek-modules-cliproxy-v2.webp
+- docs/03-国内落地/02-国内模型/assets/kimi-moonshot-hero-v1.webp
+- docs/03-国内落地/02-国内模型/assets/minimax-tokenplan-hero-v1.webp
+- docs/03-国内落地/02-国内模型/assets/minimax-tokenplan-mainline-cliproxy-v5.webp
+- docs/03-国内落地/02-国内模型/assets/models-overview-compare-v6-16x9.webp
+- docs/03-国内落地/02-国内模型/assets/models-overview-hero-v1.webp
+- docs/03-国内落地/03-国内入口/assets/weixin-qr-login-official.webp
+- docs/04-从OpenClaw过来/assets/openclaw-checklist-overview-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-checklist-overview-v3.webp
+- docs/04-从OpenClaw过来/assets/openclaw-decision-operation-map-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-decision-operation-map-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-faq-problem-categories-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-faq-problem-categories-v3.webp
+- docs/04-从OpenClaw过来/assets/openclaw-faq-problem-categories-v4-candidate-1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-faq-problem-categories-v5.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-asset-map-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-asset-map-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-asset-map-v4.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-asset-map-v5.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-asset-map-v6.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-modes-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-modes-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-operation-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-operation-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-structure-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-coexistence-structure-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-comparison-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-comparison-v3.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-decision-flow-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-decision-flow-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-decision-flow-v4.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-directory-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-directory-v3.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-directory-v4.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-directory-v5.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-directory-v6.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-flow-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-flow-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-flow-v4.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-migration-flow-v5.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-relationship-structure-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-hermes-relationship-structure-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-migration-decision-tree-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-migration-decision-tree-v2.webp
+- docs/04-从OpenClaw过来/assets/openclaw-three-paths-comparison-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-troubleshooting-path-v1.webp
+- docs/04-从OpenClaw过来/assets/openclaw-troubleshooting-path-v3.webp
+- docs/assets/learn-architecture-v1.webp
+- docs/assets/practical-v2-04-model-cascade-saving-00-routing-overview.webp
+- docs/assets/practical-v2-04-model-cascade-saving-01-cost-dashboard.webp

@@ -4,21 +4,21 @@
 
 ledger_meta:
   created_at: '2026-05-19'
-  updated_at: '2026-07-16'
+  updated_at: '2026-07-27'
   owner: content-maintainers
   project_id: hermes-zh
   # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
   backward_compat_baseline_field: hermes_upstream_baseline_version
-  backward_compat_baseline_value: v2026.7.7.2
+  backward_compat_baseline_value: v2026.7.20
 
 # 当前内容仓已同步的官方版本（等同于旧 hermes_upstream_baseline_version）
-current_content_baseline: v2026.7.7.2
+current_content_baseline: v2026.7.20
 
 # 上游已发布的最新版本（由脚本或 CI 自动更新）
-latest_seen: v2026.7.7.2
+latest_seen: v2026.7.20
 
 # 最近一次检查上游的时间
-last_checked_at: '2026-07-16'
+last_checked_at: '2026-07-27'
 
 # 版本来源
 source:
@@ -106,6 +106,38 @@ sync_priority_tiers:
 # ============================================================
 
 versions:
+  - version: v2026.7.20
+    source: hermes-official-github
+    checked_at: '2026-07-27'
+    status: current_baseline
+    change_categories:
+      - install
+      - cli
+      - configuration
+      - provider
+      - gateway
+      - tools
+      - skills
+      - mcp
+      - automation
+      - breaking_change
+      - new_feature
+    affected_docs:
+      - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
+      - docs/06-reference/02-CLI 命令参考.md
+      - docs/06-reference/03-Slash Commands 参考.md
+      - docs/06-reference/06-Built-in Tools 参考.md
+      - docs/06-reference/11-v0.19.0-Quicksilver-更新指南.md
+    sync_decision: sync_completed
+    task_group: UPSTREAM-SYNC-20260727-0001
+    release_url: https://github.com/NousResearch/hermes-agent/releases/tag/v2026.7.20
+    compared_from: v2026.7.7.2
+    notes: >-
+      v2026.7.20 对应 Hermes Agent v0.19.0 Quicksilver。内容仓已发布完整更新指南，
+      并同步安装、CLI、Slash Commands 与 Built-in Tools 的用户可见变化；智能审批默认、
+      SecretSource、Profile 多路复用、后台子代理、推理强度、会话导出和 Portal OAuth
+      等行为均要求升级后按更新指南复核。
+
   - version: v2026.7.7.2
     source: hermes-official-github
     checked_at: '2026-07-16'

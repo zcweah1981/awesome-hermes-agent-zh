@@ -71,7 +71,7 @@ def test_dispatch_curl_fails_clearly_and_summary_reports_audit_fields():
     for summary_line in [
         "target_repo: ${TARGET_REPO}",
         "event_type: ${DISPATCH_EVENT_TYPE}",
-        "content_sha: ${GITHUB_SHA}",
+        "content_sha: ${CONTENT_SHA}",
         "content_ref: main",
     ]:
         assert summary_line in body

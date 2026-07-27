@@ -94,7 +94,7 @@ def test_check_validates_registry_ledger_policy_and_outputs_json():
     assert payload["summary"]["official_sources"] >= 2
     assert "hermes-official-docs" in payload["source_ids"]
     assert "version_sync" in payload
-    assert payload["version_sync"]["baseline"] == "v2026.7.7.2"
+    assert payload["version_sync"]["baseline"] == "v2026.7.20"
 
 
 def test_digest_renders_human_markdown_with_ledger_info():
@@ -104,7 +104,7 @@ def test_digest_renders_human_markdown_with_ledger_info():
     body = result.stdout
     assert "# 官方来源同步 Digest" in body
     assert "版本台账摘要" in body
-    assert "当前基线: `v2026.7.7.2`" in body
+    assert "当前基线: `v2026.7.20`" in body
     assert "hermes-official-docs" in body
     assert "已登记来源" in body
     assert "dispatch" not in body.lower()
