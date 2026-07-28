@@ -4,7 +4,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parents[1]
 
 
-def test_local_verification_exists_for_actions_quota_exhaustion():
+def test_local_verification_is_the_direct_delivery_gate():
     script = REPO / "scripts" / "verify-local.ps1"
     docs = (REPO / "docs" / "ci.md").read_text(encoding="utf-8")
 
@@ -13,5 +13,6 @@ def test_local_verification_exists_for_actions_quota_exhaustion():
     assert "python -m pytest -q" in body
     assert "normalize_route_order.py" in body
     assert "content_quality_check.py" in body
-    assert "Actions 额度耗尽" in docs
+    assert "Direct Delivery v3.1" in docs
     assert "verify-local.ps1" in docs
+    assert "本地发布验证通过" in body

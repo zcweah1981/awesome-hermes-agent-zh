@@ -10,12 +10,8 @@ def read(name: str) -> str:
     return (WORKFLOWS / name).read_text(encoding="utf-8").replace("\r\n", "\n")
 
 
-def test_only_pull_request_ci_gate_runs_automatically():
-    content_check = read("content-check.yml")
-    assert "\n  pull_request:\n" in content_check
-    assert "\n  push:" not in content_check
-    assert "\n  schedule:" not in content_check
-
+def test_no_ci_workflow_and_all_maintenance_tools_are_manual_only():
+    assert not (WORKFLOWS / "content-check.yml").exists()
     for name in [
         "link-check.yml",
         "third-party-solutions-weekly-check.yml",
@@ -27,6 +23,7 @@ def test_only_pull_request_ci_gate_runs_automatically():
         assert "\n  push:" not in workflow
         assert "\n  pull_request:" not in workflow
         assert "\n  schedule:" not in workflow
+        assert "\n  repository_dispatch:" not in workflow
 
 
 def test_manual_site_dispatch_does_not_repeat_content_validation():
@@ -36,13 +33,20 @@ def test_manual_site_dispatch_does_not_repeat_content_validation():
     assert "normalize_route_order.py" not in workflow
     assert "content_quality_check.py" not in workflow
     assert "Dispatch hermes-zh site content sync" in workflow
+    assert "/actions/workflows/${TARGET_WORKFLOW}/dispatches" in workflow
+    assert "TARGET_WORKFLOW: content-auto-sync.yml" in workflow
+    assert "'ref': 'main'" in workflow
+    for input_name in ["content_repo", "content_ref", "content_sha", "source_actor"]:
+        assert f"'{input_name}':" in workflow
+    assert "repository_dispatch" not in workflow
 
 
-def test_ci_documentation_defines_zero_scheduled_runs():
+def test_direct_delivery_documentation_has_no_pr_or_ci_gate():
     docs = (ROOT / "docs" / "ci.md").read_text(encoding="utf-8")
-    assert "Actions 月度预算" in docs
-    assert "仅 `CI Gate` 自动运行" in docs
-    assert "零 schedule" in docs
+    assert "Direct Delivery v3.1" in docs
+    assert "不保留 Pull Request 门禁" in docs
+    assert "GitHub Actions CI" in docs
+    assert "不作为 commit、push、内容同步或生产部署的前置条件" in docs
 
 
 def test_all_third_party_actions_are_pinned_to_immutable_shas():
