@@ -1,6 +1,8 @@
-# 02-阿里云百炼 Token Plan
+# 阿里云百炼 Token Plan：套餐、API Key 与 Hermes 接入
 
-> 💡 **速答**：阿里云百炼 Token Plan 是多模型统一入口的包月套餐——一个 API Key 可在通义千问、DeepSeek、Qwen 等模型间切换，适合想用套餐控预算的团队。接入 Hermes 走兼容模式，把百炼的 API Key 和 endpoint 填入 Hermes 自定义 provider 即可。
+> 💡 **速答**：阿里云当前提供 Hermes Agent 专项接入说明，Token Plan 个人版和团队版
+> 都可通过兼容端点接入。套餐价格、模型清单和促销会变化；配置前仍应以当前官方
+> Hermes Agent 页与套餐页确认 Key 类型、Base URL、协议和模型名。
 
 > 🎯 一句话先说清楚：如果你想先买一个"多模型统一入口"，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。
 
@@ -23,7 +25,7 @@
 这张图只想帮你先抓住 4 个点：
 - 这是一条“统一套餐入口”路线，不是单模型按量页
 - 核心价值是多模型可切换、预算更稳定
-- 官方 Token Plan 团队版接 Hermes 的主线是兼容模式接入
+- 阿里云当前有 Hermes Agent 专项文档，主线是用团队版专属 Key 走兼容协议
 - 真正要跑通的是「拿专属 Key → 写入 Hermes → 选模型 → 做最小验证」
 
 如果你现在更想先把第一条链路跑通、先少花钱、先少做选择，这页通常不是第一优先；那种情况通常会先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md)。
@@ -52,13 +54,14 @@
 
 ## 💰 先看价格，再决定值不值得买
 
-阿里云百炼 Token Plan 官方当前给出三档套餐。
+阿里云百炼 Token Plan 团队版当前给出三种坐席。下表记录的是官方基础价和固定额度；
+标准、高级坐席可能另有短期促销，购买前应再次查看官方页面。
 
-| 套餐 | 月费 | Credits | 适合谁 | 我怎么理解 |
+| 坐席 | 官方基础价 | Credits | 适合谁 | 我怎么理解 |
 |---|---:|---:|---|---|
-| 标准版 | ¥198 / 月 | 25,000 Credits / 月 | 轻度使用、先试水 | 最稳的起步档 |
-| 高级版 | ¥698 / 月 | 100,000 Credits / 月 | 高频使用 AI | 更适合作为个人主力 |
-| 尊享版 | ¥1,398 / 月 | 250,000 Credits / 月 | 重度依赖 AI、多人或高频场景 | 更像长期生产力入口 |
+| 标准坐席 | ¥198 / 坐席 / 月 | 25,000 Credits / 坐席 / 月 | 轻度使用、先试水 | 最稳的起步档 |
+| 高级坐席 | ¥698 / 坐席 / 月 | 100,000 Credits / 坐席 / 月 | 高频使用 AI | 更适合作为团队主力 |
+| 尊享坐席 | ¥1,398 / 坐席 / 月 | 250,000 Credits / 坐席 / 月 | 重度依赖 AI 的核心成员 | 更像长期生产力入口 |
 
 ### 这页该怎么判断套餐
 
@@ -73,15 +76,15 @@
 
 ### 1）它卖的不是一个模型，而是一个多模型入口
 
-官方页面能看到的代表模型包括：
-- Qwen3.6-Plus
-- Qwen-Image-2.0
-- Qwen-Image-2.0-Pro
-- Wan2.7-Image
-- Wan2.7-Image-Pro
-- GLM-5
-- MiniMax-M2.5
-- DeepSeek-V3.2
+截至 2026-07-28，阿里云 Hermes Agent 专项页给出的 Token Plan 示例包括：
+- qwen3.8-max-preview
+- qwen3.7-max
+- qwen3.7-plus
+- qwen3.6-flash
+- glm-5.2
+- deepseek-v4-pro
+
+模型会更新或下线，完整可用范围应回到 Token Plan 个人版或团队版的“支持的模型”页面确认。
 
 所以它的核心价值不是“押中某一个模型”，而是：
 - 先买一个统一入口
@@ -156,31 +159,35 @@
 - 是否进错到通用 API Key 页面
 - 是否拿到的不是 Token Plan 团队版专属 Key
 
-### Step 3. 按官方兼容模式把连接参数写进 Hermes
+### Step 3. 按当前官方 Hermes Agent 说明写入连接参数
 
 现在做什么：
-- 把 provider、base_url、api_key、model.name 写进 Hermes
+- 把 provider、base_url、api_mode、api_key、model.default 写进 Hermes
 
 为什么做：
-- 因为阿里云这条 Token Plan 路线在 Hermes 里的官方主线就是兼容模式接入
+- 因为阿里云当前 Hermes Agent 页面默认使用 Anthropic 兼容协议，并明确给出这五项配置
 
 怎么做：
 - 在终端里执行：
 
 ```bash
 hermes config set model.provider custom
-hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic
+hermes config set model.api_mode anthropic_messages
 hermes config set model.api_key YOUR_API_KEY
-hermes config set model.name qwen3.6-plus
+hermes config set model.default qwen3.8-max-preview
 ```
+
+官方也说明 Hermes 支持 OpenAI 兼容协议：此时使用以
+`/compatible-mode/v1` 结尾的 Base URL，并移除 `model.api_mode` 配置。两套协议不要混写。
 
 看到什么算成功：
 - 这些配置已经写进 Hermes
-- 官方说明里的四项映射都对齐了
+- 官方说明里的五项映射都对齐了
 
 失败先查什么：
 - 是否把 Base URL 写错
-- 是否误把普通百炼地址当成 Token Plan 团队版地址
+- 是否把 Anthropic 与 OpenAI 兼容端点、`api_mode` 混在一起
 - 是否把模型名、Key 或 provider 写错
 
 ### Step 4. 先用默认文本模型做最小验证
@@ -195,7 +202,7 @@ hermes config set model.name qwen3.6-plus
 - 执行：
 
 ```bash
-hermes chat -m qwen3.6-plus
+hermes chat -q "你好"
 ```
 
 看到什么算成功：
@@ -205,7 +212,7 @@ hermes chat -m qwen3.6-plus
 失败先查什么：
 - Key 是否正确
 - Base URL 是否仍指向兼容模式入口
-- 模型名是否写成了当前套餐入口可识别的文本模型
+- `model.default` 是否仍是当前套餐支持的模型
 
 ### Step 5. 需要补充时，再回看通用 API Key 流程
 
@@ -269,7 +276,7 @@ hermes chat -m qwen3.6-plus
 
 ### 默认建议
 - 如果你已经明确走阿里云生态，再看这页最值
-- 默认先用 `qwen3.6-plus` 做最小验证
+- 默认先用官方页面当前示例模型做最小验证，并在运行前复核支持列表
 - 默认先把文本链路跑通，再去扩展多模态能力
 
 ## ➡️ 下一步
@@ -283,20 +290,23 @@ hermes chat -m qwen3.6-plus
 ## 📎 官方依据
 
 - https://www.aliyun.com/benefit/scene/tokenplan
-- https://help.aliyun.com/zh/model-studio/hermes-agent-token-plan
+- https://help.aliyun.com/zh/model-studio/hermes-agent
+- https://help.aliyun.com/zh/model-studio/token-plan-team-overview
+- https://help.aliyun.com/zh/model-studio/token-plan-team-quickstart
 - https://help.aliyun.com/zh/model-studio/get-api-key
 
 ## 🧾 R2 官方同步记录
 
 - source_id: `aliyun-bailian`
-- checked_at: `2026-05-02`
+- checked_at: `2026-07-28`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md`
-- 本轮结论：已确认 Token Plan 团队版 OpenAI/Anthropic 兼容端点、专属 API Key 口径，以及不要混用通用百炼 API Key / Coding Plan Key 的风险。
-- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 本轮结论：已从阿里云当前 Hermes Agent 专项页确认个人版/团队版接入、Anthropic/OpenAI 兼容端点、专属 API Key、`model.default` 字段与验证命令。
+- 后续规则：价格仅保留官方基础价快照；促销、可用模型、控制台按钮和额度限制仍以厂商官方页面实时显示为准。
 - 官方来源：
-  - https://help.aliyun.com/zh/model-studio/other-tools-token-plan
-  - https://help.aliyun.com/zh/model-studio/token-plan-faq
+  - https://help.aliyun.com/zh/model-studio/hermes-agent
+  - https://help.aliyun.com/zh/model-studio/token-plan-team-overview
+  - https://help.aliyun.com/zh/model-studio/token-plan-team-quickstart
 
 ---
 

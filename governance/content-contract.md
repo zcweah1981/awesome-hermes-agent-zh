@@ -102,7 +102,7 @@
 - `source_type`：来源类型，例如 `original`、`official-reference`、`curated`。
 - `nav_group`：站点侧导航分组。
 - `source_refs`：R1 起新增的来源映射字段，用于把 route 关联到 `upstream-source-registry.yaml` 中的来源 ID；首批包含 `local`、`official`、`provider_pending` 三类。
-- `source_review`：R1 起新增的来源复核状态字段，记录 `state`、`checked_at` 和维护说明；它只表示来源映射/复核状态，不代表正文已经完成官方同步。
+- `source_review`：R1 起新增的来源复核状态字段，记录 `state`、`checked_at` 和维护说明；其中 `official-source-confirmed` / `provider-official-source-confirmed` 表示已在 `checked_at` 对照官方来源完成本轮复核，其余状态表示仍待复核。所有状态都不代表易变的价格、模型、控制台界面或 endpoint 永久有效。
 
 维护要求：
 - `source`、`slug`、`title`、`module`、`order` 为关键字段；正式 route 的 `source` 只允许 `docs/**/*.md`。

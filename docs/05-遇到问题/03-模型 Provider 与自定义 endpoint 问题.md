@@ -1,9 +1,13 @@
-# 03-模型 / Provider / 自定义 endpoint 问题
+# Hermes Provider / Endpoint 报错：401、403、404 与模型排查
 
 > 一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。
 
 如果你现在很急，先记住：
 > 先分清你卡的是 Key / 权限、model 名、endpoint 路径，还是兼容能力边界；不要把这 4 类问题混成一句“Provider 不行”。
+
+如果终端显示 `Unknown provider`，先运行 `hermes model` 核对可用 provider；如果返回
+401 / 403，优先核对当前 provider、Key 变量名与模型权限；如果返回 404，再检查
+endpoint 路径和 `/v1` 是否重复。下面按症状给出完整排查顺序。
 
 ## ⚡ 先按症状选路
 

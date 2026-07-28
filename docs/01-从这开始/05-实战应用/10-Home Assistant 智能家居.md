@@ -1,6 +1,8 @@
-# 🏡 10-Home Assistant 智能家居
+# 🏡 10-Hermes 接入 Home Assistant 教程：AI 智能家居控制
 
-> 一句话先说清楚：这一页教你把 Hermes 接入 Home Assistant，用自然语言控制家里的灯、空调、窗帘、传感器——"帮我把客厅灯调暗一点"就够了。
+> 💡 **速答**：这是一份 Hermes 接入 Home Assistant 的中文教程。准备 HA 的
+> Long-Lived Access Token 和访问地址，把它们写入 Hermes 环境变量，启动 Gateway
+> 后即可用自然语言查询或控制灯、空调、窗帘和传感器。
 
 ![Home Assistant 智能家居 总览图](../../assets/practical-v2-10-home-assistant-00-control-loop-cn.webp)
 
@@ -268,6 +270,15 @@ AI 有时候会"太聪明"——你让它"让房间暖和一点"，它可能同�
 - 能用自然语言查询设备状态
 - 能用自然语言控制至少 3 种设备（灯、空调、窗帘等）
 - 知道怎么通过 Telegram 远程控制家里设备
+
+---
+
+## 🔗 相关路径
+
+- 先回到[实战应用总览](/docs/start/practical)，确认这条智能家居路径在完整实践路线中的位置。
+- Home Assistant 与 Hermes 不在同一网络时，先看[VPS 自托管 Hermes](/docs/start/practical/vps-self-hosting)。
+- 需要接入更多外部工具时，继续看[MCP 接入指南](/docs/start/practical/mcp-universal-plug)。
+- 准备把查询扩展为定时任务前，先完成[安全加固](/docs/start/practical/security-hardening)并限制可写服务。
 
 ---
 

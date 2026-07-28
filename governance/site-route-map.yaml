@@ -161,12 +161,12 @@ routes:
   slug: /solutions/xiaohongshu
   module: solutions
   page_type: doc-page
-  title: 02-小红书内容助手
+  title: Hermes 小红书 Agent：AI 内容助手与 5 分钟使用教程
   section: xiaohongshu
-  description: 一句话先说清楚：这一页不是教你系统学小红书运营，而是帮你把一个产品、服务或观点，直接压成“今天就能发”的小红书内容包。
+  description: 安装 Hermes 小红书 Agent 内容助手，用 5 分钟把主题整理成标题、开头、正文、封面短句和发布检查单。
   order: 10
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-28'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
@@ -885,12 +885,12 @@ routes:
   slug: /start/practical/home-assistant
   module: start
   page_type: doc-page
-  title: 🏡 10-Home Assistant 智能家居
+  title: 🏡 10-Hermes 接入 Home Assistant 教程：AI 智能家居控制
   section: home-assistant
-  description: 把 Hermes 接入 Home Assistant，用自然语言控制和查询智能家居设备。
+  description: Hermes 接入 Home Assistant 中文教程：配置长期令牌和访问地址，用 AI 查询并控制智能家居设备。
   order: 66
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-28'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/11-Discord 接入.md
@@ -1249,12 +1249,12 @@ routes:
   slug: /china/models/alibaba-bailian-token-plan
   module: china
   page_type: doc-page
-  title: 02-阿里云百炼 Token Plan
+  title: 阿里云百炼 Token Plan：套餐、API Key 与 Hermes 接入
   section: alibaba-bailian-token-plan
-  description: 🎯 一句话先说清楚：如果你想先买一个“多模型统一入口”，并且希望预算按包月控制、后面还能在阿里云生态里继续扩展，那么阿里云百炼 Token Plan 值得先看。
+  description: 阿里云百炼 Token Plan 接入 Hermes 指南：按当前官方说明确认套餐、模型、凭据与 endpoint，再完成配置和最小验证。
   order: 93
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-28'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1265,19 +1265,19 @@ routes:
     provider_pending:
     - aliyun-bailian
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    state: provider-official-source-confirmed
+    checked_at: '2026-07-28'
+    note: Current Alibaba Cloud plan facts and Hermes-specific setup were rechecked against official docs; re-check volatile pricing, models, and endpoints before future body changes.
 - source: docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
   slug: /china/models/tencent-token-plan
   module: china
   page_type: doc-page
-  title: 03-腾讯云 Token Plan
+  title: 腾讯云 Token Plan：套餐、API Key 与 Hermes 接入
   section: tencent-token-plan
-  description: 🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。
+  description: 腾讯云 Token Plan 接入 Hermes 指南：按当前官方说明确认套餐、模型与凭据入口，再完成配置和最小验证。
   order: 94
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-28'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1288,9 +1288,9 @@ routes:
     provider_pending:
     - tencent-cloud-models
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    state: provider-official-source-confirmed
+    checked_at: '2026-07-28'
+    note: Current Tencent Cloud plan facts were rechecked against official docs; Hermes remains a locally verified compatibility path, not a provider-listed integration.
 - source: docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
   slug: /china/models/glm-coding-plan
   module: china
@@ -1671,12 +1671,12 @@ routes:
   slug: /issues/provider-endpoint
   module: issues
   page_type: doc-page
-  title: 03-模型 / Provider / 自定义 endpoint 问题
+  title: Hermes Provider / Endpoint 报错：401、403、404 与模型排查
   section: provider-endpoint
-  description: 一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。
+  description: 排查 Hermes Provider、Endpoint、API Key 和模型错误，覆盖 Unknown provider、401、403、404、429 与兼容性问题。
   order: 115
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-28'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -2021,6 +2021,6 @@ source_mapping_contract:
     source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.
     source_refs.official: Registered official Hermes sources that should be checked before changing user-impacting Hermes behavior.
     source_refs.provider_pending: Provider/deployment source ids that must be confirmed against provider-official docs in R2 before body updates.
-    source_review.state: r1-mapped, needs-official-check, or needs-provider-official-confirmation.
+    source_review.state: r1-mapped, needs-official-check, official-source-confirmed, needs-provider-official-confirmation, or provider-official-source-confirmed.
     source_review.checked_at: Date when this mapping was added or last confirmed, not a claim that the page body was fully resynced.
     source_review.note: Short maintainer-facing boundary for the route entry.

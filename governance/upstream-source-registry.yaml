@@ -98,23 +98,24 @@ sources:
 provider_sources_to_fill_in_r2:
   note: R2 has confirmed provider-official sources for domestic model and deployment
     pages. Re-check volatile pricing/console UI before future material claim updates.
-  checked_at: '2026-05-02'
+  checked_at: '2026-07-28'
   providers:
   - id: aliyun-bailian
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://help.aliyun.com/zh/model-studio/other-tools-token-plan
-    - https://help.aliyun.com/zh/model-studio/token-plan-faq
+    - https://help.aliyun.com/zh/model-studio/hermes-agent
+    - https://help.aliyun.com/zh/model-studio/token-plan-team-overview
+    - https://help.aliyun.com/zh/model-studio/token-plan-team-quickstart
     affected_docs:
     - docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
   - id: tencent-cloud-models
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
+    - https://cloud.tencent.com/act/pro/tokenplan
     - https://cloud.tencent.com/document/product/1823/130060
     - https://cloud.tencent.com/document/product/1823/130119
-    - https://cloud.tencent.com/document/product/1729/111008
     affected_docs:
     - docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
   - id: zhipu-glm

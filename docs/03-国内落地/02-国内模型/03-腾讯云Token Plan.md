@@ -1,4 +1,8 @@
-# 03-腾讯云 Token Plan
+# 腾讯云 Token Plan：套餐、API Key 与 Hermes 接入
+
+> 💡 **速答**：腾讯云 Token Plan 当前提供套餐专属 API Key，并列出多种兼容工具，
+> 但官方清单没有把 Hermes Agent 列为专项适配工具。本页给出的是 Hermes 自定义兼容
+> 端点的验证路径；套餐、模型、Base URL 与 Key 仍以腾讯云当前说明为准。
 
 > 🎯 一句话先说清楚：如果你已经偏向腾讯云生态，或者你想先买一个能把国产主流模型和 AI 编程工具统一收口的套餐入口，腾讯云 Token Plan 值得先看。
 
@@ -58,8 +62,10 @@
 | Max | ¥599 / 月 | 6.5 亿 Tokens / 月 | 重度生产力用户 | 更像长期核心入口 |
 
 补充判断：
-- 同一主账号同时只能购买一个 Token Plan 套餐
-- 额度耗尽后不会自动转为按量计费
+- 当前中国站说明为：每个主账号（含子账号）最多同时持有 1 个通用 Token Plan 和
+  1 个 Hy Token Plan，不是“所有 Token Plan 合计只能买一个”
+- 个人版每类套餐当前仅支持生成 1 个 API Key
+- 套餐外模型会报错；额度耗尽后的行为应以控制台和当前 FAQ 为准，本页不作固定承诺
 
 ### 这页该怎么判断套餐
 
@@ -74,14 +80,10 @@
 
 ### 1）它卖的是“云生态统一入口”
 
-官方页能看到的代表模型包括：
-- Tencent HY 2.0 Instruct
-- Tencent HY 2.0 Think
-- MiniMax-M2.5
-- Kimi-K2.5
-- GLM-5
-- Hunyuan-T1
-- Hunyuan-TurboS
+截至 2026-07-28，当前中国站把套餐分为通用 Token Plan 与 Hy Token Plan。通用套餐页
+列出的代表模型包括 DeepSeek-V4-Flash、DeepSeek-V4-Pro、MiniMax-M2.7、GLM-5.1 和
+GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购买和配置时必须以当前
+“可用模型列表”为准。
 
 这说明它的核心价值不是押中某一个模型，而是：
 - 先买一个腾讯云里的统一入口
@@ -112,7 +114,8 @@
 对 Hermes 用户来说，真正重要的是：
 - 这不是只适合官网里点点用的套餐
 - 它本身就把开发工具接入当成官方场景在推
-- 后面换模型时不用重搭整条链路
+- 但官方当前工具清单没有列出 Hermes，不能把兼容接入写成腾讯云对 Hermes 的官方背书
+- 应先用 Hermes 的自定义兼容端点做最小验证，再决定是否长期使用
 
 ## 🔑 API Key 怎么拿，为什么它是这页核心
 
@@ -193,22 +196,23 @@
 - 是否进错页面，不在 Token Plan 主页面
 - 是否复制后没有保存，后面配置工具时需要重新生成
 
-### Step 4. 先在 Hermes 里做最小验证
+### Step 4. 把它作为兼容端点在 Hermes 里做最小验证
 
 现在做什么：
-- 把 Key 配进你实际要用的 Hermes / 工具链，并做一次最小验证
+- 从腾讯云当前接入说明取得 Base URL、模型名和 Key，再按 Hermes 的自定义兼容端点字段配置
 
 为什么做：
-- 因为“买了套餐”和“真的能在 Hermes 里工作”是两件事
+- 因为腾讯云当前没有 Hermes 专项接入页，“官方支持 Token Plan”不等于“官方保证 Hermes 适配”
 
 怎么做：
-- 先按腾讯云官方接入说明把地址、模型、密钥填入工具
-- 再进入 Hermes 发一条最简单的问题
+- 先从腾讯云官方接入说明确认地址、模型和密钥
+- 再按 Hermes 当前自定义 provider / endpoint 文档完成映射
+- 进入 Hermes 发一条最简单的问题
 - 先验证能正常返回一条结果，再继续细化模型选择
 
 看到什么算成功：
 - 不再提示 Key 或接入错误
-- Hermes 能稳定返回一条正常回复
+- Hermes 能稳定返回一条正常回复，且没有 provider、endpoint、模型或鉴权错误
 
 失败先查什么：
 - 是否复制错 Key
@@ -225,9 +229,10 @@
 
 ### 2. 腾讯云 Token Plan 最容易踩的坑是什么？
 
-最常见的两个坑就是：
-- 同一主账号同时只能购买一个套餐
-- 额度耗尽后不会自动转按量计费
+最常见的三个坑就是：
+- 把旧的“同一主账号只能购买一个套餐”口径当作当前中国站规则
+- 把套餐外模型写进配置
+- 把腾讯云列出的通用兼容工具能力误写成 Hermes 官方专项适配
 
 ### 3. 为什么这页先强调专属 API Key，而不是先讲模型？
 
@@ -237,7 +242,7 @@
 
 ### 风险点
 - 其实只想试跑，却过早做了套餐决策
-- 误以为额度耗尽后会自动转按量计费
+- 没有先核对当前可用模型、Base URL 和套餐规则
 - 没保存好专属 Key，后面配置工具时反复回去找入口
 
 ### 默认建议
@@ -255,22 +260,22 @@
 
 ## 📎 官方依据
 
-- https://cloud.tencent.com/act/pro/tokenplan?from=29759&Is=home
+- https://cloud.tencent.com/act/pro/tokenplan
 - https://cloud.tencent.com/document/product/1823/130060
 - https://cloud.tencent.com/document/product/1823/130119
 
 ## 🧾 R2 官方同步记录
 
 - source_id: `tencent-cloud-models`
-- checked_at: `2026-05-02`
+- checked_at: `2026-07-28`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md`
-- 本轮结论：已确认 TokenHub Token Plan 套餐定位、模型/工具入口、API Key 管理路径；页面不复制长期易变价格表，以官方套餐页为准。
-- 后续规则：涉及价格、套餐、可用模型、控制台按钮和额度限制时，仍以厂商官方页面实时显示为准，不在本文复制长期易变表格。
+- 本轮结论：已确认当前中国站套餐定位、通用/Hy 购买上限、可用模型入口、工具清单与 API Key 管理路径；腾讯云当前没有 Hermes 专项接入页。
+- 后续规则：价格表是当前快照；套餐、可用模型、控制台按钮、额度限制和兼容端点仍以厂商官方页面实时显示为准，Hermes 必须单独做最小兼容验证。
 - 官方来源：
+  - https://cloud.tencent.com/act/pro/tokenplan
   - https://cloud.tencent.com/document/product/1823/130060
   - https://cloud.tencent.com/document/product/1823/130119
-  - https://cloud.tencent.com/document/product/1729/111008
 
 ---
 

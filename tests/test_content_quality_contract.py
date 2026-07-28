@@ -43,3 +43,27 @@ def test_issue_routes_keep_official_source_mapping_and_review_state():
             "official-source-confirmed",
         }, source
         assert route["source_review"]["checked_at"] == "2026-07-27", source
+
+
+def test_first_seo_provider_routes_keep_confirmed_official_source_mapping():
+    expected = {
+        "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md": "aliyun-bailian",
+        "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md": "tencent-cloud-models",
+    }
+    provider_routes = {
+        route["source"]: route
+        for route in route_entries()
+        if route["source"] in expected
+    }
+
+    assert set(provider_routes) == set(expected)
+    for source, provider_id in expected.items():
+        route = provider_routes[source]
+        assert route["source_refs"]["local"] == ["content-repo"], source
+        assert "hermes-official-docs" in route["source_refs"]["official"], source
+        assert route["source_refs"]["provider_pending"] == [provider_id], source
+        assert (
+            route["source_review"]["state"]
+            == "provider-official-source-confirmed"
+        ), source
+        assert route["source_review"]["checked_at"] == "2026-07-28", source
