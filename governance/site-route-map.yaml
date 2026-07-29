@@ -782,7 +782,7 @@ routes:
   description: 用 Cron 自动生成每日晨间简报，并投递到 Telegram 或本地文件。
   order: 57
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/02-Telegram 消息入口接入.md
@@ -890,7 +890,7 @@ routes:
   description: Hermes 接入 Home Assistant 中文教程：配置长期令牌和访问地址，用 AI 查询并控制智能家居设备。
   order: 66
   status: published
-  updated: '2026-07-28'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/11-Discord 接入.md
@@ -938,7 +938,7 @@ routes:
   description: 用 Webhook + Hermes Skill 搭一条 PR 打开就自动审查 + 评论的流水线，比手动 /review 更持续更一致。
   order: 70
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/15-自定义 Skills.md

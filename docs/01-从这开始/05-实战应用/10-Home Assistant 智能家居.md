@@ -276,7 +276,6 @@ AI 有时候会"太聪明"——你让它"让房间暖和一点"，它可能同�
 ## 🔗 相关路径
 
 - 先回到[实战应用总览](/docs/start/practical)，确认这条智能家居路径在完整实践路线中的位置。
-- Home Assistant 与 Hermes 不在同一网络时，先看[VPS 自托管 Hermes](/docs/start/practical/vps-self-hosting)。
 - 需要接入更多外部工具时，继续看[MCP 接入指南](/docs/start/practical/mcp-universal-plug)。
 - 准备把查询扩展为定时任务前，先完成[安全加固](/docs/start/practical/security-hardening)并限制可写服务。
 

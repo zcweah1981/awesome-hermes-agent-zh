@@ -267,7 +267,7 @@ review 是典型的"高质量推理"任务。**不要用便宜模型做 review**
 
 ### 心得 5：把检查结果归档到 Obsidian
 
-参考 [08-Obsidian 第二大脑知识库](./08-Obsidian%20第二大脑知识库.md)，每次 review 后把结果存到 Obsidian：
+也可以把每次 review 的结果保存到 Obsidian：
 
 ```text
 Review 完成后，把摘要追加写入 Obsidian 仓库的 "Reviews/<repo>/<date>.md"。

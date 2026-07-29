@@ -189,6 +189,7 @@ Docker 容器默认是 UTC。如果你在东八区，早上 8 点其实是 UTC 0
 ## ➡️ 下一步
 
 - [**02-Telegram 消息入口接入**](./02-Telegram%20消息入口接入.md)
+- [继续搭建服务器自动化运维](/docs/start/practical/server-automation-ops)
 
 ## 📖 出处
 
