@@ -12,6 +12,13 @@
 
 <a href="https://hermes-zh.com"><strong>🌐 访问中文站官网：https://hermes-zh.com</strong></a>
 
+在线版核心入口：
+[从这开始](https://hermes-zh.com/docs/start) ·
+[现成方案](https://hermes-zh.com/docs/solutions) ·
+[国内落地](https://hermes-zh.com/docs/china) ·
+[OpenClaw 迁移](https://hermes-zh.com/docs/openclaw) ·
+[遇到问题](https://hermes-zh.com/docs/issues)
+
 [![content-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml)
 [![link-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml)
 
