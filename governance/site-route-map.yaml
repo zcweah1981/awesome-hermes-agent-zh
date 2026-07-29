@@ -166,7 +166,7 @@ routes:
   description: 安装 Hermes 小红书 Agent 内容助手，用 5 分钟把主题整理成标题、开头、正文、封面短句和发布检查单。
   order: 10
   status: published
-  updated: '2026-07-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
@@ -178,7 +178,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学公众号运营，而是帮你把一个观点、案例、产品更新或行业判断，直接压成“能发的一篇公众号草稿”。
   order: 11
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
@@ -190,7 +190,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学做 PPT，而是帮你把一个零散想法、复盘主题、路演题目或汇报任务，直接压成"可继续做成 PPT 的整套稿"。
   order: 12
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/05-X-Twitter 内容与互动助手.md
@@ -202,7 +202,7 @@ routes:
   description: 通过第三方插件 Hermes Tweet 将 X/Twitter 搜索、阅读、发推、回复等操作接入 Hermes Agent，用对话方式完成 X 平台内容工作。第三方方案，非官方内置。
   order: 13
   status: published
-  updated: '2026-05-17'
+  updated: '2026-07-29'
   source_type: third_party_solution
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/02-办公效率与知识整理/01-总览.md
@@ -298,7 +298,7 @@ routes:
   description: 把一篇现成内容，改写成适配小红书、公众号、X/Twitter 等不同平台风格的可发布稿件，直接复制就能发。
   order: 21
   status: published
-  updated: '2026-05-18'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/02-办公效率与知识整理/05-行动计划助手.md

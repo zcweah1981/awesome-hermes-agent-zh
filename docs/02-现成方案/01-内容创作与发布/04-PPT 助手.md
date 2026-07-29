@@ -418,4 +418,5 @@ hermes -p ppt-slidewriter chat --skills ppt-slide-writer -q "$(cat 02-slide-writ
 ## 🔗 相关入口
 
 - Pack 详情：[PPT 助手 Pack](/packs/ppt-lab)，先确认适合谁用、安装入口和下载入口。
+- 原始资料还没有整理成清晰结构：先用[资料总结助手](/docs/solutions/summary)提炼重点。
 

@@ -292,6 +292,7 @@ hermes chat --skills hermes-tweet -q "检查 Hermes Tweet 插件状态"
 ## 🔗 相关入口
 
 - 插件详情：[Hermes Tweet on GitHub](https://github.com/Xquik-dev/hermes-tweet)，先确认版本和兼容性。
+- 同一主题还要制作中文图文内容：继续看[小红书内容助手](/docs/solutions/xiaohongshu)。
 
 ## 📋 来源与核验
 
