@@ -1106,7 +1106,7 @@ routes:
   description: 把 Hermes 和 NotebookLM 连接起来，基于大量文档打造可问答的知识库 Agent。
   order: 84
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/03-国内落地/01-国内部署/01-总览.md
@@ -1520,7 +1520,7 @@ routes:
   description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。
   order: 105
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:

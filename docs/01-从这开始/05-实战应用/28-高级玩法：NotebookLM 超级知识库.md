@@ -132,9 +132,18 @@ Agent 会返回一个结构清晰的 PPT 大纲，大大节省你的前期工作
 ### 2. Cookie 的安全与时效
 你提取的 Cookie 有有效期，一旦过期就需要重新获取。同时，必须用安全的方式（如环境变量）来存储它，避免硬编码在脚本里。
 
+## 🧭 所属路径
+
+- 回到[实战应用总览](/docs/start/practical)，按任务类型选择更稳定、可维护的实践路线。
+
 ## ⬅️ 上一步
 
 - [**实战：基于 Telegram 和 Gmail 打造个人事务处理中心**](./27-实战：个人事务处理中心.md)
+
+## ➡️ 下一步
+
+- 想先建立本地、可控的知识沉淀流程：继续看[Obsidian 第二大脑知识库](/docs/start/practical/obsidian-second-brain)。
+- 想把已经验证过的知识处理流程封装给 Hermes 重复调用：继续看[自定义 Skills](/docs/start/practical/custom-skills)。
 
 ## 📖 出处
 - notebooklm-py 社区库（原 GitHub 仓库当前不可公开访问，使用前需重新确认可用来源）
