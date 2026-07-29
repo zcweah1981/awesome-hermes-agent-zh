@@ -926,7 +926,7 @@ routes:
   description: 用 Ollama 跑本地推理后端，零账单零数据出网；讲清楚什么场景适合本地、什么场景必须留云端。
   order: 69
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/14-GitHub PR 自动审查.md
@@ -974,7 +974,7 @@ routes:
   description: CLI Ctrl+B 录音、Telegram 语音消息、Discord 语音频道，三种入口一套 STT/TTS 引擎。
   order: 73
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/18-Hermes Agent 进阶实战.md
@@ -1046,7 +1046,7 @@ routes:
   description: 用 Hermes 管住个人项目从需求、开发、测试到部署的完整闭环。
   order: 79
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/24-实战：用-session_search-打造你的外部记忆.md
@@ -1082,7 +1082,7 @@ routes:
   description: 从工具使用过渡到长期助理的 Hermes 最佳实践清单。
   order: 82
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/27-实战：个人事务处理中心.md
@@ -1094,7 +1094,7 @@ routes:
   description: 基于 Telegram 和 Gmail，把邮件、日程、待办统一接进 Hermes。
   order: 83
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/28-高级玩法：NotebookLM 超级知识库.md
