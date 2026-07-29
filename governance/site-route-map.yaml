@@ -485,7 +485,7 @@ routes:
   description: 一句话先说清楚：这一阶段仍然只围绕一个助手，先把它调成“更像你、更懂你、更顺手”的长期助手，还不是进入多助手和系统层。
   order: 33
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-玩出花样
 - source: docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
@@ -1415,7 +1415,7 @@ routes:
   description: 一句话先说清楚：这一页不是直接教你配某个平台，而是先帮你选对 Hermes 的使用入口，再进入正确的入口页面。
   order: 100
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
