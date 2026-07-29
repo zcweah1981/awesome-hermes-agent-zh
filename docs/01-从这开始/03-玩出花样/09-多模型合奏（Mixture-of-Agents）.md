@@ -285,3 +285,4 @@ MoA 不能替你定义目标。问题越模糊，多个模型越可能发散。
 - 上一步：[08-教 Hermes 学习新技能（/learn）](./08-教-Hermes-学习新技能-learn.md)
 - 下一阶段：[04-自己造东西](../04-自己造东西/01-总览.md)
 - 回到目录：[03-玩出花样](./01-总览.md)
+- 延伸阅读：[三层模型级联](/docs/start/practical/three-tier-model-routing)

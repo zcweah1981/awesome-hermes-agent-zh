@@ -356,6 +356,7 @@ hermes profile update my-agent --force-config
 
 - 回到 [04-自己造东西 总览](./01-总览.md)，看看还有哪些方向没看
 - 回到 [01-从这开始 总览](../总览.md)，确认整体进度
+- 回看 [如何按职责拆分 Profile](/docs/start/build/profiles)，确认要打包的助手边界
 
 如果你想先回到上一阶段入口重新确认位置：
 - [04-自己造东西](./01-总览.md)

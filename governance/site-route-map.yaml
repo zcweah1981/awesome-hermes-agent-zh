@@ -54,7 +54,7 @@ routes:
   description: 一句话先说清楚：这一页不教你安装 Hermes，而是先帮你把“它到底跑在哪台机器上”选清楚。
   order: 4
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -120,7 +120,7 @@ routes:
   description: 这一页只做最后一个闭环：给 Hermes 配好一个现在就能用的模型，然后亲眼看到它回你第一句话。
   order: 7
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -468,7 +468,7 @@ routes:
   description: 到这一页时，你应该已经在命令行里把 Hermes 用顺了。现在再把它接进消息平台，排错会简单很多，也更容易真的放进日常工作流。
   order: 32
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-开始上手
   image:
@@ -590,7 +590,7 @@ routes:
   description: 理解 Mixture-of-Agents 的参考模型与聚合模型协作方式，判断何时值得用更高 Token 成本换更稳答案。
   order: 41
   status: published
-  updated: '2026-07-17'
+  updated: '2026-07-29'
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
 - source: docs/01-从这开始/04-自己造东西/01-总览.md
@@ -758,7 +758,7 @@ routes:
   description: 用 Profile Distribution 把你的 Agent 打包成一个 Git 仓库，别人一条命令就能装上、用起来。
   order: 55
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: official_reference
   nav_group: 04-自己造东西
 - source: docs/01-从这开始/05-实战应用/01-总览.md
