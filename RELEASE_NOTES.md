@@ -14,6 +14,12 @@ Release Notes。内容仓提交也不等于独立站已经部署；在线状态�
 - 公开仓库首页补充中文站首页和 5 个核心 Hub 的正式 canonical 入口。
 - 代表性内容提交：
   [`1c27afb`](https://github.com/zcweah1981/awesome-hermes-agent-zh/commit/1c27afb1f9e086df8d0ca511fa1fd73116eeab31)
+- 后续入口补强提交：
+  [`3c4c384`](https://github.com/zcweah1981/awesome-hermes-agent-zh/commit/3c4c384b9916887c05a2eed2443ceb007676a978)；
+  在[个性化 Hub](https://hermes-zh.com/docs/start/personalize)补入桌面端、`/learn`
+  和多模型合奏入口，在[国内入口 Hub](https://hermes-zh.com/docs/china/entry)补入
+  [iMessage 社区方案](https://hermes-zh.com/docs/china/entry/imessage)，并从
+  [个人微信](https://hermes-zh.com/docs/china/entry/personal-wechat)提供相关比较入口。
 - README 入口提交：
   [`fc9ac33`](https://github.com/zcweah1981/awesome-hermes-agent-zh/commit/fc9ac3360257dcc73a6e11472f5938bde287bfe0)
 
