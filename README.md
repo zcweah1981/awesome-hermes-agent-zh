@@ -19,6 +19,8 @@
 [OpenClaw 迁移](https://hermes-zh.com/docs/openclaw) ·
 [遇到问题](https://hermes-zh.com/docs/issues)
 
+[内容版本说明](./RELEASE_NOTES.md)：查看近期内容变化、对应提交与在线入口
+
 [![content-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml)
 [![link-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml)
 
