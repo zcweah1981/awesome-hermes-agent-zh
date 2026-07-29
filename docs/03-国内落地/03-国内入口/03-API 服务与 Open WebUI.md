@@ -401,6 +401,6 @@ Open WebUI 官方文档明确提醒：
 ## 🔗 国内入口关联路径
 
 - 还没选模型：先看[国内模型](/docs/china/models)，避免入口跑通后模型不可用。
-- 想暴露给前端或 Open WebUI：看[把 Hermes 暴露成后端服务](/docs/start/build/api-server)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
-- 要接消息平台：先看[飞书](/docs/china/entry/feishu)、[企业微信](/docs/china/entry/wecom-ai-bot)、[钉钉](/docs/china/entry/dingtalk)或[个人微信](/docs/china/entry/personal-wechat)。
+- 想先确认实例状态：看[网页控制台（Dashboard）](/docs/china/entry/dashboard)。
+- 要把服务接到团队消息入口：看[飞书](/docs/china/entry/feishu)。
 - 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。

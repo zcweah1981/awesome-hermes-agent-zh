@@ -1436,7 +1436,7 @@ routes:
   description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
   order: 101
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1457,7 +1457,7 @@ routes:
   description: 🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。
   order: 102
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1478,7 +1478,7 @@ routes:
   description: 🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。
   order: 103
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1499,7 +1499,7 @@ routes:
   description: 🎯 一句话结论：如果你想让团队成员在国内环境里先通过一个熟悉的消息入口触达 Hermes，飞书通常是最值得优先落地的第一站；但这页讲的是**飞书入口接入**，不是模型购买，也不是云部署。
   order: 104
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1541,7 +1541,7 @@ routes:
   description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。
   order: 106
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1562,7 +1562,7 @@ routes:
   description: 🎯 一句话结论：如果你希望把 Hermes 放进自己最常用的移动端聊天入口里，随时随地直接发消息提问，那么这页要帮你先把“运行 Setup Wizard → 选择 Weixin → 扫终端二维码 → 手机确认登录 → 保存账号凭据 → 启动 Gateway”这条主线跑顺。
   order: 107
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1583,7 +1583,7 @@ routes:
   description: 在苹果设备原生信息入口中接入 Hermes Agent，理解 Photon Spectrum 网关、白名单、日志脱敏和二次确认边界。
   order: 108
   status: published
-  updated: '2026-07-17'
+  updated: '2026-07-29'
   source_type: community_solution
   nav_group: 03-国内入口
 - source: docs/04-从OpenClaw过来/02-OpenClaw 和 Hermes 的关系.md
