@@ -402,4 +402,6 @@ hermes -p webdev-builder chat --skills agile-web-builder-agent -q "$(cat 02-buil
 ## 🔗 相关入口
 
 - Pack 详情：[敏捷 Web 开发助手 Pack](/packs/webdev-lab)，先确认适合谁用、安装入口和下载入口。
+- 想先从微信生态的小型产品起步：转到[微信小程序助手](/docs/solutions/miniapp)规划页面、数据和接口骨架。
+- 已经确定开发范围：继续用[行动计划助手](/docs/solutions/action-plan)安排实现顺序、负责人和验收节点。
 

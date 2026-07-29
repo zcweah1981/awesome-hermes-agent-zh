@@ -226,7 +226,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学会议管理，而是帮你把一段会议内容，直接压成“能发给团队执行的会议纪要”。
   order: 15
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/02-办公效率与知识整理/03-项目日报助手.md
@@ -238,7 +238,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学项目管理，而是帮你把一天的零散进展，直接压成“能发给老板、团队或项目群的项目日报”。
   order: 16
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/02-办公效率与知识整理/04-资料总结助手.md
@@ -250,7 +250,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学做研究摘要，而是帮你把一堆零散资料、文章、会议记录或网页内容，直接压成“能继续看、能继续用、能继续转给别人”的总结稿。
   order: 17
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/03-应用开发与快速原型/01-总览.md
@@ -274,7 +274,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你写方案，而是帮你把一个微信小程序想法，直接推进到“能开始搭代码”的状态。
   order: 19
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-应用开发与快速原型
 - source: docs/02-现成方案/03-应用开发与快速原型/03-敏捷 Web 开发助手.md
@@ -286,7 +286,7 @@ routes:
   description: 一句话先说清楚：这一页不是教你系统学 Web 开发，而是帮你把一个 Web 工具想法，直接推进到“能开始搭页面、接口和代码骨架”的状态。
   order: 20
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 03-应用开发与快速原型
 - source: docs/02-现成方案/01-内容创作与发布/06-多平台内容改写助手.md
@@ -310,7 +310,7 @@ routes:
   description: 把项目目标、会议结论或头脑风暴的结果，直接拆成有负责人、截止时间和优先级的可执行行动计划表，适合发到飞书/企微/钉钉群。
   order: 22
   status: published
-  updated: '2026-05-18'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/02-办公效率与知识整理/06-邮件群消息摘要助手.md
@@ -322,7 +322,7 @@ routes:
   description: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。
   order: 23
   status: published
-  updated: '2026-05-18'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/03-国内落地/01-总览.md
