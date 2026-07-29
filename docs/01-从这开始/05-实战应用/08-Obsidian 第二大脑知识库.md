@@ -199,6 +199,10 @@ Syncthing 双向同步可能产生冲突文件（`.sync-conflict-*`）。
 
 ---
 
+## 🔗 实战路径
+
+- 回到[实战应用总览](/docs/start/practical)，按知识管理目标继续选择人格、自动化或多 Agent 实践。
+
 ## ⬅️ 上一步
 
 - [**07-SOUL.md 人格定制**](./07-SOUL.md%20人格定制.md)

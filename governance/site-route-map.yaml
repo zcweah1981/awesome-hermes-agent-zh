@@ -806,7 +806,7 @@ routes:
   description: 用 Hermes Cron 自动备份 SOUL、memory、skills 等核心资产到 GitHub。
   order: 59
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/04-月费8美金三层模型级联省钱指南.md
@@ -818,7 +818,7 @@ routes:
   description: 用三层模型路由把日常任务、分析任务和复杂任务分层控费。
   order: 60
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/05-Token 成本优化避坑指南.md
@@ -854,7 +854,7 @@ routes:
   description: 用 SOUL.md 固化长期人格、语气和协作偏好。
   order: 63
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/08-Obsidian 第二大脑知识库.md
@@ -866,7 +866,7 @@ routes:
   description: 把 Hermes 接入 Obsidian Vault，让笔记可检索、可对话、可整理。
   order: 64
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/09-Kanban 多 Agent 编排.md
@@ -878,7 +878,7 @@ routes:
   description: 用 Kanban 把多 Agent 分工、状态流转和验收过程可视化。
   order: 65
   status: published
-  updated: '2026-06-04'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/10-Home Assistant 智能家居.md
