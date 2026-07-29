@@ -614,7 +614,7 @@ routes:
   description: 这一页只解决一件事：
   order: 43
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 04-自己造东西
 - source: docs/01-从这开始/04-自己造东西/03-接入外部记忆系统/01-总览.md
@@ -686,7 +686,7 @@ routes:
   description: 这一页只解决一件事：
   order: 49
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 04-上下文系统
 - source: docs/01-从这开始/04-自己造东西/04-上下文系统/03-上下文引用.md
@@ -710,7 +710,7 @@ routes:
   description: 这一页只解决一件事：
   order: 51
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 04-自己造东西
 - source: docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
@@ -734,7 +734,7 @@ routes:
   description: 这一页只解决一件事：
   order: 53
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 04-自己造东西
 - source: docs/01-从这开始/04-自己造东西/08-放进编辑器里用.md
@@ -746,7 +746,7 @@ routes:
   description: 这一页只解决一件事：
   order: 54
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 04-自己造东西
 - source: docs/01-从这开始/04-自己造东西/10-把一整套 Agent 打包分享.md
