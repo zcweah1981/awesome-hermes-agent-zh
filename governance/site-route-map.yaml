@@ -962,7 +962,7 @@ routes:
   description: 对外部署 Hermes 前必看的四道红线：用户白名单、命令审批、容器隔离、密钥保护。
   order: 72
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/17-语音模式.md
@@ -998,7 +998,7 @@ routes:
   description: 当你从 1 个 Hermes 实例走向 5 个，需要的不是更多 Hermes，而是一个控制室——登记册、运行手册、任务总线、备份策略、安全审计。四级演进模板。基于 shannhk/hermes-agent-control-room 整理。
   order: 75
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/20-60 天分析师工作流.md
@@ -1022,7 +1022,7 @@ routes:
   description: 5 分钟、7 步、零账单跑通 Hermes + Ollama。和 13-Ollama 本地模型的边界：这一页只讲最短路径，不展开原理。
   order: 77
   status: published
-  updated: '2026-06-05'
+  updated: '2026-07-29'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/22-Hermes Agent 深度拆解与自建指南.md
@@ -1058,7 +1058,7 @@ routes:
   description: 用 session_search 把 Hermes 历史对话变成随用随查的外部记忆。
   order: 80
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
@@ -1070,7 +1070,7 @@ routes:
   description: 让 VPS 自我监控，只在真的出问题时通过 Hermes 发出告警。
   order: 81
   status: published
-  updated: '2026-07-07'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/26-Hermes-Agent-最佳实践：从工具到助理.md

@@ -69,6 +69,10 @@ print(default_api.session_search(query="博客 备份 cronjob", limit=3))
 - 你能够仅凭记忆中的几个关键词，在 3 次 `session_search` 调用内，成功找回一个超过一个月前的复杂操作指令。
 - 当你再次遇到重复性问题时，第一反应是 `session_search` 而不是从头开始 google。
 
+## 🔗 实战路径
+
+- 回到[实战应用总览](/docs/start/practical)，把会话记忆与 Skills、项目工作流和自动化任务串联起来。
+
 ## ⬅️ 上一步
 
 - [**23. 实战：个人项目开发工作流**](./23-实战：个人项目开发工作流.md)

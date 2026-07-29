@@ -319,6 +319,10 @@ README.md → inventory.md → runbook.md
 
 ---
 
+## 🔗 实战路径
+
+- 回到[实战应用总览](/docs/start/practical)，按团队规模继续选择备份、运维或生产化实践。
+
 ## ⬅️ 上一步
 
 - [**18-Hermes Agent 进阶实战：自进化 Skills、MCP、Subagent 编排与生产纪律**](./18-Hermes%20Agent%20进阶实战.md)
