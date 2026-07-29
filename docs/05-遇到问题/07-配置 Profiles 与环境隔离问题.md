@@ -233,7 +233,7 @@ hermes config
 
 什么时候该跳转：
 - 如果你主要卡在 gateway 行为，跳到 [05-Gateway / Messaging / 推送问题](<./05-Gateway%20Messaging%20%E4%B8%8E%E6%8E%A8%E9%80%81%E9%97%AE%E9%A2%98.md>)
-- 如果你主要卡在 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
+- 如果你主要卡在 skills / MCP，回到[遇到问题总入口](/docs/issues)按类型分流
 - 如果本质是层次混线和环境隔离，留在本页
 
 ---
@@ -274,7 +274,7 @@ hermes config
 
 什么时候该跳转：
 - 如果更像 provider / model，跳到 [03-模型 / Provider / 自定义 endpoint 问题](<./03-%E6%A8%A1%E5%9E%8B%20Provider%20%E4%B8%8E%E8%87%AA%E5%AE%9A%E4%B9%89%20endpoint%20%E9%97%AE%E9%A2%98.md>)
-- 如果更像 skills / MCP，跳到 [06-Tools / Skills / MCP 问题](<./06-Tools%20Skills%20MCP%20%E9%97%AE%E9%A2%98.md>)
+- 如果更像 skills / MCP，回到[遇到问题总入口](/docs/issues)按类型分流
 - 如果更像当前环境搞错了，留在本页
 
 ---

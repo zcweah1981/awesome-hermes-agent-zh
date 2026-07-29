@@ -382,7 +382,7 @@ hermes cron list
 
 🚦 什么时候该跳转：
 
-- 你的问题是 systemd / linger / VPS 守护：跳 [08-Docker / Nix / SSH 与远程后端问题](./08-Docker%20Nix%20SSH%20与远程后端问题.md)
+- 你的问题是 systemd / linger / VPS 守护：沿用上表的 VPS 自托管教程继续排查
 - 你想了解 `/goal` 持久循环（v0.13 新增）：先升级到 v0.13+，再用 `/goal` 命令
 - 你想在 CLI 命令参考里看 cron 全部子命令：跳 [02-CLI 命令参考](../06-reference/02-CLI%20命令参考.md)
 

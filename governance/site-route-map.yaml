@@ -1655,7 +1655,7 @@ routes:
   description: 一句话结论：这一页只处理“命令起不来、装不上、更新后变怪、环境边界混乱”这类问题。只要你还没确认 `hermes` 命令本身是否正常，就先不要跳去查模型、Gateway、Tools。
   order: 114
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1697,7 +1697,7 @@ routes:
   description: 一句话结论：这一页只处理“界面显示怪、按键像没反应、slash command 不出现、会话恢复不对、看起来像卡住了”这类问题。只要 `hermes` 能启动，很多时候就不是“完全坏了”，而是入口、交互方式、会话预期或终端环境没对齐。
   order: 116
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1760,7 +1760,7 @@ routes:
   description: 一句话结论：这页只处理“为什么改了配置没生效、为什么明明装过却当前看不到、为什么 session / gateway / skills 像跑到别的环境里”这类排障问题；先分清你改的是哪份配置、当前是谁在读、你现在到底在哪个 profile。
   order: 119
   status: published
-  updated: '2026-04-28'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
