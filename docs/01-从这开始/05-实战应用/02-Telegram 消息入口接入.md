@@ -273,6 +273,10 @@ TELEGRAM_WEBHOOK_MODE=true
 
 ---
 
+## 🔗 实战路径
+
+- 回到[实战应用总览](/docs/start/practical)，确认 Telegram 入口与后续自动化任务的衔接顺序。
+
 ## ⬅️ 上一步
 
 - [**01-用 Hermes 做每日晨间简报**](./01-用%20Hermes%20做每日晨间简报.md)

@@ -174,6 +174,7 @@
 
 ## 🔗 共存后的下一步
 
+- 还没确认两套工具的职责边界：先看[OpenClaw 与 Hermes 的关系](/docs/openclaw/relationship)。
 - 共存稳定后，如果要逐步迁移：看[迁移路径](/docs/openclaw/migration-path)。
 - 如果共存时出现配置冲突：看[配置 Profiles 与环境隔离问题](/docs/issues/config-profiles-environment)。
 - 需要查 Hermes Profiles：看[Profile 命令参考](/docs/reference/profile-commands)。
