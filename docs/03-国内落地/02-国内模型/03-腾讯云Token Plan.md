@@ -15,7 +15,7 @@
 
 ## 🔎 搜索收录速答
 
-腾讯云 Token Plan 适合已经在腾讯云生态里部署服务、希望用统一账户和预算接入 Hermes 的团队。判断是否该选它，重点看模型覆盖、OpenAI 兼容程度、国内网络稳定性和后续部署位置。如果你还在横向比较，建议同时看[阿里云百炼 Token Plan](/docs/china/models/alibaba-bailian-token-plan)、[MiniMax Token Plan](/docs/china/models/minimax-token-plan)和[DeepSeek 按量计费接口](/docs/china/models/deepseek-metered-api)。
+腾讯云 Token Plan 适合已经在腾讯云生态里部署服务、希望用统一账户和预算接入 Hermes 的团队。判断是否该选它，重点看模型覆盖、OpenAI 兼容程度、国内网络稳定性和后续部署位置。如果你还在横向比较，建议同时看[阿里云百炼 Token Plan](/docs/china/models/alibaba-bailian-token-plan)和[DeepSeek 按量计费接口](/docs/china/models/deepseek-metered-api)。
 
 
 ## 🚀 先看主线
@@ -282,6 +282,6 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 ## 🔗 模型接入关联路径
 
 - 还没部署 Hermes：先回到[国内部署](/docs/china/deploy)确认服务器和远程环境。
-- 要换国内模型：优先比较[阿里云百炼](/docs/china/models/alibaba-bailian-token-plan)、[MiniMax](/docs/china/models/minimax-token-plan)和[DeepSeek](/docs/china/models/deepseek-metered-api)。
+- 要换国内模型：优先比较[阿里云百炼](/docs/china/models/alibaba-bailian-token-plan)和[DeepSeek](/docs/china/models/deepseek-metered-api)。
 - 使用非内置平台：看[自定义兼容接口](/docs/china/models/openai-compatible-endpoint)，再对照[模型 Provider 与自定义 endpoint 问题](/docs/issues/provider-endpoint)。
 - 要查环境变量和配置项：进入[环境变量参考](/docs/reference/environment-variables)和[Profile 命令参考](/docs/reference/profile-commands)。

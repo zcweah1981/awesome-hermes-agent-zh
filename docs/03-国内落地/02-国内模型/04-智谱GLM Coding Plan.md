@@ -37,7 +37,7 @@
 |---|---|
 | 我只想先最低门槛把 Hermes 跑起来 | 先回看 [07-DeepSeek按量计费接口](./07-DeepSeek按量计费接口.md) |
 | 我已经认准 GLM / z.ai | 留在这页继续 |
-| 我更想先买统一多模型入口 | 先回看 [02-阿里云百炼 Token Plan](<./02-%E9%98%BF%E9%87%8C%E4%BA%91%E7%99%BE%E7%82%BCToken%20plan.md>) 或 [03-腾讯云 Token Plan](<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>) |
+| 我更想先买统一多模型入口 | 先回看 [03-腾讯云 Token Plan](<./03-%E8%85%BE%E8%AE%AF%E4%BA%91Token%20Plan.md>) |
 | 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
 如果你只记一句话：
@@ -280,6 +280,6 @@ hermes model
 ## 🔗 模型接入关联路径
 
 - 还没部署 Hermes：先回到[国内部署](/docs/china/deploy)确认服务器和远程环境。
-- 要换国内模型：优先比较[DeepSeek](/docs/china/models/deepseek-metered-api)、[Kimi](/docs/china/models/kimi-plan)和[腾讯云](/docs/china/models/tencent-token-plan)。
+- 要换国内模型：优先比较[DeepSeek](/docs/china/models/deepseek-metered-api)和[腾讯云](/docs/china/models/tencent-token-plan)。
 - 使用非内置平台：看[自定义兼容接口](/docs/china/models/openai-compatible-endpoint)，再对照[模型 Provider 与自定义 endpoint 问题](/docs/issues/provider-endpoint)。
 - 要查环境变量和配置项：进入[环境变量参考](/docs/reference/environment-variables)和[Profile 命令参考](/docs/reference/profile-commands)。
