@@ -1,3 +1,6 @@
+
+</think>
+
 <h1 align="center">
   <img src="./assets/hermes-logo.webp" alt="Hermes Agent 中文站 Logo" width="36" height="36" align="absmiddle" style="vertical-align: -0.14em; border-radius: 9px;">
   Hermes Agent 中文站
@@ -203,6 +206,7 @@ Hermes 是从 OpenClaw 分支发展出来的独立项目。如果你已经在用
 ## 📦 仓库里主要有什么
 
 - `README.md`：仓库首页入口
+- `AGENTS.md`：AI Agent 开发规范与执行指引
 - `docs/`：公开文档正文
 - `governance/`：外部仓最小治理层（结构、保留规则、来源映射）
 - `packs/`：现成方案相关的可下载资源与工作流包
