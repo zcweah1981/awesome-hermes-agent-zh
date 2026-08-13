@@ -12,7 +12,7 @@ def workflow_text() -> str:
     return WORKFLOW.read_text(encoding="utf-8")
 
 
-def test_trigger_workflow_is_valid_yaml_and_dispatches_expected_repo_event():
+def test_trigger_workflow_is_valid_yaml_and_dispatches_expected_site_workflow():
     body = workflow_text()
     parsed = yaml.safe_load(body)
 
@@ -23,7 +23,7 @@ def test_trigger_workflow_is_valid_yaml_and_dispatches_expected_repo_event():
     )
 
     assert dispatch_step["env"]["TARGET_REPO"] == "zcweah1981/hermes-zh"
-    assert dispatch_step["env"]["DISPATCH_EVENT_TYPE"] == "content-updated"
+    assert dispatch_step["env"]["TARGET_WORKFLOW"] == "content-auto-sync.yml"
     assert "SITE_REPO_DISPATCH_TOKEN" in dispatch_step["env"]
     assert "secrets.SITE_REPO_DISPATCH_TOKEN" in str(dispatch_step["env"]["SITE_REPO_DISPATCH_TOKEN"])
 
@@ -40,20 +40,18 @@ def test_dispatch_authorization_header_uses_only_secret_env_var():
 def test_dispatch_payload_is_file_backed_and_contract_validated():
     body = workflow_text()
 
-    assert "dispatch-payload.json" in body
-    assert "--data-binary @dispatch-payload.json" in body
+    assert "workflow-dispatch-payload.json" in body
+    assert "--data-binary @workflow-dispatch-payload.json" in body
     assert '-d "${payload}"' not in body
     assert "re.fullmatch(r'[0-9a-f]{40}', sha)" in body
-    assert "'event_type': os.environ['DISPATCH_EVENT_TYPE']" in body
-    assert "payload['event_type'] != 'content-updated'" in body
+    assert "'ref': 'main'" in body
+    assert "'inputs':" in body
 
     for key in [
         "content_repo",
         "content_ref",
         "content_sha",
-        "actor",
-        "run_id",
-        "source_workflow_url",
+        "source_actor",
     ]:
         assert key in body
 
@@ -64,13 +62,13 @@ def test_dispatch_curl_fails_clearly_and_summary_reports_audit_fields():
     assert "curl -sS -fL --retry 3 --retry-delay 2 -X POST" in body
     assert "https://api.github.com/repos/${TARGET_REPO}/dispatches" not in body
     assert "api_base=\"https://api.github.com\"" in body
-    assert "dispatch_path=\"/repos/${TARGET_REPO}/dispatches\"" in body
+    assert "dispatch_path=\"/repos/${TARGET_REPO}/actions/workflows/${TARGET_WORKFLOW}/dispatches\"" in body
     assert '"${api_base}${dispatch_path}"' in body
     assert "X-GitHub-Api-Version: 2022-11-28" in body
 
     for summary_line in [
         "target_repo: ${TARGET_REPO}",
-        "event_type: ${DISPATCH_EVENT_TYPE}",
+        "target_workflow: ${TARGET_WORKFLOW}",
         "content_sha: ${CONTENT_SHA}",
         "content_ref: main",
     ]:
