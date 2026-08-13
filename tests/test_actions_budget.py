@@ -12,6 +12,8 @@ def read(name: str) -> str:
 
 def test_no_ci_workflow_and_all_maintenance_tools_are_manual_only():
     assert not (WORKFLOWS / "content-check.yml").exists()
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "actions/workflows/content-check.yml" not in readme
     for name in [
         "link-check.yml",
         "third-party-solutions-weekly-check.yml",

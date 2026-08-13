@@ -21,7 +21,6 @@
 
 [内容版本说明](./RELEASE_NOTES.md)：查看近期内容变化、对应提交与在线入口
 
-[![content-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/content-check.yml)
 [![link-check](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml/badge.svg)](https://github.com/zcweah1981/awesome-hermes-agent-zh/actions/workflows/link-check.yml)
 
 [🚀 01-从这开始](./docs/01-从这开始/总览.md) · [🧰 02-现成方案](./docs/02-现成方案/01-总览.md) · [🇨🇳 03-国内落地](./docs/03-国内落地/01-总览.md) · [🔄 04-从OpenClaw过来](./docs/04-从OpenClaw过来/01-总览.md) · [🩺 05-遇到问题](./docs/05-遇到问题/01-总览.md) · [📚 06-reference](./docs/06-reference/01-总览.md)
