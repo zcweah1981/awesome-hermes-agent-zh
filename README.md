@@ -151,6 +151,7 @@ Hermes 不只是一个聊天窗口，它更适合进入这些长期任务和可�
 ## ❓ 常见问题
 
 ### Hermes Agent 中文站是什么？和官方英文文档是什么关系？
+- [Continuum-AI-Corp/OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) — drop-in recorder that sits between your agent and the model provider.
 
 Hermes Agent 中文站是围绕 Hermes Agent 的中文实战文档入口，不是对官方英文文档的翻译。它从中文用户的使用路径出发，提供从安装、国内部署、模型接入到日常上手的完整中文路线。官方英文文档地址：[hermes-agent.nousresearch.com/docs](https://hermes-agent.nousresearch.com/docs)。
 
