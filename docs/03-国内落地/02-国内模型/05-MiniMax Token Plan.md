@@ -1,5 +1,7 @@
 # 05-MiniMax Token Plan
 
+复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+
 > 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
 
 这一页只解决一件事：帮你判断 MiniMax Token Plan 值不值得买，以及怎么按 Hermes 原生 `MiniMax China` provider 路线把它接起来。
@@ -19,7 +21,7 @@ MiniMax Token Plan 更适合重视中文长文本、角色对话或内容生成�
 ![05-MiniMax Token Plan 主线图](./assets/minimax-tokenplan-modules-cliproxy-v11-title.webp)
 
 这张图只想帮你先抓住 4 个点：
-- 这是一条“全模态订阅 + 官方原生 provider”路线
+- 这是一条“模型订阅 + 官方原生 provider”路线
 - 标准版和极速版要分开看
 - 真正要跑通的是「选套餐 → 拿 Token Plan API Key → `hermes model` 选 MiniMax China → 做最小验证」
 - 这页适合已经明确要重点看 MiniMax 的人，不适合第一次试跑的人
@@ -44,73 +46,20 @@ MiniMax Token Plan 更适合重视中文长文本、角色对话或内容生成�
 | 我已经有稳定兼容层 | 优先看 [08-自定义兼容接口](./08-自定义兼容接口.md) |
 
 如果你只记一句话：
-- 认准 MiniMax，并且要多模态订阅 + 原生 provider → 看这页
+- 认准 MiniMax，并且要套餐 + 原生 provider → 看这页
 - 只是想先试跑 Hermes → 不要先在这页做复杂套餐决策
 
-## 💰 先看价格和套餐，再决定值不值得买
+## 💰 新购套餐与模型
 
-MiniMax 官方当前把 Token Plan 分成两组：
-- 标准版：`Starter / Plus / Max`
-- 极速版：`Plus-极速版 / Max-极速版 / Ultra-极速版`
+截至 2026-09-30，新购 Token Plan 月费为 Plus ¥49、Max ¥119、Ultra ¥469，使用 5 小时和周额度窗口；实际额度与可用模型以订阅页为准。旧版 Starter/Plus/Max 与极速六档年费表不再作为新购建议，老订阅的迁移权益要在账户单独确认。
 
-官方页面当前默认展示的是连续包年价格；如果你看到的界面切到了别的展示方式，请以官网实时页面为准。
+主要文本路线为 `MiniMax-M3`；`MiniMax-M3.1-Flash-Preview` 是预览模型，单独核对账户权限，不写成稳定默认菜单。自 **2026-08-20** 起音乐不属于 Token Plan，不能继续声称一个套餐覆盖音乐、视频等所有模态。
 
-### 标准版
+## 🌏 中国区与国际区 endpoint
 
-| 套餐 | 官方当前展示价 | 核心额度 | 适合谁 | 我怎么理解 |
-|---|---:|---|---|---|
-| Starter | ¥290 / 年 | 600 次模型调用 / 5 小时 | 入门级开发 | 门槛最低 |
-| Plus | ¥490 / 年 | 1,500 次模型调用 / 5 小时 | 专业开发场景 | 最适合作为个人主力 |
-| Max | ¥1,190 / 年 | 4,500 次模型调用 / 5 小时 | 高频使用 | 更适合作为高频主力 |
+原生中国区仍为 `minimax-cn` / `MINIMAX_CN_API_KEY`。稳定标签默认 `https://api.minimaxi.com/anthropic`；官网当前示例是 `https://api.minimax.cn/anthropic`，可用 `MINIMAX_CN_BASE_URL` 显式覆盖。旧域名不能仅因文档换域就宣称失效。国际 provider/Key 与中国区分开，不将国内套餐接到国际 endpoint。
 
-### 极速版
-
-| 套餐 | 官方当前展示价 | 核心额度 | 适合谁 | 我怎么理解 |
-|---|---:|---|---|---|
-| Plus-极速版 | ¥980 / 年 | 1,500 次 `M2.7-highspeed` 调用 / 5 小时 | 更看重速度的个人开发者 | 强调更快响应 |
-| Max-极速版 | ¥1,990 / 年 | 4,500 次 `M2.7-highspeed` 调用 / 5 小时 | 高频 AI 编程用户 | 量和速度更平衡 |
-| Ultra-极速版 | ¥8,990 / 年 | 30,000 次 `M2.7-highspeed` 调用 / 5 小时 | 超高频 / 团队场景 | 面向最重度使用 |
-
-### 这页该怎么判断套餐
-
-最直接的判断方式不是先比较绝对低价，而是先问三件事：
-- 你是不是要把 MiniMax 当长期主力厂商
-- 你是不是会同时用到文本之外的多模态能力
-- 你是不是需要 `M2.7-highspeed` 这种“明确更快”的路线
-
-如果答案都是“是”，这页值得继续；如果还没到这个阶段，先回按量页通常更轻。
-
-## 🤖 它为什么值得单独看
-
-### 1）它卖的不是单一文本模型，而是“全模态统一订阅”
-
-官方材料把这条路线直接定义为：
-- 一个订阅满足多种 AI 需求
-- 一个 Key 打通视频、语音、音乐、图像与文本能力
-
-这和其他页最大的区别是：
-- 阿里云 / 腾讯云更偏统一入口
-- GLM / Kimi 更偏单厂商编码路线
-- MiniMax 的主卖点更明确落在“全模态 + 工具接入 + 单 Key 统一使用”
-
-### 2）`M2.7` 和 `M2.7-highspeed` 才是这页真正要分清的两条线
-
-你可以先把它理解成：
-- 标准版：优先围绕 `MiniMax-M2.7`
-- 极速版：优先围绕 `MiniMax-M2.7-highspeed`
-
-如果你最关心“速度是不是足够快”，这页就必须把极速版讲清楚。
-
-### 3）Hermes 已原生支持 `MiniMax China`
-
-Hermes 官方 provider 文档已经明确列出：
-- 环境变量：`MINIMAX_CN_API_KEY`
-- provider：`minimax-cn`
-
-这意味着：
-- 不需要先把 MiniMax 包成 custom endpoint
-- 直接按原生 provider 路线理解即可
-- 整个接入过程会比兼容层更短、更容易排错
+> 本页配图保留旧界面用于辨认 provider 和 Key 输入位置，图中的旧模型选项不代表当前 M3 目录；填写 ID 以下文文字和官方模型表为准。
 
 ## 🧰 怎么把 MiniMax Token Plan 接进 Hermes
 
@@ -209,7 +158,7 @@ hermes model
 - 是否填成了按量付费 Key
 - 是否复制时混入了空格或残缺值
 
-### Step 5. 先选择 `MiniMax-M2.7` 做最小验证
+### Step 5. 先选择 `MiniMax-M3` 做最小验证
 
 现在做什么：
 - 先选一个最稳的默认文本模型做第一轮验证
@@ -219,18 +168,18 @@ hermes model
 
 怎么做：
 - 模型列表里先选：
-  - `MiniMax-M2.7`
+  - `MiniMax-M3`
 
 官方模型选择界面如下：
 
-![Hermes model 设置截图：选择 MiniMax-M2.7](./assets/minimax-hermes-model-select.webp)
+![历史 Hermes model 截图：旧 M2.7 选项，当前请手填 M3](./assets/minimax-hermes-model-select.webp)
 
 - 选完后启动 Hermes，先发一条最简单的问题
 
 看到什么算成功：
 - Hermes 能正常进入会话
 - 不再提示 provider / API Key 错误
-- `MiniMax-M2.7` 能稳定返回第一条回复
+- `MiniMax-M3` 能稳定返回第一条回复
 
 失败先查什么：
 - provider 是否真切到 `MiniMax China`
@@ -253,21 +202,38 @@ hermes model
 
 混成一回事。
 
-### 3. 为什么建议先从 `MiniMax-M2.7` 开始，而不是一上来就极速版？
+### 3. 为什么建议先从 `MiniMax-M3` 开始，而不是一上来就极速版？
 
 因为这页的第一目标是先把链路跑通；速度升级应该发生在链路稳定之后。
 
 ## ⚠️ 风险点与默认建议
 
 ### 风险点
-- 其实只想先跑通 Hermes，却过早进入多模态订阅决策
+- 其实只想先跑通 Hermes，却过早进入套餐决策
 - 把 Token Plan API Key 和按量付费 API Key 搞混
 - 一上来就想测试极速版，而不是先做最小验证
 
 ### 默认建议
 - 如果你已经认准 MiniMax，再看这页最值
 - 默认先走 `MiniMax China` 原生 provider
-- 默认先用 `MiniMax-M2.7` 做第一轮验证，跑通后再考虑极速版
+- 默认先用 `MiniMax-M3` 做第一轮验证，跑通后再考虑极速版
+
+## 🖥️ 桌面短配置卡
+
+1. 先确认产品、账户地区与 Key 类型，选择 **`minimax-cn`**；使用中国区 Key；按厂商当前 Anthropic 示例设置 `MINIMAX_CN_BASE_URL`，记录覆盖前默认值。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`MiniMax-M3`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
+4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
+5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。
+
+## 📚 本次复核来源
+
+- [官方 Hermes 配置](https://platform.minimax.cn/docs/token-plan/hermes-agent)
+- [套餐价格](https://platform.minimax.cn/docs/guides/pricing-token-plan)
+- [套餐范围与 FAQ](https://platform.minimax.cn/docs/token-plan/faq)
+- [Anthropic 接口](https://platform.minimax.cn/docs/api-reference/text-anthropic-api)
+- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
+- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
 
 ## ➡️ 下一步
 
@@ -286,7 +252,7 @@ hermes model
 ## 🧾 R2 官方同步记录
 
 - source_id: `minimax`
-- checked_at: `2026-05-02`
+- checked_at: `2026-09-30`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md`
 - 本轮结论：已确认 Token Plan quickstart、API Key 获取、Anthropic 推荐端点和 OpenAI-compatible 文本接口；页面保留“以官方模型/额度页为准”。

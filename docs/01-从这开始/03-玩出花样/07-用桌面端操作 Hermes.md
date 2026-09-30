@@ -1,5 +1,7 @@
 # 🖥️ 07-用桌面端操作 Hermes
 
+本页是 Hermes 桌面 App 的安装、模型配置和连接排障教程。先按下表选择操作系统与发行渠道；浏览器中的 [Dashboard 网页控制台](/docs/china/entry/dashboard)使用另一条入口。已有终端安装可从桌面启动步骤继续；模型产品与 Key 先看[国内模型路线](/docs/china/models)，401、403、404 转到[Provider 排障](/docs/issues/provider-endpoint)。
+
 > 从桌面安装、配模型、完成第一个文件任务开始，再做会议纪要、表格核对和资料整理。需要服务器长期运行时，最后再接远程后端。
 
 复核日期：**2026-09-30**。本文对照官方稳定标签 **v2026.9.24（Agent v0.21.5）** 的安装说明、桌面文档与源码；该标签的 `apps/desktop/package.json` 版本为 **0.17.6**。Agent 版本和桌面包版本各自独立，下载包及远程后端要分别记录版本，不能把 Agent 0.21.5 当成桌面安装包版本。
@@ -48,6 +50,8 @@ hermes desktop
 第一次启动按 onboarding 选择 provider 并输入 API Key 或完成对应登录。已经进入窗口时，用 **Settings → Providers** 管理账户/Key，再用 **Settings → Model** 设置默认模型。多个 profile 时检查 **Applies to**，保证修改落在预期 profile。
 
 ### 国内模型与兼容接口
+
+MiMo 用户先读[MiMo V2.6 接入](/docs/china/models/mimo-v26)，其他厂商见[国内模型总览](/docs/china/models)；厂商页均提供桌面配置卡。
 
 以下是 Hermes 的接入入口，不能替代厂商账户、余额和地区权限检查：
 
@@ -192,6 +196,47 @@ hermes serve --host <远端VPN地址> --port 9119
 ### 本地模型的渠道边界
 
 稳定标签文档已描述 **Settings → Providers → Local Models**，但这不证明每个下载包都开放该界面。2026-09-30 复核的主干文档另有明确限制：**canary 构建启用，其他桌面构建需要 `--local` 启动标志**。不要据此反推 v2026.9.24 的安装方式，也不要把下载大模型作为首次上手必需步骤；准备使用时核对自己渠道、硬件和官方对应版本说明。
+
+## 🔌 8. Connectors 与插件：从安装到撤销的完整链
+
+本节依据稳定 v2026.9.21 / v2026.9.24 的发布说明及插件文档。新界面的 **Connectors** 替代旧 MCP 标签；较旧安装包的标签名称可能不同。安装包、Agent 后端与远程 profile 分别核对，不因菜单出现就认为服务已连通。
+
+### 先用局部文件夹完成只读 Connector 任务
+
+准备一个单独测试文件夹，其中只放 `sample.txt`（写入两行自己已知的内容）。目录里不放密钥、工作资料或整个 Home。按[外部系统接入实战](/docs/start/build/mcp-and-plugins)配置 filesystem MCP，限制为这个文件夹；它提供的文件工具可能包含写入能力，目录限制不等于只读权限。
+
+1. 在实际执行任务的 gateway/profile 中安装 server 依赖并保存 MCP 配置，再打开桌面的 Connectors 核对该 server。配置文件位于后端；远程连接不能把本机文件路径当成服务器路径。
+2. 需要连接或授权的条目先执行界面提供的 **Connect / Connect now**。插件安装完成只是代码已安装；服务进程、网络连接或 OAuth 同意仍须分别完成。没有外部账号的本地 filesystem 不需要假造 OAuth 步骤。
+3. 回到聊天，明确要求：“只读取测试目录中的 sample.txt，给出两行原文和一段摘要，不创建或修改文件。”核对实际调用的是目标 MCP 工具、读取路径和输出内容，不能只看自然语言说“已读取”。
+4. 完成后检查文件内容/时间及外部状态，确认没有额外写操作。模型请求可能收费；MCP 命令会安装依赖并运行本地程序，执行前阅读来源和权限。
+
+### 一个真实插件例子：Blender Lab（进阶，可选）
+
+这是官方插件目录中的 **Blender**：固定条目要求 Blender 5.1+、独立 MCP add-on、Git 与 uv，首次启动还会下载 Python 依赖。它的工具可用用户权限执行 Blender Python，因此不适合作为首次模型连通测试。未具备这些依赖时停在准备阶段，不反复点击连接。
+
+1. 先读目录条目的版本、来源与权限说明，备份自己的 Blender 文件；仅打开一个空测试场景。按插件 README 安装 add-on 和 server 依赖。
+2. 在目录安装 Blender 插件。记录插件版本/固定提交，再在 Connectors 使用 **Connect now** 连接它提供的 MCP server；确认 Blender 与 add-on 实际在线，不能用工具发现成功代替场景就绪。
+3. 回到当前聊天，检查插件工具和 skill 已生效。v0.21.5 支持安装后向已打开聊天提供工具/技能，但模型选择、权限、依赖失败仍可能阻止调用；必要时按错误检查而非不断重装。
+4. 明确授权一个测试动作：“仅在当前空场景创建一个立方体，命名为 Hermes_Test，不删除现有对象，不保存到工作文件。”观察目标工具调用和 Blender 中的对象；不要扩展到下载资产、渲染收费服务或操作已有项目。
+5. 验收后撤销测试对象或关闭不保存，断开 Connector。禁用/卸载插件、停止 server 与撤销外部凭据是三项不同操作；按插件及平台界面分别处理，再检查工具不再可用。
+
+[稳定 Blender 条目与权限披露](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/plugin-catalog/blender.yaml)、[插件 README](https://github.com/NousResearch/hermes-plugin-blender)。本文未安装或执行这个例子，依赖和界面以实际版本为准。
+
+### 授权、撤销与主机后端
+
+对云 Connector，只给完成任务所需的账户/资源范围，先用无敏感内容的测试资源。Disconnect 仅表示当前连接断开，可能不撤销外部平台长期授权；完成后到外部平台撤销 token/OAuth，核对当前 profile 凭据和工具状态。插件执行权限与 MCP 工具过滤也要分别检查，见[安全加固](/docs/start/practical/security-hardening)。
+
+桌面、host 多 profile 与 Gateway 有各自运行入口。先确认管理进程和当前后端，再按其 profile 的 Stop/Start/Restart 控制；不要为解决插件不出现重复启动另一个 backend。稳定发布的 host multiplexer 与 `gateway.standalone` 是运行配置选项，不是所有用户都应改成独立 Gateway。
+
+| 状态/错误 | 先确认 | 成功证据 |
+|---|---|---|
+| Installed，但未连接 | 是否还需 Connect now、依赖、账号同意 | server 连接状态和实际工具调用 |
+| Connected，但工具没有 | gateway/profile、权限、工具过滤与当前聊天 | 工具列表和指定测试任务 |
+| 本机可用、远端失败 | 依赖/路径/Key 是否在远端后端 | 远端同一 profile 完成小任务 |
+| 401 / 权限不足 | scope、资源范围、凭据有效期 | 对授权测试资源的读取 |
+| 撤销后还可用 | 外部授权、后台 server、缓存会话 | 外部授权失效且工具不可再调用 |
+
+本节验收分为依赖准备、安装、连接、当前会话调用、外部结果、撤销六步；没有完成的步骤如实记为未验证。
 
 ## ✅ 过关标准
 

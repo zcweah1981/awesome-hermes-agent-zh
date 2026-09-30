@@ -1,6 +1,8 @@
 # 04-智谱 GLM Coding Plan
 
-> 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。在 Hermes 里用 `hermes model` 选 `z.ai / GLM` provider 即可，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。
+复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+
+> 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。国内 Coding 同时明确 `GLM_BASE_URL`，再用 `hermes model` 选 `z.ai / GLM` provider，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。
 
 > 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
 
@@ -81,6 +83,12 @@ Hermes 官方 provider 文档已经明确列出：
 
 所以它不是第一站，而是“你已经想清楚要重点看 GLM”之后的页。
 
+## 🌏 国内 Coding 与按量 API 分开配置
+
+继续使用 `zai` / `GLM_API_KEY`。国内 Coding Plan 显式设置 `GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4`，避免自动探测找到可认证的其他 endpoint 后，误以为消耗了套餐。按量 `/api/paas/v4`、国际 Z.AI 与国内 Coding 的账户/计费不同。
+
+当前 `glm-5.3` 已进入 Coding Plan；`glm-5.3-flash` 的模态和账户可用性另查官方模型页。**GLM-5.3 不支持关闭思考**，不要沿用 `reasoning: none` 或 `thinking.type: disabled`。厂商支持 `low/high/max`，Hermes 的映射以对应版本为准，先验收实际请求与报错。国内套餐价未获取可靠正文，本页不猜价格或复制国际美元套餐。
+
 ## 🧰 怎么把 GLM 接进 Hermes
 
 这页的主线按 Hermes 原生 provider 路线来走：
@@ -140,11 +148,13 @@ Hermes 官方 provider 文档已经明确列出：
 - 写入：
 
 ```bash
-GLM_API_KEY=***
+GLM_API_KEY=替换为真实密钥
+GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4
 ```
 
 看到什么算成功：
-- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=***
+- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=替换为真实密钥
+GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4
 
 失败先查什么：
 - 是否写错变量名
@@ -249,6 +259,22 @@ hermes model
 - 默认先走原生 provider，不要先走 custom endpoint
 - 默认先完成一次最小验证，再去细化模型和工作流
 
+## 🖥️ 桌面短配置卡
+
+1. 先确认产品、账户地区与 Key 类型，选择 **`zai`**；国内 Coding 使用上述专用 Base URL；自动认证成功不证明计费路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`glm-5.3`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
+4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
+5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。
+
+## 📚 本次复核来源
+
+- [国内 Coding Plan](https://docs.bigmodel.cn/cn/coding-plan/overview)
+- [GLM-5.3 与思考限制](https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3)
+- [GLM-5.3-Flash](https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash)
+- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
+- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
+
 ## ➡️ 下一步
 
 完成后进入：
@@ -266,7 +292,7 @@ hermes model
 ## 🧾 R2 官方同步记录
 
 - source_id: `zhipu-glm`
-- checked_at: `2026-05-02`
+- checked_at: `2026-09-30`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md`
 - 本轮结论：已确认 GLM Coding Plan 快速开始、API Key 获取、Claude Code/通用兼容配置和 HTTP API 端点口径。

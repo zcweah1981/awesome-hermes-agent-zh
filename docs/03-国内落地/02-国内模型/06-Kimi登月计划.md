@@ -32,7 +32,13 @@
 
 在 [Kimi Code 文档](https://www.kimi.com/code/docs/)或 [Moonshot 开放平台](https://platform.kimi.ai/docs/guide/start-using-kimi-api)确认 Key 来源、模型权限及计费规则。套餐价格以[官方会员页](https://www.kimi.com/membership/pricing)实时显示为准。
 
-### 2. 使用模型向导
+### 🆔 API 模型与 Code 模型不是同一目录
+
+Moonshot 开放平台模型包括 `kimi-k3`、`kimi-k2.7-code` 等，按 API 账户的模型目录与计费验证。Kimi Code 使用 `k3`、`k3-256k`、`kimi-for-coding` 等 ID，不能把 API ID 填进 Code 套餐后假设可用。
+
+2026-09-11 起，Code 的 `kimi-for-coding` 已升级为 K2.8 Preview，**ID 不变**；模型版本更新不等于套餐权限扩大。K3、长上下文和高速版分别受会员档位限制，401 也可能是能力权限不足。下面保留稳定标签的 Key/endpoint 识别规则，不因新的厂商模型名称重写已核实映射。
+
+## 2. 使用模型向导
 
 ```bash
 hermes model
@@ -87,6 +93,23 @@ hermes chat -Q -q "请只回复：连接正常。"
 - [稳定标签凭据与 provider 注册](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)。
 - [稳定标签 Kimi endpoint 解析](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth_zai_kimi.py)：Key 前缀识别与显式覆盖优先级。
 - [Kimi Code 官方文档](https://www.kimi.com/code/docs/)、[Moonshot API 官方文档](https://platform.kimi.ai/docs/guide/start-using-kimi-api)：使用时复核账户和模型。
+
+## 🖥️ 桌面短配置卡
+
+1. 先确认产品、账户地区与 Key 类型，选择 **与 Key 来源对应的 `kimi-coding` / `kimi-coding-cn`**；保留原生 Key 前缀识别与 `KIMI_BASE_URL` 覆盖优先级，先核对套餐权限。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **API：`kimi-k3`；Code：`k3-256k` 或 `kimi-for-coding`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
+4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
+5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。
+
+## 📚 本次复核来源
+
+- [API 模型](https://platform.kimi.ai/docs/models)
+- [Code 模型](https://www.kimi.com/code/docs/kimi-code/models.html)
+- [Code 动态](https://www.kimi.com/code/docs/kimi-code/whats-new.html)
+- [官方 Hermes 接入](https://www.kimi.com/code/docs/third-party-tools/hermes.html)
+- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
+- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
 
 ## ➡️ 下一步
 

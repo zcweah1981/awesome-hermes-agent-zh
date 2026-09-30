@@ -1,4 +1,6 @@
-# 腾讯云 Token Plan：套餐、API Key 与 Hermes 接入
+# 腾讯云 Token Plan 接入 Hermes Agent：积分、API Key 与桌面配置
+
+复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：腾讯云 Token Plan 当前提供套餐专属 API Key，并列出多种兼容工具，
 > 但官方清单没有把 Hermes Agent 列为专项适配工具。本页给出的是 Hermes 自定义兼容
@@ -15,8 +17,7 @@
 
 ## 🔎 搜索收录速答
 
-腾讯云 Token Plan 适合已经在腾讯云生态里部署服务、希望用统一账户和预算接入 Hermes 的团队。判断是否该选它，重点看模型覆盖、OpenAI 兼容程度、国内网络稳定性和后续部署位置。如果你还在横向比较，建议同时看[阿里云百炼 Token Plan](/docs/china/models/alibaba-bailian-token-plan)和[DeepSeek 按量计费接口](/docs/china/models/deepseek-metered-api)。
-
+腾讯云 Token Plan 是本页的套餐产品：先区分个人通用/Hy 与企业产品，核对积分、套餐专属 API Key 和模型权限，再使用 Hermes 原生 `tencent-tokenplan`（默认 Anthropic）或 OpenAI 兼容备选配置。TokenHub 是另一条产品/provider 路线，不能将其 Key 或 endpoint 替代个人 Token Plan。[桌面默认模型配置](/docs/start/personalize/desktop-app)与[401/403 权限排查](/docs/issues/provider-endpoint)分别验收，保存成功不代表计费产品正确。
 
 ## 🚀 先看主线
 
@@ -54,12 +55,14 @@
 
 ## 💰 先看套餐，再判断值不值得买
 
-| 套餐 | 月费 | Tokens | 适合谁 | 我怎么理解 |
-|---|---:|---:|---|---|
-| Lite | ¥39 / 月 | 3500 万 Tokens / 月 | 新手尝鲜、先体验 | 门槛最低 |
-| Standard | ¥99 / 月 | 1 亿 Tokens / 月 | 日常使用、高性价比 | 最平衡的起步档 |
-| Pro | ¥299 / 月 | 3.2 亿 Tokens / 月 | 高频 AI 开发 | 更适合作为主力入口 |
-| Max | ¥599 / 月 | 6.5 亿 Tokens / 月 | 重度生产力用户 | 更像长期核心入口 |
+| 通用套餐 | 月费 | 每订阅月积分 |
+|---|---:|---:|
+| Lite | ¥39 | 780 |
+| Standard | ¥99 | 1,980 |
+| Pro | ¥299 | 5,980 |
+| Max | ¥599 | 11,980 |
+
+自 2026-08-31 北京时间 17:00 起采用积分抵扣。旧文的固定 Token 月配额不再适用；问答轮次与 Token 量只能按模型和工作负载估算。Hy 系列有独立档位与价格，不能使用上表替代。
 
 补充判断：
 - 当前中国站说明为：每个主账号（含子账号）最多同时持有 1 个通用 Token Plan 和
@@ -80,15 +83,7 @@
 
 ### 1）它卖的是“云生态统一入口”
 
-截至 2026-07-28，当前中国站把套餐分为通用 Token Plan 与 Hy Token Plan。通用套餐页
-列出的代表模型包括 DeepSeek-V4-Flash、DeepSeek-V4-Pro、MiniMax-M2.7、GLM-5.1 和
-GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购买和配置时必须以当前
-“可用模型列表”为准。
-
-这说明它的核心价值不是押中某一个模型，而是：
-- 先买一个腾讯云里的统一入口
-- 后面再根据任务切模型
-- 把模型选择留到真正使用阶段再做细化
+截至 2026-09-30，通用库包含 Auto（`tc-code-latest`）、DeepSeek（例如 `deepseek/deepseek-flash`）、`glm-5.3`、`glm-5.3-flash`、`minimax-m3`、`kimi-k3` 和 `mimo-v2.6-flash` 等。这里是腾讯目录 ID，不能照搬厂商直连 ID。`glm-5` / `glm-5.1` 计划于 **2026-10-09** 下线，应提前检查固定任务配置。模型库动态变化，以套餐表为准。
 
 ### 2）它把工具接入也当成卖点
 
@@ -114,8 +109,14 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 对 Hermes 用户来说，真正重要的是：
 - 这不是只适合官网里点点用的套餐
 - 它本身就把开发工具接入当成官方场景在推
-- 但官方当前工具清单没有列出 Hermes，不能把兼容接入写成腾讯云对 Hermes 的官方背书
-- 应先用 Hermes 的自定义兼容端点做最小验证，再决定是否长期使用
+- 官方 CCSwitch 文档已有 Hermes 步骤；仍需按自己的版本与套餐验证实际任务
+- 优先按下文原生 provider 配置；已有兼容端点时保持协议一致，分别验收请求与用量
+
+## 🔑 原生 provider 与账户限制
+
+Hermes v2026.9.24 支持 `tencent-tokenplan` / `TOKENPLAN_API_KEY`，默认 Anthropic endpoint：`https://api.lkeap.cloud.tencent.com/plan/anthropic`。OpenAI 备选为 `https://api.lkeap.cloud.tencent.com/plan/v3`，使用 custom 路线时按 OpenAI 协议配置；不要把完整 `/chat/completions` URL 填成 Base URL。
+
+通用与 Hy 套餐共用 `sk-tp-` Key；实际模型仍需对应套餐权限。个人套餐不得多人共享。TokenHub、企业产品和个人 Token Plan 是不同路线，不把 `tokenhub` provider 或企业 Key 当成个人套餐配置。
 
 ## 🔑 API Key 怎么拿，为什么它是这页核心
 
@@ -124,7 +125,7 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 ![腾讯云 Token Plan 获取 API Key 的官方页面真实截图](./assets/tencent-tokenplan-api-key-real-screenshot.webp)
 
 这张图只证明两件事：
-- 在 TokenHub > Token Plan 页面点击“生成密钥”
+- 历史截图展示旧控制台入口；当前应进入已购买产品的 Token Plan 密钥页面
 - 生成成功后复制套餐专属 API Key（格式类似 `sk-tp-xxx`）
 
 这页最关键的不是背一堆参数，而是先拿到这把套餐专属 Key。
@@ -185,7 +186,7 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 - 因为后面的 Hermes 或其他工具，接的就是这把 Key
 
 怎么做：
-- 打开 TokenHub > Token Plan 页面
+- 打开当前已购买产品的 Token Plan 密钥管理页面
 - 点击“生成密钥”
 - 复制保存这把专属 Key
 
@@ -202,7 +203,7 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 - 从腾讯云当前接入说明取得 Base URL、模型名和 Key，再按 Hermes 的自定义兼容端点字段配置
 
 为什么做：
-- 因为腾讯云当前没有 Hermes 专项接入页，“官方支持 Token Plan”不等于“官方保证 Hermes 适配”
+- 因为原生与兼容端点的协议不同，不能把某个工具的字段原样搬入另一条路线
 
 怎么做：
 - 先从腾讯云官方接入说明确认地址、模型和密钥
@@ -250,6 +251,24 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 - 默认先从最接近当前真实使用强度的档位选起
 - 默认先完成一次最小验证，再去精细化模型策略
 
+## 🖥️ 桌面短配置卡
+
+1. 先确认产品、账户地区与 Key 类型，选择 **`tencent-tokenplan`（默认 Anthropic）**；使用 `TOKENPLAN_API_KEY`；若走 OpenAI custom 则使用 `/plan/v3` 并保持协议一致。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`tc-code-latest` 或当前套餐支持的固定 ID**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
+4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
+5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。
+
+## 📚 本次复核来源
+
+- [套餐、模型与积分](https://cloud.tencent.com/document/product/1823/130060)
+- [积分规则](https://cloud.tencent.com/document/product/1823/133811)
+- [FAQ](https://cloud.tencent.com/document/product/1823/130119)
+- [CCSwitch/Hermes](https://cloud.tencent.com/document/product/1823/136601)
+- [接入配置](https://cloud.tencent.com/document/product/1823/130076)
+- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
+- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
+
 ## ➡️ 下一步
 
 完成后进入：
@@ -267,10 +286,10 @@ GLM-5；Hy 套餐使用腾讯自研混元模型。模型会更新或下线，购
 ## 🧾 R2 官方同步记录
 
 - source_id: `tencent-cloud-models`
-- checked_at: `2026-07-28`
+- checked_at: `2026-09-30`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md`
-- 本轮结论：已确认当前中国站套餐定位、通用/Hy 购买上限、可用模型入口、工具清单与 API Key 管理路径；腾讯云当前没有 Hermes 专项接入页。
+- 本轮结论：已确认当前中国站套餐定位、通用/Hy 购买上限、可用模型入口、工具清单与 API Key 管理路径；官方 CCSwitch 文档已提供 Hermes 步骤；原生 tencent-tokenplan 另按稳定源码配置。
 - 后续规则：价格表是当前快照；套餐、可用模型、控制台按钮、额度限制和兼容端点仍以厂商官方页面实时显示为准，Hermes 必须单独做最小兼容验证。
 - 官方来源：
   - https://cloud.tencent.com/act/pro/tokenplan

@@ -1,5 +1,7 @@
 # 📦 04-把 Hermes 装上去
 
+安装后按使用方式继续：[桌面 App 安装与首个任务](/docs/start/personalize/desktop-app)、[国内模型产品与 Key 配置](/docs/china/models)。终端安装或更新失败看[安装与环境排障](/docs/issues/install-environment)，模型请求返回 401、403、404 看[Provider 排障](/docs/issues/provider-endpoint)。
+
 > 想从桌面窗口开始，先走[桌面版安装与首个任务](../03-玩出花样/07-用桌面端操作%20Hermes.md)；本页提供官方终端安装路线。安装结束后分别验证命令、环境和模型回复。
 
 复核日期：2026-09-30；官方稳定标签 **v2026.9.24（Agent v0.21.5）**。安装器与桌面下载渠道可能继续更新，安装后记录实际版本；本文未执行真实安装或国内网络测试。

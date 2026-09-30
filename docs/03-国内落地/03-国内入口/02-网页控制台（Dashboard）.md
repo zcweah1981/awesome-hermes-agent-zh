@@ -1,4 +1,6 @@
-# 02-网页控制台（Dashboard）
+# Hermes Agent Dashboard 网页控制台：启动与远程访问
+
+Dashboard 是通过浏览器 URL 访问的网页控制台。本页处理服务启动、地址、认证与远程访问；要安装本机桌面 App，请看[Hermes 桌面版教程](/docs/start/personalize/desktop-app)。模型选择转到[国内模型配置](/docs/china/models)，消息入口或远程 Gateway 异常看[Gateway 排障](/docs/issues/gateway-messaging)。
 
 > 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
 

@@ -1,7 +1,7 @@
 # 🔌 05-把 Hermes 接进外部系统
 
 这一页只解决一件事：
-当你想让 Hermes 去用一个已经存在的外部工具或系统时，先用 MCP 跑通第一条接入主线。
+已有 MCP server 可手动接入；桌面已有可信目录插件时，也可从 Connectors 安装并连接。两条路线都要完成真实调用与撤销验收。
 
 ![结构图：当前阶段更自然的外部系统接入主线是 Hermes → MCP server → 外部工具系统；Plugins 在后位补充，不是这一页的主线](../../assets/rm2-5-mcp-and-plugins-01-main-route.webp)
 
@@ -10,7 +10,7 @@
 **适合谁**：想让 Hermes 调用 GitHub、数据库、内部 API 等已有外部工具或系统的用户。
 **不适合谁**：只在 CLI 里聊天、不需要接外部系统的用户。
 **最短路径**：确认外部系统可用 → 选择或部署 MCP server → 在 `config.yaml` 的 `mcp_servers` 中注册 → 重启 Hermes 验证工具出现。
-**关键限制**：需要先有一个可用的外部系统和对应的 MCP server（社区或自建）；MCP 是接入主线，Plugins 是后位补充——这页以 MCP 为主。
+**关键限制**：需要先有一个可用的外部系统和对应的 MCP server（社区或自建）；手动接外部协议服务可用 MCP；桌面目录插件可提供 MCP server、工具和 skill，按目标选择。
 **下一步**：继续阅读下方 [先判断：你是不是在做"外部系统接入"](#-先判断你是不是在做外部系统接入) 章节。
 
 ---
@@ -41,14 +41,14 @@
 
 ---
 
-## 🧭 为什么当前阶段先 MCP，不先钻 Plugins
+## 🧭 手动 MCP 与现成插件怎么选
 
 这不是说 Plugins 不重要。
 
 而是从用户视角，当前阶段更自然的主线是：
 
 - 你要接外部工具系统
-- MCP 就是默认入口
+- 可以先比较现成 Connector/plugin 与手动 MCP，不把插件一律放到后位
 - 接进来后，Hermes 会把这些能力当普通工具来用
 
 所以这一页不展开插件开发手册，只先帮你把“怎么接上一个外部系统”走通。
@@ -183,6 +183,28 @@ Hermes 新获得了一组工具，而不是多了一套平行宇宙机制。
 - 我知道成功标准不是配置存在，而是任务真的能通过外部系统完成
 
 ---
+
+## 🖥️ 文件 Connector 的最小实战
+
+以下是常见 filesystem MCP 的手动配置示例，需本机/后端有 Node.js 和 npm；首次启动会下载并执行依赖，请先检查官方 server 来源与可访问目录。把占位绝对路径替换成**后端机器**上的独立测试目录，目录只放已知内容的 `sample.txt`。
+
+```yaml
+mcp_servers:
+  test-files:
+    command: npx
+    args:
+      - -y
+      - '@modelcontextprotocol/server-filesystem'
+      - '/absolute/path/to/hermes-connector-test'
+```
+
+Windows 按自己的运行环境填写绝对路径；启动命令解析失败时检查 Node/npm 和 npx 路径，不复制 Linux 路径。不要把整个用户目录开放给 server。filesystem 具有文件写入工具，限制目录不是只读沙箱；在测试中只要求读取，进一步权限限制要按 server 支持的方式配置。
+
+随后按[桌面 Connector 实战](/docs/start/personalize/desktop-app)完成连接、当前会话读取、原文比对与撤销。若选择目录插件，先核对固定来源/依赖，再分别安装、Connect now 和授权；不同时注册同一个 server 的手动配置和插件实例。
+
+停止使用时禁用该 MCP 配置或断开连接，停止自己启动的 server，重新核对工具列表；云端账号还要单独撤销外部授权。教程示例未执行，不能据此声称文件读取已成功。
+
+[官方 filesystem server](https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem)、[Hermes 稳定插件说明](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/user-guide/features/plugins.md)。
 
 ## ➡️ 下一步
 完成后进入：

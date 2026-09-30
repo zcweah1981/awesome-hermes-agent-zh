@@ -1,4 +1,6 @@
-# Hermes Provider / Endpoint 报错：401、403、404 与模型排查
+# Hermes Agent 模型接入报错：401、403、404 与 Provider 排查
+
+遇到 `Unknown provider`、401、403 或 404 时，先核对产品与地区、provider、Key、协议、Base URL 和精确模型 ID。错误码是排查线索，最终以响应正文和厂商权限记录判断。已有兼容服务可看[自定义接口配置](/docs/china/models/openai-compatible-endpoint)，套餐选择看[国内模型路线](/docs/china/models)；桌面连接正常但模型请求失败也按本页处理。
 
 > 一句话结论：这一页只处理“Key 不过、401 / 403 / 404 / 429、model 不存在、custom endpoint 半通不通”这类问题。只要 `hermes` 命令本身正常，先不要再把问题归成安装失败。
 

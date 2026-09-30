@@ -1,6 +1,8 @@
 # 07-DeepSeek按量计费接口
 
-> 💡 **速答**：Hermes Agent 接入 DeepSeek 只需三步——充值余额 → 创建 API Key → 写入 `~/.hermes/.env` 里的 `DEEPSEEK_API_KEY=***`。在 Hermes 里用 `hermes model` 选 DeepSeek provider，默认先选 `deepseek-v4-flash`（低成本起步档），不需要买套餐。
+复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+
+> 💡 **速答**：Hermes Agent 接入 DeepSeek 只需三步——充值余额 → 创建 API Key → 写入 `~/.hermes/.env` 里的 `DEEPSEEK_API_KEY=***`。在 Hermes 里用 `hermes model` 选 DeepSeek provider，默认先选 `deepseek-flash`（低成本起步档），不需要买套餐。
 
 > 🎯 一句话先说清楚：如果你当前最重要的目标是"先用最低门槛把 Hermes 跑起来"，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
 
@@ -54,30 +56,20 @@ DeepSeek 当前官方中文价格页已经切到 `V4` 体系。
 - 你能不能接受“先充值余额，再按 token 实际消耗扣费”
 - 你是不是想走一条 Hermes 已原生支持的按量 provider 路线
 
-### 当前官方主模型（按官方中文价格页）
+### 当前模型与兼容 ID
 
-| 模型 | 模型版本 | 上下文 | 最大输出 | 适合谁 | 我怎么理解 |
-|---|---|---:|---:|---|---|
-| `deepseek-v4-flash` | DeepSeek-V4-Flash | 1M | 384K | 先跑通、日常主力、优先控成本 | 默认先看这一档 |
-| `deepseek-v4-pro` | DeepSeek-V4-Pro | 1M | 384K | 更高强度推理、复杂任务、更高预算 | 只有你明确需要更强能力时再上 |
+`deepseek-flash` 对应 DeepSeek-V4.1-Flash；`deepseek-v4-pro` 对应 DeepSeek-V4-Pro-0813，Pro 仍提供服务。旧 `deepseek-v4-flash` 等兼容 ID 仍可调用，但由 V4.1-Flash 服务并按 Flash 计费；不能凭旧公告说 Pro 已停用，也不能把旧 ID 当成固定旧模型。
 
-### 当前官方价格（按官方中文价格页）
+### 人民币／百万 tokens：峰谷分别核算
 
-| 模型 | 百万 tokens 输入（缓存命中） | 百万 tokens 输入（缓存未命中） | 百万 tokens 输出 | 我怎么理解 |
-|---|---:|---:|---:|---|
-| `deepseek-v4-flash` | 0.2 元 | 1 元 | 2 元 | 默认起步最友好 |
-| `deepseek-v4-pro` | 1 元 | 12 元 | 24 元 | 强很多，也贵很多 |
+| 模型与时段 | 输入缓存命中 | 输入未命中 | 输出 |
+|---|---:|---:|---:|
+| Flash 空闲 | ¥0.02 | ¥1 | ¥4 |
+| Flash 高峰 | ¥0.04 | ¥2 | ¥8 |
+| Pro 空闲 | ¥0.15 | ¥4.5 | ¥13.5 |
+| Pro 高峰 | ¥0.30 | ¥9 | ¥27 |
 
-### 关于 `deepseek-chat` / `deepseek-reasoner` 怎么理解
-
-DeepSeek 官方首页仍保留了这两个历史模型名的兼容说明：
-- `deepseek-chat` 对应历史上的非思考模式
-- `deepseek-reasoner` 对应历史上的思考模式
-- 官方价格页已经明确提示：这两个名字后续会逐步弃用，并兼容映射到 `deepseek-v4-flash`
-
-所以对 Hermes 用户，最稳的理解方式是：
-- 如果你的 Hermes 模型列表里已经显示 `deepseek-v4-flash` / `deepseek-v4-pro`，优先按当前官方命名理解
-- 如果你的现有配置或旧习惯里仍在用 `deepseek-chat` / `deepseek-reasoner`，把它理解成历史兼容名，不要再把它当长期主命名
+北京时间工作日（不含中国法定节假日）09:00–12:00、14:00–18:00 为高峰，其余时段为空闲。估算按真实输入、输出、缓存和调用时段计算；不是订阅额度，也不保证每次缓存命中。以官方价格页和实际账单为准。
 
 ## 🏆 为什么这页值得作为默认起步路线
 
@@ -309,6 +301,21 @@ hermes model
 - https://api-docs.deepseek.com/zh-cn/quick_start/pricing/
 - https://hermes-agent.nousresearch.com/docs/integrations/providers
 
+## 🖥️ 桌面短配置卡
+
+1. 先确认产品、账户地区与 Key 类型，选择 **`deepseek`**；`DEEPSEEK_API_KEY`；稳定原生默认 OpenAI endpoint 为 `https://api.deepseek.com/v1`。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`deepseek-flash`（或明确需要时 `deepseek-v4-pro`）**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
+4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
+5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。
+
+## 📚 本次复核来源
+
+- [当前模型、峰谷价与兼容名](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
+- [官方更新](https://api-docs.deepseek.com/zh-cn/updates/)
+- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
+- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
+
 ## ➡️ 下一步
 
 完成后进入：
@@ -320,7 +327,7 @@ hermes model
 ## 🧾 R2 官方同步记录
 
 - source_id: `deepseek`
-- checked_at: `2026-05-02`
+- checked_at: `2026-09-30`
 - change_type: `official-source-confirmation`
 - affected_doc: `docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md`
 - 本轮结论：已确认 DeepSeek 官方 OpenAI/Anthropic 兼容、base_url、当前模型名与旧模型名弃用提示；页面不写死密钥或账户信息。

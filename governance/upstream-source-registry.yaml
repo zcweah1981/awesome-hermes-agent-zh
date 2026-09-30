@@ -1,4 +1,4 @@
-updated: '2026-07-27'
+updated: '2026-09-30'
 owner: content-maintainers
 hermes_upstream_baseline_version: v2026.7.20
 version_ledger_path: governance/version-ledger.yaml
@@ -106,15 +106,17 @@ provider_sources_to_fill_in_r2:
     source_urls:
     - https://help.aliyun.com/zh/model-studio/hermes-agent
     - https://help.aliyun.com/zh/model-studio/token-plan-team-overview
-    - https://help.aliyun.com/zh/model-studio/token-plan-team-quickstart
+    - https://help.aliyun.com/zh/model-studio/token-plan-personal-overview
     affected_docs:
     - docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
   - id: tencent-cloud-models
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://cloud.tencent.com/act/pro/tokenplan
     - https://cloud.tencent.com/document/product/1823/130060
+    - https://cloud.tencent.com/document/product/1823/133811
+    - https://cloud.tencent.com/document/product/1823/136601
+    - https://cloud.tencent.com/document/product/1823/130076
     - https://cloud.tencent.com/document/product/1823/130119
     affected_docs:
     - docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
@@ -122,34 +124,35 @@ provider_sources_to_fill_in_r2:
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://docs.bigmodel.cn/cn/coding-plan/quick-start
-    - https://docs.bigmodel.cn/cn/guide/develop/http/introduction
+    - https://docs.bigmodel.cn/cn/coding-plan/overview
+    - https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3
+    - https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash
     affected_docs:
     - docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
   - id: minimax
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://platform.minimax.io/docs/token-plan/quickstart
-    - https://platform.minimax.io/docs/guides/quickstart-preparation
-    - https://platform.minimax.io/docs/api-reference/text-openai-api
+    - https://platform.minimax.cn/docs/token-plan/hermes-agent
+    - https://platform.minimax.cn/docs/guides/pricing-token-plan
+    - https://platform.minimax.cn/docs/token-plan/faq
     affected_docs:
     - docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
   - id: kimi-moonshot
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://www.kimi.com/code/docs/
-    - https://platform.kimi.ai/docs/guide/start-using-kimi-api
-    - https://platform.kimi.ai/docs/guide/kimi-k2-6-quickstart
+    - https://platform.kimi.ai/docs/models
+    - https://www.kimi.com/code/docs/kimi-code/models.html
+    - https://www.kimi.com/code/docs/third-party-tools/hermes.html
     affected_docs:
     - docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
   - id: deepseek
     area: 国内模型
     status: confirmed_provider_official_sources
     source_urls:
-    - https://api-docs.deepseek.com/
-    - https://api-docs.deepseek.com/guides/anthropic_api
+    - https://api-docs.deepseek.com/zh-cn/quick_start/pricing/
+    - https://api-docs.deepseek.com/zh-cn/updates/
     affected_docs:
     - docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   - id: custom-openai-compatible-provider
@@ -162,6 +165,16 @@ provider_sources_to_fill_in_r2:
     - https://lmstudio.ai/docs/
     affected_docs:
     - docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
+  - id: xiaomi-mimo
+    area: 国内模型
+    status: confirmed_provider_official_sources
+    source_urls:
+    - https://mimo.mi.com/docs/en-US/updates/model
+    - https://mimo.mi.com/docs/en-US/quick-start/summary/first-api-call
+    - https://mimo.mi.com/docs/en-US/quick-start/summary/model
+    - https://mimo.xiaomi.com/blog/mimo-v2-6-tool-call-repetition
+    affected_docs:
+    - docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   - id: aliyun-lightweight-server
     area: 国内部署
     status: confirmed_provider_official_sources

@@ -11,6 +11,12 @@ routes:
   updated: '2026-09-30'
   source_type: original
   nav_group: 00-文档总览
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
 - source: docs/01-从这开始/总览.md
   slug: /start
   module: start
@@ -161,24 +167,24 @@ routes:
   slug: /solutions/xiaohongshu
   module: solutions
   page_type: doc-page
-  title: Hermes 小红书 Agent：AI 内容助手与 5 分钟使用教程
+  title: "Hermes Agent 小红书内容工作流｜选题、文案与 Pack"
   section: xiaohongshu
-  description: 安装 Hermes 小红书 Agent 内容助手，用 5 分钟把主题整理成标题、开头、正文、封面短句和发布检查单。
+  description: "使用 Hermes Agent 生成小红书选题、标题、文案与标签，安装内容 Pack 并检查样例输出；内容需人工审核后按平台规则发布。"
   order: 10
   status: published
-  updated: '2026-07-29'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
   slug: /solutions/wechat-writer
   module: solutions
   page_type: doc-page
-  title: 03-公众号写作助手
+  title: "Hermes Agent 公众号写作工作流｜选题、草稿与 Pack"
   section: wechat-writer
-  description: 一句话先说清楚：这一页不是教你系统学公众号运营，而是帮你把一个观点、案例、产品更新或行业判断，直接压成“能发的一篇公众号草稿”。
+  description: "用 Hermes Agent 整理公众号选题、文章结构、正文草稿和发布检查清单，安装写作 Pack 后验收输出；平台接口与实际发布另行核对。"
   order: 11
   status: published
-  updated: '2026-07-29'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/04-PPT 助手.md
@@ -334,7 +340,7 @@ routes:
   description: Hermes 中文站国内部署、模型与入口选择总览。
   order: 24
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 03-国内落地
   source_refs:
@@ -355,9 +361,19 @@ routes:
   description: 帮助 OpenClaw 用户判断继续用、共存还是迁移到 Hermes。
   order: 25
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 04-从 OpenClaw 过来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/05-遇到问题/01-总览.md
   slug: /issues
   module: issues
@@ -398,9 +414,9 @@ routes:
     - hermes-official-docs
     - hermes-official-github
   source_review:
-    state: needs-official-check
-    checked_at: '2026-05-02'
-    note: Reference pages should be checked against official docs/GitHub before command or config changes.
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/01-从这开始/02-开始上手/01-总览.md
   slug: /start/getting-started
   module: start
@@ -557,12 +573,12 @@ routes:
   slug: /start/personalize/desktop-app
   module: start
   page_type: doc-page
-  title: 🖥️ 07-用桌面端操作 Hermes
+  title: "Hermes Agent 桌面版教程｜安装、模型配置与连接排障"
   section: desktop-app
-  description: 桌面版安装、国内模型与兼容接口、首个文件任务、办公实战、排障及远程后端连接。
+  description: "按操作系统和发行渠道安装 Hermes 桌面版，选择国内模型或 Ollama，完成首个工具任务，并排查 backend、连接和远程 Gateway 问题。"
   order: 39
   status: published
-  updated: '2026-09-30'
+  updated: "2026-09-30"
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
   source_refs:
@@ -716,9 +732,19 @@ routes:
   description: 这一页只解决一件事：
   order: 51
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 04-自己造东西
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 稳定发布、插件文档及 filesystem 示例核对；未安装或执行 Connector/API 实测。
 - source: docs/01-从这开始/04-自己造东西/06-把 Hermes 暴露成后端服务.md
   slug: /start/build/api-server
   module: start
@@ -841,12 +867,12 @@ routes:
   slug: /start/practical/token-cost-optimization
   module: start
   page_type: doc-page
-  title: 🧮 05-Token 成本优化避坑指南
+  title: "Hermes Agent Token 成本优化｜用量测量与配置检查"
   section: token-cost-optimization
-  description: 从工具表面、Skill 加载和上下文堆叠三层减少 Token 固定成本。
+  description: "按同一模型和任务测量 Hermes 的输入、输出、缓存与费用，核对支持的配置后做前后对比，避免用未经实测的节省比例选择方案。"
   order: 61
   status: published
-  updated: '2026-09-30'
+  updated: "2026-09-30"
   source_type: adapted
   nav_group: 05-实战应用
   source_refs:
@@ -998,9 +1024,19 @@ routes:
   description: 对外部署 Hermes 前必看的四道红线：用户白名单、命令审批、容器隔离、密钥保护。
   order: 72
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 05-实战应用
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/01-从这开始/05-实战应用/17-语音模式.md
   slug: /start/practical/voice-mode
   module: start
@@ -1245,9 +1281,19 @@ routes:
   description: 中性说明 Hermes、Claude Code、Codex、OpenClaw、自托管方案之间的选择边界。
   order: 90
   status: published
-  updated: '2026-06-04'
+  updated: '2026-09-30'
   source_type: third-party
   nav_group: 01-国内部署
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/03-国内落地/01-国内部署/07-国外自托管生态参考.md
   slug: /china/deploy/self-hosting-ecosystem
   module: china
@@ -1269,7 +1315,7 @@ routes:
   description: 一句话先说清楚：这一页不是让你马上挑最强模型，而是先帮你选对国内模型路线，再进入正确的厂商或接口页面。
   order: 92
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1278,9 +1324,9 @@ routes:
     official:
     - hermes-official-docs
   source_review:
-    state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
   slug: /china/models/alibaba-bailian-token-plan
   module: china
@@ -1290,7 +1336,7 @@ routes:
   description: 阿里云百炼 Token Plan 接入 Hermes 指南：按当前官方说明确认套餐、模型、凭据与 endpoint，再完成配置和最小验证。
   order: 93
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1302,18 +1348,18 @@ routes:
     - aliyun-bailian
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-07-28'
-    note: Current Alibaba Cloud plan facts and Hermes-specific setup were rechecked against official docs; re-check volatile pricing, models, and endpoints before future body changes.
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
   slug: /china/models/tencent-token-plan
   module: china
   page_type: doc-page
-  title: 腾讯云 Token Plan：套餐、API Key 与 Hermes 接入
+  title: "腾讯云 Token Plan 接入 Hermes Agent｜积分、API Key 与桌面配置"
   section: tencent-token-plan
-  description: 腾讯云 Token Plan 接入 Hermes 指南：按当前官方说明确认套餐、模型与凭据入口，再完成配置和最小验证。
+  description: "区分腾讯云 Token Plan 与其他产品，核对积分套餐和 API Key，使用 Hermes 原生 provider 或兼容接口配置，并检查桌面默认模型与用量。"
   order: 94
   status: published
-  updated: '2026-07-29'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1325,8 +1371,8 @@ routes:
     - tencent-cloud-models
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-07-28'
-    note: Current Tencent Cloud plan facts were rechecked against official docs; Hermes remains a locally verified compatibility path, not a provider-listed integration.
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
   slug: /china/models/glm-coding-plan
   module: china
@@ -1336,7 +1382,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
   order: 95
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1347,9 +1393,9 @@ routes:
     provider_pending:
     - zhipu-glm
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
   slug: /china/models/minimax-token-plan
   module: china
@@ -1359,7 +1405,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
   order: 96
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1370,9 +1416,9 @@ routes:
     provider_pending:
     - minimax
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
   slug: /china/models/kimi-plan
   module: china
@@ -1393,9 +1439,9 @@ routes:
     provider_pending:
     - kimi-moonshot
   source_review:
-    state: needs-provider-official-confirmation
+    state: provider-official-source-confirmed
     checked_at: '2026-09-30'
-    note: 已复核 v2026.9.24 Hermes 凭据和 endpoint 解析；厂商套餐、账户权限及实际 API 调用仍待验证。
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   slug: /china/models/deepseek-metered-api
   module: china
@@ -1405,7 +1451,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
   order: 98
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1416,9 +1462,9 @@ routes:
     provider_pending:
     - deepseek
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
   slug: /china/models/openai-compatible-endpoint
   module: china
@@ -1428,7 +1474,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你手上已经有一个稳定的 OpenAI-Compatible 入口——不管它是 LM Studio、Ollama、OneAPI、NewAPI，还是企业自己的私有网关——那么“自定义兼容接口”就是最省重复劳动的一条路线；前提是你真的已经有这个入口。
   order: 99
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1439,9 +1485,9 @@ routes:
     provider_pending:
     - custom-openai-compatible-provider
   source_review:
-    state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps Hermes config dependency; R2 must confirm compatible-provider constraints before body updates.
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
 - source: docs/03-国内落地/03-国内入口/01-总览.md
   slug: /china/entry
   module: china
@@ -1467,12 +1513,12 @@ routes:
   slug: /china/entry/dashboard
   module: china
   page_type: doc-page
-  title: 02-网页控制台（Dashboard）
+  title: "Hermes Agent Dashboard 网页控制台｜启动与远程访问"
   section: dashboard
-  description: 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
+  description: "使用浏览器访问 Hermes Dashboard：确认服务、监听地址和认证，查看会话与任务，再按需要配置安全的远程访问；桌面 App 使用单独教程。"
   order: 101
   status: published
-  updated: '2026-07-29'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1631,9 +1677,19 @@ routes:
   description: 一句话先说清楚：如果你把 Hermes 理解成 OpenClaw 的直接替代品，一开始就容易做错判断。更准确的理解是：OpenClaw 更像实验场，Hermes 更像沉淀层和长期运行层。
   order: 109
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 04-从OpenClaw过来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/04-从OpenClaw过来/03-继续用、共存，还是迁移.md
   slug: /openclaw/decision
   module: openclaw
@@ -1643,9 +1699,19 @@ routes:
   description: 一句话先说清楚：不要根据工具名做选择，而要根据你的任务是否稳定、是否重复、是否值得复用，以及你是不是已经需要自动化和团队协作来做选择。
   order: 110
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 04-从OpenClaw过来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/04-从OpenClaw过来/04-OpenClaw + Hermes 共存指南.md
   slug: /openclaw/coexistence
   module: openclaw
@@ -1655,9 +1721,19 @@ routes:
   description: 一句话先说清楚：共存不是折中方案，而是从“临时使用”走向“长期复用”的最稳升级路径。
   order: 111
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 04-从OpenClaw过来
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按正式发布、框架来源或研究原文修订能力与审计边界；未进行运行恢复、联调或漏洞实测。
 - source: docs/04-从OpenClaw过来/05-从 OpenClaw 到 Hermes：迁移路径.md
   slug: /openclaw/migration-path
   module: openclaw
@@ -1686,12 +1762,12 @@ routes:
   slug: /issues/install-environment
   module: issues
   page_type: doc-page
-  title: 02-安装 / 更新 / 环境问题
+  title: "Hermes Agent 安装与更新排障｜Git、Python 和环境错误"
   section: install-environment
-  description: 一句话结论：这一页只处理“命令起不来、装不上、更新后变怪、环境边界混乱”这类问题。只要你还没确认 `hermes` 命令本身是否正常，就先不要跳去查模型、Gateway、Tools。
+  description: "安装或更新 Hermes 失败时，按 Git、Python、权限和运行环境定位问题。记录完整错误，选择对应修复步骤，再检查版本与最小任务。"
   order: 114
   status: published
-  updated: '2026-07-29'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1707,12 +1783,12 @@ routes:
   slug: /issues/provider-endpoint
   module: issues
   page_type: doc-page
-  title: Hermes Provider / Endpoint 报错：401、403、404 与模型排查
+  title: "Hermes Agent 模型接入报错｜401、403、404 与 Provider 排查"
   section: provider-endpoint
-  description: 排查 Hermes Provider、Endpoint、API Key 和模型错误，覆盖 Unknown provider、401、403、404、429 与兼容性问题。
+  description: "按 401、403、404 和 Unknown provider 排查 Hermes 模型接入：核对产品凭据、provider、协议、Base URL 与模型 ID，再运行最小请求。"
   order: 115
   status: published
-  updated: '2026-07-28'
+  updated: "2026-09-30"
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1775,7 +1851,7 @@ routes:
   description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。
   order: 118
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1784,9 +1860,9 @@ routes:
     official:
     - hermes-official-docs
   source_review:
-    state: needs-official-check
-    checked_at: '2026-07-27'
-    note: Mapped to official tools, skills, and MCP documentation; re-check feature availability before updates.
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 稳定发布、插件文档及 filesystem 示例核对；未安装或执行 Connector/API 实测。
 - source: docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
   slug: /issues/config-profiles-environment
   module: issues
@@ -2071,6 +2147,30 @@ routes:
     state: official-source-confirmed
     checked_at: '2026-09-30'
     note: 核对官方 latest release、11 个 PR 的合并提交与稳定标签先后关系，以及桌面包和主干渠道文档；仅文档与源码核验。
+- source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
+  slug: /china/models/mimo-v26
+  module: china
+  page_type: doc-page
+  title: 📱 09-MiMo V2.6 接入：按量 API 与 Token Plan
+  section: models
+  description: 区分 MiMo 按量 API 与 Token Plan，配置原生 xiaomi provider、模型 ID 和桌面入口，说明工具重复调用及版本迁移。
+  order: 132
+  status: published
+  updated: '2026-09-30'
+  source_type: official-reference
+  nav_group: 02-国内模型
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-github
+    - hermes-official-docs
+    provider_pending:
+    - xiaomi-mimo
+  source_review:
+    state: provider-official-source-confirmed
+    checked_at: '2026-09-30'
+    note: MiMo 模型文档、技术文章与稳定 xiaomi 配置源码复核；未进行 API 或本地权重实测。
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'
