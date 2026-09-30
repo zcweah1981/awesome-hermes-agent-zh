@@ -12,6 +12,9 @@
 
 <a href="https://hermes-zh.com"><strong>🌐 访问中文站官网：https://hermes-zh.com</strong></a>
 
+桌面版主线：[安装、国内模型与办公实战](./docs/01-从这开始/03-玩出花样/07-用桌面端操作%20Hermes.md)。
+近期变化：[最新功能与版本边界](./docs/06-reference/12-最新功能与版本边界.md)（稳定版与主干分别说明）。
+
 在线版核心入口：
 [从这开始](https://hermes-zh.com/docs/start) ·
 [现成方案](https://hermes-zh.com/docs/solutions) ·

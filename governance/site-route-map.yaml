@@ -8,7 +8,7 @@ routes:
   description: Hermes 中文站文档总入口，帮助用户先选对模块入口。
   order: 1
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 00-文档总览
 - source: docs/01-从这开始/总览.md
@@ -20,7 +20,7 @@ routes:
   description: Hermes 中文站学习主线入口。
   order: 2
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 01-从这开始
 - source: docs/01-从这开始/01-先跑起来/01-总览.md
@@ -95,10 +95,10 @@ routes:
   page_type: doc-page
   title: 📦 04-把 Hermes 装上去
   section: install-hermes
-  description: 一句话先说清楚：这一页不再帮你选环境、也不再帮你进终端，它只做一件事——把 Hermes 真正装上去，并确认 `hermes` 命令已经能用。
+  description: 按系统选择官方桌面或终端安装入口，分层验证版本、环境和模型，说明平台与发行方式边界。
   order: 6
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -108,9 +108,9 @@ routes:
     - hermes-official-docs
     - hermes-official-github
   source_review:
-    state: needs-official-check
-    checked_at: '2026-05-02'
-    note: Quickstart install/config pages should be checked against official docs/GitHub before user-impacting changes.
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 按 v2026.9.24 安装和平台文档校正桌面、Windows Tier 1、Intel Mac 与 Python 边界；未进行安装和国内网络实测。
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -388,7 +388,7 @@ routes:
   description: Hermes 官方 Reference 的中文查表入口。
   order: 27
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 06-reference
   source_refs:
@@ -485,7 +485,7 @@ routes:
   description: 一句话先说清楚：这一阶段仍然只围绕一个助手，先把它调成“更像你、更懂你、更顺手”的长期助手，还不是进入多助手和系统层。
   order: 33
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 03-玩出花样
 - source: docs/01-从这开始/03-玩出花样/02-让 Hermes 更像你.md
@@ -559,16 +559,22 @@ routes:
   page_type: doc-page
   title: 🖥️ 07-用桌面端操作 Hermes
   section: desktop-app
-  description: 这一页只解决一件事：
+  description: 桌面版安装、国内模型与兼容接口、首个文件任务、办公实战、排障及远程后端连接。
   order: 39
   status: published
-  updated: '2026-04-28'
+  updated: '2026-09-30'
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
   source_review:
-    state: needs-review
-    checked_at: '2026-07-05'
-    note: Feature deep-dive. Must be checked against official docs for accuracy.
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 复核 v2026.9.24 桌面、安装、包版本与主干本地模型渠道边界；未安装或进行 API、网络和远程连接实测。
 - source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
   slug: /start/personalize/learn
   module: start
@@ -813,14 +819,24 @@ routes:
   slug: /start/practical/three-tier-model-routing
   module: start
   page_type: doc-page
-  title: 💰 04-月费 8 美金跑 Hermes：三层模型级联省钱指南
+  title: 💰 04-按任务选择模型：三层控费与实测指南
   section: three-tier-model-routing
-  description: 用三层模型路由把日常任务、分析任务和复杂任务分层控费。
+  description: 按任务选择主模型，区分辅助模型与供应商路由，用可复现任务核对成本。
   order: 60
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: adapted
   nav_group: 05-实战应用
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 核对 v2026.9.24 官方文档与源码；仅文档复核，未实测安装、API 或长期运行。
 - source: docs/01-从这开始/05-实战应用/05-Token 成本优化避坑指南.md
   slug: /start/practical/token-cost-optimization
   module: start
@@ -830,9 +846,19 @@ routes:
   description: 从工具表面、Skill 加载和上下文堆叠三层减少 Token 固定成本。
   order: 61
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: adapted
   nav_group: 05-实战应用
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 核对 v2026.9.24 官方文档与源码；仅文档复核，未实测安装、API 或长期运行。
 - source: docs/01-从这开始/05-实战应用/06-VPS 自托管 Hermes.md
   slug: /start/practical/vps-self-hosting
   module: start
@@ -842,9 +868,19 @@ routes:
   description: 在 VPS 上部署 Hermes，让 Telegram、Cron 和 Gateway 能 7×24 小时在线。
   order: 62
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: adapted
   nav_group: 05-实战应用
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 核对 v2026.9.24 官方文档与源码；仅文档复核，未实测安装、API 或长期运行。
 - source: docs/01-从这开始/05-实战应用/07-SOUL.md 人格定制.md
   slug: /start/practical/soul-persona
   module: start
@@ -1341,12 +1377,12 @@ routes:
   slug: /china/models/kimi-plan
   module: china
   page_type: doc-page
-  title: 06-Kimi登月计划
+  title: 🌙 06-Kimi登月计划
   section: kimi-plan
-  description: 🎯 一句话先说清楚：如果你最看重的是 Kimi 的 Coding 体验，或者你正在判断“先买会员权益”还是“直接走开放平台接口”，那这页必须拆成两条线看：`Kimi Code` 和 `Kimi API`。
+  description: 区分 Moonshot 国内、国际与 Kimi Code Key，核对原生 provider、endpoint 和计费路线。
   order: 97
   status: published
-  updated: '2026-07-29'
+  updated: '2026-09-30'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1358,8 +1394,8 @@ routes:
     - kimi-moonshot
   source_review:
     state: needs-provider-official-confirmation
-    checked_at: '2026-05-02'
-    note: R1 maps the route to registry ids only; R2 must confirm provider docs before changing body claims.
+    checked_at: '2026-09-30'
+    note: 已复核 v2026.9.24 Hermes 凭据和 endpoint 解析；厂商套餐、账户权限及实际 API 调用仍待验证。
 - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   slug: /china/models/deepseek-metered-api
   module: china
@@ -2013,6 +2049,28 @@ routes:
     state: needs-official-check
     checked_at: '2026-07-22'
     note: Version update guide based on official v0.19.0 release notes. Verify feature details against official changelog before publishing.
+- source: docs/06-reference/12-最新功能与版本边界.md
+  slug: /reference/latest-features
+  module: reference
+  page_type: doc-page
+  title: 🆕 12-最新功能与版本边界
+  section: latest-features
+  description: 区分 v2026.9.24 稳定版与后续主干变化，说明桌面、Cron、缓存、价格及国内入口修复的版本边界。
+  order: 131
+  status: published
+  updated: '2026-09-30'
+  source_type: official-reference
+  nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-github
+    - hermes-official-docs
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-09-30'
+    note: 核对官方 latest release、11 个 PR 的合并提交与稳定标签先后关系，以及桌面包和主干渠道文档；仅文档与源码核验。
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'

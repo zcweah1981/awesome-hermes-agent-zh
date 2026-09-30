@@ -57,6 +57,10 @@
 | 发布自检 | `governance/publishing-checklist.md` |
 | 方案包总览 | `packs/README.md` |
 
+## 近期功能页来源
+
+`docs/06-reference/12-最新功能与版本边界.md` 对应 `/reference/latest-features`，依据官方 v2026.9.24 release、11 个官方 PR 与合并提交/标签比较。桌面主教程保持 `/start/personalize/desktop-app`，依据固定标签安装、平台支持、desktop 文档与桌面 package.json，主干本地模型渠道说明单独标注。复核日期为 2026-09-30，不代表已完成安装或 API 实测。
+
 ## 维护规则
 1. 只记录当前真实存在的入口与模块，不预写未来占位页。
 2. 页面正式路径一旦切到编号中文目录树，治理文件同步跟进，不再继续维护旧英文目录口径。

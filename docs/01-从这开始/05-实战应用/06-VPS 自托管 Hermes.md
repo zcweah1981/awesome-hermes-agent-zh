@@ -1,260 +1,149 @@
 # 🏠 06-VPS 自托管 Hermes
 
-> 💡 **速答**：VPS 自托管 Hermes 的标准流程——SSH 登录服务器 → 装 Hermes → 配模型 → 启动 Gateway → 用 tmux/systemd/Docker 持久化运行。2 GB RAM VPS + DeepSeek 按量接口即可流畅跑，月费低至 $5。国内推荐腾讯云/阿里云轻量，海外推荐 RackNerd/DMIT。
+> 在 Linux VPS 上先跑通安装与模型，再验证消息 Gateway，最后选择 systemd 或 Docker 持久化。服务器开机、模型可达和消息平台网络可达都需要分别验收。
 
-> 一句话先说清楚：这一页教你在 VPS 上从零部署 Hermes，让它 7×24 小时在线，通过 Telegram 随时访问。
+复核日期：2026-09-30；依据官方稳定标签 **v2026.9.24（v0.21.5）**。本页完成官方文档与源码核对，未实际购买 VPS、安装 Hermes 或调用模型。
 
-![Hermes VPS 自托管架构图：Telegram、Nginx、Hermes Gateway、Worker Agents 与数据库/定时任务的部署关系](../../assets/practical-v2-06-vps-hosting-00-architecture-cn.webp)
+![VPS 自托管架构示意图](../../assets/practical-v2-06-vps-hosting-00-architecture-cn.webp)
 
----
+> 图用于理解组件；最小消息部署不要求 Nginx 或公开 Webhook。不要将示意图当成必须开放的端口清单。
 
 ## 👀 适合谁
 
-- 想让 Hermes 全天在线，不依赖本地电脑的人
-- 想通过 Telegram 远程访问 Agent 的人
-- 有一定 Linux 基础，能 SSH 到服务器的人
+希望电脑关机后消息入口与定时任务仍可运行，且能通过 SSH 管理 Linux 的用户。桌面版远程连接需要额外的 HTTP/WebSocket 后端；只启动消息 Gateway 不等于桌面远程入口已经就绪。
 
-**前提条件**：你有一台 VPS（或者准备买一台），能 SSH 登录。
+## ✍️ 1. 准备服务器
 
----
+选择官方支持的 Linux 环境，例如当前 Ubuntu。资源取决于工具、浏览器、并发和文件大小；2 GB 内存不能保证所有工作负载流畅。按实际任务观察峰值并预留空间，不把固定月费或未经测试的厂商套餐作为最低标准。
 
-## 🎯 为什么值得做
-
-在本地电脑跑 Hermes 有三个硬伤：
-
-1. **电脑关了 Agent 就断了**——Cron 任务不会执行，Telegram 消息收不到
-2. **内网穿透麻烦**——想从外面访问，还得配端口转发或 VPN
-3. **家庭网络不稳定**——断网断电就全停了
-
-VPS 解决全部三个问题：
-- 机房 7×24 在线，网络稳定
-- 公网 IP，Telegram Webhook 直接可达
-- 月费 $5-15，比电费还便宜
-
-![Hermes VPS 自托管运维清单：Docker、环境变量、日志监控、自动重启、防火墙与上线检查](../../assets/practical-v2-06-vps-hosting-01-ops-checklist-cn.webp)
-
----
-
-## ✍️ 选什么 VPS
-
-### 最低配置
-
-| 项目 | 最低 | 推荐 |
-|---|---|---|
-| RAM | 2 GB | 4 GB |
-| CPU | 1 vCPU | 2 vCPU |
-| 磁盘 | 10 GB SSD | 40 GB SSD |
-| 系统 | Ubuntu 22+ / Debian 12+ | 同左 |
-| 网络 | 能访问 LLM API 和 Telegram | 同左 |
-
-> Hermes 本身很轻量——它不跑本地模型，API 调用是远程的。2 GB RAM 够了，4 GB 更稳。
-
-### VPS 供应商选择
-
-| 供应商 | 起步价 | 特点 |
-|---|---|---|
-| RackNerd | ~$2-5/月 | 性价比高，年付更便宜 |
-| DMIT | ~$7/月 | 中美线路优化，延迟低 |
-| 腾讯云轻量 | ~$5/月 | 国内访问快，需备案 |
-| Servury | ~$15/月 | 匿名注册、加密货币支付、无 KYC |
-
-选哪家的核心判断：
-- 如果你主要用 Telegram + 海外 LLM API → 选海外 VPS
-- 如果你在国内、需要低延迟 → 选腾讯云/阿里云轻量
-
----
-
-## ✍️ 操作步骤：部署到 VPS
-
-### 第 1 步：系统准备
-
-SSH 登录你的 VPS，执行：
+通过 SSH 登录，以准备长期运行 Hermes 的同一账户执行安装和配置。Debian/Ubuntu 示例：
 
 ```bash
-# 更新系统
-apt update && apt install -y python3-pip python3-venv git tmux
-
-# 确认 Python 版本（需要 3.10+）
-python3 --version
+sudo apt update
+sudo apt install -y git curl xz-utils tmux
 ```
 
-### 第 2 步：安装 Hermes
+官方安装器会管理 Python 和其他依赖。若自行准备源码环境，稳定标签的 `pyproject.toml` 要求 **Python >=3.11,<3.14**，不能沿用旧文“3.10+”。
+
+## ✍️ 2. 使用官方安装入口
 
 ```bash
-# 创建虚拟环境
-python3 -m venv ~/hermes
-source ~/hermes/bin/activate
-
-# 安装
-pip install hermes-agent
-
-# 初始化配置
-hermes init
+curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 ```
 
-按提示选择你的 LLM Provider（OpenRouter / Anthropic / OpenAI / 自定义兼容接口）。
+脚本入口随上游变化，不保证固定在本文的稳定标签。安装后查看实际版本；需要严格锁版本时参考官方开发安装说明或下文的固定 Docker 标签。
 
-### 第 3 步：验证安装
+重新打开 SSH shell，确认 `hermes` 可执行，再配置模型：
 
 ```bash
-hermes doctor     # 检查环境
-hermes chat -Q -q "你好，确认一下你能正常回复。" 
+hermes --version
+hermes setup
+# 已安装后只调整模型，也可使用：
+hermes model
 ```
 
-如果收到正常回复，安装成功。
+官方不支持 `pip install hermes-agent` / PyPI 发行安装。旧文的 `hermes init` 应改用 `hermes setup`，不要将另一个同名包当作官方安装。
 
-### 第 4 步：配置 Telegram Gateway
+## ✍️ 3. 验证模型与消息入口
 
 ```bash
+hermes doctor
+hermes chat -Q -q "你好，请只回复：连接正常。"
 hermes gateway setup
+hermes gateway run
 ```
 
-按提示选择 Telegram → 粘贴 Bot Token → 输入 User ID。
+`hermes chat -Q -q` 是有效的最小问答命令，仍会调用模型并可能计费。向导配置 Telegram Bot Token 与允许访问的用户后，从自己的账号实际发送和接收一条消息；不要将 Bot Token 发给别人或写入仓库。
 
-### 第 5 步：持久化运行
+国内服务器需要分别验证模型 endpoint 和消息平台连通性。Telegram 通常需要访问 `api.telegram.org` 的出站 HTTPS；成功建立 SSH 不代表这些服务也可达。国内模型与飞书等入口可分别参考[国内落地](/docs/china)。
 
-**方式 A：tmux（最简单）**
+## ✍️ 4. 持久化运行：选择一种方式
+
+### 临时验证：tmux
 
 ```bash
 tmux new -s hermes
-hermes gateway
-# Ctrl+B 然后 D 脱离，Gateway 继续运行
+hermes gateway run
+# Ctrl+B，再按 D 脱离；重新连接后可用：
+# tmux attach -t hermes
 ```
 
-**方式 B：系统服务（推荐生产环境）**
+tmux 能在 SSH 断开后保留进程，但不保证机器重启或进程崩溃后自动恢复。
+
+### Linux systemd
+
+先结束前台 Gateway，再安装服务；不要让两个进程使用同一个 Bot Token。
 
 ```bash
 hermes gateway install --system
+hermes gateway start --system
+hermes gateway status --system
 ```
 
-这会创建 systemd 服务，开机自启、崩溃自动重启。
+系统级服务安装可能需要管理员权限。确认服务使用的账户、profile 和数据目录与前台测试一致。用户级服务是另一条路线，需要正确处理登录后启动与 linger，不能将两种服务混用。
 
-**方式 C：Docker**
+### Docker：独立替代路线
+
+不用先在宿主机安装 pip 包。以下固定标签示例只部署消息 Gateway，并将数据挂到官方镜像的 `/opt/data`：
 
 ```bash
-docker run -d --restart unless-stopped --name hermes \
-  -v $HOME/.hermes:/root/.hermes \
-  ghcr.io/nousresearch/hermes-agent:latest serve
+mkdir -p ~/.hermes
+docker run -it --rm   -v "$HOME/.hermes:/opt/data"   nousresearch/hermes-agent:v2026.9.24 setup
+
+docker run -d --restart unless-stopped --name hermes   -v "$HOME/.hermes:/opt/data"   nousresearch/hermes-agent:v2026.9.24 gateway run
+
+docker logs --tail 100 hermes
 ```
 
----
+先在 setup 中完成模型与消息平台配置。若复用旧数据目录，先备份并确认只有一个 Gateway 使用它；也可以使用单独的宿主数据目录。这条最小路线不需要发布管理端口。
 
-## 💡 使用心得
+![运维检查示意图](../../assets/practical-v2-06-vps-hosting-01-ops-checklist-cn.webp)
 
-### 心得 1：先用 tmux 跑通，再装服务
+## 🔄 升级与备份
 
-别一上来就 `gateway install --system`。
-先前台运行确认一切正常，再装服务。否则出问题了不好排查。
+Git 安装可以使用 `hermes update`，之后检查实际版本并重启对应 Gateway 服务。更新路径可能跟随主干；需要稳定版本边界时先阅读目标 release。
 
-### 心得 2：设置时区
-
-VPS 默认可能是 UTC。如果你在东八区：
+Docker 安装不支持用 `hermes update` 升级镜像。**pull 后 restart 仍然使用旧容器的镜像；必须重建容器**。下面以 v2026.9.24 为目标示范，实际升级时替换为已审核的目标标签：
 
 ```bash
-timedatectl set-timezone Asia/Shanghai
+# 先停止当前容器，备份宿主机数据目录（含密钥，妥善保存）
+docker stop hermes
+tar -czf hermes-backup.tar.gz -C "$HOME" .hermes
+
+docker pull nousresearch/hermes-agent:v2026.9.24
+docker rm hermes
+docker run -d --restart unless-stopped --name hermes   -v "$HOME/.hermes:/opt/data"   nousresearch/hermes-agent:v2026.9.24 gateway run
+docker logs --tail 100 hermes
 ```
 
-这会影响 Cron job 的执行时间。
+移除的是已停止的容器；不要删除宿主数据目录。目标镜像可能迁移配置，回退前先确认备份与旧版本兼容。备份含 `.env` 等凭据，不要把完整备份上传公开 GitHub。
 
-### 心得 3：用 Docker 更省心
+## 🩺 排障与验收
 
-Docker 部署的好处是环境隔离、升级简单：
+| 现象 | 先检查什么 | 验收动作 |
+|---|---|---|
+| `hermes` 找不到 | 安装器输出、shell 与 PATH | 新 SSH shell 中执行版本检查 |
+| 模型无法回复 | provider、Key、余额、endpoint 和网络 | 最小问答有正常模型回复 |
+| 本地回复但 Telegram 无响应 | Bot Token、访问用户、出站网络、重复 Gateway | 手机发送后收到一次回复 |
+| 重启后入口丢失 | 服务状态、运行账户、数据挂载 | 主动重启后复测消息 |
+| Cron 时间不对 | 系统与任务时区 | 用可观察的小任务确认触发时刻 |
+| pull 后版本没变 | 是否重建容器、目标镜像标签 | 检查新容器镜像与运行版本 |
 
-```bash
-# 升级
-docker pull ghcr.io/nousresearch/hermes-agent:latest
-docker restart hermes
-
-# 备份
-docker exec hermes tar czf - /root/.hermes > hermes-backup.tar.gz
-```
-
-### 心得 4：善用 `hermes send`
-
-如果你有一个脚本（比如 CI/CD 部署完成后）想通知 Telegram，不需要创建 Cron job：
-
-```bash
-echo "部署完成：$(date)" | hermes send --platform telegram
-```
-
----
-
-## ⚠️ 踩坑提醒
-
-### 1. VPS 访问不了 LLM API
-
-如果你用国内 VPS（腾讯云、阿里云），可能访问不了 OpenAI/Anthropic 的 API。
-解决方式：配置代理，或者用国产模型的兼容接口（DeepSeek、智谱 GLM 等）。
-
-### 2. 防火墙挡了 Telegram
-
-Telegram Bot API 需要访问 `api.telegram.org`（出站 HTTPS 443）。
-检查：
-
-```bash
-curl -s https://api.telegram.org
-```
-
-如果不通，检查 VPS 的安全组或防火墙规则。
-
-### 3. tmux 会话意外断开
-
-如果你用 tmux 跑 Gateway，SSH 断开时 tmux 会话应该还在。
-重新连接后：
-
-```bash
-tmux attach -t hermes
-```
-
-### 4. 磁盘满了
-
-Hermes 的日志、对话记录、Cron 输出会慢慢占磁盘。
-定期检查：
-
-```bash
-df -h
-du -sh ~/.hermes/
-```
-
----
-
-## ✅ 推荐做法
-
-| 做法 | 原因 |
-|---|---|
-| 选 4 GB RAM 的 VPS | 2 GB 够用但 4 GB 更稳 |
-| 用 systemd 或 Docker 持久化 | 不要靠 tmux 长期跑 |
-| 设置正确的时区 | Cron 才会在对的时间执行 |
-| 配置好 GitHub 备份 | VPS 随时可能需要迁移 |
-| 定期检查磁盘 | 日志和输出会持续增长 |
-
----
-
-## ✅ 过关标准
-
-- Hermes 在 VPS 上 7×24 运行
-- Telegram Bot 能正常收发消息
-- Gateway 作为系统服务运行，重启后自动恢复
-- 你知道怎么升级、查看日志、检查磁盘
-
----
-
-## 🔗 实战路径
-
-- 回到[实战应用总览](/docs/start/practical)，确认 VPS 自托管在完整实践路线中的位置。
+持续检查磁盘、日志和任务输出。不能以一次最小问答声称已验证 7×24 稳定运行；长期验收需要观察重启恢复和实际负载。
 
 ## ⬅️ 上一步
 
-- [**05-Token 成本优化避坑指南**](./05-Token%20成本优化避坑指南.md)
+- [05-Token 成本优化避坑指南](./05-Token%20成本优化避坑指南.md)
 
 ## ➡️ 下一步
 
-- [**07-SOUL.md 人格定制**](./07-SOUL.md%20人格定制.md)
+- [07-SOUL.md 人格定制](./07-SOUL.md%20人格定制.md)
+- 回到[实战应用总览](/docs/start/practical)。
 
-## 📖 出处
+## 📖 官方依据
 
-本文整理翻译自以下来源：
-
-- Hermes 官方文档 — [Quick Start / Install](https://hermes-agent.nousresearch.com/docs/)
-- Hermes 官方文档 — [Gateway Messaging Platforms](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/)
-- Hermes 官方文档 — [Environment Variables Reference](https://hermes-agent.nousresearch.com/docs/reference/environment-variables)
+- [稳定标签平台支持](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/getting-started/platform-support.md)：不支持 PyPI 安装。
+- [稳定标签安装说明](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/getting-started/installation.md)。
+- [稳定标签 Python 要求](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/pyproject.toml)。
+- [稳定标签 Docker 说明](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/user-guide/docker.md)：镜像、挂载、Gateway 与重建升级。
+- [稳定标签 Gateway 命令解析](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/subcommands/gateway.py)。

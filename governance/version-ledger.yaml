@@ -4,7 +4,7 @@
 
 ledger_meta:
   created_at: '2026-05-19'
-  updated_at: '2026-07-27'
+  updated_at: '2026-09-30'
   owner: content-maintainers
   project_id: hermes-zh
   # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
@@ -15,10 +15,10 @@ ledger_meta:
 current_content_baseline: v2026.7.20
 
 # 上游已发布的最新版本（由脚本或 CI 自动更新）
-latest_seen: v2026.7.20
+latest_seen: v2026.9.24
 
 # 最近一次检查上游的时间
-last_checked_at: '2026-07-27'
+last_checked_at: '2026-09-30'
 
 # 版本来源
 source:
@@ -28,7 +28,7 @@ source:
   docs_url: https://hermes-agent.nousresearch.com/docs
 
 # 当前台账状态
-status: current
+status: behind
 # 可选值: current | behind | syncing | review_blocked
 
 # ============================================================
