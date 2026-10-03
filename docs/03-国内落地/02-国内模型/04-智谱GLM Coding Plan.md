@@ -1,5 +1,7 @@
 # 04-智谱 GLM Coding Plan
 
+> 速查核验（2026-10-03）：本次速查尚未收录 GLM 产品：官方套餐概览可读取，但接入与 endpoint 资料在此次核验中无法完整读取，尚未核实，请查看[官方接入资料](https://docs.bigmodel.cn/cn/coding-plan/quick-start)。下文保留 2026-09-30 教程快照，不表示 GLM 不支持 Hermes。
+
 复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。国内 Coding 同时明确 `GLM_BASE_URL`，再用 `hermes model` 选 `z.ai / GLM` provider，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。

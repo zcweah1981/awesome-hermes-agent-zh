@@ -1,4 +1,205 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-version
+    name: hermes --version
+    task: 确认版本
+    surface: cli
+    usage: hermes --version
+    example: hermes --version
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 显示版本后退出，不开启会话。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/_parser.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-chat
+    name: hermes chat
+    task: 开始聊天
+    surface: cli
+    usage: 'hermes chat [-q TEXT] [--model MODEL]'
+    example: hermes chat
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 开启新对话；发送消息会使用已配置模型并可能计费。-q 在真实终端可开启交互，单次退出需 --oneshot。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/_parser.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-chat-continue
+    name: hermes chat --continue
+    task: 继续会话
+    surface: cli
+    usage: 'hermes chat --continue [SESSION_NAME]'
+    example: hermes chat --continue
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 继续终端记录或最近会话；带名称恢复对应会话，找不到会提示错误。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/main.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-chat-resume
+    name: hermes chat --resume
+    task: 恢复会话
+    surface: cli
+    usage: hermes chat --resume SESSION_ID
+    example: hermes chat --resume latest
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 恢复历史上下文，可能回到会话记录的工作目录；用 --no-restore-cwd 禁止目录恢复。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/main.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-sessions
+    name: hermes sessions
+    task: 查找历史
+    surface: cli
+    usage: 'hermes sessions list [--limit N]'
+    example: hermes sessions list --limit 10
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: list 只列记录，不切换、不删除会话；browse/export/delete 是不同子命令。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/sessions.py
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-model
+    name: hermes model
+    task: 配置模型
+    surface: cli
+    usage: 'hermes model [--refresh]'
+    example: hermes model
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 配置 provider、凭据与 profile 默认模型；影响后续会话。向导可能访问官方模型目录或认证服务。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/model.py
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-config
+    name: hermes config
+    task: 查看配置
+    surface: cli
+    usage: hermes config show
+    example: hermes config show
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: show 只查看配置；edit/set/unset 会修改当前 profile 配置，后续会话按配置运行。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/config.py
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-status
+    name: hermes status
+    task: 检查状态
+    surface: cli
+    usage: 'hermes status [--all] [--deep]'
+    example: hermes status
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 检查组件状态，不新建或重置聊天。--deep 是额外深入检查。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/status.py
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-doctor
+    name: hermes doctor
+    task: 诊断环境
+    surface: cli
+    usage: 'hermes doctor [--fix] [--live]'
+    example: hermes doctor
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: 默认检查配置与依赖；--fix 可修改配置，--live 明确启用真实网络健康探测。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/doctor.py
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: cli-tools
+    name: hermes tools
+    task: 配置工具
+    surface: cli
+    usage: 'hermes tools [--summary]'
+    example: hermes tools --summary
+    scope:
+      - 终端 CLI；当前 profile
+    sessionImpact: '--summary 只列各平台工具；不带参数的交互配置会持久修改平台启用项，区别于当前聊天的 /tools。'
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/cli-commands.md
+        revision: v2026.9.24
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/subcommands/tools.py
+        revision: v2026.9.24
+---
 # ⌨️ 02-CLI 命令参考
+
+> 速查核验（2026-10-03）：本次速查逐项对照 v2026.9.24 的 reference、参数解析器与会话实现；下方保留完整旧参考，不据此把全表或全仓 baseline 自动升级。
 
 > 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
 

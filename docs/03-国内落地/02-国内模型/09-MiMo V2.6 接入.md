@@ -1,3 +1,66 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: xiaomi-mimo-metered-native
+    vendor: 小米 MiMo
+    product: 开放平台按量 API
+    region: 中国区
+    connection: native
+    provider: xiaomi
+    protocol: openai
+    endpoint: 'https://api.xiaomimimo.com/v1'
+    modelIds:
+      - mimo-v2.6-flash
+      - mimo-v2.6-pro
+    permissions: 使用开放平台按量 Key（sk），按实际用量计费；与 Token Plan 的 Key/地址不同。
+    configExample: |-
+      hermes config set model.provider xiaomi
+      hermes config unset model.base_url
+      hermes config set XIAOMI_BASE_URL https://api.xiaomimimo.com/v1
+      hermes config unset model.api_mode
+      hermes config set XIAOMI_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default mimo-v2.6-flash
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://mimo.mi.com/docs/en-US/quick-start/summary/first-api-call'
+      - url: 'https://mimo.mi.com/docs/en-US/quick-start/summary/model'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: xiaomi-mimo-token-plan-native
+    vendor: 小米 MiMo
+    product: Token Plan
+    region: 中国区
+    connection: native
+    provider: xiaomi
+    protocol: openai
+    endpoint: 'https://token-plan-cn.xiaomimimo.com/v1'
+    modelIds:
+      - mimo-v2.6-flash
+      - mimo-v2.6-pro
+    permissions: 使用套餐专属 tp / ttp Key 与套餐 endpoint，不能混用按量 Key；个人/团队额度、可用模型及用法以套餐和控制台为准。
+    configExample: |-
+      hermes config set model.provider xiaomi
+      hermes config unset model.base_url
+      hermes config set XIAOMI_BASE_URL https://token-plan-cn.xiaomimimo.com/v1
+      hermes config unset model.api_mode
+      hermes config set XIAOMI_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default mimo-v2.6-flash
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://mimo.mi.com/docs/en-US/quick-start/summary/first-api-call'
+      - url: 'https://mimo.mi.com/docs/en-US/quick-start/summary/model'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+---
 # 📱 09-MiMo V2.6 接入：按量 API 与 Token Plan
 
 复核日期：2026-09-30。厂商模型更新与 Hermes v2026.9.24 原生 provider 配置分别核对；未购买套餐、下载权重或执行真实 API/桌面测试。

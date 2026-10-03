@@ -1,3 +1,134 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: tencent-token-plan-general-native
+    vendor: 腾讯云
+    product: Token Plan 个人版（通用）
+    region: 中国区
+    connection: native
+    provider: tencent-tokenplan
+    protocol: anthropic
+    endpoint: 'https://api.lkeap.cloud.tencent.com/plan/anthropic'
+    modelIds:
+      - glm-5.3
+      - minimax-m3
+      - kimi-k2.7-code
+    permissions: 个人专享，不共享；仅限允许的 AI 工具使用，不用于脚本、后端或非交互批量调用。通用与 Hy 共用 Key/URL，按模型消耗对应套餐；额度耗尽不会转为按量。企业产品与 TokenHub Key 不混用。
+    configExample: |-
+      hermes config set model.provider tencent-tokenplan
+      hermes config unset model.base_url
+      hermes config set TOKENPLAN_BASE_URL https://api.lkeap.cloud.tencent.com/plan/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set TOKENPLAN_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default glm-5.3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://cloud.tencent.com/document/product/1823/130060'
+      - url: 'https://cloud.tencent.com/document/product/1823/130076'
+      - url: 'https://cloud.tencent.com/document/product/1823/136601'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: tencent-token-plan-general-openai
+    vendor: 腾讯云
+    product: Token Plan 个人版（通用）
+    region: 中国区
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://api.lkeap.cloud.tencent.com/plan/v3'
+    modelIds:
+      - glm-5.3
+      - minimax-m3
+      - kimi-k2.7-code
+    permissions: 个人专享，不共享；仅限允许的 AI 工具使用，不用于脚本、后端或非交互批量调用。通用与 Hy 共用 Key/URL，按模型消耗对应套餐；额度耗尽不会转为按量。企业产品与 TokenHub Key 不混用。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.lkeap.cloud.tencent.com/plan/v3
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default glm-5.3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://cloud.tencent.com/document/product/1823/130060'
+      - url: 'https://cloud.tencent.com/document/product/1823/130076'
+      - url: 'https://cloud.tencent.com/document/product/1823/136601'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: tencent-token-plan-hy-native
+    vendor: 腾讯云
+    product: Token Plan 个人版（Hy）
+    region: 中国区
+    connection: native
+    provider: tencent-tokenplan
+    protocol: anthropic
+    endpoint: 'https://api.lkeap.cloud.tencent.com/plan/anthropic'
+    modelIds:
+      - hy3
+      - hy4-preview
+    permissions: 个人专享，不共享；仅限允许的 AI 工具使用，不用于脚本、后端或非交互批量调用。通用与 Hy 共用 Key/URL，按模型消耗对应套餐；额度耗尽不会转为按量。企业产品与 TokenHub Key 不混用。
+    configExample: |-
+      hermes config set model.provider tencent-tokenplan
+      hermes config unset model.base_url
+      hermes config set TOKENPLAN_BASE_URL https://api.lkeap.cloud.tencent.com/plan/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set TOKENPLAN_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default hy3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://cloud.tencent.com/document/product/1823/130060'
+      - url: 'https://cloud.tencent.com/document/product/1823/130076'
+      - url: 'https://cloud.tencent.com/document/product/1823/136601'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: tencent-token-plan-hy-openai
+    vendor: 腾讯云
+    product: Token Plan 个人版（Hy）
+    region: 中国区
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://api.lkeap.cloud.tencent.com/plan/v3'
+    modelIds:
+      - hy3
+      - hy4-preview
+    permissions: 个人专享，不共享；仅限允许的 AI 工具使用，不用于脚本、后端或非交互批量调用。通用与 Hy 共用 Key/URL，按模型消耗对应套餐；额度耗尽不会转为按量。企业产品与 TokenHub Key 不混用。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.lkeap.cloud.tencent.com/plan/v3
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default hy3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://cloud.tencent.com/document/product/1823/130060'
+      - url: 'https://cloud.tencent.com/document/product/1823/130076'
+      - url: 'https://cloud.tencent.com/document/product/1823/136601'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+---
 # 腾讯云 Token Plan 接入 Hermes Agent：积分、API Key 与桌面配置
 
 复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。

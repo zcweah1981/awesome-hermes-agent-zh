@@ -1,4 +1,133 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: aliyun-token-plan-personal-openai
+    vendor: 阿里云百炼
+    product: Token Plan 个人版
+    region: 中国区（北京）
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1'
+    modelIds:
+      - auto
+      - qwen3.8-max
+    permissions: 使用个人版专属 Key，仅限本人在允许的 AI 工具中交互使用；不用于脚本、应用后端或非交互批量调用。auto 自动路由；模型权限以订阅为准。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default auto
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://help.aliyun.com/zh/model-studio/hermes-agent'
+      - url: 'https://help.aliyun.com/zh/model-studio/token-plan-personal-overview'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: aliyun-token-plan-personal-anthropic
+    vendor: 阿里云百炼
+    product: Token Plan 个人版
+    region: 中国区（北京）
+    connection: compatible
+    provider: custom
+    protocol: anthropic
+    endpoint: 'https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic'
+    modelIds:
+      - auto
+      - qwen3.8-max
+    permissions: 使用个人版专属 Key，仅限本人在允许的 AI 工具中交互使用；不用于脚本、应用后端或非交互批量调用。auto 自动路由；模型权限以订阅为准。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default auto
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://help.aliyun.com/zh/model-studio/hermes-agent'
+      - url: 'https://help.aliyun.com/zh/model-studio/token-plan-personal-overview'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: aliyun-token-plan-team-openai
+    vendor: 阿里云百炼
+    product: Token Plan 团队版
+    region: 中国区（北京）
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1'
+    modelIds:
+      - auto
+      - qwen3.8-max
+    permissions: 使用团队坐席专属 Key，每坐席绑定成员，不能共享；团队版目前仅北京地域。auto 自动路由；额度与允许用途以订阅为准。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default auto
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://help.aliyun.com/zh/model-studio/hermes-agent'
+      - url: 'https://help.aliyun.com/zh/model-studio/token-plan-team-overview'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: aliyun-token-plan-team-anthropic
+    vendor: 阿里云百炼
+    product: Token Plan 团队版
+    region: 中国区（北京）
+    connection: compatible
+    provider: custom
+    protocol: anthropic
+    endpoint: 'https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic'
+    modelIds:
+      - auto
+      - qwen3.8-max
+    permissions: 使用团队坐席专属 Key，每坐席绑定成员，不能共享；团队版目前仅北京地域。auto 自动路由；额度与允许用途以订阅为准。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default auto
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://help.aliyun.com/zh/model-studio/hermes-agent'
+      - url: 'https://help.aliyun.com/zh/model-studio/token-plan-team-overview'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+---
 # 阿里云百炼 Token Plan：套餐、API Key 与 Hermes 接入
+
+> 速查核验（2026-10-03）：本次速查仅收录已核验的 custom 兼容路线。固定标签 Provider 文档列出原生 Token Plan，但当前可读取的注册代码与该说明不一致；原生映射本次尚未核实，请查看[官方 Provider 资料](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)，不要据此认为原生 provider 不存在。
 
 复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 

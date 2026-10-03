@@ -1,3 +1,70 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: kimi-code-cn-openai
+    vendor: Kimi
+    product: Kimi Code（有 Coding 额度的会员）
+    region: 中国区
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://api.kimi.com/coding/v1'
+    modelIds:
+      - kimi-for-coding
+    permissions: >-
+      使用 Kimi Code 会员 API Key。Go 不含 Coding 额度；Andante 及官方列明的 Plus/Pro 等档位支持
+      kimi-for-coding。K3、高速版、上下文权益另查会员；不混用 Moonshot 按量 Key。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.kimi.com/coding/v1
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default kimi-for-coding
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://www.kimi.com/code/docs/kimi-code/models.html'
+      - url: 'https://www.kimi.com/code/docs/third-party-tools/hermes.html'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: kimi-code-cn-anthropic
+    vendor: Kimi
+    product: Kimi Code（有 Coding 额度的会员）
+    region: 中国区
+    connection: compatible
+    provider: custom
+    protocol: anthropic
+    endpoint: 'https://api.kimi.com/coding'
+    modelIds:
+      - kimi-for-coding
+    permissions: >-
+      使用 Kimi Code 会员 API Key。Go 不含 Coding 额度；Andante 及官方列明的 Plus/Pro 等档位支持
+      kimi-for-coding。K3、高速版、上下文权益另查会员；不混用 Moonshot 按量 Key。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.kimi.com/coding
+      hermes config set model.api_mode anthropic_messages
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default kimi-for-coding
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://www.kimi.com/code/docs/kimi-code/models.html'
+      - url: 'https://www.kimi.com/code/docs/third-party-tools/hermes.html'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+---
 # 🌙 06-Kimi登月计划
 
 > 先分清手中的凭据属于 Moonshot 开放平台 API，还是 Kimi Code。Hermes 的 `kimi-coding` 名称不能单独说明计费路线：实际 endpoint 还取决于 Key 类型和显式覆盖配置。

@@ -1,4 +1,180 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-help
+    name: /help
+    task: 查看帮助
+    surface: slash
+    usage: '/help [skills|FILTER]'
+    example: /help
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 只显示帮助，不重置会话。可用项以当前表面和已安装技能为准。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-model
+    name: /model
+    task: 切换模型
+    surface: slash
+    usage: '/model [MODEL] [--provider NAME] [--global|--session]'
+    example: /model
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 只切换已配置 provider。通常当前会话生效；--global 持久化，首次未配置默认模型或启用默认持久化时另有例外。中途换模型会重建缓存并可能增加下轮费用。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-tools
+    name: /tools
+    task: 管理会话工具
+    surface: slash
+    usage: '/tools [list|disable|enable] [NAME...]'
+    example: /tools list
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: list 只查看；enable/disable 调整当前会话工具，不替代 hermes tools 的平台配置。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-new
+    name: /new
+    task: 新建会话
+    surface: slash
+    usage: '/new [NAME]'
+    example: /new 新任务
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 新会话 ID 与空历史，不是删除旧记录；运行中可中断当前任务。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-clear
+    name: /clear
+    task: 清屏并重开
+    surface: slash
+    usage: /clear
+    example: /clear
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 清空终端显示并新建会话；不要当成仅清屏。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-save
+    name: /save
+    task: 导出对话
+    surface: slash
+    usage: '/save <json|md|html> [FILENAME] [redact]'
+    example: /save md
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 导出当前对话到文件，不改变上下文；导出前检查敏感资料。裸命令只显示用法。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-title
+    name: /title
+    task: 命名会话
+    surface: slash
+    usage: '/title [NAME]'
+    example: /title 学习笔记
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 修改当前会话标题，保留上下文，便于恢复查找。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-history
+    name: /history
+    task: 查看对话
+    surface: slash
+    usage: /history
+    example: /history
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 显示当前会话历史，不切换会话或删除消息。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: command
+    id: slash-resume
+    name: /resume
+    task: 恢复命名会话
+    surface: slash
+    usage: '/resume [NAME]'
+    example: /resume 学习笔记
+    scope:
+      - Interactive CLI 会话
+    sessionImpact: 恢复先前命名会话并切换上下文；不带名称列候选。运行中不可随意切换。
+    sources:
+      - url: >-
+          https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/website/docs/reference/slash-commands.md
+        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/commands.py'
+        revision: v2026.9.24
+---
 # 🧭 03-Slash Commands 参考
+
+> 速查核验（2026-10-03）：本次速查仅逐项核验所收录命令，不重新声明下方全部旧参考表已核验。`/provider` 在此次读取的固定标签注册表和 reference 中未能交叉证明，尚未核实，未收入速查；请查看[固定命令注册表](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/commands.py)。
 
 > 这页查的是你已经进入 Hermes 对话之后，在会话里输入的 `/xxx` 命令。 如果你要查终端 shell 里的 `hermes ...`，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
 

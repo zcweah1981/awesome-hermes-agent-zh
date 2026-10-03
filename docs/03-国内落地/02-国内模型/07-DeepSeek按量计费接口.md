@@ -1,3 +1,67 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: deepseek-metered-native
+    vendor: DeepSeek
+    product: 开放平台按量 API
+    region: DeepSeek 官方开放平台
+    connection: native
+    provider: deepseek
+    protocol: openai
+    endpoint: 'https://api.deepseek.com/v1'
+    modelIds:
+      - deepseek-flash
+      - deepseek-v4-pro
+    permissions: 使用开放平台 API Key 与可用余额，按实际调用计费；不属于会员 Coding 套餐。固定 Hermes 原生地址带 /v1，厂商示例使用不带 /v1 的兼容根地址。
+    configExample: |-
+      hermes config set model.provider deepseek
+      hermes config unset model.base_url
+      hermes config set DEEPSEEK_BASE_URL https://api.deepseek.com/v1
+      hermes config unset model.api_mode
+      hermes config set DEEPSEEK_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default deepseek-flash
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://api-docs.deepseek.com/'
+      - url: 'https://api-docs.deepseek.com/quick_start/agent_integrations/hermes/'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: deepseek-metered-compatible
+    vendor: DeepSeek
+    product: 开放平台按量 API
+    region: DeepSeek 官方开放平台
+    connection: compatible
+    provider: custom
+    protocol: openai
+    endpoint: 'https://api.deepseek.com'
+    modelIds:
+      - deepseek-flash
+      - deepseek-v4-pro
+    permissions: 使用开放平台 API Key 与可用余额，按实际调用计费；不属于会员 Coding 套餐。固定 Hermes 原生地址带 /v1，厂商示例使用不带 /v1 的兼容根地址。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.deepseek.com
+      hermes config unset model.api_mode
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default deepseek-flash
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://api-docs.deepseek.com/'
+      - url: 'https://api-docs.deepseek.com/quick_start/agent_integrations/hermes/'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+---
 # 07-DeepSeek按量计费接口
 
 复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。

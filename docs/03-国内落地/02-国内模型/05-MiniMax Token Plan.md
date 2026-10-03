@@ -1,4 +1,74 @@
+---
+quick_reference:
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: minimax-token-plan-cn-native
+    vendor: MiniMax
+    product: Token Plan（订阅 Key）
+    region: 中国区
+    connection: native
+    provider: minimax-cn
+    protocol: anthropic
+    endpoint: 'https://api.minimax.cn/anthropic'
+    modelIds:
+      - MiniMax-M3
+      - MiniMax-M2.7
+    permissions: 使用有订阅席位或积分权限的订阅 Key，与普通按量 Key 分开。额度受 5 小时与周窗口限制，有积分时可覆盖合规超额；当前官方 endpoint 与固定版默认地址不同，原生路线须显式覆盖。
+    configExample: |-
+      hermes config set model.provider minimax-cn
+      hermes config unset model.base_url
+      hermes config set MINIMAX_CN_BASE_URL https://api.minimax.cn/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set MINIMAX_CN_API_KEY "<YOUR_API_KEY>"
+      hermes config set model.default MiniMax-M3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://platform.minimax.cn/docs/token-plan/hermes-agent'
+      - url: 'https://platform.minimax.cn/docs/api-reference/text-chat-anthropic'
+      - url: 'https://platform.minimax.cn/docs/token-plan/faq'
+      - url: 'https://platform.minimax.cn/docs/guides/pricing-token-plan'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+  - checkedAt: '2026-10-03'
+    hermesVersion: v2026.9.24
+    verification: docs-reviewed
+    kind: model
+    id: minimax-token-plan-cn-compatible
+    vendor: MiniMax
+    product: Token Plan（订阅 Key）
+    region: 中国区
+    connection: compatible
+    provider: custom
+    protocol: anthropic
+    endpoint: 'https://api.minimax.cn/anthropic'
+    modelIds:
+      - MiniMax-M3
+      - MiniMax-M2.7
+    permissions: 使用有订阅席位或积分权限的订阅 Key，与普通按量 Key 分开。额度受 5 小时与周窗口限制，有积分时可覆盖合规超额；当前官方 endpoint 与固定版默认地址不同，原生路线须显式覆盖。
+    configExample: |-
+      hermes config set model.provider custom
+      hermes config set model.base_url https://api.minimax.cn/anthropic
+      hermes config set model.api_mode anthropic_messages
+      hermes config set model.api_key "<YOUR_API_KEY>"
+      hermes config set model.default MiniMax-M3
+    diagnostics:
+      - /docs/issues/provider-endpoint
+    sources:
+      - url: 'https://platform.minimax.cn/docs/token-plan/hermes-agent'
+      - url: 'https://platform.minimax.cn/docs/api-reference/text-chat-anthropic'
+      - url: 'https://platform.minimax.cn/docs/token-plan/faq'
+      - url: 'https://platform.minimax.cn/docs/guides/pricing-token-plan'
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
+        revision: v2026.9.24
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
+        revision: v2026.9.24
+---
 # 05-MiniMax Token Plan
+
+> 速查核验（2026-10-03）：本次读取的[官方 Messages API](https://platform.minimax.cn/docs/api-reference/text-chat-anthropic)使用 `https://api.minimax.cn/anthropic`；固定 Hermes 注册默认地址仍为 `https://api.minimaxi.com/anthropic`。速查采用官方当前地址，原生配置显式写入 `MINIMAX_CN_BASE_URL`，不把旧默认地址当作本次已验证 endpoint。
 
 复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 

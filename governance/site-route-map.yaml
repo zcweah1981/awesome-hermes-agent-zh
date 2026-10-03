@@ -1336,7 +1336,7 @@ routes:
   description: 阿里云百炼 Token Plan 接入 Hermes 指南：按当前官方说明确认套餐、模型、凭据与 endpoint，再完成配置和最小验证。
   order: 93
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1348,8 +1348,8 @@ routes:
     - aliyun-bailian
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md
   slug: /china/models/tencent-token-plan
   module: china
@@ -1359,7 +1359,7 @@ routes:
   description: "区分腾讯云 Token Plan 与其他产品，核对积分套餐和 API Key，使用 Hermes 原生 provider 或兼容接口配置，并检查桌面默认模型与用量。"
   order: 94
   status: published
-  updated: "2026-09-30"
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1371,8 +1371,8 @@ routes:
     - tencent-cloud-models
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/03-国内落地/02-国内模型/04-智谱GLM Coding Plan.md
   slug: /china/models/glm-coding-plan
   module: china
@@ -1382,7 +1382,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
   order: 95
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1393,9 +1393,9 @@ routes:
     provider_pending:
     - zhipu-glm
   source_review:
-    state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    state: needs-official-check
+    checked_at: '2026-10-03'
+    note: 本次官方接入资料无法完整读取；保留9/30教程快照，GLM未收入速查，不表示产品不支持Hermes。
 - source: docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
   slug: /china/models/minimax-token-plan
   module: china
@@ -1405,7 +1405,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
   order: 96
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1417,8 +1417,8 @@ routes:
     - minimax
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/03-国内落地/02-国内模型/06-Kimi登月计划.md
   slug: /china/models/kimi-plan
   module: china
@@ -1428,7 +1428,7 @@ routes:
   description: 区分 Moonshot 国内、国际与 Kimi Code Key，核对原生 provider、endpoint 和计费路线。
   order: 97
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1440,8 +1440,8 @@ routes:
     - kimi-moonshot
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   slug: /china/models/deepseek-metered-api
   module: china
@@ -1451,7 +1451,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
   order: 98
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1463,8 +1463,8 @@ routes:
     - deepseek
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
   slug: /china/models/openai-compatible-endpoint
   module: china
@@ -1474,7 +1474,7 @@ routes:
   description: 🎯 一句话先说清楚：如果你手上已经有一个稳定的 OpenAI-Compatible 入口——不管它是 LM Studio、Ollama、OneAPI、NewAPI，还是企业自己的私有网关——那么“自定义兼容接口”就是最省重复劳动的一条路线；前提是你真的已经有这个入口。
   order: 99
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1485,9 +1485,9 @@ routes:
     provider_pending:
     - custom-openai-compatible-provider
   source_review:
-    state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    state: official-source-confirmed
+    checked_at: '2026-10-03'
+    note: 本次仅补充速查hub互链，教学模板不作为已核验产品。
 - source: docs/03-国内落地/03-国内入口/01-总览.md
   slug: /china/entry
   module: china
@@ -1914,7 +1914,7 @@ routes:
   description: 这页查的是你在终端 shell 里运行的 `hermes ...` 命令。 如果你要查聊天窗口里的 `/help`、`/tools`、`/model`，请看 [03-Slash Commands 参考](<./03-Slash%20Commands%20%E5%8F%82%E8%80%83.md>)。
   order: 121
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 06-reference
   source_refs:
@@ -1924,9 +1924,9 @@ routes:
     - hermes-official-docs
     - hermes-official-github
   source_review:
-    state: needs-official-check
-    checked_at: '2026-05-02'
-    note: Reference pages should be checked against official docs/GitHub before command or config changes.
+    state: official-source-confirmed
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/06-reference/03-Slash Commands 参考.md
   slug: /reference/slash-commands
   module: reference
@@ -1936,7 +1936,7 @@ routes:
   description: 这页查的是你已经进入 Hermes 对话之后，在会话里输入的 `/xxx` 命令。 如果你要查终端 shell 里的 `hermes ...`，请看 [02-CLI 命令参考](<./02-CLI%20%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83.md>)。
   order: 122
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 06-reference
   source_refs:
@@ -1946,9 +1946,9 @@ routes:
     - hermes-official-docs
     - hermes-official-github
   source_review:
-    state: needs-official-check
-    checked_at: '2026-05-02'
-    note: Reference pages should be checked against official docs/GitHub before command or config changes.
+    state: official-source-confirmed
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 - source: docs/06-reference/04-Profile 命令参考.md
   slug: /reference/profile-commands
   module: reference
@@ -2156,7 +2156,7 @@ routes:
   description: 区分 MiMo 按量 API 与 Token Plan，配置原生 xiaomi provider、模型 ID 和桌面入口，说明工具重复调用及版本迁移。
   order: 132
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: official-reference
   nav_group: 02-国内模型
   source_refs:
@@ -2169,11 +2169,11 @@ routes:
     - xiaomi-mimo
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-09-30'
-    note: MiMo 模型文档、技术文章与稳定 xiaomi 配置源码复核；未进行 API 或本地权重实测。
+    checked_at: '2026-10-03'
+    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 source_mapping_contract:
   version: r1
-  updated: '2026-05-02'
+  updated: '2026-10-03'
   registry: governance/upstream-source-registry.yaml
   fields:
     source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.
