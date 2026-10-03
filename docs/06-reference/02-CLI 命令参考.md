@@ -265,9 +265,9 @@ CLI 命令参考适合快速查 `hermes` 主命令、会话命令、profile 管�
 
 例如：
 
+[模型配置](/docs/reference/cli-commands#cli-model)、[继续会话](/docs/reference/cli-commands#cli-chat-continue)、[开始聊天](/docs/reference/cli-commands#cli-chat)的用法见同源卡。
+
 ```bash
-hermes model
-hermes chat --continue
 hermes gateway status
 ```
 
@@ -275,12 +275,7 @@ hermes gateway status
 
 而下面这些：
 
-```text
-/model
-/tools
-/help
-/new
-```
+聊天命令示例见[同源速查卡](/docs/reference/slash-commands#command-quick-reference)。
 
 属于会话中的 slash commands，不属于这页。
 
@@ -335,20 +330,26 @@ hermes gateway status
 
 ## ⚡ 5. 常用项速查
 
+已精选条目的参数、具体示例、会话和持久配置影响统一维护于本页顶部速查卡；下方保留未精选命令与完整解释。仅卡片中的条目逐项核验 v2026.9.24，旧参考不据此整体升级。
+
+- [hermes --version 同源用法、示例与作用域](/docs/reference/cli-commands#cli-version)
+- [hermes chat 同源用法、示例与作用域](/docs/reference/cli-commands#cli-chat)
+- [hermes chat --continue 同源用法、示例与作用域](/docs/reference/cli-commands#cli-chat-continue)
+- [hermes chat --resume 同源用法、示例与作用域](/docs/reference/cli-commands#cli-chat-resume)
+- [hermes sessions 同源用法、示例与作用域](/docs/reference/cli-commands#cli-sessions)
+- [hermes model 同源用法、示例与作用域](/docs/reference/cli-commands#cli-model)
+- [hermes config 同源用法、示例与作用域](/docs/reference/cli-commands#cli-config)
+- [hermes status 同源用法、示例与作用域](/docs/reference/cli-commands#cli-status)
+- [hermes doctor 同源用法、示例与作用域](/docs/reference/cli-commands#cli-doctor)
+- [hermes tools 同源用法、示例与作用域](/docs/reference/cli-commands#cli-tools)
+
 ### 5.1 最常查的入口命令
 
 | 命令 | 中文说明 | 什么时候用 |
 |---|---|---|
 | `hermes` | 默认进入交互式聊天 | 直接开始用 Hermes |
-| `hermes chat -q "..."` | 单次非交互提问 | 脚本、一次性调用、快速验证 |
-| `hermes chat --continue` | 继续最近会话 | 接上次工作 |
-| `hermes chat --resume <id>` | 恢复指定会话 | 明确知道要回哪条 session |
-| `hermes model` | 交互式设置 provider 与 model | 新增 provider、填 API Key、切默认模型 |
 | `hermes setup` | 进入总配置向导 | 第一次配置或集中补配置 |
 | `hermes setup --portal` | 🆕 v0.19.0 通过 Nous Portal 一次 OAuth 配齐模型 + 4 个工具网关 | 快速初始化整套环境 |
-| `hermes doctor` | 诊断配置和依赖问题 | 不知道哪里坏了时先查 |
-| `hermes status` | 看当前状态 | 快速看模型、认证、平台状态 |
-| `hermes config` | 查看 / 编辑配置 | 想改 `config.yaml` 时 |
 | `hermes gateway` | 运行或管理消息网关 | Telegram / Discord / Slack / WhatsApp 等 |
 | `hermes -z <prompt>` | 脚本式单次调用：输入 prompt，只输出最终回复，不输出其他内容 | 脚本集成、CI/CD、管道调用 |
 | `hermes desktop` | 启动桌面端应用 | 想用 GUI 而不是终端 |
@@ -360,7 +361,6 @@ hermes gateway status
 
 | Option | 中文说明 | 使用场景 |
 |---|---|---|
-| `--version`, `-V` | 显示版本并退出 | 确认版本 |
 | `--profile <name>`, `-p <name>` | 本次调用指定 profile | 临时切换环境 |
 | `--resume <session>`, `-r <session>` | 恢复指定历史会话 | 精确恢复 |
 | `--continue [name]`, `-c [name]` | 恢复最近会话或最近同标题会话 | 日常继续工作 |
@@ -377,10 +377,7 @@ hermes gateway status
 
 | 你看到的命令 | 真正作用 | 不要混淆成什么 |
 |---|---|---|
-| `hermes model` | 在终端里做 provider / model 的完整配置 | 不是会话内 `/model` |
-| `/model` | 在已进入的会话里切换已配置好的模型 | 不是新增 provider 的入口 |
 | `hermes setup` | 总配置向导 | 不是聊天入口 |
-| `hermes doctor` | 排查环境 / 配置问题 | 不是修改模型的入口 |
 | `hermes gateway run` | 前台运行 gateway | 不是 systemd 服务安装命令 |
 | `hermes gateway install` | 安装系统服务 | 不是立刻进入配对流程 |
 
@@ -412,7 +409,7 @@ hermes chat [options]
 
 | 参数 | 中文说明 |
 |---|---|
-| `-q, --query "..."` | 单次非交互 prompt |
+| `-q, --query "..."` | 初始提问与单次退出边界见[聊天卡](/docs/reference/cli-commands#cli-chat) |
 | `-m, --model <model>` | 本次运行临时指定模型 |
 | `-t, --toolsets <csv>` | 本次运行指定 toolsets |
 | `--provider <provider>` | 强制指定 provider |
@@ -429,7 +426,7 @@ hermes chat [options]
 中文站补充理解：
 
 - 想“马上开始聊天”，用 `hermes` 或 `hermes chat`
-- 想“一次问完就退出”，用 `hermes chat -q`
+- 想“一次问完就退出”，先查看[聊天速查卡的单次退出说明](/docs/reference/cli-commands#cli-chat)
 - 想“接着上次干”，优先记住 `--continue`
 - 想“这次先限制工具权限”，看 `--toolsets`
 
@@ -452,9 +449,7 @@ hermes chat [options]
 
 如果你要“新增 provider”，不要在会话里折腾 `/model`，直接退出会话后运行：
 
-```bash
-hermes model
-```
+[hermes model 同源用法、示例与作用域](/docs/reference/cli-commands#cli-model)
 
 ### 6.3 配置、状态与维护命令
 
@@ -486,9 +481,7 @@ hermes config <subcommand>
 
 #### `hermes status`
 
-```bash
-hermes status [--all] [--deep]
-```
+[hermes status 同源用法、示例与作用域](/docs/reference/cli-commands#cli-status)
 
 适合快速看：
 
@@ -499,9 +492,7 @@ hermes status [--all] [--deep]
 
 #### `hermes doctor`
 
-```bash
-hermes doctor [--fix]
-```
+[hermes doctor 同源用法、示例与作用域](/docs/reference/cli-commands#cli-doctor)
 
 适合：
 
@@ -519,7 +510,7 @@ hermes doctor [--fix]
 | Python / Hermes 红 | 安装或 PATH 没生效 | [02-安装更新与环境问题](../05-遇到问题/02-安装更新与环境问题.md) |
 | Provider / Gateway 红 | 已离开安装层 | [03-模型 Provider](../05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md) 或 [05-Gateway Messaging](../05-遇到问题/05-Gateway Messaging 与推送问题.md) |
 
-`--fix` 参数会尝试自动修复部分常见问题（例如 linger 没开、shell PATH 没生效等），但不会动你的 `config.yaml`。
+修改风险与网络探测边界以[doctor 同源速查卡](/docs/reference/cli-commands#cli-doctor)为准；不要把诊断与修复选项混用。
 
 #### 维护相关命令
 
@@ -573,14 +564,12 @@ hermes gateway <subcommand>
 | `hermes logs` | 查看 / tail / 过滤日志 | 看 agent、errors、gateway 日志 |
 | `hermes backup` | 备份 Hermes home | 升级前做快照 |
 | `hermes import` | 从 zip 恢复备份 | 迁移或回滚配置 |
-| `hermes sessions` | 管理会话 | 浏览、导出、删除、重命名 session |
 | `hermes insights` | 分析最近一段时间的使用情况 | 做复盘或观察来源 |
 
 ### 6.6 工具、技能、MCP 与扩展命令
 
 | 命令 | 中文说明 | 你通常什么时候会查 |
 |---|---|---|
-| `hermes tools` | 配置各平台可用工具 | 想限制 / 开启工具时 |
 | `hermes skills` | 浏览、安装、更新、管理 skills | 想装 skill 或查 skill 来源时 |
 | `hermes mcp` | 管理 MCP server 配置 | 想加、测、配 MCP server 时 |
 | `hermes plugins` | 管理插件 | 想启用 / 禁用插件时 |

@@ -248,21 +248,13 @@ quick_reference:
 
 例如：
 
-```bash
-hermes model
-hermes chat --continue
-```
+[模型配置](/docs/reference/cli-commands#cli-model)、[继续会话](/docs/reference/cli-commands#cli-chat-continue)、[开始聊天](/docs/reference/cli-commands#cli-chat)的用法见同源卡。
 
 属于 CLI。
 
 而：
 
-```text
-/model
-/tools
-/new
-/help
-```
+聊天命令示例见[同源速查卡](/docs/reference/slash-commands#command-quick-reference)。
 
 属于 Slash Commands。
 
@@ -301,32 +293,35 @@ Hermes 里并不是所有 `/xxx` 都是写死的。
 
 如果你想新增 provider，不要在会话里一直试 `/model`，应该退出到终端再运行：
 
-```bash
-hermes model
-```
+[hermes model 同源用法、示例与作用域](/docs/reference/cli-commands#cli-model)
 
 ## ⚡ 5. 常用项速查
+
+已精选条目的参数、具体示例、会话和持久配置影响统一维护于本页顶部速查卡；下方保留未精选命令与完整解释。仅卡片中的条目逐项核验 v2026.9.24，旧参考不据此整体升级。
+
+- [/help 同源用法、示例与作用域](/docs/reference/slash-commands#slash-help)
+- [/model 同源用法、示例与作用域](/docs/reference/slash-commands#slash-model)
+- [/tools 同源用法、示例与作用域](/docs/reference/slash-commands#slash-tools)
+- [/new 同源用法、示例与作用域](/docs/reference/slash-commands#slash-new)
+- [/clear 同源用法、示例与作用域](/docs/reference/slash-commands#slash-clear)
+- [/save 同源用法、示例与作用域](/docs/reference/slash-commands#slash-save)
+- [/title 同源用法、示例与作用域](/docs/reference/slash-commands#slash-title)
+- [/history 同源用法、示例与作用域](/docs/reference/slash-commands#slash-history)
+- [/resume 同源用法、示例与作用域](/docs/reference/slash-commands#slash-resume)
 
 ### 5.1 最常用的会话类命令
 
 | Command | 中文说明 | 什么时候用 |
 |---|---|---|
-| `/new` | 开新会话 | 想从零开始 |
 | `/reset` | `/new` 的别名 | 同上 |
-| `/clear` | 清屏并开始新会话 | 想把当前终端界面清干净 |
-| `/history` | 查看对话历史 | 回看上下文 |
-| `/save` | 保存当前对话 | 手动保存记录 |
 | `/retry` | 重试上一条消息 | 上一轮回答异常 |
 | `/undo` | 撤销上一轮对话 | 想回退一步 |
-| `/title` | 设置当前会话标题 | 给会话命名 |
 | `/status` | 看当前 session 信息 | 快速确认当前状态 |
-| `/resume [name]` | 恢复历史命名会话 | 回某条旧会话 |
 
 ### 5.2 最常用的配置类命令
 
 | Command | 中文说明 | 什么时候用 |
 |---|---|---|
-| `/model [model-name]` | 查看或切换当前模型 | 已配置好 provider 后切换模型 |
 | `/provider` | 查看当前 provider 与可用 provider | 想知道当前在哪个 provider 上 |
 | `/verbose` | 切换工具进度显示模式 | 调整输出详细程度 |
 | `/fast [normal\|fast\|status]` | 切换 fast mode | 想调速度策略 |
@@ -342,7 +337,6 @@ hermes model
 
 | Command | 中文说明 | 什么时候用 |
 |---|---|---|
-| `/tools [list\|disable\|enable]` | 管理当前 session 的工具 | 想临时开关某类工具 |
 | `/toolsets` | 查看可用 toolsets | 想知道有哪些工具包 |
 | `/browser [connect\|disconnect\|status]` | 管理本地浏览器连接 | 需要本地 Chrome CDP |
 | `/skills` | 搜索、安装、查看或管理 skills | 想装 / 查 skills |
@@ -352,10 +346,6 @@ hermes model
 
 | 你看到的命令 | 真正作用 | 不要混淆成什么 |
 |---|---|---|
-| `/model` | 切换已配置好的模型 | 不是新增 provider |
-| `hermes model` | 新增 provider / API Key / OAuth / 默认模型 | 不是会话内切换命令 |
-| `/tools` | 管理当前 session 工具 | 不是全局平台工具配置 |
-| `hermes tools` | 管理平台级工具配置 | 不是临时会话开关 |
 | `/plan` | 在会话中启用 plan skill 生成计划 | 不是直接执行任务 |
 | `/browser` | 管理本地浏览器连接状态 | 不是网页搜索本身 |
 
@@ -382,22 +372,16 @@ hermes model
 
 | Command | 中文说明 |
 |---|---|
-| `/new` | 开启新 session |
 | `/reset` | `/new` 别名 |
-| `/clear` | 清屏并开新 session |
-| `/history` | 查看对话历史 |
-| `/save` | 保存当前会话 |
 | `/retry` | 重试上一条消息 |
 | `/undo` | 删除上一轮 user/assistant 交换 |
 | `/learn` | **[v0.18.0+]** 将当前会话中的成功经验固化为新 Skill |
 | `/journey` | **[v0.18.0+]** 查看当前任务的逻辑演进与状态路径 |
-| `/title` | 给当前会话设置标题 |
 | `/compress [focus topic]` | 手动压缩上下文 |
 | `/rollback [number]` | 查看或恢复文件系统 checkpoints |
 | `/snapshot [create\|restore <id>\|prune]` | 管理 Hermes 状态快照 |
 | `/stop` | 停掉后台进程 |
 | `/queue <prompt>` | 把 prompt 排到下一轮 |
-| `/resume [name]` | 恢复历史命名会话 |
 | `/agents` | 查看当前 session 的 active agents / tasks |
 | `/background <prompt>` | 开一个后台 session 跑任务 |
 | `/btw <question>` | 用当前上下文提一个不落盘的侧问 |
@@ -418,7 +402,6 @@ hermes model
 | Command | 中文说明 |
 |---|---|
 | `/config` | 查看当前配置 |
-| `/model [model-name]` | 查看或切换当前模型 |
 | `/provider` | 查看当前 provider |
 | `/personality` | 切换预设 personality |
 | `/verbose` | 调工具显示层级 |
@@ -430,21 +413,7 @@ hermes model
 | `/yolo` | 切换 YOLO |
 | `/indicator` | 切换状态指示器风格（kaomoji/emoji/unicode/ascii） |
 
-其中 `/model` 支持的常见写法包括：
-
-```text
-/model
-/model claude-sonnet-4
-/model provider:model
-/model custom:model
-/model custom:name:model
-/model custom --global
-```
-
-重点记住：
-
-- 不加 `--global`，通常只影响当前 session
-- `--global` 才会把变更持久化到 config
+其中 `/model` 的参数、示例与持久配置例外见[同源模型切换卡](/docs/reference/slash-commands#slash-model)。
 
 ### 6.4 Tools & Skills 类命令
 
@@ -452,7 +421,6 @@ hermes model
 
 | Command | 中文说明 |
 |---|---|
-| `/tools [list\|disable\|enable] [name...]` | 管理当前 session 工具 |
 | `/toolsets` | 查看可用 toolsets |
 | `/browser [connect\|disconnect\|status]` | 管理 browser CDP 连接 |
 | `/skills` | 搜索 / 安装 / 查看 skills |

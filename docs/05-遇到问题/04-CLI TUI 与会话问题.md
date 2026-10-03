@@ -62,9 +62,7 @@ hermes
 - 输入 `/`，看命令补全是否出现
 - 退出后再试：
 
-```bash
-hermes --continue
-```
+查看[会话恢复同源卡](/docs/reference/cli-commands#cli-chat-continue)，确认恢复目标后复制示例。
 
 怎么理解结果：
 - 连 `hermes` 都进不去：先回 [02-安装 / 更新 / 环境问题](./02-安装更新与环境问题.md)
@@ -228,14 +226,10 @@ hermes chat -q "..."
 
 先做什么：
 如果你只是想继续最近一次会话：
-```bash
-hermes --continue
-```
+查看[会话恢复同源卡](/docs/reference/cli-commands#cli-chat-continue)，确认恢复目标后复制示例。
 
 如果你要恢复指定会话：
-```bash
-hermes --resume 会话ID
-```
+查看[会话恢复同源卡](/docs/reference/cli-commands#cli-chat-resume)，确认恢复目标后复制示例。
 
 不要把下面这个动作默认理解成“恢复旧会话”：
 ```bash
@@ -425,3 +419,5 @@ hermes cron list
 - [常用斜杠命令与会话管理](/docs/start/getting-started/slash-commands-and-sessions)
 
 如果当前页没有命中症状，先回到[遇到问题总入口](/docs/issues)重新按问题类型分流。
+
+> 命令互链更新：2026-10-03。恢复命令的参数、版本与影响以同源速查卡为准；原排障解释和未精选命令没有整体重新核验。
