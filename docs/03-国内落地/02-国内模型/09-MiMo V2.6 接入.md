@@ -63,38 +63,21 @@ quick_reference:
 ---
 # 📱 09-MiMo V2.6 接入：按量 API 与 Token Plan
 
-复核日期：2026-09-30。厂商模型更新与 Hermes v2026.9.24 原生 provider 配置分别核对；未购买套餐、下载权重或执行真实 API/桌面测试。
+内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。厂商模型更新与 Hermes v2026.9.24 原生 provider 配置分别核对；未购买套餐、下载权重或执行真实 API/桌面测试。
 
 ## 🎯 先选择产品路线
 
-MiMo V2.6 系列于 2026-09-22 发布，本页优先说明 `mimo-v2.6-pro` 与 `mimo-v2.6-flash`。先按账户允许的模型选择，不能把官网能力宣传当作 Hermes 全部模态已联调。
+MiMo V2.6 系列于 2026-09-22 发布，已核验的模型 ID 见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。先按账户允许的模型选择，不能把官网能力宣传当作 Hermes 全部模态已联调。
 
-| 路线 | Base URL | Key 与计费边界 |
-|---|---|---|
-| 按量 API | `https://api.xiaomimimo.com/v1` | 开放平台按量 Key，按真实用量计费 |
-| Token Plan | `https://token-plan-cn.xiaomimimo.com/v1` | 套餐专用 `tp` / `ttp` Key；账户权益、模型、额度与用途以套餐说明为准 |
-
-两类 Key 和地址不能混用。这里不复制尚未独立确认的价格或套餐配额；调用前查官方计费和账户余量。已有其他平台的 MiMo 额度，也不等于持有小米直连 Key。
+按量与 Token Plan 的地址、密钥类型及权益见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。两类 Key 和地址不能混用。这里不复制尚未独立确认的价格或套餐配额；调用前查官方计费和账户余量。已有其他平台的 MiMo 额度，也不等于持有小米直连 Key。
 
 ## ⚙️ 原生 xiaomi provider
 
-Hermes 稳定版支持 `xiaomi`，读取 `XIAOMI_API_KEY`；默认地址为按量 API，可用 `XIAOMI_BASE_URL` 覆盖。以下内容写入所用 profile 的环境变量文件，真实 Key 不放进聊天、截图或仓库：
-
-```dotenv
-XIAOMI_API_KEY=替换为对应产品的真实密钥
-```
-
-Token Plan 路线另设置：
-
-```dotenv
-XIAOMI_BASE_URL=https://token-plan-cn.xiaomimimo.com/v1
-```
-
-随后运行 `hermes model`，选择 Xiaomi MiMo，输入精确 ID `mimo-v2.6-flash` 或 `mimo-v2.6-pro`。不是把 provider 写成模型名，也不是沿用旧菜单中的 `mimo-v2-pro`。切回按量时删除或改回遗留 Base URL 覆盖，并核对实际请求路线。
+原生 provider、环境变量、endpoint 覆盖及精确模型 ID 统一见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。复制对应产品的最小配置，在所用 profile 中替换密钥占位符并保存；真实 Key 不放进聊天、截图或仓库。切回按量时删除或改回遗留 Base URL 覆盖，并核对实际请求路线。
 
 ## 🖥️ 桌面短配置卡
 
-1. 产品/地区 → 正确 Key → `xiaomi` / OpenAI 兼容协议 → 对应 Base URL。
+1. 在[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)选产品与区域，再把同一条路线的 Key、provider、协议与 Base URL 映射到桌面设置。
 2. 在 **Settings → Model** 保存 profile 默认模型；当前聊天输入框另选同一个精确 ID，核对本机或远端后端 profile。
 3. 目录没有新 ID 时用手动添加；空目录行为随版本不同，参阅[桌面教程](/docs/start/personalize/desktop-app)。
 4. 自行完成短问答，再让 Agent 读取一个测试文本并总结，核对实际工具调用、产物和厂商用量。Test 与任务请求可能收费，执行前确认额度。

@@ -69,7 +69,7 @@ quick_reference:
 
 > 先分清手中的凭据属于 Moonshot 开放平台 API，还是 Kimi Code。Hermes 的 `kimi-coding` 名称不能单独说明计费路线：实际 endpoint 还取决于 Key 类型和显式覆盖配置。
 
-复核日期：2026-09-30；依据 Hermes 官方稳定标签 **v2026.9.24（v0.21.5）**。完成文档与源码核对，未购买套餐或进行 API 调用测试。价格、会员权限、额度和可用模型请在厂商页面核对。
+内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；依据 Hermes 官方稳定标签 **v2026.9.24（v0.21.5）**。完成文档与源码核对，未购买套餐或进行 API 调用测试。价格、会员权限、额度和可用模型请在厂商页面核对。
 
 ## 👀 适合谁
 
@@ -85,7 +85,7 @@ quick_reference:
 |---|---|---|---|
 | Moonshot 国际开放平台 API Key | `KIMI_API_KEY` / `kimi-coding` | `https://api.moonshot.ai/v1` | 国际账户、余额、模型权限 |
 | Moonshot 国内开放平台 API Key | `KIMI_CN_API_KEY` / `kimi-coding-cn` | `https://api.moonshot.cn/v1` | 国内账户、余额、模型权限 |
-| Kimi Code Key（`sk-kimi-` 前缀） | 原生 Kimi provider；国际 provider 也接受 `KIMI_CODING_API_KEY` 别名 | 自动识别为 `https://api.kimi.com/coding` | Code Key 是否有效、当前套餐是否允许目标用法 |
+| Kimi Code Key | 见[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference) | 见卡中对应协议的 endpoint | Code Key 是否有效、当前套餐是否允许目标用法 |
 
 默认 Moonshot 映射不因 provider 名称含 `coding` 而失效。另一方面，稳定版源码也确实支持按 `sk-kimi-` 前缀识别 Code endpoint，因此不能写成“接 Hermes 只能走开放平台 API”。
 
@@ -101,9 +101,9 @@ quick_reference:
 
 ### 🆔 API 模型与 Code 模型不是同一目录
 
-Moonshot 开放平台模型包括 `kimi-k3`、`kimi-k2.7-code` 等，按 API 账户的模型目录与计费验证。Kimi Code 使用 `k3`、`k3-256k`、`kimi-for-coding` 等 ID，不能把 API ID 填进 Code 套餐后假设可用。
+Moonshot 开放平台模型包括 `kimi-k3`、`kimi-k2.7-code` 等，按 API 账户的模型目录与计费验证。本次已核验的 Kimi Code ID 与兼容配置见[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference)；其它 Code ID 未纳入速查，不能把 API ID 填进 Code 套餐后假设可用。
 
-2026-09-11 起，Code 的 `kimi-for-coding` 已升级为 K2.8 Preview，**ID 不变**；模型版本更新不等于套餐权限扩大。K3、长上下文和高速版分别受会员档位限制，401 也可能是能力权限不足。下面保留稳定标签的 Key/endpoint 识别规则，不因新的厂商模型名称重写已核实映射。
+Code 模型版本更新不等于套餐权限扩大。K3、长上下文和高速版分别受会员档位限制，401 也可能是能力权限不足。下面保留稳定标签的 Key/endpoint 识别规则，不因新的厂商模型名称重写已核实映射。
 
 ## 2. 使用模型向导
 
@@ -122,7 +122,7 @@ KIMI_API_KEY=替换为真实密钥
 KIMI_CN_API_KEY=替换为真实密钥
 ```
 
-按自己的路线填写对应变量，不要把相同 Key 同时放进两种账户线路。Kimi Code Key 按原生 provider 向导配置，并确认实际 endpoint；不要因为变量配置完成就认为账户权益已经验证。
+按自己的路线填写对应变量，不要把相同 Key 同时放进两种账户线路。Kimi Code 的本次可复制路线见[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference)，按对应兼容协议配置；上述 Moonshot 原生识别教程未作为已核验产品收录。不要因为变量配置完成就认为账户权益已经验证。
 
 ### 3. 做一次最小问答
 
@@ -163,8 +163,8 @@ hermes chat -Q -q "请只回复：连接正常。"
 
 ## 🖥️ 桌面短配置卡
 
-1. 先确认产品、账户地区与 Key 类型，选择 **与 Key 来源对应的 `kimi-coding` / `kimi-coding-cn`**；保留原生 Key 前缀识别与 `KIMI_BASE_URL` 覆盖优先级，先核对套餐权限。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **API：`kimi-k3`；Code：`k3-256k` 或 `kimi-for-coding`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

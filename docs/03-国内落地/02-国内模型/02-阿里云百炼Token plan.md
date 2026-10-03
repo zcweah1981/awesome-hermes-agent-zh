@@ -129,7 +129,7 @@ quick_reference:
 
 > 速查核验（2026-10-03）：本次速查仅收录已核验的 custom 兼容路线。固定标签 Provider 文档列出原生 Token Plan，但当前可读取的注册代码与该说明不一致；原生映射本次尚未核实，请查看[官方 Provider 资料](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)，不要据此认为原生 provider 不存在。
 
-复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：阿里云当前提供 Hermes Agent 专项接入说明，Token Plan 个人版和团队版
 > 都可通过兼容端点接入。套餐价格、模型清单和促销会变化；配置前仍应以当前官方
@@ -207,7 +207,7 @@ quick_reference:
 
 ### 1）它卖的不是一个模型，而是一个多模型入口
 
-截至 2026-09-30，官方 Hermes 示例默认模型为 `auto`；希望固定路线时，可按所购套餐支持范围选精确 ID，例如 `qwen3.8-max`。自动路由不能当作某个固定模型的成本或能力保证。
+已核验的默认与固定模型 ID 见[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)。自动路由不能当作某个固定模型的成本或能力保证。
 
 模型会更新或下线，完整可用范围应回到 Token Plan 个人版或团队版的“支持的模型”页面确认。
 
@@ -244,7 +244,7 @@ quick_reference:
 
 **个人版限本人交互使用，不用于后台脚本、Cron、应用后端或批量调用。**需要自动化时先确认团队版或按量产品的许可与账户权益，不因 Hermes 有定时任务就推断套餐允许。
 
-稳定版另提供原生中国区 provider `alibaba-token-plan-cn`，使用 `ALIBABA_TOKEN_PLAN_CN_API_KEY`，OpenAI endpoint 为 `https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1`。这是原生入口，不能和下文 custom Anthropic 的 `api_mode` 混写。厂商官方 custom/Anthropic 示例仍有效；迁移前记录旧配置并选择一条协议路线，不需要为了原生菜单重买 Key。
+本次可复制的兼容协议配置与个人/团队权益集中在[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)。原生映射尚未核实的边界见页首说明；迁移前记录旧配置，选择一条协议路线。
 
 ## 🧰 怎么把阿里云百炼 Token Plan 接进 Hermes
 
@@ -301,18 +301,8 @@ quick_reference:
 - 因为阿里云当前 Hermes Agent 页面默认使用 Anthropic 兼容协议，并明确给出这五项配置
 
 怎么做：
-- 在终端里执行：
-
-```bash
-hermes config set model.provider custom
-hermes config set model.base_url https://token-plan.cn-beijing.maas.aliyuncs.com/apps/anthropic
-hermes config set model.api_mode anthropic_messages
-hermes config set model.api_key YOUR_API_KEY
-hermes config set model.default auto
-```
-
-官方也说明 Hermes 支持 OpenAI 兼容协议：此时使用以
-`/compatible-mode/v1` 结尾的 Base URL，并移除 `model.api_mode` 配置。两套协议不要混写。
+- 打开[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)，按已购买的个人版或团队版选择协议。
+- 复制对应最小配置，替换密钥占位符并在所用 profile 中执行；两套协议不要混写。
 
 看到什么算成功：
 - 这些配置已经写进 Hermes
@@ -414,8 +404,8 @@ hermes chat -q "你好"
 
 ## 🖥️ 桌面短配置卡
 
-1. 先确认产品、账户地区与 Key 类型，选择 **`alibaba-token-plan-cn`（OpenAI）或 `custom`（Anthropic）**；原生入口使用中国区套餐 Key；custom 按官方示例配置 endpoint 与协议。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`auto` 或套餐支持的 `qwen3.8-max`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

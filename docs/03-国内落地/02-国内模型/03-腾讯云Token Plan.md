@@ -131,7 +131,7 @@ quick_reference:
 ---
 # 腾讯云 Token Plan 接入 Hermes Agent：积分、API Key 与桌面配置
 
-复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：腾讯云 Token Plan 当前提供套餐专属 API Key，并列出多种兼容工具，
 > 但官方清单没有把 Hermes Agent 列为专项适配工具。本页给出的是 Hermes 自定义兼容
@@ -245,7 +245,7 @@ quick_reference:
 
 ## 🔑 原生 provider 与账户限制
 
-Hermes v2026.9.24 支持 `tencent-tokenplan` / `TOKENPLAN_API_KEY`，默认 Anthropic endpoint：`https://api.lkeap.cloud.tencent.com/plan/anthropic`。OpenAI 备选为 `https://api.lkeap.cloud.tencent.com/plan/v3`，使用 custom 路线时按 OpenAI 协议配置；不要把完整 `/chat/completions` URL 填成 Base URL。
+原生与兼容路线的 provider、密钥变量、协议及 endpoint 见[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)。不要把完整聊天请求 URL 填成 Base URL。
 
 通用与 Hy 套餐共用 `sk-tp-` Key；实际模型仍需对应套餐权限。个人套餐不得多人共享。TokenHub、企业产品和个人 Token Plan 是不同路线，不把 `tokenhub` provider 或企业 Key 当成个人套餐配置。
 
@@ -338,7 +338,7 @@ Hermes v2026.9.24 支持 `tencent-tokenplan` / `TOKENPLAN_API_KEY`，默认 Anth
 
 怎么做：
 - 先从腾讯云官方接入说明确认地址、模型和密钥
-- 再按 Hermes 当前自定义 provider / endpoint 文档完成映射
+- 在[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)按所购通用或 Hy 产品选择原生/兼容路线，复制配置并替换密钥占位符
 - 进入 Hermes 发一条最简单的问题
 - 先验证能正常返回一条结果，再继续细化模型选择
 
@@ -384,8 +384,8 @@ Hermes v2026.9.24 支持 `tencent-tokenplan` / `TOKENPLAN_API_KEY`，默认 Anth
 
 ## 🖥️ 桌面短配置卡
 
-1. 先确认产品、账户地区与 Key 类型，选择 **`tencent-tokenplan`（默认 Anthropic）**；使用 `TOKENPLAN_API_KEY`；若走 OpenAI custom 则使用 `/plan/v3` 并保持协议一致。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`tc-code-latest` 或当前套餐支持的固定 ID**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

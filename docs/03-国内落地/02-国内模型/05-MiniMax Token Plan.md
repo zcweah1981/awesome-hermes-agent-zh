@@ -70,7 +70,7 @@ quick_reference:
 
 > 速查核验（2026-10-03）：本次读取的[官方 Messages API](https://platform.minimax.cn/docs/api-reference/text-chat-anthropic)使用 `https://api.minimax.cn/anthropic`；固定 Hermes 注册默认地址仍为 `https://api.minimaxi.com/anthropic`。速查采用官方当前地址，原生配置显式写入 `MINIMAX_CN_BASE_URL`，不把旧默认地址当作本次已验证 endpoint。
 
-复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 🎯 一句话先说清楚：如果你想买的不只是文本能力，而是一份能把 MiniMax 的 M2.7、图像、语音、音乐、视频和开发工具一起打通的订阅，那么 MiniMax Token Plan 值得单独看。
 
@@ -123,11 +123,11 @@ MiniMax Token Plan 更适合重视中文长文本、角色对话或内容生成�
 
 截至 2026-09-30，新购 Token Plan 月费为 Plus ¥49、Max ¥119、Ultra ¥469，使用 5 小时和周额度窗口；实际额度与可用模型以订阅页为准。旧版 Starter/Plus/Max 与极速六档年费表不再作为新购建议，老订阅的迁移权益要在账户单独确认。
 
-主要文本路线为 `MiniMax-M3`；`MiniMax-M3.1-Flash-Preview` 是预览模型，单独核对账户权限，不写成稳定默认菜单。自 **2026-08-20** 起音乐不属于 Token Plan，不能继续声称一个套餐覆盖音乐、视频等所有模态。
+已核验的稳定文本模型 ID 见[本页同源模型配置卡](/docs/china/models/minimax-token-plan#model-quick-reference)；`MiniMax-M3.1-Flash-Preview` 是预览模型，单独核对账户权限，不写成稳定默认菜单。自 **2026-08-20** 起音乐不属于 Token Plan，不能继续声称一个套餐覆盖音乐、视频等所有模态。
 
 ## 🌏 中国区与国际区 endpoint
 
-原生中国区仍为 `minimax-cn` / `MINIMAX_CN_API_KEY`。稳定标签默认 `https://api.minimaxi.com/anthropic`；官网当前示例是 `https://api.minimax.cn/anthropic`，可用 `MINIMAX_CN_BASE_URL` 显式覆盖。旧域名不能仅因文档换域就宣称失效。国际 provider/Key 与中国区分开，不将国内套餐接到国际 endpoint。
+当前可复制的中国区 provider、密钥字段与 endpoint 见[本页同源模型配置卡](/docs/china/models/minimax-token-plan#model-quick-reference)。稳定标签默认地址与官网当前地址不同，见页首说明；旧域名不能仅因文档换域就宣称失效。国际 provider/Key 与中国区分开，不将国内套餐接到国际 endpoint。
 
 > 本页配图保留旧界面用于辨认 provider 和 Key 输入位置，图中的旧模型选项不代表当前 M3 目录；填写 ID 以下文文字和官方模型表为准。
 
@@ -192,8 +192,7 @@ MiniMax Token Plan 更适合重视中文长文本、角色对话或内容生成�
 hermes model
 ```
 
-- 在 provider 列表里选择：
-  - `MiniMax China (mainland China endpoint)`
+- 在 provider 列表中按[本页同源模型配置卡](/docs/china/models/minimax-token-plan#model-quick-reference)选择中国区路线；菜单配置后核对卡中显式 endpoint 覆盖，避免遗留默认地址。
 
 官方文档截图里的 provider 选择界面如下：
 
@@ -290,8 +289,8 @@ hermes model
 
 ## 🖥️ 桌面短配置卡
 
-1. 先确认产品、账户地区与 Key 类型，选择 **`minimax-cn`**；使用中国区 Key；按厂商当前 Anthropic 示例设置 `MINIMAX_CN_BASE_URL`，记录覆盖前默认值。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填精确 ID **`MiniMax-M3`**。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[本页同源模型配置卡](/docs/china/models/minimax-token-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/minimax-token-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

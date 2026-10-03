@@ -1315,7 +1315,7 @@ routes:
   description: 一句话先说清楚：这一页不是让你马上挑最强模型，而是先帮你选对国内模型路线，再进入正确的厂商或接口页面。
   order: 92
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1788,7 +1788,7 @@ routes:
   description: "按 401、403、404 和 Unknown provider 排查 Hermes 模型接入：核对产品凭据、provider、协议、Base URL 与模型 ID，再运行最小请求。"
   order: 115
   status: published
-  updated: "2026-09-30"
+  updated: '2026-10-03'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -2173,7 +2173,7 @@ routes:
     note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
 source_mapping_contract:
   version: r1
-  updated: '2026-10-03'
+  updated: '2026-05-02'
   registry: governance/upstream-source-registry.yaml
   fields:
     source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.
