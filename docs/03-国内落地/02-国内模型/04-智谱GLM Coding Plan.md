@@ -121,12 +121,12 @@ Hermes 官方 provider 文档已经明确列出：
 - 你已经明确这页讲的是 GLM 原生 provider，不是 custom endpoint
 
 失败先查什么：
-- 如果你脑子里一直在想 base_url 怎么填，说明你更像是兼容层场景
+- 国内 BigModel Coding Plan 必须核对 `GLM_BASE_URL` 的国内专用端点；填写 Base URL 本身不代表第三方兼容层。只有第三方网关才转去自定义接口教程。
 
 ### Step 2. 获取 GLM API Key
 
 现在做什么：
-- 去 GLM / z.ai 官方入口拿到 API Key
+- 去国内 BigModel（智谱）个人或团队产品后台取得对应 API Key；不要混用国际 Z.AI 账户、订阅与端点。
 
 为什么做：
 - 因为后面的 Hermes provider 就是按 `GLM_API_KEY` 读取凭据
@@ -250,9 +250,10 @@ hermes model
 
 ### 3. 这页最核心的配置是什么？
 
-最核心的就是两件事：
-- `GLM_API_KEY`
-- 在 `hermes model` 里选 `z.ai / GLM`
+最核心的配置需要一起核对：
+- `GLM_API_KEY`：国内 BigModel 对应个人／团队产品的 Key
+- `GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4`：国内 Coding 专用端点
+- 在 `hermes model` 里选 `z.ai / GLM`（provider ID 为 `zai`）；核对实际请求端点，不能仅凭菜单名称判断账户地区
 
 ## ⚠️ 风险点与默认建议
 
