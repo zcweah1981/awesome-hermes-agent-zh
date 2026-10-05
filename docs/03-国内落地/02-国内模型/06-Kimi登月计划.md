@@ -1,6 +1,6 @@
 ---
 quick_reference:
-  - checkedAt: '2026-10-03'
+  - checkedAt: '2026-10-05'
     hermesVersion: v2026.9.24
     verification: docs-reviewed
     kind: model
@@ -17,6 +17,7 @@ quick_reference:
     permissions: >-
       使用 Kimi Code 会员 API Key。Go 不含 Coding 额度；Andante 及官方列明的 Plus/Pro 等档位支持
       kimi-for-coding。K3、高速版、上下文权益另查会员；不混用 Moonshot 按量 Key。
+      新老套餐周窗口不同，均有 5 小时窗口和月总额度；全部 Key 共配额。开启 Extra Usage 后可续扣加油包，先检查月消费上限。
     configExample: |-
       hermes config set model.provider custom
       hermes config set model.base_url https://api.kimi.com/coding/v1
@@ -26,13 +27,14 @@ quick_reference:
     diagnostics:
       - /docs/issues/provider-endpoint
     sources:
+      - url: 'https://www.kimi.com/code/docs/kimi-code/membership.html'
       - url: 'https://www.kimi.com/code/docs/kimi-code/models.html'
       - url: 'https://www.kimi.com/code/docs/third-party-tools/hermes.html'
       - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
         revision: v2026.9.24
       - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
         revision: v2026.9.24
-  - checkedAt: '2026-10-03'
+  - checkedAt: '2026-10-05'
     hermesVersion: v2026.9.24
     verification: docs-reviewed
     kind: model
@@ -49,6 +51,7 @@ quick_reference:
     permissions: >-
       使用 Kimi Code 会员 API Key。Go 不含 Coding 额度；Andante 及官方列明的 Plus/Pro 等档位支持
       kimi-for-coding。K3、高速版、上下文权益另查会员；不混用 Moonshot 按量 Key。
+      新老套餐周窗口不同，均有 5 小时窗口和月总额度；全部 Key 共配额。开启 Extra Usage 后可续扣加油包，先检查月消费上限。
     configExample: |-
       hermes config set model.provider custom
       hermes config set model.base_url https://api.kimi.com/coding
@@ -58,6 +61,7 @@ quick_reference:
     diagnostics:
       - /docs/issues/provider-endpoint
     sources:
+      - url: 'https://www.kimi.com/code/docs/kimi-code/membership.html'
       - url: 'https://www.kimi.com/code/docs/kimi-code/models.html'
       - url: 'https://www.kimi.com/code/docs/third-party-tools/hermes.html'
       - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
@@ -69,7 +73,7 @@ quick_reference:
 
 > 先分清手中的凭据属于 Moonshot 开放平台 API，还是 Kimi Code。Hermes 的 `kimi-coding` 名称不能单独说明计费路线：实际 endpoint 还取决于 Key 类型和显式覆盖配置。
 
-内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；依据 Hermes 官方稳定标签 **v2026.9.24（v0.21.5）**。完成文档与源码核对，未购买套餐或进行 API 调用测试。价格、会员权限、额度和可用模型请在厂商页面核对。
+内容更新：2026-10-05（额度与续扣边界复核）；原教程复核日期：2026-09-30；依据 Hermes 官方稳定标签 **v2026.9.24（v0.21.5）**。完成文档与源码核对，未购买套餐或进行 API 调用测试。价格、会员权限、额度和可用模型请在厂商页面核对。
 
 ## 👀 适合谁
 
@@ -104,6 +108,14 @@ quick_reference:
 Moonshot 开放平台模型包括 `kimi-k3`、`kimi-k2.7-code` 等，按 API 账户的模型目录与计费验证。本次已核验的 Kimi Code ID 与兼容配置见[本页同源模型配置卡](/docs/china/models/kimi-plan#model-quick-reference)；其它 Code ID 未纳入速查，不能把 API ID 填进 Code 套餐后假设可用。
 
 Code 模型版本更新不等于套餐权限扩大。K3、长上下文和高速版分别受会员档位限制，401 也可能是能力权限不足。下面保留稳定标签的 Key/endpoint 识别规则，不因新的厂商模型名称重写已核实映射。
+
+## 💳 额度用尽与 Extra Usage 续扣
+
+按 [Kimi Code 官方会员权益](https://www.kimi.com/code/docs/kimi-code/membership.html)（2026-10-05 复核），新套餐取消周频率窗口，保留每 5 小时滚动窗口；老套餐仍以订阅日为起点每 7 天刷新。两类都与 Kimi 会员共享月总额度，所有设备与 API Key 共用配额，换 Key 不会新增额度。
+
+开启 Extra Usage（额度加油包）后，订阅限额触顶可继续扣加油包余额，不一定先报限流。长任务前检查开关与**每月消费上限**；未开启月上限时不设该限额。会员网页与 Code 共用加油包，它与 Moonshot 开放平台按量余额分开，不能混查钱包。
+
+排障先核对 endpoint 和 Key 产品：Code 路线检查新老套餐、5 小时窗口、月额度及加油包；Moonshot 路线检查开放平台余额。还有输出可能表示正在续扣，并不证明订阅额度未耗尽。费率以账户页面为准；本轮未购买或实测扣费。
 
 ## 2. 使用模型向导
 

@@ -1,6 +1,8 @@
-# 🧠 24. 实战：用 session_search 打造你的外部记忆
+# 🧠 24. 实战：用 session_search 找回历史会话与命令
 
-你是否遇到过这种情况：依稀记得几个月前用 Hermes 解决过一个棘手问题，但具体的命令和步骤却怎么也想不起来了？本文将教你如何使用 `session_search` 这个强大的工具，把 Hermes 的历史记录变成一个随用随查、永不遗忘的“外部记忆”。
+记得以前解决过一个问题，却找不到当时的命令？`session_search` 能搜索 Hermes 已保存的会话，并读取命中消息附近的上下文。结果受记录保留、profile 和数据库范围影响；没有命中时先核对范围、关键词与时间条件，不据此断言从未发生。
+
+复核日期：**2026-10-05**；依据 **v2026.9.24（Agent v0.21.5）** 工具 schema 与源码。本轮未实际执行 Hermes 会话搜索或重跑历史命令。
 
 ## 适合谁
 
@@ -10,13 +12,13 @@
 
 ## 先看结论/核心判断
 
-`session_search` 是 Hermes Agent 内置的“对话历史搜索引擎”。它最大的价值在于，让你不必在不同的笔记应用和终端历史记录之间来回翻找，只需一个简单的查询，就能精准定位到过去任何一次对话的上下文。这不仅仅是“查找”，更是“情景再现”。
+工具返回实际数据库消息，不靠模型补写历史。先查关键词，再用返回的真实会话与消息 ID 读取上下文；找到旧命令后，还需核对当前版本与权限。
 
 ## 最短路线
 
-1.  **忘记了？问 Hermes**：当你只记得模糊的关键词（比如 “docker” 和 “端口映射”），直接用 `session_search` 查询。
-2.  **定位会话**：Hermes 会列出最相关的历史会话片段。
-3.  **获取完整上下文**：通过返回的 `session_id` 和 `message_id`，你可以像翻书一样浏览该次对话的完整记录，找回完整的解决方案。
+1. 在对话中要求 Hermes 用 `session_search` 查找关键词。
+2. 比较真实返回的会话、消息与来源链接。
+3. 沿锚点读取足够上下文，区分原方案、后续修正和未确认结论。
 
 ![实战：用-session_search-打造你的外部记忆 总览图](../../assets/practical-v2-24-session-search-memory-00-overview-cn.webp)
 
@@ -30,44 +32,37 @@
 
 ![实战：用-session_search-打造你的外部记忆 实操流程图](../../assets/practical-v2-24-session-search-memory-01-workflow-cn.webp)
 
-**第一步：用关键词模糊搜索**
+**第一步：用关键词搜索，必要时限定时间**
 
-直接在对话框中调用 `session_search` 工具：
+在对话里要求：“用 session_search 找回博客备份 cronjob 的会话，先列最相关结果和来源链接。”以下为 Agent 工具参数示意，不是终端命令或通用 Python SDK：
 
-> `session_search(query="博客 备份 cronjob")`
-
-Hermes 的 `tool_code` 会是：
-```python
-print(default_api.session_search(query="博客 备份 cronjob", limit=3))
+```json
+{"query":"博客 备份 cronjob","limit":3,"after":"2026-09-01","before":"2026-10-01"}
 ```
 
-**第二步：从结果中定位关键会话**
+此例查找 **9 月开始的会话**。`after` 包含下界，`before` 排除上界；纯日期以 **UTC 午夜**解释，筛选的是会话开始时间，而非每条消息时间。不确定日期时省略过滤。默认搜索 user/assistant，调试工具输出时才明确包含 tool。
 
-工具会返回最相关的几个历史会话摘要，包括：
-- `session_id`: 会话的唯一标识。
-- `snippet`: 包含你查询关键词的上下文片段。
-- `bookend_start` & `bookend_end`: 会话开始和结束时的对话，帮你快速回忆起这次任务的“来龙去脉”。
+**第二步：核对结果和 profile**
 
-通过阅读 `snippet`，你很快就能找到那个关于配置备份的会话。
+查看真实返回的 `session_id`、`match_message_id`、`snippet`、`link`。默认 `detail="adaptive"` 只完整展开最高排名结果，其他结果可能仅返回锚点；需要对比每条结果上下文时可用 `detail="full"`。引用返回的 `link`，不要猜造链接。
 
-**第三步：深入探索，获取完整信息**
+默认使用当前 profile 的数据库；已知跨 profile 会话时明确指定 `profile`，该读取为只读。只能搜索已保存、仍可访问的记录，不替代文件、网页或实时系统检查，也不保证自动合并所有机器历史。
 
-找到了目标会话 `session_id`（例如：`a1b2c3d4`）和关键消息 `match_message_id`（例如：`12345`）后，你可以进一步“钻取”进去，查看完整的上下文：
+**第三步：取得真实 ID 后读取锚点附近上下文**
 
-> `session_search(session_id="a1b2c3d4", around_message_id=12345, window=10)`
-
-这会返回指定消息周围 20 条（前后各 10 条）完整对话，让你能完整地看到当时是如何一步步创建那个 `cronjob` 的，所有细节尽收眼底。
+请 Agent 使用返回的 `session_id`、`around_message_id=match_message_id` 和 `window=10`。最多返回 **前 10 条 + 锚点 + 后 10 条，共 21 条**，实际条数与内容长度以结果为准。一个窗口不等于完整会话；继续沿真实消息 ID 前后读取，或使用会话读取形态取得更多上下文，直到证据足够。
 
 ## 常见坑
 
 - **查询词过于宽泛**：只用“docker”这样的词会返回大量无关结果。尽量使用多个关键词组合，或者加上引号进行“精确匹配”。
-- **只看不记**：找到解决方案后，如果它具有通用性，最好的方法是将其提炼并保存为一个 [Skill](./15-自定义%20Skills.md)，一劳永逸。
+- **只看不记**：找到解决方案后，如果它具有通用性，最好的方法是将其提炼并保存为一个 [Skill](./15-自定义%20Skills.md)，复用前仍核对版本与权限。
 - **忽略 FTS5 语法**：`session_search` 支持强大的 FTS5 搜索语法，如 `OR`, `NOT`, `"`，善用它们能极大提升查询效率。
 
 ## 过关标准
 
-- 你能够仅凭记忆中的几个关键词，在 3 次 `session_search` 调用内，成功找回一个超过一个月前的复杂操作指令。
-- 当你再次遇到重复性问题时，第一反应是 `session_search` 而不是从头开始 google。
+- 能定位至少一条相关会话，核对真实消息、时间及当前 profile。
+- 能解释检索范围和未命中限制，区分旧命令、后续修正与未确认信息。
+- 复用操作前重新检查当前版本、参数与权限；历史结果不能直接作为执行授权。
 
 ## 🔗 实战路径
 
@@ -83,6 +78,6 @@ print(default_api.session_search(query="博客 备份 cronjob", limit=3))
 
 ## 📖 出处
 
-本实践总结自 Hermes Agent 核心用户对提升长期人机协作效率的探索，旨在将“历史记录”从单纯的日志，转变为可主动利用的“知识资产”。
-
-
+- [稳定版 session_search schema 与实现](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/tools/session_search_tool.py)
+- [稳定版会话数据库](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_state.py)
+- [CLI 命令参考](/docs/reference/cli-commands)

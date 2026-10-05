@@ -573,12 +573,12 @@ routes:
   slug: /start/personalize/desktop-app
   module: start
   page_type: doc-page
-  title: "Hermes Agent 桌面版教程｜安装、模型配置与连接排障"
+  title: "Hermes Agent 桌面版教程｜模型配置与连接排障"
   section: desktop-app
-  description: "按操作系统和发行渠道安装 Hermes 桌面版，选择国内模型或 Ollama，完成首个工具任务，并排查 backend、连接和远程 Gateway 问题。"
+  description: "以 v2026.9.24 稳定标签为基线，说明桌面端模型配置、首个文件任务与本机或远程连接排障，并单列主干安装渠道提示。"
   order: 39
   status: published
-  updated: "2026-09-30"
+  updated: "2026-10-05"
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
   source_refs:
@@ -1125,12 +1125,12 @@ routes:
   slug: /start/practical/session-search-memory
   module: start
   page_type: doc-page
-  title: 🧠 24-实战：用 session_search 打造你的外部记忆
+  title: "Hermes session_search 实战｜按时间找回历史会话与命令"
   section: session-search-memory
-  description: 用 session_search 把 Hermes 历史对话变成随用随查的外部记忆。
+  description: "用 session_search 搜索、定位和读取 Hermes 历史会话，了解时间范围、profile、上下文窗口与结果限制，再核对旧命令是否仍适用。"
   order: 80
   status: published
-  updated: '2026-07-29'
+  updated: "2026-10-05"
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
@@ -1377,12 +1377,12 @@ routes:
   slug: /china/models/glm-coding-plan
   module: china
   page_type: doc-page
-  title: 04-智谱 GLM Coding Plan
+  title: "智谱 GLM Coding Plan 接入 Hermes｜端点、团队 Key 与调度"
   section: glm-coding-plan
-  description: 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
+  description: "按 v2026.9.24 配置 Hermes 的 GLM provider 和国内编程端点，核对个人与团队 Key、通用 Agent 次级调度、排队与限流；未进行付费联调。"
   order: 95
   status: published
-  updated: '2026-10-03'
+  updated: "2026-10-05"
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1423,12 +1423,12 @@ routes:
   slug: /china/models/kimi-plan
   module: china
   page_type: doc-page
-  title: 🌙 06-Kimi登月计划
+  title: "Kimi Code 与 Moonshot 接入 Hermes｜Key、额度与续扣边界"
   section: kimi-plan
-  description: 区分 Moonshot 国内、国际与 Kimi Code Key，核对原生 provider、endpoint 和计费路线。
+  description: "区分 Kimi Code 与 Moonshot API 的 Key 和 endpoint，核对新老套餐、5 小时窗口、月总额度及 Extra Usage 加油包续扣与预算上限。"
   order: 97
   status: published
-  updated: '2026-10-03'
+  updated: "2026-10-05"
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1762,12 +1762,12 @@ routes:
   slug: /issues/install-environment
   module: issues
   page_type: doc-page
-  title: "Hermes Agent 安装与更新排障｜Git、Python 和环境错误"
+  title: "Hermes Agent 安装与更新排障｜Windows、PATH 和下载错误"
   section: install-environment
-  description: "安装或更新 Hermes 失败时，按 Git、Python、权限和运行环境定位问题。记录完整错误，选择对应修复步骤，再检查版本与最小任务。"
+  description: "按安装渠道与操作系统排查 Hermes 命令、PATH、依赖和下载错误，区分原生 Windows、WSL2、桌面包及 Docker，避免盲目换源或重装。"
   order: 114
   status: published
-  updated: "2026-09-30"
+  updated: "2026-10-05"
   source_type: original
   nav_group: 05-遇到问题
   source_refs:

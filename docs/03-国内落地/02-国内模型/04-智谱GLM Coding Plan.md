@@ -1,8 +1,8 @@
 # 04-智谱 GLM Coding Plan
 
-> 速查核验（2026-10-03）：本次速查尚未收录 GLM 产品：官方套餐概览可读取，但接入与 endpoint 资料在此次核验中无法完整读取，尚未核实，请查看[官方接入资料](https://docs.bigmodel.cn/cn/coding-plan/quick-start)。下文保留 2026-09-30 教程快照，不表示 GLM 不支持 Hermes。
+> 资料复核（2026-10-05）：已读取官方快速开始与接入工具页，确认 Hermes Agent 在支持名单及国内 OpenAI Chat Completion 编程端点。Hermes 属通用 Agent，采用次级调度，高负载可排队或限流。固定版本配置、账号权限与实际调用仍须分别验收；本页未完成付费联调，暂不新增完整验证速查产品。
 
-复核日期：2026-09-30。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+复核日期：2026-10-05。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。国内 Coding 同时明确 `GLM_BASE_URL`，再用 `hermes model` 选 `z.ai / GLM` provider，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。
 
@@ -99,6 +99,12 @@ Hermes 官方 provider 文档已经明确列出：
 - 在 `hermes model` 里选 `z.ai / GLM`
 - 做最小验证
 
+### 调度与团队 Key 边界
+
+[官方接入工具页](https://docs.bigmodel.cn/cn/coding-plan/tool/others)将 Hermes 归为通用 Agent，采用次级调度与尽力交付；Coding Agent 请求享有资源优先权，高负载可能动态排队或限流。开通套餐不等于持续低延迟或吞吐保证，排障还要核对用量和厂商限流提示。
+
+[官方快速开始](https://docs.bigmodel.cn/cn/coding-plan/quick-start)与接入页说明：个人版在“个人编程套餐 → 套餐概览”创建 Key；团队成员在“团队编程套餐 → 我的套餐”取得团队专属 Key。团队 Key 与平台其他 Key 不通用，认证成功不证明已消耗团队额度。
+
 ### Step 1. 先确认你要走的是原生 provider 路线
 
 现在做什么：
@@ -155,8 +161,7 @@ GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4
 ```
 
 看到什么算成功：
-- `~/.hermes/.env` 里已经有一行 `GLM_API_KEY=替换为真实密钥
-GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4
+- 对应 profile 的 `.env` 中已保存 `GLM_API_KEY` 和上述国内 Coding `GLM_BASE_URL`；不在截图或日志中展示真实 Key。
 
 失败先查什么：
 - 是否写错变量名
@@ -272,6 +277,8 @@ hermes model
 ## 📚 本次复核来源
 
 - [国内 Coding Plan](https://docs.bigmodel.cn/cn/coding-plan/overview)
+- [适用工具、协议和团队 Key](https://docs.bigmodel.cn/cn/coding-plan/tool/others)
+- [Coding Plan 快速开始](https://docs.bigmodel.cn/cn/coding-plan/quick-start)
 - [GLM-5.3 与思考限制](https://docs.bigmodel.cn/cn/guide/models/text/glm-5.3)
 - [GLM-5.3-Flash](https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash)
 - [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)

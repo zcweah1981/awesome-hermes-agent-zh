@@ -19,6 +19,20 @@ Desktop 使用与 CLI/Gateway 相同的 Agent 核心。同一后端、同一 pro
 
 ## 📦 1. 选对安装路线
 
+### 主干渠道提示（2026-10-05 复核）
+
+本文操作主体仍以 **v2026.9.24 / Agent v0.21.5** 为基线。当前 [main 固定快照安装说明](https://github.com/NousResearch/hermes-agent/blob/27c02f6326e82b2ba184f5a849f0c5b3a38efb9c/website/docs/getting-started/installation.md)区分：
+
+- **完整桌面包**：包含 Agent、Python、支持的依赖和预构建界面，首次启动不需要构建基础运行时。
+- **Hermes-Setup 源码引导安装器**：下载源码并构建桌面，需要按对应安装器检查下载及构建依赖。
+- **Light**：仅连接远端的构建，不带本地运行时；应确认远程后端。
+
+先核对实际下载文件属于哪种渠道，再决定是否等待依赖准备、进行源码构建或连接远端。主干的 Python 3.14、PM 运行时及包格式说明不能倒写为所有 v0.21.5 安装包的流程；主干 `package.json` 的 `0.0.0` 也不是已发布版本。Agent、桌面应用实际版本、渠道与执行后端分别记录。
+
+安装报错见[安装与环境排障](/docs/issues/install-environment)，版本变化见[最新功能与版本边界](/docs/reference/latest-features)。本轮仅复核文档，未下载或安装测试桌面包。
+
+
+
 | 系统 | 官方路线与边界 | 首次验收 |
 |---|---|---|
 | macOS Apple Silicon | 从[官方桌面入口](https://hermes-agent.nousresearch.com/desktop)取得对应安装包 | 能启动窗口，并完成模型配置 |
