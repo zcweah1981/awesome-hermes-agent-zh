@@ -295,8 +295,8 @@ hermes model
 ## 📎 官方依据
 
 - https://hermes-agent.nousresearch.com/docs/integrations/providers
-- https://z.ai/subscribe
-- https://docs.z.ai/
+- https://docs.bigmodel.cn/cn/coding-plan/overview
+- https://docs.bigmodel.cn/cn/coding-plan/tool/others
 
 ## 🧾 R2 官方同步记录
 
