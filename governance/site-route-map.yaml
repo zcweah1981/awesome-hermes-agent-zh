@@ -589,8 +589,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 复核 v2026.9.24 桌面、安装、包版本与主干本地模型渠道边界；未安装或进行 API、网络和远程连接实测。
+    checked_at: "2026-10-05"
+    note: "稳定标签 v2026.9.24 操作主体与 main 固定快照渠道提示分开；未安装桌面或调用 API。"
 - source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
   slug: /start/personalize/learn
   module: start
@@ -1133,6 +1133,16 @@ routes:
   updated: "2026-10-05"
   source_type: original
   nav_group: 05-实战应用
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: "2026-10-05"
+    note: "复核 v2026.9.24 工具 schema、21 条窗口、adaptive、UTC 开始时间边界与 profile 数据库范围；未执行 Hermes 搜索。"
 - source: docs/01-从这开始/05-实战应用/25-实战：服务器自动化运维.md
   slug: /start/practical/server-automation-ops
   module: start
@@ -1393,9 +1403,9 @@ routes:
     provider_pending:
     - zhipu-glm
   source_review:
-    state: needs-official-check
-    checked_at: '2026-10-03'
-    note: 本次官方接入资料无法完整读取；保留9/30教程快照，GLM未收入速查，不表示产品不支持Hermes。
+    state: provider-official-source-confirmed
+    checked_at: "2026-10-05"
+    note: "已读取厂商接入与 quick-start 原文，确认 Hermes 通用 Agent 次级调度、编程端点与团队 Key 边界；固定版凭据映射已核，未付费联调，不新增完整验证速查产品。"
 - source: docs/03-国内落地/02-国内模型/05-MiniMax Token Plan.md
   slug: /china/models/minimax-token-plan
   module: china
@@ -1440,8 +1450,8 @@ routes:
     - kimi-moonshot
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-10-03'
-    note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
+    checked_at: "2026-10-05"
+    note: "保留已上线 Key/endpoint 映射；新增官方会员新老窗口、共配额与 Extra Usage 预算边界核验，未测试扣费。"
 - source: docs/03-国内落地/02-国内模型/07-DeepSeek按量计费接口.md
   slug: /china/models/deepseek-metered-api
   module: china
@@ -1776,9 +1786,9 @@ routes:
     official:
     - hermes-official-docs
   source_review:
-    state: needs-official-check
-    checked_at: '2026-07-27'
-    note: Mapped to official installation and quickstart documentation; re-check platform-specific behavior before changing commands.
+    state: official-source-confirmed
+    checked_at: "2026-10-05"
+    note: "复核 v2026.9.24 原生 Windows Tier 1、版本命令与安装渠道；移除无依据换源承诺，未执行安装或国内镜像测试。"
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues

@@ -42,7 +42,7 @@ def test_issue_routes_keep_official_source_mapping_and_review_state():
             "needs-official-check",
             "official-source-confirmed",
         }, source
-        assert route["source_review"]["checked_at"] == ("2026-09-30" if source == "docs/05-遇到问题/06-Tools Skills MCP 问题.md" else "2026-07-27"), source
+        assert route["source_review"]["checked_at"] == ("2026-10-05" if source == "docs/05-遇到问题/02-安装更新与环境问题.md" else "2026-09-30" if source == "docs/05-遇到问题/06-Tools Skills MCP 问题.md" else "2026-07-27"), source
 
 
 def test_first_seo_provider_routes_keep_confirmed_official_source_mapping():
