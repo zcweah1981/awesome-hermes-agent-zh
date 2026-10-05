@@ -207,7 +207,7 @@ quick_reference:
 
 ### 1）它卖的不是一个模型，而是一个多模型入口
 
-已核验的默认与固定模型 ID 见[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)。自动路由不能当作某个固定模型的成本或能力保证。
+已核验的默认与固定模型 ID 见[模型接入速查](/docs/reference/model-quick-reference)。自动路由不能当作某个固定模型的成本或能力保证。
 
 模型会更新或下线，完整可用范围应回到 Token Plan 个人版或团队版的“支持的模型”页面确认。
 
@@ -244,7 +244,7 @@ quick_reference:
 
 **个人版限本人交互使用，不用于后台脚本、Cron、应用后端或批量调用。**需要自动化时先确认团队版或按量产品的许可与账户权益，不因 Hermes 有定时任务就推断套餐允许。
 
-本次可复制的兼容协议配置与个人/团队权益集中在[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)。原生映射尚未核实的边界见页首说明；迁移前记录旧配置，选择一条协议路线。
+本次可复制的兼容协议配置与个人/团队权益集中在[模型接入速查](/docs/reference/model-quick-reference)。原生映射尚未核实的边界见页首说明；迁移前记录旧配置，选择一条协议路线。
 
 ## 🧰 怎么把阿里云百炼 Token Plan 接进 Hermes
 
@@ -301,7 +301,7 @@ quick_reference:
 - 因为阿里云当前 Hermes Agent 页面默认使用 Anthropic 兼容协议，并明确给出这五项配置
 
 怎么做：
-- 打开[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)，按已购买的个人版或团队版选择协议。
+- 打开[模型接入速查](/docs/reference/model-quick-reference)，按已购买的个人版或团队版选择协议。
 - 复制对应最小配置，替换密钥占位符并在所用 profile 中执行；两套协议不要混写。
 
 看到什么算成功：
@@ -404,8 +404,8 @@ hermes chat -q "你好"
 
 ## 🖥️ 桌面短配置卡
 
-1. 先在[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/alibaba-bailian-token-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[模型接入速查](/docs/reference/model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[模型接入速查](/docs/reference/model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

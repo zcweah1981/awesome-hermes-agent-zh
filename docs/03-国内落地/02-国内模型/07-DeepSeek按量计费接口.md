@@ -122,7 +122,7 @@ DeepSeek 当前官方中文价格页已经切到 `V4` 体系。
 
 ### 当前模型与兼容 ID
 
-当前已核验 ID 见[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)。旧 `deepseek-v4-flash` 等兼容 ID 仍可调用，但由 V4.1-Flash 服务并按 Flash 计费；不能凭旧公告说 Pro 已停用，也不能把旧 ID 当成固定旧模型。
+当前已核验 ID 见[模型接入速查](/docs/reference/model-quick-reference)。旧 `deepseek-v4-flash` 等兼容 ID 仍可调用，但由 V4.1-Flash 服务并按 Flash 计费；不能凭旧公告说 Pro 已停用，也不能把旧 ID 当成固定旧模型。
 
 ### 人民币／百万 tokens：峰谷分别核算
 
@@ -152,7 +152,7 @@ DeepSeek 这条线最适合“先证明能跑”，因为你不需要先做这�
 
 ### 2）它是标准 OpenAI 兼容格式
 
-DeepSeek 官方支持 OpenAI 兼容格式；原生与 custom 的已核验 endpoint 见[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)。
+DeepSeek 官方支持 OpenAI 兼容格式；原生与 custom 的已核验 endpoint 见[模型接入速查](/docs/reference/model-quick-reference)。
 
 这意味着它的理解成本很低：
 - 你以后切别的兼容工具也更容易
@@ -161,7 +161,7 @@ DeepSeek 官方支持 OpenAI 兼容格式；原生与 custom 的已核验 endpoi
 
 ### 3）Hermes 已经把它当原生 provider
 
-Hermes 的原生 provider 与密钥环境变量见[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)。
+Hermes 的原生 provider 与密钥环境变量见[模型接入速查](/docs/reference/model-quick-reference)。
 
 这件事很关键，因为它意味着：
 - 不需要先把 DeepSeek 伪装成 custom endpoint
@@ -221,7 +221,7 @@ Hermes 的原生 provider 与密钥环境变量见[本页同源模型配置卡](
 
 怎么做：
 - 打开 `~/.hermes/.env`
-- 按[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)的原生路线使用正确变量名和密钥占位符；也可直接执行卡中的配置命令。
+- 按[模型接入速查](/docs/reference/model-quick-reference)的原生路线使用正确变量名和密钥占位符；也可直接执行卡中的配置命令。
 
 - 保存文件
 
@@ -248,7 +248,7 @@ Hermes 的原生 provider 与密钥环境变量见[本页同源模型配置卡](
 hermes model
 ```
 
-- 按[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)选择对应 provider 与精确模型 ID
+- 按[模型接入速查](/docs/reference/model-quick-reference)选择对应 provider 与精确模型 ID
 - 模型选择时，默认先选更适合起步的档位
 - 如果列表里同时出现历史兼容名与 V4 名称，优先按当前官方命名理解
 
@@ -359,8 +359,8 @@ hermes model
 
 ## 🖥️ 桌面短配置卡
 
-1. 先在[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/deepseek-metered-api#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[模型接入速查](/docs/reference/model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[模型接入速查](/docs/reference/model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

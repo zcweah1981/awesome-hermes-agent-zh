@@ -67,17 +67,17 @@ quick_reference:
 
 ## 🎯 先选择产品路线
 
-MiMo V2.6 系列于 2026-09-22 发布，已核验的模型 ID 见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。先按账户允许的模型选择，不能把官网能力宣传当作 Hermes 全部模态已联调。
+MiMo V2.6 系列于 2026-09-22 发布，已核验的模型 ID 见[模型接入速查](/docs/reference/model-quick-reference)。先按账户允许的模型选择，不能把官网能力宣传当作 Hermes 全部模态已联调。
 
-按量与 Token Plan 的地址、密钥类型及权益见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。两类 Key 和地址不能混用。这里不复制尚未独立确认的价格或套餐配额；调用前查官方计费和账户余量。已有其他平台的 MiMo 额度，也不等于持有小米直连 Key。
+按量与 Token Plan 的地址、密钥类型及权益见[模型接入速查](/docs/reference/model-quick-reference)。两类 Key 和地址不能混用。这里不复制尚未独立确认的价格或套餐配额；调用前查官方计费和账户余量。已有其他平台的 MiMo 额度，也不等于持有小米直连 Key。
 
 ## ⚙️ 原生 xiaomi provider
 
-原生 provider、环境变量、endpoint 覆盖及精确模型 ID 统一见[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)。复制对应产品的最小配置，在所用 profile 中替换密钥占位符并保存；真实 Key 不放进聊天、截图或仓库。切回按量时删除或改回遗留 Base URL 覆盖，并核对实际请求路线。
+原生 provider、环境变量、endpoint 覆盖及精确模型 ID 统一见[模型接入速查](/docs/reference/model-quick-reference)。复制对应产品的最小配置，在所用 profile 中替换密钥占位符并保存；真实 Key 不放进聊天、截图或仓库。切回按量时删除或改回遗留 Base URL 覆盖，并核对实际请求路线。
 
 ## 🖥️ 桌面短配置卡
 
-1. 在[本页同源模型配置卡](/docs/china/models/mimo-v26#model-quick-reference)选产品与区域，再把同一条路线的 Key、provider、协议与 Base URL 映射到桌面设置。
+1. 在[模型接入速查](/docs/reference/model-quick-reference)选产品与区域，再把同一条路线的 Key、provider、协议与 Base URL 映射到桌面设置。
 2. 在 **Settings → Model** 保存 profile 默认模型；当前聊天输入框另选同一个精确 ID，核对本机或远端后端 profile。
 3. 目录没有新 ID 时用手动添加；空目录行为随版本不同，参阅[桌面教程](/docs/start/personalize/desktop-app)。
 4. 自行完成短问答，再让 Agent 读取一个测试文本并总结，核对实际工具调用、产物和厂商用量。Test 与任务请求可能收费，执行前确认额度。

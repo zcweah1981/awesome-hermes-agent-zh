@@ -245,7 +245,7 @@ quick_reference:
 
 ## 🔑 原生 provider 与账户限制
 
-原生与兼容路线的 provider、密钥变量、协议及 endpoint 见[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)。不要把完整聊天请求 URL 填成 Base URL。
+原生与兼容路线的 provider、密钥变量、协议及 endpoint 见[模型接入速查](/docs/reference/model-quick-reference)。不要把完整聊天请求 URL 填成 Base URL。
 
 通用与 Hy 套餐共用 `sk-tp-` Key；实际模型仍需对应套餐权限。个人套餐不得多人共享。TokenHub、企业产品和个人 Token Plan 是不同路线，不把 `tokenhub` provider 或企业 Key 当成个人套餐配置。
 
@@ -338,7 +338,7 @@ quick_reference:
 
 怎么做：
 - 先从腾讯云官方接入说明确认地址、模型和密钥
-- 在[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)按所购通用或 Hy 产品选择原生/兼容路线，复制配置并替换密钥占位符
+- 在[模型接入速查](/docs/reference/model-quick-reference)按所购通用或 Hy 产品选择原生/兼容路线，复制配置并替换密钥占位符
 - 进入 Hermes 发一条最简单的问题
 - 先验证能正常返回一条结果，再继续细化模型选择
 
@@ -384,8 +384,8 @@ quick_reference:
 
 ## 🖥️ 桌面短配置卡
 
-1. 先在[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
-2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[本页同源模型配置卡](/docs/china/models/tencent-token-plan#model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
+1. 先在[模型接入速查](/docs/reference/model-quick-reference)确认产品、区域、接入方式与对应密钥字段，再选择同一条路线。
+2. 打开 **Settings → Model** 设置当前 profile 默认模型，填[模型接入速查](/docs/reference/model-quick-reference)中的精确模型 ID。聊天输入框的模型选择只用于当前聊天，不能用它代替默认模型验收；首次选择及持久化行为以对应版本为准。
 3. 若菜单没有模型，使用手动 ID 入口；空目录行为有版本差异，见[桌面教程](/docs/start/personalize/desktop-app)。远端连接时核对服务实际运行的 profile 和凭据位置。
 4. 自行发送一条短问答，再执行一个只读取测试文件的工具任务；核对实际 provider、模型、结果及厂商用量记录。**Test、问答和工具任务会发请求，可能收费**，点击前确认余额与套餐允许的用法。
 5. 本页只完成文档与源码复核，未进行真实 API、桌面安装或国内网络测试；保存配置或显示连接成功不等于任务和计费路线验证通过。

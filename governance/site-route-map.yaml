@@ -2181,6 +2181,25 @@ routes:
     state: provider-official-source-confirmed
     checked_at: '2026-10-03'
     note: 仅quick_reference条目完成2026-10-03官网与v2026.9.24源码核验；不是全页、全表或全仓baseline升级，未调用API。
+- source: docs/06-reference/13-模型接入速查.md
+  slug: /reference/model-quick-reference
+  module: reference
+  page_type: doc-page
+  title: 模型接入速查
+  section: model-quick-reference
+  description: 按厂商、产品与接入方式查询 Hermes Agent 的 provider、协议、endpoint、模型 ID 与最小配置，核对区域、权限和资料来源。
+  order: 133
+  status: published
+  updated: '2026-10-05'
+  source_type: original
+  nav_group: 06-reference
+  source_refs:
+    local:
+    - content-repo
+  source_review:
+    state: r1-mapped
+    checked_at: '2026-10-05'
+    note: 仅调整速查信息架构；模型字段沿用各厂商页quick_reference的独立核验日期与来源，未调用付费API。
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'
