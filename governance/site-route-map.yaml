@@ -2139,7 +2139,7 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: Hermes Agent 最新版本 v0.21.6｜桌面与后端更新边界
+  title: Hermes Agent v0.21.6｜更新范围与桌面版本
   section: latest-features
   description: 说明 Hermes Agent v0.21.6 的稳定标签、Docker 与 Cloud 更新，区分桌面分发包、已进入稳定版的修复和旧操作基线。
   order: 131
