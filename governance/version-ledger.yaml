@@ -4,7 +4,7 @@
 
 ledger_meta:
   created_at: '2026-05-19'
-  updated_at: '2026-09-30'
+  updated_at: '2026-10-12'
   owner: content-maintainers
   project_id: hermes-zh
   # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
@@ -15,10 +15,10 @@ ledger_meta:
 current_content_baseline: v2026.7.20
 
 # 上游已发布的最新版本（由脚本或 CI 自动更新）
-latest_seen: v2026.9.24
+latest_seen: v0.21.6
 
 # 最近一次检查上游的时间
-last_checked_at: '2026-09-30'
+last_checked_at: '2026-10-12'
 
 # 版本来源
 source:
@@ -106,6 +106,26 @@ sync_priority_tiers:
 # ============================================================
 
 versions:
+  - version: v0.21.6
+    source: hermes-official-github
+    checked_at: '2026-10-12'
+    status: partial_review
+    change_categories: [bug_fix, install, mcp]
+    affected_docs:
+      - docs/06-reference/12-最新功能与版本边界.md
+      - docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+      - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
+      - docs/05-遇到问题/02-安装更新与环境问题.md
+    sync_decision: sync_in_progress
+    task_group: UPSTREAM-REVIEW-20261012
+    release_url: https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6
+    tag_commit: 818c13be1dc4fd28987e1e881a9408224afd4535
+    published_at: '2026-10-08T11:51:00Z'
+    included_prs: [121511, 121760, 121768, 121659, 122920, 125392, 126651]
+    notes: >-
+      本轮仅复核版本和分发边界；旧全量同步基线仍为 v2026.7.20。
+      此 stable 发布 tag、Docker 与 Cloud，没有新的 Desktop、Termux 或 Store 包；
+      保留 v2026.9.24 桌面操作基线，不把源码 package.json 的 0.0.0 当发行号。
   - version: v2026.7.20
     source: hermes-official-github
     checked_at: '2026-07-27'

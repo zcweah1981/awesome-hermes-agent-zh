@@ -128,16 +128,15 @@ hermes
 
 ## 🧭 一键安装 Catalog（最快路径）
 
-Hermes 内置了一个 Nous 团队审过的 MCP Catalog，不用自己拼 YAML：
+支持 Catalog 的 Hermes 版本可先查看当前目录，再按实际返回的名字选择安装。Catalog 与第三方 MCP 服务是不同入口；不在目录中的服务应按作者说明配置 `mcp_servers`，不能猜一个名字当作安装命令：
 
 ```bash
 hermes mcp                # 交互式选择
 hermes mcp catalog        # 看完整列表
-hermes mcp install n8n    # 按名字装
 hermes mcp configure linear  # 后续改工具白名单
 ```
 
-Catalog 里的 MCP 都经过 PR Review，但**装之前还是建议看一眼 manifest**，特别是 `source:` 和 `transport.command:` 这两段。
+查询目录后，按实际返回名称和本机 `hermes mcp --help` 选择安装。目录与版本会变化，`n8n` 等第三方服务需要先核对实际目录或作者文档，不能直接推断它支持 Catalog 安装。安装前检查 manifest、来源、启动命令和账户权限，人工审查也不等于你当前环境已验证。完整字段见 [MCP 配置参考](/docs/reference/mcp-config)，连接失败见 [Tools、Skills 与 MCP 排障](/docs/issues/tools-skills-mcp)。
 
 ---
 

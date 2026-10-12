@@ -104,7 +104,7 @@ routes:
   description: 按系统选择官方桌面或终端安装入口，分层验证版本、环境和模型，说明平台与发行方式边界。
   order: 6
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-12'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -115,8 +115,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 按 v2026.9.24 安装和平台文档校正桌面、Windows Tier 1、Intel Mac 与 Python 边界；未进行安装和国内网络实测。
+    checked_at: '2026-10-12'
+    note: 2026-10-12 仅复核 v0.21.6 分发边界；沿用 v2026.9.24 安装与平台操作基线，未进行安装和国内网络实测。
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -328,7 +328,7 @@ routes:
   description: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。
   order: 23
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-12'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/03-国内落地/01-总览.md
@@ -575,10 +575,10 @@ routes:
   page_type: doc-page
   title: "Hermes Agent 桌面版教程｜模型配置与连接排障"
   section: desktop-app
-  description: "以 v2026.9.24 稳定标签为基线，说明桌面端模型配置、首个文件任务与本机或远程连接排障，并单列主干安装渠道提示。"
+  description: Hermes Agent 桌面安装、模型配置、文件任务与连接排障；v0.21.6 没有新桌面包，安装实操保留 v2026.9.24 基线。
   order: 39
   status: published
-  updated: "2026-10-05"
+  updated: '2026-10-12'
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
   source_refs:
@@ -589,8 +589,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: "2026-10-05"
-    note: "稳定标签 v2026.9.24 操作主体与 main 固定快照渠道提示分开；未安装桌面或调用 API。"
+    checked_at: '2026-10-12'
+    note: "2026-10-12 仅复核 v0.21.6 无新桌面包的分发边界；沿用既有 v2026.9.24 操作主体与渠道快照，未安装桌面或调用 API。"
 - source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
   slug: /start/personalize/learn
   module: start
@@ -976,7 +976,7 @@ routes:
   description: 用 MCP 协议让 Hermes 直接调用 GitHub、Linear、数据库等外部工具，不用自己写 wrapper。
   order: 68
   status: published
-  updated: '2026-06-05'
+  updated: '2026-10-12'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
@@ -1777,7 +1777,7 @@ routes:
   description: "按安装渠道与操作系统排查 Hermes 命令、PATH、依赖和下载错误，区分原生 Windows、WSL2、桌面包及 Docker，避免盲目换源或重装。"
   order: 114
   status: published
-  updated: "2026-10-05"
+  updated: '2026-10-12'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1787,8 +1787,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: "2026-10-05"
-    note: "复核 v2026.9.24 原生 Windows Tier 1、版本命令与安装渠道；移除无依据换源承诺，未执行安装或国内镜像测试。"
+    checked_at: '2026-10-12'
+    note: "2026-10-12 仅复核 v0.21.6 分发边界；沿用 v2026.9.24 安装排障操作基线，未执行安装或国内镜像测试。"
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues
@@ -2139,12 +2139,12 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: 🆕 12-最新功能与版本边界
+  title: Hermes Agent 最新版本 v0.21.6｜桌面与后端更新边界
   section: latest-features
-  description: 区分 v2026.9.24 稳定版与后续主干变化，说明桌面、Cron、缓存、价格及国内入口修复的版本边界。
+  description: 说明 Hermes Agent v0.21.6 的稳定标签、Docker 与 Cloud 更新，区分桌面分发包、已进入稳定版的修复和旧操作基线。
   order: 131
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-12'
   source_type: official-reference
   nav_group: 06-reference
   source_refs:
@@ -2155,8 +2155,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 核对官方 latest release、11 个 PR 的合并提交与稳定标签先后关系，以及桌面包和主干渠道文档；仅文档与源码核验。
+    checked_at: '2026-10-12'
+    note: 对照 v0.21.6 官方 release 校正稳定归属与分发边界；保留 v2026.9.24 操作基线，未进行安装或 API 实测。
 - source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   slug: /china/models/mimo-v26
   module: china
