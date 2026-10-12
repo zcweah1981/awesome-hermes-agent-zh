@@ -4,7 +4,9 @@
 
 > 从桌面安装、配模型、完成第一个文件任务开始，再做会议纪要、表格核对和资料整理。需要服务器长期运行时，最后再接远程后端。
 
-**2026-10-12 分发复核**：[v0.21.6](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6) 已发布稳定标签、Docker 与 Cloud，**本次没有新的 Desktop、Termux 或 Store 包**。它不改变下文桌面安装实操基线；Agent 后端升级和桌面包更新分别判断，不能把源码 `package.json` 的 `0.0.0` 当发行号。
+**2026-10-12 分发复核**：最新 stable 为 [v0.21.7](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7)，已覆盖 macOS Apple Silicon／Windows 桌面、Store／MSIX、安装器、Docker 与 Cloud。此前 v0.21.6 当次没有新桌面包是历史边界，不代表当前发行状态。下文保留 v2026.9.24 安装实操基线，未安装本次新包；实际包版本与后端分别核对，不能把源码 `package.json` 的 `0.0.0` 当发行号。
+
+v0.21.7 的源码安装默认跟随 stable；git checkout 桌面可在 Settings → About → Updates 切换 Stable releases / Every commit。这个开关不改变 Store、MSIX 或 bundled 包的更新渠道；源码领先 latest 时不会降级，fork／mirror 仍走 main。详情见[版本与更新通道](/docs/reference/latest-features)。
 
 桌面操作基线复核日期：**2026-09-30**。本文对照官方稳定标签 **v2026.9.24（Agent v0.21.5）** 的安装说明、桌面文档与源码；该标签的 `apps/desktop/package.json` 版本为 **0.17.6**。Agent 版本和桌面包版本各自独立，下载包及远程后端要分别记录版本，不能把 Agent 0.21.5 当成桌面安装包版本。
 

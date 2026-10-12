@@ -116,7 +116,7 @@ routes:
   source_review:
     state: official-source-confirmed
     checked_at: '2026-10-12'
-    note: 2026-10-12 仅复核 v0.21.6 分发边界；沿用 v2026.9.24 安装与平台操作基线，未进行安装和国内网络实测。
+    note: 2026-10-12 仅复核 v0.21.7 分发与源码更新渠道；沿用 v2026.9.24 安装与平台操作基线，未进行安装和国内网络实测。
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -575,7 +575,7 @@ routes:
   page_type: doc-page
   title: "Hermes Agent 桌面版教程｜模型配置与连接排障"
   section: desktop-app
-  description: Hermes Agent 桌面安装、模型配置、文件任务与连接排障；v0.21.6 没有新桌面包，安装实操保留 v2026.9.24 基线。
+  description: Hermes Agent 桌面安装、模型配置与连接排障；v0.21.7 已覆盖桌面稳定发布，说明源码与分发包更新渠道，保留旧操作基线。
   order: 39
   status: published
   updated: '2026-10-12'
@@ -590,7 +590,7 @@ routes:
   source_review:
     state: official-source-confirmed
     checked_at: '2026-10-12'
-    note: "2026-10-12 仅复核 v0.21.6 无新桌面包的分发边界；沿用既有 v2026.9.24 操作主体与渠道快照，未安装桌面或调用 API。"
+    note: "2026-10-12 仅复核 v0.21.7 桌面分发与源码更新渠道；沿用既有 v2026.9.24 操作主体与渠道快照，未安装桌面或调用 API。"
 - source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
   slug: /start/personalize/learn
   module: start
@@ -1788,7 +1788,7 @@ routes:
   source_review:
     state: official-source-confirmed
     checked_at: '2026-10-12'
-    note: "2026-10-12 仅复核 v0.21.6 分发边界；沿用 v2026.9.24 安装排障操作基线，未执行安装或国内镜像测试。"
+    note: "2026-10-12 仅复核 v0.21.7 分发与源码更新渠道；沿用 v2026.9.24 安装排障操作基线，未执行安装或国内镜像测试。"
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues
@@ -2139,9 +2139,9 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: Hermes Agent v0.21.6｜更新范围与桌面版本
+  title: 🆕 12-Hermes v0.21.7｜更新与桌面版本
   section: latest-features
-  description: 说明 Hermes Agent v0.21.6 的稳定标签、Docker 与 Cloud 更新，区分桌面分发包、已进入稳定版的修复和旧操作基线。
+  description: 说明 Hermes Agent v0.21.7 桌面、安装器、Docker 与 Cloud 稳定发布及源码更新通道，保留历史发行边界和旧安装操作基线。
   order: 131
   status: published
   updated: '2026-10-12'
@@ -2156,7 +2156,7 @@ routes:
   source_review:
     state: official-source-confirmed
     checked_at: '2026-10-12'
-    note: 对照 v0.21.6 官方 release 校正稳定归属与分发边界；保留 v2026.9.24 操作基线，未进行安装或 API 实测。
+    note: 对照 v0.21.7 官方 release/API 核对发布时间、tag commit、分发和源码渠道，保留 v0.21.6 历史边界；保留 v2026.9.24 操作基线，未进行安装或 API 实测。
 - source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   slug: /china/models/mimo-v26
   module: china

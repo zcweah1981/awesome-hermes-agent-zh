@@ -4,7 +4,7 @@
 
 > 想从桌面窗口开始，先走[桌面版安装与首个任务](../03-玩出花样/07-用桌面端操作%20Hermes.md)；本页提供官方终端安装路线。安装结束后分别验证命令、环境和模型回复。
 
-2026-10-12 版本复核：稳定发布已到 [v0.21.6](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6)，标签为 `818c13be1dc4fd28987e1e881a9408224afd4535`；该版发布 tag、Docker 与 Cloud，没有新的 Desktop、Termux 或 Store 包。下文安装操作仍以 2026-09-30 核对的 **v2026.9.24（Agent v0.21.5）** 为基线，依赖要求不能直接套用于所有新渠道。安装器与桌面下载渠道可能继续更新，安装后记录实际版本；本文未执行真实安装或国内网络测试。
+2026-10-12 版本复核：最新 stable 为 [v0.21.7](https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.7)，tag commit `71d34bad1045610252eda02ee79549436896e784`；已覆盖桌面（macOS Apple Silicon／Windows）、Store／MSIX、安装器、Docker 与 Cloud。v0.21.6 当次没有新桌面包仅作历史记录。下文安装操作仍以 2026-09-30 核对的 **v2026.9.24（Agent v0.21.5）** 为基线，依赖要求不能直接套用于所有新渠道。安装器与桌面下载渠道可能继续更新，安装后记录实际版本；本文未执行真实安装或国内网络测试。
 
 ![历史终端安装示意图](../../assets/rm2-2-install-hermes-01-install-command-running.webp)
 
@@ -42,6 +42,8 @@ iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 安装器管理 Python、Node.js 等依赖，具体版本以对应安装器与版本说明为准。手动准备源码环境时，固定标签的 Python 要求为 **>=3.11,<3.14**。
 
 官方不支持 PyPI / `pip install hermes-agent`、`uv tool install hermes-agent` 发行安装，也不支持 `brew install hermes-agent` 路线。不要把同名第三方包当官方软件。
+
+v0.21.7 官方源码安装更新默认跟随 stable；已领先 latest 时不降级，main 需明确选择，fork／mirror 仍保持 main。Store／MSIX／bundled 包按自身渠道更新，不能统一套用源码更新器。完整边界见[最新版本与更新通道](/docs/reference/latest-features)。
 
 ## 🔄 安装后重新加载 shell
 
