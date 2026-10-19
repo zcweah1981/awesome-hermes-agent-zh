@@ -148,7 +148,7 @@ routes:
   description: Hermes 中文站现成方案入口。
   order: 8
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-19'
   source_type: original
   nav_group: 02-现成方案
 - source: docs/02-现成方案/01-内容创作与发布/01-总览.md
@@ -220,7 +220,7 @@ routes:
   description: 一句话先说清楚：这一层不是教你系统学项目管理或知识管理，而是帮你先挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报或总结做出来。
   order: 14
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-19'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
@@ -2200,6 +2200,28 @@ routes:
     state: r1-mapped
     checked_at: '2026-10-05'
     note: 仅调整速查信息架构；模型字段沿用各厂商页quick_reference的独立核验日期与来源，未调用付费API。
+- source: docs/02-现成方案/02-办公效率与知识整理/07-个人AI助理怎么选.md
+  slug: /solutions/personal-agent
+  module: solutions
+  page_type: doc-page
+  title: 个人 AI 助理怎么选：Muse、Grok Bot、Dots 与 Hermes 的分工和共存
+  section: personal-agent
+  description: 对照公开官方资料，比较 Muse、Grok Bot、Dots 与 Hermes 的任务分工、成本、地区与数据边界，说明受控交接和三个起步场景；非同任务实测或原生互通教程。
+  order: 134
+  status: published
+  updated: '2026-10-19'
+  source_type: original
+  nav_group: 02-办公效率与知识整理
+  source_refs:
+    local:
+    - content-repo
+    official:
+    - hermes-official-docs
+    - hermes-official-github
+  source_review:
+    state: official-source-confirmed
+    checked_at: '2026-10-19'
+    note: 采用用户提供v1站内article及三张批准图；正文逐项链接各产品官方来源，保留Muse地区与Grok模型口径冲突及未知。Hermes固定v0.22.2，QQ Mail MCP仅第三方公开v0.1.0分析，无四者互通/同任务/邮箱联调实测。
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'
