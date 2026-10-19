@@ -1,10 +1,10 @@
 # 官方来源同步 Registry
 
-更新时间：2026-10-12
+更新时间：2026-10-19
 
 ## 基线版本声明
 
-> 全站内容基线以 [version-ledger.yaml](./version-ledger.yaml) 的 `current_content_baseline` 为准，当前为 `v2026.7.20`。2026-10-12 已确认 latest stable `v0.21.7`，tag commit `71d34bad1045610252eda02ee79549436896e784`，官方 API 发布于 2026-10-12T05:53:41Z；本轮仅局部更新版本与分发边界，旧全量同步基线不变，不能声称全站已同步。v0.21.7 已覆盖桌面、Store/MSIX、安装器、Docker/Cloud；v0.21.6 无新包仅作历史边界。桌面实操仍保留 v2026.9.24 基线，未安装本次新包。
+> 全站内容基线以 [version-ledger.yaml](./version-ledger.yaml) 的 `current_content_baseline` 为准，仍为 `v2026.7.20`。2026-10-19 确认 latest stable `v0.22.2`，tag commit `d923a5eb487a17c0a68801bba9ef0f56c81040a8`，发布于 2026-10-15T08:21:32Z。仅局部复核发行纠正与已知限制，不代表全站同步；保留旧安装操作基线，未安装新包。DeepSeek页面仅补官方Search/Fetch计费范围，配置卡原复核日期不变。
 
 本轮来源使用固定标签的官方文档与源码、官方 release 和 PR 合并提交；主干本地模型说明使用复核快照。具体来源、版本与日期见正文和 route 的 source_review；未做安装、国内网络或付费 API 实测。
 

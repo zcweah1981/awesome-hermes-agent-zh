@@ -64,7 +64,7 @@ quick_reference:
 ---
 # 07-DeepSeek按量计费接口
 
-内容更新：2026-10-03（同源配置迁移）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+内容更新：2026-10-19（仅补充 Search／Fetch 计费边界；同源配置仍为 2026-10-03 基线）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：Hermes Agent 接入 DeepSeek 只需三步——充值余额 → 创建 API Key → 写入 `~/.hermes/.env` 里的 `DEEPSEEK_API_KEY=***`。在 Hermes 里用 `hermes model` 选 DeepSeek provider，默认先选 `deepseek-flash`（低成本起步档），不需要买套餐。
 
@@ -134,6 +134,14 @@ DeepSeek 当前官方中文价格页已经切到 `V4` 体系。
 | Pro 高峰 | ¥0.30 | ¥9 | ¥27 |
 
 北京时间工作日（不含中国法定节假日）09:00–12:00、14:00–18:00 为高峰，其余时段为空闲。估算按真实输入、输出、缓存和调用时段计算；不是订阅额度，也不保证每次缓存命中。以官方价格页和实际账单为准。
+
+### Search／Fetch 另按成功请求计费（2026-10-19 复核）
+
+DeepSeek 服务端 Search 和 Fetch **各为 ¥5／1,000 次成功请求**，与上表模型 token 费用分开计算，不按返回结果条数收费。官方定义成功为 HTTP 200 且产生结果：Search 的 results 非空，Fetch 返回网页正文；失败、无结果或超时不计费。
+
+**2026-11-01 00:00（北京时间）开始收费**的说明，特指 DeepSeek Harness／Claude Code／Codex **通过 DeepSeek API 的服务端工具调用**产生的这部分 Search／Fetch 请求。不能扩大为所有 Codex、网页搜索或 Hermes 工具都在该日开始收费；本文也未验证 Hermes 已原生调用这两个接口。
+
+做预算时把模型 tokens 与实际成功 Search／Fetch 次数分项记录，以官方账单为准。本次未调用付费 API、购买服务或测算实际节省。[10 月 17 日官方公告](https://api-docs.deepseek.com/zh-cn/news/news261017/)、[Search／Fetch 官方计费与成功定义](https://api-docs.deepseek.com/zh-cn/guides/search/)。
 
 ## 🏆 为什么这页值得作为默认起步路线
 

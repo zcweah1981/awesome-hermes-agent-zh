@@ -4,7 +4,7 @@
 
 ledger_meta:
   created_at: '2026-05-19'
-  updated_at: '2026-10-12'
+  updated_at: '2026-10-19'
   owner: content-maintainers
   project_id: hermes-zh
   # 与 upstream-source-registry.yaml 的 hermes_upstream_baseline_version 保持兼容
@@ -15,10 +15,10 @@ ledger_meta:
 current_content_baseline: v2026.7.20
 
 # 上游已发布的最新版本（由脚本或 CI 自动更新）
-latest_seen: v0.21.7
+latest_seen: v0.22.2
 
 # 最近一次检查上游的时间
-last_checked_at: '2026-10-12'
+last_checked_at: '2026-10-19'
 
 # 版本来源
 source:
@@ -106,6 +106,25 @@ sync_priority_tiers:
 # ============================================================
 
 versions:
+  - version: v0.22.2
+    source: hermes-official-github
+    checked_at: '2026-10-19'
+    status: partial_review
+    change_categories: [bug_fix, install, gateway]
+    affected_docs:
+      - docs/06-reference/12-最新功能与版本边界.md
+      - docs/01-从这开始/03-玩出花样/07-用桌面端操作 Hermes.md
+      - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
+      - docs/05-遇到问题/02-安装更新与环境问题.md
+    sync_decision: sync_in_progress
+    task_group: UPSTREAM-REVIEW-20261019
+    release_url: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2
+    tag_commit: d923a5eb487a17c0a68801bba9ef0f56c81040a8
+    annotated_tag_object: 7b77e29eedd85a8497ce2821448dac7964dc46f6
+    published_at: '2026-10-15T08:21:32Z'
+    notes: >-
+      纠正v0.22.1错误提交导致的发行；保留其Gateway会话在0.22.2不可删除限制。
+      main独有工作等待0.23.0；不默认引导main，未安装实测，旧全量基线不变。
   - version: v0.21.7
     source: hermes-official-github
     checked_at: '2026-10-12'
@@ -124,7 +143,7 @@ versions:
     published_at: '2026-10-12T05:53:41Z'
     release_note_date: '2026-10-11'
     notes: >-
-      latest stable覆盖桌面(macOS Apple silicon/Windows)、Store/MSIX、安装器、Docker/Cloud。
+      当次稳定发布覆盖桌面(macOS Apple silicon/Windows)、Store/MSIX、安装器、Docker/Cloud。
       官方源码更新默认stable，领先latest不降级；main显式选择，fork/mirror仍main。
       源码桌面渠道开关不改变bundled/Store/MSIX逻辑；只复核发布声明，未安装实测。
       旧全量同步基线v2026.7.20不变；保留v0.21.6历史边界和旧桌面操作基线。
