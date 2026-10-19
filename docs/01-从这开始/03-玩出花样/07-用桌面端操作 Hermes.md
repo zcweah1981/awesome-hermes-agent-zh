@@ -4,7 +4,7 @@
 
 > 从桌面安装、配模型、完成第一个文件任务开始，再做会议纪要、表格核对和资料整理。需要服务器长期运行时，最后再接远程后端。
 
-**2026-10-19 发行复核**：最新稳定版为 [v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2)（2026-10-15 发布）。官方说明 v0.22.1 使用了错误提交，混入未发布 Gateway 工作，Microsoft Store 应用可能卡在 Connecting；v0.22.2 用于纠正这次发行。**已知限制：曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 中无法删除。**保留会话与配置备份，不用删除数据来排障；按自己安装包的渠道核对更新。main 独有工作留待 v0.23.0，不能把切 main 当默认修复。下文仍保留旧安装操作基线，未安装或实测新包。实际桌面包版本与 Agent 后端分别记录，不能用源码 `package.json` 的 `0.0.0` 当发行号。
+**2026-10-19 发行复核**：最新稳定版为 [v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2)（2026-10-15 发布）。官方说明 v0.22.1 使用了错误提交，混入未发布 Gateway 工作，Microsoft Store 应用可能卡在 Connecting；v0.22.2 用于纠正这次发行。**已知限制：曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 中无法删除。** 保留会话与配置备份，不用删除数据来排障；按自己安装包的渠道核对更新。main 独有工作留待 v0.23.0，不能把切 main 当默认修复。下文仍保留旧安装操作基线，未安装或实测新包。实际桌面包版本与 Agent 后端分别记录，不能用源码 `package.json` 的 `0.0.0` 当发行号。
 
 v0.21.7 的源码安装默认跟随 stable；git checkout 桌面可在 Settings → About → Updates 切换 Stable releases / Every commit。这个开关不改变 Store、MSIX 或 bundled 包的更新渠道；源码领先 latest 时不会降级，fork／mirror 仍走 main。详情见[版本与更新通道](/docs/reference/latest-features)。
 
