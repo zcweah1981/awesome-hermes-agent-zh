@@ -26,7 +26,7 @@ routes:
   description: Hermes 中文站学习主线入口。
   order: 2
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-19'
   source_type: original
   nav_group: 01-从这开始
 - source: docs/01-从这开始/01-先跑起来/01-总览.md
@@ -38,7 +38,7 @@ routes:
   description: 一句话先说清楚：这一阶段不追求你懂完所有能力，而是先让你第一次把 Hermes 真正跑通。
   order: 3
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-19'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -328,7 +328,7 @@ routes:
   description: 把一封长邮件或一堆飞书/企微/钉钉群消息，压成一段能直接转发或同步给同事的结构化摘要，适合快速掌握要点和待办。
   order: 23
   status: published
-  updated: '2026-10-12'
+  updated: '2026-07-29'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/03-国内落地/01-总览.md
@@ -383,7 +383,7 @@ routes:
   description: Hermes 中文站排障入口，先定位问题类型再进入排查页。
   order: 26
   status: published
-  updated: '2026-04-28'
+  updated: '2026-10-19'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -976,7 +976,7 @@ routes:
   description: 用 MCP 协议让 Hermes 直接调用 GitHub、Linear、数据库等外部工具，不用自己写 wrapper。
   order: 68
   status: published
-  updated: '2026-10-12'
+  updated: '2026-06-05'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
