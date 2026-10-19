@@ -8,7 +8,7 @@ routes:
   description: Hermes 中文站文档总入口，帮助用户先选对模块入口。
   order: 1
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-20'
   source_type: original
   nav_group: 00-文档总览
   source_refs:
@@ -148,7 +148,7 @@ routes:
   description: Hermes 中文站现成方案入口。
   order: 8
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-20'
   source_type: original
   nav_group: 02-现成方案
 - source: docs/02-现成方案/01-内容创作与发布/01-总览.md
@@ -220,7 +220,7 @@ routes:
   description: 一句话先说清楚：这一层不是教你系统学项目管理或知识管理，而是帮你先挑一套已经能直接试跑的办公效率方案，把第一轮纪要、日报或总结做出来。
   order: 14
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-20'
   source_type: original
   nav_group: 02-办公效率与知识整理
 - source: docs/02-现成方案/02-办公效率与知识整理/02-会议纪要助手.md
@@ -2200,18 +2200,37 @@ routes:
     state: r1-mapped
     checked_at: '2026-10-05'
     note: 仅调整速查信息架构；模型字段沿用各厂商页quick_reference的独立核验日期与来源，未调用付费API。
-- source: docs/02-现成方案/02-办公效率与知识整理/07-个人AI助理怎么选.md
-  slug: /solutions/personal-agent
-  module: solutions
-  page_type: doc-page
-  title: 个人 AI 助理怎么选：Muse、Grok Bot、Dots 与 Hermes 的分工和共存
-  section: personal-agent
-  description: 对照公开官方资料，比较 Muse、Grok Bot、Dots 与 Hermes 的任务分工、成本、地区与数据边界，说明受控交接和三个起步场景；非同任务实测或原生互通教程。
+- source: docs/07-个人AI助理/总览.md
+  slug: /personal-agent
+  module: personal-agent
+  page_type: module-overview
+  title: 个人 AI 助理｜Personal Agent 系列
+  section: overview
+  description: Personal Agent 长期系列的独立入口与已发布文章目录。从个人 AI 助理选型、运行责任和协作边界开始，逐篇阅读，每篇保留自己的来源、核验日期与实践范围。
   order: 134
   status: published
   updated: '2026-10-20'
   source_type: original
-  nav_group: 02-办公效率与知识整理
+  nav_group: 07-个人AI助理
+  source_refs:
+    local:
+    - content-repo
+  source_review:
+    state: r1-mapped
+    checked_at: '2026-10-20'
+    note: 按用户明确要求独立栏目；目录只展示已发布文章，第一期来源与本站更新扩展稿保持同一篇，不复制正文凑篇数。
+- source: docs/07-个人AI助理/01-个人AI助理怎么选.md
+  slug: /personal-agent/choose-your-assistant
+  module: personal-agent
+  page_type: doc-page
+  title: 第1篇｜个人 AI 助理怎么选：Muse、Grok Bot、Dots 与 Hermes 的分工和共存
+  section: choose-your-assistant
+  description: 对照公开官方资料，比较 Muse、Grok Bot、Dots 与 Hermes 的任务分工、成本、地区与数据边界，说明受控交接和三个起步场景；非同任务实测或原生互通教程。
+  order: 135
+  status: published
+  updated: '2026-10-20'
+  source_type: original
+  nav_group: 07-个人AI助理
   source_refs:
     local:
     - content-repo
