@@ -2209,7 +2209,7 @@ routes:
   description: 对照公开官方资料，比较 Muse、Grok Bot、Dots 与 Hermes 的任务分工、成本、地区与数据边界，说明受控交接和三个起步场景；非同任务实测或原生互通教程。
   order: 134
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-20'
   source_type: original
   nav_group: 02-办公效率与知识整理
   source_refs:
@@ -2221,7 +2221,7 @@ routes:
   source_review:
     state: official-source-confirmed
     checked_at: '2026-10-19'
-    note: 采用用户提供v1站内article及三张批准图；正文逐项链接各产品官方来源，保留Muse地区与Grok模型口径冲突及未知。Hermes固定v0.22.2，QQ Mail MCP仅第三方公开v0.1.0分析，无四者互通/同任务/邮箱联调实测。
+    note: 采用用户提供v1站内article及三张批准图；正文逐项链接各产品官方来源，保留Muse地区与Grok模型口径冲突及未知。Hermes固定v0.22.2，QQ Mail MCP仅第三方公开v0.1.0分析，无四者互通/同任务/邮箱联调实测。2026-10-20按第一期知乎完整来源补充超时治理与公开页面练习，产品事实核验基线保持10月19日。
 source_mapping_contract:
   version: r1
   updated: '2026-05-02'
