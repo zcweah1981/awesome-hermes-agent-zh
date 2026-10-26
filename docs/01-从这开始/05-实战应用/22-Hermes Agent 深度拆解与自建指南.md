@@ -1,6 +1,8 @@
 # 🔮 22-Hermes Agent 深度拆解与自建指南
 
-> 一句话先说清楚：前面所有实战页都是"把 Hermes 当黑盒用"。这一页**拆开黑盒**——系统提示怎么组装、Agent Loop 怎么转、工具怎么注册、四种 API 模式怎么切换、缓存怎么省 90% 钱。**适合想自建、想魔改、想二次开发的人**。
+> 局部校对（2026-10-26）：协议路由依据固定 v0.22.5 Providers 文档校对，移除无可复现凭据的成本数字。其余架构图与实现拆解沿原文，不代表已逐项核对当前源码。
+
+> 一句话先说清楚：前面所有实战页都是"把 Hermes 当黑盒用"。这一页**拆开黑盒**——系统提示怎么组装、Agent Loop 怎么转、工具怎么注册、API 协议路由怎样配置、缓存成本怎样核算。**适合想自建、想魔改、想二次开发的人**。
 
 ![Hermes Agent 深度拆解与自建指南 总览图](../../assets/practical-v2-22-deep-dive-build-your-own-00-overview-cn.webp)
 
@@ -194,65 +196,57 @@ registry.register(
 
 ---
 
-## 🔄 工作流拆解 4：四种 API 模式自动切换
+<a id="工作流拆解-4四种-api-模式自动切换"></a>
 
-Hermes 不让你手动指定"我用 OpenAI 格式还是 Anthropic 格式"。它自动检测：
+## 🔄 工作流拆解 4：先核对 Provider 与 API 模式
 
-| API 模式 | 触发条件 |
+固定 v0.22.5 的 Providers 文档已说明：Custom Endpoint 向导会询问 API 模式，并把选择保存为 Provider 的 `transport`；旧 `custom_providers` 格式使用 `api_mode`。URL 识别仍可作为未填写字段时的回退，不能只看地址或模型名就认定实际协议。
+
+| API 模式 | 核对重点 |
 |---|---|
-| `chat_completions` | endpoint 包含 `/v1/chat/completions`（OpenAI 兼容） |
-| `codex_responses` | OpenAI Codex 模型 |
-| `anthropic_messages` | endpoint 是 Anthropic / 模型名以 `claude-` 开头 |
-| `bedrock_converse` | AWS Bedrock endpoint |
+| `chat_completions` | 该 Provider 是否提供兼容的 Chat Completions 请求与工具协议 |
+| `codex_responses` | 所选 Provider/账户路线与 Responses 支持；不只由模型名称决定 |
+| `anthropic_messages` | 原生或兼容 Messages 路线、认证及工具格式 |
+| `bedrock_converse` | 对应 Bedrock Provider 路线与账户配置 |
 
 ### 给你的实际意义
 
-- **本地 Ollama**：自动走 `chat_completions`
-- **OpenRouter**：根据所选模型自动选 `chat_completions` 或 `anthropic_messages`
-- **直连 Anthropic**：走 `anthropic_messages`（能用 prompt caching）
-- **AWS Bedrock**：走 `bedrock_converse`
-
-**如果你想做兼容层**：只要 endpoint 长得像 OpenAI，Hermes 就当 OpenAI 用。
+先用 `hermes model` 选择 Provider/模型。自定义接入时明确协议、地址和当前版本字段；旧版配置先核对迁移规则。开始真实任务前，分别验证文本回复、工具调用与流式返回，不把“模型列表能打开”当作全链路通过。本轮没有调用付费 API。
 
 ---
 
-## 📊 工作流拆解 5：Prompt Caching（省 90% 钱的关键）
+<a id="工作流拆解-5prompt-caching省-90-钱的关键"></a>
 
-Anthropic 的 prompt caching：标记 `cache_control: {type: ephemeral}` 的段落会被 cache 5 分钟。同一 session 内重复请求只收 10% 的钱。
+## 📊 工作流拆解 5：Prompt Caching 的命中与成本核对
 
-Hermes 的实现：
+缓存能否命中，取决于 Provider、模型、请求前缀、缓存策略及有效期。缓存读取、写入、未缓存输入、输出和工具请求可能分别计费，不能把某一类缓存输入的单价折扣写成整个任务省了多少。
 
-1. **system prompt 装配一次**（前面讲过）
-2. `prompt_caching.py` 在稳定段落边界插 cache 断点
-3. Agent Loop 第 4 步调模型时，前缀已经 cached → 收 10% 钱
-4. 只要 system prompt 不变，cache 持续有效
+原文中的固定美元对照与“后续只付 10%”没有附上可复现任务和账单，本轮移除这些实测式结论；不据此估算 Hermes 用户的实际节省。
 
-### 实测数据（社区报告）
+<a id="实测数据社区报告"></a>
 
-| 场景 | 无 cache | 有 cache |
-|---|---|---|
-| 1 小时密集对话 | $1.20 | $0.18 |
-| 长 cron 任务（30 轮 tool call） | $0.45 | $0.07 |
-| 重复跑同一 skill | 每次 100% | 首次 100%，后续 10% |
+### 自己保留的对照记录
 
-### 何时 cache 会失效
+| 记录项 | 用途 |
+|---|---|
+| 日期、Hermes 版本、Provider、模型和计费规则 | 确认比较对象一致 |
+| 同一任务输入、上下文、工具和完成标准 | 避免把任务质量差异当节省 |
+| 未缓存输入、缓存写入/读取、输出 token | 分清各类用量 |
+| 工具调用、重试、实际费用与最终产物 | 检查任务总成本和完成情况 |
 
-- 会话中改了 SOUL.md（不要做）
-- 会话中改了 MEMORY.md（Agent 自己改没事，因为下次 session 才生效）
-- 切换 model
-- 切换 provider
-- 超过 5 分钟没活动
+<a id="何时-cache-会失效"></a>
 
 ### 给你的成本优化模板
 
-```markdown
-## 我的成本优化清单
+<a id="我的成本优化清单"></a>
 
-1. ✅ System prompt 装配一次后不动（默认行为）
-2. ✅ 长 cron 任务串在一起跑（5 分钟内 cache 不失效）
-3. ✅ 用 Anthropic 直连而不是 OpenRouter（OpenRouter 不一定支持 cache）
-4. ✅ IterationBudget 限制到 30（防 tool call 失控）
-5. ✅ context_compressor 在 50% 阈值触发
+```markdown
+## 我的成本核对清单
+1. 记录实际请求中生效的 Provider、模型和缓存策略。
+2. 对照缓存命中字段，不因同一 session 或提示词未改就假定命中。
+3. 改模型、Provider、前缀或间隔后重新核对有效期和命中。
+4. 检查当前版本的轮次与压缩设置，避免套用未经核验的阈值。
+5. 以同任务产物、用量及账单作前后对照，不先写固定节省比例。
 ```
 
 ---
@@ -343,4 +337,4 @@ Hermes 的实现：
 - Hermes 官方文档 — [System Prompt Assembly](https://hermes-agent.nousresearch.com/docs/developer-guide/prompt-assembly)
 - Anthropic 官方 — [Prompt Caching](https://docs.anthropic.com/en/docs/build-with-claude/prompt-caching)
 
-
+本轮校对依据：[官方对应资料](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/integrations/providers.md)；[固定标签 PM 依赖管理](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/reference/package-management.md)。当前官网与固定标签的细节不自动互相替代。

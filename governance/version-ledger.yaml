@@ -117,6 +117,14 @@ versions:
       - docs/01-从这开始/01-先跑起来/04-把 Hermes 装上去.md
       - docs/05-遇到问题/02-安装更新与环境问题.md
       - docs/07-个人AI助理/01-个人AI助理怎么选.md
+      - docs/01-从这开始/05-实战应用/12-MCP 接入指南.md
+      - docs/01-从这开始/05-实战应用/17-语音模式.md
+      - docs/01-从这开始/05-实战应用/22-Hermes Agent 深度拆解与自建指南.md
+      - docs/03-国内落地/03-国内入口/01-总览.md
+      - docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
+      - docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
+      - docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
+      - docs/03-国内落地/03-国内入口/07-钉钉.md
     sync_decision: sync_in_progress
     task_group: UPSTREAM-REVIEW-20261026
     release_url: https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5
@@ -128,6 +136,7 @@ versions:
       本地局部修订，尚未发布；CLI、Store、Docker/Cloud更新，exe/dmg本次不更新。
       PM管理Python3.14；委派路线与部分核心能力转插件需分别核验。
       旧全量内容基线不变，旧会话限制仅保留历史适用版本，未安装或API实测。
+      另对8页做PM安装、Dashboard边界、协议及测量表述局部纠错；该批仅隔离分支待审。
   - version: v0.22.2
     source: hermes-official-github
     checked_at: '2026-10-19'

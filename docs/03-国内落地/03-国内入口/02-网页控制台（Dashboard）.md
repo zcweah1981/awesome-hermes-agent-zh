@@ -1,8 +1,10 @@
 # Hermes Agent Dashboard 网页控制台：启动与远程访问
 
+> 局部校对（2026-10-26）：固定 v0.22.5 Desktop 文档已记载 Dashboard 的可选 Chat/TUI 和远程认证。不同安装包、平台与当前官网细节分开核对；配图沿旧版示意，本轮未启动 Hermes 联调。
+
 Dashboard 是通过浏览器 URL 访问的网页控制台。本页处理服务启动、地址、认证与远程访问；要安装本机桌面 App，请看[Hermes 桌面版教程](/docs/start/personalize/desktop-app)。模型选择转到[国内模型配置](/docs/china/models)，消息入口或远程 Gateway 异常看[Gateway 排障](/docs/issues/gateway-messaging)。
 
-> 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；但它不是 Open WebUI 那种聊天前端，也不是替代 CLI 的第一主入口。
+> 🎯 一句话结论：如果你要的是一个**本地浏览器里的管理面板**，方便看状态、改配置、管 API Key、查会话和看日志，那 Dashboard 值得用；它的 Chat/TUI 与 Open WebUI 的独立前端接法不同，CLI 仍适合先排错。
 
 这一页只解决一件事：把 Dashboard 的定位彻底讲清楚，避免你把“管理面板”“网页聊天前端”“API 后端服务”混成一件事。
 
@@ -17,11 +19,11 @@ Dashboard 是通过浏览器 URL 访问的网页控制台。本页处理服务�
 - 再去 Config / API Keys 管配置和密钥
 - 最后用 Logs / Cron / Skills 做日常治理
 
-这张图要表达的不是“怎么聊天”，而是：
+这张图沿用旧版管理流程示意；聊天与认证边界以本页文字及所装版本为准：
 
 - Dashboard 是管理台
 - 它更适合管理、查看、配置和巡检
-- 它不是网页聊天前端
+- 它可包含嵌入 TUI 的 Chat 页，需核对版本、平台与依赖
 
 ## 🚀 先记住这页的核心判断
 
@@ -36,7 +38,7 @@ Dashboard 的作用是：
 
 Dashboard 不负责：
 
-- 充当 Open WebUI 那种聊天前端
+- 替代 Open WebUI 的独立前端部署与账户体系
 - 替代 CLI 作为最完整的排错入口
 - 替代 API Server 作为对外提供 OpenAI-Compatible 接口的后端
 
@@ -47,7 +49,7 @@ Dashboard 不负责：
 - 你已经能跑 Hermes，但不想总是直接改 YAML 或 `.env`
 - 你想用浏览器集中管理配置、API Key 和会话
 - 你希望先看清当前实例的状态，再决定下一步排错方向
-- 你需要一个本地控制台，而不是一个新的聊天产品
+- 你需要本地控制台，并希望按版本核对其 Chat 能力
 - 你已经知道 CLI 仍然是第一主入口，只是希望日常管理更方便
 
 ## 📌 它到底是什么，不是什么
@@ -73,12 +75,12 @@ Dashboard 不负责：
 
 这页最关键的是把误解提前拦住：
 
-- 它不是 Open WebUI 那样的聊天前端
-- 它不是给团队成员直接对话的网页入口
+- 它的内置 Chat 与 Open WebUI 接 API Server 是不同接法
+- 不能把管理实例直接当作具备完整团队账户隔离的服务
 - 它不是 API Server
 - 它不是替代 CLI 的万能入口
 
-如果你真正想要的是“网页聊天界面”，下一页该看的是 [03-API 服务与 Open WebUI](<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>)，而不是把 Dashboard 当聊天壳子。
+如果你想部署 Open WebUI 这样的独立网页聊天前端，下一页看 [03-API 服务与 Open WebUI](<./03-API%20%E6%9C%8D%E5%8A%A1%E4%B8%8E%20Open%20WebUI.md>)；Dashboard 的 Chat/TUI 则先核对当前版本与平台。
 
 ## 🧭 最短决策
 
@@ -86,14 +88,14 @@ Dashboard 不负责：
 |---|---|
 | 你还在第一次配置 Hermes、还要频繁排错 | 先用 CLI，Dashboard 先不急 |
 | 你已经把 Hermes 跑起来，想更方便地改配置和看状态 | 可以开始用 Dashboard |
-| 你想做网页聊天界面 | 不要先看 Dashboard，先看 API 服务与 Open WebUI |
+| 你想用浏览器聊天 | 先核对 Dashboard Chat；若要独立前端，再看 API 服务与 Open WebUI |
 | 你要把 Hermes 暴露给网页前端、第三方前端或其他客户端 | 核心不是 Dashboard，而是 API Server |
 | 你需要统一查看日志、会话、配置、env | Dashboard 很合适 |
 
 如果你只想记一句话：
 
 - **想管理 Hermes → Dashboard**
-- **想聊天前端 → Open WebUI**
+- **想浏览器聊天 → 核对 Dashboard Chat；独立前端可选 Open WebUI**
 - **想完整排错与配置 → CLI**
 
 ## 🧱 Dashboard 里到底能做什么
@@ -110,7 +112,7 @@ Dashboard 不负责：
 - 平台状态
 - 活跃 session 数量
 
-它适合回答的不是“我怎么聊天”，而是：
+Status 页主要帮助确认：
 
 - 我的 Hermes 现在是不是正常运行
 - 哪些平台连上了
@@ -167,7 +169,7 @@ Dashboard 不负责：
 - 工具调用数
 - 最后活跃时间
 
-它更像“运行现场的总览”，而不是聊天 UI 本身。
+Sessions 是运行现场总览；内置 Chat 是另一个页面，是否可用需核对安装版本与平台。
 
 ### 5）Logs / Analytics / Cron / Skills
 这些页面分别解决：
@@ -177,7 +179,7 @@ Dashboard 不负责：
 - **Cron**：管理定时任务
 - **Skills**：查看、搜索和启停技能 / toolsets
 
-这就是为什么我会说 Dashboard 本质是**控制台**，不是聊天前端。
+Dashboard 以管理控制台为主，也可以包含 Chat；不要用管理页的职责否定整个应用的聊天能力。
 
 ## 🔑 怎么启动 Dashboard
 
@@ -208,30 +210,22 @@ hermes dashboard --no-open
 
 ## ⚙️ 启动前你要知道的依赖
 
-官方文档说明，Dashboard 依赖：
-
-- FastAPI
-- Uvicorn
-
-如果你没装 web 依赖，通常需要：
+使用官方安装器或对应分发包，不用 PyPI 同名 `hermes-agent[web]` / `[all]` 包修复官方安装。固定版本的 PM 开发流程负责源码环境的依赖选择，桌面包和容器按各自的分发方式处理。
 
 ```bash
-pip install hermes-agent[web]
+hermes doctor
+hermes pm doctor
+# 只有日志明确显示 PM 管理的依赖损坏时，按官方说明修复：
+hermes pm repair
 ```
 
-如果你装的是完整版：
-
-```bash
-pip install hermes-agent[all]
-```
-
-那 web 依赖通常已经包含在内。
+修复后重启受影响的 Hermes 进程。Chat/TUI 还受平台和 PTY 依赖限制，服务能打开或 Status 正常都不等于聊天链路已经可用。
 
 ## 🆚 Dashboard、CLI、API Server 到底怎么分
 
 | 入口 | 它负责什么 | 它不负责什么 |
 |---|---|---|
-| Dashboard | 管理、查看、配置、日志、会话、key | 不负责网页聊天前端 |
+| Dashboard | 管理、会话及按版本提供的 Chat/TUI | 不等于 Open WebUI 的独立前端与账户体系 |
 | CLI | 最完整的原生入口，适合排错、模型切换、配置与验证 | 不负责图形化管理体验 |
 | API Server | 把 Hermes 暴露成 OpenAI-Compatible 后端 | 不负责配置面板 |
 | Open WebUI | 作为聊天前端连接 API Server | 不负责 Hermes 的系统管理 |
@@ -264,8 +258,8 @@ pip install hermes-agent[all]
 ### 1. Dashboard 和 Open WebUI 是不是同一个东西？
 不是。
 
-- Dashboard = 管理台
-- Open WebUI = 浏览器聊天前端
+- Dashboard = 管理台，可包含 Chat/TUI
+- Open WebUI = 连接 API Server 的独立浏览器聊天前端
 
 ### 2. Dashboard 能不能替代 CLI？
 不能。
@@ -301,7 +295,7 @@ Dashboard 很适合：
 - API keys
 - 平台凭据
 
-而且 Dashboard 本身没有内建认证层。
+固定 v0.22.5 的 Desktop 文档已描述非回环地址的认证门及 Provider 登录，不能继续写成“没有内建认证”。不要因绑定地址改变就假定安全接入已完成。
 
 ## ⚠️ 风险点与默认建议
 
@@ -320,14 +314,14 @@ Dashboard 很适合：
 
 Hermes 官方文档明确提醒：
 
-- Dashboard 默认绑定 `127.0.0.1`
-- 如果你改成 `0.0.0.0`
-- 且没有额外保护
-- 那么同一网络里的人就可能访问并修改你的凭据
+- Dashboard 默认绑定 `127.0.0.1`，适合先在本机验证。
+- 固定标签的 Desktop 文档说明：非回环绑定会启用认证门，客户端需使用匹配的认证 Provider 登录。
+- 用户名/口令方案限可信网络或 VPN；公网接入按官方 OAuth 路线及实际版本核对。
+- Status 可访问与聊天 WebSocket 可认证是两件事，必须分别验收。
 
 还要特别记住一件事：
 
-- **Dashboard 自己没有认证层**
+- **按安装版本核对认证 Provider、会话和远程连接；不能把旧版“无认证”说明套到当前版本**
 
 所以在国内部署场景里，最稳的默认做法仍然是：
 
@@ -354,3 +348,5 @@ Hermes 官方文档明确提醒：
 - 想从终端完成同一套操作：看[命令行（CLI）](/docs/china/entry/cli)。
 - 要接团队消息入口：下一步看[飞书](/docs/china/entry/feishu)。
 - 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。
+
+本轮校对依据：[官方对应资料](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/user-guide/desktop.md)；[固定标签 PM 依赖管理](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/reference/package-management.md)。当前官网与固定标签的细节不自动互相替代。

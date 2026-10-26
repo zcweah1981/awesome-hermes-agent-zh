@@ -976,7 +976,7 @@ routes:
   description: 用 MCP 协议让 Hermes 直接调用 GitHub、Linear、数据库等外部工具，不用自己写 wrapper。
   order: 68
   status: published
-  updated: '2026-06-05'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/13-Ollama 本地模型.md
@@ -1046,7 +1046,7 @@ routes:
   description: CLI Ctrl+B 录音、Telegram 语音消息、Discord 语音频道，三种入口一套 STT/TTS 引擎。
   order: 73
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/18-Hermes Agent 进阶实战.md
@@ -1103,10 +1103,10 @@ routes:
   page_type: doc-page
   title: 🔮 22-Hermes Agent 深度拆解与自建指南
   section: hermes-deep-dive-build-your-own
-  description: 拆开 Hermes 黑盒：Agent Loop 六步、System Prompt 12 段组装、Frozen-Snapshot 模式、Tools 自注册 Registry、四种 API 模式自动切换、Prompt Caching 省 90% 钱、自建/二开路径。基于 Truong Phung 在 dev.to 的深度文章整理。
+  description: 拆解 Hermes Agent Loop、提示词和工具注册；按固定版本核对 Provider 与 API 模式，用实际任务用量检查缓存成本。保留旧文架构基线，不承诺固定节省比例。
   order: 78
   status: published
-  updated: '2026-06-05'
+  updated: '2026-10-26'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/23-实战：个人项目开发工作流.md
@@ -1507,7 +1507,7 @@ routes:
   description: 一句话先说清楚：这一页不是直接教你配某个平台，而是先帮你选对 Hermes 的使用入口，再进入正确的入口页面。
   order: 100
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1517,8 +1517,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-10-26'
+    note: Partial accuracy correction only; remaining tutorial commands and platform behavior require separate verification.
 - source: docs/03-国内落地/03-国内入口/02-网页控制台（Dashboard）.md
   slug: /china/entry/dashboard
   module: china
@@ -1528,7 +1528,7 @@ routes:
   description: "使用浏览器访问 Hermes Dashboard：确认服务、监听地址和认证，查看会话与任务，再按需要配置安全的远程访问；桌面 App 使用单独教程。"
   order: 101
   status: published
-  updated: "2026-09-30"
+  updated: '2026-10-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1538,18 +1538,18 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-10-26'
+    note: Partial accuracy correction only; remaining tutorial commands and platform behavior require separate verification.
 - source: docs/03-国内落地/03-国内入口/03-API 服务与 Open WebUI.md
   slug: /china/entry/api-service-open-webui
   module: china
   page_type: doc-page
   title: 03-API 服务与 Open WebUI
   section: api-service-open-webui
-  description: 🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。
+  description: 通过 Hermes API Server 连接 Open WebUI 等独立网页前端；区分 Dashboard Chat 接法，先核对后端版本、地址和认证，再验证消息与工具响应。
   order: 102
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1559,8 +1559,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-10-26'
+    note: Partial accuracy correction only; remaining tutorial commands and platform behavior require separate verification.
 - source: docs/03-国内落地/03-国内入口/04-命令行（CLI）.md
   slug: /china/entry/cli
   module: china
@@ -1570,7 +1570,7 @@ routes:
   description: 🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。
   order: 103
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1580,8 +1580,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-10-26'
+    note: Partial accuracy correction only; remaining tutorial commands and platform behavior require separate verification.
 - source: docs/03-国内落地/03-国内入口/05-飞书.md
   slug: /china/entry/feishu
   module: china
@@ -1633,7 +1633,7 @@ routes:
   description: 🎯 一句话结论：如果你的团队本来就在钉钉里协作，而且你希望用 **官方推荐的 Stream 模式** 把 Hermes 接进去，那么这页要帮你先把“创建应用 → 配置机器人并选 Stream → 获取 Client ID / Client Secret → 填回 Hermes”这条主线跑顺。
   order: 106
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1643,8 +1643,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-10-26'
+    note: Partial accuracy correction only; remaining tutorial commands and platform behavior require separate verification.
 - source: docs/03-国内落地/03-国内入口/08-个人微信.md
   slug: /china/entry/personal-wechat
   module: china

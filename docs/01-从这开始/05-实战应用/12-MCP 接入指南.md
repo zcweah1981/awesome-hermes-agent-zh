@@ -1,5 +1,7 @@
 # 🔌 12-MCP 接入指南：给 Hermes 装上"万能插头"
 
+> 局部校对（2026-10-26）：本轮仅校对 MCP 安装与缺依赖处理，依据固定 v0.22.5 官方文档；其余配置示例沿旧文，未安装或连接第三方服务实测。
+
 > 一句话先说清楚：MCP（Model Context Protocol）是一个让 Hermes 调用外部工具的标准协议。装上 MCP 之后，你的 Agent 不只能"自己跑命令"，还能直接读 GitHub Issue、查 Linear 任务、操作 Postgres、浏览 Figma 设计稿——不用你写一行工具代码。
 
 ![MCP 接入指南 总览图](../../assets/practical-v2-12-mcp-guide-00-overview-cn.webp)
@@ -49,17 +51,27 @@ MCP 把这件事标准化了：
 
 ## ✍️ 操作步骤：三步接通第一个 MCP Server
 
-### 第 1 步：装 MCP 依赖
+<a id="第-1-步装-mcp-依赖"></a>
+
+### 第 1 步：确认标准安装和 MCP 可用
+
+固定 v0.22.5 官方文档说明：标准安装已包含 MCP 支持，不需要再执行 `pip install hermes-agent[mcp]`。若此前装过 PyPI 同名包，先按[官方安装主线](/docs/start/get-running/install-hermes)核对安装来源。
 
 ```bash
-cd ~/.hermes/hermes-agent
-uv pip install -e ".[mcp]"
+hermes doctor
+hermes mcp catalog
 ```
 
-> 如果你是用 `pip install hermes-agent` 装的，改成：
-> ```bash
-> pip install "hermes-agent[mcp]"
-> ```
+只有 PM 管理的源码开发环境确实缺少 MCP 依赖时，才从对应源码目录按固定版本的 PM 流程补齐；不要向系统 Python、签名桌面包或容器运行层直接 pip 安装：
+
+```bash
+# Bash：在已经按 PM 开发流程准备的 Hermes 源码目录中
+source ./activate
+python -c "import pm; pm.sync_venv(['mcp'], explicit=True)"
+source ./activate
+```
+
+Windows 源码环境使用 `. .\activate.ps1` 激活。依赖选择发生变化后，重启受影响的 Hermes 进程，再检查具体 MCP Server 的授权、工具发现及只读调用结果。
 
 ### 第 2 步：选一个 MCP Server，加进 config.yaml
 
@@ -279,13 +291,11 @@ MCP 装了 GitHub MCP，不代表 Hermes 内置的 `terminal` / `file` / `web` �
 
 ## ⚠️ 踩坑提醒
 
-### 1. 没装 mcp extra 就开始改 config
+<a id="1-没装-mcp-extra-就开始改-config"></a>
 
-`pip install hermes-agent` 默认不带 mcp。报错信息里看到 `ImportError: mcp` 时，回去补：
+### 1. 先确认安装来源和运行环境
 
-```bash
-pip install "hermes-agent[mcp]"
-```
+标准安装已经带 MCP。遇到 `ImportError: mcp`，先运行 `hermes doctor`，核对实际使用的安装与 Python 环境；PM 源码环境按上面的固定版本流程处理，桌面包和容器按各自分发方式修复。不要用 PyPI 同名 `hermes-agent` 包修复官方安装。
 
 ### 2. `${VAR}` 没生效
 
@@ -360,3 +370,5 @@ hermes mcp install <name>
 - Anthropic MCP 官方规范 — [modelcontextprotocol.io](https://modelcontextprotocol.io/)
 - Hermes 官方文档 — [Configuration: mcp_servers](https://hermes-agent.nousresearch.com/docs/user-guide/configuration)
 - 社区 MCP Server 列表 — [awesome-mcp-servers](https://github.com/modelcontextprotocol/servers)
+
+本轮校对依据：[官方对应资料](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/user-guide/features/mcp.md)；[固定标签 PM 依赖管理](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/reference/package-management.md)。当前官网与固定标签的细节不自动互相替代。

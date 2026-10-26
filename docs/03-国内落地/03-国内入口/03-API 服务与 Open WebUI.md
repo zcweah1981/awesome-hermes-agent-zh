@@ -1,5 +1,7 @@
 # 03-API 服务与 Open WebUI
 
+> 局部校对（2026-10-26）：本页讲 Open WebUI 的独立前端接法。Dashboard 本身可提供 Chat/TUI，不能再用“一概无聊天”区分两者；其他 API 配置沿旧文，未安装联调。
+
 > 🎯 一句话结论：如果你真正想要的是“网页聊天界面”，重点不是先折腾 Dashboard，而是先把 **Hermes API Server** 作为后端跑起来，再让 **Open WebUI** 这样的前端连上它。
 
 这一页只讲一件事：把 **后端服务** 和 **网页前端** 这两层关系讲清楚，并给你一条最短接入路径。
@@ -36,7 +38,7 @@
 - 你想让 Hermes 出现在浏览器聊天界面里，而不是只用 CLI
 - 你想把 Hermes 接到 Open WebUI、LobeChat、LibreChat 这类 OpenAI-compatible 前端
 - 你需要一个能承接 Hermes 全工具能力的网页聊天前端
-- 你已经明白 Dashboard 是管理台，不是聊天壳子
+- 你已经分清 Dashboard 内置 Chat/TUI 与 Open WebUI 连接 API Server 的两种接法
 - 你希望先跑一个最标准、最容易理解的 Web 前端接法
 
 ## 📌 它到底是什么，不是什么
@@ -75,7 +77,7 @@
 |---|---|
 | 你想要浏览器聊天界面 | 走 **API Server + Open WebUI** |
 | 你还在第一次排错、第一次配模型 | 先走 CLI，不要先上网页前端 |
-| 你只是想看状态、改配置、查日志 | 先回 Dashboard，不要把它当聊天前端 |
+| 你想看状态、改配置、查日志 | 看 Dashboard；内置 Chat 另核对版本与平台 |
 | 你想让 Open WebUI 或其他兼容前端接 Hermes | 核心是 API Server，不是 Dashboard |
 | 你想少走弯路地验证这条路 | 先用官方给的 Open WebUI 接法跑通 |
 
@@ -282,7 +284,7 @@ Open WebUI 能正确连接 Hermes，对应表现通常是：
 
 | 组件 | 它负责什么 | 它不负责什么 |
 |---|---|---|
-| Dashboard | 配置、状态、日志、会话、管理 | 不负责聊天前端 |
+| Dashboard | 管理及按版本提供的 Chat/TUI | 不等于 Open WebUI 独立前端接法 |
 | API Server | 暴露 OpenAI-compatible 后端接口 | 不负责图形化管理 |
 | Open WebUI | 提供浏览器聊天界面 | 不负责 Hermes 系统管理 |
 | CLI | 最完整的原生入口、排错入口 | 不负责网页聊天体验 |
@@ -404,3 +406,5 @@ Open WebUI 官方文档明确提醒：
 - 想先确认实例状态：看[网页控制台（Dashboard）](/docs/china/entry/dashboard)。
 - 要把服务接到团队消息入口：看[飞书](/docs/china/entry/feishu)。
 - 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。
+
+本轮校对依据：[官方对应资料](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/user-guide/desktop.md)；[固定标签 PM 依赖管理](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/reference/package-management.md)。当前官网与固定标签的细节不自动互相替代。

@@ -1,5 +1,7 @@
 # 04-命令行（CLI）
 
+> 局部校对（2026-10-26）：本轮仅校对 Dashboard 的职责边界；CLI 命令示例仍需以所装版本帮助和真实结果验收，未逐条运行。
+
 > 🎯 一句话结论：如果你要选一个**最完整、最适合排错、最适合先跑顺 Hermes** 的入口，那默认就应该是 CLI。无论你后面要接 Dashboard、Open WebUI，还是飞书、企业微信、钉钉，这一页都应该先跑通。
 
 这一页不是抽象介绍“CLI 很强”，而是直接带你完成一条最短闭环：
@@ -433,7 +435,7 @@ hermes chat --resume <id>
 | 入口 | 它负责什么 | 它不负责什么 |
 |---|---|---|
 | CLI | 最完整的原生使用、排错、切模型、配置 | 不负责浏览器聊天前端 |
-| Dashboard | 管理、查看、配置、日志、会话 | 不负责主要聊天交互 |
+| Dashboard | 管理、会话及按版本提供的 Chat/TUI | 不等于独立前端的账户与隔离体系 |
 | API Server | 对外提供 OpenAI-compatible 后端 | 不负责配置管理界面 |
 | Open WebUI | 浏览器聊天前端 | 不负责 Hermes 系统管理 |
 
@@ -523,3 +525,5 @@ CLI 不只是“安装完成后打个 hello”的入口，它也是：
 - 想查看运行状态：看[网页控制台（Dashboard）](/docs/china/entry/dashboard)。
 - 想把 Hermes 暴露给前端：看[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
 - 推送或回调异常：去[Gateway Messaging 与推送问题](/docs/issues/gateway-messaging)排查。
+
+本轮校对依据：[官方对应资料](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/user-guide/desktop.md)；[固定标签 PM 依赖管理](https://github.com/NousResearch/hermes-agent/blob/bf0203a794a07aac3ff764972ab9087baa4e4f4e/website/docs/reference/package-management.md)。当前官网与固定标签的细节不自动互相替代。
