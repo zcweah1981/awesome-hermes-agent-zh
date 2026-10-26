@@ -1,7 +1,7 @@
 ---
 quick_reference:
-  - checkedAt: '2026-10-03'
-    hermesVersion: v2026.9.24
+  - checkedAt: '2026-10-26'
+    hermesVersion: v0.22.5
     verification: docs-reviewed
     kind: model
     id: deepseek-metered-native
@@ -28,10 +28,10 @@ quick_reference:
     sources:
       - url: 'https://api-docs.deepseek.com/'
       - url: 'https://api-docs.deepseek.com/quick_start/agent_integrations/hermes/'
-      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
-        revision: v2026.9.24
-  - checkedAt: '2026-10-03'
-    hermesVersion: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/hermes_cli/auth.py'
+        revision: v0.22.5
+  - checkedAt: '2026-10-26'
+    hermesVersion: v0.22.5
     verification: docs-reviewed
     kind: model
     id: deepseek-metered-compatible
@@ -57,14 +57,16 @@ quick_reference:
     sources:
       - url: 'https://api-docs.deepseek.com/'
       - url: 'https://api-docs.deepseek.com/quick_start/agent_integrations/hermes/'
-      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v2026.9.24/hermes_cli/auth.py'
-        revision: v2026.9.24
-      - url: 'https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md'
-        revision: v2026.9.24
+      - url: 'https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/hermes_cli/auth.py'
+        revision: v0.22.5
+      - url: 'https://github.com/NousResearch/hermes-agent/blob/v0.22.5/website/docs/integrations/providers.md'
+        revision: v0.22.5
 ---
-# 07-DeepSeek按量计费接口
+# 07-DeepSeek API 接入 Hermes｜充值、模型名与计费边界
 
-内容更新：2026-10-19（仅补充 Search／Fetch 计费边界；同源配置仍为 2026-10-03 基线）；原教程复核日期：2026-09-30；速查条目核验日期见配置卡。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
+<a id="07-deepseek按量计费接口"></a>
+
+内容更新：2026-10-26；本轮核对 Flash-1017 别名、官方价格与协议说明，并用 Hermes 稳定 v0.22.5 的凭据注册源码复核两张配置卡。Search／Fetch 的特定收费日期仍按下节单独说明。原教程始于 2026-09-30；未调用 API、购买套餐或完成桌面安装实测。
 
 > 💡 **速答**：Hermes Agent 接入 DeepSeek 只需三步——充值余额 → 创建 API Key → 写入 `~/.hermes/.env` 里的 `DEEPSEEK_API_KEY=***`。在 Hermes 里用 `hermes model` 选 DeepSeek provider，默认先选 `deepseek-flash`（低成本起步档），不需要买套餐。
 
@@ -122,7 +124,13 @@ DeepSeek 当前官方中文价格页已经切到 `V4` 体系。
 
 ### 当前模型与兼容 ID
 
-当前已核验 ID 见[模型接入速查](/docs/reference/model-quick-reference)。旧 `deepseek-v4-flash` 等兼容 ID 仍可调用，但由 V4.1-Flash 服务并按 Flash 计费；不能凭旧公告说 Pro 已停用，也不能把旧 ID 当成固定旧模型。
+当前已核验 ID 见[模型接入速查](/docs/reference/model-quick-reference)。**截至 2026-10-26，`deepseek-flash` 指向 DeepSeek-V4.1-Flash-1017**；这是 10 月 17 日已发布更新的延续核对，不是本周新发版。官方说明调用方法和价格不变。旧 `deepseek-v4-flash`、`deepseek-v4-flash-vision-exp` 仍可调用，但原模型已下线，请求由 Flash-1017 服务并按 Flash 计费；它们不能锁定旧模型。Pro 当前对应 V4-Pro-0813，不据旧停用预告断言它已经不可用。[官方更新](https://api-docs.deepseek.com/updates/)、[当前模型与价格](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
+
+### 协议支持、账户权限与执行地点分别核对
+
+厂商支持 Chat Completions、Responses 和 Anthropic 格式，不代表每个 Hermes 接入路线会自动使用同一协议。本页继续按配置卡的 OpenAI 兼容路线起步；需要 Responses 时，先对照[官方 Responses 说明](https://api-docs.deepseek.com/zh-cn/guides/responses_api/)及实际客户端版本，不只改一个地址就宣称已切换协议。原生 `deepseek` 的默认地址仍由固定 v0.22.5 源码注册为 `https://api.deepseek.com/v1`，厂商兼容示例的根地址为 `https://api.deepseek.com`；按所选路线保持配置一致。
+
+充值余额、API Key、精确模型 ID 和对应工具权限需要各自验证。调用云端 API 不等于把模型部署在本机，厂商模型支持工具也不证明当前 Hermes 的整个任务链已联调。先用自己的最小任务核对真实模型、输出和用量，不能将官方基准或“价格未变”换算成你的实际节省。
 
 ### 人民币／百万 tokens：峰谷分别核算
 
@@ -377,8 +385,8 @@ hermes model
 
 - [当前模型、峰谷价与兼容名](https://api-docs.deepseek.com/zh-cn/quick_start/pricing/)
 - [官方更新](https://api-docs.deepseek.com/zh-cn/updates/)
-- [Hermes 稳定 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/website/docs/integrations/providers.md)
-- [稳定凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v2026.9.24/hermes_cli/auth.py)
+- [Hermes v0.22.5 Provider 文档](https://github.com/NousResearch/hermes-agent/blob/v0.22.5/website/docs/integrations/providers.md)
+- [v0.22.5 凭据注册与覆盖变量](https://github.com/NousResearch/hermes-agent/blob/v0.22.5/hermes_cli/auth.py)
 
 ## ➡️ 下一步
 

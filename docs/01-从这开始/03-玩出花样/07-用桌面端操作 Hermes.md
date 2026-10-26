@@ -4,7 +4,21 @@
 
 > 从桌面安装、配模型、完成第一个文件任务开始，再做会议纪要、表格核对和资料整理。需要服务器长期运行时，最后再接远程后端。
 
-**2026-10-19 发行复核**：最新稳定版为 [v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2)（2026-10-15 发布）。官方说明 v0.22.1 使用了错误提交，混入未发布 Gateway 工作，Microsoft Store 应用可能卡在 Connecting；v0.22.2 用于纠正这次发行。**已知限制：曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 中无法删除。** 保留会话与配置备份，不用删除数据来排障；按自己安装包的渠道核对更新。main 独有工作留待 v0.23.0，不能把切 main 当默认修复。下文仍保留旧安装操作基线，未安装或实测新包。实际桌面包版本与 Agent 后端分别记录，不能用源码 `package.json` 的 `0.0.0` 当发行号。
+**2026-10-26 发行复核**：当前稳定版为 [v0.22.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5)；说明内日期为 10 月 22 日，GitHub API 实际发布于 10 月 23 日。CLI 可用 `hermes update` 或对应安装器更新，Microsoft Store 通过 Store 更新，Docker／Hermes Cloud 使用各自镜像流程；**`.exe`／`.dmg` 桌面安装包本次没有更新，要等后续 bundled 发行**。桌面应用、后端和安装渠道分别核对，不能把 main 或后端版本当成新桌面包。以下操作保留各节注明的历史基线，本轮只核对官方资料，未安装实测。
+
+历史问题单独保留：v0.22.2 曾纠正 v0.22.1 的错误发行，并记录“曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 无法删除”。这是该版本的限制，不能据 v0.22.5 的版本号直接判定旧会话迁移已经修复；先备份配置和会话，再按自己的渠道验证，避免以删除数据作为排障手段。
+
+
+**先按发行渠道核对更新：**
+
+| 当前安装方式 | v0.22.5 的更新边界 | 更新后核对 |
+|---|---|---|
+| CLI／源码安装 | `hermes update` 或官方对应安装器；稳定与 main 渠道分开 | `hermes --version`、命令路径、运行 profile |
+| Microsoft Store | 通过 Store 更新，不使用源码更新命令替代 | 实际应用版本与连接后端版本 |
+| `.exe`／`.dmg` 完整桌面包 | 本次没有新包，等待后续 bundled 发行 | 不因后端显示 0.22.5 就认定 UI 已更新 |
+| Docker／Hermes Cloud | 按镜像／托管服务流程，不能靠容器内更新代替重建 | 镜像标签、数据挂载与实际后端版本 |
+
+例如 CLI 已显示 0.22.5、桌面安装包仍是原版本，可能符合本次渠道安排；先核对发布说明，不要因此反复重装。远程连接还要记录服务器上的 Agent 版本。
 
 v0.21.7 的源码安装默认跟随 stable；git checkout 桌面可在 Settings → About → Updates 切换 Stable releases / Every commit。这个开关不改变 Store、MSIX 或 bundled 包的更新渠道；源码领先 latest 时不会降级，fork／mirror 仍走 main。详情见[版本与更新通道](/docs/reference/latest-features)。
 

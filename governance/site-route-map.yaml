@@ -104,7 +104,7 @@ routes:
   description: 按系统选择官方桌面或终端安装入口，分层验证版本、环境和模型，说明平台与发行方式边界。
   order: 6
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -115,8 +115,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-19'
-    note: "2026-10-19 仅复核v0.22.2发行纠正、0.22.1会话删除限制及main等待0.23.0；旧操作基线保留，未安装实测。"
+    checked_at: '2026-10-26'
+    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -575,10 +575,10 @@ routes:
   page_type: doc-page
   title: "Hermes Agent 桌面版教程｜模型配置与连接排障"
   section: desktop-app
-  description: Hermes Agent 桌面安装与连接排障；说明 v0.22.2 发行纠正、v0.22.1 会话限制和各渠道更新边界，保留旧操作基线。
+  description: "区分 Hermes v0.22.5 的 CLI、Store、容器与桌面安装包更新渠道，完成模型和文件任务验收，保留旧操作基线。"
   order: 39
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-26'
   source_type: feature_deep_dive
   nav_group: 03-玩出花样
   source_refs:
@@ -589,8 +589,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-19'
-    note: "2026-10-19 仅复核v0.22.2发行纠正、0.22.1会话删除限制及main等待0.23.0；旧操作基线保留，未安装实测。"
+    checked_at: '2026-10-26'
+    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
 - source: docs/01-从这开始/03-玩出花样/08-教-Hermes-学习新技能-learn.md
   slug: /start/personalize/learn
   module: start
@@ -1456,12 +1456,12 @@ routes:
   slug: /china/models/deepseek-metered-api
   module: china
   page_type: doc-page
-  title: 07-DeepSeek按量计费接口
+  title: "DeepSeek API 接入 Hermes｜充值、模型名与计费边界"
   section: deepseek-metered-api
-  description: 🎯 一句话先说清楚：如果你当前最重要的目标是“先用最低门槛把 Hermes 跑起来”，而不是先买会员、套餐或年付权益，那么 DeepSeek 这条按量接口路线通常就是 `02-国内模型` 里最值得先走的默认起步页。
+  description: "通过 DeepSeek 开放平台按量 API 接入 Hermes，核对充值与 Key、Flash-1017 模型别名、原生和兼容地址、协议及独立 Search/Fetch 计费边界。"
   order: 98
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1473,8 +1473,8 @@ routes:
     - deepseek
   source_review:
     state: provider-official-source-confirmed
-    checked_at: '2026-10-19'
-    note: "2026-10-19 仅复核官方 Search/Fetch 成功请求计费及11月1日特定服务端工具调用生效边界；配置卡与旧模型表保持原复核日期，未调用API。"
+    checked_at: '2026-10-26'
+    note: "2026-10-26复核Flash-1017别名、价格/协议，Hermes0.22.5 auth源码及两张速查卡；Search/Fetch特定11月1日边界保留，未调用API。"
 - source: docs/03-国内落地/02-国内模型/08-自定义兼容接口.md
   slug: /china/models/openai-compatible-endpoint
   module: china
@@ -1777,7 +1777,7 @@ routes:
   description: "按安装渠道与操作系统排查 Hermes 命令、PATH、依赖和下载错误，区分原生 Windows、WSL2、桌面包及 Docker，避免盲目换源或重装。"
   order: 114
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1787,8 +1787,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-19'
-    note: "2026-10-19 仅复核v0.22.2发行纠正、0.22.1会话删除限制及main等待0.23.0；旧操作基线保留，未安装实测。"
+    checked_at: '2026-10-26'
+    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues
@@ -2139,12 +2139,12 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: 🆕 12-Hermes v0.22.2｜更新与桌面版本
+  title: "🆕 12-Hermes v0.22.5｜更新渠道与桌面版本"
   section: latest-features
-  description: 说明 Hermes Agent v0.22.2 发行纠正、v0.22.1 会话删除限制与稳定更新渠道，保留历史边界和旧操作基线。
+  description: "核对 Hermes v0.22.5 的稳定标签、桌面包分发、PM 运行时、更新恢复与插件边界，保留旧版本限制和操作基线。"
   order: 131
   status: published
-  updated: '2026-10-19'
+  updated: '2026-10-26'
   source_type: official-reference
   nav_group: 06-reference
   source_refs:
@@ -2155,8 +2155,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-19'
-    note: "2026-10-19 仅复核v0.22.2发行纠正、0.22.1会话删除限制及main等待0.23.0；旧操作基线保留，未安装实测。"
+    checked_at: '2026-10-26'
+    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
 - source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   slug: /china/models/mimo-v26
   module: china
@@ -2228,7 +2228,7 @@ routes:
   description: 对照公开官方资料，比较 Muse、Grok Bot、Dots 与 Hermes 的任务分工、成本、地区与数据边界，说明受控交接和三个起步场景；非同任务实测或原生互通教程。
   order: 135
   status: published
-  updated: '2026-10-20'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 07-个人AI助理
   source_refs:
@@ -2239,11 +2239,11 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-19'
-    note: 采用用户提供v1站内article及三张批准图；正文逐项链接各产品官方来源，保留Muse地区与Grok模型口径冲突及未知。Hermes固定v0.22.2，QQ Mail MCP仅第三方公开v0.1.0分析，无四者互通/同任务/邮箱联调实测。2026-10-20按第一期知乎完整来源补充超时治理与公开页面练习，产品事实核验基线保持10月19日。
+    checked_at: '2026-10-26'
+    note: "2026-10-26仅增量复核Hermes0.22.5与GrokBot0.75.5并补交接记录；其余产品仍按10月19日基线，三图复用示意，无四者互通、QQ邮箱联调或同任务实测。"
 source_mapping_contract:
   version: r1
-  updated: '2026-05-02'
+  updated: '2026-10-26'
   registry: governance/upstream-source-registry.yaml
   fields:
     source_refs.local: Local truth sources used to preserve Chinese repo structure and route contracts.

@@ -4,7 +4,9 @@
 
 > 想从桌面窗口开始，先走[桌面版安装与首个任务](../03-玩出花样/07-用桌面端操作%20Hermes.md)；本页提供官方终端安装路线。安装结束后分别验证命令、环境和模型回复。
 
-**2026-10-19 发行复核**：最新稳定版为 [v0.22.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2)（2026-10-15 发布）。官方说明 v0.22.1 使用了错误提交，混入未发布 Gateway 工作，Microsoft Store 应用可能卡在 Connecting；v0.22.2 用于纠正这次发行。**已知限制：曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 中无法删除。** 保留会话与配置备份，不用删除数据来排障；按自己安装包的渠道核对更新。main 独有工作留待 v0.23.0，不能把切 main 当默认修复。下文仍保留旧安装操作基线，未安装或实测新包。下文操作仍以 2026-09-30 核对的 v2026.9.24（Agent v0.21.5）为基线；依赖要求不直接套用于所有新渠道。
+**2026-10-26 发行复核**：当前稳定版为 [v0.22.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5)；说明内日期为 10 月 22 日，GitHub API 实际发布于 10 月 23 日。CLI 可用 `hermes update` 或对应安装器更新，Microsoft Store 通过 Store 更新，Docker／Hermes Cloud 使用各自镜像流程；**`.exe`／`.dmg` 桌面安装包本次没有更新，要等后续 bundled 发行**。桌面应用、后端和安装渠道分别核对，不能把 main 或后端版本当成新桌面包。以下操作保留各节注明的历史基线，本轮只核对官方资料，未安装实测。
+
+历史问题单独保留：v0.22.2 曾纠正 v0.22.1 的错误发行，并记录“曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 无法删除”。这是该版本的限制，不能据 v0.22.5 的版本号直接判定旧会话迁移已经修复；先备份配置和会话，再按自己的渠道验证，避免以删除数据作为排障手段。
 
 ![历史终端安装示意图](../../assets/rm2-2-install-hermes-01-install-command-running.webp)
 
@@ -39,7 +41,7 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
-安装器管理 Python、Node.js 等依赖，具体版本以对应安装器与版本说明为准。手动准备源码环境时，固定标签的 Python 要求为 **>=3.11,<3.14**。
+v0.22.5 的一方安装器由 **PM 管理运行时，使用 Python 3.14**；它依据锁文件准备工具，不是直接采用系统里任意 Node/Python。旧 v2026.9.24 的 `>=3.11,<3.14` 仅是本文历史操作基线，不要用它降级或替换新安装器的托管环境。源码构建与完整桌面包也不同：完整包不需要首次构建基础运行时，源码构建才按对应版本准备工具链。[v0.22.5 安装说明](https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/getting-started/installation.md)
 
 官方不支持 PyPI / `pip install hermes-agent`、`uv tool install hermes-agent` 发行安装，也不支持 `brew install hermes-agent` 路线。不要把同名第三方包当官方软件。
 
