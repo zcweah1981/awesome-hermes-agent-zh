@@ -275,7 +275,7 @@ registry.register(
 - 借鉴 Progressive disclosure
 - 借鉴 Frozen-snapshot pattern
 - 借鉴 Tool self-registration
-- 借鉴 4 API 模式自动切换
+- 借鉴 Provider 协议路由、显式 transport/api_mode 配置与受限的 URL 识别回退
 - 但实现要全部自写
 
 ### 二开的硬规则
