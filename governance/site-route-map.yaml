@@ -850,7 +850,7 @@ routes:
   description: 按任务选择主模型，区分辅助模型与供应商路由，用可复现任务核对成本。
   order: 60
   status: published
-  updated: '2026-09-30'
+  updated: '2026-10-26'
   source_type: adapted
   nav_group: 05-实战应用
   source_refs:
@@ -983,12 +983,12 @@ routes:
   slug: /start/practical/ollama-local-model
   module: start
   page_type: doc-page
-  title: 🦙 13-Ollama 本地模型：让 Hermes 完全免费跑起来
+  title: 🦙 13-Ollama 本地模型：接入步骤与成本、隐私边界
   section: ollama-local-model
-  description: 用 Ollama 跑本地推理后端，零账单零数据出网；讲清楚什么场景适合本地、什么场景必须留云端。
+  description: 用 Custom endpoint 接入本地 Ollama，核对 64K 上下文、硬件、工具和数据边界；文档复核，未安装实测。
   order: 69
   status: published
-  updated: '2026-07-29'
+  updated: '2026-10-26'
   source_type: original
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/14-GitHub PR 自动审查.md
@@ -1079,10 +1079,10 @@ routes:
   page_type: doc-page
   title: 📊 20-60 天分析师工作流：6 条架构教训
   section: 60day-analyst-lessons
-  description: 一个真实社区用户跑了 60 天分析师工作流后总结的 6 条架构教训。结论反直觉：Agent 不败在智能，败在架构。基于 0xJeff 在 Substack 的系列文章整理。
+  description: 整理 0xJeff 于 2026-06-01 公开的第三方经验，区分作者自述与本站扩写；未取得原始会话、账单或复现实验。
   order: 76
   status: published
-  updated: '2026-06-05'
+  updated: '2026-10-26'
   source_type: adapted
   nav_group: 05-实战应用
 - source: docs/01-从这开始/05-实战应用/21-Hermes Agent 与 Ollama 最快路径.md
