@@ -15,9 +15,10 @@ LOCAL_DOC = REPO / "docs/02-现成方案/01-内容创作与发布/05-X-Twitter �
 
 def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(SCRIPT), *args],
+        [sys.executable, "-X", "utf8", str(SCRIPT), *args],
         cwd=REPO,
         text=True,
+        encoding="utf-8",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         check=False,

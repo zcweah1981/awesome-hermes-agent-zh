@@ -72,9 +72,10 @@ def test_check_still_hard_fails_structural_ledger_errors(tmp_path: Path, upstrea
 
 def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(SCRIPT), *args],
+        [sys.executable, "-X", "utf8", str(SCRIPT), *args],
         cwd=REPO,
         text=True,
+        encoding="utf-8",
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
         check=False,

@@ -47,8 +47,8 @@ def test_issue_routes_keep_official_source_mapping_and_review_state():
 
 def test_first_seo_provider_routes_keep_confirmed_official_source_mapping():
     expected = {
-        "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md": "aliyun-bailian",
-        "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md": "tencent-cloud-models",
+        "docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md": ("aliyun-bailian", "2026-10-03"),
+        "docs/03-国内落地/02-国内模型/03-腾讯云Token Plan.md": ("tencent-cloud-models", "2026-10-03"),
     }
     provider_routes = {
         route["source"]: route
@@ -57,7 +57,7 @@ def test_first_seo_provider_routes_keep_confirmed_official_source_mapping():
     }
 
     assert set(provider_routes) == set(expected)
-    for source, provider_id in expected.items():
+    for source, (provider_id, reviewed_at) in expected.items():
         route = provider_routes[source]
         assert route["source_refs"]["local"] == ["content-repo"], source
         assert "hermes-official-docs" in route["source_refs"]["official"], source
@@ -66,4 +66,4 @@ def test_first_seo_provider_routes_keep_confirmed_official_source_mapping():
             route["source_review"]["state"]
             == "provider-official-source-confirmed"
         ), source
-        assert route["source_review"]["checked_at"] == "2026-09-30", source
+        assert route["source_review"]["checked_at"] == reviewed_at, source
