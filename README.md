@@ -20,7 +20,8 @@
 [现成方案](https://hermes-zh.com/docs/solutions) ·
 [国内落地](https://hermes-zh.com/docs/china) ·
 [OpenClaw 迁移](https://hermes-zh.com/docs/openclaw) ·
-[遇到问题](https://hermes-zh.com/docs/issues)
+[遇到问题](https://hermes-zh.com/docs/issues) ·
+[个人 AI 助理 · Personal Agent](https://hermes-zh.com/docs/personal-agent)
 
 [内容版本说明](./RELEASE_NOTES.md)：查看近期内容变化、对应提交与在线入口
 
@@ -51,7 +52,7 @@ Hermes Agent 中文站，是一套围绕 Hermes Agent 的中文实战文档入�
 
 - 这是 **Hermes Agent 的中文实战路径**，不是资料堆
 - 你可以按目标直接进入，不需要从头硬读全站
-- 当前内容分成 6 个固定模块：上手、方案、国内落地、迁移、排障、参考
+- 文档保留 6 个固定模块：上手、方案、国内落地、迁移、排障、参考；[个人 AI 助理](./docs/07-个人AI助理/总览.md)是独立长期文章系列
 - README 负责给你入口；真正的细节，在 `docs/` 里逐页展开
 
 ### 你可以把这套站点理解成 3 层
@@ -163,7 +164,9 @@ Hermes Agent 中文站是围绕 Hermes Agent 的中文实战文档入口，不�
 
 ### Hermes Agent 支持哪些国内大模型？
 
-当前已验证并写成教程的国内模型路线有：DeepSeek（按量计费接口）、阿里云百炼 Token Plan、腾讯云 Token Plan、智谱 GLM Coding Plan、MiniMax Token Plan、Kimi 登月计划，以及自定义兼容接口（支持 OneAPI / NewAPI / Ollama 等）。详见 [02-国内模型总览](./docs/03-国内落地/02-国内模型/01-总览.md)。
+当前已整理为接入教程的国内模型路线有：DeepSeek（按量计费接口）、阿里云百炼 Token Plan、腾讯云 Token Plan、智谱 GLM Coding Plan、MiniMax Token Plan、Kimi 登月计划，以及自定义兼容接口（支持 OneAPI / NewAPI / Ollama 等）。详见 [02-国内模型总览](./docs/03-国内落地/02-国内模型/01-总览.md)。
+
+接入前请按对应页面标记核对来源、核验日期和实践范围；未标明的部分按待核验处理。文档或配置复核不代表所有桌面安装、付费 API 和端到端联调均已完成。接入前请按对应页面核对安装渠道、服务权限和当前限制。
 
 ### 有没有中文教程或视频？
 

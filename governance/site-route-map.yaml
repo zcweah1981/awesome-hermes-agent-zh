@@ -1325,7 +1325,7 @@ routes:
   description: 一句话先说清楚：这一页不是让你马上挑最强模型，而是先帮你选对国内模型路线，再进入正确的厂商或接口页面。
   order: 92
   status: published
-  updated: '2026-10-03'
+  updated: '2026-11-03'
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1336,7 +1336,7 @@ routes:
   source_review:
     state: provider-official-source-confirmed
     checked_at: '2026-09-30'
-    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。
+    note: 厂商文档与 v2026.9.24 配置源码复核；未运行桌面安装、API 或国内网络实测。2026-11-03 仅收窄教程覆盖措辞，不表示全路线重新核验。
 - source: docs/03-国内落地/02-国内模型/02-阿里云百炼Token plan.md
   slug: /china/models/alibaba-bailian-token-plan
   module: china
@@ -1777,7 +1777,7 @@ routes:
   description: "按安装渠道与操作系统排查 Hermes 命令、PATH、依赖和下载错误，区分原生 Windows、WSL2、桌面包及 Docker，避免盲目换源或重装。"
   order: 114
   status: published
-  updated: '2026-10-26'
+  updated: '2026-11-03'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1789,6 +1789,7 @@ routes:
     state: official-source-confirmed
     checked_at: '2026-10-26'
     note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
+    # 2026-11-03：固定 v0.22.5 文档离线复核 Termux APT 和 PM 运行时边界；未安装实测。
 - source: docs/05-遇到问题/03-模型 Provider 与自定义 endpoint 问题.md
   slug: /issues/provider-endpoint
   module: issues
