@@ -1392,7 +1392,7 @@ routes:
   description: "按 v2026.9.24 配置 Hermes 的 GLM provider 和国内编程端点，核对个人与团队 Key、通用 Agent 次级调度、排队与限流；未进行付费联调。"
   order: 95
   status: published
-  updated: "2026-10-05"
+  updated: "2026-11-10"
   source_type: original
   nav_group: 02-国内模型
   source_refs:
@@ -1777,7 +1777,7 @@ routes:
   description: "按安装渠道与操作系统排查 Hermes 命令、PATH、依赖和下载错误，区分原生 Windows、WSL2、桌面包及 Docker，避免盲目换源或重装。"
   order: 114
   status: published
-  updated: '2026-11-03'
+  updated: '2026-11-10'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:

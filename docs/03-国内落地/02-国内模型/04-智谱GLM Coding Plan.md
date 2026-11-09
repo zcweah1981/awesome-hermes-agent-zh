@@ -4,9 +4,16 @@
 
 复核日期：2026-10-05。接入配置对照 Hermes 稳定标签 v2026.9.24；厂商模型与套餐按下列官方来源复核。未调用 API、购买套餐或完成桌面安装实测。
 
-> 💡 **速答**：Hermes Agent 接入智谱 GLM 只需三步——开通 GLM Coding Plan → 拿到 `GLM_API_KEY` → 写入 `~/.hermes/.env`。国内 Coding 同时明确 `GLM_BASE_URL`，再用 `hermes model` 选 `z.ai / GLM` provider，不需要走自定义兼容层。GLM Coding Plan 适合已经决定重点用 GLM 这家模型的用户。
+> 💡 **速答**：Hermes 可以通过原生 `zai` provider 接入 GLM。国内 Coding Plan 要一起核对账户、Key 和编程专用端点，不能只凭“认证成功”判断已使用套餐额度。
 
-> 🎯 一句话先说清楚：如果你已经偏向 GLM / z.ai 这一家，并且想用一条原生 provider 路线把 Hermes 接进去，而不是再套一层 custom endpoint，那么 GLM Coding Plan 值得先看。
+配置前先核对这四项：
+
+1. **产品与账户**：确认使用国内个人或团队 Coding Plan；普通按量 API、国际 Z.AI 与国内 Coding 的账户和计费不要混用。
+2. **Key 与端点**：使用对应个人或团队套餐的 Key，写入 `GLM_API_KEY`，同时设置 `GLM_BASE_URL=https://open.bigmodel.cn/api/coding/paas/v4`。不要把真实 Key 放进截图或排障记录。
+3. **Provider 与模型**：用 `hermes model` 选择 `z.ai / GLM`（ID 为 `zai`），再选择当前账号可用的模型。
+4. **最小验证与计费**：发送一次短请求，核对回复和厂商用量记录。请求可能收费；能返回回复不等于计费路线已确认，本页也未进行付费联调。
+
+已配置却收到 401、403 或 404？先按[模型接入报错排查](/docs/issues/provider-endpoint)核对凭据、协议与端点。出现排队或限流时，先看套餐用量和厂商返回信息，不用反复更换 Key 或重装 Hermes 代替定位。
 
 这一页只解决一件事：帮你判断 GLM Coding Plan 值不值得买，以及怎么按 Hermes 原生 `z.ai / GLM` provider 路线把它接起来。
 
@@ -229,7 +236,7 @@ hermes model
 | 计费方式 | 包月订阅 | 充值按量扣费 |
 | 适合谁 | 已认准 GLM、想长期深用一家 | 想先最低门槛跑通 |
 | Hermes provider | `zai`（原生支持） | `deepseek`（原生支持） |
-| 起步成本 | 需要开通订阅 | 充值余额即可，0 门槛 |
+| 起步成本 | 需要开通订阅 | 按账户规则充值后使用 |
 | 最短接入步骤 | 开通 → 拿 Key → `hermes model` | 充值 → 拿 Key → `hermes model` |
 
 > 如果你还没决定用哪家模型，先走 [DeepSeek 按量计费接口](./07-DeepSeek按量计费接口.md) 跑通；跑通后再决定要不要切到 GLM Coding Plan 长期用。
