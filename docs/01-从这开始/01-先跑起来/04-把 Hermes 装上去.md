@@ -1,4 +1,4 @@
-# 📦 04-Hermes Agent 安装｜Windows、macOS 与 Linux
+# 📦 04-Hermes Agent 安装教程｜Windows、macOS、Linux 与验证
 
 安装后按使用方式继续：[桌面 App 安装与首个任务](/docs/start/personalize/desktop-app)、[国内模型产品与 Key 配置](/docs/china/models)。终端安装或更新失败看[安装与环境排障](/docs/issues/install-environment)，模型请求返回 401、403、404 看[Provider 排障](/docs/issues/provider-endpoint)。
 
