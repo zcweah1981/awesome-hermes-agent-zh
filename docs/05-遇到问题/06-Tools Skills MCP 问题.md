@@ -28,6 +28,9 @@
 ### E. 你现在路线都没分清
 - 看这里：[#08 什么时候该回“自己造东西”总览？](#faq-back-to-build)
 
+### F. 新插件搜不到，或目录安装仍得到旧提交
+- 看这里：[插件目录回退与版本验证](#plugin-catalog-fallback)
+
 ## 🩺 先做什么：最小排查动作
 
 先做这组最小检查：
@@ -48,6 +51,28 @@ hermes doctor
 2. skills 是没装，还是装在别的环境
 3. MCP server 是没注册，还是 server 本身起不来
 4. 工具存在但没调用，究竟是触发条件问题，还是模型层问题
+
+<a id="plugin-catalog-fallback"></a>
+
+## 🧩 插件目录回退：搜不到新插件、安装的还是旧版本
+
+**适用边界**：官方确认 2026-11-09 在线目录超过 2 MiB 后，v0.23.0 及更早客户端会静默使用随包旧目录，可能找不到新增插件、安装旧的目录 pin，或漏读新的移除记录。v0.23.1 把上限提高至 16 MiB。它与旧版安装包漏带 `plugin.yaml`、插件未启用、provider 鉴权失败是不同问题。
+
+1. **先记录版本与运行位置。** 用 `hermes --version`，确认 CLI 路径、profile，以及桌面连接的是本机还是远程后端。不要只看桌面应用外壳版本。
+2. **按渠道更新 Agent。** CLI 使用 `hermes update` 或官方安装器；Store 走 Store；Docker／Cloud 走自身更新流程。v0.23.1 没有新 `.exe`／`.dmg` 包，不能承诺完整桌面包已得到此修复。更新入口见[版本与渠道表](/docs/reference/latest-features)、[安装与验证](/docs/start/get-running/install-hermes)。
+3. **再核对目录与已装记录。** 以下命令用于检查，不会代替安装、启用或付费服务授权：
+
+```bash
+hermes --version
+hermes plugins search <关键词>
+hermes plugins list
+```
+
+目录“当前版本”是审核后的固定提交，不一定是 GitHub 最新 HEAD。已装目录插件由 `hermes plugins list` 显示 `catalog:<tier>@<sha>` 来源；需要更新已装插件时，先阅读 `hermes plugins update <插件名>` 提示及权限变化，再决定是否继续，不加 `--force` 或自动确认绕过提示。不要为修目录问题删除插件目录或取消自己固定的提交。
+
+**怎样判断仍未解决**：版本已更新而条目仍缺失时，记录插件名、当前 pin、原始错误、时间和当前环境。官方文档说明在线目录最多每 6 小时刷新；离线可使用 24 小时内缓存，之后退回随包目录。因此查得到条目也不能单独证明本次在线刷新成功。继续区分目录读取失败、条目被移除、插件未启用和服务端鉴权，不反复重试安装。
+
+依据：[v0.23.1 发布说明](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1)、[固定提交目录文档](https://github.com/NousResearch/hermes-agent/blob/3b421578588243f920886e6fe79a6faa87ea026e/website/docs/user-guide/features/plugin-catalog.md)、[固定提交插件命令](https://github.com/NousResearch/hermes-agent/blob/3b421578588243f920886e6fe79a6faa87ea026e/website/docs/user-guide/features/plugins.md)。复核日期 2026-11-16，仅资料与源码核对，未安装或更新真实插件。
 
 ## 🚫 先别急着做的事
 

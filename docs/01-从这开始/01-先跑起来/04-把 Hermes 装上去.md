@@ -1,12 +1,12 @@
-# 📦 04-把 Hermes 装上去
+# 📦 04-Hermes Agent 安装｜Windows、macOS 与 Linux
 
 安装后按使用方式继续：[桌面 App 安装与首个任务](/docs/start/personalize/desktop-app)、[国内模型产品与 Key 配置](/docs/china/models)。终端安装或更新失败看[安装与环境排障](/docs/issues/install-environment)，模型请求返回 401、403、404 看[Provider 排障](/docs/issues/provider-endpoint)。
 
 > 想从桌面窗口开始，先走[桌面版安装与首个任务](../03-玩出花样/07-用桌面端操作%20Hermes.md)；本页提供官方终端安装路线。安装结束后分别验证命令、环境和模型回复。
 
-**2026-10-26 发行复核**：当前稳定版为 [v0.22.5](https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.5)；说明内日期为 10 月 22 日，GitHub API 实际发布于 10 月 23 日。CLI 可用 `hermes update` 或对应安装器更新，Microsoft Store 通过 Store 更新，Docker／Hermes Cloud 使用各自镜像流程；**`.exe`／`.dmg` 桌面安装包本次没有更新，要等后续 bundled 发行**。桌面应用、后端和安装渠道分别核对，不能把 main 或后端版本当成新桌面包。以下操作保留各节注明的历史基线，本轮只核对官方资料，未安装实测。
+**2026-11-16 发行复核**：[v0.23.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1) 是本次核得的官方最新稳定版。CLI 用 `hermes update` 或官方安装器，Store 通过 Store 更新；Docker／Cloud 按各自渠道处理。`.exe`／`.dmg` 完整桌面包本次未更新，不能把后端号或 main 提交当作新桌面包。下列平台操作保留其注明的历史基线；本轮未执行安装、升级或模型调用。
 
-历史问题单独保留：v0.22.2 曾纠正 v0.22.1 的错误发行，并记录“曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 无法删除”。这是该版本的限制，不能据 v0.22.5 的版本号直接判定旧会话迁移已经修复；先备份配置和会话，再按自己的渠道验证，避免以删除数据作为排障手段。
+历史问题单独保留：v0.22.2 曾纠正 v0.22.1 的错误发行，并记录“曾在 v0.22.1 Gateway 下运行的会话，在 v0.22.2 无法删除”。这是该版本的限制，不能仅据新版本号直接判定旧会话迁移已经修复；先备份配置和会话，再按自己的渠道验证，避免以删除数据作为排障手段。
 
 ![历史终端安装示意图](../../assets/rm2-2-install-hermes-01-install-command-running.webp)
 
@@ -41,11 +41,13 @@ curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash
 iex (irm https://hermes-agent.nousresearch.com/install.ps1)
 ```
 
-v0.22.5 的一方安装器由 **PM 管理运行时，使用 Python 3.14**；它依据锁文件准备工具，不是直接采用系统里任意 Node/Python。旧 v2026.9.24 的 `>=3.11,<3.14` 仅是本文历史操作基线，不要用它降级或替换新安装器的托管环境。源码构建与完整桌面包也不同：完整包不需要首次构建基础运行时，源码构建才按对应版本准备工具链。[v0.22.5 安装说明](https://raw.githubusercontent.com/NousResearch/hermes-agent/v0.22.5/website/docs/getting-started/installation.md)
+固定 v0.23.1 文档的一方安装器由 **PM 管理运行时，使用 Python 3.14**；它依据锁文件准备工具，不是直接采用系统里任意 Node/Python。旧 v2026.9.24 的 `>=3.11,<3.14` 仅是本文历史操作基线，不要用它降级或替换新安装器的托管环境。源码构建与完整桌面包也不同：完整包不需要首次构建基础运行时，源码构建才按对应版本准备工具链。[固定提交安装说明](https://github.com/NousResearch/hermes-agent/blob/3b421578588243f920886e6fe79a6faa87ea026e/website/docs/getting-started/installation.md)
 
 官方不支持 PyPI / `pip install hermes-agent`、`uv tool install hermes-agent` 发行安装，也不支持 `brew install hermes-agent` 路线。不要把同名第三方包当官方软件。
 
 v0.21.7 官方源码安装更新默认跟随 stable；已领先 latest 时不降级，main 需明确选择，fork／mirror 仍保持 main。Store／MSIX／bundled 包按自身渠道更新，不能统一套用源码更新器。完整边界见[最新版本与更新通道](/docs/reference/latest-features)。
+
+插件安装时搜不到新插件、仍得到旧目录固定版本？v0.23.0 及更早客户端可能遇到目录大小上限回退，先核对[插件目录排障](/docs/issues/tools-skills-mcp#plugin-catalog-fallback)，不要靠反复重装解决。
 
 ## 🔄 安装后重新加载 shell
 

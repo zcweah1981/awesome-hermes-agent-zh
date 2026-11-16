@@ -99,12 +99,12 @@ routes:
   slug: /start/get-running/install-hermes
   module: start
   page_type: doc-page
-  title: 📦 04-把 Hermes 装上去
+  title: "Hermes Agent 安装教程｜Windows、macOS、Linux 与验证"
   section: install-hermes
-  description: 按系统选择官方桌面或终端安装入口，分层验证版本、环境和模型，说明平台与发行方式边界。
+  description: "按 Windows、macOS 或 Linux 选择 Hermes Agent 官方安装入口，核对 v0.23.1 更新渠道、版本、PATH 与模型回复；安装失败和插件目录问题分别排查。"
   order: 6
   status: published
-  updated: '2026-10-26'
+  updated: '2026-11-16'
   source_type: original
   nav_group: 01-先跑起来
   source_refs:
@@ -115,8 +115,8 @@ routes:
     - hermes-official-github
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-26'
-    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
+    checked_at: '2026-11-16'
+    note: "2026-11-16复核v0.23.1发布和固定安装文档，按渠道区分CLI/Store/容器与未更新的exe/dmg；保留旧平台操作基线，未安装实测。"
 - source: docs/01-从这开始/01-先跑起来/05-配好 AI 大模型并完成第一次互动.md
   slug: /start/get-running/first-hello
   module: start
@@ -167,12 +167,12 @@ routes:
   slug: /solutions/xiaohongshu
   module: solutions
   page_type: doc-page
-  title: "Hermes Agent 小红书内容工作流｜选题、文案与 Pack"
+  title: "Hermes Agent 小红书助手｜选题、文案草稿与人工发布"
   section: xiaohongshu
-  description: "使用 Hermes Agent 生成小红书选题、标题、文案与标签，安装内容 Pack 并检查样例输出；内容需人工审核后按平台规则发布。"
+  description: "用社区 xhs-lab Pack 整理小红书选题、标题和文案草稿，准备真实输入并逐项人工审校；说明安装、配图和发布边界，不承诺自动发布或完成时限。"
   order: 10
   status: published
-  updated: "2026-09-30"
+  updated: '2026-11-16'
   source_type: original
   nav_group: 01-内容创作与发布
 - source: docs/02-现成方案/01-内容创作与发布/03-公众号写作助手.md
@@ -404,7 +404,7 @@ routes:
   description: Hermes 官方 Reference 的中文查表入口。
   order: 27
   status: published
-  updated: '2026-09-30'
+  updated: '2026-11-16'
   source_type: original
   nav_group: 06-reference
   source_refs:
@@ -1862,7 +1862,7 @@ routes:
   description: 一句话结论：这页只处理“工具为什么不出现、skills 为什么像没加载、MCP 为什么连不上、为什么明明看得到工具却就是不好用”这类排障问题；先分清是工具集没开、skill 没装到当前环境，还是 MCP server 根本没接通。
   order: 118
   status: published
-  updated: '2026-09-30'
+  updated: '2026-11-16'
   source_type: original
   nav_group: 05-遇到问题
   source_refs:
@@ -1872,8 +1872,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-09-30'
-    note: 稳定发布、插件文档及 filesystem 示例核对；未安装或执行 Connector/API 实测。
+    checked_at: '2026-11-16'
+    note: "2026-11-16局部复核v0.23.1插件目录2MiB回退修复、固定插件命令与缓存边界；旧Tools/Skills/MCP基线未全量升级，未安装插件实测。"
 - source: docs/05-遇到问题/07-配置 Profiles 与环境隔离问题.md
   slug: /issues/config-profiles-environment
   module: issues
@@ -2140,12 +2140,12 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: "🆕 12-Hermes v0.22.5｜更新渠道与桌面版本"
+  title: "Hermes Agent v0.23.1｜更新渠道与插件目录修复"
   section: latest-features
-  description: "核对 Hermes v0.22.5 的稳定标签、桌面包分发、PM 运行时、更新恢复与插件边界，保留旧版本限制和操作基线。"
+  description: "核对 Hermes Agent v0.23.1 的发布时间、CLI、Store 与容器更新渠道；说明桌面安装包未更新、插件目录回退修复及验证步骤。"
   order: 131
   status: published
-  updated: '2026-10-26'
+  updated: '2026-11-16'
   source_type: official-reference
   nav_group: 06-reference
   source_refs:
@@ -2156,8 +2156,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-10-26'
-    note: "2026-10-26局部复核v0.22.5 tag与更新渠道、PM运行时及插件迁移；exe/dmg本次未更新，旧会话限制保留历史限定，未安装实测。"
+    checked_at: '2026-11-16'
+    note: "2026-11-16局部复核v0.23.1发布API、固定提交及插件目录修复；2MiB提升16MiB，exe/dmg本次未更新，未安装或插件实测。"
 - source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   slug: /china/models/mimo-v26
   module: china
