@@ -52,7 +52,7 @@ hermes doctor
 3. MCP server 是没注册，还是 server 本身起不来
 4. 工具存在但没调用，究竟是触发条件问题，还是模型层问题
 
-<a id="plugin-catalog-fallback"></a>
+<div id="plugin-catalog-fallback" class="scroll-mt-28"></div>
 
 ## 🧩 插件目录回退：搜不到新插件、安装的还是旧版本
 
