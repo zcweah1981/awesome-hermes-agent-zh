@@ -2140,12 +2140,12 @@ routes:
   slug: /reference/latest-features
   module: reference
   page_type: doc-page
-  title: "Hermes Agent v0.23.3｜稳定版更新与桌面渠道"
+  title: "Hermes Agent v0.23.4｜稳定版更新与桌面渠道"
   section: latest-features
-  description: "核对 Hermes Agent v0.23.3 发布日期及 CLI、Store、Docker 更新渠道；区分桌面安装包和 Agent 后端，保留 v0.23.1 插件目录排障。"
+  description: "核对 Hermes Agent v0.23.4 发布日期及 CLI、Store、Docker 更新渠道；区分桌面安装包和 Agent 后端，保留 v0.23.1 插件目录排障。"
   order: 131
   status: published
-  updated: '2026-11-23'
+  updated: '2026-11-24'
   source_type: official-reference
   nav_group: 06-reference
   source_refs:
@@ -2156,8 +2156,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: official-source-confirmed
-    checked_at: '2026-11-23'
-    note: "2026-11-23局部复核 v0.23.3 发布 API、固定提交及更新渠道；独立 exe/dmg 本次未更新，旧插件目录排障保留，未安装、升级或调用 API 实测。"
+    checked_at: '2026-11-24'
+    note: "2026-11-24局部复核 v0.23.4 发布 API、固定提交及更新渠道；独立 exe/dmg 本次未更新，旧插件目录排障保留，未安装、升级或调用 API 实测。"
 - source: docs/03-国内落地/02-国内模型/09-MiMo V2.6 接入.md
   slug: /china/models/mimo-v26
   module: china
