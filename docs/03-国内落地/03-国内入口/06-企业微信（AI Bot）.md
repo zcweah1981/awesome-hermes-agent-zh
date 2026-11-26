@@ -6,11 +6,11 @@
 
 ![企业微信接入主线图](./assets/wecom-entry-structure-v1.webp "一张流程图，展示了从在企业微信创建机器人，到获取凭据，再到配置 Hermes Gateway 并最终建立连接的完整步骤。")
 
-> **一句话结论**：先在企业微信后台创建 AI 机器人拿到凭据，再把凭据填回 Hermes 启动 Gateway，两边就通了。
+> **一句话结论**：先在企业微信后台创建 AI 机器人拿到凭据，再把凭据填回 Hermes，启动 Gateway 后发送测试消息，并确认收到 Hermes 回复。
 
 ## 🔎 搜索收录速答
 
-企业微信机器人适合把 Hermes 接到团队群、运维群或内容协作群里，核心链路是：企业微信回调接收消息、服务端调用 Hermes、再把结果回写到群聊。上线前要先处理公网 HTTPS、签名校验、超时重试和权限边界。相关入口还可以对比[飞书](/docs/china/entry/feishu)、[钉钉](/docs/china/entry/dingtalk)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
+本页使用企业微信 **AI Bot 长连接**：在 API 模式选择“使用长连接”，取得 Bot ID 与 Secret，配置 `WECOM_BOT_ID`、`WECOM_SECRET` 后启动 Hermes Gateway，再验证消息收发。Gateway 主动连接企业微信 WebSocket，**无需自建公网 HTTPS 回调地址**；不要把另一条 URL 回调路线的配置要求套到本页。上线前核对凭据、访问权限和连接状态，仅终端没有报错还不能证明消息收发成功。相关入口还可以对比[飞书](/docs/china/entry/feishu)、[钉钉](/docs/china/entry/dingtalk)和[API 服务与 Open WebUI](/docs/china/entry/api-service-open-webui)。
 
 
 ## 🚀 接入三步走
@@ -51,7 +51,7 @@ WECOM_SECRET=your-secret
 hermes gateway
 ```
 
-如果终端没有报错，恭喜你！你的 Hermes Agent 已经成功接入企业微信，你可以在对应的机器人聊天窗口里和它对话了。
+启动后检查 Gateway 的连接与认证状态，再到对应机器人聊天窗口发送一条测试消息，并确认收到 Hermes 回复。终端没有报错不等于接入验收通过；未收到回复时先检查 Bot ID、Secret、网络连接和访问权限。本页仅依据官方资料说明配置流程，未完成企业微信账户联调。
 
 ## ⬅️ 上一步
 
@@ -64,4 +64,5 @@ hermes gateway
 ## 📖 出处
 
 - [企业微信智能机器人官方文档](https://developer.work.weixin.qq.com/document/path/101059)
+- [Hermes 官方 WeCom 长连接文档](https://github.com/NousResearch/hermes-agent/blob/main/website/docs/user-guide/messaging/wecom.md)（2026-11-26 核对长连接与回调路线边界，非账户联调）
 - [Hermes Gateway 相关说明](/docs/china/entry/api-service-open-webui)

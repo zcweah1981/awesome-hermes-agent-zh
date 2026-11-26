@@ -1612,7 +1612,7 @@ routes:
   description: 🎯 一句话结论：如果你的团队主协作平台是企业微信，而且你希望用**官方推荐的 AI Bot 长连接方式**把 Hermes 接进去，那么这页要帮你先把“创建机器人 → 获取 Bot ID / Secret → 填回 Hermes”这条主线走顺。
   order: 105
   status: published
-  updated: '2026-07-29'
+  updated: '2026-11-26'
   source_type: original
   nav_group: 03-国内入口
   source_refs:
@@ -1622,8 +1622,8 @@ routes:
     - hermes-official-docs
   source_review:
     state: needs-official-check
-    checked_at: '2026-05-02'
-    note: R1 maps China landing pages to Hermes official docs; provider-specific claims are deferred to R2 where applicable.
+    checked_at: '2026-11-26'
+    note: Checked Hermes official WeCom documentation for WebSocket versus callback requirements only; no account integration test or full tutorial review.
 - source: docs/03-国内落地/03-国内入口/07-钉钉.md
   slug: /china/entry/dingtalk
   module: china
